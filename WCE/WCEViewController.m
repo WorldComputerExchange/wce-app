@@ -18,6 +18,14 @@
 {
     [super viewDidLoad];
 	[[self view] setBackgroundColor:[UIColor blueColor]];
+    
+    UIButton *myButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    myButton.frame = CGRectMake(20, 20, 200, 44); // position in the parent view and set the size of the button
+    [myButton setTitle:@"Click Me!" forState:UIControlStateNormal];
+    // add targets and actions
+    [myButton addTarget:self action:@selector(buttonClicked) forControlEvents:UIControlEventTouchUpInside];
+    // add to a view
+ 
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
