@@ -2,12 +2,8 @@
 //  WCEAppDelegate.m
 //  WCE
 //
-//  Created by  Brian Beckerle on 2/13/13.
-//  Copyright (c) 2013  Brian Beckerle. All rights reserved.
 //
 
-
-//Alex Test Please Work
 
 #import "WCEAppDelegate.h"
 
