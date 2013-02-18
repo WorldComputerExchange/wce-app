@@ -15,7 +15,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	[[self view] setBackgroundColor:[UIColor blueColor]];
+	[[self view] setBackgroundColor:[UIColor whiteColor]];
     
     UIButton *myButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     myButton.frame = CGRectMake(20, 20, 200, 44); // position in the parent view and set the size of the button

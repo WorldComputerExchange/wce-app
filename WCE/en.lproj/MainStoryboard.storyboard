@@ -83,12 +83,12 @@
                     </view>
                     <navigationItem key="navigationItem" id="aLH-2M-hhl"/>
                     <connections>
-                        <segue destination="Ncv-S0-fD5" kind="push" identifier="pushTab" id="xgK-pU-VC2"/>
+                        <segue destination="Ncv-S0-fD5" kind="modal" identifier="pushTab" id="xgK-pU-VC2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R3M-Ua-Dnn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="675" y="58"/>
+            <point key="canvasLocation" x="373" y="112"/>
         </scene>
         <!--View Controller - Item 2-->
         <scene sceneID="HL9-sx-lcO">
@@ -103,7 +103,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N65-Mc-YsR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1839" y="810"/>
+            <point key="canvasLocation" x="1724" y="806"/>
         </scene>
         <!--View Controller - Item 1-->
         <scene sceneID="mZx-Og-AXC">
@@ -155,6 +155,46 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s0q-fI-1m0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1207" y="74"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="cmR-9u-p79">
+            <objects>
+                <tabBarController definesPresentationContext="YES" id="6ko-za-jGJ" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="4mP-Jm-UJF"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="Kzj-g6-gT1">
+                        <rect key="frame" x="129" y="330" width="163" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XLO-8i-fou" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1207" y="74"/>
+        </scene>
+        <!--View Controller - Item 2-->
+        <scene sceneID="xJL-WH-F4t">
+            <objects>
+                <viewController storyboardIdentifier="phrases" id="fkP-go-B0u" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="t57-7Q-03P">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q5F-2u-ykx"/>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="q5F-2u-ykx" firstAttribute="bottom" secondItem="t57-7Q-03P" secondAttribute="bottom" type="default" id="XLA-Kl-hYO"/>
+                            <constraint firstItem="q5F-2u-ykx" firstAttribute="trailing" secondItem="t57-7Q-03P" secondAttribute="trailing" type="default" id="ruS-gv-en6"/>
+                            <constraint firstItem="q5F-2u-ykx" firstAttribute="top" secondItem="t57-7Q-03P" secondAttribute="top" type="default" id="uOi-q0-wSP"/>
+                            <constraint firstItem="q5F-2u-ykx" firstAttribute="leading" secondItem="t57-7Q-03P" secondAttribute="leading" type="default" id="z5P-R5-noK"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 2" id="Roy-OR-e4E"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jxb-5B-xSG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="720" y="-356"/>
         </scene>
     </scenes>
     <classes>
