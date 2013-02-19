@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2840" systemVersion="11G63" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="WWn-sN-Jmi">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1926"/>
     </dependencies>
     <scenes>
         <!--Login View Controller-->
@@ -9,7 +9,7 @@
             <objects>
                 <viewController storyboardIdentifier="login" id="2" customClass="LoginViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3">
-                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="njZ-bS-OPU">
@@ -24,6 +24,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="loginButtonPressed:" destination="2" eventType="touchUpInside" id="ia4-w8-ye2"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dd4-pk-PvU">
                                 <constraints>
@@ -38,24 +41,26 @@
                         <constraints>
                             <constraint firstItem="Dd4-pk-PvU" firstAttribute="top" secondItem="3" secondAttribute="top" constant="174" id="916-qe-Jff"/>
                             <constraint firstItem="Dd4-pk-PvU" firstAttribute="centerX" secondItem="njZ-bS-OPU" secondAttribute="centerX" type="default" id="BON-wP-99a"/>
-                            <constraint firstAttribute="bottom" secondItem="njZ-bS-OPU" secondAttribute="bottom" constant="182" id="KaT-3y-X2k"/>
                             <constraint firstItem="Dd4-pk-PvU" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" type="default" id="Lhm-oI-CvV"/>
+                            <constraint firstAttribute="bottom" secondItem="njZ-bS-OPU" secondAttribute="bottom" constant="162" id="a4n-KJ-jin"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="P5d-0x-bkr"/>
                     <connections>
+                        <outlet property="passwordTextField" destination="Dd4-pk-PvU" id="mC0-zO-ZJp"/>
                         <segue destination="HOf-av-Hw8" kind="push" identifier="pushLocation" id="uf0-dN-uIq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="197" y="65"/>
+            <point key="canvasLocation" x="723" y="65"/>
         </scene>
-        <!--View Controller-->
+        <!--Location View Controller-->
         <scene sceneID="aR5-PF-m68">
             <objects>
-                <viewController storyboardIdentifier="location" id="HOf-av-Hw8" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="location" id="HOf-av-Hw8" customClass="LocationViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5qt-2R-xKT">
-                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jQP-Tl-vhc">
@@ -71,24 +76,36 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hmu-7K-PFT">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="5sA-co-yvI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="22"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="jQP-Tl-vhc" firstAttribute="trailing" secondItem="5qt-2R-xKT" secondAttribute="trailing" type="default" id="6Q1-Ek-opS"/>
-                            <constraint firstItem="hOg-bI-Qlu" firstAttribute="top" secondItem="5qt-2R-xKT" secondAttribute="top" constant="91" id="QgU-du-8cU"/>
-                            <constraint firstItem="hOg-bI-Qlu" firstAttribute="centerX" secondItem="jQP-Tl-vhc" secondAttribute="centerX" type="default" id="Tcj-Xg-DgY"/>
+                            <constraint firstItem="hOg-bI-Qlu" firstAttribute="centerX" secondItem="jQP-Tl-vhc" secondAttribute="centerX" type="default" id="eq2-It-jYi"/>
+                            <constraint firstItem="hmu-7K-PFT" firstAttribute="leading" secondItem="hOg-bI-Qlu" secondAttribute="leading" type="default" id="pek-ST-cVB"/>
                             <constraint firstItem="jQP-Tl-vhc" firstAttribute="leading" secondItem="5qt-2R-xKT" secondAttribute="leading" type="default" id="rNS-Io-Ilh"/>
+                            <constraint firstItem="hmu-7K-PFT" firstAttribute="trailing" secondItem="hOg-bI-Qlu" secondAttribute="trailing" type="default" id="tdF-JV-JFY"/>
                             <constraint firstItem="jQP-Tl-vhc" firstAttribute="top" secondItem="5qt-2R-xKT" secondAttribute="top" constant="179" id="udq-rP-MAm"/>
+                            <constraint firstItem="hOg-bI-Qlu" firstAttribute="top" secondItem="5qt-2R-xKT" secondAttribute="top" constant="52" id="wKp-S3-DNw"/>
+                            <constraint firstItem="hmu-7K-PFT" firstAttribute="top" secondItem="5qt-2R-xKT" secondAttribute="top" constant="20" symbolic="YES" type="default" id="yT4-wy-BAP"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="aLH-2M-hhl"/>
                     <connections>
+                        <outlet property="nameLabel" destination="hmu-7K-PFT" id="3cs-w8-0LW"/>
                         <segue destination="Ncv-S0-fD5" kind="modal" identifier="pushTab" id="xgK-pU-VC2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R3M-Ua-Dnn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="691" y="74"/>
+            <point key="canvasLocation" x="1219" y="65"/>
         </scene>
         <!--View Controller - Item 2-->
         <scene sceneID="HL9-sx-lcO">
@@ -133,7 +150,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iSt-SE-yF8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1828" y="65"/>
+            <point key="canvasLocation" x="2354" y="65"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="KCh-jY-PH4">
@@ -154,7 +171,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s0q-fI-1m0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1207" y="74"/>
+            <point key="canvasLocation" x="1733" y="74"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="cmR-9u-p79">
@@ -170,12 +187,40 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XLO-8i-fou" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1207" y="74"/>
+            <point key="canvasLocation" x="1733" y="74"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="A84-sj-x1y">
+            <objects>
+                <navigationController id="WWn-sN-Jmi" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="H9z-ti-CJZ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="2" kind="relationship" relationship="rootViewController" id="TYn-sg-sqp"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="St0-0u-iXh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="197" y="65"/>
         </scene>
     </scenes>
     <classes>
+        <class className="LocationViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LocationViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="nameLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
         <class className="LoginViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/LoginViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="loginButtonPressed:"/>
+                <relationship kind="outlet" name="passwordTextField" candidateClass="UITextField"/>
+            </relationships>
         </class>
         <class className="NSLayoutConstraint" superclassName="NSObject">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>

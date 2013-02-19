@@ -7,8 +7,10 @@
 //
 
 #import "LocationViewController.h"
+#import "WCEUser.h"
 
 @interface LocationViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 
 @end
 
@@ -27,6 +29,10 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    if (self.user) {
+        //do some setup here.
+        self.nameLabel.text = self.user.username;
+    }
 }
 
 - (void)didReceiveMemoryWarning

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E9790B816D2E1D700D685B9 /* WCEUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E9790B716D2E1D700D685B9 /* WCEUser.m */; };
 		8C27586B16CC820E00DEDAC8 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C27586A16CC820E00DEDAC8 /* LoginViewController.m */; };
 		8C27586E16CC828F00DEDAC8 /* LocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C27586D16CC828F00DEDAC8 /* LocationViewController.m */; };
 		8C9C3AD116CC60D000F95A6B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C9C3AD016CC60D000F95A6B /* UIKit.framework */; };
@@ -23,6 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2E9790B616D2E1D700D685B9 /* WCEUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCEUser.h; sourceTree = "<group>"; };
+		2E9790B716D2E1D700D685B9 /* WCEUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCEUser.m; sourceTree = "<group>"; };
 		8C27586916CC820E00DEDAC8 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		8C27586A16CC820E00DEDAC8 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		8C27586C16CC828F00DEDAC8 /* LocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LocationViewController.h; path = ../LocationViewController.h; sourceTree = "<group>"; };
@@ -59,6 +62,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2E9790B416D2E1BF00D685B9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2E9790B616D2E1D700D685B9 /* WCEUser.h */,
+				2E9790B716D2E1D700D685B9 /* WCEUser.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		8C27586F16CC829A00DEDAC8 /* Location */ = {
 			isa = PBXGroup;
 			children = (
@@ -110,6 +122,7 @@
 				8C9C3ADF16CC60D000F95A6B /* WCEAppDelegate.h */,
 				8C9C3AE016CC60D000F95A6B /* WCEAppDelegate.m */,
 				8C9C3AE816CC60D000F95A6B /* MainStoryboard.storyboard */,
+				2E9790B416D2E1BF00D685B9 /* Models */,
 				8C27587016CC82A500DEDAC8 /* Login */,
 				8C27586F16CC829A00DEDAC8 /* Location */,
 				8C9C3AEB16CC60D000F95A6B /* WCEViewController.h */,
@@ -205,6 +218,7 @@
 				8C9C3AED16CC60D000F95A6B /* WCEViewController.m in Sources */,
 				8C27586B16CC820E00DEDAC8 /* LoginViewController.m in Sources */,
 				8C27586E16CC828F00DEDAC8 /* LocationViewController.m in Sources */,
+				2E9790B816D2E1D700D685B9 /* WCEUser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

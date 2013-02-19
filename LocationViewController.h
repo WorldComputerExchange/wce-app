@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LocationViewController : UIViewController
+@class WCEUser;
 
+@interface LocationViewController : UIViewController
+@property (strong, nonatomic) WCEUser *user;
 @end
