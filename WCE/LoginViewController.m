@@ -28,6 +28,10 @@
 	// Do any additional setup after loading the view.
 }
 
+- (void)viewWillAppear:(BOOL)animated{
+    [self.navigationController setNavigationBarHidden:YES];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -36,7 +40,6 @@
 
 - (IBAction)pushLocationView:(id)sender{
     NSLog(@"Login button pushed");
-    LocationViewController *locationView = [[LocationViewController alloc] init];
-    [self.navigationController pushViewController:locationView animated:YES];
+    [self performSegueWithIdentifier:@"pushLocation" sender:self];
 }
 @end
