@@ -24,6 +24,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="pushLocationView:" destination="2" eventType="touchUpInside" id="nxg-LY-Pvs"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dd4-pk-PvU">
                                 <constraints>
@@ -36,19 +39,20 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Dd4-pk-PvU" firstAttribute="top" secondItem="3" secondAttribute="top" constant="174" id="916-qe-Jff"/>
+                            <constraint firstItem="Dd4-pk-PvU" firstAttribute="top" secondItem="3" secondAttribute="top" constant="172" id="4Rk-5e-yt8"/>
                             <constraint firstItem="Dd4-pk-PvU" firstAttribute="centerX" secondItem="njZ-bS-OPU" secondAttribute="centerX" type="default" id="BON-wP-99a"/>
-                            <constraint firstAttribute="bottom" secondItem="njZ-bS-OPU" secondAttribute="bottom" constant="182" id="KaT-3y-X2k"/>
-                            <constraint firstItem="Dd4-pk-PvU" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" type="default" id="Lhm-oI-CvV"/>
+                            <constraint firstItem="njZ-bS-OPU" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" type="default" id="MRW-tJ-uoQ"/>
+                            <constraint firstAttribute="bottom" secondItem="njZ-bS-OPU" secondAttribute="bottom" constant="183" id="oVu-Dh-uqN"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="yaR-XD-8jg"/>
                     <connections>
                         <segue destination="HOf-av-Hw8" kind="push" identifier="pushLocation" id="uf0-dN-uIq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="197" y="65"/>
+            <point key="canvasLocation" x="69" y="65"/>
         </scene>
         <!--Location View Controller-->
         <scene sceneID="aR5-PF-m68">

@@ -5,6 +5,7 @@
 //
 
 #import "LoginViewController.h"
+#import "LocationViewController.h"
 
 @interface LoginViewController ()
 
@@ -33,4 +34,9 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)pushLocationView:(id)sender{
+    NSLog(@"Login button pushed");
+    LocationViewController *locationView = [[LocationViewController alloc] init];
+    [self.navigationController pushViewController:locationView animated:YES];
+}
 @end

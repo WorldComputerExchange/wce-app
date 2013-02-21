@@ -5,7 +5,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LocationViewController.h"
 
-@interface LoginViewController : UIViewController
+@interface LoginViewController : UIViewController{
+    
+}
+- (IBAction)pushLocationView:(id)sender;
 
 @end
