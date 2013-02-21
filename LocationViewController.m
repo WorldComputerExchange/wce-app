@@ -57,7 +57,7 @@
 }
 
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
-    NSLog(@"Selected Location: %@. Index of selected color: %i", [locationArray objectAtIndex:row], row);
+    NSLog(@"Selected Location: %@. Index of selected location: %i", [locationArray objectAtIndex:row], row);
 }
 
 @end
