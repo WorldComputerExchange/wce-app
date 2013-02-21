@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
         <!--Login View Controller-->
@@ -62,36 +62,46 @@
                         <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jQP-Tl-vhc">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="216" id="RzT-Y9-yt5"/>
-                                </constraints>
-                                <connections>
-                                    <outlet property="dataSource" destination="HOf-av-Hw8" id="l0g-Hb-9VM"/>
-                                    <outlet property="delegate" destination="HOf-av-Hw8" id="wFE-EI-eU7"/>
-                                </connections>
-                            </pickerView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Choose a Location" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hOg-bI-Qlu">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="tXC-8J-NPW"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="1Ac-sq-4Gw">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F8h-IM-nRF">
+                                <items>
+                                    <navigationItem title="Choose a Location" id="iOr-GO-2oW">
+                                        <barButtonItem key="leftBarButtonItem" title="Log Out" id="OlF-qy-NgK"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Bf3-tb-J06">
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oqq-O2-BtX">
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <items>
+                                    <tabBarItem systemItem="recents" id="JGu-Dj-PoH"/>
+                                    <tabBarItem title="View Map" id="hnW-86-VW9"/>
+                                </items>
+                            </tabBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="jQP-Tl-vhc" firstAttribute="trailing" secondItem="5qt-2R-xKT" secondAttribute="trailing" type="default" id="6Q1-Ek-opS"/>
-                            <constraint firstItem="hOg-bI-Qlu" firstAttribute="top" secondItem="5qt-2R-xKT" secondAttribute="top" constant="91" id="QgU-du-8cU"/>
-                            <constraint firstItem="hOg-bI-Qlu" firstAttribute="centerX" secondItem="jQP-Tl-vhc" secondAttribute="centerX" type="default" id="Tcj-Xg-DgY"/>
-                            <constraint firstItem="jQP-Tl-vhc" firstAttribute="leading" secondItem="5qt-2R-xKT" secondAttribute="leading" type="default" id="rNS-Io-Ilh"/>
-                            <constraint firstItem="jQP-Tl-vhc" firstAttribute="top" secondItem="5qt-2R-xKT" secondAttribute="top" constant="179" id="udq-rP-MAm"/>
+                            <constraint firstItem="oqq-O2-BtX" firstAttribute="leading" secondItem="5qt-2R-xKT" secondAttribute="leading" type="default" id="47C-w2-3Bi"/>
+                            <constraint firstItem="oqq-O2-BtX" firstAttribute="top" secondItem="1Ac-sq-4Gw" secondAttribute="bottom" type="default" id="923-lY-1oP"/>
+                            <constraint firstItem="oqq-O2-BtX" firstAttribute="bottom" secondItem="5qt-2R-xKT" secondAttribute="bottom" type="default" id="BSr-b2-3f6"/>
+                            <constraint firstItem="Bf3-tb-J06" firstAttribute="trailing" secondItem="5qt-2R-xKT" secondAttribute="trailing" type="default" id="DeS-ET-Kql"/>
+                            <constraint firstItem="1Ac-sq-4Gw" firstAttribute="trailing" secondItem="5qt-2R-xKT" secondAttribute="trailing" type="default" id="EAe-Bz-dFf"/>
+                            <constraint firstItem="Bf3-tb-J06" firstAttribute="top" secondItem="F8h-IM-nRF" secondAttribute="bottom" type="default" id="LFp-Hc-X8v"/>
+                            <constraint firstItem="F8h-IM-nRF" firstAttribute="trailing" secondItem="5qt-2R-xKT" secondAttribute="trailing" type="default" id="Wob-tA-QYA"/>
+                            <constraint firstItem="1Ac-sq-4Gw" firstAttribute="top" secondItem="Bf3-tb-J06" secondAttribute="bottom" type="default" id="XdM-zm-Vgg"/>
+                            <constraint firstItem="F8h-IM-nRF" firstAttribute="top" secondItem="5qt-2R-xKT" secondAttribute="top" type="default" id="nz7-Hf-obz"/>
+                            <constraint firstItem="F8h-IM-nRF" firstAttribute="leading" secondItem="5qt-2R-xKT" secondAttribute="leading" type="default" id="oEG-PF-hhH"/>
+                            <constraint firstItem="1Ac-sq-4Gw" firstAttribute="leading" secondItem="5qt-2R-xKT" secondAttribute="leading" type="default" id="oqb-mI-u9X"/>
+                            <constraint firstItem="Bf3-tb-J06" firstAttribute="leading" secondItem="5qt-2R-xKT" secondAttribute="leading" type="default" id="qN4-8B-cOa"/>
+                            <constraint firstItem="oqq-O2-BtX" firstAttribute="trailing" secondItem="5qt-2R-xKT" secondAttribute="trailing" type="default" id="sV3-Ma-O3e"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="aLH-2M-hhl"/>
                     <connections>
-                        <outlet property="locationPicker" destination="jQP-Tl-vhc" id="mHl-EU-sT2"/>
                         <segue destination="Ncv-S0-fD5" kind="modal" identifier="pushTab" id="xgK-pU-VC2"/>
                     </connections>
                 </viewController>
@@ -182,6 +192,20 @@
             <point key="canvasLocation" x="1207" y="74"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="LocationViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LocationViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="locationPicker" candidateClass="UIPickerView"/>
+            </relationships>
+        </class>
+        <class className="LoginViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LoginViewController.h"/>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
