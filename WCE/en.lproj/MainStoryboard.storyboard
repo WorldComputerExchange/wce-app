@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Fvu-h0-ZII">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Fvu-h0-ZII">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
     </dependencies>
     <scenes>
         <!--Login View Controller-->
@@ -93,6 +93,10 @@
                                         <tabBarItem title="View Map" id="OgO-ZO-JO2"/>
                                     </items>
                                 </tabBar>
+                                <connections>
+                                    <outlet property="dataSource" destination="btu-Hv-3gZ" id="tD8-k6-vHH"/>
+                                    <outlet property="delegate" destination="btu-Hv-3gZ" id="dmG-Qn-mXk"/>
+                                </connections>
                             </tableView>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="1i5-0E-ayY">
                                 <textInputTraits key="textInputTraits"/>
@@ -124,6 +128,8 @@
                             <constraint firstItem="BIB-4t-qxc" firstAttribute="leading" secondItem="Dev-3f-g2O" secondAttribute="leading" type="default" id="U9M-V6-Wof"/>
                             <constraint firstItem="1i5-0E-ayY" firstAttribute="leading" secondItem="Dev-3f-g2O" secondAttribute="leading" type="default" id="naY-C5-Xml"/>
                             <constraint firstItem="BIB-4t-qxc" firstAttribute="top" secondItem="Dev-3f-g2O" secondAttribute="top" type="default" id="r51-Ms-2JB"/>
+                            <constraint firstItem="cLg-Kc-muo" firstAttribute="top" secondItem="Dev-3f-g2O" secondAttribute="top" type="default" id="XqO-5s-9Fa"/>
+                            <constraint firstItem="cLg-Kc-muo" firstAttribute="bottom" secondItem="Dev-3f-g2O" secondAttribute="bottom" type="default" id="utQ-gU-8g2"/>
                             <constraint firstItem="cLg-Kc-muo" firstAttribute="leading" secondItem="Dev-3f-g2O" secondAttribute="leading" type="default" id="wHG-46-gYE"/>
                         </constraints>
                     </view>
