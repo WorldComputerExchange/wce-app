@@ -81,15 +81,53 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="cLg-Kc-muo">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="504" id="7ow-bc-A0a"/>
+                                </constraints>
+                                <tabBar key="tableFooterView" contentMode="scaleToFill" id="3FZ-Wa-au5">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <items>
+                                        <tabBarItem systemItem="recents" id="z7a-Lm-WRx"/>
+                                        <tabBarItem title="View Map" id="OgO-ZO-JO2"/>
+                                    </items>
+                                </tabBar>
                                 <connections>
                                     <outlet property="dataSource" destination="btu-Hv-3gZ" id="tD8-k6-vHH"/>
                                     <outlet property="delegate" destination="btu-Hv-3gZ" id="dmG-Qn-mXk"/>
                                 </connections>
                             </tableView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="1i5-0E-ayY">
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BIB-4t-qxc">
+                                <items>
+                                    <navigationItem title="Choose a Location" id="sC4-UM-CUQ">
+                                        <barButtonItem key="leftBarButtonItem" title="Logout" id="dwd-Si-2vo">
+                                            <connections>
+                                                <segue destination="2" kind="push" id="Wb0-9J-Ct5"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Add" id="6nS-dD-B12">
+                                            <connections>
+                                                <segue destination="a24-Hj-6Z9" kind="push" id="awN-9j-soV"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="1i5-0E-ayY" firstAttribute="top" secondItem="Dev-3f-g2O" secondAttribute="top" constant="39" id="41Y-D6-2vZ"/>
                             <constraint firstItem="cLg-Kc-muo" firstAttribute="trailing" secondItem="Dev-3f-g2O" secondAttribute="trailing" type="default" id="Jbk-tK-gPz"/>
+                            <constraint firstItem="BIB-4t-qxc" firstAttribute="trailing" secondItem="Dev-3f-g2O" secondAttribute="trailing" type="default" id="LFU-3W-6FJ"/>
+                            <constraint firstItem="1i5-0E-ayY" firstAttribute="trailing" secondItem="Dev-3f-g2O" secondAttribute="trailing" type="default" id="Pif-u2-QtT"/>
+                            <constraint firstItem="1i5-0E-ayY" firstAttribute="bottom" secondItem="cLg-Kc-muo" secondAttribute="top" type="default" id="ThX-Bs-BdL"/>
+                            <constraint firstItem="BIB-4t-qxc" firstAttribute="leading" secondItem="Dev-3f-g2O" secondAttribute="leading" type="default" id="U9M-V6-Wof"/>
+                            <constraint firstItem="1i5-0E-ayY" firstAttribute="leading" secondItem="Dev-3f-g2O" secondAttribute="leading" type="default" id="naY-C5-Xml"/>
+                            <constraint firstItem="BIB-4t-qxc" firstAttribute="top" secondItem="Dev-3f-g2O" secondAttribute="top" type="default" id="r51-Ms-2JB"/>
                             <constraint firstItem="cLg-Kc-muo" firstAttribute="top" secondItem="Dev-3f-g2O" secondAttribute="top" type="default" id="XqO-5s-9Fa"/>
                             <constraint firstItem="cLg-Kc-muo" firstAttribute="bottom" secondItem="Dev-3f-g2O" secondAttribute="bottom" type="default" id="utQ-gU-8g2"/>
                             <constraint firstItem="cLg-Kc-muo" firstAttribute="leading" secondItem="Dev-3f-g2O" secondAttribute="leading" type="default" id="wHG-46-gYE"/>
