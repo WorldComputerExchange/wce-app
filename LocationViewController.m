@@ -36,7 +36,11 @@
     
     
 }
-
+- (IBAction)OrBoton:(id)sender
+{
+    UIButton *button = (UIButton *)sender;
+    [button setBackgroundColor:[UIColor blackColor]];
+}
 
 
 - (void)didReceiveMemoryWarning
