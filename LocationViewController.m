@@ -32,7 +32,7 @@
     [locationArray addObject:@"Liberia"];
     [locationArray addObject:@"Pakistan"];
     [locationArray addObject:@"Stony Point"];
-    [locationArray addObject:@"Add New Location"];
+    
     
     
 }
