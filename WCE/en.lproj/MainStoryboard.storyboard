@@ -265,7 +265,7 @@
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Are you sure? Entries will be lost" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GoV-xs-mqA">
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.99215692281723022" green="0.031372550874948502" blue="0.0078431377187371254" alpha="1" colorSpace="deviceRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z9z-Je-EIF">
@@ -298,7 +298,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="z9z-Je-EIF" firstAttribute="leading" secondItem="GoV-xs-mqA" secondAttribute="leading" type="default" id="42P-TV-ktN"/>
                             <constraint firstItem="GoV-xs-mqA" firstAttribute="leading" secondItem="OBh-Ih-SS4" secondAttribute="leading" constant="32" id="7DS-xH-s0X"/>
@@ -373,7 +373,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="Lmi-cm-DLC" secondAttribute="bottom" constant="366" id="8MH-eI-IdN"/>
                             <constraint firstItem="ehZ-5f-XG0" firstAttribute="leading" secondItem="cjW-Ih-XVo" secondAttribute="leading" type="default" id="Bqi-o3-YVZ"/>
@@ -433,7 +433,6 @@
         <class className="LoginViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/LoginViewController.h"/>
             <relationships>
-                <relationship kind="action" name="OrBoton:"/>
                 <relationship kind="action" name="pushLocationView:"/>
                 <relationship kind="outlet" name="passcodeField" candidateClass="UITextField"/>
             </relationships>
@@ -449,7 +448,7 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="nau-jf-8YP"/>
-        <segue reference="nxo-Ck-LY8"/>
-        <segue reference="bUA-t6-8EP"/>
+        <segue reference="YPY-s5-N4Y"/>
+        <segue reference="Gan-4n-2v9"/>
     </inferredMetricsTieBreakers>
 </document>
