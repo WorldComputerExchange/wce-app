@@ -9,7 +9,7 @@
             <objects>
                 <viewController storyboardIdentifier="login" id="2" customClass="LoginViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3">
-                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dd4-pk-PvU">
@@ -200,36 +200,50 @@
                                     <segue destination="L5l-e3-9d1" kind="push" id="nxo-Ck-LY8"/>
                                 </connections>
                             </button>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VSA-Eg-7C3">
+                                <items>
+                                    <navigationItem title="Add New Location" id="Ugz-Xv-hC7">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="LR1-3n-gku">
+                                            <connections>
+                                                <segue destination="eCb-ah-L4p" kind="push" id="VFO-zC-2RK"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="KCu-jl-Z3u" firstAttribute="leading" secondItem="90W-QE-qtV" secondAttribute="leading" constant="74" id="6lP-ZN-xoo"/>
+                            <constraint firstItem="RoH-yW-ZxR" firstAttribute="top" secondItem="7RD-V8-A8L" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="3Yr-ql-ipQ"/>
+                            <constraint firstItem="s8f-kI-4Aa" firstAttribute="top" secondItem="90W-QE-qtV" secondAttribute="top" constant="58" id="7bF-aw-OlB"/>
+                            <constraint firstItem="Fto-wc-FgU" firstAttribute="top" secondItem="u2b-hX-SNb" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="9Qf-rR-YUa"/>
                             <constraint firstAttribute="trailing" secondItem="CqR-pf-X1r" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="A35-gI-3Ra"/>
                             <constraint firstItem="RoH-yW-ZxR" firstAttribute="leading" secondItem="90W-QE-qtV" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="FYz-pC-5Th"/>
+                            <constraint firstItem="u2b-hX-SNb" firstAttribute="top" secondItem="RoH-yW-ZxR" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Fyy-Ug-jVq"/>
                             <constraint firstItem="u2b-hX-SNb" firstAttribute="leading" secondItem="90W-QE-qtV" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="HN5-if-iIz"/>
-                            <constraint firstItem="7RD-V8-A8L" firstAttribute="top" secondItem="KUS-Q7-NTY" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="InE-u6-JYt"/>
+                            <constraint firstItem="KUS-Q7-NTY" firstAttribute="top" secondItem="PRk-Zo-Fbk" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Iad-1B-LAC"/>
+                            <constraint firstAttribute="bottom" secondItem="KCu-jl-Z3u" secondAttribute="bottom" constant="37" id="J11-sH-irL"/>
                             <constraint firstItem="s8f-kI-4Aa" firstAttribute="leading" secondItem="90W-QE-qtV" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="JJV-bE-7ja"/>
+                            <constraint firstItem="7RD-V8-A8L" firstAttribute="top" secondItem="KUS-Q7-NTY" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="OKe-Lj-bzt"/>
+                            <constraint firstItem="PRk-Zo-Fbk" firstAttribute="top" secondItem="s8f-kI-4Aa" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="P7c-c2-OxC"/>
                             <constraint firstItem="gJM-QX-vVM" firstAttribute="leading" secondItem="90W-QE-qtV" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="PAY-OX-fyx"/>
-                            <constraint firstItem="qjg-TI-Kqo" firstAttribute="top" secondItem="gJM-QX-vVM" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="PNC-fa-OsA"/>
                             <constraint firstAttribute="trailing" secondItem="PRk-Zo-Fbk" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="VFG-uk-NJn"/>
-                            <constraint firstItem="PRk-Zo-Fbk" firstAttribute="top" secondItem="s8f-kI-4Aa" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Wss-hf-h6f"/>
-                            <constraint firstItem="Fto-wc-FgU" firstAttribute="top" secondItem="u2b-hX-SNb" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Xg8-ea-LCD"/>
-                            <constraint firstItem="gJM-QX-vVM" firstAttribute="top" secondItem="Fto-wc-FgU" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Xhh-b2-tJl"/>
+                            <constraint firstItem="VSA-Eg-7C3" firstAttribute="trailing" secondItem="90W-QE-qtV" secondAttribute="trailing" type="default" id="VOP-mj-RDd"/>
                             <constraint firstItem="Fto-wc-FgU" firstAttribute="leading" secondItem="90W-QE-qtV" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Yrs-lE-RfL"/>
                             <constraint firstAttribute="trailing" secondItem="gJM-QX-vVM" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="ZxE-EQ-cgF"/>
                             <constraint firstAttribute="trailing" secondItem="u2b-hX-SNb" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="bWZ-zd-lUn"/>
-                            <constraint firstItem="RoH-yW-ZxR" firstAttribute="top" secondItem="7RD-V8-A8L" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="cDL-Xl-tZX"/>
-                            <constraint firstItem="KUS-Q7-NTY" firstAttribute="top" secondItem="PRk-Zo-Fbk" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="eY9-W0-Tex"/>
+                            <constraint firstItem="CqR-pf-X1r" firstAttribute="top" secondItem="qjg-TI-Kqo" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="cRH-yJ-xuh"/>
+                            <constraint firstItem="gJM-QX-vVM" firstAttribute="top" secondItem="Fto-wc-FgU" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="eST-CO-bBf"/>
                             <constraint firstItem="CqR-pf-X1r" firstAttribute="leading" secondItem="90W-QE-qtV" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="gOv-QI-gB3"/>
                             <constraint firstAttribute="trailing" secondItem="7RD-V8-A8L" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="gnH-Oq-OBL"/>
-                            <constraint firstItem="s8f-kI-4Aa" firstAttribute="top" secondItem="90W-QE-qtV" secondAttribute="top" constant="36" id="k4q-iW-7oD"/>
+                            <constraint firstItem="VSA-Eg-7C3" firstAttribute="leading" secondItem="90W-QE-qtV" secondAttribute="leading" type="default" id="ju8-cz-76q"/>
                             <constraint firstItem="PRk-Zo-Fbk" firstAttribute="leading" secondItem="90W-QE-qtV" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="ncj-AA-lV9"/>
                             <constraint firstItem="KUS-Q7-NTY" firstAttribute="leading" secondItem="90W-QE-qtV" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="ney-8x-i34"/>
                             <constraint firstItem="qjg-TI-Kqo" firstAttribute="leading" secondItem="90W-QE-qtV" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="p1Q-rd-lI0"/>
-                            <constraint firstItem="u2b-hX-SNb" firstAttribute="top" secondItem="RoH-yW-ZxR" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="t5a-Bt-kPB"/>
-                            <constraint firstAttribute="bottom" secondItem="KCu-jl-Z3u" secondAttribute="bottom" constant="47" id="txA-ML-4KR"/>
-                            <constraint firstItem="CqR-pf-X1r" firstAttribute="top" secondItem="qjg-TI-Kqo" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="vFM-Kl-AiZ"/>
+                            <constraint firstItem="KCu-jl-Z3u" firstAttribute="centerX" secondItem="CqR-pf-X1r" secondAttribute="centerX" type="default" id="v2B-cV-iHo"/>
+                            <constraint firstItem="qjg-TI-Kqo" firstAttribute="top" secondItem="gJM-QX-vVM" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="wBy-mM-SQN"/>
                             <constraint firstItem="7RD-V8-A8L" firstAttribute="leading" secondItem="90W-QE-qtV" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="xky-wn-OTE"/>
+                            <constraint firstItem="VSA-Eg-7C3" firstAttribute="top" secondItem="90W-QE-qtV" secondAttribute="top" type="default" id="zrq-75-Rlk"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Add New Location" id="cXV-w4-dlm">
@@ -242,7 +256,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7VY-pE-X1N" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1593" y="65"/>
+            <point key="canvasLocation" x="1591" y="65"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="fgS-uK-BuS">
@@ -414,8 +428,10 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
+        <segue reference="Wb0-9J-Ct5"/>
+        <segue reference="bUA-t6-8EP"/>
         <segue reference="nau-jf-8YP"/>
-        <segue reference="YPY-s5-N4Y"/>
-        <segue reference="Gan-4n-2v9"/>
+        <segue reference="nxo-Ck-LY8"/>
+        <segue reference="VFO-zC-2RK"/>
     </inferredMetricsTieBreakers>
 </document>
