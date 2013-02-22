@@ -2,8 +2,6 @@
 //  LocationViewController.m
 //  WCE
 //
-//  Created by  Brian Beckerle on 2/13/13.
-//  Copyright (c) 2013  Brian Beckerle. All rights reserved.
 //
 
 #import "LocationViewController.h"
@@ -19,7 +17,6 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-        [locationPicker setDelegate: self];
     }
     return self;
 }
