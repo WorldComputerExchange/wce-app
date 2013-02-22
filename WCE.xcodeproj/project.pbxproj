@@ -20,6 +20,7 @@
 		8C9C3AE716CC60D000F95A6B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C9C3AE616CC60D000F95A6B /* Default-568h@2x.png */; };
 		8C9C3AEA16CC60D000F95A6B /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C9C3AE816CC60D000F95A6B /* MainStoryboard.storyboard */; };
 		8C9C3AED16CC60D000F95A6B /* WCEViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C9C3AEC16CC60D000F95A6B /* WCEViewController.m */; };
+		D07A3B0316D6F7C4003B6074 /* WCE_LogoWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = D07A3B0216D6F7C4003B6074 /* WCE_LogoWhite.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		8C9C3AE916CC60D000F95A6B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		8C9C3AEB16CC60D000F95A6B /* WCEViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WCEViewController.h; sourceTree = "<group>"; };
 		8C9C3AEC16CC60D000F95A6B /* WCEViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WCEViewController.m; sourceTree = "<group>"; };
+		D07A3B0216D6F7C4003B6074 /* WCE_LogoWhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WCE_LogoWhite.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 		8C9C3AD716CC60D000F95A6B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D07A3B0216D6F7C4003B6074 /* WCE_LogoWhite.png */,
 				8C9C3AD816CC60D000F95A6B /* WCE-Info.plist */,
 				8C9C3AD916CC60D000F95A6B /* InfoPlist.strings */,
 				8C9C3ADC16CC60D000F95A6B /* main.m */,
@@ -190,6 +193,7 @@
 				8C9C3AE516CC60D000F95A6B /* Default@2x.png in Resources */,
 				8C9C3AE716CC60D000F95A6B /* Default-568h@2x.png in Resources */,
 				8C9C3AEA16CC60D000F95A6B /* MainStoryboard.storyboard in Resources */,
+				D07A3B0316D6F7C4003B6074 /* WCE_LogoWhite.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

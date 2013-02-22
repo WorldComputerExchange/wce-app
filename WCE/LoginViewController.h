@@ -10,6 +10,5 @@
 @interface LoginViewController : UIViewController{
     
 }
-- (IBAction)pushLocationView:(id)sender;
 
 @end
