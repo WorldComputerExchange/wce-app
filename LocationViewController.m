@@ -12,6 +12,9 @@
 
 @implementation LocationViewController
 
+@synthesize locationArray;
+@synthesize locationTableView;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -29,6 +32,7 @@
     [locationArray addObject:@"Liberia"];
     [locationArray addObject:@"Pakistan"];
     [locationArray addObject:@"Stony Point"];
+    [locationArray addObject:@"Add New Location"];
     
     
 }
@@ -41,7 +45,35 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView{
+- (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+}
+
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+	return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)table numberOfRowsInSection:(NSInteger)section {
+	return [locationArray count];
+}
+
+- (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+	//initialize a cell
+	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"LocationCellID"];
+	if (cell == nil)
+	{
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"LocationCell"];
+	}
+	//get the relevant Tweet
+	NSString *location =  [self.locationArray objectAtIndex:indexPath.row];
+    
+    cell.textLabel.text = location;
+    
+	return cell;
+}
+/*- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView{
     return 1;
 }
 
@@ -55,6 +87,6 @@
 
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
     NSLog(@"Selected Location: %@. Index of selected location: %i", [locationArray objectAtIndex:row], row);
-}
+}*/
 
 @end
