@@ -9,6 +9,10 @@
 
 @interface LoginViewController ()
 
+@property (weak, nonatomic) IBOutlet UITextField *passcodeField;
+
+- (IBAction)pushLocationView:(id)sender;
+
 @end
 
 @implementation LoginViewController
@@ -39,7 +43,28 @@
 }
 
 - (IBAction)pushLocationView:(id)sender{
-    NSLog(@"Login button pushed");
-    [self performSegueWithIdentifier:@"pushLocation" sender:self];
+	
+	NSLog(@"Login button pushed");
+	
+	// "self.passcodeField.text" refers to the text currently entered in the passcode field (which is an outlet for this class, WCELoginViewController)
+    if ([self.passcodeField.text isEqualToString:@"123456"]) // We compare it to the string "123456"
+    {
+        self.passcodeField.text = @""; // Erase the passcode entered in the text field
+        
+        // Tell this view controller (WCELoginViewController) to do a "segue" transition to the next page of the app. The way you set this up is in
+        // the storyboard. You drag a line (by holding the control key) from the view controller that you're starting from, to the view controller that you want
+        // to "segue" to. You know, I'll just make a screen capture video that'll be easier to show you with.
+        [self performSegueWithIdentifier:@"pushLocation" sender:self];
+    }
+    else
+    {
+        self.passcodeField.text = @""; // Erase the passcode entered in the text field
+        
+        // Copied this right off a website, it just creates an alert box that tells you that the passcode you entered was wrong
+        UIAlertView *incorrectCodeMessage = [[UIAlertView alloc] initWithTitle:@"Incorrect Passcode" message:@"Try entering your passcode again." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+        
+        // Actually shows the alert message
+        [incorrectCodeMessage show];
+    }
 }
 @end

@@ -12,41 +12,58 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="njZ-bS-OPU">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="124" id="fSZ-mv-ERC"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Log In">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="pushLocationView:" destination="2" eventType="touchUpInside" id="nxg-LY-Pvs"/>
-                                </connections>
-                            </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dd4-pk-PvU">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dd4-pk-PvU">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="176" id="jS6-e5-T4y"/>
                                 </constraints>
-                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numberPad" returnKeyType="go" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                             </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Enter Passcode:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zcX-hG-ZtP">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="EH9-cL-hql"/>
+                                    <constraint firstAttribute="width" constant="145" id="zK5-rn-6OM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="center" image="WCE_LogoWhite.png" translatesAutoresizingMaskIntoConstraints="NO" id="yfQ-Bp-V75">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="59" id="rBF-C1-388"/>
+                                    <constraint firstAttribute="width" constant="228" id="zyu-qe-4ss"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PEE-h6-IeA">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="92" id="Esg-Cb-GYC"/>
+                                    <constraint firstAttribute="height" constant="36" id="Tzf-Iu-2k2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="14"/>
+                                <state key="normal" title="Log In">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="pushLocationView:" destination="2" eventType="touchUpInside" id="YVX-ks-WNh"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="Dd4-pk-PvU" firstAttribute="top" secondItem="3" secondAttribute="top" constant="172" id="4Rk-5e-yt8"/>
-                            <constraint firstItem="Dd4-pk-PvU" firstAttribute="centerX" secondItem="njZ-bS-OPU" secondAttribute="centerX" type="default" id="BON-wP-99a"/>
-                            <constraint firstItem="njZ-bS-OPU" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" type="default" id="MRW-tJ-uoQ"/>
-                            <constraint firstAttribute="bottom" secondItem="njZ-bS-OPU" secondAttribute="bottom" constant="183" id="oVu-Dh-uqN"/>
+                            <constraint firstItem="zcX-hG-ZtP" firstAttribute="centerX" secondItem="Dd4-pk-PvU" secondAttribute="centerX" type="default" id="BNI-ZW-kbA"/>
+                            <constraint firstItem="PEE-h6-IeA" firstAttribute="centerX" secondItem="Dd4-pk-PvU" secondAttribute="centerX" type="default" id="F2Y-J1-UKF"/>
+                            <constraint firstItem="zcX-hG-ZtP" firstAttribute="top" secondItem="3" secondAttribute="top" constant="126" id="L09-Ni-22f"/>
+                            <constraint firstItem="Dd4-pk-PvU" firstAttribute="top" secondItem="zcX-hG-ZtP" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Pob-nW-PvY"/>
+                            <constraint firstItem="PEE-h6-IeA" firstAttribute="top" secondItem="Dd4-pk-PvU" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Q5U-Kc-gRe"/>
+                            <constraint firstItem="yfQ-Bp-V75" firstAttribute="centerX" secondItem="zcX-hG-ZtP" secondAttribute="centerX" type="default" id="aP1-vH-726"/>
+                            <constraint firstItem="yfQ-Bp-V75" firstAttribute="top" secondItem="3" secondAttribute="top" constant="30" id="fNI-ut-aDL"/>
+                            <constraint firstItem="PEE-h6-IeA" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" type="default" id="fto-mj-O1u"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="yaR-XD-8jg"/>
                     <connections>
+                        <outlet property="passcodeField" destination="Dd4-pk-PvU" id="Qfl-5o-d0t"/>
                         <segue destination="btu-Hv-3gZ" kind="push" identifier="pushLocation" id="WJU-4Z-lgZ"/>
                     </connections>
                 </viewController>
@@ -57,7 +74,6 @@
         <!--Location View Controller - Choose a Location-->
         <scene sceneID="zRP-aT-Df7">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="HGl-To-PNk" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="location" id="btu-Hv-3gZ" customClass="LocationViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Dev-3f-g2O">
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
@@ -97,6 +113,7 @@
                         <segue destination="6ko-za-jGJ" kind="push" identifier="pushTab" id="V7I-Hr-j83"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HGl-To-PNk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1096" y="65"/>
         </scene>
@@ -201,6 +218,9 @@
             <point key="canvasLocation" x="69" y="65"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="WCE_LogoWhite.png" width="221" height="60"/>
+    </resources>
     <classes>
         <class className="LocationViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/LocationViewController.h"/>
@@ -212,6 +232,7 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/LoginViewController.h"/>
             <relationships>
                 <relationship kind="action" name="pushLocationView:"/>
+                <relationship kind="outlet" name="passcodeField" candidateClass="UITextField"/>
             </relationships>
         </class>
         <class className="NSLayoutConstraint" superclassName="NSObject">
