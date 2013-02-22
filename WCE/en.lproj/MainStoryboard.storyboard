@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Fvu-h0-ZII">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Fvu-h0-ZII">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
         <!--Login View Controller-->
@@ -54,44 +54,49 @@
             </objects>
             <point key="canvasLocation" x="595" y="65"/>
         </scene>
-        <!--Location View Controller-->
+        <!--Location View Controller - Choose a Location-->
         <scene sceneID="zRP-aT-Df7">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HGl-To-PNk" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="location" id="btu-Hv-3gZ" customClass="LocationViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Dev-3f-g2O">
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5dV-Ge-xJW">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="216" id="BMV-ET-fBj"/>
-                                </constraints>
-                                <connections>
-                                    <outlet property="dataSource" destination="btu-Hv-3gZ" id="ZmX-uy-DIh"/>
-                                    <outlet property="delegate" destination="btu-Hv-3gZ" id="Ja3-eD-lWg"/>
-                                </connections>
-                            </pickerView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Choose a Location:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cGa-a0-z3I">
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="cLg-Kc-muo">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <tabBar key="tableFooterView" contentMode="scaleToFill" id="3FZ-Wa-au5">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <items>
+                                        <tabBarItem systemItem="recents" id="z7a-Lm-WRx"/>
+                                        <tabBarItem title="View Map" id="OgO-ZO-JO2"/>
+                                    </items>
+                                </tabBar>
+                            </tableView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="1i5-0E-ayY">
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="5dV-Ge-xJW" firstAttribute="leading" secondItem="Dev-3f-g2O" secondAttribute="leading" type="default" id="TgL-D5-Es2"/>
-                            <constraint firstItem="5dV-Ge-xJW" firstAttribute="top" secondItem="Dev-3f-g2O" secondAttribute="top" constant="131" id="UEx-Jn-PIk"/>
-                            <constraint firstItem="cGa-a0-z3I" firstAttribute="top" secondItem="Dev-3f-g2O" secondAttribute="top" constant="56" id="eWY-gt-E6I"/>
-                            <constraint firstItem="cGa-a0-z3I" firstAttribute="centerX" secondItem="5dV-Ge-xJW" secondAttribute="centerX" type="default" id="j5c-tH-CEt"/>
-                            <constraint firstItem="5dV-Ge-xJW" firstAttribute="trailing" secondItem="Dev-3f-g2O" secondAttribute="trailing" type="default" id="l32-Kn-EZb"/>
+                            <constraint firstItem="cLg-Kc-muo" firstAttribute="bottom" secondItem="Dev-3f-g2O" secondAttribute="bottom" type="default" id="8LM-Cd-KKl"/>
+                            <constraint firstItem="cLg-Kc-muo" firstAttribute="trailing" secondItem="Dev-3f-g2O" secondAttribute="trailing" type="default" id="Jbk-tK-gPz"/>
+                            <constraint firstItem="1i5-0E-ayY" firstAttribute="trailing" secondItem="Dev-3f-g2O" secondAttribute="trailing" type="default" id="Pif-u2-QtT"/>
+                            <constraint firstItem="cLg-Kc-muo" firstAttribute="top" secondItem="1i5-0E-ayY" secondAttribute="bottom" type="default" id="kOd-4i-8Tq"/>
+                            <constraint firstItem="1i5-0E-ayY" firstAttribute="leading" secondItem="Dev-3f-g2O" secondAttribute="leading" type="default" id="naY-C5-Xml"/>
+                            <constraint firstItem="cLg-Kc-muo" firstAttribute="leading" secondItem="Dev-3f-g2O" secondAttribute="leading" type="default" id="wHG-46-gYE"/>
+                            <constraint firstItem="1i5-0E-ayY" firstAttribute="top" secondItem="Dev-3f-g2O" secondAttribute="top" type="default" id="zSb-iJ-dQl"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="VSM-CV-ywm"/>
+                    <navigationItem key="navigationItem" title="Choose a Location" id="VSM-CV-ywm">
+                        <barButtonItem key="leftBarButtonItem" title="Logoff" id="Jev-Av-t1v"/>
+                    </navigationItem>
                     <connections>
                         <segue destination="6ko-za-jGJ" kind="push" identifier="pushTab" id="V7I-Hr-j83"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="HGl-To-PNk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1096" y="65"/>
         </scene>
