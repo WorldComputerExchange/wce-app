@@ -21,6 +21,7 @@
 		8C9C3AE716CC60D000F95A6B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C9C3AE616CC60D000F95A6B /* Default-568h@2x.png */; };
 		8C9C3AEA16CC60D000F95A6B /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C9C3AE816CC60D000F95A6B /* MainStoryboard.storyboard */; };
 		8C9C3AED16CC60D000F95A6B /* WCEViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C9C3AEC16CC60D000F95A6B /* WCEViewController.m */; };
+		9E06228E16DC05DB00EDA244 /* Addnewlocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E06228D16DC05DB00EDA244 /* Addnewlocation.m */; };
 		9E39AF8016D9739500B4275C /* satellite_maps_earth_map_dual_monitor_3200x1200_desktop_wallpaper-344945.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9E39AF7F16D9739500B4275C /* satellite_maps_earth_map_dual_monitor_3200x1200_desktop_wallpaper-344945.jpg */; };
 		D07A3B0316D6F7C4003B6074 /* WCE_LogoWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = D07A3B0216D6F7C4003B6074 /* WCE_LogoWhite.png */; };
 /* End PBXBuildFile section */
@@ -48,6 +49,8 @@
 		8C9C3AE916CC60D000F95A6B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		8C9C3AEB16CC60D000F95A6B /* WCEViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WCEViewController.h; sourceTree = "<group>"; };
 		8C9C3AEC16CC60D000F95A6B /* WCEViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WCEViewController.m; sourceTree = "<group>"; };
+		9E06228C16DC05DB00EDA244 /* Addnewlocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Addnewlocation.h; sourceTree = "<group>"; };
+		9E06228D16DC05DB00EDA244 /* Addnewlocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Addnewlocation.m; sourceTree = "<group>"; };
 		9E39AF7F16D9739500B4275C /* satellite_maps_earth_map_dual_monitor_3200x1200_desktop_wallpaper-344945.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "satellite_maps_earth_map_dual_monitor_3200x1200_desktop_wallpaper-344945.jpg"; sourceTree = "<group>"; };
 		D07A3B0216D6F7C4003B6074 /* WCE_LogoWhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WCE_LogoWhite.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
