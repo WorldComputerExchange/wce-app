@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8C03242316DC2AB30089CB81 /* SaveLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C03242216DC2AB30089CB81 /* SaveLocationViewController.m */; };
 		8C27586B16CC820E00DEDAC8 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C27586A16CC820E00DEDAC8 /* LoginViewController.m */; };
 		8C27586E16CC828F00DEDAC8 /* LocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C27586D16CC828F00DEDAC8 /* LocationViewController.m */; };
 		8C9C3AD116CC60D000F95A6B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C9C3AD016CC60D000F95A6B /* UIKit.framework */; };
@@ -25,6 +26,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8C03242116DC2AB30089CB81 /* SaveLocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SaveLocationViewController.h; sourceTree = "<group>"; };
+		8C03242216DC2AB30089CB81 /* SaveLocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SaveLocationViewController.m; sourceTree = "<group>"; };
 		8C27586916CC820E00DEDAC8 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		8C27586A16CC820E00DEDAC8 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		8C27586C16CC828F00DEDAC8 /* LocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LocationViewController.h; path = ../LocationViewController.h; sourceTree = "<group>"; };
@@ -63,6 +66,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8C03241F16DC2A7A0089CB81 /* SaveLocation */ = {
+			isa = PBXGroup;
+			children = (
+				8C03242116DC2AB30089CB81 /* SaveLocationViewController.h */,
+				8C03242216DC2AB30089CB81 /* SaveLocationViewController.m */,
+			);
+			name = SaveLocation;
+			sourceTree = "<group>";
+		};
 		8C27586F16CC829A00DEDAC8 /* Location */ = {
 			isa = PBXGroup;
 			children = (
@@ -114,6 +126,7 @@
 				8C9C3ADF16CC60D000F95A6B /* WCEAppDelegate.h */,
 				8C9C3AE016CC60D000F95A6B /* WCEAppDelegate.m */,
 				8C9C3AE816CC60D000F95A6B /* MainStoryboard.storyboard */,
+				8C03241F16DC2A7A0089CB81 /* SaveLocation */,
 				8C27587016CC82A500DEDAC8 /* Login */,
 				8C27586F16CC829A00DEDAC8 /* Location */,
 				8C9C3AEB16CC60D000F95A6B /* WCEViewController.h */,
@@ -213,6 +226,7 @@
 				8C9C3AED16CC60D000F95A6B /* WCEViewController.m in Sources */,
 				8C27586B16CC820E00DEDAC8 /* LoginViewController.m in Sources */,
 				8C27586E16CC828F00DEDAC8 /* LocationViewController.m in Sources */,
+				8C03242316DC2AB30089CB81 /* SaveLocationViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
