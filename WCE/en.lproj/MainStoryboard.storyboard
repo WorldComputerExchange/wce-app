@@ -81,6 +81,23 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="cLg-Kc-muo">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <navigationBar key="tableFooterView" contentMode="scaleToFill" id="BIB-4t-qxc">
+                                    <rect key="frame" x="0.0" y="504" width="320" height="44"/>
+                                    <items>
+                                        <navigationItem title="Choose a Location" id="sC4-UM-CUQ">
+                                            <barButtonItem key="leftBarButtonItem" title="Logout" id="dwd-Si-2vo">
+                                                <connections>
+                                                    <segue destination="2" kind="push" id="Wb0-9J-Ct5"/>
+                                                </connections>
+                                            </barButtonItem>
+                                            <barButtonItem key="rightBarButtonItem" title="Add" id="6nS-dD-B12">
+                                                <connections>
+                                                    <segue destination="a24-Hj-6Z9" kind="push" id="awN-9j-soV"/>
+                                                </connections>
+                                            </barButtonItem>
+                                        </navigationItem>
+                                    </items>
+                                </navigationBar>
                                 <connections>
                                     <outlet property="dataSource" destination="btu-Hv-3gZ" id="tD8-k6-vHH"/>
                                     <outlet property="delegate" destination="btu-Hv-3gZ" id="dmG-Qn-mXk"/>
