@@ -36,6 +36,10 @@
     
     
 }
+
+- (void)viewWillAppear:(BOOL)animated{
+    [self.navigationController setNavigationBarHidden:NO];
+}
 - (IBAction)OrBoton:(id)sender
 {
     UIButton *button = (UIButton *)sender;
@@ -70,27 +74,12 @@
 	{
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"LocationCell"];
 	}
-	//get the relevant Tweet
+	//get the relevant location from the array
 	NSString *location =  [self.locationArray objectAtIndex:indexPath.row];
     
     cell.textLabel.text = location;
     
 	return cell;
 }
-/*- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView{
-    return 1;
-}
-
-- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component{
-    return [locationArray count];
-}
-
-- (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component{
-    return [locationArray objectAtIndex:row];
-}
-
-- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
-    NSLog(@"Selected Location: %@. Index of selected location: %i", [locationArray objectAtIndex:row], row);
-}*/
 
 @end
