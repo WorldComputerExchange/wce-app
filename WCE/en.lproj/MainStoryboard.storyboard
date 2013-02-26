@@ -574,6 +574,7 @@
         <class className="LocationViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/LocationViewController.h"/>
             <relationships>
+                <relationship kind="action" name="OrBoton:"/>
                 <relationship kind="outlet" name="locationTableView" candidateClass="UITableView"/>
             </relationships>
         </class>
@@ -597,8 +598,8 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="s2O-5y-c1z"/>
         <segue reference="bUA-t6-8EP"/>
+        <segue reference="nau-jf-8YP"/>
         <segue reference="nxo-Ck-LY8"/>
         <segue reference="VFO-zC-2RK"/>
     </inferredMetricsTieBreakers>
