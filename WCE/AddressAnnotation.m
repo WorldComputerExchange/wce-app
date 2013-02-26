@@ -9,21 +9,23 @@
 #import "AddressAnnotation.h"
 
 @implementation AddressAnnotation
-@synthesize coordinate;
+@synthesize coordinate, subtitle, title;
 
 - (NSString *)subtitle
 {
-    return nil;
+    return subtitle;
 }
 
 - (NSString *)title
 {
-    return nil;
+    return title;
 }
 
-- (id)initWithCoordinate:(CLLocationCoordinate2D)c
+- (id)initWithCoordinate:(CLLocationCoordinate2D)c withSubtitle:(NSString *)_subtitle withTitle:(NSString *)_title
 {
     coordinate = c;
+    subtitle = _subtitle;
+    title = _title;
     
     return self;
 }

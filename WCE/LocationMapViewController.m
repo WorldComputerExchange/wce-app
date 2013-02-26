@@ -14,17 +14,44 @@
 @implementation LocationMapViewController
 @synthesize mapView;
 
+- (void)viewWillAppear
+{
+
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
     //Created variable c to store coordinate data
-    CLLocationCoordinate2D c;
-    c.latitude = 45.0;
-    c.longitude = -77.0;
+    CLLocationCoordinate2D a;
+    a.latitude = 45.0;
+    a.longitude = -77.0;
     
-    AddressAnnotation *addAnnotation = [[AddressAnnotation alloc] initWithCoordinate:c];
+    AddressAnnotation *addAnnotation = [[AddressAnnotation alloc] initWithCoordinate:a withSubtitle:@"Shaw Lake" withTitle:@"Canada"];
     [mapView addAnnotation:addAnnotation];
+    
+    CLLocationCoordinate2D b;
+    b.latitude = 29.9792;
+    b.longitude = 31.1342;
+    
+    AddressAnnotation *addAnnotation1 = [[AddressAnnotation alloc] initWithCoordinate:b withSubtitle:@"Egypt" withTitle:@"Great Pyramid of Giza"];
+    [mapView addAnnotation:addAnnotation1];
+    
+    CLLocationCoordinate2D c;
+    c.latitude = -3.1600;
+    c.longitude = -60.0300;
+
+    AddressAnnotation *addAnnotation2 = [[AddressAnnotation alloc] initWithCoordinate:c withSubtitle:@"Brazil" withTitle:@"Amazon Rainforest"];
+    [mapView addAnnotation:addAnnotation2];
+    
+    CLLocationCoordinate2D d;
+    d.latitude =  36.1517;
+    d.longitude = 139.9214;
+
+    AddressAnnotation *addAnnotation3 = [[AddressAnnotation alloc] initWithCoordinate:d withSubtitle:@"Japan" withTitle:@"Tsukuba Circuit"];
+    [mapView addAnnotation:addAnnotation3];
+    
 }
 
 @end

@@ -12,8 +12,13 @@
 @interface AddressAnnotation : NSObject <MKAnnotation>
 {
     CLLocationCoordinate2D coordinate;
+    NSString *subtitle;
+    NSString *title;
 }
 
-- (id)initWithCoordinate:(CLLocationCoordinate2D)c;
+- (id)initWithCoordinate:(CLLocationCoordinate2D)c withSubtitle:(NSString *)_subtitle withTitle:(NSString *)_title;
+
+@property (nonatomic, strong) NSString *subtitle;
+@property (nonatomic, strong) NSString *title;
 
 @end

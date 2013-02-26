@@ -41,6 +41,7 @@
 - (void)viewWillAppear:(BOOL)animated{
     //show navigation bar programmatically
     [self.navigationController setNavigationBarHidden:NO];
+    [self.navigationItem setTitle:@"Choose Location"];
     
     [locationTableView setBackgroundView:nil];
     [locationTableView setBackgroundColor:[UIColor blackColor]];
