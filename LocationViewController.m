@@ -32,14 +32,20 @@
     [locationArray addObject:@"Liberia"];
     [locationArray addObject:@"Pakistan"];
     [locationArray addObject:@"Stony Point"];
+    [locationArray addObject:@"Pennsylvania"];
     
     
     
 }
 
 - (void)viewWillAppear:(BOOL)animated{
+    //show navigation bar programmatically
     [self.navigationController setNavigationBarHidden:NO];
+    
+    [locationTableView setBackgroundView:nil];
+    [locationTableView setBackgroundColor:[UIColor blackColor]];
 }
+
 - (IBAction)OrBoton:(id)sender
 {
     UIButton *button = (UIButton *)sender;

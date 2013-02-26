@@ -23,8 +23,9 @@
 
 - (void)viewWillAppear:(BOOL)animated{
     //make navigation bar hidden bc it is put in in storyboard
-    [self.navigationController setNavigationBarHidden:NO];
+    [self.navigationController setNavigationBarHidden:YES];
 }
+
 
 - (void)viewDidLoad
 {

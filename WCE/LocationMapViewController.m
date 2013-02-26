@@ -1,16 +1,16 @@
 //
-//  AddLocationViewController.m
+//  LocationMapViewController.m
 //  WCE
 //
 //
 
-#import "AddLocationViewController.h"
+#import "LocationMapViewController.h"
 
-@interface AddLocationViewController ()
+@interface LocationMapViewController ()
 
 @end
 
-@implementation AddLocationViewController
+@implementation LocationMapViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -21,18 +21,17 @@
     return self;
 }
 
-
-- (void)viewWillAppear:(BOOL)animated{
-    //make navigation bar hidden bc it is put in in storyboard
-    NSLog(@"IS this being called?");
-    [self.navigationController setNavigationBarHidden:YES];
-}
-
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+}
+
+-(void)viewWillAppear:(BOOL)animated{
+    //hide navigation bar, one is shown by storyboard
+    [self.navigationController setNavigationBarHidden:YES];
+    
+    
 }
 
 - (void)didReceiveMemoryWarning
