@@ -141,13 +141,7 @@
 				8C9C3ADF16CC60D000F95A6B /* WCEAppDelegate.h */,
 				8C9C3AE016CC60D000F95A6B /* WCEAppDelegate.m */,
 				8C9C3AE816CC60D000F95A6B /* MainStoryboard.storyboard */,
-				8CB0441516DC476E0000AD0F /* LocationMap */,
-				8C03243516DC424D0089CB81 /* AddLocation */,
-				8C03241F16DC2A7A0089CB81 /* SaveLocation */,
-				8C27587016CC82A500DEDAC8 /* Login */,
-				8C27586F16CC829A00DEDAC8 /* Location */,
-				8C9C3AEB16CC60D000F95A6B /* WCEViewController.h */,
-				8C9C3AEC16CC60D000F95A6B /* WCEViewController.m */,
+				8CB0441E16DC4D420000AD0F /* ViewControllers */,
 				8C9C3AD716CC60D000F95A6B /* Supporting Files */,
 			);
 			path = WCE;
@@ -176,6 +170,20 @@
 				8CB0441816DC47910000AD0F /* LocationMapViewController.m */,
 			);
 			name = LocationMap;
+			sourceTree = "<group>";
+		};
+		8CB0441E16DC4D420000AD0F /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				8CB0441516DC476E0000AD0F /* LocationMap */,
+				8C03243516DC424D0089CB81 /* AddLocation */,
+				8C03241F16DC2A7A0089CB81 /* SaveLocation */,
+				8C27587016CC82A500DEDAC8 /* Login */,
+				8C27586F16CC829A00DEDAC8 /* Location */,
+				8C9C3AEB16CC60D000F95A6B /* WCEViewController.h */,
+				8C9C3AEC16CC60D000F95A6B /* WCEViewController.m */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
