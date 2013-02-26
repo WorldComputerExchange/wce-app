@@ -2,8 +2,6 @@
 //  SaveLocationViewController.m
 //  WCE
 //
-//  Created by  Brian Beckerle on 2/25/13.
-//  Copyright (c) 2013  Brian Beckerle. All rights reserved.
 //
 
 #import "SaveLocationViewController.h"
@@ -21,6 +19,11 @@
         // Custom initialization
     }
     return self;
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    //make navigation bar hidden bc it is put in in storyboard
+    [self.navigationController setNavigationBarHidden:NO];
 }
 
 - (void)viewDidLoad
