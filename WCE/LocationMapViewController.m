@@ -5,40 +5,26 @@
 //
 
 #import "LocationMapViewController.h"
+#import "AddressAnnotation.h"
 
-@interface ViewController: UIViewController <AGSMapViewLayerDelegate>
+@interface LocationMapViewController()
 
 @end
 
 @implementation LocationMapViewController
+@synthesize mapView;
 
-
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     
-    AGSTiledMapServiceLayer *tiledLayer =
-    [AGSTiledMapServiceLayer
-     tiledMapServiceLayerWithURL:[NSURL URLWithString:@"http://server.arcgisonline.com/ArcGIS/rest/services/ESRI_StreetMap_World_2D/MapServer"]];
-    [self.mapView addMapLayer:tiledLayer withName:@"Tiled Layer"];
+    //Created variable c to store coordinate data
+    CLLocationCoordinate2D c;
+    c.latitude = 45.0;
+    c.longitude = -77.0;
     
+    AddressAnnotation *addAnnotation = [[AddressAnnotation alloc] initWithCoordinate:c];
+    [mapView addAnnotation:addAnnotation];
 }
 
-- (void)mapView:(AGSMapView *) mapView failedLoadingLayerForLayerView:(UIView *) layerView baseLayer:(BOOL) baseLayer withError:(NSError *) error {
-    
-    //Inspect the error and then either ...
-    //A. Remove the layer if it's not essential
-    if(!baseLayer)
-        [self.mapView removeMapLayerWithName:layerView.name];
-    
-    //B. Or, try resubmitting the layer, with different URL or credentials perhaps
-    AGSTiledMapServiceLayer* tiledLyr = (AGSTiledMapServiceLayer*)laverView.agsLayer;
-    [tiledLyr resubmitWithURL:url credential:cred];
-    
-}
-- (void)viewDidLoad {
-    ...
-    
-    self.mapView.layerDelegate = self;
-    
-}
 @end
