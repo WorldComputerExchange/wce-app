@@ -17,15 +17,9 @@
         
         
         dataArray = [[NSArray alloc] initWithObjects:
-                     @"Apple",
-                     @"Banana",
-                     @"Dragon Fruit",
-                     @"Grapefruit",
-                     @"Lilikoi",
-                     @"Mango",
-                     @"Pineapple",
-                     @"Raspberry",
-                     @"Strawberry",
+                     @"Country",
+                     @"City"
+                
                      nil];
     }
     return self;
