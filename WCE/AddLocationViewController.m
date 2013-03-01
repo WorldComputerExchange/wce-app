@@ -12,7 +12,7 @@
 
 @implementation AddLocationViewController
 
-@synthesize locations, actionSheet;
+@synthesize locations, actionSheet, dropDownTableView, dataArray;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -53,6 +53,7 @@
     [actionSheet addSubview:closeButton];
     [actionSheet showInView:[[UIApplication sharedApplication] keyWindow]];
     [actionSheet setBounds:CGRectMake(0, 0, 320, 485)];
+    
 }
 
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
@@ -75,12 +76,40 @@
     [actionSheet dismissWithClickedButtonIndex:0 animated:YES];
 }
 
+
+/**TableView methods**/
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+	return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return [dataArray count];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"DataCellID"];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"DataCell"];
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    }
+    
+    
+    cell.textLabel.text = [dataArray objectAtIndex:indexPath.row];
+    return cell;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
     locations = [[NSArray alloc] initWithObjects:@"Libya", @"Boston", @"Chicago", @"Cairo", @"The Vatican", nil];
+    
+    
+    //dropDownTableView.title = NSLocalizedString(@"Fruits", @"Fruits");
+    dataArray = [[NSMutableArray alloc] init];
+    [dataArray addObject:@"City"];
+    [dataArray addObject:@"Country"];
 }
 
 - (void)didReceiveMemoryWarning
