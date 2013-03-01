@@ -26,6 +26,7 @@
 		9E39AF8016D9739500B4275C /* satellite_maps_earth_map_dual_monitor_3200x1200_desktop_wallpaper-344945.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9E39AF7F16D9739500B4275C /* satellite_maps_earth_map_dual_monitor_3200x1200_desktop_wallpaper-344945.jpg */; };
 		9ED3259D16DD53FF00EA38E0 /* AddressAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ED3259C16DD53FF00EA38E0 /* AddressAnnotation.m */; };
 		9ED3259F16DD5D4C00EA38E0 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9ED3259E16DD5D4C00EA38E0 /* MapKit.framework */; };
+		9EFCF5C016E1096D0031FDB1 /* DropDownMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EFCF5BF16E1096D0031FDB1 /* DropDownMenu.m */; };
 		D07A3B0316D6F7C4003B6074 /* WCE_LogoWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = D07A3B0216D6F7C4003B6074 /* WCE_LogoWhite.png */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +61,8 @@
 		9ED3259B16DD53FF00EA38E0 /* AddressAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressAnnotation.h; sourceTree = "<group>"; };
 		9ED3259C16DD53FF00EA38E0 /* AddressAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressAnnotation.m; sourceTree = "<group>"; };
 		9ED3259E16DD5D4C00EA38E0 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		9EFCF5BE16E1096D0031FDB1 /* DropDownMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropDownMenu.h; sourceTree = "<group>"; };
+		9EFCF5BF16E1096D0031FDB1 /* DropDownMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropDownMenu.m; sourceTree = "<group>"; };
 		D07A3B0216D6F7C4003B6074 /* WCE_LogoWhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WCE_LogoWhite.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -148,6 +151,8 @@
 				8C9C3ADF16CC60D000F95A6B /* WCEAppDelegate.h */,
 				8C9C3AE016CC60D000F95A6B /* WCEAppDelegate.m */,
 				8C9C3AE816CC60D000F95A6B /* MainStoryboard.storyboard */,
+				9EFCF5BE16E1096D0031FDB1 /* DropDownMenu.h */,
+				9EFCF5BF16E1096D0031FDB1 /* DropDownMenu.m */,
 				8CB0441E16DC4D420000AD0F /* ViewControllers */,
 				8C9C3AD716CC60D000F95A6B /* Supporting Files */,
 			);
@@ -273,6 +278,7 @@
 				8C03243416DC41850089CB81 /* AddLocationViewController.m in Sources */,
 				8CB0441916DC47910000AD0F /* LocationMapViewController.m in Sources */,
 				9ED3259D16DD53FF00EA38E0 /* AddressAnnotation.m in Sources */,
+				9EFCF5C016E1096D0031FDB1 /* DropDownMenu.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
