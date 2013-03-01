@@ -10,22 +10,51 @@
 
 @implementation DropDownMenu
 
-- (id)initWithFrame:(CGRect)frame
-{
-    self = [super initWithFrame:frame];
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Initialization code
+        self.title = NSLocalizedString(@"Fruits", @"Fruits");
+        
+        
+        dataArray = [[NSArray alloc] initWithObjects:
+                     @"Apple",
+                     @"Banana",
+                     @"Dragon Fruit",
+                     @"Grapefruit",
+                     @"Lilikoi",
+                     @"Mango",
+                     @"Pineapple",
+                     @"Raspberry",
+                     @"Strawberry",
+                     nil];
     }
     return self;
 }
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect
-{
-    // Drawing code
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
 }
-*/
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return [dataArray count];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    static NSString *CellIdentifier = @"Cell";
+    
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (cell == nil) {
+ 
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    }
+    
+    
+    cell.textLabel.text = [dataArray objectAtIndex:indexPath.row];
+    return cell;
+}
+
+
 
 @end

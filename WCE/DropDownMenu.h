@@ -8,7 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DropDownMenu : UIViewController <**UItableViewDataSource, UITableViewDelegate**>
+@interface DropDownMenu : UIViewController <UITableViewDataSource, UITableViewDelegate>
+{
+    NSArray *dataArray;
+}
+
+@property (nonatomic, retain) NSArray *dataArray;
 
 
 @end
