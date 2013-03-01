@@ -16,9 +16,9 @@
         self.title = NSLocalizedString(@"Fruits", @"Fruits");
         
         
-        dataArray = [[NSArray alloc] initWithObjects:
+        dataArray = [[NSMutableArray alloc] initWithObjects:
                      @"Country",
-                     @"City"
+                     @"City",
                 
                      nil];
     }
