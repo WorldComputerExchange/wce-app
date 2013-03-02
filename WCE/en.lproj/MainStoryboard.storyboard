@@ -351,20 +351,49 @@
         <scene sceneID="8Fn-BD-QoC">
             <objects>
                 <viewController id="K4a-rk-o8I" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="qXl-p5-P7X">
+                    <view key="view" contentMode="scaleToFill" id="OlM-yd-zoL">
                         <rect key="frame" x="0.0" y="20" width="320" height="548"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="History" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kv0-eM-wFp">
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Um1-KD-a3s">
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R9v-bg-CPH">
+                                        <color key="backgroundColor" red="0.023529414089999999" green="0.011764707040000001" blue="0.0039215688589999999" alpha="1" colorSpace="deviceRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="406" id="WHJ-11-FfU"/>
+                                        </constraints>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <color key="textColor" red="0.91372555489999996" green="0.78039222959999999" blue="0.29019609089999998" alpha="1" colorSpace="deviceRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="HISTORY:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iad-Ly-aFA">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="111" id="70J-wc-W79"/>
+                                            <constraint firstAttribute="height" constant="39" id="YMj-aO-CAA"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <color key="textColor" red="0.0" green="0.89411771299999998" blue="1" alpha="1" colorSpace="deviceRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Iad-Ly-aFA" firstAttribute="top" secondItem="Um1-KD-a3s" secondAttribute="top" constant="20" symbolic="YES" type="default" id="6Ht-fo-0MY"/>
+                                    <constraint firstItem="R9v-bg-CPH" firstAttribute="centerX" secondItem="Um1-KD-a3s" secondAttribute="centerX" type="default" id="BDi-HE-sM5"/>
+                                    <constraint firstAttribute="bottom" secondItem="R9v-bg-CPH" secondAttribute="bottom" constant="64" id="KmC-BA-RRS"/>
+                                    <constraint firstItem="R9v-bg-CPH" firstAttribute="top" secondItem="Um1-KD-a3s" secondAttribute="top" constant="78" id="PKc-na-TC2"/>
+                                    <constraint firstItem="R9v-bg-CPH" firstAttribute="centerX" secondItem="Iad-Ly-aFA" secondAttribute="centerX" type="default" id="Sn3-LR-lfF"/>
+                                    <constraint firstItem="R9v-bg-CPH" firstAttribute="leading" secondItem="Um1-KD-a3s" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="TIG-IL-JWV"/>
+                                    <constraint firstAttribute="trailing" secondItem="R9v-bg-CPH" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="zFQ-dq-paN"/>
+                                </constraints>
+                            </scrollView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.015686275440000001" green="0.011764707040000001" blue="0.011764707040000001" alpha="1" colorSpace="deviceRGB"/>
                         <constraints>
-                            <constraint firstItem="kv0-eM-wFp" firstAttribute="centerX" secondItem="qXl-p5-P7X" secondAttribute="centerX" type="default" id="dNI-Ar-PfF"/>
-                            <constraint firstItem="kv0-eM-wFp" firstAttribute="top" secondItem="qXl-p5-P7X" secondAttribute="top" constant="20" symbolic="YES" type="default" id="w1R-AC-5O8"/>
+                            <constraint firstItem="Um1-KD-a3s" firstAttribute="bottom" secondItem="OlM-yd-zoL" secondAttribute="bottom" type="default" id="JmU-pF-gPV"/>
+                            <constraint firstItem="Um1-KD-a3s" firstAttribute="top" secondItem="OlM-yd-zoL" secondAttribute="top" type="default" id="dQT-ue-Evk"/>
+                            <constraint firstItem="Um1-KD-a3s" firstAttribute="leading" secondItem="OlM-yd-zoL" secondAttribute="leading" type="default" id="erh-bs-O4v"/>
+                            <constraint firstItem="Um1-KD-a3s" firstAttribute="trailing" secondItem="OlM-yd-zoL" secondAttribute="trailing" type="default" id="o0v-vl-hfg"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="cqi-FN-6ev">
