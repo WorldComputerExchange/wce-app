@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Fvu-h0-ZII">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Fvu-h0-ZII">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
         <!--Login View Controller-->
@@ -82,7 +82,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="cLg-Kc-muo">
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="cEg-Tx-48h">
-                                    <rect key="frame" x="0.0" y="460" width="320" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                     <state key="normal" title="Choose From Map">
                                         <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -100,13 +100,23 @@
                                     <outlet property="delegate" destination="btu-Hv-3gZ" id="dmG-Qn-mXk"/>
                                 </connections>
                             </tableView>
+                            <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9uA-An-fYL">
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <items>
+                                    <tabBarItem systemItem="recents" id="gdx-A4-K6E"/>
+                                    <tabBarItem systemItem="favorites" id="84b-4K-HOj"/>
+                                </items>
+                            </tabBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="cLg-Kc-muo" firstAttribute="centerY" secondItem="Dev-3f-g2O" secondAttribute="centerY" type="default" id="MAw-7O-unO"/>
+                            <constraint firstItem="9uA-An-fYL" firstAttribute="leading" secondItem="Dev-3f-g2O" secondAttribute="leading" type="default" id="6ZC-dZ-c03"/>
                             <constraint firstItem="cLg-Kc-muo" firstAttribute="top" secondItem="Dev-3f-g2O" secondAttribute="top" type="default" id="MRw-j6-rt7"/>
                             <constraint firstItem="cLg-Kc-muo" firstAttribute="trailing" secondItem="Dev-3f-g2O" secondAttribute="trailing" type="default" id="TJB-f0-v6H"/>
                             <constraint firstItem="cLg-Kc-muo" firstAttribute="leading" secondItem="Dev-3f-g2O" secondAttribute="leading" type="default" id="Vqz-0D-4m3"/>
+                            <constraint firstItem="9uA-An-fYL" firstAttribute="trailing" secondItem="Dev-3f-g2O" secondAttribute="trailing" type="default" id="b5k-Ra-f8R"/>
+                            <constraint firstItem="9uA-An-fYL" firstAttribute="bottom" secondItem="Dev-3f-g2O" secondAttribute="bottom" type="default" id="kha-vP-91p"/>
+                            <constraint firstItem="9uA-An-fYL" firstAttribute="bottom" secondItem="cLg-Kc-muo" secondAttribute="bottom" type="default" id="ou7-Ev-IV9"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Choose a Location" id="VSM-CV-ywm">
@@ -501,7 +511,6 @@
         <!--View Controller - ABC School-->
         <scene sceneID="HVr-a7-wdp">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zur-0D-h3M" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="DJM-Rc-Ddq" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Hx0-Ne-EDp">
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
@@ -552,6 +561,7 @@
                         <barButtonItem key="backBarButtonItem" title="Back" id="1ab-HR-LsJ"/>
                     </navigationItem>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zur-0D-h3M" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1754" y="2969"/>
         </scene>
