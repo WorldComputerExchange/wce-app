@@ -131,7 +131,7 @@
                         <barButtonItem key="leftBarButtonItem" title="Logoff" id="Jev-Av-t1v"/>
                         <barButtonItem key="rightBarButtonItem" title="Add" id="3W4-55-iMB">
                             <connections>
-                                <segue destination="a24-Hj-6Z9" kind="push" id="s2O-5y-c1z"/>
+                                <segue destination="a24-Hj-6Z9" kind="push" id="Nx4-hw-cO2"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -676,19 +676,6 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MMH-60-bSd">
-                                <items>
-                                    <navigationItem title="Add New Location" id="4kE-DF-6gE">
-                                        <barButtonItem key="backBarButtonItem" title="Back" id="FZs-qf-QMe"/>
-                                        <barButtonItem key="leftBarButtonItem" title="Back" id="hpL-Jl-prY">
-                                            <connections>
-                                                <segue destination="eCb-ah-L4p" kind="push" id="X6K-EO-Arw"/>
-                                            </connections>
-                                        </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="PNW-ew-oVc"/>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Location" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ps4-Wf-R6s">
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -748,29 +735,26 @@
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="pAC-Wd-cuw" firstAttribute="leading" secondItem="90W-QE-qtV" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="17x-2p-9mQ"/>
-                            <constraint firstItem="MMH-60-bSd" firstAttribute="leading" secondItem="90W-QE-qtV" secondAttribute="leading" type="default" id="6VL-td-ztb"/>
                             <constraint firstItem="7mj-ey-S6c" firstAttribute="leading" secondItem="90W-QE-qtV" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="7IA-mt-YKD"/>
                             <constraint firstItem="Boi-FL-eJU" firstAttribute="leading" secondItem="90W-QE-qtV" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="8bs-iM-owZ"/>
-                            <constraint firstAttribute="bottom" secondItem="7mj-ey-S6c" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="8fj-vq-ltr"/>
                             <constraint firstItem="oGp-po-S2z" firstAttribute="leading" secondItem="90W-QE-qtV" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="9dM-5r-ZaT"/>
                             <constraint firstItem="AtG-yc-stS" firstAttribute="top" secondItem="pAC-Wd-cuw" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="DJO-NJ-emc"/>
                             <constraint firstItem="XP2-2z-49m" firstAttribute="top" secondItem="AtG-yc-stS" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="DJa-kN-Wpk"/>
                             <constraint firstItem="ps4-Wf-R6s" firstAttribute="leading" secondItem="90W-QE-qtV" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="EZb-8u-HFq"/>
                             <constraint firstItem="vkb-X2-a7c" firstAttribute="top" secondItem="Zfm-8O-vja" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Ebo-U1-Rcn"/>
-                            <constraint firstItem="MMH-60-bSd" firstAttribute="trailing" secondItem="90W-QE-qtV" secondAttribute="trailing" type="default" id="HAv-yQ-0ZS"/>
                             <constraint firstAttribute="trailing" secondItem="kFh-ve-PT1" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Hhj-gJ-vOr"/>
                             <constraint firstItem="XP2-2z-49m" firstAttribute="leading" secondItem="90W-QE-qtV" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="JaY-L0-pHp"/>
                             <constraint firstItem="oGp-po-S2z" firstAttribute="top" secondItem="kFh-ve-PT1" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="KJU-Zl-PsG"/>
                             <constraint firstItem="Boi-FL-eJU" firstAttribute="top" secondItem="vkb-X2-a7c" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Kd1-3E-A47"/>
+                            <constraint firstAttribute="bottom" secondItem="7mj-ey-S6c" secondAttribute="bottom" constant="67" id="OOI-Ye-AF6"/>
                             <constraint firstItem="pAC-Wd-cuw" firstAttribute="top" secondItem="oGp-po-S2z" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="TNO-oC-yMA"/>
                             <constraint firstItem="kFh-ve-PT1" firstAttribute="top" secondItem="0Wm-fx-Ndr" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="XtP-Ym-HdJ"/>
-                            <constraint firstItem="ps4-Wf-R6s" firstAttribute="top" secondItem="90W-QE-qtV" secondAttribute="top" constant="68" id="Zfw-Oq-JSh"/>
-                            <constraint firstItem="MMH-60-bSd" firstAttribute="top" secondItem="90W-QE-qtV" secondAttribute="top" type="default" id="cGV-Rh-YZ7"/>
                             <constraint firstAttribute="trailing" secondItem="pAC-Wd-cuw" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="eHU-pH-qij"/>
                             <constraint firstItem="0Wm-fx-Ndr" firstAttribute="leading" secondItem="90W-QE-qtV" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="gXc-Ip-ASa"/>
                             <constraint firstItem="0Wm-fx-Ndr" firstAttribute="top" secondItem="Boi-FL-eJU" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="lFP-iA-3uU"/>
                             <constraint firstItem="Zfm-8O-vja" firstAttribute="top" secondItem="ps4-Wf-R6s" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="lPb-r2-AEH"/>
                             <constraint firstItem="vkb-X2-a7c" firstAttribute="leading" secondItem="90W-QE-qtV" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="lvY-5I-HPy"/>
+                            <constraint firstItem="ps4-Wf-R6s" firstAttribute="top" secondItem="90W-QE-qtV" secondAttribute="top" constant="20" symbolic="YES" type="default" id="m2e-gF-6h4"/>
                             <constraint firstItem="Zfm-8O-vja" firstAttribute="leading" secondItem="90W-QE-qtV" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="mXN-PQ-xkD"/>
                             <constraint firstAttribute="trailing" secondItem="Zfm-8O-vja" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="nlZ-F2-3px"/>
                             <constraint firstItem="kFh-ve-PT1" firstAttribute="leading" secondItem="90W-QE-qtV" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="pZF-Qu-06Q"/>
@@ -780,13 +764,7 @@
                             <constraint firstItem="AtG-yc-stS" firstAttribute="leading" secondItem="90W-QE-qtV" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="up0-ji-RSF"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Add New Location" id="cXV-w4-dlm">
-                        <barButtonItem key="leftBarButtonItem" title="Back" id="0GI-MS-FWE">
-                            <connections>
-                                <segue destination="btu-Hv-3gZ" kind="push" identifier="pushAddLocation" id="bUA-t6-8EP"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Add New Location" id="cXV-w4-dlm"/>
                     <connections>
                         <outlet property="dropDownTableView" destination="7mj-ey-S6c" id="cww-xj-1C9"/>
                     </connections>
@@ -846,7 +824,7 @@
             <objects>
                 <viewController id="eCb-ah-L4p" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OBh-Ih-SS4">
-                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Are you sure? Entries will be lost" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GoV-xs-mqA">
@@ -970,7 +948,6 @@
         <class className="LocationViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/LocationViewController.h"/>
             <relationships>
-                <relationship kind="action" name="OrBoton:"/>
                 <relationship kind="outlet" name="locationTableView" candidateClass="UITableView"/>
             </relationships>
         </class>
