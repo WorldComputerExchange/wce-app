@@ -5,6 +5,7 @@
 //
 
 #import "LocationViewController.h"
+#import "Location.h"
 
 @interface LocationViewController ()
 
@@ -168,6 +169,10 @@
 - (void)pickerDoneClicked
 {
     [actionSheet dismissWithClickedButtonIndex:0 animated:YES];
+    
+    [[Location sharedLocation] sayLocation];
+
+    
     /**TEST***/
     [self performSegueWithIdentifier:@"pushMainMenu" sender:self];
 }
