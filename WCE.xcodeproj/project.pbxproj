@@ -28,6 +28,7 @@
 		9ED3259D16DD53FF00EA38E0 /* AddressAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ED3259C16DD53FF00EA38E0 /* AddressAnnotation.m */; };
 		9ED3259F16DD5D4C00EA38E0 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9ED3259E16DD5D4C00EA38E0 /* MapKit.framework */; };
 		D07A3B0316D6F7C4003B6074 /* WCE_LogoWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = D07A3B0216D6F7C4003B6074 /* WCE_LogoWhite.png */; };
+		FADF66CC16E27A640058E1FE /* WCE Content V5 copy.png in Resources */ = {isa = PBXBuildFile; fileRef = FADF66CB16E27A640058E1FE /* WCE Content V5 copy.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +65,7 @@
 		9ED3259C16DD53FF00EA38E0 /* AddressAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressAnnotation.m; sourceTree = "<group>"; };
 		9ED3259E16DD5D4C00EA38E0 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		D07A3B0216D6F7C4003B6074 /* WCE_LogoWhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WCE_LogoWhite.png; sourceTree = "<group>"; };
+		FADF66CB16E27A640058E1FE /* WCE Content V5 copy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "WCE Content V5 copy.png"; path = "../../../../../Desktop/WCE Content V5 copy.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +175,7 @@
 				D07A3B0216D6F7C4003B6074 /* WCE_LogoWhite.png */,
 				8C9C3AD816CC60D000F95A6B /* WCE-Info.plist */,
 				8C9C3AD916CC60D000F95A6B /* InfoPlist.strings */,
+				FADF66CB16E27A640058E1FE /* WCE Content V5 copy.png */,
 				8C9C3ADC16CC60D000F95A6B /* main.m */,
 				8C9C3ADE16CC60D000F95A6B /* WCE-Prefix.pch */,
 				8C9C3AE216CC60D000F95A6B /* Default.png */,
@@ -267,6 +270,7 @@
 				8C9C3AEA16CC60D000F95A6B /* MainStoryboard.storyboard in Resources */,
 				D07A3B0316D6F7C4003B6074 /* WCE_LogoWhite.png in Resources */,
 				9E39AF8016D9739500B4275C /* satellite_maps_earth_map_dual_monitor_3200x1200_desktop_wallpaper-344945.jpg in Resources */,
+				FADF66CC16E27A640058E1FE /* WCE Content V5 copy.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
