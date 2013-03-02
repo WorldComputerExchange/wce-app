@@ -56,6 +56,8 @@
     
 }
 
+
+/*PickerView Methods*/
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
 {
     return 1;
@@ -110,8 +112,6 @@
     
     locations = [[NSArray alloc] initWithObjects:@"Libya", @"Boston", @"Chicago", @"Cairo", @"The Vatican", nil];
     
-    
-    //dropDownTableView.title = NSLocalizedString(@"Fruits", @"Fruits");
     dataArray = [[NSMutableArray alloc] init];
     [dataArray addObject:@"City"];
     [dataArray addObject:@"Country"];
