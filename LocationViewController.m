@@ -12,7 +12,7 @@
 
 @implementation LocationViewController
 
-@synthesize locationArray, locationTableView, locations, actionSheet;
+@synthesize regionArray, locationTableView, locations, actionSheet;
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -28,16 +28,15 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    locationArray = [[NSMutableArray alloc] init];
-    [locationArray addObject:@"Liberia"];
-    [locationArray addObject:@"Pakistan"];
-    [locationArray addObject:@"Stony Point"];
-    [locationArray addObject:@"Pennsylvania"];
+    regionArray = [[NSMutableArray alloc] init];
+    [regionArray addObject:@"Africa"];
+    [regionArray addObject:@"Asia"];
+    [regionArray addObject:@"Caribbean"];
+    [regionArray addObject:@"Eastern Europe"];
+    [regionArray addObject:@"Latin America"];
+    [regionArray addObject:@"Middle East"];
     
-    locations = [[NSArray alloc] initWithObjects:@"Libya", @"Boston", @"Chicago", @"Cairo", @"The Vatican", nil];
-    
-    
-    
+    locations = [[NSMutableArray alloc] initWithObjects:@"ABC School", @"Xavier School", @"Chicago", @"Cairo", @"Ayacucho", nil];
 }
 
 - (void)viewWillAppear:(BOOL)animated{
@@ -98,7 +97,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)table numberOfRowsInSection:(NSInteger)section {
-	return [locationArray count];
+	return [regionArray count];
 }
 
 - (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -110,9 +109,9 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"LocationCell"];
 	}
 	//get the relevant location from the array
-	NSString *location =  [self.locationArray objectAtIndex:indexPath.row];
+	NSString *region =  [self.regionArray objectAtIndex:indexPath.row];
     
-    cell.textLabel.text = location;
+    cell.textLabel.text = region;
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
 	return cell;

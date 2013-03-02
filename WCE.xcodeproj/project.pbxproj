@@ -11,6 +11,7 @@
 		8C03243416DC41850089CB81 /* AddLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C03243316DC41850089CB81 /* AddLocationViewController.m */; };
 		8C27586B16CC820E00DEDAC8 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C27586A16CC820E00DEDAC8 /* LoginViewController.m */; };
 		8C27586E16CC828F00DEDAC8 /* LocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C27586D16CC828F00DEDAC8 /* LocationViewController.m */; };
+		8C32DF4516E26BB8005AFA89 /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C32DF4416E26BB8005AFA89 /* Location.m */; };
 		8C9C3AD116CC60D000F95A6B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C9C3AD016CC60D000F95A6B /* UIKit.framework */; };
 		8C9C3AD316CC60D000F95A6B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C9C3AD216CC60D000F95A6B /* Foundation.framework */; };
 		8C9C3AD516CC60D000F95A6B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C9C3AD416CC60D000F95A6B /* CoreGraphics.framework */; };
@@ -38,6 +39,8 @@
 		8C27586A16CC820E00DEDAC8 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		8C27586C16CC828F00DEDAC8 /* LocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LocationViewController.h; path = ../LocationViewController.h; sourceTree = "<group>"; };
 		8C27586D16CC828F00DEDAC8 /* LocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LocationViewController.m; path = ../LocationViewController.m; sourceTree = "<group>"; };
+		8C32DF4316E26BB8005AFA89 /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Location.h; sourceTree = "<group>"; };
+		8C32DF4416E26BB8005AFA89 /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Location.m; sourceTree = "<group>"; };
 		8C9C3ACC16CC60D000F95A6B /* WCE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WCE.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C9C3AD016CC60D000F95A6B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		8C9C3AD216CC60D000F95A6B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -114,6 +117,15 @@
 			name = Login;
 			sourceTree = "<group>";
 		};
+		8C32DF2C16E26B22005AFA89 /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				8C32DF4316E26BB8005AFA89 /* Location.h */,
+				8C32DF4416E26BB8005AFA89 /* Location.m */,
+			);
+			name = Objects;
+			sourceTree = "<group>";
+		};
 		8C9C3AC116CC60D000F95A6B = {
 			isa = PBXGroup;
 			children = (
@@ -145,6 +157,7 @@
 		8C9C3AD616CC60D000F95A6B /* WCE */ = {
 			isa = PBXGroup;
 			children = (
+				8C32DF2C16E26B22005AFA89 /* Objects */,
 				8C9C3ADF16CC60D000F95A6B /* WCEAppDelegate.h */,
 				8C9C3AE016CC60D000F95A6B /* WCEAppDelegate.m */,
 				8C9C3AE816CC60D000F95A6B /* MainStoryboard.storyboard */,
@@ -273,6 +286,7 @@
 				8C03243416DC41850089CB81 /* AddLocationViewController.m in Sources */,
 				8CB0441916DC47910000AD0F /* LocationMapViewController.m in Sources */,
 				9ED3259D16DD53FF00EA38E0 /* AddressAnnotation.m in Sources */,
+				8C32DF4516E26BB8005AFA89 /* Location.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
