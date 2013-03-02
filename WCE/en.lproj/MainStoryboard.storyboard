@@ -751,7 +751,7 @@
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JzL-4K-lJL">
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" image="WCE Content.png" translatesAutoresizingMaskIntoConstraints="NO" id="SCG-XF-Scx"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" image="WCE Content V5 copy.png" translatesAutoresizingMaskIntoConstraints="NO" id="SCG-XF-Scx"/>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="SCG-XF-Scx" firstAttribute="centerY" secondItem="JzL-4K-lJL" secondAttribute="centerY" type="default" id="Io0-f2-hc3"/>
@@ -1040,7 +1040,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="WCE Content.png" width="2100" height="1275"/>
+        <image name="WCE Content V5 copy.png" width="1275" height="2100"/>
         <image name="WCE_LogoWhite.png" width="221" height="60"/>
     </resources>
     <classes>
