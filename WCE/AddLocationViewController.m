@@ -42,7 +42,7 @@
     pickerView.dataSource = self;
     pickerView.delegate = self;
     
-    UISegmentedControl *closeButton = [[UISegmentedControl alloc] initWithItems:[NSArray arrayWithObject:@"Done"]];
+    UISegmentedControl *closeButton = [[UISegmentedControl alloc] initWithItems:[NSArray arrayWithObject:@"Next"]];
     closeButton.momentary = YES;
     closeButton.frame = CGRectMake(260, 7.0f, 50.0f, 30.0f);
     closeButton.segmentedControlStyle = UISegmentedControlStyleBar;
@@ -71,6 +71,11 @@
 - (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
 {
     return [locations objectAtIndex:row];
+}
+
+- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
+{
+	
 }
 
 - (void)pickerDoneClicked
@@ -130,4 +135,11 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)cancelChanges:(id)sender
+{
+}
+
+- (IBAction)saveChanges:(id)sender
+{
+}
 @end
