@@ -85,6 +85,7 @@
 	NSString *location =  [self.locationArray objectAtIndex:indexPath.row];
     
     cell.textLabel.text = location;
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
 	return cell;
 }
