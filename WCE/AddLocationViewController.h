@@ -6,7 +6,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AddLocationViewController : UIViewController <UIPickerViewDelegate, UIPickerViewDataSource, UITableViewDelegate, UITableViewDataSource>
+@interface AddLocationViewController : UIViewController <UIPickerViewDelegate, UIPickerViewDataSource, UITableViewDelegate, UITableViewDataSource, UIActionSheetDelegate>
 {
     NSArray *locations;
     NSMutableArray *dataArray;

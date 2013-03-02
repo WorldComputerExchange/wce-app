@@ -139,9 +139,25 @@
 
 - (IBAction)cancelChanges:(id)sender
 {
-	UIAlertView *cancelConfirmation = [[UIAlertView alloc] initWithTitle:@"Discard changes?" message:@"The changes you made here won't be saved. Do you want to continue?" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Discard", nil];
+	///// Here's both a UIAlertView and a UIActionSheet--I don't know what you might think looks better so both of them are here to try out
+	
+	UIAlertView *cancelConfirmation = [[UIAlertView alloc] initWithTitle:@"Discard changes?"
+																 message:@"The changes you made here won't be saved. Do you want to continue?"
+																delegate:self
+													   cancelButtonTitle:@"Cancel"
+													   otherButtonTitles:@"Discard", nil];
 	
 	[cancelConfirmation show];
+	
+	/*
+	UIActionSheet *cancelConfirmation = [[UIActionSheet alloc] initWithTitle:nil
+																	delegate:self
+														   cancelButtonTitle:@"Cancel"
+													  destructiveButtonTitle:@"Discard Changes"
+														   otherButtonTitles:@"Save Changes", nil];
+	
+	[cancelConfirmation showInView:[[UIApplication sharedApplication] keyWindow]];
+	*/
 }
 
 // Called when a button is clicked in the UIAlertView
