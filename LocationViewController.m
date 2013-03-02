@@ -138,6 +138,7 @@
 {
     [actionSheet dismissWithClickedButtonIndex:0 animated:YES];
     /**TEST***/
+    [self performSegueWithIdentifier:@"pushMainMenu" sender:self];
 }
 
 
