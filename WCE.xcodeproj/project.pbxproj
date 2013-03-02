@@ -24,6 +24,7 @@
 		8C9C3AEA16CC60D000F95A6B /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C9C3AE816CC60D000F95A6B /* MainStoryboard.storyboard */; };
 		8C9C3AED16CC60D000F95A6B /* WCEViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C9C3AEC16CC60D000F95A6B /* WCEViewController.m */; };
 		8CB0441916DC47910000AD0F /* LocationMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CB0441816DC47910000AD0F /* LocationMapViewController.m */; };
+		9E2476D616E276820049ED27 /* WCE Content.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E2476D516E276820049ED27 /* WCE Content.png */; };
 		9E39AF8016D9739500B4275C /* satellite_maps_earth_map_dual_monitor_3200x1200_desktop_wallpaper-344945.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9E39AF7F16D9739500B4275C /* satellite_maps_earth_map_dual_monitor_3200x1200_desktop_wallpaper-344945.jpg */; };
 		9ED3259D16DD53FF00EA38E0 /* AddressAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ED3259C16DD53FF00EA38E0 /* AddressAnnotation.m */; };
 		9ED3259F16DD5D4C00EA38E0 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9ED3259E16DD5D4C00EA38E0 /* MapKit.framework */; };
@@ -60,6 +61,7 @@
 		8C9C3AEC16CC60D000F95A6B /* WCEViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WCEViewController.m; sourceTree = "<group>"; };
 		8CB0441716DC47910000AD0F /* LocationMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationMapViewController.h; sourceTree = "<group>"; };
 		8CB0441816DC47910000AD0F /* LocationMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationMapViewController.m; sourceTree = "<group>"; };
+		9E2476D516E276820049ED27 /* WCE Content.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WCE Content.png"; sourceTree = "<group>"; };
 		9E39AF7F16D9739500B4275C /* satellite_maps_earth_map_dual_monitor_3200x1200_desktop_wallpaper-344945.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "satellite_maps_earth_map_dual_monitor_3200x1200_desktop_wallpaper-344945.jpg"; sourceTree = "<group>"; };
 		9ED3259B16DD53FF00EA38E0 /* AddressAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressAnnotation.h; sourceTree = "<group>"; };
 		9ED3259C16DD53FF00EA38E0 /* AddressAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressAnnotation.m; sourceTree = "<group>"; };
@@ -179,6 +181,7 @@
 				8C9C3ADC16CC60D000F95A6B /* main.m */,
 				8C9C3ADE16CC60D000F95A6B /* WCE-Prefix.pch */,
 				8C9C3AE216CC60D000F95A6B /* Default.png */,
+				9E2476D516E276820049ED27 /* WCE Content.png */,
 				9E39AF7F16D9739500B4275C /* satellite_maps_earth_map_dual_monitor_3200x1200_desktop_wallpaper-344945.jpg */,
 				8C9C3AE416CC60D000F95A6B /* Default@2x.png */,
 				8C9C3AE616CC60D000F95A6B /* Default-568h@2x.png */,
