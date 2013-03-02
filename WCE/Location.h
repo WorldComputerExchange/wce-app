@@ -15,4 +15,8 @@
 @property (nonatomic, retain) NSString * name;
 @property (nonatomic, assign) BOOL hasLocation;
 
++ (Location *)sharedLocation;
+
+-(void)sayLocation;
+
 @end
