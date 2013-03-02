@@ -19,4 +19,7 @@
 @property (nonatomic, retain) IBOutlet UITableView *dropDownTableView;
 @property (nonatomic, retain) NSMutableArray *dataArray;
 
+- (IBAction)cancelChanges:(id)sender;
+- (IBAction)saveChanges:(id)sender;
+
 @end
