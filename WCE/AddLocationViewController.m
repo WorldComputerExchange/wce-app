@@ -28,7 +28,8 @@
     NSLog(@"IS this being called?");
     //[self.navigationController setNavigationBarHidden:YES];
     
-    actionSheet = [[UIActionSheet alloc] initWithTitle:nil
+    /*
+	 actionSheet = [[UIActionSheet alloc] initWithTitle:nil
                                               delegate:nil
                                      cancelButtonTitle:nil
                                 destructiveButtonTitle:nil
@@ -53,6 +54,7 @@
     [actionSheet addSubview:closeButton];
     [actionSheet showInView:[[UIApplication sharedApplication] keyWindow]];
     [actionSheet setBounds:CGRectMake(0, 0, 320, 485)];
+	 */
     
 }
 
@@ -137,9 +139,20 @@
 
 - (IBAction)cancelChanges:(id)sender
 {
+	UIAlertView *cancelConfirmation = [[UIAlertView alloc] initWithTitle:@"Discard changes?" message:@"The changes you made here won't be saved. Do you want to continue?" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Discard", nil];
+	
+	[cancelConfirmation show];
+}
+
+// Called when a button is clicked in the UIAlertView
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+	if(buttonIndex == 1)
+		[self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (IBAction)saveChanges:(id)sender
 {
+	[self dismissViewControllerAnimated:YES completion:nil];
 }
 @end
