@@ -2,8 +2,6 @@
 //  Location.h
 //  WCE
 //
-//  Created by  Brian Beckerle on 3/2/13.
-//  Copyright (c) 2013  Brian Beckerle. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -11,5 +9,10 @@
 @interface Location : NSObject
 
 
+@property (nonatomic, retain) NSString * region;
+@property (nonatomic, retain) NSString * country;
+@property (nonatomic, retain) NSString * language;
+@property (nonatomic, retain) NSString * name;
+@property (nonatomic, assign) BOOL hasLocation;
 
 @end
