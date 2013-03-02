@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Fvu-h0-ZII">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="11G63b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Fvu-h0-ZII">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
@@ -82,7 +82,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="cLg-Kc-muo">
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="cEg-Tx-48h">
-                                    <rect key="frame" x="0.0" y="504" width="320" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                     <state key="normal" title="Choose From Map">
                                         <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -525,14 +525,37 @@
                                     <constraint firstAttribute="width" constant="46" id="1Om-25-9Je"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="1" green="0.81845263810000002" blue="0.24046476959999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nu2-It-Vir">
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g8K-4x-07p">
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                        <color key="textColor" red="1" green="0.81845263810000002" blue="0.24046476959999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="g8K-4x-07p" firstAttribute="trailing" secondItem="nu2-It-Vir" secondAttribute="trailing" type="default" id="3Ju-gH-1ad"/>
+                                    <constraint firstItem="g8K-4x-07p" firstAttribute="leading" secondItem="nu2-It-Vir" secondAttribute="leading" type="default" id="Apt-47-rqf"/>
+                                    <constraint firstItem="g8K-4x-07p" firstAttribute="centerX" secondItem="nu2-It-Vir" secondAttribute="centerX" type="default" id="h5F-OT-APa"/>
+                                    <constraint firstItem="g8K-4x-07p" firstAttribute="bottom" secondItem="nu2-It-Vir" secondAttribute="bottom" type="default" id="oSm-VC-bqf"/>
+                                    <constraint firstItem="g8K-4x-07p" firstAttribute="centerY" secondItem="nu2-It-Vir" secondAttribute="centerY" type="default" id="s3t-4v-zhM"/>
+                                    <constraint firstItem="g8K-4x-07p" firstAttribute="top" secondItem="nu2-It-Vir" secondAttribute="top" type="default" id="stG-Ph-LmE"/>
+                                </constraints>
+                            </scrollView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="axj-6g-KFt" firstAttribute="top" secondItem="hy6-Op-j20" secondAttribute="top" constant="20" symbolic="YES" type="default" id="1r5-6D-vAK"/>
-                            <constraint firstItem="axj-6g-KFt" firstAttribute="centerX" secondItem="hy6-Op-j20" secondAttribute="centerX" type="default" id="zOx-KZ-jiu"/>
+                            <constraint firstItem="nu2-It-Vir" firstAttribute="centerX" secondItem="axj-6g-KFt" secondAttribute="centerX" type="default" id="9zM-Is-hLU"/>
+                            <constraint firstItem="nu2-It-Vir" firstAttribute="leading" secondItem="hy6-Op-j20" secondAttribute="leading" type="default" id="HkU-7C-2Sa"/>
+                            <constraint firstItem="nu2-It-Vir" firstAttribute="trailing" secondItem="hy6-Op-j20" secondAttribute="trailing" type="default" id="RBW-Xm-YaO"/>
+                            <constraint firstItem="nu2-It-Vir" firstAttribute="bottom" secondItem="hy6-Op-j20" secondAttribute="bottom" type="default" id="j0o-Rn-BKi"/>
+                            <constraint firstItem="nu2-It-Vir" firstAttribute="top" secondItem="hy6-Op-j20" secondAttribute="top" constant="64" id="rud-JZ-PMo"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="MTM-4s-Neb"/>
@@ -926,62 +949,6 @@
             </objects>
             <point key="canvasLocation" x="1272" y="-734"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="fgS-uK-BuS">
-            <objects>
-                <viewController id="eCb-ah-L4p" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="OBh-Ih-SS4">
-                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Are you sure? Entries will be lost" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GoV-xs-mqA">
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.99215692281723022" green="0.031372550874948502" blue="0.0078431377187371254" alpha="1" colorSpace="deviceRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z9z-Je-EIF">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="92" id="pdn-UF-x7c"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Back">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9kP-eh-YbC">
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Discard Changes">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="btu-Hv-3gZ" kind="push" id="Gan-4n-2v9"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="z9z-Je-EIF" firstAttribute="leading" secondItem="GoV-xs-mqA" secondAttribute="leading" type="default" id="42P-TV-ktN"/>
-                            <constraint firstItem="GoV-xs-mqA" firstAttribute="leading" secondItem="OBh-Ih-SS4" secondAttribute="leading" constant="32" id="7DS-xH-s0X"/>
-                            <constraint firstItem="9kP-eh-YbC" firstAttribute="leading" secondItem="z9z-Je-EIF" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="J5x-Qt-ibk"/>
-                            <constraint firstItem="9kP-eh-YbC" firstAttribute="baseline" secondItem="z9z-Je-EIF" secondAttribute="baseline" type="default" id="cZp-mh-XTW"/>
-                            <constraint firstItem="GoV-xs-mqA" firstAttribute="top" secondItem="OBh-Ih-SS4" secondAttribute="top" constant="149" id="hp3-FG-jO0"/>
-                            <constraint firstAttribute="bottom" secondItem="z9z-Je-EIF" secondAttribute="bottom" constant="202" id="nlo-UA-t7E"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="JXU-oL-jCp"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="amy-P6-VxE" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1754" y="-3"/>
-        </scene>
         <!--View Controller - ABC School-->
         <scene sceneID="dXi-wM-r1s">
             <objects>
@@ -1094,6 +1061,7 @@
         <class className="LocationViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/LocationViewController.h"/>
             <relationships>
+                <relationship kind="action" name="OrBoton:"/>
                 <relationship kind="outlet" name="locationTableView" candidateClass="UITableView"/>
             </relationships>
         </class>
@@ -1114,7 +1082,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="WJU-4Z-lgZ"/>
         <segue reference="SvC-dP-B97"/>
     </inferredMetricsTieBreakers>
 </document>
