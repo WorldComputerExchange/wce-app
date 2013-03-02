@@ -12,7 +12,7 @@
 
 @implementation LocationViewController
 
-@synthesize regionArray, locationTableView, locations, actionSheet;
+@synthesize regionArray, locationTableView, locations, actionSheet, footerView, chooseFromMap;
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -37,6 +37,12 @@
     [regionArray addObject:@"Middle East"];
     
     locations = [[NSMutableArray alloc] initWithObjects:@"ABC School", @"Xavier School", @"Chicago", @"Cairo", @"Ayacucho", nil];
+}
+
+// Called when Choose from Map button is pressed
+- (void)showMap
+{
+	[self performSegueWithIdentifier:@"pushMapView" sender:self];
 }
 
 - (void)viewWillAppear:(BOOL)animated{
@@ -106,15 +112,41 @@
 	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"LocationCellID"];
 	if (cell == nil)
 	{
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"LocationCell"];
+		cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"LocationCell"];
 	}
 	//get the relevant location from the array
 	NSString *region =  [self.regionArray objectAtIndex:indexPath.row];
-    
-    cell.textLabel.text = region;
-    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-    
+	
+	cell.textLabel.text = region;
+	cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+	
 	return cell;
+}
+
+// Returns a UIView that serves as the footer for this table view
+- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
+{
+	if(footerView == nil)
+	{
+		footerView = [[UIView alloc] init];
+		
+		chooseFromMap = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+		[chooseFromMap setFrame:CGRectMake(10, 20, 300, 40)];
+		[chooseFromMap setTitle:@"Choose from Map" forState:UIControlStateNormal];
+		[chooseFromMap addTarget:self
+						  action:@selector(showMap)
+				forControlEvents:UIControlEventTouchUpInside];
+		
+		[footerView addSubview:chooseFromMap];
+	}
+	
+	return footerView;
+}
+
+// Tells the table view how tall its footer should be (the footer contains the Choose from Map button)
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
+{
+	return 60;
 }
 
 /**PickerView Methods**/
