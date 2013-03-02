@@ -24,9 +24,9 @@
 
 
 - (void)viewWillAppear:(BOOL)animated{
-    //make navigation bar hidden bc it is put in in storyboard
+    //make navigation bar hidden bc it is put in in storyboard (not any more, the Save button is created using code below)
     NSLog(@"IS this being called?");
-    [self.navigationController setNavigationBarHidden:YES];
+    //[self.navigationController setNavigationBarHidden:YES];
     
     actionSheet = [[UIActionSheet alloc] initWithTitle:nil
                                               delegate:nil
@@ -78,6 +78,11 @@
     [actionSheet dismissWithClickedButtonIndex:0 animated:YES];
 }
 
+- (IBAction)saveInfo
+{
+	NSLog(@"saving!!!");
+}
+
 
 /**TableView methods**/
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -110,6 +115,13 @@
     dataArray = [[NSMutableArray alloc] init];
     [dataArray addObject:@"City"];
     [dataArray addObject:@"Country"];
+	
+	// Add a "Save" button to the navigation controller
+	UIBarButtonItem *saveButton = [[UIBarButtonItem alloc] initWithTitle:@"Save"
+																   style:UIBarButtonItemStyleDone
+																  target:self
+																  action:@selector(saveInfo)];
+	[[self navigationItem] setRightBarButtonItem:saveButton];
 }
 
 - (void)didReceiveMemoryWarning
