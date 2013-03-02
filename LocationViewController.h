@@ -8,13 +8,13 @@
 
 @interface LocationViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, UIPickerViewDelegate, UIPickerViewDataSource> {
     IBOutlet UITableView *locationTableView;
-    NSMutableArray *locationArray;
+    NSMutableArray *regionArray;
     UIActionSheet *actionSheet;
-    NSArray *locations;
+    NSMutableArray *locations;
     
 }
 
-@property (nonatomic, retain) NSMutableArray *locationArray;
+@property (nonatomic, retain) NSMutableArray *regionArray;
 @property (nonatomic,retain) UITableView* locationTableView;
 @property (nonatomic, copy) NSArray *locations;
 @property (nonatomic, copy) UIActionSheet *actionSheet;
