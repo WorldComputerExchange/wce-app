@@ -121,7 +121,7 @@
     
     dataArray = [[NSMutableArray alloc] init];
     [dataArray addObject:@"Country"];
-    [dataArray addObject:@"City"];
+    [dataArray addObject:@"Language"];
 	
 	// Add a "Save" button to the navigation controller
 	UIBarButtonItem *saveButton = [[UIBarButtonItem alloc] initWithTitle:@"Save"
