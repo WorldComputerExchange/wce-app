@@ -120,8 +120,8 @@
     locations = [[NSArray alloc] initWithObjects:@"Libya", @"Boston", @"Chicago", @"Cairo", @"The Vatican", nil];
     
     dataArray = [[NSMutableArray alloc] init];
-    [dataArray addObject:@"City"];
     [dataArray addObject:@"Country"];
+    [dataArray addObject:@"City"];
 	
 	// Add a "Save" button to the navigation controller
 	UIBarButtonItem *saveButton = [[UIBarButtonItem alloc] initWithTitle:@"Save"
@@ -141,15 +141,15 @@
 {
 	///// Here's both a UIAlertView and a UIActionSheet--I don't know what you might think looks better so both of them are here to try out
 	
-	UIAlertView *cancelConfirmation = [[UIAlertView alloc] initWithTitle:@"Discard changes?"
-																 message:@"The changes you made here won't be saved. Do you want to continue?"
-																delegate:self
-													   cancelButtonTitle:@"Cancel"
-													   otherButtonTitles:@"Discard", nil];
+	//UIAlertView *cancelConfirmation = [[UIAlertView alloc] initWithTitle:@"Discard changes?"
+															//	 message:@"The changes you made here won't be saved. Do you want to continue?"
+																//delegate:self
+													//   cancelButtonTitle:@"Cancel"
+													  // otherButtonTitles:@"Discard", nil];
 	
-	[cancelConfirmation show];
+	//[cancelConfirmation show];
 	
-	/*
+	
 	UIActionSheet *cancelConfirmation = [[UIActionSheet alloc] initWithTitle:nil
 																	delegate:self
 														   cancelButtonTitle:@"Cancel"
@@ -157,7 +157,7 @@
 														   otherButtonTitles:@"Save Changes", nil];
 	
 	[cancelConfirmation showInView:[[UIApplication sharedApplication] keyWindow]];
-	*/
+	
 }
 
 // Called when a button is clicked in the UIAlertView
