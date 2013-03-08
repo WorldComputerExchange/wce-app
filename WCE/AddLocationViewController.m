@@ -150,11 +150,11 @@
 	//[cancelConfirmation show];
 	
 	
-	UIActionSheet *cancelConfirmation = [[UIActionSheet alloc] initWithTitle:nil
+	UIActionSheet *cancelConfirmation = [[UIActionSheet alloc] initWithTitle:@"Are you sure you want to discard the changes you've made to this location?"
 																	delegate:self
 														   cancelButtonTitle:@"Cancel"
 													  destructiveButtonTitle:@"Discard Changes"
-														   otherButtonTitles:@"Save Changes", nil];
+														   otherButtonTitles:nil];
 	
 	[cancelConfirmation showInView:[[UIApplication sharedApplication] keyWindow]];
 	
@@ -167,8 +167,20 @@
 		[self dismissViewControllerAnimated:YES completion:nil];
 }
 
+// Called when a button is clicked in the UIActionSheet
+- (void)actionSheet:(UIActionSheet *)actionSheet willDismissWithButtonIndex:(NSInteger)buttonIndex
+{
+    if(buttonIndex == 0)
+        [self dismissViewControllerAnimated:YES completion:nil];
+}
+
 - (IBAction)saveChanges:(id)sender
 {
-	[self dismissViewControllerAnimated:YES completion:nil];
+	[self saveNewLocation];
+}
+
+- (void)saveNewLocation
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 @end
