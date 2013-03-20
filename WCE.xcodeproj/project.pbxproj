@@ -30,6 +30,7 @@
 		9ED3259F16DD5D4C00EA38E0 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9ED3259E16DD5D4C00EA38E0 /* MapKit.framework */; };
 		9ED695B316E28332005D1EDB /* WCE Content V5 copy.png in Resources */ = {isa = PBXBuildFile; fileRef = 9ED695B216E28332005D1EDB /* WCE Content V5 copy.png */; };
 		D07A3B0316D6F7C4003B6074 /* WCE_LogoWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = D07A3B0216D6F7C4003B6074 /* WCE_LogoWhite.png */; };
+		FA44558116E284E900D08750 /* WCE Content V5 NEW.png in Resources */ = {isa = PBXBuildFile; fileRef = FA44558016E284E900D08750 /* WCE Content V5 NEW.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,6 +70,7 @@
 		9ED3259E16DD5D4C00EA38E0 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		9ED695B216E28332005D1EDB /* WCE Content V5 copy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WCE Content V5 copy.png"; sourceTree = "<group>"; };
 		D07A3B0216D6F7C4003B6074 /* WCE_LogoWhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WCE_LogoWhite.png; sourceTree = "<group>"; };
+		FA44558016E284E900D08750 /* WCE Content V5 NEW.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WCE Content V5 NEW.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +179,7 @@
 			children = (
 				D07A3B0216D6F7C4003B6074 /* WCE_LogoWhite.png */,
 				8C9C3AD816CC60D000F95A6B /* WCE-Info.plist */,
+				FA44558016E284E900D08750 /* WCE Content V5 NEW.png */,
 				8C9C3AD916CC60D000F95A6B /* InfoPlist.strings */,
 				8C9C3ADC16CC60D000F95A6B /* main.m */,
 				8C9C3ADE16CC60D000F95A6B /* WCE-Prefix.pch */,
@@ -277,6 +280,7 @@
 				9E39AF8016D9739500B4275C /* satellite_maps_earth_map_dual_monitor_3200x1200_desktop_wallpaper-344945.jpg in Resources */,
 				9E2476DD16E27D9C0049ED27 /* WCE Content V5.png in Resources */,
 				9ED695B316E28332005D1EDB /* WCE Content V5 copy.png in Resources */,
+				FA44558116E284E900D08750 /* WCE Content V5 NEW.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -119,8 +119,8 @@
     locations = [[NSArray alloc] initWithObjects:@"Libya", @"Boston", @"Chicago", @"Cairo", @"The Vatican", nil];
     
     dataArray = [[NSMutableArray alloc] init];
-    [dataArray addObject:@"City"];
     [dataArray addObject:@"Country"];
+    [dataArray addObject:@"Language"];
 	
 	// Add a "Save" button to the navigation controller
 	UIBarButtonItem *saveButton = [[UIBarButtonItem alloc] initWithTitle:@"Save"
@@ -138,9 +138,25 @@
 
 - (IBAction)cancelChanges:(id)sender
 {
-	UIAlertView *cancelConfirmation = [[UIAlertView alloc] initWithTitle:@"Discard changes?" message:@"The changes you made here won't be saved. Do you want to continue?" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Discard", nil];
+	///// Here's both a UIAlertView and a UIActionSheet--I don't know what you might think looks better so both of them are here to try out
 	
-	[cancelConfirmation show];
+	//UIAlertView *cancelConfirmation = [[UIAlertView alloc] initWithTitle:@"Discard changes?"
+															//	 message:@"The changes you made here won't be saved. Do you want to continue?"
+																//delegate:self
+													//   cancelButtonTitle:@"Cancel"
+													  // otherButtonTitles:@"Discard", nil];
+	
+	//[cancelConfirmation show];
+	
+	
+	UIActionSheet *cancelConfirmation = [[UIActionSheet alloc] initWithTitle:@"Are you sure you want to discard the changes you've made to this location?"
+																	delegate:self
+														   cancelButtonTitle:@"Cancel"
+													  destructiveButtonTitle:@"Discard Changes"
+														   otherButtonTitles:nil];
+	
+	[cancelConfirmation showInView:[[UIApplication sharedApplication] keyWindow]];
+	
 }
 
 // Called when a button is clicked in the UIAlertView
@@ -150,8 +166,20 @@
 		[self dismissViewControllerAnimated:YES completion:nil];
 }
 
+// Called when a button is clicked in the UIActionSheet
+- (void)actionSheet:(UIActionSheet *)actionSheet willDismissWithButtonIndex:(NSInteger)buttonIndex
+{
+    if(buttonIndex == 0)
+        [self dismissViewControllerAnimated:YES completion:nil];
+}
+
 - (IBAction)saveChanges:(id)sender
 {
-	[self dismissViewControllerAnimated:YES completion:nil];
+	[self saveNewLocation];
+}
+
+- (void)saveNewLocation
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 @end
