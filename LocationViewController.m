@@ -13,7 +13,7 @@
 
 @implementation LocationViewController
 
-@synthesize regionArray, locationTableView, locations, actionSheet, footerView, chooseFromMap;
+@synthesize regionArray, locationTableView, locations, actionSheet, footerView, chooseFromMap, sharedLocation;
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -38,6 +38,9 @@
     [regionArray addObject:@"Middle East"];
     
     locations = [[NSMutableArray alloc] initWithObjects:@"ABC School", @"Xavier School", @"Chicago", @"Cairo", @"Ayacucho", nil];
+    
+    //get shared location instance
+    sharedLocation = [Location sharedLocation];
 }
 
 // Called when Choose from Map button is pressed
@@ -71,6 +74,14 @@
 /**TableView Methods**/
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    /**set the region name to that chosen in the table**/
+    int idx = indexPath.row;
+    
+    NSString *selectedRegion = [regionArray objectAtIndex:idx];
+    
+    [sharedLocation setRegion:selectedRegion];
+    
+    /**prepare pickerview for appearance**/
     actionSheet = [[UIActionSheet alloc] initWithTitle:nil
                                               delegate:nil
                                      cancelButtonTitle:nil
@@ -80,7 +91,7 @@
     [actionSheet setActionSheetStyle:UIActionSheetStyleBlackTranslucent];
     
     CGRect pickerFrame = CGRectMake(0, 40, 0, 0);
-    UIPickerView *pickerView = [[UIPickerView alloc] initWithFrame:pickerFrame];
+    pickerView = [[UIPickerView alloc] initWithFrame:pickerFrame];
     pickerView.showsSelectionIndicator = YES;
     pickerView.dataSource = self;
     pickerView.delegate = self;
@@ -170,13 +181,15 @@
 {
     [actionSheet dismissWithClickedButtonIndex:0 animated:YES];
     
-  //  Location *sharedInstance = [Location sharedLocation];
- /*   [sharedInstance setCountry:@"USA"];
     
-    Location *sharedInstanceTest = [Location sharedLocation];
-    NSLog(@" %@ ", [sharedInstanceTest country]);*/
+    /**set the Location name to that chosen in the picker**/
+    int idx = [pickerView selectedRowInComponent:0];
+    
+    NSString *selectedName = [locations objectAtIndex:idx];
+    
+    [sharedLocation setName:selectedName];
+    
 
-    
     /**TEST***/
     [self performSegueWithIdentifier:@"pushMainMenu" sender:self];
 }

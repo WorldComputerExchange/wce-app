@@ -7,7 +7,7 @@
 #import "Location.h"
 
 @implementation Location
-@dynamic region, country, language, name, hasLocation;
+@synthesize region, country, language, name, hasLocation;
 
 static Location* _sharedLocation = nil;
 
@@ -19,8 +19,10 @@ static Location* _sharedLocation = nil;
         
         if (!sharedLocation)
             sharedLocation = [[Location alloc] init];
-            return _sharedLocation;
+        
+        return _sharedLocation;
     }
+    return nil;
 }
 
 +(id)alloc {

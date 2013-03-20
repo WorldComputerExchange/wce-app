@@ -5,6 +5,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Location.h"
 
 @interface LocationViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, UIPickerViewDelegate, UIPickerViewDataSource> {
     IBOutlet UITableView *locationTableView;
@@ -12,8 +13,10 @@
     UIActionSheet *actionSheet;
     NSMutableArray *locations;
     
+    UIPickerView *pickerView;
 	UIButton *chooseFromMap;
 	UIView *footerView;
+    Location *sharedLocation;
 }
 
 @property (nonatomic, retain) NSMutableArray *regionArray;
@@ -22,5 +25,6 @@
 @property (nonatomic, copy) UIActionSheet *actionSheet;
 @property (nonatomic, retain) UIButton *chooseFromMap;
 @property (nonatomic, retain) UIView *footerView;
+@property (nonatomic, retain) Location *sharedLocation;
 
 @end
