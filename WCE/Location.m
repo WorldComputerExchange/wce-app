@@ -45,8 +45,5 @@ static Location* _sharedLocation = nil;
     return self;
 }
 
-- (void)sayLocation{
-    NSLog(@"Location of shared instance is %@", [[self sharedLocation] region]);
-}
 
 @end

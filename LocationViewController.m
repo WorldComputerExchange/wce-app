@@ -170,7 +170,11 @@
 {
     [actionSheet dismissWithClickedButtonIndex:0 animated:YES];
     
-    [[Location sharedLocation] sayLocation];
+  //  Location *sharedInstance = [Location sharedLocation];
+ /*   [sharedInstance setCountry:@"USA"];
+    
+    Location *sharedInstanceTest = [Location sharedLocation];
+    NSLog(@" %@ ", [sharedInstanceTest country]);*/
 
     
     /**TEST***/

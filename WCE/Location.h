@@ -17,6 +17,4 @@
 
 + (Location *)sharedLocation;
 
--(void)sayLocation;
-
 @end
