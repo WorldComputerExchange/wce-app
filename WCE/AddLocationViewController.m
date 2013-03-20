@@ -24,8 +24,7 @@
 
 
 - (void)viewWillAppear:(BOOL)animated{
-    //make navigation bar hidden bc it is put in in storyboard (not any more, the Save button is created using code below)
-    NSLog(@"IS this being called?");
+    //make navigation bar hidden bc it is put in in storyboard (not any more, the Save button is created using code below
     //[self.navigationController setNavigationBarHidden:YES];
     
     /*

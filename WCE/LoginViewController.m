@@ -44,8 +44,6 @@
 
 - (IBAction)pushLocationView:(id)sender{
 	
-	NSLog(@"Login button pushed");
-	
 	// "self.passcodeField.text" refers to the text currently entered in the passcode field (which is an outlet for this class, WCELoginViewController)
     if ([self.passcodeField.text isEqualToString:@"12345"]) // We compare it to the string "12345"
     {
