@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="11G63b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Fvu-h0-ZII">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Fvu-h0-ZII">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
@@ -349,14 +349,14 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="406" id="WHJ-11-FfU"/>
                                         </constraints>
-                                        <mutableString key="text">In 1999, Timothy Anderson found that an organization that supplied donated refurbished computers to other countries wasn’t established in the U.S. With a small group of volunteer members, Anderson developed the World Computer Exchange (WCE). [24] [25]
+                                        <string key="text">In 1999, Timothy Anderson found that an organization that supplied donated refurbished computers to other countries wasn’t established in the U.S. With a small group of volunteer members, Anderson developed the World Computer Exchange (WCE). [24] [25]
 
 By November 2002, the organiation shipped 4,000 computers to 585 schools in many developping countries. [26]
 
 By October, 2011, along with partner organizations, WCE has shipped 30,000 computers, established 2,675 computer labs. [27] [28]
 
 In February 2012, Boston chapter (also headquarter chapter) in Hull, Massachusetts sent out their 68th shipment bringing their total to 13,503 computers.[29]
-</mutableString>
+</string>
                                         <color key="textColor" red="1" green="0.81845263810000002" blue="0.24046476959999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="13"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -1654,10 +1654,10 @@ Cgo
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="7mj-ey-S6c">
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="7mj-ey-S6c">
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="95" id="BDT-vc-rLB"/>
+                                            <constraint firstAttribute="height" constant="117" id="Z6L-cX-Hus"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="dataSource" destination="a24-Hj-6Z9" id="vIv-bZ-9yt"/>
@@ -1667,6 +1667,7 @@ Cgo
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="kFh-ve-PT1" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="05z-Mg-Eh3"/>
+                                    <constraint firstAttribute="bottom" secondItem="7mj-ey-S6c" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="0pv-MH-oaH"/>
                                     <constraint firstAttribute="trailing" secondItem="XP2-2z-49m" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="3Fm-or-arz"/>
                                     <constraint firstItem="pAC-Wd-cuw" firstAttribute="leading" secondItem="XXt-uE-Esk" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="AGZ-P4-x2h"/>
                                     <constraint firstItem="Zfm-8O-vja" firstAttribute="leading" secondItem="XXt-uE-Esk" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="ELk-na-0MU"/>
@@ -1687,7 +1688,6 @@ Cgo
                                     <constraint firstItem="oGp-po-S2z" firstAttribute="top" secondItem="kFh-ve-PT1" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="isL-mi-wds"/>
                                     <constraint firstAttribute="trailing" secondItem="pAC-Wd-cuw" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="jb7-EX-p5x"/>
                                     <constraint firstItem="XP2-2z-49m" firstAttribute="centerX" secondItem="XXt-uE-Esk" secondAttribute="centerX" type="default" id="ppm-0p-5Sx"/>
-                                    <constraint firstAttribute="bottom" secondItem="7mj-ey-S6c" secondAttribute="bottom" constant="42" id="rEh-UK-PyQ"/>
                                     <constraint firstItem="Boi-FL-eJU" firstAttribute="top" secondItem="vkb-X2-a7c" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="rj9-Fz-M7d"/>
                                     <constraint firstItem="Zfm-8O-vja" firstAttribute="top" secondItem="ps4-Wf-R6s" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="uGj-nN-i7h"/>
                                     <constraint firstItem="kFh-ve-PT1" firstAttribute="leading" secondItem="XXt-uE-Esk" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="wWx-7V-gC4"/>
