@@ -29,6 +29,7 @@
 		9ED3259D16DD53FF00EA38E0 /* AddressAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ED3259C16DD53FF00EA38E0 /* AddressAnnotation.m */; };
 		9ED3259F16DD5D4C00EA38E0 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9ED3259E16DD5D4C00EA38E0 /* MapKit.framework */; };
 		9ED695B316E28332005D1EDB /* WCE Content V5 copy.png in Resources */ = {isa = PBXBuildFile; fileRef = 9ED695B216E28332005D1EDB /* WCE Content V5 copy.png */; };
+		D058DCDB16FBD2A300132041 /* AboutWCEViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D058DCDA16FBD2A300132041 /* AboutWCEViewController.m */; };
 		D07A3B0316D6F7C4003B6074 /* WCE_LogoWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = D07A3B0216D6F7C4003B6074 /* WCE_LogoWhite.png */; };
 		FA44558116E284E900D08750 /* WCE Content V5 NEW.png in Resources */ = {isa = PBXBuildFile; fileRef = FA44558016E284E900D08750 /* WCE Content V5 NEW.png */; };
 /* End PBXBuildFile section */
@@ -69,6 +70,8 @@
 		9ED3259C16DD53FF00EA38E0 /* AddressAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressAnnotation.m; sourceTree = "<group>"; };
 		9ED3259E16DD5D4C00EA38E0 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		9ED695B216E28332005D1EDB /* WCE Content V5 copy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WCE Content V5 copy.png"; sourceTree = "<group>"; };
+		D058DCD916FBD2A300132041 /* AboutWCEViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutWCEViewController.h; sourceTree = "<group>"; };
+		D058DCDA16FBD2A300132041 /* AboutWCEViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutWCEViewController.m; sourceTree = "<group>"; };
 		D07A3B0216D6F7C4003B6074 /* WCE_LogoWhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WCE_LogoWhite.png; sourceTree = "<group>"; };
 		FA44558016E284E900D08750 /* WCE Content V5 NEW.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WCE Content V5 NEW.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -208,6 +211,7 @@
 			children = (
 				9ED3259B16DD53FF00EA38E0 /* AddressAnnotation.h */,
 				9ED3259C16DD53FF00EA38E0 /* AddressAnnotation.m */,
+				D058DCD816FBD28900132041 /* AboutWCE */,
 				8CB0441516DC476E0000AD0F /* LocationMap */,
 				8C03243516DC424D0089CB81 /* AddLocation */,
 				8C03241F16DC2A7A0089CB81 /* SaveLocation */,
@@ -217,6 +221,15 @@
 				8C9C3AEC16CC60D000F95A6B /* WCEViewController.m */,
 			);
 			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		D058DCD816FBD28900132041 /* AboutWCE */ = {
+			isa = PBXGroup;
+			children = (
+				D058DCD916FBD2A300132041 /* AboutWCEViewController.h */,
+				D058DCDA16FBD2A300132041 /* AboutWCEViewController.m */,
+			);
+			name = AboutWCE;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -301,6 +314,7 @@
 				8CB0441916DC47910000AD0F /* LocationMapViewController.m in Sources */,
 				9ED3259D16DD53FF00EA38E0 /* AddressAnnotation.m in Sources */,
 				8C32DF4516E26BB8005AFA89 /* Location.m in Sources */,
+				D058DCDB16FBD2A300132041 /* AboutWCEViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
