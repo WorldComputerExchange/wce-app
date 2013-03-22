@@ -54,4 +54,31 @@
     
 }
 
+- (MKAnnotationView *)mapView:(MKMapView *)mV viewForAnnotation:(id<MKAnnotation>)annotation
+{
+	MKPinAnnotationView *pinView = (MKPinAnnotationView *)[mV dequeueReusableAnnotationViewWithIdentifier:@"pinView"];
+	
+	if (!pinView)
+	{
+		pinView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"pinView"];
+		pinView.pinColor = MKPinAnnotationColorRed;
+		pinView.animatesDrop = YES;
+		pinView.canShowCallout = YES;
+		
+		UIButton *rightButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+		pinView.rightCalloutAccessoryView = rightButton;
+	}
+	else
+	{
+		pinView.annotation = annotation;
+	}
+	
+	return pinView;
+}
+
+- (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control
+{
+	[self performSegueWithIdentifier:@"goToInformationFromMap" sender:self];
+}
+
 @end
