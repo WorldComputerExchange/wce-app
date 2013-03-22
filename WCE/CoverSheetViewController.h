@@ -3,7 +3,6 @@
 //  WCE
 //
 //  Created by Sushruth Chandrasekar on 3/21/13.
-//  Copyright (c) 2013  Brian Beckerle. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
@@ -12,14 +11,14 @@
 @interface CoverSheetViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, UIPickerViewDelegate, UIPickerViewDataSource>
 {
     IBOutlet UITableView *ChooseCountry;
-    NSMutableArray *regionArray;
+    NSArray *regionArray;
     UIActionSheet *actionSheet;
-    NSMutableArray *locations;
-    
+    NSArray *locations;
+
     UIPickerView *pickerView;
 }
 
-@property (nonatomic, retain) NSMutableArray *regionArray;
+@property (nonatomic, retain) NSArray *regionArray;
 @property (nonatomic,retain) UITableView* locationTableView;
 @property (nonatomic, copy) NSArray *locations;
 @property (nonatomic, copy) UIActionSheet *actionSheet;

@@ -3,7 +3,6 @@
 //  WCE
 //
 //  Created by Sushruth Chandrasekar on 3/21/13.
-//  Copyright (c) 2013  Brian Beckerle. All rights reserved.
 //
 
 #import "CoverSheetViewController.h"
@@ -16,6 +15,7 @@
 
 @synthesize regionArray, locationTableView, locations, actionSheet;
 
+/**TableView methods**/
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 	return 1;
 }
@@ -39,6 +39,37 @@
 	cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 	
 	return cell;
+}
+
+- (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    actionSheet = [[UIActionSheet alloc] initWithTitle:nil
+                                              delegate:nil
+                                     cancelButtonTitle:nil
+                                destructiveButtonTitle:nil
+                                     otherButtonTitles:nil];
+    
+    [actionSheet setActionSheetStyle:UIActionSheetStyleBlackTranslucent];
+    
+    CGRect pickerFrame = CGRectMake(0, 40, 0, 0);
+    pickerView = [[UIPickerView alloc] initWithFrame:pickerFrame];
+    
+    pickerView.showsSelectionIndicator = YES;
+    pickerView.dataSource = self;
+    pickerView.delegate = self;
+    
+    UISegmentedControl *closeButton = [[UISegmentedControl alloc] initWithItems:[NSArray arrayWithObject:@"Next"]];
+    closeButton.momentary = YES;
+    closeButton.frame = CGRectMake(260, 7.0f, 50.0f, 30.0f);
+    closeButton.segmentedControlStyle = UISegmentedControlStyleBar;
+    closeButton.tintColor = [UIColor colorWithRed:34.0/255.0 green:97.0/255.0 blue:221.0/255.0 alpha:1];
+    [closeButton addTarget:self action:@selector(pickerDoneClicked) forControlEvents:UIControlEventValueChanged];
+    
+    [actionSheet addSubview:pickerView];
+    [actionSheet addSubview:closeButton];
+    [actionSheet showInView:[[UIApplication sharedApplication] keyWindow]];
+    [actionSheet setBounds:CGRectMake(0, 0, 320, 485)];
 }
 
 
@@ -68,11 +99,12 @@
 {
     [actionSheet dismissWithClickedButtonIndex:0 animated:YES];
     
-    
-    
-    
-    /**TEST***/
-    [self performSegueWithIdentifier:@"pushMainMenu" sender:self];
+    /**Here we should record infor about the country chosen in pickerView
+     We should also have the tableView respond to the selection perhaps by displaying
+     the country name chosen and deselecting the cell, 
+     Maybe we should use a UIButton instead? 
+     might be violation of
+     apples interface guidelines**/
 }
 
 
@@ -89,11 +121,10 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    regionArray = [[NSMutableArray alloc] init];
-    [regionArray addObject:@"Country"];
+    regionArray = [[NSArray alloc] initWithObjects:@"County", nil];
    
     
-    locations = [[NSMutableArray alloc] initWithObjects:@"Japan", @"China", @"Your Face", @"Peter Goulakos", @"Is Fat", nil];
+    locations = [[NSArray alloc] initWithObjects:@"Japan", @"China", @"Your Face", @"Peter Goulakos", @"Is Fat", nil];
     
 }
 
