@@ -1004,44 +1004,17 @@ Cg
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="zAr-3r-Sqt">
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="zAr-3r-Sqt">
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="42" id="MnR-gE-AUM"/>
+                                            <constraint firstAttribute="width" constant="256" id="IFi-xo-Mcx"/>
+                                            <constraint firstAttribute="height" constant="65" id="Suq-hO-J8b"/>
                                         </constraints>
-                                        <sections>
-                                            <tableViewSection id="jDY-hk-f2V">
-                                                <cells>
-                                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="NII-Oo-geK">
-                                                        <rect key="frame" x="0.0" y="0.0" width="256" height="44"/>
-                                                        <autoresizingMask key="autoresizingMask"/>
-                                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                                            <rect key="frame" x="0.0" y="0.0" width="256" height="43"/>
-                                                            <autoresizingMask key="autoresizingMask"/>
-                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                        </view>
-                                                    </tableViewCell>
-                                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="cVO-gb-P1y">
-                                                        <rect key="frame" x="0.0" y="44" width="256" height="44"/>
-                                                        <autoresizingMask key="autoresizingMask"/>
-                                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                                            <rect key="frame" x="0.0" y="0.0" width="256" height="43"/>
-                                                            <autoresizingMask key="autoresizingMask"/>
-                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                        </view>
-                                                    </tableViewCell>
-                                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="zjI-Xa-3Vj">
-                                                        <rect key="frame" x="0.0" y="88" width="256" height="44"/>
-                                                        <autoresizingMask key="autoresizingMask"/>
-                                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                                            <rect key="frame" x="0.0" y="0.0" width="256" height="43"/>
-                                                            <autoresizingMask key="autoresizingMask"/>
-                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                        </view>
-                                                    </tableViewCell>
-                                                </cells>
-                                            </tableViewSection>
-                                        </sections>
+                                        <sections/>
+                                        <connections>
+                                            <outlet property="dataSource" destination="NnU-84-OpA" id="FBf-LE-maY"/>
+                                            <outlet property="delegate" destination="NnU-84-OpA" id="lMg-pn-eQS"/>
+                                        </connections>
                                     </tableView>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="2. Name of Your Organization:" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="s26-Jf-Vib">
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -1080,9 +1053,6 @@ Cg
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pCa-ig-lsv">
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="256" id="xoo-os-nvE"/>
-                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
@@ -1112,7 +1082,6 @@ Cg
                                     <constraint firstAttribute="trailing" secondItem="EVn-ud-PeA" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="12e-YN-LMB"/>
                                     <constraint firstItem="XFN-2Q-309" firstAttribute="leading" secondItem="aHq-QJ-JhA" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="1Ls-aB-AsL"/>
                                     <constraint firstAttribute="trailing" secondItem="kfg-UR-oPt" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="2Do-E3-vLn"/>
-                                    <constraint firstItem="zAr-3r-Sqt" firstAttribute="top" secondItem="CVf-3f-mXc" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="2eS-7w-38h"/>
                                     <constraint firstItem="XFN-2Q-309" firstAttribute="trailing" secondItem="EzT-cF-Rmv" secondAttribute="trailing" type="default" id="34V-EI-At1"/>
                                     <constraint firstItem="XFN-2Q-309" firstAttribute="trailing" secondItem="9zk-68-RmP" secondAttribute="trailing" type="default" id="5E4-vS-1uE"/>
                                     <constraint firstItem="QYy-HF-8jH" firstAttribute="centerX" secondItem="aHq-QJ-JhA" secondAttribute="centerX" type="default" id="70T-em-FNG"/>
@@ -1133,6 +1102,7 @@ Cg
                                     <constraint firstItem="y0U-kU-bHM" firstAttribute="top" secondItem="SqF-5l-5Cs" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="WwY-ab-KPc"/>
                                     <constraint firstItem="y0U-kU-bHM" firstAttribute="leading" secondItem="EVn-ud-PeA" secondAttribute="leading" type="default" id="X6Q-EN-BqO"/>
                                     <constraint firstItem="SqF-5l-5Cs" firstAttribute="top" secondItem="PhS-Gy-GTX" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="ZHe-Eb-Voz"/>
+                                    <constraint firstItem="zAr-3r-Sqt" firstAttribute="top" secondItem="aHq-QJ-JhA" secondAttribute="top" constant="88" id="a25-Pe-l5q"/>
                                     <constraint firstItem="k7h-6Q-EnN" firstAttribute="leading" secondItem="aHq-QJ-JhA" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="cnE-HA-zxU"/>
                                     <constraint firstItem="SqF-5l-5Cs" firstAttribute="leading" secondItem="aHq-QJ-JhA" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="eVa-TB-05M"/>
                                     <constraint firstItem="XFN-2Q-309" firstAttribute="top" secondItem="pCa-ig-lsv" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="eiE-ND-9MG"/>
@@ -1140,14 +1110,14 @@ Cg
                                     <constraint firstItem="s26-Jf-Vib" firstAttribute="leading" secondItem="aHq-QJ-JhA" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="geO-KC-Wt4"/>
                                     <constraint firstItem="zAr-3r-Sqt" firstAttribute="leading" secondItem="PhS-Gy-GTX" secondAttribute="leading" type="default" id="gec-Hv-U0P"/>
                                     <constraint firstItem="kfg-UR-oPt" firstAttribute="leading" secondItem="Lew-e1-OEQ" secondAttribute="leading" type="default" id="hQa-VP-8mc"/>
+                                    <constraint firstItem="zAr-3r-Sqt" firstAttribute="leading" secondItem="aHq-QJ-JhA" secondAttribute="leading" constant="44" id="i7j-VW-3fO"/>
                                     <constraint firstItem="pCa-ig-lsv" firstAttribute="top" secondItem="k7h-6Q-EnN" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="kcQ-Bj-8pS"/>
                                     <constraint firstAttribute="trailing" secondItem="Lew-e1-OEQ" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="ktK-uM-xKa"/>
                                     <constraint firstAttribute="trailing" secondItem="zAr-3r-Sqt" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="lIc-Ez-DBD"/>
                                     <constraint firstAttribute="trailing" secondItem="pCa-ig-lsv" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="nAi-lD-U2o"/>
                                     <constraint firstItem="k7h-6Q-EnN" firstAttribute="top" secondItem="EVn-ud-PeA" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="plr-46-pYB"/>
-                                    <constraint firstItem="s26-Jf-Vib" firstAttribute="top" secondItem="zAr-3r-Sqt" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="r8W-V7-CtX"/>
                                     <constraint firstItem="CVf-3f-mXc" firstAttribute="top" secondItem="QYy-HF-8jH" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="rZi-Ep-f6K"/>
-                                    <constraint firstItem="pCa-ig-lsv" firstAttribute="leading" secondItem="aHq-QJ-JhA" secondAttribute="leading" constant="44" id="w63-2b-cQe"/>
+                                    <constraint firstItem="s26-Jf-Vib" firstAttribute="top" secondItem="aHq-QJ-JhA" secondAttribute="top" constant="155" id="uFU-de-0PR"/>
                                     <constraint firstItem="9zk-68-RmP" firstAttribute="trailing" secondItem="SqF-5l-5Cs" secondAttribute="trailing" type="default" id="zdb-tl-JPd"/>
                                     <constraint firstAttribute="trailing" secondItem="PhS-Gy-GTX" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="zsR-5d-gMm"/>
                                 </constraints>
@@ -2060,6 +2030,50 @@ Cgo
         <image name="WCE Content V5 NEW.png" width="1275" height="2100"/>
         <image name="WCE_LogoWhite.png" width="221" height="60"/>
     </resources>
+    <classes>
+        <class className="AboutWCEViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AboutWCEViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="goToWebsite:"/>
+            </relationships>
+        </class>
+        <class className="AddLocationViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AddLocationViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="cancelChanges:"/>
+                <relationship kind="action" name="saveChanges:"/>
+                <relationship kind="outlet" name="dropDownTableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="CoverSheetViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CoverSheetViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="ChooseCountry" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="LocationMapViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LocationMapViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
+            </relationships>
+        </class>
+        <class className="LocationViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LocationViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="locationTableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="LoginViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LoginViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="pushLocationView:"/>
+                <relationship kind="outlet" name="passcodeField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
