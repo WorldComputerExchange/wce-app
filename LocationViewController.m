@@ -29,13 +29,10 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    regionArray = [[NSMutableArray alloc] init];
-    [regionArray addObject:@"Africa"];
-    [regionArray addObject:@"Asia"];
-    [regionArray addObject:@"Caribbean"];
-    [regionArray addObject:@"Eastern Europe"];
-    [regionArray addObject:@"Latin America"];
-    [regionArray addObject:@"Middle East"];
+    regionArray = [[NSArray alloc] initWithObjects:
+                   @"Africa", @"Asia", @"Caribbean",
+                   @"Eastern Europe", @"Latin America",
+                   @"Middle East", nil];
     
     locations = [[NSMutableArray alloc] initWithObjects:@"ABC School", @"Xavier School", @"Chicago", @"Cairo", @"Ayacucho", nil];
     

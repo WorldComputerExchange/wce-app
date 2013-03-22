@@ -12,7 +12,7 @@
 
 @implementation AddLocationViewController
 
-@synthesize locations, actionSheet, dropDownTableView, dataArray;
+@synthesize locations, countries, languages, actionSheet, dropDownTableView, dataArray;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -24,37 +24,27 @@
 
 
 - (void)viewWillAppear:(BOOL)animated{
-    //make navigation bar hidden bc it is put in in storyboard (not any more, the Save button is created using code below
-    //[self.navigationController setNavigationBarHidden:YES];
+        
+}
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+	// Do any additional setup after loading the view.
     
-    /*
-	 actionSheet = [[UIActionSheet alloc] initWithTitle:nil
-                                              delegate:nil
-                                     cancelButtonTitle:nil
-                                destructiveButtonTitle:nil
-                                     otherButtonTitles:nil];
     
-    [actionSheet setActionSheetStyle:UIActionSheetStyleBlackTranslucent];
+    dataArray = [[NSArray alloc] initWithObjects:@"Country", @"Language", nil];
     
-    CGRect pickerFrame = CGRectMake(0, 40, 0, 0);
-    UIPickerView *pickerView = [[UIPickerView alloc] initWithFrame:pickerFrame];
-    pickerView.showsSelectionIndicator = YES;
-    pickerView.dataSource = self;
-    pickerView.delegate = self;
+    countries = [[NSArray alloc] initWithObjects:@"Libya", @"Zambia", @"Pakistan", @"Guatemala", nil];
     
-    UISegmentedControl *closeButton = [[UISegmentedControl alloc] initWithItems:[NSArray arrayWithObject:@"Next"]];
-    closeButton.momentary = YES;
-    closeButton.frame = CGRectMake(260, 7.0f, 50.0f, 30.0f);
-    closeButton.segmentedControlStyle = UISegmentedControlStyleBar;
-    closeButton.tintColor = [UIColor colorWithRed:34.0/255.0 green:97.0/255.0 blue:221.0/255.0 alpha:1];
-    [closeButton addTarget:self action:@selector(pickerDoneClicked) forControlEvents:UIControlEventValueChanged];
-    
-    [actionSheet addSubview:pickerView];
-    [actionSheet addSubview:closeButton];
-    [actionSheet showInView:[[UIApplication sharedApplication] keyWindow]];
-    [actionSheet setBounds:CGRectMake(0, 0, 320, 485)];
-	 */
-    
+    languages = [[NSArray alloc] initWithObjects:@"French", @"Arabic", @"English", @"Spanish", nil];
+	
+	// Add a "Save" button to the navigation controller
+	UIBarButtonItem *saveButton = [[UIBarButtonItem alloc] initWithTitle:@"Save"
+																   style:UIBarButtonItemStyleDone
+																  target:self
+																  action:@selector(saveInfo)];
+	[[self navigationItem] setRightBarButtonItem:saveButton];
 }
 
 
@@ -66,12 +56,22 @@
 
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
 {
-    return [locations count];
+    if (pickerView.tag == countryPicker){
+        return [countries count];
+    }else if (pickerView.tag == languagePicker){
+        return [languages count];
+    }else {
+        return [languages count];
+    }
 }
 
 - (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
 {
-    return [locations objectAtIndex:row];
+    if (pickerView.tag == countryPicker){
+        return [countries objectAtIndex:row];
+    }else{
+        return [languages objectAtIndex:row];
+    }
 }
 
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
@@ -111,24 +111,45 @@
     return cell;
 }
 
-- (void)viewDidLoad
+/**TableView Methods**/
+- (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [super viewDidLoad];
-	// Do any additional setup after loading the view.
+    int idx = indexPath.row; //row 0 corresponds to country picker view, row 1 to language
     
-    locations = [[NSArray alloc] initWithObjects:@"Libya", @"Boston", @"Chicago", @"Cairo", @"The Vatican", nil];
+    actionSheet = [[UIActionSheet alloc] initWithTitle:nil
+                                              delegate:nil
+                                     cancelButtonTitle:nil
+                                destructiveButtonTitle:nil
+                                     otherButtonTitles:nil];
     
-    dataArray = [[NSMutableArray alloc] init];
-    [dataArray addObject:@"Country"];
-    [dataArray addObject:@"Language"];
-	
-	// Add a "Save" button to the navigation controller
-	UIBarButtonItem *saveButton = [[UIBarButtonItem alloc] initWithTitle:@"Save"
-																   style:UIBarButtonItemStyleDone
-																  target:self
-																  action:@selector(saveInfo)];
-	[[self navigationItem] setRightBarButtonItem:saveButton];
+    [actionSheet setActionSheetStyle:UIActionSheetStyleBlackTranslucent];
+    
+    CGRect pickerFrame = CGRectMake(0, 40, 0, 0);
+    UIPickerView *pickerView = [[UIPickerView alloc] initWithFrame:pickerFrame];
+    
+    if (idx == countryPicker){
+        pickerView.tag = countryPicker;
+    }else {
+        pickerView.tag = languagePicker;
+    }
+    pickerView.showsSelectionIndicator = YES;
+    pickerView.dataSource = self;
+    pickerView.delegate = self;
+    
+    UISegmentedControl *closeButton = [[UISegmentedControl alloc] initWithItems:[NSArray arrayWithObject:@"Next"]];
+    closeButton.momentary = YES;
+    closeButton.frame = CGRectMake(260, 7.0f, 50.0f, 30.0f);
+    closeButton.segmentedControlStyle = UISegmentedControlStyleBar;
+    closeButton.tintColor = [UIColor colorWithRed:34.0/255.0 green:97.0/255.0 blue:221.0/255.0 alpha:1];
+    [closeButton addTarget:self action:@selector(pickerDoneClicked) forControlEvents:UIControlEventValueChanged];
+    
+    [actionSheet addSubview:pickerView];
+    [actionSheet addSubview:closeButton];
+    [actionSheet showInView:[[UIApplication sharedApplication] keyWindow]];
+    [actionSheet setBounds:CGRectMake(0, 0, 320, 485)];
+
 }
+
 
 - (void)didReceiveMemoryWarning
 {
