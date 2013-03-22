@@ -1756,7 +1756,11 @@ Cgo
                         <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gMt-tq-YUN"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gMt-tq-YUN">
+                                <connections>
+                                    <outlet property="delegate" destination="eLM-ah-xed" id="nNr-es-8XL"/>
+                                </connections>
+                            </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -1770,6 +1774,7 @@ Cgo
                     <connections>
                         <outlet property="mapView" destination="gMt-tq-YUN" id="GdJ-dx-mws"/>
                         <outlet property="searchDisplayController" destination="gqE-P2-7yw" id="Wdw-4T-h2h"/>
+                        <segue destination="8ux-5e-cxM" kind="push" identifier="goToInformationFromMap" id="5ef-re-9LN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SCE-Nq-qOj" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1937,6 +1942,7 @@ Cgo
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
+        <segue reference="5ef-re-9LN"/>
         <segue reference="SvC-dP-B97"/>
     </inferredMetricsTieBreakers>
 </document>
