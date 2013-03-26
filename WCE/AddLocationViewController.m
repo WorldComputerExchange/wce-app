@@ -13,6 +13,22 @@
 @implementation AddLocationViewController
 
 @synthesize locations, countries, languages, actionSheet, dropDownTableView, dataArray;
+@synthesize Location, Contact, Phone, Address, CityTown;
+
+
+- (IBAction)backgroundTouched:(id)sender {
+    [Location resignFirstResponder];
+    [Contact resignFirstResponder];
+    [Phone resignFirstResponder];
+    [Address resignFirstResponder];
+    [CityTown resignFirstResponder];
+}
+
+- (IBAction)textfieldReturn:(id)sender{
+    [sender resignFirstResponder];
+    
+}
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

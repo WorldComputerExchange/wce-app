@@ -23,7 +23,18 @@
 @property (nonatomic, retain) NSArray *countries;
 @property (nonatomic, retain) NSArray *languages;
 
+
+@property (weak, nonatomic) IBOutlet UITextField *Location;
+@property (weak, nonatomic) IBOutlet UITextField *Contact;
+@property (weak, nonatomic) IBOutlet UITextField *Phone;
+@property (weak, nonatomic) IBOutlet UITextField *Address;
+@property (weak, nonatomic) IBOutlet UITextField *CityTown;
+
+
 - (IBAction)cancelChanges:(id)sender;
 - (IBAction)saveChanges:(id)sender;
+
+- (IBAction)backgroundTouched:(id)sender;
+- (IBAction)textfieldReturn:(id)sender;
 
 @end
