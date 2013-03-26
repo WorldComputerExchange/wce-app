@@ -6,6 +6,7 @@
 
 #import "LocationMapViewController.h"
 #import "AddressAnnotation.h"
+#import "Location.h"
 
 @interface LocationMapViewController()
 
@@ -78,6 +79,9 @@
 
 - (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control
 {
+	[[Location sharedLocation] setCountry:[[view annotation] subtitle]];
+	[[Location sharedLocation] setName:[[view annotation] title]];
+	
 	[self performSegueWithIdentifier:@"goToInformationFromMap" sender:self];
 }
 
