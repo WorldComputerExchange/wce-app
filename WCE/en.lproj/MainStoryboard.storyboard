@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="11G63b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Fvu-h0-ZII">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Fvu-h0-ZII">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
@@ -86,23 +86,13 @@
                                     <outlet property="delegate" destination="btu-Hv-3gZ" id="dmG-Qn-mXk"/>
                                 </connections>
                             </tableView>
-                            <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9uA-An-fYL">
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <items>
-                                    <tabBarItem systemItem="recents" id="gdx-A4-K6E"/>
-                                    <tabBarItem systemItem="favorites" id="84b-4K-HOj"/>
-                                </items>
-                            </tabBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="9uA-An-fYL" firstAttribute="leading" secondItem="Dev-3f-g2O" secondAttribute="leading" type="default" id="6ZC-dZ-c03"/>
                             <constraint firstItem="cLg-Kc-muo" firstAttribute="top" secondItem="Dev-3f-g2O" secondAttribute="top" type="default" id="MRw-j6-rt7"/>
                             <constraint firstItem="cLg-Kc-muo" firstAttribute="trailing" secondItem="Dev-3f-g2O" secondAttribute="trailing" type="default" id="TJB-f0-v6H"/>
                             <constraint firstItem="cLg-Kc-muo" firstAttribute="leading" secondItem="Dev-3f-g2O" secondAttribute="leading" type="default" id="Vqz-0D-4m3"/>
-                            <constraint firstItem="9uA-An-fYL" firstAttribute="trailing" secondItem="Dev-3f-g2O" secondAttribute="trailing" type="default" id="b5k-Ra-f8R"/>
-                            <constraint firstItem="9uA-An-fYL" firstAttribute="bottom" secondItem="Dev-3f-g2O" secondAttribute="bottom" type="default" id="kha-vP-91p"/>
-                            <constraint firstItem="9uA-An-fYL" firstAttribute="bottom" secondItem="cLg-Kc-muo" secondAttribute="bottom" type="default" id="ou7-Ev-IV9"/>
+                            <constraint firstItem="cLg-Kc-muo" firstAttribute="bottom" secondItem="Dev-3f-g2O" secondAttribute="bottom" type="default" id="egm-s9-qIE"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Choose a Location" id="VSM-CV-ywm">
@@ -2053,57 +2043,6 @@ Cgo
         <image name="WCE Content V5 NEW.png" width="1275" height="2100"/>
         <image name="WCE_LogoWhite.png" width="221" height="60"/>
     </resources>
-    <classes>
-        <class className="AboutWCEViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AboutWCEViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="goToWebsite:"/>
-            </relationships>
-        </class>
-        <class className="AddLocationViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AddLocationViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="backgroundTouched:"/>
-                <relationship kind="action" name="cancelChanges:"/>
-                <relationship kind="action" name="saveChanges:"/>
-                <relationship kind="action" name="textfieldReturn:"/>
-                <relationship kind="outlet" name="Address" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="CityTown" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="Contact" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="Location" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="Phone" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="dropDownTableView" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-        <class className="CoverSheetViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/CoverSheetViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="ChooseCountry" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-        <class className="LocationMapViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LocationMapViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
-            </relationships>
-        </class>
-        <class className="LocationViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LocationViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="locationTableView" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-        <class className="LoginViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LoginViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="pushLocationView:"/>
-                <relationship kind="outlet" name="passcodeField" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

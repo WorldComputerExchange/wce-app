@@ -9,7 +9,6 @@
 @interface Location : NSObject
 
 
-@property (nonatomic, retain) NSString * region;
 @property (nonatomic, retain) NSString * country;
 @property (nonatomic, retain) NSString * language;
 @property (nonatomic, retain) NSString * name;
