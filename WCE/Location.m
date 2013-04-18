@@ -7,7 +7,7 @@
 #import "Location.h"
 
 @implementation Location
-@synthesize region, country, language, name, hasLocation;
+@synthesize country, language, name, hasLocation;
 
 static Location* _sharedLocation = nil;
 
@@ -38,7 +38,6 @@ static Location* _sharedLocation = nil;
     self = [super init];
     if (self != nil) {
         // initialize stuff here
-        self.region = @"NA";
         self.country = @"NA";
         self.language = @"NA";
         self.name = @"NA";
