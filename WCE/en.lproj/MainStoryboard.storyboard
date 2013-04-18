@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="11G63b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Fvu-h0-ZII">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Fvu-h0-ZII">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
@@ -372,7 +372,7 @@ In February 2012, Boston chapter (also headquarter chapter) in Hull, Massachuset
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="Iad-Ly-aFA" firstAttribute="top" secondItem="Um1-KD-a3s" secondAttribute="top" constant="20" symbolic="YES" type="default" id="6Ht-fo-0MY"/>
-                                    <constraint firstItem="R9v-bg-CPH" firstAttribute="centerX" secondItem="Um1-KD-a3s" secondAttribute="centerX" type="default" id="BDi-HE-sM5"/>
+                                    <constraint firstItem="Iad-Ly-aFA" firstAttribute="centerX" secondItem="Um1-KD-a3s" secondAttribute="centerX" type="default" id="Kc8-iU-zpU"/>
                                     <constraint firstAttribute="bottom" secondItem="R9v-bg-CPH" secondAttribute="bottom" constant="64" id="KmC-BA-RRS"/>
                                     <constraint firstItem="R9v-bg-CPH" firstAttribute="top" secondItem="Um1-KD-a3s" secondAttribute="top" constant="78" id="PKc-na-TC2"/>
                                     <constraint firstItem="R9v-bg-CPH" firstAttribute="centerX" secondItem="Iad-Ly-aFA" secondAttribute="centerX" type="default" id="Sn3-LR-lfF"/>
@@ -1180,18 +1180,19 @@ Cg
         <!--View Controller-->
         <scene sceneID="0UZ-UL-EG8">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m8m-Qu-Xes" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="Y6k-6c-ht6" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="rzn-FR-VMX">
+                    <view key="view" contentMode="scaleToFill" id="jHa-S8-uzC">
                         <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hmt-aX-A1X">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lcp-dd-tnk">
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3B2-AQ-GTL">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B7m-vK-gYG">
                                         <color key="backgroundColor" red="0.023529414089999999" green="0.011764707040000001" blue="0.0039215688589999999" alpha="1" colorSpace="deviceRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="380" id="dhs-A8-rTl"/>
-                                            <constraint firstAttribute="width" constant="287" id="ouI-Ml-Qgn"/>
+                                            <constraint firstAttribute="height" constant="486" id="4vL-69-QyS"/>
+                                            <constraint firstAttribute="width" constant="274" id="UbV-NP-QDT"/>
                                         </constraints>
                                         <attributedString key="attributedText">
                                             <fragment content="Pentium 4 Desktop">
@@ -1201,10 +1202,7 @@ Cg
                                                     <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                                 </attributes>
                                             </fragment>
-                                            <fragment>
-                                                <string key="content"> refurbished with keyboard &amp; mouse = $40 plus content, monitor, shipping &amp; port clearing costs ($20 additional if higher specs like Dual Core are required)
-~ Mostly Name Brand with minimum specs: 2.8 GHz, 40 gig hard drive, 512 MB RAM, CD ROM, Video, Sound &amp; Net Cards ~
-</string>
+                                            <fragment content=" ">
                                                 <attributes>
                                                     <color key="NSColor" red="0.91372555489999996" green="0.78039222959999999" blue="0.29019609089999998" alpha="1" colorSpace="deviceRGB"/>
                                                     <font key="NSFont" size="14" name="Helvetica"/>
@@ -1212,8 +1210,28 @@ Cg
                                                 </attributes>
                                             </fragment>
                                             <fragment>
+                                                <string key="content">refurbished with keyboard &amp; mouse = $40 plus content, monitor, shipping &amp; port clearing costs ($20 additional if higher specs like Dual Core are required)
+~ Mostly Name Brand with minimum specs: 2.8 GHz, 40 gig hard drive, 512 MB RAM, CD ROM, Video, Sound &amp; Net Cards ~
+</string>
+                                                <attributes>
+                                                    <color key="NSColor" red="0.79755261479591844" green="0.76960434293670255" blue="0.53834167723403037" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="14" name="Helvetica"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment>
                                                 <string key="content" base64-UTF8="YES">
-Cgo
+Cg
+</string>
+                                                <attributes>
+                                                    <color key="NSColor" red="0.79755261479591844" green="0.76960434293670255" blue="0.53834167723403037" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="12" name="TimesNewRomanPSMT"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment>
+                                                <string key="content" base64-UTF8="YES">
+Cg
 </string>
                                                 <attributes>
                                                     <font key="NSFont" size="12" name="TimesNewRomanPSMT"/>
@@ -1489,45 +1507,378 @@ Cgo
                                         </attributedString>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="COSTS:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FP5-g6-aMx">
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fPs-Vt-sEh">
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="COSTS:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T0f-Ve-vLT">
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="39" id="TBj-nU-iH8"/>
-                                            <constraint firstAttribute="width" constant="103" id="a7C-EG-sHa"/>
+                                            <constraint firstAttribute="width" constant="111" id="7L4-MH-ToL"/>
+                                            <constraint firstAttribute="height" constant="39" id="pbp-f8-zzb"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                         <color key="textColor" red="0.0" green="0.89411771299999998" blue="1" alpha="1" colorSpace="deviceRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="GIo-Z1-y3f">
-                                        <textInputTraits key="textInputTraits"/>
-                                    </searchBar>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="3B2-AQ-GTL" firstAttribute="leading" secondItem="Hmt-aX-A1X" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="8Pa-f7-6i1"/>
-                                    <constraint firstItem="GIo-Z1-y3f" firstAttribute="trailing" secondItem="Hmt-aX-A1X" secondAttribute="trailing" type="default" id="8qN-iK-Xrt"/>
-                                    <constraint firstItem="FP5-g6-aMx" firstAttribute="centerX" secondItem="Hmt-aX-A1X" secondAttribute="centerX" type="default" id="DFK-tJ-IcZ"/>
-                                    <constraint firstAttribute="bottom" secondItem="3B2-AQ-GTL" secondAttribute="bottom" constant="64" id="KsI-wL-Q7V"/>
-                                    <constraint firstItem="FP5-g6-aMx" firstAttribute="centerX" secondItem="GIo-Z1-y3f" secondAttribute="centerX" type="default" id="Mzr-7X-scF"/>
-                                    <constraint firstItem="GIo-Z1-y3f" firstAttribute="top" secondItem="Hmt-aX-A1X" secondAttribute="top" type="default" id="XNa-8U-fek"/>
-                                    <constraint firstItem="GIo-Z1-y3f" firstAttribute="leading" secondItem="Hmt-aX-A1X" secondAttribute="leading" type="default" id="aJ4-NK-zTw"/>
-                                    <constraint firstItem="FP5-g6-aMx" firstAttribute="top" secondItem="Hmt-aX-A1X" secondAttribute="top" constant="57" id="aiw-zr-QcQ"/>
-                                    <constraint firstItem="3B2-AQ-GTL" firstAttribute="top" secondItem="FP5-g6-aMx" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="pBq-jF-xS7"/>
+                                    <constraint firstItem="T0f-Ve-vLT" firstAttribute="centerX" secondItem="lcp-dd-tnk" secondAttribute="centerX" type="default" id="0wo-Is-UnX"/>
+                                    <constraint firstItem="T0f-Ve-vLT" firstAttribute="top" secondItem="lcp-dd-tnk" secondAttribute="top" constant="20" symbolic="YES" type="default" id="2OC-56-MCM"/>
+                                    <constraint firstItem="B7m-vK-gYG" firstAttribute="bottom" secondItem="lcp-dd-tnk" secondAttribute="bottom" type="default" id="BT6-Io-eXE"/>
+                                    <constraint firstItem="B7m-vK-gYG" firstAttribute="top" secondItem="T0f-Ve-vLT" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="PcL-zD-fwQ"/>
+                                    <constraint firstItem="B7m-vK-gYG" firstAttribute="centerX" secondItem="fPs-Vt-sEh" secondAttribute="centerX" type="default" id="Pyz-Qb-X5B"/>
+                                    <constraint firstItem="fPs-Vt-sEh" firstAttribute="top" secondItem="lcp-dd-tnk" secondAttribute="top" constant="20" symbolic="YES" type="default" id="Zk1-PS-5pV"/>
+                                    <constraint firstAttribute="trailing" secondItem="B7m-vK-gYG" secondAttribute="trailing" constant="23" id="djj-QI-p9T"/>
+                                    <constraint firstItem="fPs-Vt-sEh" firstAttribute="centerX" secondItem="T0f-Ve-vLT" secondAttribute="centerX" type="default" id="lYK-om-rHR"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" red="0.023529414089999999" green="0.011764707040000001" blue="0.0039215688589999999" alpha="1" colorSpace="deviceRGB"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="Hmt-aX-A1X" firstAttribute="bottom" secondItem="rzn-FR-VMX" secondAttribute="bottom" type="default" id="O6U-Zy-tno"/>
-                            <constraint firstItem="Hmt-aX-A1X" firstAttribute="top" secondItem="rzn-FR-VMX" secondAttribute="top" type="default" id="UPq-VM-g1M"/>
-                            <constraint firstItem="Hmt-aX-A1X" firstAttribute="leading" secondItem="rzn-FR-VMX" secondAttribute="leading" type="default" id="s6r-aC-12F"/>
-                            <constraint firstItem="Hmt-aX-A1X" firstAttribute="trailing" secondItem="rzn-FR-VMX" secondAttribute="trailing" type="default" id="xWW-fV-dPl"/>
+                            <constraint firstItem="lcp-dd-tnk" firstAttribute="trailing" secondItem="jHa-S8-uzC" secondAttribute="trailing" type="default" id="8Dc-8a-nxe"/>
+                            <constraint firstItem="lcp-dd-tnk" firstAttribute="bottom" secondItem="jHa-S8-uzC" secondAttribute="bottom" type="default" id="a08-vf-3to"/>
+                            <constraint firstItem="lcp-dd-tnk" firstAttribute="leading" secondItem="jHa-S8-uzC" secondAttribute="leading" type="default" id="q5C-zI-vRy"/>
+                            <constraint firstItem="lcp-dd-tnk" firstAttribute="top" secondItem="jHa-S8-uzC" secondAttribute="top" constant="-5" id="x38-Sr-aQw"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="MTM-4s-Neb"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="m8m-Qu-Xes" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3770" y="716"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="HhO-7R-yh0">
+            <objects>
+                <viewController id="wal-mY-cJa" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cju-31-AqI">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="COSTS:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MTW-qm-cwh">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="39" id="EYq-rK-nUR"/>
+                                    <constraint firstAttribute="width" constant="103" id="qls-YI-q9U"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <color key="textColor" red="0.0" green="0.89411771299999998" blue="1" alpha="1" colorSpace="deviceRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yrO-y0-J6L">
+                                <color key="backgroundColor" red="0.023529414089999999" green="0.011764707040000001" blue="0.0039215688589999999" alpha="1" colorSpace="deviceRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="274" id="8Dm-1s-ilq"/>
+                                    <constraint firstAttribute="height" constant="512" id="omg-o8-WSF"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="Pentium 4 Desktop">
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="14" name="Helvetica-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content"> refurbished with keyboard &amp; mouse = $40 plus content, monitor, shipping &amp; port clearing costs ($20 additional if higher specs like Dual Core are required)
+~ Mostly Name Brand with minimum specs: 2.8 GHz, 40 gig hard drive, 512 MB RAM, CD ROM, Video, Sound &amp; Net Cards ~
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.91372555489999996" green="0.78039222959999999" blue="0.29019609089999998" alpha="1" colorSpace="deviceRGB"/>
+                                            <font key="NSFont" size="14" name="Helvetica"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cgo
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="12" name="TimesNewRomanPSMT"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="Pentium 3 Desktop">
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="14" name="Helvetica-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content"> refurbished with 20% P4s, keyboard &amp; mouse = $20 plus content, monitor + shipping
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.91372555489999996" green="0.78039222959999999" blue="0.29019609089999998" alpha="1" colorSpace="deviceRGB"/>
+                                            <font key="NSFont" size="14" name="Helvetica"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cgo
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="12" name="TimesNewRomanPSMT"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="Ubuntu, Libre/Office, Edubuntu &amp; WCE Digital Content Install">
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="14" name="Helvetica-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content"> 1) Ubuntu operating system that is free, stable, has good drivers, does not get viruses &amp; avoids planned obsolescence, 2) Libre/Office that is very similar to Microsoft Office, 3) Edubuntu, and 4) WCE content: agriculture, health, education (including 231 Khan Academy videos on arithmetic, pre-algebra, algebra &amp; biology), technology, computer programming &amp; web development, entrepreneurship, leadership, recycling, potable water &amp; solar energy. = $15 per computer Some available in Spanish. WCE seeks funds to develop the WCE content pack in Arabic, Spanish &amp; French
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.91372555489999996" green="0.78039222959999999" blue="0.29019609089999998" alpha="1" colorSpace="deviceRGB"/>
+                                            <font key="NSFont" size="14" name="Helvetica"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cgo
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="12" name="TimesNewRomanPSMT"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="Windows XP Install">
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="14" name="Helvetica-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content"> ~ without Office, without above WCE content package = $15 per computer
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.91372555489999996" green="0.78039222959999999" blue="0.29019609089999998" alpha="1" colorSpace="deviceRGB"/>
+                                            <font key="NSFont" size="14" name="Helvetica"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cgo
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="12" name="TimesNewRomanPSMT"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="Pentium 2 Desktop">
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="14" name="Helvetica-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content"> for thin client LTSP lab enabling speeds as fast as a Dual Core = $10 + monitor + ship
+~ Works well when Peace Corps or VSO volunteers are present ~ we provide directions and online help ~
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.91372555489999996" green="0.78039222959999999" blue="0.29019609089999998" alpha="1" colorSpace="deviceRGB"/>
+                                            <font key="NSFont" size="14" name="Helvetica"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cgo
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="12" name="TimesNewRomanPSMT"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="CRT (Large)">
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="14" name="Helvetica-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content"> Color Monitor 17-19” less than 9 years old = $15 each plus shipping/port clearing
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.91372555489999996" green="0.78039222959999999" blue="0.29019609089999998" alpha="1" colorSpace="deviceRGB"/>
+                                            <font key="NSFont" size="14" name="Helvetica"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cgo
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="12" name="TimesNewRomanPSMT"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="LCD (Flat) ">
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="14" name="Helvetica-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">screen tested working monitor 15-17” = $40 each plus shipping/port clearing
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.91372555489999996" green="0.78039222959999999" blue="0.29019609089999998" alpha="1" colorSpace="deviceRGB"/>
+                                            <font key="NSFont" size="14" name="Helvetica"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cgo
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="12" name="TimesNewRomanPSMT"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="Pentium 4 Laptop">
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="14" name="Helvetica-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content"> refurbished (usually with weak and sometimes with no battery) = $165 each plus shipping ~ Name Brand, Minimum 256 MB Ram, Minimum 20 GB Hard Drive, Ubuntu Operating System ~
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.91372555489999996" green="0.78039222959999999" blue="0.29019609089999998" alpha="1" colorSpace="deviceRGB"/>
+                                            <font key="NSFont" size="14" name="Helvetica"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cgo
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="12" name="TimesNewRomanPSMT"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="Pentium 3 Laptop">
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="14" name="Helvetica-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content"> refurbished (usually with weak and sometimes with no battery) = $90 each plus shipping ~ Name Brand, Minimum 256 MB Ram, Minimum 10 GB Hard Drive, Ubuntu Operating System ~
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.91372555489999996" green="0.78039222959999999" blue="0.29019609089999998" alpha="1" colorSpace="deviceRGB"/>
+                                            <font key="NSFont" size="14" name="Helvetica"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cgo
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="12" name="TimesNewRomanPSMT"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="eCorps Training:">
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="14" name="Helvetica-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content"> Two weeks onsite teacher and tech staff training = $1,500 per volunteer
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.91372555489999996" green="0.78039222959999999" blue="0.29019609089999998" alpha="1" colorSpace="deviceRGB"/>
+                                            <font key="NSFont" size="14" name="Helvetica"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cgo
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="12" name="TimesNewRomanPSMT"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="iEARN Training:">
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="14" name="Helvetica-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content"> two-day training for 30 teachers in the educational use of the Internet = $2,500
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.91372555489999996" green="0.78039222959999999" blue="0.29019609089999998" alpha="1" colorSpace="deviceRGB"/>
+                                            <font key="NSFont" size="14" name="Helvetica"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cgo
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="12" name="TimesNewRomanPSMT"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="WCE Fundraising: ">
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="14" name="Helvetica-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">WCE raises the final 1/3 of our sourcing &amp; shipping costs for you in 4 months from when you send your first 1/3. Shipping occurs one month after you send your second 1/3 as long as it is after the 4 months. (Not applicable: Windows, for-profits, adult-only use, large numbers of P4 laptops, LCD monitors &amp; items below.) (15% cost is added to Sponsor’s donation.)</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.91372555489999996" green="0.78039222959999999" blue="0.29019609089999998" alpha="1" colorSpace="deviceRGB"/>
+                                            <font key="NSFont" size="14" name="Helvetica"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="yrO-y0-J6L" firstAttribute="leading" secondItem="cju-31-AqI" secondAttribute="leading" constant="-128" id="8cN-0w-Nza"/>
+                            <constraint firstItem="yrO-y0-J6L" firstAttribute="top" secondItem="cju-31-AqI" secondAttribute="top" constant="70" id="fBN-xh-BDh"/>
+                            <constraint firstItem="MTW-qm-cwh" firstAttribute="top" secondItem="cju-31-AqI" secondAttribute="top" constant="57" id="gxs-rM-svI"/>
+                            <constraint firstItem="MTW-qm-cwh" firstAttribute="centerX" secondItem="cju-31-AqI" secondAttribute="centerX" type="default" id="vHv-TH-xKh"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wt9-D6-6De" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4412" y="730"/>
         </scene>
         <!--View Controller - ABC School-->
         <scene sceneID="HVr-a7-wdp">
@@ -2090,6 +2441,7 @@ Cgo
         <class className="LocationViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/LocationViewController.h"/>
             <relationships>
+                <relationship kind="action" name="OrBoton:"/>
                 <relationship kind="outlet" name="locationTableView" candidateClass="UITableView"/>
             </relationships>
         </class>
