@@ -13,7 +13,7 @@
 
 @implementation LocationViewController
 
-@synthesize regionArray, locationTableView, locations, footerView, chooseFromMap, sharedLocation;
+@synthesize locationTableView, locations, footerView, chooseFromMap, sharedLocation;
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -29,10 +29,6 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    regionArray = [[NSArray alloc] initWithObjects:
-                   @"Africa", @"Asia", @"Caribbean",
-                   @"Eastern Europe", @"Latin America",
-                   @"Middle East", nil];
     
     locations = [[NSMutableArray alloc] initWithObjects:@"ABC School", @"Xavier School", @"Chicago", @"Cairo", @"Ayacucho", nil];
     

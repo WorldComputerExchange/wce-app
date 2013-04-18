@@ -9,7 +9,7 @@
 
 @interface LocationViewController : UIViewController <UITableViewDelegate, UITableViewDataSource> {
     IBOutlet UITableView *locationTableView;
-    NSArray *regionArray;
+    
     UIActionSheet *actionSheet;
     NSMutableArray *locations;
     
@@ -18,7 +18,6 @@
     Location *sharedLocation;
 }
 
-@property (nonatomic, retain) NSArray *regionArray;
 @property (nonatomic,retain) UITableView* locationTableView;
 @property (nonatomic, copy) NSArray *locations;
 
