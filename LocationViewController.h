@@ -6,6 +6,7 @@
 
 #import <UIKit/UIKit.h>
 #import "Location.h"
+#import "User.h"
 
 @interface LocationViewController : UIViewController <UITableViewDelegate, UITableViewDataSource> {
     IBOutlet UITableView *locationTableView;
@@ -16,6 +17,7 @@
 	UIButton *chooseFromMap;
 	UIView *footerView;
     Location *sharedLocation;
+    User *sharedUser;
 }
 
 @property (nonatomic,retain) UITableView* locationTableView;
@@ -24,5 +26,6 @@
 @property (nonatomic, retain) UIButton *chooseFromMap;
 @property (nonatomic, retain) UIView *footerView;
 @property (nonatomic, retain) Location *sharedLocation;
+@property (nonatomic, retain) User *sharedUser;
 
 @end

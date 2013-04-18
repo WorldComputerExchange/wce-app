@@ -6,6 +6,7 @@
 
 #import "LocationViewController.h"
 #import "Location.h"
+#import "User.h"
 
 @interface LocationViewController ()
 
@@ -13,7 +14,7 @@
 
 @implementation LocationViewController
 
-@synthesize locationTableView, locations, footerView, chooseFromMap, sharedLocation;
+@synthesize locationTableView, locations, footerView, chooseFromMap, sharedLocation, sharedUser;
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -34,6 +35,9 @@
     
     //get shared location instance
     sharedLocation = [Location sharedLocation];
+    
+    //get shared user instance
+    sharedUser = [User sharedUser];
 }
 
 // Called when Choose from Map button is pressed
@@ -84,7 +88,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)table numberOfRowsInSection:(NSInteger)section {
-	return [locations count];
+	return [[sharedUser savedLocations] count] + 1;
 }
 
 - (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -96,9 +100,13 @@
 		cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"LocationCell"];
 	}
 	//get the relevant location from the array
-	NSString *region =  [self.locations objectAtIndex:indexPath.row];
-	
-	cell.textLabel.text = region;
+    NSString *name;
+    if (indexPath.row == [[sharedUser savedLocations] count]){
+        name = @"Add New Location";
+    }else {
+        name =  [[sharedUser savedLocations] objectAtIndex:indexPath.row];
+	}
+	cell.textLabel.text = name;
 	cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 	
 	return cell;
