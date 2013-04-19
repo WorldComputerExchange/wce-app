@@ -26,7 +26,6 @@
                                     <constraint firstAttribute="width" constant="145" id="zK5-rn-6OM"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="center" image="WCE_LogoWhite.png" translatesAutoresizingMaskIntoConstraints="NO" id="yfQ-Bp-V75">
@@ -49,7 +48,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.88740305656934093" green="0.5640111770072993" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="zcX-hG-ZtP" firstAttribute="centerX" secondItem="Dd4-pk-PvU" secondAttribute="centerX" type="default" id="BNI-ZW-kbA"/>
                             <constraint firstItem="PEE-h6-IeA" firstAttribute="centerX" secondItem="Dd4-pk-PvU" secondAttribute="centerX" type="default" id="F2Y-J1-UKF"/>
@@ -362,7 +361,7 @@ In February 2012, Boston chapter (also headquarter chapter) in Hull, Massachuset
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="Iad-Ly-aFA" firstAttribute="top" secondItem="Um1-KD-a3s" secondAttribute="top" constant="20" symbolic="YES" type="default" id="6Ht-fo-0MY"/>
-                                    <constraint firstItem="R9v-bg-CPH" firstAttribute="centerX" secondItem="Um1-KD-a3s" secondAttribute="centerX" type="default" id="BDi-HE-sM5"/>
+                                    <constraint firstItem="Iad-Ly-aFA" firstAttribute="centerX" secondItem="Um1-KD-a3s" secondAttribute="centerX" type="default" id="Kc8-iU-zpU"/>
                                     <constraint firstAttribute="bottom" secondItem="R9v-bg-CPH" secondAttribute="bottom" constant="64" id="KmC-BA-RRS"/>
                                     <constraint firstItem="R9v-bg-CPH" firstAttribute="top" secondItem="Um1-KD-a3s" secondAttribute="top" constant="78" id="PKc-na-TC2"/>
                                     <constraint firstItem="R9v-bg-CPH" firstAttribute="centerX" secondItem="Iad-Ly-aFA" secondAttribute="centerX" type="default" id="Sn3-LR-lfF"/>
@@ -1820,17 +1819,17 @@ CONDITIONS:  Full containers only.  WCE needs 4 months to raise the final 1/3 af
         <scene sceneID="0UZ-UL-EG8">
             <objects>
                 <viewController id="Y6k-6c-ht6" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="rzn-FR-VMX">
+                    <view key="view" contentMode="scaleToFill" id="jHa-S8-uzC">
                         <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hmt-aX-A1X">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lcp-dd-tnk">
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3B2-AQ-GTL">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B7m-vK-gYG">
                                         <color key="backgroundColor" red="0.023529414089999999" green="0.011764707040000001" blue="0.0039215688589999999" alpha="1" colorSpace="deviceRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="380" id="dhs-A8-rTl"/>
-                                            <constraint firstAttribute="width" constant="287" id="ouI-Ml-Qgn"/>
+                                            <constraint firstAttribute="height" constant="486" id="4vL-69-QyS"/>
+                                            <constraint firstAttribute="width" constant="274" id="UbV-NP-QDT"/>
                                         </constraints>
                                         <attributedString key="attributedText">
                                             <fragment content="Pentium 4 Desktop">
@@ -1840,10 +1839,7 @@ CONDITIONS:  Full containers only.  WCE needs 4 months to raise the final 1/3 af
                                                     <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                                 </attributes>
                                             </fragment>
-                                            <fragment>
-                                                <string key="content"> refurbished with keyboard &amp; mouse = $40 plus content, monitor, shipping &amp; port clearing costs ($20 additional if higher specs like Dual Core are required)
-~ Mostly Name Brand with minimum specs: 2.8 GHz, 40 gig hard drive, 512 MB RAM, CD ROM, Video, Sound &amp; Net Cards ~
-</string>
+                                            <fragment content=" ">
                                                 <attributes>
                                                     <color key="NSColor" red="0.91372555489999996" green="0.78039222959999999" blue="0.29019609089999998" alpha="1" colorSpace="deviceRGB"/>
                                                     <font key="NSFont" size="14" name="Helvetica"/>
@@ -1851,8 +1847,28 @@ CONDITIONS:  Full containers only.  WCE needs 4 months to raise the final 1/3 af
                                                 </attributes>
                                             </fragment>
                                             <fragment>
+                                                <string key="content">refurbished with keyboard &amp; mouse = $40 plus content, monitor, shipping &amp; port clearing costs ($20 additional if higher specs like Dual Core are required)
+~ Mostly Name Brand with minimum specs: 2.8 GHz, 40 gig hard drive, 512 MB RAM, CD ROM, Video, Sound &amp; Net Cards ~
+</string>
+                                                <attributes>
+                                                    <color key="NSColor" red="0.79755261479591844" green="0.76960434293670255" blue="0.53834167723403037" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="14" name="Helvetica"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment>
                                                 <string key="content" base64-UTF8="YES">
-Cgo
+Cg
+</string>
+                                                <attributes>
+                                                    <color key="NSColor" red="0.79755261479591844" green="0.76960434293670255" blue="0.53834167723403037" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="12" name="TimesNewRomanPSMT"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment>
+                                                <string key="content" base64-UTF8="YES">
+Cg
 </string>
                                                 <attributes>
                                                     <font key="NSFont" size="12" name="TimesNewRomanPSMT"/>
@@ -2128,38 +2144,39 @@ Cgo
                                         </attributedString>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="COSTS:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FP5-g6-aMx">
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fPs-Vt-sEh">
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="COSTS:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T0f-Ve-vLT">
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="39" id="TBj-nU-iH8"/>
-                                            <constraint firstAttribute="width" constant="103" id="a7C-EG-sHa"/>
+                                            <constraint firstAttribute="width" constant="111" id="7L4-MH-ToL"/>
+                                            <constraint firstAttribute="height" constant="39" id="pbp-f8-zzb"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                         <color key="textColor" red="0.0" green="0.89411771299999998" blue="1" alpha="1" colorSpace="deviceRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="GIo-Z1-y3f">
-                                        <textInputTraits key="textInputTraits"/>
-                                    </searchBar>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="3B2-AQ-GTL" firstAttribute="leading" secondItem="Hmt-aX-A1X" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="8Pa-f7-6i1"/>
-                                    <constraint firstItem="GIo-Z1-y3f" firstAttribute="trailing" secondItem="Hmt-aX-A1X" secondAttribute="trailing" type="default" id="8qN-iK-Xrt"/>
-                                    <constraint firstItem="FP5-g6-aMx" firstAttribute="centerX" secondItem="Hmt-aX-A1X" secondAttribute="centerX" type="default" id="DFK-tJ-IcZ"/>
-                                    <constraint firstAttribute="bottom" secondItem="3B2-AQ-GTL" secondAttribute="bottom" constant="64" id="KsI-wL-Q7V"/>
-                                    <constraint firstItem="FP5-g6-aMx" firstAttribute="centerX" secondItem="GIo-Z1-y3f" secondAttribute="centerX" type="default" id="Mzr-7X-scF"/>
-                                    <constraint firstItem="GIo-Z1-y3f" firstAttribute="top" secondItem="Hmt-aX-A1X" secondAttribute="top" type="default" id="XNa-8U-fek"/>
-                                    <constraint firstItem="GIo-Z1-y3f" firstAttribute="leading" secondItem="Hmt-aX-A1X" secondAttribute="leading" type="default" id="aJ4-NK-zTw"/>
-                                    <constraint firstItem="FP5-g6-aMx" firstAttribute="top" secondItem="Hmt-aX-A1X" secondAttribute="top" constant="57" id="aiw-zr-QcQ"/>
-                                    <constraint firstItem="3B2-AQ-GTL" firstAttribute="top" secondItem="FP5-g6-aMx" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="pBq-jF-xS7"/>
+                                    <constraint firstItem="T0f-Ve-vLT" firstAttribute="centerX" secondItem="lcp-dd-tnk" secondAttribute="centerX" type="default" id="0wo-Is-UnX"/>
+                                    <constraint firstItem="T0f-Ve-vLT" firstAttribute="top" secondItem="lcp-dd-tnk" secondAttribute="top" constant="20" symbolic="YES" type="default" id="2OC-56-MCM"/>
+                                    <constraint firstItem="B7m-vK-gYG" firstAttribute="bottom" secondItem="lcp-dd-tnk" secondAttribute="bottom" type="default" id="BT6-Io-eXE"/>
+                                    <constraint firstItem="B7m-vK-gYG" firstAttribute="top" secondItem="T0f-Ve-vLT" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="PcL-zD-fwQ"/>
+                                    <constraint firstItem="B7m-vK-gYG" firstAttribute="centerX" secondItem="fPs-Vt-sEh" secondAttribute="centerX" type="default" id="Pyz-Qb-X5B"/>
+                                    <constraint firstItem="fPs-Vt-sEh" firstAttribute="top" secondItem="lcp-dd-tnk" secondAttribute="top" constant="20" symbolic="YES" type="default" id="Zk1-PS-5pV"/>
+                                    <constraint firstAttribute="trailing" secondItem="B7m-vK-gYG" secondAttribute="trailing" constant="23" id="djj-QI-p9T"/>
+                                    <constraint firstItem="fPs-Vt-sEh" firstAttribute="centerX" secondItem="T0f-Ve-vLT" secondAttribute="centerX" type="default" id="lYK-om-rHR"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" red="0.023529414089999999" green="0.011764707040000001" blue="0.0039215688589999999" alpha="1" colorSpace="deviceRGB"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="Hmt-aX-A1X" firstAttribute="bottom" secondItem="rzn-FR-VMX" secondAttribute="bottom" type="default" id="O6U-Zy-tno"/>
-                            <constraint firstItem="Hmt-aX-A1X" firstAttribute="top" secondItem="rzn-FR-VMX" secondAttribute="top" type="default" id="UPq-VM-g1M"/>
-                            <constraint firstItem="Hmt-aX-A1X" firstAttribute="leading" secondItem="rzn-FR-VMX" secondAttribute="leading" type="default" id="s6r-aC-12F"/>
-                            <constraint firstItem="Hmt-aX-A1X" firstAttribute="trailing" secondItem="rzn-FR-VMX" secondAttribute="trailing" type="default" id="xWW-fV-dPl"/>
+                            <constraint firstItem="lcp-dd-tnk" firstAttribute="trailing" secondItem="jHa-S8-uzC" secondAttribute="trailing" type="default" id="8Dc-8a-nxe"/>
+                            <constraint firstItem="lcp-dd-tnk" firstAttribute="bottom" secondItem="jHa-S8-uzC" secondAttribute="bottom" type="default" id="a08-vf-3to"/>
+                            <constraint firstItem="lcp-dd-tnk" firstAttribute="leading" secondItem="jHa-S8-uzC" secondAttribute="leading" type="default" id="q5C-zI-vRy"/>
+                            <constraint firstItem="lcp-dd-tnk" firstAttribute="top" secondItem="jHa-S8-uzC" secondAttribute="top" constant="-5" id="x38-Sr-aQw"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="MTM-4s-Neb"/>
@@ -2514,7 +2531,7 @@ Cgo
                                 </items>
                             </navigationBar>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.93977200255102045" green="0.93977200255102045" blue="0.93977200255102045" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="BWL-yN-GXA" firstAttribute="leading" secondItem="90W-QE-qtV" secondAttribute="leading" type="default" id="BhG-Mh-bCd"/>
                             <constraint firstItem="XXt-uE-Esk" firstAttribute="top" secondItem="BWL-yN-GXA" secondAttribute="bottom" type="default" id="HHD-jn-gnB"/>

@@ -24,6 +24,7 @@
 		8C9C3AEA16CC60D000F95A6B /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C9C3AE816CC60D000F95A6B /* MainStoryboard.storyboard */; };
 		8C9C3AED16CC60D000F95A6B /* WCEViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C9C3AEC16CC60D000F95A6B /* WCEViewController.m */; };
 		8CB0441916DC47910000AD0F /* LocationMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CB0441816DC47910000AD0F /* LocationMapViewController.m */; };
+		8CD27FEE1720BC6B00973A04 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CD27FED1720BC6B00973A04 /* User.m */; };
 		9E2476DD16E27D9C0049ED27 /* WCE Content V5.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E2476DC16E27D9C0049ED27 /* WCE Content V5.png */; };
 		9E39AF8016D9739500B4275C /* satellite_maps_earth_map_dual_monitor_3200x1200_desktop_wallpaper-344945.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9E39AF7F16D9739500B4275C /* satellite_maps_earth_map_dual_monitor_3200x1200_desktop_wallpaper-344945.jpg */; };
 		9E4B58C216FBD95F007BE176 /* CoverSheetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E4B58C116FBD95F007BE176 /* CoverSheetViewController.m */; };
@@ -64,6 +65,8 @@
 		8C9C3AEC16CC60D000F95A6B /* WCEViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WCEViewController.m; sourceTree = "<group>"; };
 		8CB0441716DC47910000AD0F /* LocationMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationMapViewController.h; sourceTree = "<group>"; };
 		8CB0441816DC47910000AD0F /* LocationMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationMapViewController.m; sourceTree = "<group>"; };
+		8CD27FEC1720BC6B00973A04 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		8CD27FED1720BC6B00973A04 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		9E2476D516E276820049ED27 /* WCE Content.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WCE Content.png"; sourceTree = "<group>"; };
 		9E2476DC16E27D9C0049ED27 /* WCE Content V5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WCE Content V5.png"; sourceTree = "<group>"; };
 		9E39AF7F16D9739500B4275C /* satellite_maps_earth_map_dual_monitor_3200x1200_desktop_wallpaper-344945.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "satellite_maps_earth_map_dual_monitor_3200x1200_desktop_wallpaper-344945.jpg"; sourceTree = "<group>"; };
@@ -135,6 +138,8 @@
 			children = (
 				8C32DF4316E26BB8005AFA89 /* Location.h */,
 				8C32DF4416E26BB8005AFA89 /* Location.m */,
+				8CD27FEC1720BC6B00973A04 /* User.h */,
+				8CD27FED1720BC6B00973A04 /* User.m */,
 			);
 			name = Objects;
 			sourceTree = "<group>";
@@ -329,6 +334,7 @@
 				8C32DF4516E26BB8005AFA89 /* Location.m in Sources */,
 				D058DCDB16FBD2A300132041 /* AboutWCEViewController.m in Sources */,
 				9E4B58C216FBD95F007BE176 /* CoverSheetViewController.m in Sources */,
+				8CD27FEE1720BC6B00973A04 /* User.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
