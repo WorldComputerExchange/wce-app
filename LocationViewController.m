@@ -141,5 +141,10 @@
 	return 60;
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+	[[[segue destinationViewController] navigationItem] setTitle:[[Location sharedLocation] name]];
+	NSLog(@"sharedl ocation: %@", [[Location sharedLocation] name]);
+}
 
 @end
