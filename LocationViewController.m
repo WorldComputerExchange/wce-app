@@ -53,6 +53,8 @@
     
     [locationTableView setBackgroundView:nil];
     [locationTableView setBackgroundColor:[UIColor blackColor]];
+    
+    [locationTableView reloadData];
 }
 
 /*- (IBAction)OrBoton:(id)sender
@@ -104,7 +106,8 @@
     if (indexPath.row == [[sharedUser savedLocations] count]){
         name = @"Add New Location";
     }else {
-        name =  [[sharedUser savedLocations] objectAtIndex:indexPath.row];
+        Location *curLocation = [[sharedUser savedLocations] objectAtIndex:indexPath.row];
+        name =  [curLocation name];
 	}
 	cell.textLabel.text = name;
 	cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;

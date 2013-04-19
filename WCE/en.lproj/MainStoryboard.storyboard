@@ -2011,12 +2011,12 @@ Cgo
                     </view>
                     <navigationItem key="navigationItem" title="Add New Location" id="cXV-w4-dlm"/>
                     <connections>
-                        <outlet property="Address" destination="pAC-Wd-cuw" id="wuR-kq-y3w"/>
-                        <outlet property="CityTown" destination="XP2-2z-49m" id="iEA-4k-8js"/>
-                        <outlet property="Contact" destination="Boi-FL-eJU" id="1tK-59-JBo"/>
-                        <outlet property="Location" destination="Zfm-8O-vja" id="BG0-dn-fii"/>
-                        <outlet property="Phone" destination="kFh-ve-PT1" id="nnR-KB-YAV"/>
+                        <outlet property="address" destination="pAC-Wd-cuw" id="RmJ-Or-cYE"/>
+                        <outlet property="city" destination="XP2-2z-49m" id="YdW-S6-rGs"/>
+                        <outlet property="contact" destination="Boi-FL-eJU" id="igT-mc-2TD"/>
                         <outlet property="dropDownTableView" destination="7mj-ey-S6c" id="cww-xj-1C9"/>
+                        <outlet property="location" destination="Zfm-8O-vja" id="PQV-bk-uDi"/>
+                        <outlet property="phone" destination="kFh-ve-PT1" id="qyD-ie-d4T"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7VY-pE-X1N" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2173,57 +2173,6 @@ Cgo
         <image name="WCE Content V5 NEW.png" width="1275" height="2100"/>
         <image name="WCE_LogoWhite.png" width="221" height="60"/>
     </resources>
-    <classes>
-        <class className="AboutWCEViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AboutWCEViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="goToWebsite:"/>
-            </relationships>
-        </class>
-        <class className="AddLocationViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AddLocationViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="backgroundTouched:"/>
-                <relationship kind="action" name="cancelChanges:"/>
-                <relationship kind="action" name="saveChanges:"/>
-                <relationship kind="action" name="textfieldReturn:"/>
-                <relationship kind="outlet" name="Address" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="CityTown" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="Contact" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="Location" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="Phone" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="dropDownTableView" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-        <class className="CoverSheetViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/CoverSheetViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="ChooseCountry" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-        <class className="LocationMapViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LocationMapViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
-            </relationships>
-        </class>
-        <class className="LocationViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LocationViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="locationTableView" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-        <class className="LoginViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LoginViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="pushLocationView:"/>
-                <relationship kind="outlet" name="passcodeField" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

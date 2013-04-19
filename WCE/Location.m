@@ -7,7 +7,7 @@
 #import "Location.h"
 
 @implementation Location
-@synthesize country, language, name, hasLocation;
+@synthesize name, contact, phone, address, city, country, language, hasLocation;
 
 static Location* _sharedLocation = nil;
 
@@ -25,14 +25,14 @@ static Location* _sharedLocation = nil;
     return nil;
 }
 
-+(id)alloc {
+/*+(id)alloc {
     @synchronized([Location class]) {
         NSAssert(_sharedLocation == nil, @"Attempted to allocate a second instance of a singleton.");
         _sharedLocation = [super alloc];
         return _sharedLocation;
     }
     return nil;
-}
+}*/
 
 -(id)init {
     self = [super init];
