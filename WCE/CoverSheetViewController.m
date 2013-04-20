@@ -3,6 +3,7 @@
 //  WCE
 //
 //  Created by Sushruth Chandrasekar on 3/21/13.
+//  Updated by Alex on 4/20/13.
 //
 
 #import "CoverSheetViewController.h"
@@ -105,6 +106,8 @@
      Maybe we should use a UIButton instead? 
      might be violation of
      apples interface guidelines**/
+    
+    
 }
 
 
@@ -125,6 +128,8 @@
    
     
     locations = [[NSArray alloc] initWithObjects:@"Japan", @"China", @"Your Face", @"Peter Goulakos", @"Is Fat", nil];
+    //Alex: needs to pull array from Locations page
+    //NSLog(@"%@", array);
     
 }
 
