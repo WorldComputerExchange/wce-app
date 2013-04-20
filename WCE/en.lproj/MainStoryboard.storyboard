@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="11G63b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Fvu-h0-ZII">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Fvu-h0-ZII">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
@@ -70,10 +70,10 @@
             </objects>
             <point key="canvasLocation" x="311" y="-3"/>
         </scene>
-        <!--Location View Controller - LocationView-->
+        <!--Location View Controller - Choose a Location-->
         <scene sceneID="zRP-aT-Df7">
             <objects>
-                <viewController storyboardIdentifier="location" title="LocationView" id="btu-Hv-3gZ" customClass="LocationViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="location" id="btu-Hv-3gZ" customClass="LocationViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Dev-3f-g2O">
                         <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -116,7 +116,7 @@
             </objects>
             <point key="canvasLocation" x="754" y="-39"/>
         </scene>
-        <!--Table View Controller - ABC School-->
+        <!--Table View Controller-->
         <scene sceneID="01E-yb-tGQ">
             <objects>
                 <tableViewController id="8ux-5e-cxM" sceneMemberID="viewController">
@@ -211,7 +211,7 @@
                             <outlet property="delegate" destination="8ux-5e-cxM" id="XFg-at-aOz"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="ABC School" id="Y3X-vx-h7t">
+                    <navigationItem key="navigationItem" id="Y3X-vx-h7t">
                         <barButtonItem key="backBarButtonItem" title="Back" id="rCQ-Nh-TyL"/>
                     </navigationItem>
                 </tableViewController>
@@ -219,7 +219,7 @@
             </objects>
             <point key="canvasLocation" x="1272" y="691"/>
         </scene>
-        <!--Table View Controller - ABC School-->
+        <!--Table View Controller-->
         <scene sceneID="6q0-xm-r4h">
             <objects>
                 <tableViewController id="tkG-4S-fd1" sceneMemberID="viewController">
@@ -314,7 +314,7 @@
                             <outlet property="delegate" destination="tkG-4S-fd1" id="4sA-eR-R4J"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="ABC School" id="wGH-XY-kqb">
+                    <navigationItem key="navigationItem" id="wGH-XY-kqb">
                         <barButtonItem key="backBarButtonItem" title="Back" id="q5J-2d-KNx"/>
                     </navigationItem>
                 </tableViewController>
@@ -386,7 +386,7 @@ In February 2012, Boston chapter (also headquarter chapter) in Hull, Massachuset
             </objects>
             <point key="canvasLocation" x="2834" y="716"/>
         </scene>
-        <!--View Controller - ABC School-->
+        <!--View Controller-->
         <scene sceneID="fqG-R9-2mM">
             <objects>
                 <viewController id="cZI-bQ-FX5" sceneMemberID="viewController">
@@ -961,7 +961,7 @@ Cg
                             <constraint firstItem="jyU-8g-IuT" firstAttribute="top" secondItem="T0e-vp-hbW" secondAttribute="top" type="default" id="X6P-YR-aVo"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="ABC School" id="tSn-Kv-LkF">
+                    <navigationItem key="navigationItem" id="tSn-Kv-LkF">
                         <barButtonItem key="backBarButtonItem" title="Back" id="wtR-uR-biS"/>
                     </navigationItem>
                 </viewController>
@@ -1243,205 +1243,38 @@ Cg
                                             <fragment>
                                                 <string key="content">1. Will you be sending us a letter of commitment from a Rotary Club, Peace Corps Volunteer or iEARN Country Coordinator for a 5% sourcing cost reduction (unless Sponsored)?
 
-</string>
-                                                <attributes>
-                                                    <color key="NSColor" red="0.0" green="1" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <font key="NSFont" size="14" name="Helvetica"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment>
-                                                <string key="content" base64-UTF8="YES">
-Cg
-</string>
-                                                <attributes>
-                                                    <color key="NSColor" red="0.0" green="1" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <font key="NSFont" size="14" name="Helvetica"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment>
-                                                <string key="content">
+
+
 2. Computer order (see cost list):  Please enter the number of computers on the lines provided:                            
-</string>
-                                                <attributes>
-                                                    <color key="NSColor" red="0.0" green="1" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <font key="NSFont" size="14" name="Helvetica"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment>
-                                                <string key="content" base64-UTF8="YES">
-Cg
-</string>
-                                                <attributes>
-                                                    <color key="NSColor" red="0.0" green="1" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <font key="NSFont" size="14" name="Helvetica"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment>
-                                                <string key="content">Pentium 4s &amp; 5s   
-</string>
-                                                <attributes>
-                                                    <color key="NSColor" red="0.0" green="1" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <font key="NSFont" size="14" name="Helvetica"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment>
-                                                <string key="content" base64-UTF8="YES">
-Cg
-</string>
-                                                <attributes>
-                                                    <color key="NSColor" red="0.0" green="1" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <font key="NSFont" size="14" name="Helvetica"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment>
-                                                <string key="content">Pentium 3s w/ 20% P4s       
-</string>
-                                                <attributes>
-                                                    <color key="NSColor" red="0.0" green="1" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <font key="NSFont" size="14" name="Helvetica"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment>
-                                                <string key="content" base64-UTF8="YES">
-Cg
-</string>
-                                                <attributes>
-                                                    <color key="NSColor" red="0.0" green="1" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <font key="NSFont" size="14" name="Helvetica"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment>
-                                                <string key="content">
+
+Pentium 4s &amp; 5s   
+
+Pentium 3s w/ 20% P4s       
+
+
 3. Are you interested in LTSP thin client install with loaded P5s as servers &amp; help?   
-</string>
-                                                <attributes>
-                                                    <color key="NSColor" red="0.0" green="1" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <font key="NSFont" size="14" name="Helvetica"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment>
-                                                <string key="content" base64-UTF8="YES">
-Cg
-</string>
-                                                <attributes>
-                                                    <color key="NSColor" red="0.0" green="1" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <font key="NSFont" size="14" name="Helvetica"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment>
-                                                <string key="content">
+
+
 
 4. Are you willing to pay extra to get laptops?      
-</string>
-                                                <attributes>
-                                                    <color key="NSColor" red="0.0" green="1" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <font key="NSFont" size="14" name="Helvetica"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment>
-                                                <string key="content" base64-UTF8="YES">
-Cg
-</string>
-                                                <attributes>
-                                                    <color key="NSColor" red="0.0" green="1" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <font key="NSFont" size="14" name="Helvetica"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment>
-                                                <string key="content">
+
+
                                                                                 How many?
 Pentium 4s:   
-</string>
-                                                <attributes>
-                                                    <color key="NSColor" red="0.0" green="1" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <font key="NSFont" size="14" name="Helvetica"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment>
-                                                <string key="content" base64-UTF8="YES">
-Cgo
-</string>
-                                                <attributes>
-                                                    <color key="NSColor" red="0.0" green="1" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <font key="NSFont" size="14" name="Helvetica"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment>
-                                                <string key="content">Pentium 3s: 
-</string>
-                                                <attributes>
-                                                    <color key="NSColor" red="0.0" green="1" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <font key="NSFont" size="14" name="Helvetica"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment>
-                                                <string key="content" base64-UTF8="YES">
-Cgo
-</string>
-                                                <attributes>
-                                                    <color key="NSColor" red="0.0" green="1" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <font key="NSFont" size="14" name="Helvetica"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment>
-                                                <string key="content">
+
+
+Pentium 3s: 
+
+
+
 5. Are you willing to pay substantially extra to get LCD flat screen monitors?  
-</string>
-                                                <attributes>
-                                                    <color key="NSColor" red="0.0" green="1" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <font key="NSFont" size="14" name="Helvetica"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment>
-                                                <string key="content" base64-UTF8="YES">
-Cg
-</string>
-                                                <attributes>
-                                                    <color key="NSColor" red="0.0" green="1" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <font key="NSFont" size="14" name="Helvetica"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment>
-                                                <string key="content">   
+
+   
                                                         How many?
 LCD 15-17” flat screen monitors   
-</string>
-                                                <attributes>
-                                                    <color key="NSColor" red="0.0" green="1" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <font key="NSFont" size="14" name="Helvetica"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment>
-                                                <string key="content" base64-UTF8="YES">
-Cgo
-</string>
-                                                <attributes>
-                                                    <color key="NSColor" red="0.0" green="1" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <font key="NSFont" size="14" name="Helvetica"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment>
-                                                <string key="content">CRT 15-19” color monitors 
+
+
+CRT 15-19” color monitors 
 
 
 
@@ -1454,252 +1287,53 @@ Ink Jet
 Laser     
  
 Printer/Copier if available
-</string>
-                                                <attributes>
-                                                    <color key="NSColor" red="0.0" green="1" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <font key="NSFont" size="14" name="Helvetica"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment>
-                                                <string key="content" base64-UTF8="YES">
-Cg
-</string>
-                                                <attributes>
-                                                    <color key="NSColor" red="0.0" green="1" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <font key="NSFont" size="14" name="Helvetica"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment>
-                                                <string key="content">
+
+
 7. Are you willing to Pay WCE to install Ubuntu Operating System (more stable &amp; resistant to viruses), Libre/Office (like Microsoft Office), a ping to let WCE know if computer has been connected to the internet in a given month, and Content pack of: education (including Khan Academy videos), agriculture, health, technology (including MIT programming videos) &amp; environment content ?     
-</string>
-                                                <attributes>
-                                                    <color key="NSColor" red="0.0" green="1" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <font key="NSFont" size="14" name="Helvetica"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment>
-                                                <string key="content" base64-UTF8="YES">
-CgoKA
-</string>
-                                                <attributes>
-                                                    <color key="NSColor" red="0.0" green="1" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <font key="NSFont" size="14" name="Helvetica"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment>
-                                                <string key="content">(if you check no does this mean you do not want any operating system on the computer?  If you want Windows it costs an additional $5 each)
-</string>
-                                                <attributes>
-                                                    <color key="NSColor" red="0.0" green="1" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <font key="NSFont" size="14" name="Helvetica"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment>
-                                                <string key="content" base64-UTF8="YES">
-Cg
-</string>
-                                                <attributes>
-                                                    <color key="NSColor" red="0.0" green="1" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <font key="NSFont" size="14" name="Helvetica"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment>
-                                                <string key="content">
+
+
+
+(if you check no does this mean you do not want any operating system on the computer?  If you want Windows it costs an additional $5 each)
+
+
 8. Language in which you would like WCE to install the above content:  		
 	  
 Please note that we usually ship English keyboards. (we can send directions for switching them over)
-</string>
-                                                <attributes>
-                                                    <color key="NSColor" red="0.0" green="1" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <font key="NSFont" size="14" name="Helvetica"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment>
-                                                <string key="content" base64-UTF8="YES">
-Cg
-</string>
-                                                <attributes>
-                                                    <color key="NSColor" red="0.0" green="1" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <font key="NSFont" size="14" name="Helvetica"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment>
-                                                <string key="content">
+
+
 
 9. Are you willing to pay WCE for online &amp; onsite iEARN teacher training?   
-</string>
-                                                <attributes>
-                                                    <color key="NSColor" red="0.0" green="1" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <font key="NSFont" size="14" name="Helvetica"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment>
-                                                <string key="content" base64-UTF8="YES">
-Cg
-</string>
-                                                <attributes>
-                                                    <color key="NSColor" red="0.0" green="1" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <font key="NSFont" size="14" name="Helvetica"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment>
-                                                <string key="content">
+
+
 
 10. If any of your sites is a school, is it interested in working with WCE to build an online school exchange with a school in Canada or the States?  (Priority is given to WCE Partners that subscribe to the WCE Development Package)    
-</string>
-                                                <attributes>
-                                                    <color key="NSColor" red="0.0" green="1" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <font key="NSFont" size="14" name="Helvetica"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment>
-                                                <string key="content" base64-UTF8="YES">
-Cg
-</string>
-                                                <attributes>
-                                                    <color key="NSColor" red="0.0" green="1" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <font key="NSFont" size="14" name="Helvetica"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment>
-                                                <string key="content"> 
+
+ 
 
 11. Are you willing to pay WCE $2,000 to deliver a 4 Terabyte copy of the 12 million document university-level eGranary digital library (English only) in a server?    
-</string>
-                                                <attributes>
-                                                    <color key="NSColor" red="0.0" green="1" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <font key="NSFont" size="14" name="Helvetica"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment>
-                                                <string key="content" base64-UTF8="YES">
-Cg
-</string>
-                                                <attributes>
-                                                    <color key="NSColor" red="0.0" green="1" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <font key="NSFont" size="14" name="Helvetica"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment>
-                                                <string key="content">
+
+
 
 12. If any of your sites is a university, is it interested in working with WCE to build a university exchange of faculty, students, curriculum &amp; materials with a university in Canada or the States?  
-</string>
-                                                <attributes>
-                                                    <color key="NSColor" red="0.0" green="1" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <font key="NSFont" size="14" name="Helvetica"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment>
-                                                <string key="content" base64-UTF8="YES">
-Cg
-</string>
-                                                <attributes>
-                                                    <color key="NSColor" red="0.0" green="1" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <font key="NSFont" size="14" name="Helvetica"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment>
-                                                <string key="content">
+
+
 
 13. Are you interested in having a small team of our technology and teacher training eCorps volunteers visit you?  
-</string>
-                                                <attributes>
-                                                    <color key="NSColor" red="0.0" green="1" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <font key="NSFont" size="14" name="Helvetica"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment>
-                                                <string key="content" base64-UTF8="YES">
-Cgo
-</string>
-                                                <attributes>
-                                                    <color key="NSColor" red="0.0" green="1" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <font key="NSFont" size="14" name="Helvetica"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment>
-                                                <string key="content">
+
+
+
 What can you give in exchange for their visit?  
-</string>
-                                                <attributes>
-                                                    <color key="NSColor" red="0.0" green="1" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <font key="NSFont" size="14" name="Helvetica"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment>
-                                                <string key="content" base64-UTF8="YES">
-Cgo
-</string>
-                                                <attributes>
-                                                    <color key="NSColor" red="0.0" green="1" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <font key="NSFont" size="14" name="Helvetica"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment>
-                                                <string key="content">
+
+
+
 14. Should we tell you about solar lights and midwife kits and other items?   
-</string>
-                                                <attributes>
-                                                    <color key="NSColor" red="0.0" green="1" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <font key="NSFont" size="14" name="Helvetica"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment>
-                                                <string key="content" base64-UTF8="YES">
-Cg
-</string>
-                                                <attributes>
-                                                    <color key="NSColor" red="0.0" green="1" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <font key="NSFont" size="14" name="Helvetica"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment>
-                                                <string key="content">
+
+
 
 14. Are you interested in having WCE volunteers raise the last 1/3 of the sourcing and shipping costs from Sponsors outside of your country?     
-</string>
-                                                <attributes>
-                                                    <color key="NSColor" red="0.0" green="1" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <font key="NSFont" size="14" name="Helvetica"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment>
-                                                <string key="content" base64-UTF8="YES">
-Cgo
-</string>
-                                                <attributes>
-                                                    <color key="NSColor" red="0.0" green="1" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <font key="NSFont" size="14" name="Helvetica"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment>
-                                                <string key="content"> 
+
+
+ 
 CONDITIONS:  Full containers only.  WCE needs 4 months to raise the final 1/3 after receipt of 2/3 of sourcing and shipping costs. The 15% cost for this work is added to the funds raised by WCE.  No additional 5% reduction for Sponsored Peace Corps, iEARN and Rotary shipments. Sponsorship is not available to for-profits, Partners that opt-out of our ping showing if a computer is connected to</string>
                                                 <attributes>
                                                     <color key="NSColor" red="0.0" green="1" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
@@ -2185,7 +1819,7 @@ Cgo
             </objects>
             <point key="canvasLocation" x="3770" y="716"/>
         </scene>
-        <!--View Controller - ABC School-->
+        <!--View Controller-->
         <scene sceneID="HVr-a7-wdp">
             <objects>
                 <viewController id="DJM-Rc-Ddq" sceneMemberID="viewController">
@@ -2234,7 +1868,7 @@ Cgo
                             <constraint firstItem="NKE-MO-GHP" firstAttribute="leading" secondItem="Hx0-Ne-EDp" secondAttribute="leading" type="default" id="UsK-Lz-wDv"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="ABC School" id="7LN-zJ-7nt">
+                    <navigationItem key="navigationItem" id="7LN-zJ-7nt">
                         <barButtonItem key="backBarButtonItem" title="Back" id="1ab-HR-LsJ"/>
                     </navigationItem>
                 </viewController>
@@ -2242,7 +1876,7 @@ Cgo
             </objects>
             <point key="canvasLocation" x="1754" y="2969"/>
         </scene>
-        <!--Table View Controller - ABC School-->
+        <!--Table View Controller-->
         <scene sceneID="2C8-9W-PxU">
             <objects>
                 <tableViewController id="SuZ-oP-kTY" sceneMemberID="viewController">
@@ -2337,7 +1971,7 @@ Cgo
                             <outlet property="delegate" destination="SuZ-oP-kTY" id="amx-rY-XD0"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="ABC School" id="2jh-e1-yzQ">
+                    <navigationItem key="navigationItem" id="2jh-e1-yzQ">
                         <barButtonItem key="backBarButtonItem" title="Back" id="MjZ-vq-S1J"/>
                     </navigationItem>
                 </tableViewController>
@@ -2600,7 +2234,7 @@ Cgo
             </objects>
             <point key="canvasLocation" x="1272" y="-734"/>
         </scene>
-        <!--AboutWCE View Controller - ABC School-->
+        <!--AboutWCE View Controller-->
         <scene sceneID="dXi-wM-r1s">
             <objects>
                 <viewController id="G51-90-qjF" customClass="AboutWCEViewController" sceneMemberID="viewController">
@@ -2624,7 +2258,7 @@ Cgo
                                         <constraints>
                                             <constraint firstAttribute="height" constant="406" id="4LQ-bm-1jG"/>
                                         </constraints>
-                                        <mutableString key="text">World Computer Exchange (WCE) is a global education and environment organization founded in 1999 to connect more youth in developing countries to opportunities, skills, and understanding via the Internet – while keeping working computers out of landfills.   With our 700 volunteers, WCE is the largest US non-profit provider of reused computers to connect youth in developing countries.  Studies show that the reuse of a computer is 25 times more carbon efficient than destroying one and re-manufacturing a new one.  Our work helps to implement the UN’s Millennium Development Goals in Education.</mutableString>
+                                        <string key="text">World Computer Exchange (WCE) is a global education and environment organization founded in 1999 to connect more youth in developing countries to opportunities, skills, and understanding via the Internet – while keeping working computers out of landfills.   With our 700 volunteers, WCE is the largest US non-profit provider of reused computers to connect youth in developing countries.  Studies show that the reuse of a computer is 25 times more carbon efficient than destroying one and re-manufacturing a new one.  Our work helps to implement the UN’s Millennium Development Goals in Education.</string>
                                         <color key="textColor" red="0.91372555489999996" green="0.78039222959999999" blue="0.29019609089999998" alpha="1" colorSpace="deviceRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -2674,7 +2308,7 @@ Cgo
                             <constraint firstItem="ES2-HB-z0J" firstAttribute="top" secondItem="7hD-dv-Bsr" secondAttribute="top" constant="20" symbolic="YES" type="default" id="mb3-YV-GOq"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="ABC School" id="IDo-UV-rdz">
+                    <navigationItem key="navigationItem" id="IDo-UV-rdz">
                         <barButtonItem key="backBarButtonItem" title="Back" id="Imw-oQ-Y8l"/>
                     </navigationItem>
                 </viewController>
