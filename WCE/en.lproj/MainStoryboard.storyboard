@@ -100,16 +100,18 @@
                                 <segue destination="2" kind="push" id="SvC-dP-B97"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Add" id="3W4-55-iMB">
+                        <barButtonItem key="rightBarButtonItem" tag="1" title="Edit" id="3W4-55-iMB">
                             <connections>
-                                <segue destination="a24-Hj-6Z9" kind="modal" identifier="pushAddLocation" id="Nx4-hw-cO2"/>
+                                <action selector="enterEditingMode:" destination="btu-Hv-3gZ" id="xha-7v-rBO"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="editButton" destination="3W4-55-iMB" id="szv-Yp-ZJX"/>
                         <outlet property="locationTableView" destination="cLg-Kc-muo" id="on2-lZ-d9d"/>
                         <segue destination="8ux-5e-cxM" kind="push" identifier="pushMainMenu" id="vFc-FY-61o"/>
                         <segue destination="eLM-ah-xed" kind="push" identifier="pushMapView" id="l8N-ms-qev"/>
+                        <segue destination="a24-Hj-6Z9" kind="modal" identifier="pushAddLocation" id="mba-u7-bmy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HGl-To-PNk" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2343,6 +2345,59 @@ Cgo
         <image name="WCE Content V5 NEW.png" width="1275" height="2100"/>
         <image name="WCE_LogoWhite.png" width="221" height="60"/>
     </resources>
+    <classes>
+        <class className="AboutWCEViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AboutWCEViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="goToWebsite:"/>
+            </relationships>
+        </class>
+        <class className="AddLocationViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AddLocationViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="backgroundTouched:"/>
+                <relationship kind="action" name="cancelChanges:"/>
+                <relationship kind="action" name="saveChanges:"/>
+                <relationship kind="action" name="textfieldReturn:"/>
+                <relationship kind="outlet" name="address" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="city" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="contact" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="dropDownTableView" candidateClass="UITableView"/>
+                <relationship kind="outlet" name="location" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="phone" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="CoverSheetViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CoverSheetViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="ChooseCountry" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="LocationMapViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LocationMapViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
+            </relationships>
+        </class>
+        <class className="LocationViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LocationViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="enterEditingMode:"/>
+                <relationship kind="outlet" name="editButton" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="locationTableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="LoginViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LoginViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="pushLocationView:"/>
+                <relationship kind="outlet" name="passcodeField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
