@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Fvu-h0-ZII">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="11G63b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Fvu-h0-ZII">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
@@ -118,10 +118,10 @@
             </objects>
             <point key="canvasLocation" x="754" y="-39"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Table View Controller - Start Page-->
         <scene sceneID="01E-yb-tGQ">
             <objects>
-                <tableViewController id="8ux-5e-cxM" sceneMemberID="viewController">
+                <tableViewController title="Start Page" id="8ux-5e-cxM" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="av4-vI-bhX">
                         <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -221,10 +221,10 @@
             </objects>
             <point key="canvasLocation" x="1272" y="691"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Table View Controller - Info Page-->
         <scene sceneID="6q0-xm-r4h">
             <objects>
-                <tableViewController id="tkG-4S-fd1" sceneMemberID="viewController">
+                <tableViewController title="Info Page" id="tkG-4S-fd1" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="1He-LX-XcI">
                         <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -324,10 +324,10 @@
             </objects>
             <point key="canvasLocation" x="1754" y="707"/>
         </scene>
-        <!--View Controller-->
+        <!--View Controller - History-->
         <scene sceneID="8Fn-BD-QoC">
             <objects>
-                <viewController id="K4a-rk-o8I" sceneMemberID="viewController">
+                <viewController title="History" id="K4a-rk-o8I" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OlM-yd-zoL">
                         <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -388,10 +388,10 @@ In February 2012, Boston chapter (also headquarter chapter) in Hull, Massachuset
             </objects>
             <point key="canvasLocation" x="2834" y="716"/>
         </scene>
-        <!--View Controller-->
+        <!--View Controller - Phrases-->
         <scene sceneID="fqG-R9-2mM">
             <objects>
-                <viewController id="cZI-bQ-FX5" sceneMemberID="viewController">
+                <viewController title="Phrases" id="cZI-bQ-FX5" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="T0e-vp-hbW">
                         <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1451,21 +1451,21 @@ CONDITIONS:  Full containers only.  WCE needs 4 months to raise the final 1/3 af
             </objects>
             <point key="canvasLocation" x="3650" y="1437"/>
         </scene>
-        <!--View Controller-->
+        <!--View Controller - Costs-->
         <scene sceneID="0UZ-UL-EG8">
             <objects>
-                <viewController id="Y6k-6c-ht6" sceneMemberID="viewController">
+                <viewController title="Costs" id="Y6k-6c-ht6" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jHa-S8-uzC">
                         <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lcp-dd-tnk">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lcp-dd-tnk">
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B7m-vK-gYG">
                                         <color key="backgroundColor" red="0.023529414089999999" green="0.011764707040000001" blue="0.0039215688589999999" alpha="1" colorSpace="deviceRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="486" id="4vL-69-QyS"/>
                                             <constraint firstAttribute="width" constant="274" id="UbV-NP-QDT"/>
+                                            <constraint firstAttribute="height" constant="748" id="afY-nh-JTs"/>
                                         </constraints>
                                         <attributedString key="attributedText">
                                             <fragment content="Pentium 4 Desktop">
@@ -1475,7 +1475,9 @@ CONDITIONS:  Full containers only.  WCE needs 4 months to raise the final 1/3 af
                                                     <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                                 </attributes>
                                             </fragment>
-                                            <fragment content=" ">
+                                            <fragment>
+                                                <string key="content"> refurbished with keyboard &amp; mouse = $40 plus content, monitor, shipping &amp; port clearing costs ($20 additional if higher specs like Dual Core are required)
+~ Mostly Name Brand with minimum specs: 2.8 GHz, 40 gig hard drive, 512 MB RAM, CD ROM, Video, Sound &amp; Net Cards ~</string>
                                                 <attributes>
                                                     <color key="NSColor" red="0.91372555489999996" green="0.78039222959999999" blue="0.29019609089999998" alpha="1" colorSpace="deviceRGB"/>
                                                     <font key="NSFont" size="14" name="Helvetica"/>
@@ -1483,8 +1485,8 @@ CONDITIONS:  Full containers only.  WCE needs 4 months to raise the final 1/3 af
                                                 </attributes>
                                             </fragment>
                                             <fragment>
-                                                <string key="content">refurbished with keyboard &amp; mouse = $40 plus content, monitor, shipping &amp; port clearing costs ($20 additional if higher specs like Dual Core are required)
-~ Mostly Name Brand with minimum specs: 2.8 GHz, 40 gig hard drive, 512 MB RAM, CD ROM, Video, Sound &amp; Net Cards ~
+                                                <string key="content" base64-UTF8="YES">
+Cg
 </string>
                                                 <attributes>
                                                     <color key="NSColor" red="0.79755261479591844" green="0.76960434293670255" blue="0.53834167723403037" alpha="1" colorSpace="calibratedRGB"/>
@@ -1796,14 +1798,14 @@ Cgo
                                     </label>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="T0f-Ve-vLT" firstAttribute="centerX" secondItem="lcp-dd-tnk" secondAttribute="centerX" type="default" id="0wo-Is-UnX"/>
                                     <constraint firstItem="T0f-Ve-vLT" firstAttribute="top" secondItem="lcp-dd-tnk" secondAttribute="top" constant="20" symbolic="YES" type="default" id="2OC-56-MCM"/>
-                                    <constraint firstItem="B7m-vK-gYG" firstAttribute="bottom" secondItem="lcp-dd-tnk" secondAttribute="bottom" type="default" id="BT6-Io-eXE"/>
-                                    <constraint firstItem="B7m-vK-gYG" firstAttribute="top" secondItem="T0f-Ve-vLT" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="PcL-zD-fwQ"/>
-                                    <constraint firstItem="B7m-vK-gYG" firstAttribute="centerX" secondItem="fPs-Vt-sEh" secondAttribute="centerX" type="default" id="Pyz-Qb-X5B"/>
+                                    <constraint firstItem="B7m-vK-gYG" firstAttribute="top" secondItem="T0f-Ve-vLT" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="5XT-KL-cSH"/>
+                                    <constraint firstItem="fPs-Vt-sEh" firstAttribute="centerX" secondItem="lcp-dd-tnk" secondAttribute="centerX" type="default" id="MwN-zu-OpB"/>
+                                    <constraint firstItem="B7m-vK-gYG" firstAttribute="centerX" secondItem="T0f-Ve-vLT" secondAttribute="centerX" type="default" id="OYa-nO-C3x"/>
                                     <constraint firstItem="fPs-Vt-sEh" firstAttribute="top" secondItem="lcp-dd-tnk" secondAttribute="top" constant="20" symbolic="YES" type="default" id="Zk1-PS-5pV"/>
-                                    <constraint firstAttribute="trailing" secondItem="B7m-vK-gYG" secondAttribute="trailing" constant="23" id="djj-QI-p9T"/>
+                                    <constraint firstAttribute="bottom" secondItem="B7m-vK-gYG" secondAttribute="bottom" constant="-262" id="da2-oq-Gfl"/>
                                     <constraint firstItem="fPs-Vt-sEh" firstAttribute="centerX" secondItem="T0f-Ve-vLT" secondAttribute="centerX" type="default" id="lYK-om-rHR"/>
+                                    <constraint firstAttribute="trailing" secondItem="B7m-vK-gYG" secondAttribute="trailing" constant="24" id="s0W-Oa-UrL"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
@@ -1821,10 +1823,10 @@ Cgo
             </objects>
             <point key="canvasLocation" x="3770" y="716"/>
         </scene>
-        <!--View Controller-->
+        <!--View Controller - MISC-->
         <scene sceneID="HVr-a7-wdp">
             <objects>
-                <viewController id="DJM-Rc-Ddq" sceneMemberID="viewController">
+                <viewController title="MISC" id="DJM-Rc-Ddq" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Hx0-Ne-EDp">
                         <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1878,10 +1880,10 @@ Cgo
             </objects>
             <point key="canvasLocation" x="1754" y="2969"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Table View Controller - Forms Page-->
         <scene sceneID="2C8-9W-PxU">
             <objects>
-                <tableViewController id="SuZ-oP-kTY" sceneMemberID="viewController">
+                <tableViewController title="Forms Page" id="SuZ-oP-kTY" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="FFG-o8-aSx">
                         <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1996,12 +1998,12 @@ Cgo
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S1f-rU-u8Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2242" y="1451"/>
+            <point key="canvasLocation" x="2246" y="1661"/>
         </scene>
-        <!--View Controller-->
+        <!--View Controller - Content-->
         <scene sceneID="u4i-pa-9pY">
             <objects>
-                <viewController id="BdZ-ml-oe7" sceneMemberID="viewController">
+                <viewController title="Content" id="BdZ-ml-oe7" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Iik-kc-Enr">
                         <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2382,8 +2384,6 @@ Cgo
         <class className="LocationViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/LocationViewController.h"/>
             <relationships>
-                <relationship kind="action" name="enterEditingMode:"/>
-                <relationship kind="outlet" name="editButton" candidateClass="UIBarButtonItem"/>
                 <relationship kind="outlet" name="locationTableView" candidateClass="UITableView"/>
             </relationships>
         </class>
