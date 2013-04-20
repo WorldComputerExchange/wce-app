@@ -12,7 +12,7 @@
 @interface LocationMapViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
-@property (retain, nonatomic) NSMutableArray *previouslyGeocodedLocations;
+//@property (strong, nonatomic) NSArray *previouslyGeocodedLocations;
 @property (strong, nonatomic) CLGeocoder *geocoder;
 
 @end	

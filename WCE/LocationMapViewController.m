@@ -11,14 +11,18 @@
 
 @interface LocationMapViewController()
 
-
 @end
+
+
+static NSArray *_previouslyGeocodedLocations;
+
 
 @implementation LocationMapViewController
 @synthesize mapView;
 
 - (void)viewDidAppear:(BOOL)animated
 {
+	[self geocodeNewLocations];
 }
 
 - (id)init
@@ -36,10 +40,10 @@
     [super viewDidLoad];
 	NSLog(@"sdfjksdl");
 	
-	[[NSNotificationCenter defaultCenter] addObserver:self
+	/*[[NSNotificationCenter defaultCenter] addObserver:self
 											 selector:@selector(geocodeNewLocations)
 												 name:@"shouldGeocodeNewLocation"
-											   object:nil];
+											   object:nil];*/
     
     /*//Created variable c to store coordinate data
     CLLocationCoordinate2D a;
@@ -129,17 +133,56 @@
 	{
 		for(Location *loc in locs)
 		{
-			for(Location *previousLoc in _previouslyGeocodedLocations)
+			if([_previouslyGeocodedLocations count] > 0)
 			{
-				if(previousLoc != loc)
+				for(Location *previousLoc in _previouslyGeocodedLocations)
 				{
-					NSLog(@"new location found with address: %@", [loc address]);
+					if(previousLoc != loc) ///// only loop through the ones that are new, and don't geocode ones that have already been looked up
+					{
+						NSLog(@"new location found with address: %@", [loc address]);
+						[self addAnnotationForLocation:loc];
+					}
 				}
+			}
+			else //// first time we've geocoded any locations--so loop through them all
+			{
+				[self addAnnotationForLocation:loc];
 			}
 		}
 	}
 	
-	_previouslyGeocodedLocations = [locs copy];
+	_previouslyGeocodedLocations = [locs copy]; /// keep a record of which ones we've already geocoded
+}
+
+- (void)addAnnotationForLocation:(Location *)loc
+{
+	NSLog(@"geocoding location with address: %@", [loc address]);
+	
+	NSMutableString *geocodingString = [NSMutableString stringWithString:[loc address]];
+	[geocodingString appendString:@", "];
+	[geocodingString appendString:[loc city]];
+	
+	[[self geocoder] geocodeAddressString:geocodingString completionHandler:^(NSArray *placemarks, NSError *error) {
+		if([placemarks count] > 0)
+		{
+			CLPlacemark *placemark = [placemarks objectAtIndex:0];
+			CLLocationCoordinate2D coord = [[placemark location] coordinate];
+			
+			NSLog(@"found location for %@ with latitude %f and longitude %f", [loc name], coord.latitude, coord.longitude);
+			
+			AddressAnnotation *annot;
+			if([[loc name] length] > 1)
+				annot = [[AddressAnnotation alloc] initWithCoordinate:coord withSubtitle:[loc country] withTitle:[loc name]];
+			else
+				annot = [[AddressAnnotation alloc] initWithCoordinate:coord withSubtitle:[loc country] withTitle:@"Untitled"];
+			
+			[mapView addAnnotation:annot];
+		}
+		else
+		{
+			NSLog(@"couldn't find location for %@", [loc name]);
+		}
+	}];
 }
 
 @end

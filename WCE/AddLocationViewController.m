@@ -244,8 +244,6 @@
     [[sharedUser savedLocations] addObject:curLocation];
     
     [self dismissViewControllerAnimated:YES completion:nil];
-
-	[[NSNotificationCenter defaultCenter] postNotificationName:@"shouldGeocodeNewLocation" object:self];
 }
 
 
