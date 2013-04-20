@@ -5,6 +5,8 @@
 //
 
 #import "AddLocationViewController.h"
+#import "User.h"
+#import "Location.h"
 
 @interface AddLocationViewController ()
 
@@ -12,16 +14,16 @@
 
 @implementation AddLocationViewController
 
-@synthesize locations, countries, languages, actionSheet, dropDownTableView, dataArray;
-@synthesize Location, Contact, Phone, Address, CityTown;
+@synthesize locations, countries, languages, actionSheet, dropDownTableView, dataArray, sharedUser;
+@synthesize location, contact, phone, address, city;
 
 
 - (IBAction)backgroundTouched:(id)sender {
-    [Location resignFirstResponder];
-    [Contact resignFirstResponder];
-    [Phone resignFirstResponder];
-    [Address resignFirstResponder];
-    [CityTown resignFirstResponder];
+    [location resignFirstResponder];
+    [contact resignFirstResponder];
+    [phone resignFirstResponder];
+    [address resignFirstResponder];
+    [city resignFirstResponder];
 }
 
 - (IBAction)textfieldReturn:(id)sender{
@@ -61,6 +63,8 @@
 																  target:self
 																  action:@selector(saveInfo)];
 	[[self navigationItem] setRightBarButtonItem:saveButton];
+    
+    sharedUser = [User sharedUser];
 }
 
 
@@ -218,5 +222,33 @@
 - (void)saveNewLocation
 {
     [self dismissViewControllerAnimated:YES completion:nil];
+    
+    /*save input fields to our user
+     Should check that these values are non-null!*/
+    Location *curLocation = [[Location alloc] init];
+
+    [curLocation setName:location.text];
+
+    [curLocation setContact:contact.text];
+
+    [curLocation setPhone:phone.text];
+
+    [curLocation setAddress:address.text];
+
+    [curLocation setCity:city.text];
+    
+    
+    //these should be getting info from pickers
+    [curLocation setCountry:@"USA"];
+    
+    [curLocation setLanguage:@"English"];
+    
+    [[sharedUser savedLocations] addObject:curLocation];
+
+
 }
+
+
+
+
 @end

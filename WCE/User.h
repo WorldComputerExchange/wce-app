@@ -8,7 +8,7 @@
 
 @interface User : NSObject
 
-@property (nonatomic, retain) NSMutableArray * savedLocations;
+@property (nonatomic, retain) NSMutableArray * savedLocations; //can only hold Location objects!!!
 @property (nonatomic, assign) BOOL loggedIn;
 
 + (User *)sharedUser;
