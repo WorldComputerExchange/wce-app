@@ -47,6 +47,16 @@
 	[self performSegueWithIdentifier:@"pushMapView" sender:self];
 }
 
+-(IBAction)enterEditingMode:(id)sender{
+    NSLog(@"Entered editing mode");
+    if([locationTableView isEditing]){
+        [locationTableView setEditing:NO animated:YES];
+    }else {
+        [locationTableView setEditing:YES animated:YES];
+        [locationTableView setAllowsSelectionDuringEditing:YES];
+    }
+}
+
 - (void)viewWillAppear:(BOOL)animated{
     //show navigation bar programmatically
     [self.navigationController setNavigationBarHidden:NO];
@@ -120,6 +130,33 @@
 	return cell;
 }
 
+
+/**Editing Methods**/
+
+-(BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath{
+   // int idx = indexPath.row;
+    return YES;
+}
+
+- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.row >= [[sharedUser savedLocations] count]) {
+        return UITableViewCellEditingStyleInsert;
+    } else {
+        return UITableViewCellEditingStyleDelete;
+    }
+}
+
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    // If row is deleted, remove it from the list.
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        [[sharedUser savedLocations] removeObjectAtIndex:indexPath.row];
+        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+    }
+}
+
+
+
 // Returns a UIView that serves as the footer for this table view
 - (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
 {
@@ -148,6 +185,7 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
+    if ([segue identifier])
 	[[[segue destinationViewController] navigationItem] setTitle:[[Location sharedLocation] name]];
 	NSLog(@"shared  location: %@", [[Location sharedLocation] name]);
 }

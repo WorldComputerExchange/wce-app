@@ -221,20 +221,18 @@
 
 - (void)saveNewLocation
 {
-    [self dismissViewControllerAnimated:YES completion:nil];
-    
     /*save input fields to our user
      Should check that these values are non-null!*/
     Location *curLocation = [[Location alloc] init];
-
+    
     [curLocation setName:location.text];
-
+    
     [curLocation setContact:contact.text];
-
+    
     [curLocation setPhone:phone.text];
-
+    
     [curLocation setAddress:address.text];
-
+    
     [curLocation setCity:city.text];
     
     
@@ -244,8 +242,10 @@
     [curLocation setLanguage:@"English"];
     
     [[sharedUser savedLocations] addObject:curLocation];
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
 
-
+	[[NSNotificationCenter defaultCenter] postNotificationName:@"shouldGeocodeNewLocation" object:self];
 }
 
 
