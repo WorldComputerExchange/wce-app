@@ -35,6 +35,7 @@
     
     //get shared location instance
     sharedLocation = [Location sharedLocation];
+    NSLog(@"sharedLocation %@", [sharedLocation name]);
     
     //get shared user instance
     sharedUser = [User sharedUser];
@@ -57,12 +58,6 @@
     [locationTableView reloadData];
 }
 
-/*- (IBAction)OrBoton:(id)sender
-{
-    UIButton *button = (UIButton *)sender;
-    [button setBackgroundColor:[UIColor blackColor]];
-}*/
-
 
 - (void)didReceiveMemoryWarning
 {
@@ -76,11 +71,20 @@
     /**set the region name to that chosen in the table**/
     int idx = indexPath.row;
     
-    NSString *selectedName = [locations objectAtIndex:idx];
+    if (idx < [[sharedUser savedLocations] count]){
+        
+        Location *selectedLocation = [[sharedUser savedLocations] objectAtIndex:idx];
+        NSString *selectedName =  [selectedLocation name];
     
-    [sharedLocation setName:selectedName];
+        [sharedLocation setName:selectedName];
     
-    [self performSegueWithIdentifier:@"pushMainMenu" sender:self];
+        NSLog(@"%@", selectedName);
+        NSLog(@"%@", [sharedLocation name]);
+    
+        [self performSegueWithIdentifier:@"pushMainMenu" sender:self];
+    }else {
+        [self performSegueWithIdentifier:@"pushAddLocation" sender:self];
+    }
     
 }
 
@@ -90,6 +94,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)table numberOfRowsInSection:(NSInteger)section {
+    NSLog(@"#of saved locations: %d", [[sharedUser savedLocations] count]);
 	return [[sharedUser savedLocations] count] + 1;
 }
 
@@ -144,7 +149,7 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
 	[[[segue destinationViewController] navigationItem] setTitle:[[Location sharedLocation] name]];
-	NSLog(@"sharedl ocation: %@", [[Location sharedLocation] name]);
+	NSLog(@"shared  location: %@", [[Location sharedLocation] name]);
 }
 
 @end

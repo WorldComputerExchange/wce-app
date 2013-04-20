@@ -18,5 +18,5 @@
 @property (nonatomic, assign) BOOL hasLocation;
 
 + (Location *)sharedLocation;
-
++ (void) initialize;
 @end

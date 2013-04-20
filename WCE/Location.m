@@ -11,38 +11,32 @@
 
 static Location* _sharedLocation = nil;
 
+
 + (Location *) sharedLocation
+ {
+     return _sharedLocation;
+ }
+
++ (void) initialize
 {
-    static Location *sharedLocation;
-        
-    @synchronized(self){
-        
-        if (!sharedLocation)
-            sharedLocation = [[Location alloc] init];
-        
-        return _sharedLocation;
-    }
-    return nil;
+    _sharedLocation = [[Location alloc] init];
 }
 
-/*+(id)alloc {
-    @synchronized([Location class]) {
-        NSAssert(_sharedLocation == nil, @"Attempted to allocate a second instance of a singleton.");
-        _sharedLocation = [super alloc];
-        return _sharedLocation;
-    }
-    return nil;
-}*/
 
 -(id)init {
     self = [super init];
     if (self != nil) {
         // initialize stuff here
-        self.country = @"NA";
-        self.language = @"NA";
         self.name = @"NA";
+        self.contact = @"NA";
+        self.phone = @"NA";
+        self.address = @"NA";
+        self.city = @"NA";
+        self.country =@"NA";
+        self.language = @"NA";
         self.hasLocation = false;
     }
+    
     return self;
 }
 
