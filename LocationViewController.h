@@ -10,6 +10,7 @@
 
 @interface LocationViewController : UIViewController <UITableViewDelegate, UITableViewDataSource> {
     IBOutlet UITableView *locationTableView;
+    IBOutlet UIBarButtonItem *editButton;
     
     UIActionSheet *actionSheet;
     NSMutableArray *locations;
@@ -27,5 +28,7 @@
 @property (nonatomic, retain) UIView *footerView;
 @property (nonatomic, retain) Location *sharedLocation;
 @property (nonatomic, retain) User *sharedUser;
+
+-(IBAction)enterEditingMode:(id)sender;
 
 @end
