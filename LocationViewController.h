@@ -12,8 +12,6 @@
     IBOutlet UITableView *locationTableView;
     IBOutlet UIBarButtonItem *editButton;
     
-    UIActionSheet *actionSheet;
-    NSMutableArray *locations;
     
 	UIButton *chooseFromMap;
 	UIView *footerView;

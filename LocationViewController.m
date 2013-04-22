@@ -14,7 +14,7 @@
 
 @implementation LocationViewController
 
-@synthesize locationTableView, locations, footerView, chooseFromMap, sharedLocation, sharedUser;
+@synthesize locationTableView, footerView, chooseFromMap, sharedLocation, sharedUser;
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -30,8 +30,6 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    
-    locations = [[NSMutableArray alloc] initWithObjects:@"ABC School", @"Xavier School", @"Chicago", @"Cairo", @"Ayacucho", nil];
     
     //get shared location instance
     sharedLocation = [Location sharedLocation];
@@ -78,24 +76,30 @@
 /**TableView Methods**/
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    
+    
     /**set the region name to that chosen in the table**/
     int idx = indexPath.row;
+    Location *selectedLocation;
     
-    if (idx < [[sharedUser savedLocations] count]){
-        
-        Location *selectedLocation = [[sharedUser savedLocations] objectAtIndex:idx];
+    if (idx >= [[sharedUser savedLocations] count]){
+        [self performSegueWithIdentifier:@"pushAddLocation" sender:self];
+    }else if  ([locationTableView isEditing]){
+        selectedLocation = [[sharedUser savedLocations] objectAtIndex:idx];
+        [sharedUser setIsEditingLocation:YES];
+        [sharedUser setEditingLocation:selectedLocation];
+        [self performSegueWithIdentifier:@"pushAddLocation" sender:self];
+    }else{
+        selectedLocation = [[sharedUser savedLocations] objectAtIndex:idx];
         NSString *selectedName =  [selectedLocation name];
-    
+        
         [sharedLocation setName:selectedName];
-    
+        
         NSLog(@"%@", selectedName);
         NSLog(@"%@", [sharedLocation name]);
-    
+        
         [self performSegueWithIdentifier:@"pushMainMenu" sender:self];
-    }else {
-        [self performSegueWithIdentifier:@"pushAddLocation" sender:self];
     }
-    
 }
 
 
@@ -125,8 +129,8 @@
         name =  [curLocation name];
 	}
 	cell.textLabel.text = name;
-	cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-	
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+
 	return cell;
 }
 
@@ -185,9 +189,12 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if ([segue identifier])
-	[[[segue destinationViewController] navigationItem] setTitle:[[Location sharedLocation] name]];
-	NSLog(@"shared  location: %@", [[Location sharedLocation] name]);
+    if ([[segue identifier] isEqualToString:@"pushAddLocation"] && [sharedUser isEditingLocation]){
+        [[[segue destinationViewController] navigationItem] setTitle:@"Editing Location"];
+    }else{
+        [[[segue destinationViewController] navigationItem] setTitle:[[Location sharedLocation] name]];
+        NSLog(@"shared  location: %@", [[Location sharedLocation] name]);
+    }
 }
 
 @end

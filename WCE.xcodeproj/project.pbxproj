@@ -153,7 +153,6 @@
 		8C9C3AC116CC60D000F95A6B = {
 			isa = PBXGroup;
 			children = (
-				D02C62F91723112B005D92AB /* CoreLocation.framework */,
 				8C9C3AD616CC60D000F95A6B /* WCE */,
 				8C9C3ACF16CC60D000F95A6B /* Frameworks */,
 				8C9C3ACD16CC60D000F95A6B /* Products */,
@@ -171,6 +170,7 @@
 		8C9C3ACF16CC60D000F95A6B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D02C62F91723112B005D92AB /* CoreLocation.framework */,
 				9ED3259E16DD5D4C00EA38E0 /* MapKit.framework */,
 				8C9C3AD016CC60D000F95A6B /* UIKit.framework */,
 				8C9C3AD216CC60D000F95A6B /* Foundation.framework */,
