@@ -65,6 +65,15 @@
 	[[self navigationItem] setRightBarButtonItem:saveButton];
     
     sharedUser = [User sharedUser];
+    
+    if ([sharedUser isEditingLocation]){
+        Location *editingLocation = [sharedUser editingLocation];
+        location.text = editingLocation.name;
+        contact.text = editingLocation.contact;
+        phone.text = editingLocation.phone;
+        address.text = editingLocation.address;
+        city.text = editingLocation.city;
+    }
 }
 
 
@@ -241,7 +250,19 @@
     
     [curLocation setLanguage:@"English"];
     
-    [[sharedUser savedLocations] addObject:curLocation];
+    /**check if a location with this name exists already and replace it if it does**/
+    int idx = 0;
+    BOOL replaced = false;
+    for (Location *cur in [sharedUser savedLocations]){
+        if (cur.name == curLocation.name || cur.name == [[sharedUser editingLocation] name]){
+            [[sharedUser savedLocations] replaceObjectAtIndex:idx withObject:curLocation];
+            replaced = true;
+        }
+        idx++;
+    }
+    if (!replaced){
+        [[sharedUser savedLocations] addObject:curLocation];
+    }
     
     [self dismissViewControllerAnimated:YES completion:nil];
 
