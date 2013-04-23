@@ -36,6 +36,7 @@
 		D07A3B0316D6F7C4003B6074 /* WCE_LogoWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = D07A3B0216D6F7C4003B6074 /* WCE_LogoWhite.png */; };
 		FA44558116E284E900D08750 /* WCE Content V5 NEW.png in Resources */ = {isa = PBXBuildFile; fileRef = FA44558016E284E900D08750 /* WCE Content V5 NEW.png */; };
 		FA98E2941722F9EE005EC158 /* OrderFormViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA98E2931722F9EE005EC158 /* OrderFormViewController.m */; };
+		FA98E2971726062F005EC158 /* NewPartnerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA98E2961726062F005EC158 /* NewPartnerViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -85,6 +86,8 @@
 		FA44558016E284E900D08750 /* WCE Content V5 NEW.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WCE Content V5 NEW.png"; sourceTree = "<group>"; };
 		FA98E2921722F9EE005EC158 /* OrderFormViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderFormViewController.h; sourceTree = "<group>"; };
 		FA98E2931722F9EE005EC158 /* OrderFormViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderFormViewController.m; sourceTree = "<group>"; };
+		FA98E2951726062F005EC158 /* NewPartnerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewPartnerViewController.h; sourceTree = "<group>"; };
+		FA98E2961726062F005EC158 /* NewPartnerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewPartnerViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -224,6 +227,7 @@
 		8CB0441E16DC4D420000AD0F /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				FA98E2981726063E005EC158 /* NewPartner */,
 				FA98E2911722F986005EC158 /* Order Form */,
 				9ED3259B16DD53FF00EA38E0 /* AddressAnnotation.h */,
 				9ED3259C16DD53FF00EA38E0 /* AddressAnnotation.m */,
@@ -265,6 +269,15 @@
 				FA98E2931722F9EE005EC158 /* OrderFormViewController.m */,
 			);
 			name = "Order Form";
+			sourceTree = "<group>";
+		};
+		FA98E2981726063E005EC158 /* NewPartner */ = {
+			isa = PBXGroup;
+			children = (
+				FA98E2951726062F005EC158 /* NewPartnerViewController.h */,
+				FA98E2961726062F005EC158 /* NewPartnerViewController.m */,
+			);
+			name = NewPartner;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -353,6 +366,7 @@
 				9E4B58C216FBD95F007BE176 /* CoverSheetViewController.m in Sources */,
 				8CD27FEE1720BC6B00973A04 /* User.m in Sources */,
 				FA98E2941722F9EE005EC158 /* OrderFormViewController.m in Sources */,
+				FA98E2971726062F005EC158 /* NewPartnerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
