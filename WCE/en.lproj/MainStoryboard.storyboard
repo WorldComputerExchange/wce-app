@@ -1974,6 +1974,7 @@ Cgo
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
                                             <action selector="textfieldReturn:" destination="a24-Hj-6Z9" eventType="editingDidEndOnExit" id="plx-E7-GsM"/>
+                                            <outlet property="delegate" destination="a24-Hj-6Z9" id="gcV-wt-LMK"/>
                                         </connections>
                                     </textField>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Contact:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vkb-X2-a7c">
@@ -1986,6 +1987,7 @@ Cgo
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
                                             <action selector="textfieldReturn:" destination="a24-Hj-6Z9" eventType="editingDidEndOnExit" id="tRd-eV-kDb"/>
+                                            <outlet property="delegate" destination="a24-Hj-6Z9" id="hWk-P3-uAq"/>
                                         </connections>
                                     </textField>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Phone:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Wm-fx-Ndr">
@@ -1998,6 +2000,7 @@ Cgo
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
                                             <action selector="textfieldReturn:" destination="a24-Hj-6Z9" eventType="editingDidEndOnExit" id="rIh-KK-Sb9"/>
+                                            <outlet property="delegate" destination="a24-Hj-6Z9" id="WdG-ob-0B2"/>
                                         </connections>
                                     </textField>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Address:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oGp-po-S2z">
@@ -2010,6 +2013,7 @@ Cgo
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
                                             <action selector="textfieldReturn:" destination="a24-Hj-6Z9" eventType="editingDidEndOnExit" id="dNI-fd-DAE"/>
+                                            <outlet property="delegate" destination="a24-Hj-6Z9" id="Bad-ZF-3uW"/>
                                         </connections>
                                     </textField>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="City/Town:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AtG-yc-stS">
@@ -2022,6 +2026,7 @@ Cgo
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
                                             <action selector="textfieldReturn:" destination="a24-Hj-6Z9" eventType="editingDidEndOnExit" id="1fZ-Ul-Hem"/>
+                                            <outlet property="delegate" destination="a24-Hj-6Z9" id="nVF-k4-E2l"/>
                                         </connections>
                                     </textField>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="7mj-ey-S6c">
@@ -2107,6 +2112,7 @@ Cgo
                         <outlet property="dropDownTableView" destination="7mj-ey-S6c" id="cww-xj-1C9"/>
                         <outlet property="location" destination="Zfm-8O-vja" id="PQV-bk-uDi"/>
                         <outlet property="phone" destination="kFh-ve-PT1" id="qyD-ie-d4T"/>
+                        <outlet property="scrollView" destination="XXt-uE-Esk" id="U0a-FU-YtM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7VY-pE-X1N" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2283,6 +2289,7 @@ Cgo
                 <relationship kind="outlet" name="dropDownTableView" candidateClass="UITableView"/>
                 <relationship kind="outlet" name="location" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="phone" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
             </relationships>
         </class>
         <class className="CoverSheetViewController" superclassName="UIViewController">

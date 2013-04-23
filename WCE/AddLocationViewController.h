@@ -9,7 +9,7 @@
 #define countryPicker 0
 #define languagePicker 1
 
-@interface AddLocationViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, UIActionSheetDelegate, UIPickerViewDataSource, UIPickerViewDelegate>
+@interface AddLocationViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, UIActionSheetDelegate, UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate>
 {
     NSArray *locations;
     NSArray *dataArray;
@@ -30,6 +30,7 @@
 @property (nonatomic, retain) NSString *selectedCountry;
 @property (nonatomic, retain) NSString *selectedLanguage;
 
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet UITextField *location;
 @property (weak, nonatomic) IBOutlet UITextField *contact;
 @property (weak, nonatomic) IBOutlet UITextField *phone;
