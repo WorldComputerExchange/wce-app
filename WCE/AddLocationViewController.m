@@ -10,6 +10,9 @@
 
 @interface AddLocationViewController ()
 
+@property (nonatomic, readonly) CGPoint originalOffset;
+@property (nonatomic, readonly) UIView *activeField;
+
 @end
 
 @implementation AddLocationViewController
@@ -63,6 +66,12 @@
 																  target:self
 																  action:@selector(saveInfo)];
 	[[self navigationItem] setRightBarButtonItem:saveButton];
+	
+	// Listen for keyboard notifications
+	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWasShown:)
+												 name:UIKeyboardDidShowNotification object:nil];
+	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillBeHidden:)
+												 name:UIKeyboardWillHideNotification object:nil];
     
     sharedUser = [User sharedUser];
     selectedCountry = @"None";
@@ -287,7 +296,42 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+// called when the keyboard is shown
+- (void)keyboardWasShown:(NSNotification*)aNotification
+{
+    NSDictionary* info = [aNotification userInfo];
+    CGRect kbRect = [[info objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue];
+    kbRect = [self.view convertRect:kbRect toView:nil];
+    UIEdgeInsets contentInsets = UIEdgeInsetsMake(0.0, 0.0, kbRect.size.height, 0.0);
+    _scrollView.contentInset = contentInsets;
+    _scrollView.scrollIndicatorInsets = contentInsets;
+	
+    CGRect aRect = self.view.frame;
+    aRect.size.height -= kbRect.size.height;
+    //aRect.size.height -= self.toolbar.frame.size.height;
+    CGPoint fieldOrigin = _activeField.frame.origin;
+    fieldOrigin.y -= _scrollView.contentOffset.y;
+	fieldOrigin.y += 40;
+    fieldOrigin = [self.view convertPoint:fieldOrigin toView:self.view.superview];
+    _originalOffset = _scrollView.contentOffset;
+    if (!CGRectContainsPoint(aRect, fieldOrigin) ) {
+        [_scrollView scrollRectToVisible:_activeField.frame animated:YES];
+    }
+}
 
+/// called when the keyboard is hidden
+- (void)keyboardWillBeHidden:(NSNotification*)aNotification {
+	UIEdgeInsets contentInsets = UIEdgeInsetsZero;
+	_scrollView.contentInset = contentInsets;
+	_scrollView.scrollIndicatorInsets = contentInsets;
+	[_scrollView setContentOffset:_originalOffset animated:YES];
+}
 
+/// called when a text field is selected
+- (void)textFieldDidBeginEditing:(UITextField *)textField
+{
+	NSLog(@"text field began!!");
+	_activeField = textField;
+}
 
 @end
