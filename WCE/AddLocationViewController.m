@@ -75,6 +75,8 @@
         phone.text = editingLocation.phone;
         address.text = editingLocation.address;
         city.text = editingLocation.city;
+        selectedLanguage = editingLocation.language;
+        selectedCountry = editingLocation.country;
     }
 }
 
@@ -152,10 +154,8 @@
     cell.textLabel.text = [dataArray objectAtIndex:idx];
     
     if (idx == 0){
-        NSLog(@"Setting detail text country");
         cell.detailTextLabel.text = selectedCountry;
     }else {
-        NSLog(@"Setting detail text language");
         cell.detailTextLabel.text = selectedLanguage;
     }
     return cell;
@@ -265,8 +265,6 @@
     
     [curLocation setCity:city.text];
     
-    
-    //these should be getting info from pickers
     [curLocation setCountry:selectedCountry];
     
     [curLocation setLanguage:selectedLanguage];
@@ -275,7 +273,8 @@
     int idx = 0;
     BOOL replaced = false;
     for (Location *cur in [sharedUser savedLocations]){
-        if (cur.name == curLocation.name || cur.name == [[sharedUser editingLocation] name]){
+        if ([cur.name isEqualToString:curLocation.name] ||
+            [cur.name isEqualToString: [[sharedUser editingLocation] name]]){
             [[sharedUser savedLocations] replaceObjectAtIndex:idx withObject:curLocation];
             replaced = true;
         }
