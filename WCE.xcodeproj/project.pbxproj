@@ -31,6 +31,7 @@
 		9ED3259D16DD53FF00EA38E0 /* AddressAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ED3259C16DD53FF00EA38E0 /* AddressAnnotation.m */; };
 		9ED3259F16DD5D4C00EA38E0 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9ED3259E16DD5D4C00EA38E0 /* MapKit.framework */; };
 		9ED695B316E28332005D1EDB /* WCE Content V5 copy.png in Resources */ = {isa = PBXBuildFile; fileRef = 9ED695B216E28332005D1EDB /* WCE Content V5 copy.png */; };
+		9EE43DE7172749F30023EF5A /* NH Check Ceremonty Nashville_0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9EE43DE6172749F30023EF5A /* NH Check Ceremonty Nashville_0.jpg */; };
 		D02C62FA1723112B005D92AB /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D02C62F91723112B005D92AB /* CoreLocation.framework */; };
 		D058DCDB16FBD2A300132041 /* AboutWCEViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D058DCDA16FBD2A300132041 /* AboutWCEViewController.m */; };
 		D07A3B0316D6F7C4003B6074 /* WCE_LogoWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = D07A3B0216D6F7C4003B6074 /* WCE_LogoWhite.png */; };
@@ -79,6 +80,7 @@
 		9ED3259C16DD53FF00EA38E0 /* AddressAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressAnnotation.m; sourceTree = "<group>"; };
 		9ED3259E16DD5D4C00EA38E0 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		9ED695B216E28332005D1EDB /* WCE Content V5 copy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WCE Content V5 copy.png"; sourceTree = "<group>"; };
+		9EE43DE6172749F30023EF5A /* NH Check Ceremonty Nashville_0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "NH Check Ceremonty Nashville_0.jpg"; sourceTree = "<group>"; };
 		D02C62F91723112B005D92AB /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		D058DCD916FBD2A300132041 /* AboutWCEViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutWCEViewController.h; sourceTree = "<group>"; };
 		D058DCDA16FBD2A300132041 /* AboutWCEViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutWCEViewController.m; sourceTree = "<group>"; };
@@ -198,6 +200,7 @@
 		8C9C3AD716CC60D000F95A6B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				9EE43DE6172749F30023EF5A /* NH Check Ceremonty Nashville_0.jpg */,
 				D07A3B0216D6F7C4003B6074 /* WCE_LogoWhite.png */,
 				8C9C3AD816CC60D000F95A6B /* WCE-Info.plist */,
 				FA44558016E284E900D08750 /* WCE Content V5 NEW.png */,
@@ -342,6 +345,7 @@
 				9E2476DD16E27D9C0049ED27 /* WCE Content V5.png in Resources */,
 				9ED695B316E28332005D1EDB /* WCE Content V5 copy.png in Resources */,
 				FA44558116E284E900D08750 /* WCE Content V5 NEW.png in Resources */,
+				9EE43DE7172749F30023EF5A /* NH Check Ceremonty Nashville_0.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
