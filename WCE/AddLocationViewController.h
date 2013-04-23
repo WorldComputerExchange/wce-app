@@ -27,6 +27,8 @@
 @property (nonatomic, retain) NSArray *languages;
 @property (nonatomic, retain) User *sharedUser;
 
+@property (nonatomic, retain) NSString *selectedCountry;
+@property (nonatomic, retain) NSString *selectedLanguage;
 
 @property (weak, nonatomic) IBOutlet UITextField *location;
 @property (weak, nonatomic) IBOutlet UITextField *contact;

@@ -14,7 +14,7 @@
 
 @implementation AddLocationViewController
 
-@synthesize locations, countries, languages, actionSheet, dropDownTableView, dataArray, sharedUser;
+@synthesize locations, countries, languages, actionSheet, dropDownTableView, dataArray, sharedUser, selectedCountry, selectedLanguage;
 @synthesize location, contact, phone, address, city;
 
 
@@ -65,6 +65,8 @@
 	[[self navigationItem] setRightBarButtonItem:saveButton];
     
     sharedUser = [User sharedUser];
+    selectedCountry = @"None";
+    selectedLanguage = @"None";
     
     if ([sharedUser isEditingLocation]){
         Location *editingLocation = [sharedUser editingLocation];
@@ -74,6 +76,11 @@
         address.text = editingLocation.address;
         city.text = editingLocation.city;
     }
+}
+
+
+- (void)viewDidDisappear:(BOOL)animated{
+    [sharedUser setIsEditingLocation:false];
 }
 
 
@@ -105,11 +112,16 @@
 
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
 {
-	
+    if (pickerView.tag == countryPicker){
+        selectedCountry = [countries objectAtIndex:row];
+    }else{
+        selectedLanguage = [languages objectAtIndex:row];
+    }
 }
 
 - (void)pickerDoneClicked
 {
+    [dropDownTableView reloadData];
     [actionSheet dismissWithClickedButtonIndex:0 animated:YES];
 }
 
@@ -129,14 +141,23 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    int idx = indexPath.row;
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"DataCellID"];
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"DataCell"];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"DataCell"];
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     }
     
     
-    cell.textLabel.text = [dataArray objectAtIndex:indexPath.row];
+    cell.textLabel.text = [dataArray objectAtIndex:idx];
+    
+    if (idx == 0){
+        NSLog(@"Setting detail text country");
+        cell.detailTextLabel.text = selectedCountry;
+    }else {
+        NSLog(@"Setting detail text language");
+        cell.detailTextLabel.text = selectedLanguage;
+    }
     return cell;
 }
 
@@ -246,9 +267,9 @@
     
     
     //these should be getting info from pickers
-    [curLocation setCountry:@"USA"];
+    [curLocation setCountry:selectedCountry];
     
-    [curLocation setLanguage:@"English"];
+    [curLocation setLanguage:selectedLanguage];
     
     /**check if a location with this name exists already and replace it if it does**/
     int idx = 0;

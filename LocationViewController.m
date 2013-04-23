@@ -46,10 +46,11 @@
 }
 
 -(IBAction)enterEditingMode:(id)sender{
-    NSLog(@"Entered editing mode");
     if([locationTableView isEditing]){
+        NSLog(@"Exited editing mode");
         [locationTableView setEditing:NO animated:YES];
     }else {
+         NSLog(@"Entered editing mode");
         [locationTableView setEditing:YES animated:YES];
         [locationTableView setAllowsSelectionDuringEditing:YES];
     }
