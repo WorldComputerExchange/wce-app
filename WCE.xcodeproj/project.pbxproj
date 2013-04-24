@@ -25,15 +25,15 @@
 		8C9C3AED16CC60D000F95A6B /* WCEViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C9C3AEC16CC60D000F95A6B /* WCEViewController.m */; };
 		8CB0441916DC47910000AD0F /* LocationMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CB0441816DC47910000AD0F /* LocationMapViewController.m */; };
 		8CD27FEE1720BC6B00973A04 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CD27FED1720BC6B00973A04 /* User.m */; };
+		9E067ABF172769DC00C770A0 /* iphone_13539_miscellaneous_earth_earth_at_night.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9E067ABE172769DC00C770A0 /* iphone_13539_miscellaneous_earth_earth_at_night.jpg */; };
+		9E067AC11727727700C770A0 /* 136676809046747.gif in Resources */ = {isa = PBXBuildFile; fileRef = 9E067AC01727727700C770A0 /* 136676809046747.gif */; };
+		9E067AC71727763B00C770A0 /* 136676912132100.gif in Resources */ = {isa = PBXBuildFile; fileRef = 9E067AC61727763B00C770A0 /* 136676912132100.gif */; };
 		9E2476DD16E27D9C0049ED27 /* WCE Content V5.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E2476DC16E27D9C0049ED27 /* WCE Content V5.png */; };
 		9E39AF8016D9739500B4275C /* satellite_maps_earth_map_dual_monitor_3200x1200_desktop_wallpaper-344945.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9E39AF7F16D9739500B4275C /* satellite_maps_earth_map_dual_monitor_3200x1200_desktop_wallpaper-344945.jpg */; };
 		9E4B58C216FBD95F007BE176 /* CoverSheetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E4B58C116FBD95F007BE176 /* CoverSheetViewController.m */; };
 		9ED3259D16DD53FF00EA38E0 /* AddressAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ED3259C16DD53FF00EA38E0 /* AddressAnnotation.m */; };
 		9ED3259F16DD5D4C00EA38E0 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9ED3259E16DD5D4C00EA38E0 /* MapKit.framework */; };
 		9ED695B316E28332005D1EDB /* WCE Content V5 copy.png in Resources */ = {isa = PBXBuildFile; fileRef = 9ED695B216E28332005D1EDB /* WCE Content V5 copy.png */; };
-		9EE43DE7172749F30023EF5A /* NH Check Ceremonty Nashville_0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9EE43DE6172749F30023EF5A /* NH Check Ceremonty Nashville_0.jpg */; };
-		9EE43DE9172752E50023EF5A /* Kiang_West_savanna.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9EE43DE8172752E50023EF5A /* Kiang_West_savanna.jpg */; };
-		9EE43DEB172754050023EF5A /* free-vector-world-maprt border.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9EE43DEA172754050023EF5A /* free-vector-world-maprt border.jpg */; };
 		9EE43DED172754C80023EF5A /* mota_ru_2030149-320x480.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9EE43DEC172754C80023EF5A /* mota_ru_2030149-320x480.jpg */; };
 		D02C62FA1723112B005D92AB /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D02C62F91723112B005D92AB /* CoreLocation.framework */; };
 		D058DCDB16FBD2A300132041 /* AboutWCEViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D058DCDA16FBD2A300132041 /* AboutWCEViewController.m */; };
@@ -74,6 +74,9 @@
 		8CB0441816DC47910000AD0F /* LocationMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationMapViewController.m; sourceTree = "<group>"; };
 		8CD27FEC1720BC6B00973A04 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		8CD27FED1720BC6B00973A04 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		9E067ABE172769DC00C770A0 /* iphone_13539_miscellaneous_earth_earth_at_night.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = iphone_13539_miscellaneous_earth_earth_at_night.jpg; sourceTree = "<group>"; };
+		9E067AC01727727700C770A0 /* 136676809046747.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 136676809046747.gif; sourceTree = "<group>"; };
+		9E067AC61727763B00C770A0 /* 136676912132100.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 136676912132100.gif; sourceTree = "<group>"; };
 		9E2476D516E276820049ED27 /* WCE Content.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WCE Content.png"; sourceTree = "<group>"; };
 		9E2476DC16E27D9C0049ED27 /* WCE Content V5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WCE Content V5.png"; sourceTree = "<group>"; };
 		9E39AF7F16D9739500B4275C /* satellite_maps_earth_map_dual_monitor_3200x1200_desktop_wallpaper-344945.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "satellite_maps_earth_map_dual_monitor_3200x1200_desktop_wallpaper-344945.jpg"; sourceTree = "<group>"; };
@@ -83,9 +86,6 @@
 		9ED3259C16DD53FF00EA38E0 /* AddressAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressAnnotation.m; sourceTree = "<group>"; };
 		9ED3259E16DD5D4C00EA38E0 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		9ED695B216E28332005D1EDB /* WCE Content V5 copy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WCE Content V5 copy.png"; sourceTree = "<group>"; };
-		9EE43DE6172749F30023EF5A /* NH Check Ceremonty Nashville_0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "NH Check Ceremonty Nashville_0.jpg"; sourceTree = "<group>"; };
-		9EE43DE8172752E50023EF5A /* Kiang_West_savanna.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Kiang_West_savanna.jpg; sourceTree = "<group>"; };
-		9EE43DEA172754050023EF5A /* free-vector-world-maprt border.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "free-vector-world-maprt border.jpg"; sourceTree = "<group>"; };
 		9EE43DEC172754C80023EF5A /* mota_ru_2030149-320x480.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "mota_ru_2030149-320x480.jpg"; sourceTree = "<group>"; };
 		D02C62F91723112B005D92AB /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		D058DCD916FBD2A300132041 /* AboutWCEViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutWCEViewController.h; sourceTree = "<group>"; };
@@ -206,10 +206,10 @@
 		8C9C3AD716CC60D000F95A6B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				9E067AC61727763B00C770A0 /* 136676912132100.gif */,
+				9E067AC01727727700C770A0 /* 136676809046747.gif */,
+				9E067ABE172769DC00C770A0 /* iphone_13539_miscellaneous_earth_earth_at_night.jpg */,
 				9EE43DEC172754C80023EF5A /* mota_ru_2030149-320x480.jpg */,
-				9EE43DEA172754050023EF5A /* free-vector-world-maprt border.jpg */,
-				9EE43DE8172752E50023EF5A /* Kiang_West_savanna.jpg */,
-				9EE43DE6172749F30023EF5A /* NH Check Ceremonty Nashville_0.jpg */,
 				D07A3B0216D6F7C4003B6074 /* WCE_LogoWhite.png */,
 				8C9C3AD816CC60D000F95A6B /* WCE-Info.plist */,
 				FA44558016E284E900D08750 /* WCE Content V5 NEW.png */,
@@ -354,10 +354,10 @@
 				9E2476DD16E27D9C0049ED27 /* WCE Content V5.png in Resources */,
 				9ED695B316E28332005D1EDB /* WCE Content V5 copy.png in Resources */,
 				FA44558116E284E900D08750 /* WCE Content V5 NEW.png in Resources */,
-				9EE43DE7172749F30023EF5A /* NH Check Ceremonty Nashville_0.jpg in Resources */,
-				9EE43DE9172752E50023EF5A /* Kiang_West_savanna.jpg in Resources */,
-				9EE43DEB172754050023EF5A /* free-vector-world-maprt border.jpg in Resources */,
 				9EE43DED172754C80023EF5A /* mota_ru_2030149-320x480.jpg in Resources */,
+				9E067ABF172769DC00C770A0 /* iphone_13539_miscellaneous_earth_earth_at_night.jpg in Resources */,
+				9E067AC11727727700C770A0 /* 136676809046747.gif in Resources */,
+				9E067AC71727763B00C770A0 /* 136676912132100.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
