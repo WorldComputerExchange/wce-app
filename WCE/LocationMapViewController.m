@@ -31,6 +31,7 @@ static NSArray *_previouslyGeocodedLocations;
     if (self)
 	{
         NSLog(@"init");
+		_previouslyGeocodedLocations = [[NSArray alloc] init];
     }
     return self;
 }
@@ -137,7 +138,7 @@ static NSArray *_previouslyGeocodedLocations;
 
 - (void)addAnnotationWithArray:(NSMutableArray *)array atIndex:(int)index
 {
-	NSLog(@"geocoding location with address: %@", [(Location *)[array objectAtIndex:index] address]);
+	//NSLog(@"geocoding location with address: %@", [(Location *)[array objectAtIndex:index] address]);
 	
 	Location *thisLocation = (Location *)[array objectAtIndex:index];
 	
@@ -145,47 +146,46 @@ static NSArray *_previouslyGeocodedLocations;
 	[geocodingString appendString:@", "];
 	[geocodingString appendString:[thisLocation city]];
 	
-	[[self geocoder] geocodeAddressString:geocodingString completionHandler:^(NSArray *placemarks, NSError *error) {
-		if(index <= [_previouslyGeocodedLocations count] || [_previouslyGeocodedLocations count] == 0)
-		{
-			if(thisLocation != [_previouslyGeocodedLocations objectAtIndex:index])
+	NSLog(@"index of thing: %i", [_previouslyGeocodedLocations indexOfObject:thisLocation]);
+	if([_previouslyGeocodedLocations indexOfObject:thisLocation] == NSNotFound || [_previouslyGeocodedLocations count] == 0)
+	{
+		NSLog(@"using geocoder");
+		[[self geocoder] geocodeAddressString:geocodingString completionHandler:^(NSArray *placemarks, NSError *error) {
+			if([placemarks count] > 0)
 			{
-				if([placemarks count] > 0)
-				{
-					CLPlacemark *placemark = [placemarks objectAtIndex:0];
-					CLLocationCoordinate2D coord = [[placemark location] coordinate];
-					
-					NSLog(@"found location for %@ with latitude %f and longitude %f", [thisLocation name], coord.latitude, coord.longitude);
-					
-					AddressAnnotation *annot;
-					if([[thisLocation name] length] > 1)
-						annot = [[AddressAnnotation alloc] initWithCoordinate:coord withSubtitle:[thisLocation country] withTitle:[thisLocation name]];
-					else
-						annot = [[AddressAnnotation alloc] initWithCoordinate:coord withSubtitle:[thisLocation country] withTitle:@"Untitled"];
-					
-					[mapView addAnnotation:annot];
-					[[[[User sharedUser] savedLocations] objectAtIndex:index] setAnnotation:annot]; // save the annotation to be used later
-					
-					if(index < [array count] - 1)
-						[self addAnnotationWithArray:array atIndex:(index + 1)];
-					else
-						_previouslyGeocodedLocations = [array copy]; /// keep a record of which ones we've already geocoded
-				}
+				CLPlacemark *placemark = [placemarks objectAtIndex:0];
+				CLLocationCoordinate2D coord = [[placemark location] coordinate];
+				
+				//NSLog(@"found location for %@ with latitude %f and longitude %f", [thisLocation name], coord.latitude, coord.longitude);
+				
+				AddressAnnotation *annot;
+				if([[thisLocation name] length] > 1)
+					annot = [[AddressAnnotation alloc] initWithCoordinate:coord withSubtitle:[thisLocation country] withTitle:[thisLocation name]];
 				else
-				{
-					NSLog(@"couldn't find location for %@", [thisLocation name]);
-				}
+					annot = [[AddressAnnotation alloc] initWithCoordinate:coord withSubtitle:[thisLocation country] withTitle:@"Untitled"];
+				
+				[mapView addAnnotation:annot];
+				[[[[User sharedUser] savedLocations] objectAtIndex:index] setAnnotation:annot]; // save the annotation to be used later
+				
+				if(index < [array count] - 1)
+					[self addAnnotationWithArray:array atIndex:(index + 1)];
+				else
+					_previouslyGeocodedLocations = [array copy]; /// keep a record of which ones we've already geocoded
 			}
-		}
-		else
-		{
-			[mapView addAnnotation:[thisLocation annotation]];
-			if(index < [array count] - 1)
-				[self addAnnotationWithArray:array atIndex:(index + 1)];
 			else
-				_previouslyGeocodedLocations = [array copy]; /// keep a record of which ones we've already geocoded
-		}
-	}];
+			{
+				//NSLog(@"couldn't find location for %@", [thisLocation name]);
+			}
+		}];
+	}
+	else
+	{
+		[mapView addAnnotation:[thisLocation annotation]];
+		if(index < [array count] - 1)
+			[self addAnnotationWithArray:array atIndex:(index + 1)];
+		else
+			_previouslyGeocodedLocations = [array copy]; /// keep a record of which ones we've already geocoded
+	}
 }
 
 @end
