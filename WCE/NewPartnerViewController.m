@@ -6,6 +6,7 @@
 //
 
 #import "NewPartnerViewController.h"
+#import "User.h"
 
 @interface NewPartnerViewController ()
 
@@ -13,7 +14,7 @@
 
 @implementation NewPartnerViewController
 
-@synthesize name;
+@synthesize nameField, name, sharedUser;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -35,5 +36,34 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
+- (void)saveNewLocation
+{
+    /*save input fields to our user
+     Should check that these values are non-null!*/
+    name = nameField.text;
+    
+    /**check if a location with this name exists already and replace it if it does**/
+    int savedIdx;
+    BOOL replaced = false;
+    
+    NSMutableArray *savedPartners = [sharedUser savedPartners];
+    for (int idx = 0; idx < [savedPartners count]; idx++){
+        NSString *cur = [savedPartners objectAtIndex:idx];
+        if ([cur isEqualToString:name]){
+            replaced = true;
+            savedIdx = idx;
+        }
+    }
+    if (!replaced){
+        [[sharedUser savedPartners] addObject:name];
+    }else{
+        [[sharedUser savedPartners] replaceObjectAtIndex:savedIdx withObject:name];
+    }
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
 
 @end

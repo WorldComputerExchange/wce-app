@@ -63,6 +63,8 @@
     
     [locationTableView setBackgroundView:nil];
     [locationTableView setBackgroundColor:[UIColor clearColor]];
+    [locationTableView setSeparatorColor:[UIColor grayColor]];
+    [locationTableView setSeparatorStyle:UITableViewCellSeparatorStyleSingleLineEtched];
     
     [locationTableView reloadData];
 }

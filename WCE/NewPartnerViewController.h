@@ -6,9 +6,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "User.h"
 
 @interface NewPartnerViewController : UIViewController
 
-@property IBOutlet UITextField *name;
+@property IBOutlet UITextField *nameField;
+@property NSString *name;
+@property User *sharedUser;
 
 @end
