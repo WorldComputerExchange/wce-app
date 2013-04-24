@@ -7,9 +7,6 @@
 
 #import <UIKit/UIKit.h>
 #import "Location.h"
-//#import "User.h"
-
-//@interface OrderFormViewController : UIViewController
 
 
 

@@ -6,8 +6,6 @@
 //
 
 #import "OrderFormViewController.h"
-//#import "Location.h"
-//#import "User.h"
 
 @interface OrderFormViewController ()
 
@@ -112,7 +110,7 @@
 {
     [actionSheet dismissWithClickedButtonIndex:0 animated:YES];
     
-    /**Here we should record infor about the country chosen in pickerView
+    /**Here we should record info about the country chosen in pickerView
      We should also have the tableView respond to the selection perhaps by displaying
      the country name chosen and deselecting the cell,
      Maybe we should use a UIButton instead?

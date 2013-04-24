@@ -81,5 +81,10 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+- (void)cancel:(id)sender
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
 
 @end

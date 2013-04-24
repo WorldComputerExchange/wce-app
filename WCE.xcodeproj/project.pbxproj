@@ -247,13 +247,13 @@
 				9ED3259C16DD53FF00EA38E0 /* AddressAnnotation.m */,
 				9E4B58C316FBD972007BE176 /* Cover Sheet */,
 				D058DCD816FBD28900132041 /* AboutWCE */,
+				8C27586F16CC829A00DEDAC8 /* Location */,
 				8CB0441516DC476E0000AD0F /* LocationMap */,
 				8C03243516DC424D0089CB81 /* AddLocation */,
 				8C03241F16DC2A7A0089CB81 /* SaveLocation */,
 				8CD27FF41728355100973A04 /* Partner */,
-				FA98E2981726063E005EC158 /* NewPartner */,
+				FA98E2981726063E005EC158 /* AddPartner */,
 				8C27587016CC82A500DEDAC8 /* Login */,
-				8C27586F16CC829A00DEDAC8 /* Location */,
 				8C9C3AEB16CC60D000F95A6B /* WCEViewController.h */,
 				8C9C3AEC16CC60D000F95A6B /* WCEViewController.m */,
 			);
@@ -296,13 +296,13 @@
 			name = "Order Form";
 			sourceTree = "<group>";
 		};
-		FA98E2981726063E005EC158 /* NewPartner */ = {
+		FA98E2981726063E005EC158 /* AddPartner */ = {
 			isa = PBXGroup;
 			children = (
 				FA98E2951726062F005EC158 /* NewPartnerViewController.h */,
 				FA98E2961726062F005EC158 /* NewPartnerViewController.m */,
 			);
-			name = NewPartner;
+			name = AddPartner;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

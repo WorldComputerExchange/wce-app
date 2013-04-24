@@ -2493,7 +2493,7 @@ Cg
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Title" id="7Qt-96-8c4">
-                        <barButtonItem key="rightBarButtonItem" title="Edit" id="qu3-98-ehz">
+                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="qu3-98-ehz">
                             <connections>
                                 <action selector="enterEditingMode:" destination="JU5-ky-5R4" id="PWW-Pg-8bA"/>
                             </connections>
@@ -3425,6 +3425,11 @@ Cgo
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cKA-Z4-Xfa">
                                 <items>
                                     <navigationItem title="New Partner" id="XTa-i3-0s6">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="6A9-7y-pTK">
+                                            <connections>
+                                                <action selector="cancel:" destination="91l-Qg-47C" id="Mi5-Ty-qLw"/>
+                                            </connections>
+                                        </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="mPd-5W-VpP">
                                             <connections>
                                                 <action selector="saveChanges:" destination="91l-Qg-47C" id="yPw-gh-Dlg"/>
@@ -3862,6 +3867,7 @@ Cgo
         <class className="NewPartnerViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NewPartnerViewController.h"/>
             <relationships>
+                <relationship kind="action" name="cancel:"/>
                 <relationship kind="action" name="saveChanges:"/>
                 <relationship kind="outlet" name="nameField" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="saveButton" candidateClass="UIBarButtonItem"/>

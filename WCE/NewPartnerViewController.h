@@ -16,5 +16,6 @@
 
 
 - (IBAction)saveChanges:(id)sender;
+- (IBAction)cancel:(id)sender;
 
 @end
