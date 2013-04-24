@@ -11,7 +11,10 @@
 @interface NewPartnerViewController : UIViewController
 
 @property IBOutlet UITextField *nameField;
-@property NSString *name;
+@property IBOutlet UIBarButtonItem *saveButton;
 @property User *sharedUser;
+
+
+- (IBAction)saveChanges:(id)sender;
 
 @end
