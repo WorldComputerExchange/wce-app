@@ -7,7 +7,7 @@
 #import "Location.h"
 
 @implementation Location
-@synthesize name, contact, phone, address, city, country, language, hasLocation;
+@synthesize name, contact, phone, address, city, country, language, annotation, hasLocation;
 
 static Location* _sharedLocation = nil;
 
@@ -34,6 +34,7 @@ static Location* _sharedLocation = nil;
         self.city = @"NA";
         self.country =@"NA";
         self.language = @"NA";
+		self.annotation = nil;
         self.hasLocation = false;
     }
     
