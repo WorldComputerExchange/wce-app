@@ -67,7 +67,7 @@
                  @"Lithuania", @"Macedonia", @"Madagascar", @"Malawi", @"Mali",  @"Mexico",
                  @"Mongolia", @"Nepal", @"Moldova", @"Morocco", @"Mozambique", @"Namibia",
                  @"Nicaragua", @"Nigeria", @"Pakistan", @"Paraguay", @"Peru", @"Philippines",
-                 @"Russia", @"Senegal", @"Sri Lanka", @"Ukraine", @"Venezuala", @"Test", nil];
+                 @"Russia", @"Senegal", @"Sri Lanka", @"Ukraine", @"Venezuala", nil];
 
     languages = [[NSArray alloc] initWithObjects:@"French", @"Arabic", @"English", @"Spanish", nil];
 	
