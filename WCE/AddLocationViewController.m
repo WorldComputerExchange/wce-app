@@ -56,8 +56,19 @@
     
     dataArray = [[NSArray alloc] initWithObjects:@"Country", @"Language", nil];
     
-    countries = [[NSArray alloc] initWithObjects:@"Libya", @"Zambia", @"Pakistan", @"Guatemala", nil];
-    
+    countries = [[NSArray alloc] initWithObjects:
+                 @"Afghanistan", @"Bangladesh",  @"Benin", @"Bolivia", @"Bosnia", @"Botswana",
+                 @"Brasil", @"Bulgaria", @"Burkina Faso", @"Burundi",  @"Cambodia", @"Cameroon",
+                 @"Chile", @"Colombia", @"Congo",  @"Costa Rica", @"D.R. Congo",
+                 @"Dominican Republic", @"Ecuador", @"Egypt", @"El Salvador", @"Ethiopia",
+                 @"The Gambia", @"Ghana",  @"Georgia", @"Guatemala", @"Guinea",
+                 @"Guinea Bissau", @"Guyana", @"Haiti",  @"Honduras", @"India",
+                 @"Indonesia", @"Iraq", @"Jamaica", @"Jordan", @"Kenya", @"Liberia",
+                 @"Lithuania", @"Macedonia", @"Madagascar", @"Malawi", @"Mali",  @"Mexico",
+                 @"Mongolia", @"Nepal", @"Moldova", @"Morocco", @"Mozambique", @"Namibia",
+                 @"Nicaragua", @"Nigeria", @"Pakistan", @"Paraguay", @"Peru", @"Philippines",
+                 @"Russia", @"Senegal", @"Sri Lanka", @"Ukraine", @"Venezuala", nil];
+
     languages = [[NSArray alloc] initWithObjects:@"French", @"Arabic", @"English", @"Spanish", nil];
 	
 	// Add a "Save" button to the navigation controller
@@ -95,7 +106,9 @@
 }
 
 
-/*PickerView Methods*/
+/**
+ PickerView Methods
+ **/
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
 {
     return 1;
@@ -273,24 +286,31 @@
     [curLocation setAddress:address.text];
     
     [curLocation setCity:city.text];
-    
+    NSLog(@"selectedCountry %@", selectedCountry);
+    NSLog(@"selectedLanguage %@", selectedLanguage);
     [curLocation setCountry:selectedCountry];
     
     [curLocation setLanguage:selectedLanguage];
     
     /**check if a location with this name exists already and replace it if it does**/
-    int idx = 0;
+    int savedIdx;
     BOOL replaced = false;
-    for (Location *cur in [sharedUser savedLocations]){
+    
+    NSMutableArray *savedLocations = [sharedUser savedLocations];
+    for (int idx = 0; idx < [savedLocations count]; idx++){
+        Location *cur = [savedLocations objectAtIndex:idx];
         if ([cur.name isEqualToString:curLocation.name] ||
             [cur.name isEqualToString: [[sharedUser editingLocation] name]]){
-            [[sharedUser savedLocations] replaceObjectAtIndex:idx withObject:curLocation];
             replaced = true;
+            savedIdx = idx;
         }
-        idx++;
+        NSLog(@"locations count %d", [[sharedUser savedLocations] count]);
+        NSLog(@"index %d", idx);
     }
     if (!replaced){
         [[sharedUser savedLocations] addObject:curLocation];
+    }else{
+        [[sharedUser savedLocations] replaceObjectAtIndex:savedIdx withObject:curLocation];
     }
     
     [self dismissViewControllerAnimated:YES completion:nil];

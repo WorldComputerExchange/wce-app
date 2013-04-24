@@ -30,7 +30,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    
+
     //get shared location instance
     sharedLocation = [Location sharedLocation];
     NSLog(@"sharedLocation %@", [sharedLocation name]);
@@ -62,7 +62,7 @@
     [self.navigationItem setTitle:@"Choose Location"];
     
     [locationTableView setBackgroundView:nil];
-    [locationTableView setBackgroundColor:[UIColor blackColor]];
+    [locationTableView setBackgroundColor:[UIColor clearColor]];
     
     [locationTableView reloadData];
 }

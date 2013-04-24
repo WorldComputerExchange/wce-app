@@ -32,6 +32,9 @@
 		9ED3259F16DD5D4C00EA38E0 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9ED3259E16DD5D4C00EA38E0 /* MapKit.framework */; };
 		9ED695B316E28332005D1EDB /* WCE Content V5 copy.png in Resources */ = {isa = PBXBuildFile; fileRef = 9ED695B216E28332005D1EDB /* WCE Content V5 copy.png */; };
 		9EE43DE7172749F30023EF5A /* NH Check Ceremonty Nashville_0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9EE43DE6172749F30023EF5A /* NH Check Ceremonty Nashville_0.jpg */; };
+		9EE43DE9172752E50023EF5A /* Kiang_West_savanna.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9EE43DE8172752E50023EF5A /* Kiang_West_savanna.jpg */; };
+		9EE43DEB172754050023EF5A /* free-vector-world-maprt border.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9EE43DEA172754050023EF5A /* free-vector-world-maprt border.jpg */; };
+		9EE43DED172754C80023EF5A /* mota_ru_2030149-320x480.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9EE43DEC172754C80023EF5A /* mota_ru_2030149-320x480.jpg */; };
 		D02C62FA1723112B005D92AB /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D02C62F91723112B005D92AB /* CoreLocation.framework */; };
 		D058DCDB16FBD2A300132041 /* AboutWCEViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D058DCDA16FBD2A300132041 /* AboutWCEViewController.m */; };
 		D07A3B0316D6F7C4003B6074 /* WCE_LogoWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = D07A3B0216D6F7C4003B6074 /* WCE_LogoWhite.png */; };
@@ -81,6 +84,9 @@
 		9ED3259E16DD5D4C00EA38E0 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		9ED695B216E28332005D1EDB /* WCE Content V5 copy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WCE Content V5 copy.png"; sourceTree = "<group>"; };
 		9EE43DE6172749F30023EF5A /* NH Check Ceremonty Nashville_0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "NH Check Ceremonty Nashville_0.jpg"; sourceTree = "<group>"; };
+		9EE43DE8172752E50023EF5A /* Kiang_West_savanna.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Kiang_West_savanna.jpg; sourceTree = "<group>"; };
+		9EE43DEA172754050023EF5A /* free-vector-world-maprt border.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "free-vector-world-maprt border.jpg"; sourceTree = "<group>"; };
+		9EE43DEC172754C80023EF5A /* mota_ru_2030149-320x480.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "mota_ru_2030149-320x480.jpg"; sourceTree = "<group>"; };
 		D02C62F91723112B005D92AB /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		D058DCD916FBD2A300132041 /* AboutWCEViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutWCEViewController.h; sourceTree = "<group>"; };
 		D058DCDA16FBD2A300132041 /* AboutWCEViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutWCEViewController.m; sourceTree = "<group>"; };
@@ -200,6 +206,9 @@
 		8C9C3AD716CC60D000F95A6B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				9EE43DEC172754C80023EF5A /* mota_ru_2030149-320x480.jpg */,
+				9EE43DEA172754050023EF5A /* free-vector-world-maprt border.jpg */,
+				9EE43DE8172752E50023EF5A /* Kiang_West_savanna.jpg */,
 				9EE43DE6172749F30023EF5A /* NH Check Ceremonty Nashville_0.jpg */,
 				D07A3B0216D6F7C4003B6074 /* WCE_LogoWhite.png */,
 				8C9C3AD816CC60D000F95A6B /* WCE-Info.plist */,
@@ -346,6 +355,9 @@
 				9ED695B316E28332005D1EDB /* WCE Content V5 copy.png in Resources */,
 				FA44558116E284E900D08750 /* WCE Content V5 NEW.png in Resources */,
 				9EE43DE7172749F30023EF5A /* NH Check Ceremonty Nashville_0.jpg in Resources */,
+				9EE43DE9172752E50023EF5A /* Kiang_West_savanna.jpg in Resources */,
+				9EE43DEB172754050023EF5A /* free-vector-world-maprt border.jpg in Resources */,
+				9EE43DED172754C80023EF5A /* mota_ru_2030149-320x480.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
