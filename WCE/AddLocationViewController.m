@@ -106,7 +106,9 @@
 }
 
 
-/*PickerView Methods*/
+/**
+ PickerView Methods
+ **/
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
 {
     return 1;
@@ -284,24 +286,31 @@
     [curLocation setAddress:address.text];
     
     [curLocation setCity:city.text];
-    
+    NSLog(@"selectedCountry %@", selectedCountry);
+    NSLog(@"selectedLanguage %@", selectedLanguage);
     [curLocation setCountry:selectedCountry];
     
     [curLocation setLanguage:selectedLanguage];
     
     /**check if a location with this name exists already and replace it if it does**/
-    int idx = 0;
+    int savedIdx;
     BOOL replaced = false;
-    for (Location *cur in [sharedUser savedLocations]){
+    
+    NSMutableArray *savedLocations = [sharedUser savedLocations];
+    for (int idx = 0; idx < [savedLocations count]; idx++){
+        Location *cur = [savedLocations objectAtIndex:idx];
         if ([cur.name isEqualToString:curLocation.name] ||
             [cur.name isEqualToString: [[sharedUser editingLocation] name]]){
-            [[sharedUser savedLocations] replaceObjectAtIndex:idx withObject:curLocation];
             replaced = true;
+            savedIdx = idx;
         }
-        idx++;
+        NSLog(@"locations count %d", [[sharedUser savedLocations] count]);
+        NSLog(@"index %d", idx);
     }
     if (!replaced){
         [[sharedUser savedLocations] addObject:curLocation];
+    }else{
+        [[sharedUser savedLocations] replaceObjectAtIndex:savedIdx withObject:curLocation];
     }
     
     [self dismissViewControllerAnimated:YES completion:nil];

@@ -62,7 +62,7 @@
     [self.navigationItem setTitle:@"Choose Location"];
     
     [locationTableView setBackgroundView:nil];
-    [locationTableView setBackgroundColor:[UIColor blackColor]];
+    [locationTableView setBackgroundColor:[UIColor clearColor]];
     
     [locationTableView reloadData];
 }

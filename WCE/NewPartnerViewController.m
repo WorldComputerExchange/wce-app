@@ -3,7 +3,6 @@
 //  WCE
 //
 //  Created by Alex on 4/22/13.
-//  Copyright (c) 2013  Brian Beckerle. All rights reserved.
 //
 
 #import "NewPartnerViewController.h"
@@ -13,6 +12,8 @@
 @end
 
 @implementation NewPartnerViewController
+
+@synthesize name;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

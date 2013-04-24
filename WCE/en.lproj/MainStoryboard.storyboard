@@ -2027,10 +2027,10 @@ Cgo
             </objects>
             <point key="canvasLocation" x="2248" y="2449"/>
         </scene>
-        <!--View Controller-->
+        <!--New Partner View Controller-->
         <scene sceneID="G4p-bJ-PmB">
             <objects>
-                <viewController id="91l-Qg-47C" sceneMemberID="viewController">
+                <viewController id="91l-Qg-47C" customClass="NewPartnerViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tk1-Og-nak">
                         <rect key="frame" x="0.0" y="64" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -2078,6 +2078,9 @@ Cgo
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="name" destination="z9U-tb-j7z" id="F1m-rT-iuB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f68-Ux-hpU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -2488,6 +2491,12 @@ Cgo
         </class>
         <class className="NSLayoutConstraint" superclassName="NSObject">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="NewPartnerViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NewPartnerViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="name" candidateClass="UITextField"/>
+            </relationships>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
