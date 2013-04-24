@@ -56,8 +56,19 @@
     
     dataArray = [[NSArray alloc] initWithObjects:@"Country", @"Language", nil];
     
-    countries = [[NSArray alloc] initWithObjects:@"Libya", @"Zambia", @"Pakistan", @"Guatemala", nil];
-    
+    countries = [[NSArray alloc] initWithObjects:
+                 @"Afghanistan", @"Bangladesh",  @"Benin", @"Bolivia", @"Bosnia", @"Botswana",
+                 @"Brasil", @"Bulgaria", @"Burkina Faso", @"Burundi",  @"Cambodia", @"Cameroon",
+                 @"Chile", @"Colombia", @"Congo",  @"Costa Rica", @"D.R. Congo",
+                 @"Dominican Republic", @"Ecuador", @"Egypt", @"El Salvador", @"Ethiopia",
+                 @"The Gambia", @"Ghana",  @"Georgia", @"Guatemala", @"Guinea",
+                 @"Guinea Bissau", @"Guyana", @"Haiti",  @"Honduras", @"India",
+                 @"Indonesia", @"Iraq", @"Jamaica", @"Jordan", @"Kenya", @"Liberia",
+                 @"Lithuania", @"Macedonia", @"Madagascar", @"Malawi", @"Mali",  @"Mexico",
+                 @"Mongolia", @"Nepal", @"Moldova", @"Morocco", @"Mozambique", @"Namibia",
+                 @"Nicaragua", @"Nigeria", @"Pakistan", @"Paraguay", @"Peru", @"Philippines",
+                 @"Russia", @"Senegal", @"Sri Lanka", @"Ukraine", @"Venezuala", nil];
+
     languages = [[NSArray alloc] initWithObjects:@"French", @"Arabic", @"English", @"Spanish", nil];
 	
 	// Add a "Save" button to the navigation controller
