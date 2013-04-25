@@ -465,7 +465,7 @@ By October, 2011, along with partner organizations, WCE has shipped 30,000 compu
 
 In February 2012, Boston chapter (also headquarter chapter) in Hull, Massachusetts sent out their 68th shipment bringing their total to 13,503 computers.[29]
 </string>
-                                <color key="textColor" red="1" green="0.81845263810000002" blue="0.24046476959999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.9960784912109375" green="0.9960784912109375" blue="0.99215692281723022" alpha="1" colorSpace="deviceRGB"/>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="13"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -476,7 +476,7 @@ In February 2012, Boston chapter (also headquarter chapter) in Hull, Massachuset
                                     <constraint firstAttribute="width" constant="111" id="KIo-Fx-DRB"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <color key="textColor" red="0.0" green="0.89411771299999998" blue="1" alpha="1" colorSpace="deviceRGB"/>
+                                <color key="textColor" red="0.99215692281723022" green="0.9960784912109375" blue="0.99215692281723022" alpha="1" colorSpace="deviceRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -2860,39 +2860,19 @@ Cg
             </objects>
             <point key="canvasLocation" x="3410" y="2933"/>
         </scene>
-        <!--View Controller - Costs-->
-        <scene sceneID="0UZ-UL-EG8">
+        <!--View Controller-->
+        <scene sceneID="2J6-dX-i8l">
             <objects>
-                <viewController title="Costs" id="Y6k-6c-ht6" sceneMemberID="viewController">
-                    <view key="view" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="jHa-S8-uzC">
+                <viewController id="411-N1-Tcb" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ldQ-Gv-SUr">
                         <rect key="frame" x="0.0" y="20" width="320" height="548"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TyR-Zo-iPn">
-                                <subviews>
-                                    <label opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="left" text="COSTS:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MHz-bS-ktZ">
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="39" id="L3N-uj-Lyb"/>
-                                            <constraint firstAttribute="width" constant="111" id="XyH-4D-ZuL"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                        <color key="textColor" red="0.0" green="0.89411771299999998" blue="1" alpha="1" colorSpace="deviceRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="MHz-bS-ktZ" firstAttribute="centerX" secondItem="TyR-Zo-iPn" secondAttribute="centerX" type="default" id="9E1-1a-T0I"/>
-                                    <constraint firstAttribute="bottom" secondItem="MHz-bS-ktZ" secondAttribute="bottom" constant="484" id="DET-dI-eMw"/>
-                                    <constraint firstItem="MHz-bS-ktZ" firstAttribute="top" secondItem="TyR-Zo-iPn" secondAttribute="top" constant="20" symbolic="YES" type="default" id="tFy-aN-T7B"/>
-                                    <constraint firstAttribute="trailing" secondItem="MHz-bS-ktZ" secondAttribute="trailing" constant="104" id="wLf-0R-PeZ"/>
-                                </constraints>
-                            </scrollView>
-                            <textView opaque="NO" clearsContextBeforeDrawing="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nvh-3u-k1J">
+                            <textView opaque="NO" clearsContextBeforeDrawing="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CpS-Al-XhJ">
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="748" id="LNM-wm-322"/>
-                                    <constraint firstAttribute="width" constant="274" id="rao-MO-kn7"/>
+                                    <constraint firstAttribute="width" constant="274" id="9pd-ef-Q1g"/>
+                                    <constraint firstAttribute="height" constant="748" id="maf-sc-zcm"/>
                                 </constraints>
                                 <attributedString key="attributedText">
                                     <fragment content="Pentium 4 Desktop">
@@ -3209,15 +3189,113 @@ Cgo
                                 </attributedString>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <label opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="left" text="COSTS:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cca-mY-txP">
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="111" id="p9N-A1-6Za"/>
+                                    <constraint firstAttribute="height" constant="39" id="pDR-w0-On5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" red="0.99607849120000003" green="0.99607849120000003" blue="0.99215692280000001" alpha="1" colorSpace="deviceRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="CpS-Al-XhJ" firstAttribute="top" secondItem="ldQ-Gv-SUr" secondAttribute="top" constant="85" id="etr-Iv-moC"/>
+                            <constraint firstItem="cca-mY-txP" firstAttribute="top" secondItem="ldQ-Gv-SUr" secondAttribute="top" constant="1" id="mtJ-64-hhv"/>
+                            <constraint firstItem="CpS-Al-XhJ" firstAttribute="leading" secondItem="ldQ-Gv-SUr" secondAttribute="leading" constant="-14" id="sPO-3f-INE"/>
+                            <constraint firstItem="cca-mY-txP" firstAttribute="leading" secondItem="ldQ-Gv-SUr" secondAttribute="leading" constant="52" id="vaI-4v-nlr"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkb-yX-DcU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3926" y="9"/>
+        </scene>
+        <!--View Controller - Costs-->
+        <scene sceneID="0UZ-UL-EG8">
+            <objects>
+                <viewController title="Costs" id="Y6k-6c-ht6" sceneMemberID="viewController">
+                    <view key="view" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="jHa-S8-uzC">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hp4-u2-bTF">
+                                <subviews>
+                                    <label opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="left" text="COSTS:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fZD-oN-Vjj">
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="39" id="Lv8-hH-mvP"/>
+                                            <constraint firstAttribute="width" constant="111" id="vVW-IS-OjL"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <color key="textColor" red="0.99607849120000003" green="0.99607849120000003" blue="0.99215692280000001" alpha="1" colorSpace="deviceRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zob-EN-fXg">
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="487" id="fMr-HV-EUW"/>
+                                        </constraints>
+                                        <mutableString key="text">Pentium 4 Desktop refurbished with keyboard &amp; mouse = $40 plus content, monitor, shipping &amp; port clearing costs ($20 additional if higher specs like Dual Core are required)
+~ Mostly Name Brand with minimum specs: 2.8 GHz, 40 gig hard drive, 512 MB RAM, CD ROM, Video, Sound &amp; Net Cards ~
+
+
+Pentium 3 Desktop refurbished with 20% P4s, keyboard &amp; mouse = $20 plus content, monitor + shipping
+
+
+Ubuntu, Libre/Office, Edubuntu &amp; WCE Digital Content Install 1) Ubuntu operating system that is free, stable, has good drivers, does not get viruses &amp; avoids planned obsolescence, 2) Libre/Office that is very similar to Microsoft Office, 3) Edubuntu, and 4) WCE content: agriculture, health, education (including 231 Khan Academy videos on arithmetic, pre-algebra, algebra &amp; biology), technology, computer programming &amp; web development, entrepreneurship, leadership, recycling, potable water &amp; solar energy. = $15 per computer Some available in Spanish. WCE seeks funds to develop the WCE content pack in Arabic, Spanish &amp; French
+
+
+Windows XP Install ~ without Office, without above WCE content package = $15 per computer
+
+
+Pentium 2 Desktop for thin client LTSP lab enabling speeds as fast as a Dual Core = $10 + monitor + ship
+~ Works well when Peace Corps or VSO volunteers are present ~ we provide directions and online help ~
+
+
+CRT (Large) Color Monitor 17-19” less than 9 years old = $15 each plus shipping/port clearing
+
+
+LCD (Flat) screen tested working monitor 15-17” = $40 each plus shipping/port clearing
+
+
+Pentium 4 Laptop refurbished (usually with weak and sometimes with no battery) = $165 each plus shipping ~ Name Brand, Minimum 256 MB Ram, Minimum 20 GB Hard Drive, Ubuntu Operating System ~
+
+
+Pentium 3 Laptop refurbished (usually with weak and sometimes with no battery) = $90 each plus shipping ~ Name Brand, Minimum 256 MB Ram, Minimum 10 GB Hard Drive, Ubuntu Operating System ~
+
+
+eCorps Training: Two weeks onsite teacher and tech staff training = $1,500 per volunteer
+
+
+iEARN Training: two-day training for 30 teachers in the educational use of the Internet = $2,500
+
+
+WCE Fundraising: WCE raises the final 1/3 of our sourcing &amp; shipping costs for you in 4 months from when you send your first 1/3. Shipping occurs one month after you send your second 1/3 as long as it is after the 4 months. (Not applicable: Windows, for-profits, adult-only use, large numbers of P4 laptops, LCD monitors &amp; items below.) (15% cost is added to Sponsor’s donation.)</mutableString>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="zob-EN-fXg" firstAttribute="bottom" secondItem="Hp4-u2-bTF" secondAttribute="bottom" type="default" id="FLR-eo-cXQ"/>
+                                    <constraint firstItem="fZD-oN-Vjj" firstAttribute="top" secondItem="Hp4-u2-bTF" secondAttribute="top" constant="14" id="amN-6S-Udz"/>
+                                    <constraint firstItem="zob-EN-fXg" firstAttribute="centerX" secondItem="fZD-oN-Vjj" secondAttribute="centerX" type="default" id="fkM-1B-e2g"/>
+                                    <constraint firstItem="zob-EN-fXg" firstAttribute="top" secondItem="fZD-oN-Vjj" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="fu2-jM-eUI"/>
+                                    <constraint firstAttribute="trailing" secondItem="zob-EN-fXg" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="wKP-pN-W5C"/>
+                                    <constraint firstItem="zob-EN-fXg" firstAttribute="leading" secondItem="Hp4-u2-bTF" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="xTC-CL-UYE"/>
+                                    <constraint firstItem="fZD-oN-Vjj" firstAttribute="centerX" secondItem="Hp4-u2-bTF" secondAttribute="centerX" type="default" id="xcV-5C-beb"/>
+                                </constraints>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="TyR-Zo-iPn" firstAttribute="top" secondItem="jHa-S8-uzC" secondAttribute="top" constant="5" id="AqV-hm-EN4"/>
-                            <constraint firstItem="TyR-Zo-iPn" firstAttribute="bottom" secondItem="jHa-S8-uzC" secondAttribute="bottom" type="default" id="Gpq-jO-Jjt"/>
-                            <constraint firstItem="nvh-3u-k1J" firstAttribute="top" secondItem="jHa-S8-uzC" secondAttribute="top" constant="77" id="tsp-Ch-Mll"/>
-                            <constraint firstItem="TyR-Zo-iPn" firstAttribute="leading" secondItem="jHa-S8-uzC" secondAttribute="leading" type="default" id="xAD-LT-VSC"/>
-                            <constraint firstItem="TyR-Zo-iPn" firstAttribute="trailing" secondItem="jHa-S8-uzC" secondAttribute="trailing" type="default" id="ytw-Eg-kUf"/>
-                            <constraint firstItem="nvh-3u-k1J" firstAttribute="leading" secondItem="jHa-S8-uzC" secondAttribute="leading" constant="10" id="z3w-kH-OkJ"/>
+                            <constraint firstItem="Hp4-u2-bTF" firstAttribute="bottom" secondItem="jHa-S8-uzC" secondAttribute="bottom" type="default" id="77c-oB-Efe"/>
+                            <constraint firstItem="Hp4-u2-bTF" firstAttribute="trailing" secondItem="jHa-S8-uzC" secondAttribute="trailing" type="default" id="MuR-gg-S72"/>
+                            <constraint firstItem="Hp4-u2-bTF" firstAttribute="leading" secondItem="jHa-S8-uzC" secondAttribute="leading" type="default" id="RFQ-RU-z9S"/>
+                            <constraint firstItem="Hp4-u2-bTF" firstAttribute="top" secondItem="jHa-S8-uzC" secondAttribute="top" type="default" id="cWb-Z0-XzL"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="MTM-4s-Neb"/>
@@ -3725,27 +3803,37 @@ Cgo
                                 <nil key="highlightedColor"/>
                             </label>
                             <scrollView opaque="NO" clearsContextBeforeDrawing="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uaD-c0-XRs">
+                                <subviews>
+                                    <textView opaque="NO" clearsContextBeforeDrawing="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bmy-mS-fTG">
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="406" id="Asy-X8-Rmg"/>
+                                            <constraint firstAttribute="width" constant="280" id="a6v-Dz-IW9"/>
+                                        </constraints>
+                                        <string key="text">World Computer Exchange (WCE) is a global education and environment organization founded in 1999 to connect more youth in developing countries to opportunities, skills, and understanding via the Internet – while keeping working computers out of landfills.   With our 700 volunteers, WCE is the largest US non-profit provider of reused computers to connect youth in developing countries.  Studies show that the reuse of a computer is 25 times more carbon efficient than destroying one and re-manufacturing a new one.  Our work helps to implement the UN’s Millennium Development Goals in Education.</string>
+                                        <color key="textColor" red="0.99215692281723022" green="0.9960784912109375" blue="0.99215692281723022" alpha="1" colorSpace="deviceRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <label opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="left" text="ABOUT WCE:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S2O-BD-B4t">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="39" id="wUz-ut-eed"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <color key="textColor" red="0.99215692281723022" green="0.9960784912109375" blue="0.99215692281723022" alpha="1" colorSpace="deviceRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="S2O-BD-B4t" firstAttribute="centerX" secondItem="bmy-mS-fTG" secondAttribute="centerX" type="default" id="1dD-zW-nZH"/>
+                                    <constraint firstItem="bmy-mS-fTG" firstAttribute="leading" secondItem="uaD-c0-XRs" secondAttribute="leading" constant="10" id="WIp-fv-lHE"/>
+                                    <constraint firstItem="S2O-BD-B4t" firstAttribute="top" secondItem="uaD-c0-XRs" secondAttribute="top" constant="10" id="aZf-ms-5dr"/>
+                                    <constraint firstAttribute="bottom" secondItem="bmy-mS-fTG" secondAttribute="bottom" constant="71" id="fXz-fP-vwN"/>
+                                    <constraint firstAttribute="trailing" secondItem="bmy-mS-fTG" secondAttribute="trailing" constant="30" id="k9H-th-D6j"/>
+                                    <constraint firstItem="bmy-mS-fTG" firstAttribute="centerY" secondItem="uaD-c0-XRs" secondAttribute="centerY" type="default" id="qCX-Oo-WEZ"/>
+                                </constraints>
                             </scrollView>
-                            <textView opaque="NO" clearsContextBeforeDrawing="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bmy-mS-fTG">
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="406" id="Asy-X8-Rmg"/>
-                                    <constraint firstAttribute="width" constant="280" id="a6v-Dz-IW9"/>
-                                </constraints>
-                                <string key="text">World Computer Exchange (WCE) is a global education and environment organization founded in 1999 to connect more youth in developing countries to opportunities, skills, and understanding via the Internet – while keeping working computers out of landfills.   With our 700 volunteers, WCE is the largest US non-profit provider of reused computers to connect youth in developing countries.  Studies show that the reuse of a computer is 25 times more carbon efficient than destroying one and re-manufacturing a new one.  Our work helps to implement the UN’s Millennium Development Goals in Education.</string>
-                                <color key="textColor" red="0.91372555489999996" green="0.78039222959999999" blue="0.29019609089999998" alpha="1" colorSpace="deviceRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <label opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="left" text="ABOUT WCE:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S2O-BD-B4t">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="39" id="wUz-ut-eed"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <color key="textColor" red="0.0" green="0.89411771299999998" blue="1" alpha="1" colorSpace="deviceRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FEJ-eL-5GW">
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Visit Our Website!!!">
@@ -3763,16 +3851,12 @@ Cgo
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="uaD-c0-XRs" firstAttribute="leading" secondItem="7hD-dv-Bsr" secondAttribute="leading" type="default" id="06a-Rf-HPE"/>
-                            <constraint firstItem="bmy-mS-fTG" firstAttribute="centerX" secondItem="FEJ-eL-5GW" secondAttribute="centerX" type="default" id="3yC-Cp-TRi"/>
-                            <constraint firstItem="bmy-mS-fTG" firstAttribute="top" secondItem="7hD-dv-Bsr" secondAttribute="top" constant="68" id="41v-EV-F0L"/>
                             <constraint firstItem="uaD-c0-XRs" firstAttribute="bottom" secondItem="7hD-dv-Bsr" secondAttribute="bottom" type="default" id="9Vl-I8-jjE"/>
                             <constraint firstItem="uaD-c0-XRs" firstAttribute="top" secondItem="7hD-dv-Bsr" secondAttribute="top" type="default" id="CyT-a8-nGe"/>
                             <constraint firstAttribute="bottom" secondItem="FEJ-eL-5GW" secondAttribute="bottom" constant="28" id="DPd-BM-Ejb"/>
-                            <constraint firstItem="S2O-BD-B4t" firstAttribute="centerX" secondItem="bmy-mS-fTG" secondAttribute="centerX" type="default" id="DZ7-aX-MOt"/>
-                            <constraint firstItem="bmy-mS-fTG" firstAttribute="leading" secondItem="7hD-dv-Bsr" secondAttribute="leading" constant="10" id="GF0-Eq-CBY"/>
                             <constraint firstItem="uaD-c0-XRs" firstAttribute="trailing" secondItem="7hD-dv-Bsr" secondAttribute="trailing" type="default" id="I2C-Xg-Mri"/>
-                            <constraint firstItem="S2O-BD-B4t" firstAttribute="top" secondItem="7hD-dv-Bsr" secondAttribute="top" constant="10" id="KgU-eZ-Qjw"/>
                             <constraint firstItem="ES2-HB-z0J" firstAttribute="centerX" secondItem="uaD-c0-XRs" secondAttribute="centerX" type="default" id="SMe-Ac-oqk"/>
+                            <constraint firstItem="FEJ-eL-5GW" firstAttribute="leading" secondItem="7hD-dv-Bsr" secondAttribute="leading" constant="68" id="lRN-ze-tZ8"/>
                             <constraint firstItem="ES2-HB-z0J" firstAttribute="top" secondItem="7hD-dv-Bsr" secondAttribute="top" constant="20" symbolic="YES" type="default" id="mb3-YV-GOq"/>
                         </constraints>
                     </view>
