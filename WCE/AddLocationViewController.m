@@ -304,7 +304,7 @@
             replaced = true;
             savedIdx = idx;
         }
-        NSLog(@"locations count %d", [[sharedUser savedLocations] count]);
+       // NSLog(@"locations count %d", [[sharedUser savedLocations] count]);
         NSLog(@"index %d", idx);
     }
     if (!replaced){
@@ -312,6 +312,8 @@
     }else{
         [[sharedUser savedLocations] replaceObjectAtIndex:savedIdx withObject:curLocation];
     }
+    NSLog(@"Locations count %d", [[sharedUser savedLocations] count]);
+    
     
     [self dismissViewControllerAnimated:YES completion:nil];
 }

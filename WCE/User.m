@@ -8,7 +8,7 @@
 #import "Location.h"
 
 @implementation User
-@synthesize savedLocations, loggedIn, isEditingLocation, editingLocation;
+@synthesize savedLocations, savedPartners, loggedIn, isEditingLocation, editingLocation, sharedPartner;
 
 static User* _sharedUser = nil;
 
@@ -41,8 +41,11 @@ static User* _sharedUser = nil;
         // initialize stuff here
         self.loggedIn = false;
         self.savedLocations = [[NSMutableArray alloc] init];
+        self.savedPartners = [[NSMutableArray alloc] init];
         self.isEditingLocation = false;
         self.editingLocation = [[Location alloc] init];
+        self.isEditingPartner = false;
+        self.editingPartner = @"";
     }
     return self;
 }

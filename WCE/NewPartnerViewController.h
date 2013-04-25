@@ -6,9 +6,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "User.h"
 
 @interface NewPartnerViewController : UIViewController
 
-@property IBOutlet UITextField *name;
+@property IBOutlet UITextField *nameField;
+@property IBOutlet UIBarButtonItem *saveButton;
+@property User *sharedUser;
+
+
+- (IBAction)saveChanges:(id)sender;
+- (IBAction)cancel:(id)sender;
 
 @end

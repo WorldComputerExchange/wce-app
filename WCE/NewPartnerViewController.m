@@ -6,6 +6,7 @@
 //
 
 #import "NewPartnerViewController.h"
+#import "User.h"
 
 @interface NewPartnerViewController ()
 
@@ -13,7 +14,7 @@
 
 @implementation NewPartnerViewController
 
-@synthesize name;
+@synthesize nameField, sharedUser, saveButton;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -28,12 +29,62 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+   // [saveButton setAction:@selector(saveChanges:)];
+    
+    sharedUser = [User sharedUser];
+    
+    if ([sharedUser isEditingPartner]){
+        [nameField setText:[sharedUser editingPartner]];
+    }
 }
+
+- (void)viewDidDisappear:(BOOL)animated{
+    [sharedUser setIsEditingPartner:false];
+}
+
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
+- (void)saveChanges:(id)sender  
+{
+    /*save input fields to our user
+     Should check that these values are non-null!*/
+    NSLog(@"changes being saved!");
+    NSString *name = nameField.text;
+    if (name.length > 0){
+    
+        /**check if a location with this name exists already and replace it if it does**/
+        int savedIdx;
+        BOOL replaced = false;
+    
+        NSMutableArray *savedPartners = [sharedUser savedPartners];
+        for (int idx = 0; idx < [savedPartners count]; idx++){
+            NSString *cur = [savedPartners objectAtIndex:idx];
+            if ([cur isEqualToString:name]){
+                replaced = true;
+                savedIdx = idx;
+            }   
+        }
+        if (!replaced){
+            [[sharedUser savedPartners] addObject:name];
+        }else{
+            [[sharedUser savedPartners] replaceObjectAtIndex:savedIdx withObject:name];
+        }
+        NSLog(@"Number of saved partners %d", [[sharedUser savedPartners] count]);
+    }
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)cancel:(id)sender
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
 
 @end

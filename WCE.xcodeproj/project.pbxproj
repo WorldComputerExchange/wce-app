@@ -25,6 +25,7 @@
 		8C9C3AED16CC60D000F95A6B /* WCEViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C9C3AEC16CC60D000F95A6B /* WCEViewController.m */; };
 		8CB0441916DC47910000AD0F /* LocationMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CB0441816DC47910000AD0F /* LocationMapViewController.m */; };
 		8CD27FEE1720BC6B00973A04 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CD27FED1720BC6B00973A04 /* User.m */; };
+		8CD27FF31728354500973A04 /* PartnerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CD27FF21728354400973A04 /* PartnerViewController.m */; };
 		9E067ABF172769DC00C770A0 /* iphone_13539_miscellaneous_earth_earth_at_night.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9E067ABE172769DC00C770A0 /* iphone_13539_miscellaneous_earth_earth_at_night.jpg */; };
 		9E067AC11727727700C770A0 /* 136676809046747.gif in Resources */ = {isa = PBXBuildFile; fileRef = 9E067AC01727727700C770A0 /* 136676809046747.gif */; };
 		9E067AC71727763B00C770A0 /* 136676912132100.gif in Resources */ = {isa = PBXBuildFile; fileRef = 9E067AC61727763B00C770A0 /* 136676912132100.gif */; };
@@ -74,6 +75,8 @@
 		8CB0441816DC47910000AD0F /* LocationMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationMapViewController.m; sourceTree = "<group>"; };
 		8CD27FEC1720BC6B00973A04 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		8CD27FED1720BC6B00973A04 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		8CD27FF11728354400973A04 /* PartnerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PartnerViewController.h; sourceTree = "<group>"; };
+		8CD27FF21728354400973A04 /* PartnerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PartnerViewController.m; sourceTree = "<group>"; };
 		9E067ABE172769DC00C770A0 /* iphone_13539_miscellaneous_earth_earth_at_night.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = iphone_13539_miscellaneous_earth_earth_at_night.jpg; sourceTree = "<group>"; };
 		9E067AC01727727700C770A0 /* 136676809046747.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 136676809046747.gif; sourceTree = "<group>"; };
 		9E067AC61727763B00C770A0 /* 136676912132100.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 136676912132100.gif; sourceTree = "<group>"; };
@@ -239,21 +242,31 @@
 		8CB0441E16DC4D420000AD0F /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				FA98E2981726063E005EC158 /* NewPartner */,
 				FA98E2911722F986005EC158 /* Order Form */,
 				9ED3259B16DD53FF00EA38E0 /* AddressAnnotation.h */,
 				9ED3259C16DD53FF00EA38E0 /* AddressAnnotation.m */,
 				9E4B58C316FBD972007BE176 /* Cover Sheet */,
 				D058DCD816FBD28900132041 /* AboutWCE */,
+				8C27586F16CC829A00DEDAC8 /* Location */,
 				8CB0441516DC476E0000AD0F /* LocationMap */,
 				8C03243516DC424D0089CB81 /* AddLocation */,
 				8C03241F16DC2A7A0089CB81 /* SaveLocation */,
+				8CD27FF41728355100973A04 /* Partner */,
+				FA98E2981726063E005EC158 /* AddPartner */,
 				8C27587016CC82A500DEDAC8 /* Login */,
-				8C27586F16CC829A00DEDAC8 /* Location */,
 				8C9C3AEB16CC60D000F95A6B /* WCEViewController.h */,
 				8C9C3AEC16CC60D000F95A6B /* WCEViewController.m */,
 			);
 			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		8CD27FF41728355100973A04 /* Partner */ = {
+			isa = PBXGroup;
+			children = (
+				8CD27FF11728354400973A04 /* PartnerViewController.h */,
+				8CD27FF21728354400973A04 /* PartnerViewController.m */,
+			);
+			name = Partner;
 			sourceTree = "<group>";
 		};
 		9E4B58C316FBD972007BE176 /* Cover Sheet */ = {
@@ -283,13 +296,13 @@
 			name = "Order Form";
 			sourceTree = "<group>";
 		};
-		FA98E2981726063E005EC158 /* NewPartner */ = {
+		FA98E2981726063E005EC158 /* AddPartner */ = {
 			isa = PBXGroup;
 			children = (
 				FA98E2951726062F005EC158 /* NewPartnerViewController.h */,
 				FA98E2961726062F005EC158 /* NewPartnerViewController.m */,
 			);
-			name = NewPartner;
+			name = AddPartner;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -383,6 +396,7 @@
 				8CD27FEE1720BC6B00973A04 /* User.m in Sources */,
 				FA98E2941722F9EE005EC158 /* OrderFormViewController.m in Sources */,
 				FA98E2971726062F005EC158 /* NewPartnerViewController.m in Sources */,
+				8CD27FF31728354500973A04 /* PartnerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

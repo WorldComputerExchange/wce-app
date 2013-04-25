@@ -15,5 +15,9 @@
 @property (nonatomic, assign) BOOL isEditingLocation;
 @property (nonatomic, retain) Location *editingLocation;
 
+@property (nonatomic, assign) BOOL isEditingPartner;
+@property (nonatomic, retain) NSString *editingPartner;
+@property (nonatomic, retain) NSString *sharedPartner;
+
 + (User *)sharedUser;
 @end
