@@ -44,8 +44,9 @@
 }
 
 
-- (void)viewWillAppear:(BOOL)animated{
-        
+- (void)viewWillAppear:(BOOL)animated
+{
+	[[self view] setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"136676912132100.gif"]]];
 }
 
 - (void)viewDidLoad
