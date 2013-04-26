@@ -22,7 +22,6 @@
 		8C9C3AE516CC60D000F95A6B /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C9C3AE416CC60D000F95A6B /* Default@2x.png */; };
 		8C9C3AE716CC60D000F95A6B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C9C3AE616CC60D000F95A6B /* Default-568h@2x.png */; };
 		8C9C3AEA16CC60D000F95A6B /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C9C3AE816CC60D000F95A6B /* MainStoryboard.storyboard */; };
-		8C9C3AED16CC60D000F95A6B /* WCEViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C9C3AEC16CC60D000F95A6B /* WCEViewController.m */; };
 		8CB0441916DC47910000AD0F /* LocationMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CB0441816DC47910000AD0F /* LocationMapViewController.m */; };
 		8CD27FEE1720BC6B00973A04 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CD27FED1720BC6B00973A04 /* User.m */; };
 		8CD27FF31728354500973A04 /* PartnerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CD27FF21728354400973A04 /* PartnerViewController.m */; };
@@ -69,8 +68,6 @@
 		8C9C3AE416CC60D000F95A6B /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		8C9C3AE616CC60D000F95A6B /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		8C9C3AE916CC60D000F95A6B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		8C9C3AEB16CC60D000F95A6B /* WCEViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WCEViewController.h; sourceTree = "<group>"; };
-		8C9C3AEC16CC60D000F95A6B /* WCEViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WCEViewController.m; sourceTree = "<group>"; };
 		8CB0441716DC47910000AD0F /* LocationMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationMapViewController.h; sourceTree = "<group>"; };
 		8CB0441816DC47910000AD0F /* LocationMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationMapViewController.m; sourceTree = "<group>"; };
 		8CD27FEC1720BC6B00973A04 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
@@ -254,8 +251,6 @@
 				8CD27FF41728355100973A04 /* Partner */,
 				FA98E2981726063E005EC158 /* AddPartner */,
 				8C27587016CC82A500DEDAC8 /* Login */,
-				8C9C3AEB16CC60D000F95A6B /* WCEViewController.h */,
-				8C9C3AEC16CC60D000F95A6B /* WCEViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -383,7 +378,6 @@
 			files = (
 				8C9C3ADD16CC60D000F95A6B /* main.m in Sources */,
 				8C9C3AE116CC60D000F95A6B /* WCEAppDelegate.m in Sources */,
-				8C9C3AED16CC60D000F95A6B /* WCEViewController.m in Sources */,
 				8C27586B16CC820E00DEDAC8 /* LoginViewController.m in Sources */,
 				8C27586E16CC828F00DEDAC8 /* LocationViewController.m in Sources */,
 				8C03242316DC2AB30089CB81 /* SaveLocationViewController.m in Sources */,

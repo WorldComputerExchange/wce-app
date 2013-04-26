@@ -278,45 +278,54 @@
      Should check that these values are non-null!*/
     Location *curLocation = [[Location alloc] init];
     
-    [curLocation setName:location.text];
+    if(location.text.length > 0){
+        [curLocation setName:location.text];
     
-    [curLocation setContact:contact.text];
+        [curLocation setContact:contact.text];
     
-    [curLocation setPhone:phone.text];
+        [curLocation setPhone:phone.text];
     
-    [curLocation setAddress:address.text];
+        [curLocation setAddress:address.text];
     
-    [curLocation setCity:city.text];
-    NSLog(@"selectedCountry %@", selectedCountry);
-    NSLog(@"selectedLanguage %@", selectedLanguage);
-    [curLocation setCountry:selectedCountry];
+        [curLocation setCity:city.text];
+        NSLog(@"selectedCountry %@", selectedCountry);
+        NSLog(@"selectedLanguage %@", selectedLanguage);
+        [curLocation setCountry:selectedCountry];
     
-    [curLocation setLanguage:selectedLanguage];
+        [curLocation setLanguage:selectedLanguage];
     
-    /**check if a location with this name exists already and replace it if it does**/
-    int savedIdx;
-    BOOL replaced = false;
+        /**check if a location with this name exists already and replace it if it does**/
+        int savedIdx;
+        BOOL replaced = false;
     
-    NSMutableArray *savedLocations = [sharedUser savedLocations];
-    for (int idx = 0; idx < [savedLocations count]; idx++){
-        Location *cur = [savedLocations objectAtIndex:idx];
-        if ([cur.name isEqualToString:curLocation.name] ||
-            [cur.name isEqualToString: [[sharedUser editingLocation] name]]){
-            replaced = true;
-            savedIdx = idx;
+        NSMutableArray *savedLocations = [sharedUser savedLocations];
+        for (int idx = 0; idx < [savedLocations count]; idx++){
+            Location *cur = [savedLocations objectAtIndex:idx];
+            if ([cur.name isEqualToString:curLocation.name] ||
+                [cur.name isEqualToString: [[sharedUser editingLocation] name]]){
+                replaced = true;
+                savedIdx = idx;
+            }
+            // NSLog(@"locations count %d", [[sharedUser savedLocations] count]);
+            NSLog(@"index %d", idx);
         }
-       // NSLog(@"locations count %d", [[sharedUser savedLocations] count]);
-        NSLog(@"index %d", idx);
-    }
-    if (!replaced){
-        [[sharedUser savedLocations] addObject:curLocation];
+        if (!replaced){
+            [[sharedUser savedLocations] addObject:curLocation];
+        }else{
+            [[sharedUser savedLocations] replaceObjectAtIndex:savedIdx withObject:curLocation];
+        }
+        NSLog(@"Locations count %d", [[sharedUser savedLocations] count]);
+    
+    
+        [self dismissViewControllerAnimated:YES completion:nil];
     }else{
-        [[sharedUser savedLocations] replaceObjectAtIndex:savedIdx withObject:curLocation];
+        // Copied this right off a website, it just creates an alert box that tells you that the passcode you entered was wrong
+        UIAlertView *blankNameMessage = [[UIAlertView alloc] initWithTitle:@"Blank Location Name" message:@"Please enter a location name." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+        
+        // Actually shows the alert message
+        [blankNameMessage show];
+        
     }
-    NSLog(@"Locations count %d", [[sharedUser savedLocations] count]);
-    
-    
-    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 // called when the keyboard is shown
