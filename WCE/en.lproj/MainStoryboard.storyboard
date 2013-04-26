@@ -2866,16 +2866,108 @@ Cg
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YcU-JH-tfh">
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bpd-lM-MZY">
-                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bpd-lM-MZY">
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="306" id="DrA-qq-T6c"/>
                                         </constraints>
-                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <attributedString key="attributedText">
+                                            <fragment>
+                                                <string key="content">WCE Implementation Questions (meant to help guide your planning)
+</string>
+                                                <attributes>
+                                                    <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="18" name="Helvetica"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment>
+                                                <string key="content">
+1. In what year did your organisation begin?
+
+
+2. What was your budget in US Dollars last year?
+
+
+3. What background information about your organisation would you like to share?
+
+
+4. What prior experience has your organisation had with technology?
+
+
+5. How do you plan to use the computers you are ordering?
+
+
+6. What is the timeline for you to implement your project?
+
+
+7. Will most of this equipment be used most of the time by youth up to age 24?  
+
+8. What fees will you charge youth to use this equipment?  
+
+
+9. What expenses in US Dollars do you expect to make this project successful?
+
+
+10. What is your estimated timeframe for raising your needed funds?  Please list some sources and donors from whom you expect to raise funds?  (WCE can help you with fund raising ideas, review of your proposal and sending emails of support to donors that you contact.)
+
+
+11. How will you pay for the ongoing costs for staff, electricity, internet connection &amp; consumables?
+
+
+12. What training will you provide to teachers, students and others?
+
+
+13. Do you have any special program to ensure access to computers by girls?
+
+
+14. How will you clear the equipment quickly from the port paying as little as possible in port charges, demurrage, customs and VAT?
+
+
+15. How will you inform the press about the arrival of this technology to help with security?
+
+
+16. How and where will you sort, reset the voltage toggle switches, repair and prepare the equipment for distribution to the sites?
+
+
+17. How will you adapt the wall plugs of the USA style power cords that we ship?
+
+
+18. How will the equipment get from the sorting and preparing location to each of the sites?
+
+
+19. Who will install this equipment at each site?
+
+
+20. What content will you install in each computer for when it cannot be connected to the internet?
+
+
+21. Do you have plans for using these computers for distance learning?
+
+
+22. How will you recycle the toxins in this equipment when it is no longer usable?  
+
+
+23. Can you please identify the name of a computer recycler or refurbisher near you?
+
+
+24. Do you agree to complete a brief annual evaluation page for the next three years?  
+
+
+25. What are your greatest hopes and fears about this shipment?
+
+</string>
+                                                <attributes>
+                                                    <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="14" name="Helvetica"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                 </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="Bpd-lM-MZY" firstAttribute="centerY" secondItem="YcU-JH-tfh" secondAttribute="centerY" type="default" id="2jH-Ez-kT8"/>
                                     <constraint firstItem="Bpd-lM-MZY" firstAttribute="leading" secondItem="YcU-JH-tfh" secondAttribute="leading" constant="14" id="SBm-rl-69L"/>
@@ -2885,7 +2977,7 @@ Cg
                                 </constraints>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="YcU-JH-tfh" firstAttribute="top" secondItem="9Yq-sB-Bbh" secondAttribute="top" type="default" id="ed7-y7-dsk"/>
                             <constraint firstItem="YcU-JH-tfh" firstAttribute="bottom" secondItem="9Yq-sB-Bbh" secondAttribute="bottom" type="default" id="kcc-KU-eM2"/>
