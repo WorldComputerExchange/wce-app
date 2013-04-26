@@ -2511,10 +2511,10 @@ Cg
             </objects>
             <point key="canvasLocation" x="2254" y="1505"/>
         </scene>
-        <!--Table View Controller - NP Forms-->
+        <!--Forms View Controller - NP Forms-->
         <scene sceneID="0bg-w9-sRA">
             <objects>
-                <tableViewController title="NP Forms" id="YRu-f8-xRD" sceneMemberID="viewController">
+                <tableViewController title="NP Forms" id="YRu-f8-xRD" customClass="FormsViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="udV-f9-eQe">
                         <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -3587,6 +3587,9 @@ WCE Fundraising: WCE raises the final 1/3 of our sourcing &amp; shipping costs f
             <relationships>
                 <relationship kind="outlet" name="ChooseCountry" candidateClass="UITableView"/>
             </relationships>
+        </class>
+        <class className="FormsViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FormsViewController.h"/>
         </class>
         <class className="LocationMapViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/LocationMapViewController.h"/>
