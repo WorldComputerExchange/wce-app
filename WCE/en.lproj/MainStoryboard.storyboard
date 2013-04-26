@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="11G63b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Fvu-h0-ZII">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Fvu-h0-ZII">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
@@ -160,11 +160,11 @@
                             <constraint firstItem="Dd4-pk-PvU" firstAttribute="centerX" secondItem="zcX-hG-ZtP" secondAttribute="centerX" type="default" id="ZBx-6W-SmJ"/>
                             <constraint firstItem="yfQ-Bp-V75" firstAttribute="centerX" secondItem="zcX-hG-ZtP" secondAttribute="centerX" type="default" id="an4-MM-bht"/>
                             <constraint firstItem="yfQ-Bp-V75" firstAttribute="top" secondItem="3" secondAttribute="top" constant="30" id="fNI-ut-aDL"/>
+                            <constraint firstAttribute="bottom" secondItem="g0F-Bc-zcm" secondAttribute="bottom" constant="200" id="g49-Nl-4P2"/>
                             <constraint firstItem="PEE-h6-IeA" firstAttribute="top" secondItem="3" secondAttribute="top" constant="201" id="oja-Fw-9RO"/>
                             <constraint firstItem="zcX-hG-ZtP" firstAttribute="top" secondItem="3" secondAttribute="top" constant="121" id="psI-Fw-Mss"/>
                             <constraint firstItem="Dd4-pk-PvU" firstAttribute="top" secondItem="zcX-hG-ZtP" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="qpU-S0-7hJ"/>
                             <constraint firstItem="g0F-Bc-zcm" firstAttribute="centerX" secondItem="PEE-h6-IeA" secondAttribute="centerX" type="default" id="qvF-5Q-Xjm"/>
-                            <constraint firstItem="g0F-Bc-zcm" firstAttribute="centerY" secondItem="3" secondAttribute="centerY" type="default" id="yOD-71-vOp"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="yaR-XD-8jg"/>
