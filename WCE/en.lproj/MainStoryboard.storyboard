@@ -155,16 +155,16 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="PEE-h6-IeA" firstAttribute="centerX" secondItem="Dd4-pk-PvU" secondAttribute="centerX" type="default" id="LnW-Tf-0LA"/>
-                            <constraint firstItem="g0F-Bc-zcm" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" type="default" id="TSJ-Bd-zyk"/>
+                            <constraint firstItem="yfQ-Bp-V75" firstAttribute="centerX" secondItem="PEE-h6-IeA" secondAttribute="centerX" type="default" id="12e-u0-cc3"/>
+                            <constraint firstAttribute="bottom" secondItem="g0F-Bc-zcm" secondAttribute="bottom" constant="165" id="6HM-vt-W8A"/>
+                            <constraint firstItem="g0F-Bc-zcm" firstAttribute="centerX" secondItem="PEE-h6-IeA" secondAttribute="centerX" type="default" id="Pgr-Af-Cej"/>
+                            <constraint firstItem="yfQ-Bp-V75" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" type="default" id="RXx-uC-K3U"/>
                             <constraint firstItem="Dd4-pk-PvU" firstAttribute="centerX" secondItem="zcX-hG-ZtP" secondAttribute="centerX" type="default" id="ZBx-6W-SmJ"/>
                             <constraint firstItem="yfQ-Bp-V75" firstAttribute="centerX" secondItem="zcX-hG-ZtP" secondAttribute="centerX" type="default" id="an4-MM-bht"/>
                             <constraint firstItem="yfQ-Bp-V75" firstAttribute="top" secondItem="3" secondAttribute="top" constant="30" id="fNI-ut-aDL"/>
-                            <constraint firstAttribute="bottom" secondItem="g0F-Bc-zcm" secondAttribute="bottom" constant="200" id="g49-Nl-4P2"/>
                             <constraint firstItem="PEE-h6-IeA" firstAttribute="top" secondItem="3" secondAttribute="top" constant="201" id="oja-Fw-9RO"/>
                             <constraint firstItem="zcX-hG-ZtP" firstAttribute="top" secondItem="3" secondAttribute="top" constant="121" id="psI-Fw-Mss"/>
                             <constraint firstItem="Dd4-pk-PvU" firstAttribute="top" secondItem="zcX-hG-ZtP" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="qpU-S0-7hJ"/>
-                            <constraint firstItem="g0F-Bc-zcm" firstAttribute="centerX" secondItem="PEE-h6-IeA" secondAttribute="centerX" type="default" id="qvF-5Q-Xjm"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="yaR-XD-8jg"/>
