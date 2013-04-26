@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Fvu-h0-ZII">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="11G63b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Fvu-h0-ZII">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
@@ -2763,90 +2763,85 @@ Cg
                         <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" clearsContextBeforeDrawing="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yxS-Us-huL">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eDr-yN-6SQ">
                                 <subviews>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sjt-4X-zWf">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jiX-om-aSA">
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="258" id="Gbd-eS-s3e"/>
-                                            <constraint firstAttribute="height" constant="21" id="qzZ-FB-ch5"/>
+                                            <constraint firstAttribute="width" constant="305" id="heA-d7-Okb"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gvp-lv-uwv">
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="97" id="jAo-tH-E5l"/>
-                                        </constraints>
+                                        <mutableString key="text">~  Please no pdf files  ~  Please refer to our “Costs” page  ~
+
+
+1. Will you be sending us a letter of commitment from a Rotary Club, Peace Corps Volunteer or iEARN Country Coordinator for a 5% sourcing cost reduction (unless Sponsored)? __ Yes  __ No  
+
+
+2. Computer order (see cost list):  Please enter the number of computers on the lines provided:                             __ Pentium 4s &amp; 5s     __ Pentium 3s with 20% P4s     __ Pentium 2s   
+
+
+3. Are you interested in LTSP thin client install with loaded P5s as servers &amp; help? __ Yes   __ No  
+
+
+4. Are you willing to pay extra to get laptops?      ___ Yes       ___ No                                                                                   How many?  ___ Pentium 4s    ___ Pentium 3s 
+
+
+5. Are you willing to pay substantially extra to get LCD flat screen monitors?  ___ Yes       ___ No  
+                                                           How many?   ___ LCD 15-17” flat screen monitors     ___ CRT 15-19” color monitors 
+
+
+6. 110 volt printers and scanners order:  Please enter the number of printers on the lines provided (1 free per 10 computers):  __ Dot matrix    __ Ink Jet      __ Laser     __ Printer/Copier if available
+
+
+7. Are you willing to Pay WCE to install Ubuntu Operating System (more stable &amp; resistant to viruses), Libre/Office (like Microsoft Office), a ping to let WCE know if computer has been connected to the internet in a given month, and Content pack of: education (including Khan Academy videos), agriculture, health, technology (including MIT programming videos) &amp; environment content ?     ___ Yes       ___ No  (if you check no does this mean you do not want any operating system on the computer?  If you want Windows it costs an additional $5 each)
+
+
+8. Language in which you would like WCE to install the above content:  			  Please note that we usually ship English keyboards. (we can send directions for switching them over)
+
+
+9. Are you willing to pay WCE for online &amp; onsite iEARN teacher training?   ___ Yes     ___ No  
+
+
+10. If any of your sites is a school, is it interested in working with WCE to build an online school exchange with a school in Canada or the States?  (Priority is given to WCE Partners that subscribe to the WCE Development Package)     ___ Yes     ___ No  
+
+
+11. Are you willing to pay WCE $2,000 to deliver a 4 Terabyte copy of the 12 million document university-level eGranary digital library (English only) in a server?    ___ Yes     ___ No  
+
+
+12. If any of your sites is a university, is it interested in working with WCE to build a university exchange of faculty, students, curriculum &amp; materials with a university in Canada or the States?   ___ Yes    ___ No  
+
+
+13. Are you interested in having a small team of our technology and teacher training eCorps volunteers visit you?  __ Yes    __ No   
+What can you give in exchange for their visit?  
+
+
+14. Should we tell you about solar lights and midwife kits and other items?   __ Yes   __ No
+
+
+14. Are you interested in having WCE volunteers raise the last 1/3 of the sourcing and shipping costs from Sponsors outside of your country?     ___ Yes     ___ No  
+
+
+CONDITIONS:  Full containers only.  WCE needs 4 months to raise the final 1/3 after receipt of 2/3 of sourcing and shipping costs. The 15% cost for this work is added to the funds raised by WCE.  No additional 5% reduction for Sponsored Peace Corps, iEARN and Rotary shipments. Sponsorship is not available to for-profits, Partners that opt-out of our ping showing if a computer is connected to the internet, and not used to cover costs for Windows, laptops, LCD flat screen monitors or eGranary.</mutableString>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8X2-1O-iPz">
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="97" id="Tnu-Uw-Qgl"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Question" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cZp-U4-Wvk">
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="119" id="DRf-7G-iey"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Prospective Partner 1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oHU-uG-8eP">
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="180" id="Anq-hu-cPE"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nHQ-EW-yVw">
-                                        <color key="backgroundColor" red="0.16520171110000001" green="0.84361049109999997" blue="0.30890440670000002" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="196" id="Ta1-yi-25Y"/>
-                                            <constraint firstAttribute="height" constant="21" id="ZTd-d2-9zA"/>
-                                        </constraints>
-                                        <attributedString key="attributedText">
-                                            <fragment content="Please refer to our “Costs” page">
-                                                <attributes>
-                                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <font key="NSFont" size="13" name="Helvetica-Oblique"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                                </attributes>
-                                            </fragment>
-                                        </attributedString>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
                                 </subviews>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="Sjt-4X-zWf" firstAttribute="leading" secondItem="yxS-Us-huL" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="00l-JX-nZV"/>
-                                    <constraint firstItem="oHU-uG-8eP" firstAttribute="centerX" secondItem="yxS-Us-huL" secondAttribute="centerX" type="default" id="4Su-qZ-lbA"/>
-                                    <constraint firstItem="8X2-1O-iPz" firstAttribute="top" secondItem="yxS-Us-huL" secondAttribute="top" constant="640" id="7dx-yO-wPw"/>
-                                    <constraint firstItem="nHQ-EW-yVw" firstAttribute="top" secondItem="oHU-uG-8eP" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="9at-sQ-ZfN"/>
-                                    <constraint firstItem="8X2-1O-iPz" firstAttribute="leading" secondItem="cZp-U4-Wvk" secondAttribute="leading" type="default" id="H3W-p1-djE"/>
-                                    <constraint firstItem="oHU-uG-8eP" firstAttribute="top" secondItem="yxS-Us-huL" secondAttribute="top" constant="8" id="HPu-u5-KWc"/>
-                                    <constraint firstItem="cZp-U4-Wvk" firstAttribute="top" secondItem="gvp-lv-uwv" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="OPi-Ot-oaM"/>
-                                    <constraint firstItem="gvp-lv-uwv" firstAttribute="leading" secondItem="oHU-uG-8eP" secondAttribute="leading" type="default" id="fa6-EL-wWk"/>
-                                    <constraint firstAttribute="trailing" secondItem="Sjt-4X-zWf" secondAttribute="trailing" constant="42" id="fjX-WO-TG7"/>
-                                    <constraint firstAttribute="bottom" secondItem="gvp-lv-uwv" secondAttribute="bottom" constant="4" id="khJ-Qs-dM8"/>
-                                    <constraint firstItem="nHQ-EW-yVw" firstAttribute="leading" secondItem="yxS-Us-huL" secondAttribute="leading" constant="57" id="n7c-ne-Vjw"/>
-                                    <constraint firstItem="cZp-U4-Wvk" firstAttribute="leading" secondItem="yxS-Us-huL" secondAttribute="leading" constant="46" id="swA-5i-11u"/>
-                                    <constraint firstItem="Sjt-4X-zWf" firstAttribute="top" secondItem="yxS-Us-huL" secondAttribute="top" constant="428" id="tZA-P9-6PZ"/>
-                                    <constraint firstItem="gvp-lv-uwv" firstAttribute="top" secondItem="yxS-Us-huL" secondAttribute="top" constant="551" id="xpG-xL-WY7"/>
+                                    <constraint firstItem="jiX-om-aSA" firstAttribute="bottom" secondItem="eDr-yN-6SQ" secondAttribute="bottom" type="default" id="B0i-3t-JyX"/>
+                                    <constraint firstItem="jiX-om-aSA" firstAttribute="centerY" secondItem="eDr-yN-6SQ" secondAttribute="centerY" type="default" id="JlE-cd-uFg"/>
+                                    <constraint firstItem="jiX-om-aSA" firstAttribute="trailing" secondItem="eDr-yN-6SQ" secondAttribute="trailing" type="default" id="UYj-3z-Yfa"/>
+                                    <constraint firstItem="jiX-om-aSA" firstAttribute="leading" secondItem="eDr-yN-6SQ" secondAttribute="leading" constant="15" id="tQ1-gd-pEI"/>
+                                    <constraint firstItem="jiX-om-aSA" firstAttribute="top" secondItem="eDr-yN-6SQ" secondAttribute="top" type="default" id="w2y-g3-I91"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="yxS-Us-huL" firstAttribute="leading" secondItem="X6Z-sp-pPB" secondAttribute="leading" type="default" id="5Az-hP-iQp"/>
-                            <constraint firstAttribute="bottom" secondItem="yxS-Us-huL" secondAttribute="bottom" constant="-37" id="Ekl-gM-cEq"/>
-                            <constraint firstItem="yxS-Us-huL" firstAttribute="top" secondItem="X6Z-sp-pPB" secondAttribute="top" type="default" id="R15-WL-fIZ"/>
-                            <constraint firstItem="yxS-Us-huL" firstAttribute="trailing" secondItem="X6Z-sp-pPB" secondAttribute="trailing" type="default" id="UYj-rg-tJY"/>
+                            <constraint firstItem="eDr-yN-6SQ" firstAttribute="trailing" secondItem="X6Z-sp-pPB" secondAttribute="trailing" type="default" id="7G9-PD-apq"/>
+                            <constraint firstItem="eDr-yN-6SQ" firstAttribute="leading" secondItem="X6Z-sp-pPB" secondAttribute="leading" type="default" id="Fuj-zA-7FL"/>
+                            <constraint firstItem="eDr-yN-6SQ" firstAttribute="top" secondItem="X6Z-sp-pPB" secondAttribute="top" type="default" id="Jbp-uQ-995"/>
+                            <constraint firstItem="eDr-yN-6SQ" firstAttribute="bottom" secondItem="X6Z-sp-pPB" secondAttribute="bottom" type="default" id="q6F-OP-Sbp"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Order Form" id="ErZ-PQ-qoC">
@@ -3271,17 +3266,18 @@ WCE Fundraising: WCE raises the final 1/3 of our sourcing &amp; shipping costs f
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Name:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eBu-Q7-20K">
                                         <constraints>
                                             <constraint firstAttribute="width" constant="62" id="Cqt-vc-3Cp"/>
+                                            <constraint firstAttribute="height" constant="21" id="WCH-Dz-5cT"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="eBu-Q7-20K" firstAttribute="top" secondItem="ncK-pK-LpH" secondAttribute="top" constant="97" id="4k2-JP-d8G"/>
+                                    <constraint firstAttribute="bottom" secondItem="z9U-tb-j7z" secondAttribute="bottom" constant="428" id="IdA-Wu-LR7"/>
                                     <constraint firstItem="z9U-tb-j7z" firstAttribute="top" secondItem="ncK-pK-LpH" secondAttribute="top" constant="134" id="J26-qX-lf2"/>
-                                    <constraint firstAttribute="bottom" secondItem="z9U-tb-j7z" secondAttribute="bottom" constant="340" id="TS3-97-cNs"/>
                                     <constraint firstAttribute="trailing" secondItem="z9U-tb-j7z" secondAttribute="trailing" constant="85" id="cJJ-xQ-AfJ"/>
                                     <constraint firstItem="eBu-Q7-20K" firstAttribute="leading" secondItem="z9U-tb-j7z" secondAttribute="leading" type="default" id="nOK-W3-Swt"/>
                                     <constraint firstItem="eBu-Q7-20K" firstAttribute="leading" secondItem="ncK-pK-LpH" secondAttribute="leading" constant="36" id="sqs-x7-aB4"/>
