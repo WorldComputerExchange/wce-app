@@ -38,6 +38,11 @@
     }
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+	[[self view] setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"136676912132100.gif"]]];
+}
+
 - (void)viewDidDisappear:(BOOL)animated{
     [sharedUser setIsEditingPartner:false];
 }

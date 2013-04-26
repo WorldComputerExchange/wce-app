@@ -44,8 +44,9 @@
 }
 
 
-- (void)viewWillAppear:(BOOL)animated{
-        
+- (void)viewWillAppear:(BOOL)animated
+{
+	[[self view] setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"136676912132100.gif"]]];
 }
 
 - (void)viewDidLoad
@@ -333,11 +334,15 @@
     //aRect.size.height -= self.toolbar.frame.size.height;
     CGPoint fieldOrigin = _activeField.frame.origin;
     fieldOrigin.y -= _scrollView.contentOffset.y;
-	fieldOrigin.y += 40;
     fieldOrigin = [self.view convertPoint:fieldOrigin toView:self.view.superview];
     _originalOffset = _scrollView.contentOffset;
+	
+	// scroll the scrollview down a tiny bit more
+	CGRect fieldRect = _activeField.frame;
+	CGRect tallerRect = CGRectMake(fieldRect.origin.x, fieldRect.origin.y, fieldRect.size.width, fieldRect.size.height + 50); // 50 more
+	
     if (!CGRectContainsPoint(aRect, fieldOrigin) ) {
-        [_scrollView scrollRectToVisible:_activeField.frame animated:YES];
+        [_scrollView scrollRectToVisible:tallerRect animated:YES];
     }
 }
 

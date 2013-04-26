@@ -20,6 +20,11 @@ static NSArray *_previouslyGeocodedLocations;
 @implementation LocationMapViewController
 @synthesize mapView;
 
+- (void)viewWillAppear:(BOOL)animated
+{
+	[[self navigationItem] setTitle:@"Map"];
+}
+
 - (void)viewDidAppear:(BOOL)animated
 {
 	[self geocodeNewLocations];
@@ -39,42 +44,7 @@ static NSArray *_previouslyGeocodedLocations;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	NSLog(@"sdfjksdl");
-	
-	/*[[NSNotificationCenter defaultCenter] addObserver:self
-											 selector:@selector(geocodeNewLocations)
-												 name:@"shouldGeocodeNewLocation"
-											   object:nil];*/
-    
-    /*//Created variable c to store coordinate data
-    CLLocationCoordinate2D a;
-    a.latitude = 45.0;
-    a.longitude = -77.0;
-    
-    AddressAnnotation *addAnnotation = [[AddressAnnotation alloc] initWithCoordinate:a withSubtitle:@"Shaw Lake" withTitle:@"Canada"];
-    [mapView addAnnotation:addAnnotation];
-    
-    CLLocationCoordinate2D b;
-    b.latitude = 29.9792;
-    b.longitude = 31.1342;
-    
-    AddressAnnotation *addAnnotation1 = [[AddressAnnotation alloc] initWithCoordinate:b withSubtitle:@"Egypt" withTitle:@"Great Pyramid of Giza"];
-    [mapView addAnnotation:addAnnotation1];
-    
-    CLLocationCoordinate2D c;
-    c.latitude = -3.1600;
-    c.longitude = -60.0300;
-
-    AddressAnnotation *addAnnotation2 = [[AddressAnnotation alloc] initWithCoordinate:c withSubtitle:@"Brazil" withTitle:@"Amazon Rainforest"];
-    [mapView addAnnotation:addAnnotation2];
-    
-    CLLocationCoordinate2D d;
-    d.latitude =  36.1517;
-    d.longitude = 139.9214;
-
-    AddressAnnotation *addAnnotation3 = [[AddressAnnotation alloc] initWithCoordinate:d withSubtitle:@"Japan" withTitle:@"Tsukuba Circuit"];
-    [mapView addAnnotation:addAnnotation3];*/
-    
+	NSLog(@"sdfjksdl");    
 }
 
 - (MKAnnotationView *)mapView:(MKMapView *)mV viewForAnnotation:(id<MKAnnotation>)annotation
@@ -146,6 +116,20 @@ static NSArray *_previouslyGeocodedLocations;
 	[geocodingString appendString:@", "];
 	[geocodingString appendString:[thisLocation city]];
 	
+	if(![[thisLocation country] isEqualToString:@"NA"])
+	{
+		[geocodingString appendString:@", "];
+		[geocodingString appendString:[thisLocation country]];
+	}
+	else
+	{
+		//// exit procedure
+		if(index < [array count] - 1)
+			[self addAnnotationWithArray:array atIndex:(index + 1)];
+		else
+			_previouslyGeocodedLocations = [array copy]; /// keep a record of which ones we've already geocoded
+	}
+	
 	NSLog(@"index of thing: %i", [_previouslyGeocodedLocations indexOfObject:thisLocation]);
 	if([_previouslyGeocodedLocations indexOfObject:thisLocation] == NSNotFound || [_previouslyGeocodedLocations count] == 0)
 	{
@@ -167,6 +151,7 @@ static NSArray *_previouslyGeocodedLocations;
 				[mapView addAnnotation:annot];
 				[[[[User sharedUser] savedLocations] objectAtIndex:index] setAnnotation:annot]; // save the annotation to be used later
 				
+				//// exit procedure
 				if(index < [array count] - 1)
 					[self addAnnotationWithArray:array atIndex:(index + 1)];
 				else
@@ -174,13 +159,15 @@ static NSArray *_previouslyGeocodedLocations;
 			}
 			else
 			{
-				//NSLog(@"couldn't find location for %@", [thisLocation name]);
+				NSLog(@"**** couldn't find location for %@ ****", [thisLocation name]);
 			}
 		}];
 	}
 	else
 	{
 		[mapView addAnnotation:[thisLocation annotation]];
+		
+		//// exit procedure
 		if(index < [array count] - 1)
 			[self addAnnotationWithArray:array atIndex:(index + 1)];
 		else
