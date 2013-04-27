@@ -32,9 +32,9 @@
 		9E4B58C216FBD95F007BE176 /* CoverSheetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E4B58C116FBD95F007BE176 /* CoverSheetViewController.m */; };
 		9E88740A172A15CD00CA6849 /* button.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E887409172A15CD00CA6849 /* button.png */; };
 		9E88740C172A189300CA6849 /* login-button-generator.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E88740B172A189300CA6849 /* login-button-generator.png */; };
-		9E887410172A1D1800CA6849 /* button-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E88740F172A1D1800CA6849 /* button-1.png */; };
-		9E887412172A1D4300CA6849 /* button-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E887411172A1D4300CA6849 /* button-2.png */; };
 		9E887414172A1EA400CA6849 /* button-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E887413172A1EA400CA6849 /* button-3.png */; };
+		9E887416172A24D400CA6849 /* button-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E887415172A24D400CA6849 /* button-1.png */; };
+		9E887418172A254000CA6849 /* button-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E887417172A254000CA6849 /* button-2.png */; };
 		9ED3259D16DD53FF00EA38E0 /* AddressAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ED3259C16DD53FF00EA38E0 /* AddressAnnotation.m */; };
 		9ED3259F16DD5D4C00EA38E0 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9ED3259E16DD5D4C00EA38E0 /* MapKit.framework */; };
 		9ED695B316E28332005D1EDB /* WCE Content V5 copy.png in Resources */ = {isa = PBXBuildFile; fileRef = 9ED695B216E28332005D1EDB /* WCE Content V5 copy.png */; };
@@ -92,9 +92,9 @@
 		9E4B58C116FBD95F007BE176 /* CoverSheetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoverSheetViewController.m; sourceTree = "<group>"; };
 		9E887409172A15CD00CA6849 /* button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button.png; sourceTree = "<group>"; };
 		9E88740B172A189300CA6849 /* login-button-generator.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login-button-generator.png"; sourceTree = "<group>"; };
-		9E88740F172A1D1800CA6849 /* button-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button-1.png"; sourceTree = "<group>"; };
-		9E887411172A1D4300CA6849 /* button-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button-2.png"; sourceTree = "<group>"; };
 		9E887413172A1EA400CA6849 /* button-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button-3.png"; sourceTree = "<group>"; };
+		9E887415172A24D400CA6849 /* button-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button-1.png"; sourceTree = "<group>"; };
+		9E887417172A254000CA6849 /* button-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button-2.png"; sourceTree = "<group>"; };
 		9ED3259B16DD53FF00EA38E0 /* AddressAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressAnnotation.h; sourceTree = "<group>"; };
 		9ED3259C16DD53FF00EA38E0 /* AddressAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressAnnotation.m; sourceTree = "<group>"; };
 		9ED3259E16DD5D4C00EA38E0 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -249,6 +249,7 @@
 				9E88740F172A1D1800CA6849 /* button-1.png */,
 				9E887411172A1D4300CA6849 /* button-2.png */,
 				9E887413172A1EA400CA6849 /* button-3.png */,
+				9E887415172A24D400CA6849 /* button-1.png */,
 				9E88740B172A189300CA6849 /* login-button-generator.png */,
 				9E887409172A15CD00CA6849 /* button.png */,
 				9E067AC61727763B00C770A0 /* 136676912132100.gif */,
@@ -416,8 +417,6 @@
 				9E067AC71727763B00C770A0 /* 136676912132100.gif in Resources */,
 				9E88740A172A15CD00CA6849 /* button.png in Resources */,
 				9E88740C172A189300CA6849 /* login-button-generator.png in Resources */,
-				9E887410172A1D1800CA6849 /* button-1.png in Resources */,
-				9E887412172A1D4300CA6849 /* button-2.png in Resources */,
 				9E887414172A1EA400CA6849 /* button-3.png in Resources */,
 				D0F334B7172AC647006BACED /* first.png in Resources */,
 				D0F334B8172AC647006BACED /* second.png in Resources */,
