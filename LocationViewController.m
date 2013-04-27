@@ -7,6 +7,7 @@
 #import "LocationViewController.h"
 #import "Location.h"
 #import "User.h"
+#import "WCETabBarController.h"
 
 @interface LocationViewController ()
 
@@ -49,10 +50,24 @@
     if([locationTableView isEditing]){
         NSLog(@"Exited editing mode");
         [locationTableView setEditing:NO animated:YES];
+		
+		if([sender isKindOfClass:[WCETabBarController class]])
+		{
+			WCETabBarController *tabController = (WCETabBarController *)sender;
+			[[tabController editButton] setStyle:UIBarButtonItemStylePlain];
+			[[tabController editButton] setTitle:@"Edit"];
+		}
     }else {
          NSLog(@"Entered editing mode");
         [locationTableView setEditing:YES animated:YES];
         [locationTableView setAllowsSelectionDuringEditing:YES];
+		
+		if([sender isKindOfClass:[WCETabBarController class]])
+		{
+			WCETabBarController *tabController = (WCETabBarController *)sender;
+			[[tabController editButton] setStyle:UIBarButtonItemStyleDone];
+			[[tabController editButton] setTitle:@"Done"];
+		}
     }
 }
 
@@ -165,7 +180,7 @@
 
 
 // Returns a UIView that serves as the footer for this table view
-- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
+/*- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
 {
 	if(footerView == nil)
 	{
@@ -182,12 +197,12 @@
 	}
 	
 	return footerView;
-}
+}*/
 
 // Tells the table view how tall its footer should be (the footer contains the Choose from Map button)
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
 {
-	return 60;
+	return 0;
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender

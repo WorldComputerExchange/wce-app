@@ -23,6 +23,9 @@ static NSArray *_previouslyGeocodedLocations;
 - (void)viewWillAppear:(BOOL)animated
 {
 	[[self navigationItem] setTitle:@"Map"];
+	
+	for(Location *loc in _previouslyGeocodedLocations)
+		[mapView removeAnnotation:[loc annotation]];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -43,8 +46,7 @@ static NSArray *_previouslyGeocodedLocations;
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
-	NSLog(@"sdfjksdl");    
+    [super viewDidLoad];   
 }
 
 - (MKAnnotationView *)mapView:(MKMapView *)mV viewForAnnotation:(id<MKAnnotation>)annotation

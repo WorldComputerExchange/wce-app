@@ -15,4 +15,6 @@
 //@property (strong, nonatomic) NSArray *previouslyGeocodedLocations;
 @property (strong, nonatomic) CLGeocoder *geocoder;
 
+- (void)geocodeNewLocations;
+
 @end	

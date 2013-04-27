@@ -92,14 +92,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Am-hI-pEI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="311" y="-660"/>
+            <point key="canvasLocation" x="-49" y="-1048"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="5">
             <objects>
                 <viewController storyboardIdentifier="login" id="2" customClass="LoginViewController" sceneMemberID="viewController">
                     <view key="view" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="3">
-                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dd4-pk-PvU">
@@ -170,68 +170,53 @@
                     <navigationItem key="navigationItem" id="yaR-XD-8jg"/>
                     <connections>
                         <outlet property="passcodeField" destination="Dd4-pk-PvU" id="Qfl-5o-d0t"/>
-                        <segue destination="btu-Hv-3gZ" kind="push" identifier="pushLocation" id="WJU-4Z-lgZ"/>
+                        <segue destination="qTC-N3-nBb" kind="push" identifier="pushLocation" id="ibo-xw-8j6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="311" y="-3"/>
+            <point key="canvasLocation" x="-49" y="-391"/>
         </scene>
-        <!--Location View Controller - Choose a Location-->
-        <scene sceneID="zRP-aT-Df7">
+        <!--Tab Bar Controller-->
+        <scene sceneID="Hen-ZK-ymF">
             <objects>
-                <viewController storyboardIdentifier="location" id="btu-Hv-3gZ" customClass="LocationViewController" sceneMemberID="viewController">
-                    <view key="view" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="Dev-3f-g2O">
-                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <tableView opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="cLg-Kc-muo">
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <connections>
-                                    <outlet property="dataSource" destination="btu-Hv-3gZ" id="tD8-k6-vHH"/>
-                                    <outlet property="delegate" destination="btu-Hv-3gZ" id="dmG-Qn-mXk"/>
-                                </connections>
-                            </tableView>
-                        </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="cLg-Kc-muo" firstAttribute="leading" secondItem="Dev-3f-g2O" secondAttribute="leading" type="default" id="MJg-Px-715"/>
-                            <constraint firstItem="cLg-Kc-muo" firstAttribute="top" secondItem="Dev-3f-g2O" secondAttribute="top" type="default" id="Qil-HV-1xc"/>
-                            <constraint firstItem="cLg-Kc-muo" firstAttribute="bottom" secondItem="Dev-3f-g2O" secondAttribute="bottom" type="default" id="pRr-Kt-8fK"/>
-                            <constraint firstItem="cLg-Kc-muo" firstAttribute="trailing" secondItem="Dev-3f-g2O" secondAttribute="trailing" type="default" id="qxF-re-gXw"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="Choose a Location" id="VSM-CV-ywm">
-                        <barButtonItem key="leftBarButtonItem" title="Logoff" id="Jev-Av-t1v">
+                <tabBarController definesPresentationContext="YES" id="qTC-N3-nBb" customClass="WCETabBarController" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="43R-oV-k26">
+                        <barButtonItem key="leftBarButtonItem" title="Logoff" id="dTq-vr-wFl">
                             <connections>
-                                <segue destination="2" kind="push" id="SvC-dP-B97"/>
+                                <segue destination="2" kind="push" id="JwV-1x-uEz"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" tag="1" title="Edit" id="3W4-55-iMB">
+                        <barButtonItem key="rightBarButtonItem" title="Edit" id="pqk-T6-Ysh">
                             <connections>
-                                <action selector="enterEditingMode:" destination="btu-Hv-3gZ" id="xha-7v-rBO"/>
+                                <action selector="editButtonClicked:" destination="qTC-N3-nBb" id="CEW-rI-6fC"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="q6m-bA-RY5">
+                        <rect key="frame" x="129" y="330" width="163" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
                     <connections>
-                        <outlet property="editButton" destination="3W4-55-iMB" id="szv-Yp-ZJX"/>
-                        <outlet property="locationTableView" destination="cLg-Kc-muo" id="on2-lZ-d9d"/>
-                        <segue destination="8ux-5e-cxM" kind="push" identifier="pushMainMenu" id="vFc-FY-61o"/>
-                        <segue destination="eLM-ah-xed" kind="push" identifier="pushMapView" id="l8N-ms-qev"/>
-                        <segue destination="a24-Hj-6Z9" kind="modal" identifier="pushAddLocation" id="mba-u7-bmy"/>
+                        <outlet property="editButton" destination="pqk-T6-Ysh" id="fss-c6-Gkb"/>
+                        <segue destination="8ux-5e-cxM" kind="push" identifier="pushMainMenu" id="7Ag-zE-ghY"/>
+                        <segue destination="jrG-UY-ddc" kind="relationship" relationship="viewControllers" id="IU1-Rg-Xi9"/>
+                        <segue destination="eLM-ah-xed" kind="relationship" relationship="viewControllers" id="VSE-2T-8zZ"/>
                     </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="HGl-To-PNk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Kw-Hb-elY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="756" y="-43"/>
+            <point key="canvasLocation" x="434" y="-391"/>
         </scene>
         <!--Table View Controller - Start Page-->
         <scene sceneID="01E-yb-tGQ">
             <objects>
                 <tableViewController title="Start Page" id="8ux-5e-cxM" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="av4-vI-bhX">
-                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <sections>
@@ -338,7 +323,7 @@
             <objects>
                 <tableViewController title="Info Page" id="tkG-4S-fd1" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="1He-LX-XcI">
-                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <label key="tableHeaderView" opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="left" text="                      INFO:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="tqN-J4-DLb">
@@ -452,7 +437,7 @@
             <objects>
                 <viewController title="History" id="K4a-rk-o8I" sceneMemberID="viewController">
                     <view key="view" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="OlM-yd-zoL">
-                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView opaque="NO" clearsContextBeforeDrawing="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wnl-Ra-qtb">
@@ -512,7 +497,7 @@ In February 2012, Boston chapter (also headquarter chapter) in Hull, Massachuset
             <objects>
                 <viewController title="Phrases" id="cZI-bQ-FX5" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="T0e-vp-hbW">
-                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WXH-b8-zBx">
@@ -2454,7 +2439,7 @@ Cg
             <objects>
                 <tableViewController storyboardIdentifier="NewPartners" title="New Partners" id="JU5-ky-5R4" customClass="PartnerViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="nvB-db-ySh">
-                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -2520,7 +2505,7 @@ Cg
             <objects>
                 <tableViewController title="NP Forms" id="YRu-f8-xRD" customClass="FormsViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="udV-f9-eQe">
-                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <label key="tableHeaderView" opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="left" text="                   FORMS:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ERb-le-jcQ">
@@ -2616,7 +2601,7 @@ Cg
             <objects>
                 <viewController id="NnU-84-OpA" customClass="CoverSheetViewController" sceneMemberID="viewController">
                     <scrollView key="view" opaque="NO" clearsContextBeforeDrawing="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" id="flu-WF-ICz">
-                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="left" text="WCE Cover Sheet" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bD6-Gj-Kth">
@@ -2760,7 +2745,7 @@ Cg
             <objects>
                 <viewController id="7NW-1i-Xqm" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="X6Z-sp-pPB">
-                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eDr-yN-6SQ">
@@ -2857,7 +2842,7 @@ CONDITIONS:  Full containers only.  WCE needs 4 months to raise the final 1/3 af
             <objects>
                 <viewController storyboardIdentifier="Imp Questions" title="Imp Questions" id="bVi-sj-C7C" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9Yq-sB-Bbh">
-                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YcU-JH-tfh">
@@ -2994,7 +2979,7 @@ CONDITIONS:  Full containers only.  WCE needs 4 months to raise the final 1/3 af
             <objects>
                 <viewController title="Costs" id="Y6k-6c-ht6" sceneMemberID="viewController">
                     <view key="view" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="jHa-S8-uzC">
-                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E7K-1V-81z">
@@ -3084,7 +3069,7 @@ WCE Fundraising: WCE raises the final 1/3 of our sourcing &amp; shipping costs f
             <objects>
                 <viewController title="MISC" id="DJM-Rc-Ddq" sceneMemberID="viewController">
                     <view key="view" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="Hx0-Ne-EDp">
-                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView opaque="NO" clearsContextBeforeDrawing="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dEn-45-xQR">
@@ -3143,7 +3128,7 @@ WCE Fundraising: WCE raises the final 1/3 of our sourcing &amp; shipping costs f
             <objects>
                 <tableViewController title="Forms Page" id="SuZ-oP-kTY" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="FFG-o8-aSx">
-                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <label key="tableHeaderView" opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="left" text="                   FORMS:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jyd-gx-7eK">
@@ -3217,7 +3202,7 @@ WCE Fundraising: WCE raises the final 1/3 of our sourcing &amp; shipping costs f
             <objects>
                 <viewController id="zcT-kN-snK" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8eL-Pg-63u">
-                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C1j-Zp-as2">
@@ -3328,7 +3313,7 @@ WCE Fundraising: WCE raises the final 1/3 of our sourcing &amp; shipping costs f
             <objects>
                 <viewController title="Content" id="BdZ-ml-oe7" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SbZ-NK-kui">
-                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="WCE Content V5 NEW.png" translatesAutoresizingMaskIntoConstraints="NO" id="1mw-dS-8pc">
@@ -3362,6 +3347,40 @@ WCE Fundraising: WCE raises the final 1/3 of our sourcing &amp; shipping costs f
                 <panGestureRecognizer minimumNumberOfTouches="1" id="ccu-QD-Zl2"/>
             </objects>
             <point key="canvasLocation" x="3338" y="716"/>
+        </scene>
+        <!--Location View Controller - List-->
+        <scene sceneID="E2A-Ih-OAl">
+            <objects>
+                <viewController id="jrG-UY-ddc" customClass="LocationViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FaG-6X-5HK">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="vaI-j5-JsR">
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="jrG-UY-ddc" id="17S-fk-x6e"/>
+                                    <outlet property="delegate" destination="jrG-UY-ddc" id="DFn-4W-I2p"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="vaI-j5-JsR" firstAttribute="top" secondItem="FaG-6X-5HK" secondAttribute="top" type="default" id="6y4-OT-RkB"/>
+                            <constraint firstItem="vaI-j5-JsR" firstAttribute="trailing" secondItem="FaG-6X-5HK" secondAttribute="trailing" type="default" id="9ch-qk-Ca0"/>
+                            <constraint firstItem="vaI-j5-JsR" firstAttribute="leading" secondItem="FaG-6X-5HK" secondAttribute="leading" type="default" id="PCI-zF-t5x"/>
+                            <constraint firstItem="vaI-j5-JsR" firstAttribute="bottom" secondItem="FaG-6X-5HK" secondAttribute="bottom" type="default" id="kJw-2O-hUi"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="List" image="first.png" id="zff-jn-eA7"/>
+                    <connections>
+                        <outlet property="locationTableView" destination="vaI-j5-JsR" id="xv9-er-BB1"/>
+                        <segue destination="a24-Hj-6Z9" kind="modal" identifier="pushAddLocation" id="KeE-IU-gD7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DXj-fc-T6j" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1272" y="-11"/>
         </scene>
         <!--Add Location View Controller - Add New Location-->
         <scene sceneID="0AH-6L-jWn">
@@ -3527,14 +3546,14 @@ WCE Fundraising: WCE raises the final 1/3 of our sourcing &amp; shipping costs f
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7VY-pE-X1N" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1272" y="-3"/>
+            <point key="canvasLocation" x="1762" y="-11"/>
         </scene>
-        <!--Location Map View Controller-->
+        <!--Location Map View Controller - Map-->
         <scene sceneID="jyz-q1-ck8">
             <objects>
                 <viewController id="eLM-ah-xed" customClass="LocationMapViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5oh-T7-BOe">
-                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gMt-tq-YUN">
@@ -3551,6 +3570,7 @@ WCE Fundraising: WCE raises the final 1/3 of our sourcing &amp; shipping costs f
                             <constraint firstItem="gMt-tq-YUN" firstAttribute="trailing" secondItem="5oh-T7-BOe" secondAttribute="trailing" type="default" id="tai-EH-l2Y"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Map" image="second.png" id="35G-L6-ZMG"/>
                     <navigationItem key="navigationItem" id="mYu-5L-5On"/>
                     <connections>
                         <outlet property="mapView" destination="gMt-tq-YUN" id="GdJ-dx-mws"/>
@@ -3575,7 +3595,7 @@ WCE Fundraising: WCE raises the final 1/3 of our sourcing &amp; shipping costs f
             <objects>
                 <viewController id="G51-90-qjF" customClass="AboutWCEViewController" sceneMemberID="viewController">
                     <view key="view" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="7hD-dv-Bsr">
-                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ES2-HB-z0J">
@@ -3639,11 +3659,11 @@ WCE Fundraising: WCE raises the final 1/3 of our sourcing &amp; shipping costs f
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="uaD-c0-XRs" firstAttribute="leading" secondItem="7hD-dv-Bsr" secondAttribute="leading" type="default" id="06a-Rf-HPE"/>
-                            <constraint firstAttribute="bottom" secondItem="FEJ-eL-5GW" secondAttribute="bottom" constant="34" id="7S0-5h-01V"/>
-                            <constraint firstItem="uaD-c0-XRs" firstAttribute="bottom" secondItem="7hD-dv-Bsr" secondAttribute="bottom" type="default" id="9Vl-I8-jjE"/>
                             <constraint firstItem="uaD-c0-XRs" firstAttribute="top" secondItem="7hD-dv-Bsr" secondAttribute="top" type="default" id="CyT-a8-nGe"/>
                             <constraint firstItem="uaD-c0-XRs" firstAttribute="trailing" secondItem="7hD-dv-Bsr" secondAttribute="trailing" type="default" id="I2C-Xg-Mri"/>
                             <constraint firstItem="ES2-HB-z0J" firstAttribute="centerX" secondItem="uaD-c0-XRs" secondAttribute="centerX" type="default" id="SMe-Ac-oqk"/>
+                            <constraint firstAttribute="bottom" secondItem="uaD-c0-XRs" secondAttribute="bottom" constant="-1" id="Sza-ij-cd6"/>
+                            <constraint firstAttribute="bottom" secondItem="FEJ-eL-5GW" secondAttribute="bottom" constant="33" id="aoO-gw-MLM"/>
                             <constraint firstItem="FEJ-eL-5GW" firstAttribute="leading" secondItem="7hD-dv-Bsr" secondAttribute="leading" constant="68" id="lRN-ze-tZ8"/>
                             <constraint firstItem="ES2-HB-z0J" firstAttribute="top" secondItem="7hD-dv-Bsr" secondAttribute="top" constant="20" symbolic="YES" type="default" id="mb3-YV-GOq"/>
                         </constraints>
@@ -3676,7 +3696,7 @@ WCE Fundraising: WCE raises the final 1/3 of our sourcing &amp; shipping costs f
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Pl-Zb-RQR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-165" y="-3"/>
+            <point key="canvasLocation" x="-525" y="-391"/>
         </scene>
     </scenes>
     <resources>
@@ -3685,6 +3705,8 @@ WCE Fundraising: WCE raises the final 1/3 of our sourcing &amp; shipping costs f
         <image name="button-1.png" width="91" height="38"/>
         <image name="button-2.png" width="216" height="39"/>
         <image name="button-3.png" width="172" height="39"/>
+        <image name="first.png" width="30" height="30"/>
+        <image name="second.png" width="30" height="30"/>
     </resources>
     <classes>
         <class className="AboutWCEViewController" superclassName="UIViewController">
@@ -3759,6 +3781,13 @@ WCE Fundraising: WCE raises the final 1/3 of our sourcing &amp; shipping costs f
                 <relationship kind="outlet" name="partnerTableView" candidateClass="UITableView"/>
             </relationships>
         </class>
+        <class className="WCETabBarController" superclassName="UITabBarController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/WCETabBarController.h"/>
+            <relationships>
+                <relationship kind="action" name="editButtonClicked:"/>
+                <relationship kind="outlet" name="editButton" candidateClass="UIBarButtonItem"/>
+            </relationships>
+        </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
@@ -3766,7 +3795,7 @@ WCE Fundraising: WCE raises the final 1/3 of our sourcing &amp; shipping costs f
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="pkd-A3-uLl"/>
-        <segue reference="vFc-FY-61o"/>
+        <segue reference="7Ag-zE-ghY"/>
+        <segue reference="JwV-1x-uEz"/>
     </inferredMetricsTieBreakers>
 </document>
