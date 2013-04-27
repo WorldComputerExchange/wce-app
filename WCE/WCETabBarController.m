@@ -64,4 +64,12 @@
 	LocationViewController *viewController = (LocationViewController *)[[self viewControllers] objectAtIndex:0];
 	[viewController enterEditingMode:self];
 }
+
+- (IBAction)logoffButtonClicked:(id)sender
+{
+	[[NSUserDefaults standardUserDefaults] setBool:FALSE forKey:@"loggedIn"];
+	[[NSUserDefaults standardUserDefaults] synchronize];
+	
+	[self performSegueWithIdentifier:@"pushLogin" sender:self];
+}
 @end

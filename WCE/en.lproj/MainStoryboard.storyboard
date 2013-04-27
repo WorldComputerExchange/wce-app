@@ -184,7 +184,7 @@
                     <navigationItem key="navigationItem" id="43R-oV-k26">
                         <barButtonItem key="leftBarButtonItem" title="Logoff" id="dTq-vr-wFl">
                             <connections>
-                                <segue destination="2" kind="push" id="JwV-1x-uEz"/>
+                                <action selector="logoffButtonClicked:" destination="qTC-N3-nBb" id="JhD-nH-8Jp"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Edit" id="pqk-T6-Ysh">
@@ -204,6 +204,7 @@
                         <outlet property="editButton" destination="pqk-T6-Ysh" id="fss-c6-Gkb"/>
                         <segue destination="jrG-UY-ddc" kind="relationship" relationship="viewControllers" id="IU1-Rg-Xi9"/>
                         <segue destination="eLM-ah-xed" kind="relationship" relationship="viewControllers" id="VSE-2T-8zZ"/>
+                        <segue destination="2" kind="push" identifier="pushLogin" id="nw4-CA-A46"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Kw-Hb-elY" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -3904,6 +3905,7 @@ Are you charging any fees?  If yes how much do you charge?
             <source key="sourceIdentifier" type="project" relativePath="./Classes/WCETabBarController.h"/>
             <relationships>
                 <relationship kind="action" name="editButtonClicked:"/>
+                <relationship kind="action" name="logoffButtonClicked:"/>
                 <relationship kind="outlet" name="editButton" candidateClass="UIBarButtonItem"/>
             </relationships>
         </class>
@@ -3915,6 +3917,6 @@ Are you charging any fees?  If yes how much do you charge?
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="Y5u-3N-Zg9"/>
-        <segue reference="JwV-1x-uEz"/>
+        <segue reference="nw4-CA-A46"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -48,6 +48,10 @@
     if ([self.passcodeField.text isEqualToString:@"12345"]) // We compare it to the string "12345"
     {
         self.passcodeField.text = @""; // Erase the passcode entered in the text field
+		
+		// Remeber that the user has logged in
+		[[NSUserDefaults standardUserDefaults] setBool:TRUE forKey:@"loggedIn"];
+		[[NSUserDefaults standardUserDefaults] synchronize];
         
         // Tell this view controller (WCELoginViewController) to do a "segue" transition to the next page of the app. The way you set this up is in
         // the storyboard. You drag a line (by holding the control key) from the view controller that you're starting from, to the view controller that you want

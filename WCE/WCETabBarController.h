@@ -13,5 +13,6 @@
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *editButton;
 
 - (IBAction)editButtonClicked:(id)sender;
+- (IBAction)logoffButtonClicked:(id)sender;
 
 @end
