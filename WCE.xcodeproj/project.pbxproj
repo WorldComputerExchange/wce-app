@@ -30,7 +30,6 @@
 		9E067AC71727763B00C770A0 /* 136676912132100.gif in Resources */ = {isa = PBXBuildFile; fileRef = 9E067AC61727763B00C770A0 /* 136676912132100.gif */; };
 		9E2476DD16E27D9C0049ED27 /* WCE Content V5.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E2476DC16E27D9C0049ED27 /* WCE Content V5.png */; };
 		9E4B58C216FBD95F007BE176 /* CoverSheetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E4B58C116FBD95F007BE176 /* CoverSheetViewController.m */; };
-		9E88740A172A15CD00CA6849 /* button.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E887409172A15CD00CA6849 /* button.png */; };
 		9E88740C172A189300CA6849 /* login-button-generator.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E88740B172A189300CA6849 /* login-button-generator.png */; };
 		9E887414172A1EA400CA6849 /* button-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E887413172A1EA400CA6849 /* button-3.png */; };
 		9ED3259D16DD53FF00EA38E0 /* AddressAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ED3259C16DD53FF00EA38E0 /* AddressAnnotation.m */; };
@@ -41,6 +40,7 @@
 		D058DCDB16FBD2A300132041 /* AboutWCEViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D058DCDA16FBD2A300132041 /* AboutWCEViewController.m */; };
 		D07A3B0316D6F7C4003B6074 /* WCE_LogoWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = D07A3B0216D6F7C4003B6074 /* WCE_LogoWhite.png */; };
 		D0CB443C172C2F81002EE218 /* button-2.png in Resources */ = {isa = PBXBuildFile; fileRef = D0CB443B172C2F81002EE218 /* button-2.png */; };
+		D0CB4440172C30D9002EE218 /* button-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E887415172A24D400CA6849 /* button-1.png */; };
 		D0F334B4172AC38E006BACED /* WCETabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F334B3172AC38E006BACED /* WCETabBarController.m */; };
 		D0F334B7172AC647006BACED /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = D0F334B5172AC647006BACED /* first.png */; };
 		D0F334B8172AC647006BACED /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = D0F334B6172AC647006BACED /* second.png */; };
@@ -413,9 +413,9 @@
 				FA44558116E284E900D08750 /* WCE Content V5 NEW.png in Resources */,
 				9EE43DED172754C80023EF5A /* mota_ru_2030149-320x480.jpg in Resources */,
 				9E067AC71727763B00C770A0 /* 136676912132100.gif in Resources */,
-				9E88740A172A15CD00CA6849 /* button.png in Resources */,
 				9E88740C172A189300CA6849 /* login-button-generator.png in Resources */,
 				9E887414172A1EA400CA6849 /* button-3.png in Resources */,
+				D0CB4440172C30D9002EE218 /* button-1.png in Resources */,
 				D0F334B7172AC647006BACED /* first.png in Resources */,
 				D0F334B8172AC647006BACED /* second.png in Resources */,
 				D0CB443C172C2F81002EE218 /* button-2.png in Resources */,
