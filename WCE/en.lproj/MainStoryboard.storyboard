@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Fvu-h0-ZII">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="11G63b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Fvu-h0-ZII">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
@@ -177,11 +177,11 @@
             </objects>
             <point key="canvasLocation" x="-49" y="-391"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Tab Bar Controller - Choose Location-->
         <scene sceneID="Hen-ZK-ymF">
             <objects>
                 <tabBarController definesPresentationContext="YES" id="qTC-N3-nBb" customClass="WCETabBarController" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="43R-oV-k26">
+                    <navigationItem key="navigationItem" title="Choose Location" id="43R-oV-k26">
                         <barButtonItem key="leftBarButtonItem" title="Logoff" id="dTq-vr-wFl">
                             <connections>
                                 <action selector="logoffButtonClicked:" destination="qTC-N3-nBb" id="JhD-nH-8Jp"/>
@@ -327,7 +327,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <label key="tableHeaderView" opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="left" text="                      INFO:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="tqN-J4-DLb">
-                            <rect key="frame" x="0.0" y="0.0" width="320" height="39"/>
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <fontDescription key="fontDescription" type="system" pointSize="22"/>
                             <color key="textColor" red="0.99215692280000001" green="0.99607849120000003" blue="0.99215692280000001" alpha="1" colorSpace="deviceRGB"/>
@@ -337,7 +337,7 @@
                             <tableViewSection headerTitle="" id="0lt-TG-8Jp">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="pDZ-fM-S3K" style="IBUITableViewCellStyleDefault" id="UpZ-29-5Rc">
-                                        <rect key="frame" x="0.0" y="49" width="320" height="45"/>
+                                        <rect key="frame" x="0.0" y="54" width="320" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="1" width="280" height="43"/>
@@ -357,7 +357,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="vkw-WJ-E2M" style="IBUITableViewCellStyleDefault" id="Cbc-bi-Jrf">
-                                        <rect key="frame" x="0.0" y="94" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="99" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="0.0" width="280" height="43"/>
@@ -377,7 +377,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="Juh-L5-EFc" style="IBUITableViewCellStyleDefault" id="E3w-6P-jRw">
-                                        <rect key="frame" x="0.0" y="138" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="143" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="0.0" width="280" height="43"/>
@@ -397,7 +397,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="jYW-0S-sDj" style="IBUITableViewCellStyleDefault" id="EIh-hK-oUc">
-                                        <rect key="frame" x="0.0" y="182" width="320" height="45"/>
+                                        <rect key="frame" x="0.0" y="187" width="320" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="0.0" width="280" height="43"/>
@@ -441,15 +441,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView opaque="NO" clearsContextBeforeDrawing="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wnl-Ra-qtb">
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                            </scrollView>
-                            <textView opaque="NO" clearsContextBeforeDrawing="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CnR-oj-jkp">
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="406" id="16s-uN-wFz"/>
-                                    <constraint firstAttribute="width" constant="282" id="MzJ-ac-xer"/>
-                                </constraints>
-                                <string key="text">In 1999, Timothy Anderson found that an organization that supplied donated refurbished computers to other countries wasn’t established in the U.S. With a small group of volunteer members, Anderson developed the World Computer Exchange (WCE). [24] [25]
+                                <subviews>
+                                    <textView opaque="NO" clearsContextBeforeDrawing="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CnR-oj-jkp">
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="406" id="16s-uN-wFz"/>
+                                            <constraint firstAttribute="width" constant="282" id="MzJ-ac-xer"/>
+                                        </constraints>
+                                        <string key="text">In 1999, Timothy Anderson found that an organization that supplied donated refurbished computers to other countries wasn’t established in the U.S. With a small group of volunteer members, Anderson developed the World Computer Exchange (WCE). [24] [25]
 
 By November 2002, the organiation shipped 4,000 computers to 585 schools in many developping countries. [26]
 
@@ -457,34 +456,29 @@ By October, 2011, along with partner organizations, WCE has shipped 30,000 compu
 
 In February 2012, Boston chapter (also headquarter chapter) in Hull, Massachusetts sent out their 68th shipment bringing their total to 13,503 computers.[29]
 </string>
-                                <color key="textColor" red="0.9960784912109375" green="0.9960784912109375" blue="0.99215692281723022" alpha="1" colorSpace="deviceRGB"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="13"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <label opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="left" text="HISTORY:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O96-zc-aKs">
+                                        <color key="textColor" red="0.9960784912109375" green="0.9960784912109375" blue="0.99215692281723022" alpha="1" colorSpace="deviceRGB"/>
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="13"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="39" id="I6d-F1-qKu"/>
-                                    <constraint firstAttribute="width" constant="111" id="KIo-Fx-DRB"/>
+                                    <constraint firstItem="CnR-oj-jkp" firstAttribute="centerX" secondItem="Wnl-Ra-qtb" secondAttribute="centerX" type="default" id="7On-CJ-aIy"/>
+                                    <constraint firstItem="CnR-oj-jkp" firstAttribute="top" secondItem="Wnl-Ra-qtb" secondAttribute="top" constant="25" id="7sR-3I-htp"/>
+                                    <constraint firstAttribute="bottom" secondItem="CnR-oj-jkp" secondAttribute="bottom" constant="24" id="HQe-vC-Iok"/>
+                                    <constraint firstAttribute="trailing" secondItem="CnR-oj-jkp" secondAttribute="trailing" constant="19" id="Mas-FV-cmh"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <color key="textColor" red="0.99215692281723022" green="0.9960784912109375" blue="0.99215692281723022" alpha="1" colorSpace="deviceRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="O96-zc-aKs" firstAttribute="top" secondItem="OlM-yd-zoL" secondAttribute="top" constant="10" id="GP3-wN-8SC"/>
                             <constraint firstItem="Wnl-Ra-qtb" firstAttribute="leading" secondItem="OlM-yd-zoL" secondAttribute="leading" type="default" id="Mn1-cv-uIg"/>
                             <constraint firstItem="Wnl-Ra-qtb" firstAttribute="trailing" secondItem="OlM-yd-zoL" secondAttribute="trailing" type="default" id="Vzm-bA-Nw4"/>
                             <constraint firstItem="Wnl-Ra-qtb" firstAttribute="bottom" secondItem="OlM-yd-zoL" secondAttribute="bottom" type="default" id="X4d-ml-jNX"/>
-                            <constraint firstItem="CnR-oj-jkp" firstAttribute="leading" secondItem="OlM-yd-zoL" secondAttribute="leading" constant="10" id="f1X-bK-hck"/>
-                            <constraint firstItem="O96-zc-aKs" firstAttribute="leading" secondItem="OlM-yd-zoL" secondAttribute="leading" constant="95" id="lim-iS-iQS"/>
                             <constraint firstItem="Wnl-Ra-qtb" firstAttribute="top" secondItem="OlM-yd-zoL" secondAttribute="top" type="default" id="rn0-Ui-TDr"/>
-                            <constraint firstItem="CnR-oj-jkp" firstAttribute="top" secondItem="OlM-yd-zoL" secondAttribute="top" constant="68" id="yt1-gt-HYk"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="cqi-FN-6ev">
+                    <navigationItem key="navigationItem" title="HISTORY" id="cqi-FN-6ev">
                         <barButtonItem key="backBarButtonItem" title="Back" id="tOZ-3l-VIE"/>
                     </navigationItem>
                 </viewController>
@@ -502,21 +496,10 @@ In February 2012, Boston chapter (also headquarter chapter) in Hull, Massachuset
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WXH-b8-zBx">
                                 <subviews>
-                                    <label opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="left" text="PHRASES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4eW-gE-i9v">
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="39" id="bLa-pq-kBF"/>
-                                            <constraint firstAttribute="width" constant="122" id="c6V-Wl-0ig"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                        <color key="shadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                    </label>
                                     <textView opaque="NO" clearsContextBeforeDrawing="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zcj-ns-wkV">
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="548" id="Ohv-WB-vWU"/>
+                                            <constraint firstAttribute="height" constant="612" id="2El-bC-rNg"/>
                                         </constraints>
                                         <attributedString key="attributedText">
                                             <fragment content="English  ">
@@ -2408,13 +2391,11 @@ Cg
                                     </textView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="Zcj-ns-wkV" secondAttribute="bottom" constant="-73" id="HrD-f0-TPM"/>
-                                    <constraint firstItem="4eW-gE-i9v" firstAttribute="centerX" secondItem="WXH-b8-zBx" secondAttribute="centerX" type="default" id="K9O-QW-3Ha"/>
-                                    <constraint firstItem="Zcj-ns-wkV" firstAttribute="top" secondItem="WXH-b8-zBx" secondAttribute="top" constant="73" id="Mug-M3-7qU"/>
+                                    <constraint firstItem="Zcj-ns-wkV" firstAttribute="top" secondItem="WXH-b8-zBx" secondAttribute="top" constant="9" id="2BO-h0-mag"/>
+                                    <constraint firstAttribute="bottom" secondItem="Zcj-ns-wkV" secondAttribute="bottom" constant="-166" id="MdF-cP-O6S"/>
                                     <constraint firstItem="Zcj-ns-wkV" firstAttribute="leading" secondItem="WXH-b8-zBx" secondAttribute="leading" type="default" id="OEI-P4-bhH"/>
-                                    <constraint firstItem="4eW-gE-i9v" firstAttribute="top" secondItem="WXH-b8-zBx" secondAttribute="top" constant="20" symbolic="YES" type="default" id="TJY-bg-4KB"/>
                                     <constraint firstItem="Zcj-ns-wkV" firstAttribute="trailing" secondItem="WXH-b8-zBx" secondAttribute="trailing" type="default" id="Vlg-0n-Por"/>
-                                    <constraint firstItem="Zcj-ns-wkV" firstAttribute="centerX" secondItem="4eW-gE-i9v" secondAttribute="centerX" type="default" id="idy-iU-BAJ"/>
+                                    <constraint firstItem="Zcj-ns-wkV" firstAttribute="centerX" secondItem="WXH-b8-zBx" secondAttribute="centerX" type="default" id="soj-QI-ZGb"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
@@ -2426,7 +2407,7 @@ Cg
                             <constraint firstItem="WXH-b8-zBx" firstAttribute="bottom" secondItem="T0e-vp-hbW" secondAttribute="bottom" type="default" id="tzf-hk-52l"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="tSn-Kv-LkF">
+                    <navigationItem key="navigationItem" title="PHRASES" id="tSn-Kv-LkF">
                         <barButtonItem key="backBarButtonItem" title="Back" id="wtR-uR-biS"/>
                     </navigationItem>
                 </viewController>
@@ -2484,7 +2465,7 @@ Cg
                             <outlet property="delegate" destination="JU5-ky-5R4" id="P19-jc-e3i"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Title" id="7Qt-96-8c4">
+                    <navigationItem key="navigationItem" title="New Partners" id="7Qt-96-8c4">
                         <barButtonItem key="rightBarButtonItem" systemItem="edit" id="qu3-98-ehz">
                             <connections>
                                 <action selector="enterEditingMode:" destination="JU5-ky-5R4" id="PWW-Pg-8bA"/>
@@ -2508,8 +2489,8 @@ Cg
                         <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                        <label key="tableHeaderView" opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="left" text="                   FORMS:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ERb-le-jcQ">
-                            <rect key="frame" x="0.0" y="0.0" width="320" height="39"/>
+                        <label key="tableHeaderView" opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="left" text="New Partner Forms:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ERb-le-jcQ">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="51"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <fontDescription key="fontDescription" type="system" pointSize="22"/>
                             <color key="textColor" red="0.99215692280000001" green="0.99607849120000003" blue="0.99215692280000001" alpha="1" colorSpace="deviceRGB"/>
@@ -2519,7 +2500,7 @@ Cg
                             <tableViewSection headerTitle="" id="gfi-xO-0Om">
                                 <cells>
                                     <tableViewCell opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="coverSheet" textLabel="XZv-uD-Xkr" style="IBUITableViewCellStyleDefault" id="OLI-hc-Usq">
-                                        <rect key="frame" x="0.0" y="49" width="320" height="45"/>
+                                        <rect key="frame" x="0.0" y="61" width="320" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="1" width="280" height="43"/>
@@ -2541,7 +2522,7 @@ Cg
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="orderForm" textLabel="aas-rF-Qas" style="IBUITableViewCellStyleDefault" id="KRN-z6-MaN">
-                                        <rect key="frame" x="0.0" y="94" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="106" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="0.0" width="280" height="43"/>
@@ -2562,7 +2543,7 @@ Cg
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="implementation" textLabel="pvI-2i-7G1" style="IBUITableViewCellStyleDefault" id="erM-iS-Pa4">
-                                        <rect key="frame" x="0.0" y="138" width="320" height="45"/>
+                                        <rect key="frame" x="0.0" y="150" width="320" height="45"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="0.0" width="280" height="43"/>
@@ -2987,7 +2968,7 @@ CONDITIONS:  Full containers only.  WCE needs 4 months to raise the final 1/3 af
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jpk-D4-MJl">
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="487" id="hSd-sS-Vo7"/>
+                                            <constraint firstAttribute="height" constant="504" id="8kT-vy-Ixp"/>
                                         </constraints>
                                         <string key="text">Pentium 4 Desktop refurbished with keyboard &amp; mouse = $40 plus content, monitor, shipping &amp; port clearing costs ($20 additional if higher specs like Dual Core are required)
 ~ Mostly Name Brand with minimum specs: 2.8 GHz, 40 gig hard drive, 512 MB RAM, CD ROM, Video, Sound &amp; Net Cards ~
@@ -3029,23 +3010,18 @@ WCE Fundraising: WCE raises the final 1/3 of our sourcing &amp; shipping costs f
                                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <label opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="left" text="COSTS:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xiF-bc-uE7">
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="39" id="KQg-qf-cT1"/>
-                                            <constraint firstAttribute="width" constant="85" id="Q3S-BY-iiQ"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                        <color key="textColor" red="0.99215692280000001" green="0.99607849120000003" blue="0.99215692280000001" alpha="1" colorSpace="deviceRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Wyz-nB-xAq">
+                                        <textInputTraits key="textInputTraits"/>
+                                    </searchBar>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="jpk-D4-MJl" firstAttribute="bottom" secondItem="E7K-1V-81z" secondAttribute="bottom" type="default" id="3Ga-pR-3vh"/>
-                                    <constraint firstItem="jpk-D4-MJl" firstAttribute="centerX" secondItem="E7K-1V-81z" secondAttribute="centerX" type="default" id="3Ib-g7-8Q5"/>
-                                    <constraint firstItem="xiF-bc-uE7" firstAttribute="top" secondItem="E7K-1V-81z" secondAttribute="top" constant="14" id="8Zq-6U-FnA"/>
-                                    <constraint firstItem="jpk-D4-MJl" firstAttribute="top" secondItem="xiF-bc-uE7" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="BF9-E6-yIC"/>
-                                    <constraint firstItem="jpk-D4-MJl" firstAttribute="centerX" secondItem="xiF-bc-uE7" secondAttribute="centerX" type="default" id="Ydb-gs-DH1"/>
+                                    <constraint firstAttribute="bottom" secondItem="jpk-D4-MJl" secondAttribute="bottom" constant="-93" id="Ejz-UN-KdH"/>
+                                    <constraint firstItem="Wyz-nB-xAq" firstAttribute="trailing" secondItem="E7K-1V-81z" secondAttribute="trailing" type="default" id="FrE-vQ-S0G"/>
+                                    <constraint firstItem="Wyz-nB-xAq" firstAttribute="leading" secondItem="E7K-1V-81z" secondAttribute="leading" type="default" id="WDA-rf-BYW"/>
+                                    <constraint firstItem="jpk-D4-MJl" firstAttribute="top" secondItem="Wyz-nB-xAq" secondAttribute="bottom" type="default" id="ZPB-hP-S0y"/>
+                                    <constraint firstItem="Wyz-nB-xAq" firstAttribute="top" secondItem="E7K-1V-81z" secondAttribute="top" type="default" id="gjA-Bm-07R"/>
                                     <constraint firstAttribute="trailing" secondItem="jpk-D4-MJl" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="sdB-Yc-XX5"/>
+                                    <constraint firstItem="Wyz-nB-xAq" firstAttribute="centerX" secondItem="E7K-1V-81z" secondAttribute="centerX" type="default" id="yBz-Lq-bD2"/>
                                     <constraint firstItem="jpk-D4-MJl" firstAttribute="leading" secondItem="E7K-1V-81z" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="zPo-Wi-EKA"/>
                                 </constraints>
                             </scrollView>
@@ -3058,7 +3034,7 @@ WCE Fundraising: WCE raises the final 1/3 of our sourcing &amp; shipping costs f
                             <constraint firstItem="E7K-1V-81z" firstAttribute="top" secondItem="jHa-S8-uzC" secondAttribute="top" type="default" id="tRj-fQ-P4w"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="MTM-4s-Neb"/>
+                    <navigationItem key="navigationItem" title="COSTS" id="MTM-4s-Neb"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m8m-Qu-Xes" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -3189,7 +3165,7 @@ WCE Fundraising: WCE raises the final 1/3 of our sourcing &amp; shipping costs f
                             <outlet property="delegate" destination="SuZ-oP-kTY" id="amx-rY-XD0"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="2jh-e1-yzQ">
+                    <navigationItem key="navigationItem" title="FORMS" id="2jh-e1-yzQ">
                         <barButtonItem key="backBarButtonItem" title="Back" id="MjZ-vq-S1J"/>
                     </navigationItem>
                 </tableViewController>
@@ -3454,7 +3430,7 @@ Are you charging any fees?  If yes how much do you charge?
                             <constraint firstItem="1mw-dS-8pc" firstAttribute="top" secondItem="SbZ-NK-kui" secondAttribute="top" type="default" id="wI7-v6-3zd"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="HlQ-fn-X6g">
+                    <navigationItem key="navigationItem" title="CONTENT" id="HlQ-fn-X6g">
                         <barButtonItem key="backBarButtonItem" title="Back" id="ODE-Pg-RMq"/>
                     </navigationItem>
                 </viewController>
@@ -3710,7 +3686,7 @@ Are you charging any fees?  If yes how much do you charge?
             </objects>
             <point key="canvasLocation" x="1272" y="-734"/>
         </scene>
-        <!--AboutWCE View Controller-->
+        <!--AboutWCE View Controller - ABOUT WCE-->
         <scene sceneID="dXi-wM-r1s">
             <objects>
                 <viewController id="G51-90-qjF" customClass="AboutWCEViewController" sceneMemberID="viewController">
@@ -3732,7 +3708,7 @@ Are you charging any fees?  If yes how much do you charge?
                                     <textView opaque="NO" clearsContextBeforeDrawing="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bmy-mS-fTG">
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="406" id="Asy-X8-Rmg"/>
+                                            <constraint firstAttribute="height" constant="411" id="Gng-3f-mJT"/>
                                             <constraint firstAttribute="width" constant="280" id="a6v-Dz-IW9"/>
                                         </constraints>
                                         <string key="text">World Computer Exchange (WCE) is a global education and environment organization founded in 1999 to connect more youth in developing countries to opportunities, skills, and understanding via the Internet – while keeping working computers out of landfills.   With our 700 volunteers, WCE is the largest US non-profit provider of reused computers to connect youth in developing countries.  Studies show that the reuse of a computer is 25 times more carbon efficient than destroying one and re-manufacturing a new one.  Our work helps to implement the UN’s Millennium Development Goals in Education.</string>
@@ -3740,23 +3716,13 @@ Are you charging any fees?  If yes how much do you charge?
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <label opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="left" text="ABOUT WCE:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S2O-BD-B4t">
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="39" id="wUz-ut-eed"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                        <color key="textColor" red="0.99215692281723022" green="0.9960784912109375" blue="0.99215692281723022" alpha="1" colorSpace="deviceRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="S2O-BD-B4t" firstAttribute="centerX" secondItem="bmy-mS-fTG" secondAttribute="centerX" type="default" id="1dD-zW-nZH"/>
+                                    <constraint firstItem="bmy-mS-fTG" firstAttribute="top" secondItem="uaD-c0-XRs" secondAttribute="top" constant="20" symbolic="YES" type="default" id="NqP-Pg-xXe"/>
                                     <constraint firstItem="bmy-mS-fTG" firstAttribute="leading" secondItem="uaD-c0-XRs" secondAttribute="leading" constant="10" id="WIp-fv-lHE"/>
-                                    <constraint firstItem="S2O-BD-B4t" firstAttribute="top" secondItem="uaD-c0-XRs" secondAttribute="top" constant="10" id="aZf-ms-5dr"/>
-                                    <constraint firstAttribute="bottom" secondItem="bmy-mS-fTG" secondAttribute="bottom" constant="71" id="fXz-fP-vwN"/>
                                     <constraint firstAttribute="trailing" secondItem="bmy-mS-fTG" secondAttribute="trailing" constant="30" id="k9H-th-D6j"/>
-                                    <constraint firstItem="bmy-mS-fTG" firstAttribute="centerY" secondItem="uaD-c0-XRs" secondAttribute="centerY" type="default" id="qCX-Oo-WEZ"/>
+                                    <constraint firstAttribute="bottom" secondItem="bmy-mS-fTG" secondAttribute="bottom" constant="25" id="vjz-aL-rBm"/>
                                 </constraints>
                             </scrollView>
                             <button opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FEJ-eL-5GW">
@@ -3788,7 +3754,7 @@ Are you charging any fees?  If yes how much do you charge?
                             <constraint firstItem="ES2-HB-z0J" firstAttribute="top" secondItem="7hD-dv-Bsr" secondAttribute="top" constant="20" symbolic="YES" type="default" id="mb3-YV-GOq"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="IDo-UV-rdz">
+                    <navigationItem key="navigationItem" title="ABOUT WCE" id="IDo-UV-rdz">
                         <barButtonItem key="backBarButtonItem" title="Back" id="Imw-oQ-Y8l"/>
                     </navigationItem>
                 </viewController>
