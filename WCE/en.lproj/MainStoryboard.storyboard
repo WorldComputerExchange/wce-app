@@ -3711,7 +3711,72 @@ Are you charging any fees?  If yes how much do you charge?
                                             <constraint firstAttribute="height" constant="411" id="Gng-3f-mJT"/>
                                             <constraint firstAttribute="width" constant="280" id="a6v-Dz-IW9"/>
                                         </constraints>
-                                        <string key="text">World Computer Exchange (WCE) is a global education and environment organization founded in 1999 to connect more youth in developing countries to opportunities, skills, and understanding via the Internet – while keeping working computers out of landfills.   With our 700 volunteers, WCE is the largest US non-profit provider of reused computers to connect youth in developing countries.  Studies show that the reuse of a computer is 25 times more carbon efficient than destroying one and re-manufacturing a new one.  Our work helps to implement the UN’s Millennium Development Goals in Education.</string>
+                                        <mutableString key="text">Helping bridge the global digital divide for youth
+
+
+
+World Computer Exchange (WCE) is a global education and environment organization founded in 1999 to connect more youth in developing countries to opportunities, skills, and understanding via the Internet – while keeping working computers out of landfills.   With our 700 volunteers, WCE is the largest US non-profit provider of reused computers to connect youth in developing countries.  Studies show that the reuse of a computer is 25 times more carbon efficient than destroying one and re-manufacturing a new one.  Our work helps to implement the UN’s Millennium Development Goals in Education.
+
+
+
+Building Capacity at the Grassroots:
+WCE has a unique model for building capacity at the grassroots level that combines trust, due diligence and cooperation.  We support and leverage the work of our network of 450 grassroots Partners in 65 developing countries.  Before and after we ship, each Partner is given years of advice from their Program Officers drawn from our hundreds of online and onsite field volunteers who are reinforced, as needed, by the rich onsite resources of our global Strategic Allies.  Our volunteers show each Partner how to develop plans, build local partnerships and raise part of the needed funds.  We encourage our Partners to raise part of the funds so that they show the priority they place on this work, feel full ownership of the computer, and know how to raise funds for their future projects.  Our volunteers introduce each Partner to resources for how to train teachers and use digital libraries.  Then they help each Partner prepare for the needed orientation on the use of the Internet, computer installation and network configuration.  We build these continuing links cost effectively - our last audit showed our combined fund raising and administrative costs at below 7% of our annual expenses.
+
+
+Ready to Grow:
+We are unique in our being poised to expand.  Over 2,600 schools, libraries, orphanages and youth centers reuse 26,800 of our computers and report that these connect over a million youth per year to the Internet.  Now, we have succeeded in helping many more of our Partner organizations prepare for the arrival of more donated computers.  WCE has the network of hundreds of chapter volunteers and Reuse Allies ready for a low cost ramp-up of our export of these computers so that they can expand minds instead of landfills.  Our chapters deliver high-quality, fully functioning computers for well under $100 each.  WCE computers will enable our Partners to vastly increase the number of youth benefiting from the Internet and other educational opportunities – years sooner than they otherwise would.  Your help now will help us connect another million youth.
+
+
+Our Network:
+We are honored by the trust placed in us by USAID, Peace Corp volunteers, parts of the UN, Rotary Clubs, and by our consortium of 25 Strategic Allies – global education and environment organizations that work with us to better serve our Partner organizations’ needs.  We work with strong grassroots Partners in Africa, Asia, Eastern Europe, Latin America, the Caribbean and the Middle East 
+
+
+WCE Chapters:
+The hundreds of volunteers in our 25 chapters in cities across the USA and Canada help us improve our marketing, raise funds to sponsor shipments, build our education projects, and gather and test donated used computers.  Our online field volunteers who live near a chapter are encouraged to participate.
+
+
+Our Initiatives:
+Each of our following four initiatives are guided by its own Consortium of leaders in the field drawn from universities, nonprofits, government, and business. 
+
+- eCorps Initiative:  Volunteer teams visiting WCE Partners to help with orientation, computer installation and network configuration.  Our next trip is to Kaduna, Nigeria for two weeks in July.  eCorps volunteers stay in local homes and learn about local history and culture.   We expect future trips to be to Tanzania and Bolivia.
+
+- eWaste Initiative:  Volunteer teams help market to raise public awareness about responsible recycling of computer toxins.  Volunteers also help identify and assist recyclers in developing countries and help local entrepreneurs to develop regional responsible recycling centers.
+
+- eGranary Initiative:  Volunteer teams work jointly with the African Association of Universities and WiderNet at the University of Iowa to market the use of their 10 million page digital library in universities and schools with slow or no Internet access.  We are also hope to jointly develop a Spanish version.  
+
+- African Universities Initiative:  Volunteer teams work to build the capacity of ten African universities (D.R. Congo, Ghana, Kenya, Malawi, Moçambique, Nigeria, Sénégal, Togo, Uganda, Zambia) as they, in turn, work to build the capacity of their feeder-schools.  The areas of capacity that we are helping to build are:  the educational use of the Internet and computers as well as local content development.
+
+
+Where We Are:
+Today, World Computer Exchange volunteers provide online support to 450 Partner organisations in 64 countries with support in planning, fund raising, technology, educational content and appropriate disposal of e-waste:
+
+
+Afghanistan
+Egypt                    Lithuania           Philippines
+Bangladesh          El Salvador	 Macedonia        Rwanda
+Bénin		Ethiopia		 Madagascar       Sénégal
+Bolivia		Georgia	               Malawi              Sierra Leone
+Bosnia		Ghana       	 Mali                  South Africa
+Botswana             Guatemala            México              Sri Lanka    
+Brasil                   Guinea                  Moldova           Tanzania 
+Bulgaria               Guyana                 Moçambique    Thailand
+Burundi	         	Haiti                     Mongolia          Togo
+Cameroon  	Indonesia              Morocco           Uganda
+Chile                    India                     Namibia            Ukraine
+Colombia             Iraq                       Nepal               Venezuela
+Costa Rica           Jamaica             	 Nicaragua        Viet Nam
+Côte d'Ivoire	Jordan	            	 Nigeria             Zambia  
+D. R. Congo	Kenya                   Pakistan           Zimbabwe
+Ecuador  	Liberia                  Perú                 Dominican Rep.
+		                                        
+ 
+HEADQUARTERS:
+936 Nantasket Ave, Hull, Massachusetts  02045  USA  + 781-925-3078
+		                           WCE-Canada: 941 Beaudry Street    Ottawa, Ontario K1K 3R9  + 781-925-3078
+I		                           nfo@WorldComputerExchange.org    		                           Website: www.WorldComputerExchange.org
+		                           Online &amp; onsite tech volunteers &amp; reused computers connecting youth in developing countries
+		                           		                          
+</mutableString>
                                         <color key="textColor" red="0.99215692281723022" green="0.9960784912109375" blue="0.99215692281723022" alpha="1" colorSpace="deviceRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -3794,88 +3859,6 @@ Are you charging any fees?  If yes how much do you charge?
         <image name="first.png" width="30" height="30"/>
         <image name="second.png" width="30" height="30"/>
     </resources>
-    <classes>
-        <class className="AboutWCEViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AboutWCEViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="goToWebsite:"/>
-            </relationships>
-        </class>
-        <class className="AddLocationViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AddLocationViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="backgroundTouched:"/>
-                <relationship kind="action" name="cancelChanges:"/>
-                <relationship kind="action" name="saveChanges:"/>
-                <relationship kind="action" name="textfieldReturn:"/>
-                <relationship kind="outlet" name="address" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="city" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="contact" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="dropDownTableView" candidateClass="UITableView"/>
-                <relationship kind="outlet" name="location" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="phone" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
-            </relationships>
-        </class>
-        <class className="CoverSheetViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/CoverSheetViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="ChooseCountry" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-        <class className="FormsViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/FormsViewController.h"/>
-        </class>
-        <class className="LocationMapViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LocationMapViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
-            </relationships>
-        </class>
-        <class className="LocationViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LocationViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="enterEditingMode:"/>
-                <relationship kind="outlet" name="editButton" candidateClass="UIBarButtonItem"/>
-                <relationship kind="outlet" name="locationTableView" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-        <class className="LoginViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LoginViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="pushLocationView:"/>
-                <relationship kind="outlet" name="passcodeField" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="NewPartnerViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NewPartnerViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="cancel:"/>
-                <relationship kind="action" name="saveChanges:"/>
-                <relationship kind="outlet" name="nameField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="saveButton" candidateClass="UIBarButtonItem"/>
-            </relationships>
-        </class>
-        <class className="PartnerViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/PartnerViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="enterEditingMode:"/>
-                <relationship kind="outlet" name="editButton" candidateClass="UIBarButtonItem"/>
-                <relationship kind="outlet" name="partnerTableView" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-        <class className="WCETabBarController" superclassName="UITabBarController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/WCETabBarController.h"/>
-            <relationships>
-                <relationship kind="action" name="editButtonClicked:"/>
-                <relationship kind="action" name="logoffButtonClicked:"/>
-                <relationship kind="outlet" name="editButton" candidateClass="UIBarButtonItem"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
