@@ -61,7 +61,8 @@
 
 - (void)willDismissPresentedViewController
 {
-	[[self tabBar] setHidden:NO];
+	NSLog(@"unhiding the tab bar view");
+	[[self view] setHidden:NO];
 	[[self navigationController] setNavigationBarHidden:NO];
 }
 
