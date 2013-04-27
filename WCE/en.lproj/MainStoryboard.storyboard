@@ -127,8 +127,8 @@
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PEE-h6-IeA">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="89" id="A0F-Sw-FjP"/>
                                     <constraint firstAttribute="height" constant="35" id="gRJ-o1-Wk9"/>
+                                    <constraint firstAttribute="width" constant="92" id="nvc-Yu-PJM"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="14"/>
                                 <state key="normal" image="button-1.png">
@@ -140,7 +140,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g0F-Bc-zcm">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="213" id="06i-fa-xZf"/>
+                                    <constraint firstAttribute="width" constant="217" id="2Ix-qU-7Xf"/>
                                     <constraint firstAttribute="height" constant="36" id="OXm-Nt-eC4"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="14"/>
@@ -155,15 +155,15 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="yfQ-Bp-V75" firstAttribute="centerX" secondItem="PEE-h6-IeA" secondAttribute="centerX" type="default" id="12e-u0-cc3"/>
-                            <constraint firstAttribute="bottom" secondItem="g0F-Bc-zcm" secondAttribute="bottom" constant="165" id="6HM-vt-W8A"/>
-                            <constraint firstItem="g0F-Bc-zcm" firstAttribute="centerX" secondItem="PEE-h6-IeA" secondAttribute="centerX" type="default" id="Pgr-Af-Cej"/>
-                            <constraint firstItem="yfQ-Bp-V75" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" type="default" id="RXx-uC-K3U"/>
+                            <constraint firstItem="PEE-h6-IeA" firstAttribute="top" secondItem="3" secondAttribute="top" constant="225" id="E3b-6i-POh"/>
+                            <constraint firstItem="g0F-Bc-zcm" firstAttribute="centerX" secondItem="PEE-h6-IeA" secondAttribute="centerX" type="default" id="GjB-fk-U8U"/>
+                            <constraint firstAttribute="bottom" secondItem="g0F-Bc-zcm" secondAttribute="bottom" constant="125" id="JCR-L5-WVx"/>
+                            <constraint firstItem="PEE-h6-IeA" firstAttribute="centerX" secondItem="Dd4-pk-PvU" secondAttribute="centerX" type="default" id="KtH-ku-wB3"/>
                             <constraint firstItem="Dd4-pk-PvU" firstAttribute="centerX" secondItem="zcX-hG-ZtP" secondAttribute="centerX" type="default" id="ZBx-6W-SmJ"/>
                             <constraint firstItem="yfQ-Bp-V75" firstAttribute="centerX" secondItem="zcX-hG-ZtP" secondAttribute="centerX" type="default" id="an4-MM-bht"/>
                             <constraint firstItem="yfQ-Bp-V75" firstAttribute="top" secondItem="3" secondAttribute="top" constant="30" id="fNI-ut-aDL"/>
-                            <constraint firstItem="PEE-h6-IeA" firstAttribute="top" secondItem="3" secondAttribute="top" constant="201" id="oja-Fw-9RO"/>
                             <constraint firstItem="zcX-hG-ZtP" firstAttribute="top" secondItem="3" secondAttribute="top" constant="121" id="psI-Fw-Mss"/>
+                            <constraint firstItem="g0F-Bc-zcm" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" type="default" id="qKr-md-zMA"/>
                             <constraint firstItem="Dd4-pk-PvU" firstAttribute="top" secondItem="zcX-hG-ZtP" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="qpU-S0-7hJ"/>
                         </constraints>
                     </view>
@@ -3709,7 +3709,7 @@ Are you charging any fees?  If yes how much do you charge?
                                             <constraint firstAttribute="height" constant="411" id="Gng-3f-mJT"/>
                                             <constraint firstAttribute="width" constant="280" id="a6v-Dz-IW9"/>
                                         </constraints>
-                                        <mutableString key="text">Helping bridge the global digital divide for youth
+                                        <string key="text">Helping bridge the global digital divide for youth
 
 
 
@@ -3774,36 +3774,38 @@ HEADQUARTERS:
 I		                           nfo@WorldComputerExchange.org    		                           Website: www.WorldComputerExchange.org
 		                           Online &amp; onsite tech volunteers &amp; reused computers connecting youth in developing countries
 		                           		                          
-</mutableString>
+</string>
                                         <color key="textColor" red="0.99215692281723022" green="0.9960784912109375" blue="0.99215692281723022" alpha="1" colorSpace="deviceRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
+                                    <button opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FEJ-eL-5GW">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="37" id="00p-Br-fg3"/>
+                                            <constraint firstAttribute="width" constant="174" id="xNK-de-DjF"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" title="Visit Our Website!!!" image="button-3.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="goToWebsite:" destination="G51-90-qjF" eventType="touchUpInside" id="PY4-Or-wbp"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="bmy-mS-fTG" firstAttribute="top" secondItem="uaD-c0-XRs" secondAttribute="top" constant="20" symbolic="YES" type="default" id="NqP-Pg-xXe"/>
+                                    <constraint firstItem="FEJ-eL-5GW" firstAttribute="top" secondItem="uaD-c0-XRs" secondAttribute="top" constant="387" id="PGy-pa-RyC"/>
                                     <constraint firstItem="bmy-mS-fTG" firstAttribute="leading" secondItem="uaD-c0-XRs" secondAttribute="leading" constant="10" id="WIp-fv-lHE"/>
                                     <constraint firstAttribute="trailing" secondItem="bmy-mS-fTG" secondAttribute="trailing" constant="30" id="k9H-th-D6j"/>
+                                    <constraint firstItem="FEJ-eL-5GW" firstAttribute="centerX" secondItem="uaD-c0-XRs" secondAttribute="centerX" type="default" id="n17-qy-tAS"/>
                                     <constraint firstAttribute="bottom" secondItem="bmy-mS-fTG" secondAttribute="bottom" constant="25" id="vjz-aL-rBm"/>
                                 </constraints>
                             </scrollView>
-                            <button opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FEJ-eL-5GW">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="37" id="00p-Br-fg3"/>
-                                    <constraint firstAttribute="width" constant="171" id="0Ht-X1-WSJ"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Visit Our Website!!!" image="button-3.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="goToWebsite:" destination="G51-90-qjF" eventType="touchUpInside" id="PY4-Or-wbp"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -3812,8 +3814,6 @@ I		                           nfo@WorldComputerExchange.org    		               
                             <constraint firstItem="uaD-c0-XRs" firstAttribute="trailing" secondItem="7hD-dv-Bsr" secondAttribute="trailing" type="default" id="I2C-Xg-Mri"/>
                             <constraint firstItem="ES2-HB-z0J" firstAttribute="centerX" secondItem="uaD-c0-XRs" secondAttribute="centerX" type="default" id="SMe-Ac-oqk"/>
                             <constraint firstAttribute="bottom" secondItem="uaD-c0-XRs" secondAttribute="bottom" constant="-1" id="Sza-ij-cd6"/>
-                            <constraint firstAttribute="bottom" secondItem="FEJ-eL-5GW" secondAttribute="bottom" constant="33" id="aoO-gw-MLM"/>
-                            <constraint firstItem="FEJ-eL-5GW" firstAttribute="leading" secondItem="7hD-dv-Bsr" secondAttribute="leading" constant="68" id="lRN-ze-tZ8"/>
                             <constraint firstItem="ES2-HB-z0J" firstAttribute="top" secondItem="7hD-dv-Bsr" secondAttribute="top" constant="20" symbolic="YES" type="default" id="mb3-YV-GOq"/>
                         </constraints>
                     </view>
@@ -3851,18 +3851,100 @@ I		                           nfo@WorldComputerExchange.org    		               
     <resources>
         <image name="WCE Content V5 NEW.png" width="1275" height="2100"/>
         <image name="WCE_LogoWhite.png" width="221" height="60"/>
-        <image name="button-1.png" width="91" height="38"/>
-        <image name="button-2.png" width="216" height="39"/>
-        <image name="button-3.png" width="172" height="39"/>
+        <image name="button-1.png" width="92" height="39"/>
+        <image name="button-2.png" width="217" height="40"/>
+        <image name="button-3.png" width="173" height="40"/>
         <image name="first.png" width="30" height="30"/>
         <image name="second.png" width="30" height="30"/>
     </resources>
+    <classes>
+        <class className="AboutWCEViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AboutWCEViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="goToWebsite:"/>
+            </relationships>
+        </class>
+        <class className="AddLocationViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AddLocationViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="backgroundTouched:"/>
+                <relationship kind="action" name="cancelChanges:"/>
+                <relationship kind="action" name="saveChanges:"/>
+                <relationship kind="action" name="textfieldReturn:"/>
+                <relationship kind="outlet" name="address" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="city" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="contact" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="dropDownTableView" candidateClass="UITableView"/>
+                <relationship kind="outlet" name="location" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="phone" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
+            </relationships>
+        </class>
+        <class className="CoverSheetViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CoverSheetViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="ChooseCountry" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="FormsViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FormsViewController.h"/>
+        </class>
+        <class className="LocationMapViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LocationMapViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
+            </relationships>
+        </class>
+        <class className="LocationViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LocationViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="enterEditingMode:"/>
+                <relationship kind="outlet" name="editButton" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="locationTableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="LoginViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LoginViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="pushLocationView:"/>
+                <relationship kind="outlet" name="passcodeField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="NewPartnerViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NewPartnerViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="cancel:"/>
+                <relationship kind="action" name="saveChanges:"/>
+                <relationship kind="outlet" name="nameField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="saveButton" candidateClass="UIBarButtonItem"/>
+            </relationships>
+        </class>
+        <class className="PartnerViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PartnerViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="enterEditingMode:"/>
+                <relationship kind="outlet" name="editButton" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="partnerTableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="WCETabBarController" superclassName="UITabBarController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/WCETabBarController.h"/>
+            <relationships>
+                <relationship kind="action" name="editButtonClicked:"/>
+                <relationship kind="action" name="logoffButtonClicked:"/>
+                <relationship kind="outlet" name="editButton" candidateClass="UIBarButtonItem"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="Y5u-3N-Zg9"/>
+        <segue reference="5ef-re-9LN"/>
     </inferredMetricsTieBreakers>
 </document>
