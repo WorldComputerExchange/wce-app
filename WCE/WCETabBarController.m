@@ -59,6 +59,12 @@
 	}
 }
 
+- (void)willDismissPresentedViewController
+{
+	[[self tabBar] setHidden:NO];
+	[[self navigationController] setNavigationBarHidden:NO];
+}
+
 - (IBAction)editButtonClicked:(id)sender
 {
 	LocationViewController *viewController = (LocationViewController *)[[self viewControllers] objectAtIndex:0];
@@ -70,6 +76,7 @@
 	[[NSUserDefaults standardUserDefaults] setBool:FALSE forKey:@"loggedIn"];
 	[[NSUserDefaults standardUserDefaults] synchronize];
 	
-	[self performSegueWithIdentifier:@"pushLogin" sender:self];
+	WCEAppDelegate *appDelegate = (WCEAppDelegate *)[[UIApplication sharedApplication] delegate];
+	[appDelegate presentLoginViewControllerAnimated:YES];
 }
 @end

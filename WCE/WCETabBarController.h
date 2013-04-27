@@ -7,8 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LoginViewController.h"
+#import "WCEAppDelegate.h"
 
-@interface WCETabBarController : UITabBarController <UITabBarControllerDelegate>
+@interface WCETabBarController : UITabBarController <UITabBarControllerDelegate, LoginViewControllerDelegate>
 
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *editButton;
 
