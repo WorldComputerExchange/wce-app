@@ -37,16 +37,36 @@
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application
-
 {
 	// Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+	
+	BOOL isLoggedIn = [[NSUserDefaults standardUserDefaults] boolForKey:@"loggedIn"];
+	
+	if(!isLoggedIn)
+	{
+		UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
+		UINavigationController *navController = (UINavigationController *)[[self window] rootViewController];
+		_loginController = [storyboard instantiateViewControllerWithIdentifier:@"login"];
+		_tabBarController = (WCETabBarController *)[navController topViewController];
+		
+		NSLog(@"%@", [[[self window] rootViewController] class]);
+		
+		[[_tabBarController tabBar] setHidden:YES];
+		[[_tabBarController navigationController] setNavigationBarHidden:YES];
+		
+		[_loginController setDelegate:_tabBarController];
+		[[[self window] rootViewController] presentViewController:_loginController animated:YES completion:nil];
+	}
+}
+
+- (void)presentLoginViewControllerAnimated:(BOOL)animated
+{
+	[[[self window] rootViewController] presentViewController:_loginController animated:animated completion:nil];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
-
-
 
 @end

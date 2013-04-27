@@ -71,17 +71,31 @@
     }
 }
 
-- (void)viewWillAppear:(BOOL)animated{
-    //show navigation bar programmatically
-    [self.navigationController setNavigationBarHidden:NO];
-    [self.navigationItem setTitle:@"Choose Location"];
-    
-    [locationTableView setBackgroundView:nil];
-    [locationTableView setBackgroundColor:[UIColor clearColor]];
-    [locationTableView setSeparatorColor:[UIColor lightGrayColor]];
-    [locationTableView setSeparatorStyle:UITableViewCellSeparatorStyleSingleLineEtched];
-    
-    [locationTableView reloadData];
+- (void)viewWillAppear:(BOOL)animated
+{
+	[super viewWillAppear:animated];
+	
+	BOOL isLoggedIn = [[NSUserDefaults standardUserDefaults] boolForKey:@"loggedIn"];
+	
+	if(isLoggedIn)
+	{
+		//show navigation bar programmatically
+		[self.navigationController setNavigationBarHidden:NO];
+		[self.navigationItem setTitle:@"Choose Location"];
+		
+		[locationTableView setHidden:NO];
+		
+		[locationTableView setBackgroundView:nil];
+		[locationTableView setBackgroundColor:[UIColor clearColor]];
+		[locationTableView setSeparatorColor:[UIColor lightGrayColor]];
+		[locationTableView setSeparatorStyle:UITableViewCellSeparatorStyleSingleLineEtched];
+		
+		[locationTableView reloadData];
+		
+		[[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault animated:YES];
+	}
+	else
+		[locationTableView setHidden:YES];
 }
 
 

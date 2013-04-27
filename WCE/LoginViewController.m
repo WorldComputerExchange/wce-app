@@ -30,10 +30,14 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+	
+	[[self view] setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"136676912132100.gif"]]];
 }
 
-- (void)viewWillAppear:(BOOL)animated{
+- (void)viewWillAppear:(BOOL)animated
+{
     [self.navigationController setNavigationBarHidden:YES];
+	[[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleBlackTranslucent];
 }
 
 - (void)didReceiveMemoryWarning
@@ -56,7 +60,10 @@
         // Tell this view controller (WCELoginViewController) to do a "segue" transition to the next page of the app. The way you set this up is in
         // the storyboard. You drag a line (by holding the control key) from the view controller that you're starting from, to the view controller that you want
         // to "segue" to. You know, I'll just make a screen capture video that'll be easier to show you with.
-        [self performSegueWithIdentifier:@"pushLocation" sender:self];
+        //[self performSegueWithIdentifier:@"pushLocation" sender:self];
+		
+		[_delegate willDismissPresentedViewController];
+		[self dismissViewControllerAnimated:YES completion:nil];
     }
     else
     {

@@ -7,8 +7,17 @@
 #import <UIKit/UIKit.h>
 #import "LocationViewController.h"
 
-@interface LoginViewController : UIViewController{
-    
+@class LoginViewController;
+@protocol LoginViewControllerDelegate <NSObject>
+
+- (void)willDismissPresentedViewController;
+
+@end
+
+@interface LoginViewController : UIViewController
+{
 }
+
+@property (nonatomic, weak) id <LoginViewControllerDelegate> delegate;
 
 @end
