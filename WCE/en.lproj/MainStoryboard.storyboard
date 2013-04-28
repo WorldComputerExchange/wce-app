@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Fvu-h0-ZII">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="11G63b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Fvu-h0-ZII">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
@@ -3046,38 +3046,26 @@ WCE Fundraising: WCE raises the final 1/3 of our sourcing &amp; shipping costs f
                         <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView opaque="NO" clearsContextBeforeDrawing="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dEn-45-xQR">
+                            <scrollView opaque="NO" clearsContextBeforeDrawing="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dEn-45-xQR">
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K7n-Ht-KKh">
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="406" id="ymE-5F-gBQ"/>
+                                            <constraint firstAttribute="width" constant="282" id="3R9-h7-mfZ"/>
+                                            <constraint firstAttribute="height" constant="467" id="AyO-T4-hSW"/>
                                         </constraints>
                                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <label opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="left" text="MISC" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M7M-tq-1HG">
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="63" id="4BE-av-W4R"/>
-                                            <constraint firstAttribute="height" constant="39" id="NyZ-an-nlw"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="M7M-tq-1HG" firstAttribute="centerX" secondItem="K7n-Ht-KKh" secondAttribute="centerX" type="default" id="0a4-qc-WfY"/>
-                                    <constraint firstAttribute="trailing" secondItem="K7n-Ht-KKh" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="2zP-yu-0aE"/>
-                                    <constraint firstItem="K7n-Ht-KKh" firstAttribute="top" secondItem="dEn-45-xQR" secondAttribute="top" constant="81" id="Nm7-PQ-pyx"/>
-                                    <constraint firstAttribute="bottom" secondItem="K7n-Ht-KKh" secondAttribute="bottom" constant="61" id="Qdz-tv-aHc"/>
-                                    <constraint firstItem="K7n-Ht-KKh" firstAttribute="leading" secondItem="dEn-45-xQR" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="ZNF-Al-L00"/>
-                                    <constraint firstItem="M7M-tq-1HG" firstAttribute="centerX" secondItem="dEn-45-xQR" secondAttribute="centerX" type="default" id="fTK-Gd-Rq9"/>
-                                    <constraint firstItem="M7M-tq-1HG" firstAttribute="top" secondItem="dEn-45-xQR" secondAttribute="top" constant="20" symbolic="YES" type="default" id="g2v-h4-YAz"/>
+                                    <constraint firstAttribute="bottom" secondItem="K7n-Ht-KKh" secondAttribute="bottom" constant="-32" id="51J-dR-G7Q"/>
+                                    <constraint firstItem="K7n-Ht-KKh" firstAttribute="leading" secondItem="dEn-45-xQR" secondAttribute="leading" constant="18" id="InP-mk-eEm"/>
+                                    <constraint firstItem="K7n-Ht-KKh" firstAttribute="top" secondItem="dEn-45-xQR" secondAttribute="top" constant="20" symbolic="YES" type="default" id="jEL-T5-JoP"/>
+                                    <constraint firstAttribute="trailing" secondItem="K7n-Ht-KKh" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="yQ5-D9-cXs"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
@@ -3089,7 +3077,7 @@ WCE Fundraising: WCE raises the final 1/3 of our sourcing &amp; shipping costs f
                             <constraint firstItem="dEn-45-xQR" firstAttribute="leading" secondItem="Hx0-Ne-EDp" secondAttribute="leading" type="default" id="osI-pN-t47"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="7LN-zJ-7nt">
+                    <navigationItem key="navigationItem" title="MISCELLANEOUS" id="7LN-zJ-7nt">
                         <barButtonItem key="backBarButtonItem" title="Back" id="1ab-HR-LsJ"/>
                     </navigationItem>
                 </viewController>
@@ -3336,7 +3324,7 @@ Are you charging any fees?  If yes how much do you charge?
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="z9U-tb-j7z">
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="199" id="Ysq-l5-BCH"/>
+                                            <constraint firstAttribute="width" constant="207" id="PXM-qR-adu"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -3356,7 +3344,7 @@ Are you charging any fees?  If yes how much do you charge?
                                     <constraint firstItem="eBu-Q7-20K" firstAttribute="top" secondItem="ncK-pK-LpH" secondAttribute="top" constant="97" id="4k2-JP-d8G"/>
                                     <constraint firstAttribute="bottom" secondItem="z9U-tb-j7z" secondAttribute="bottom" constant="428" id="IdA-Wu-LR7"/>
                                     <constraint firstItem="z9U-tb-j7z" firstAttribute="top" secondItem="ncK-pK-LpH" secondAttribute="top" constant="134" id="J26-qX-lf2"/>
-                                    <constraint firstAttribute="trailing" secondItem="z9U-tb-j7z" secondAttribute="trailing" constant="85" id="cJJ-xQ-AfJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="z9U-tb-j7z" secondAttribute="trailing" constant="77" id="JRF-Eh-C4f"/>
                                     <constraint firstItem="eBu-Q7-20K" firstAttribute="leading" secondItem="z9U-tb-j7z" secondAttribute="leading" type="default" id="nOK-W3-Swt"/>
                                     <constraint firstItem="eBu-Q7-20K" firstAttribute="leading" secondItem="ncK-pK-LpH" secondAttribute="leading" constant="36" id="sqs-x7-aB4"/>
                                 </constraints>
