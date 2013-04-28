@@ -61,7 +61,7 @@
 
 - (void)willDismissPresentedViewController
 {
-	[[self tabBar] setHidden:NO];
+	[[self view] setHidden:NO];
 	[[self navigationController] setNavigationBarHidden:NO];
 }
 
