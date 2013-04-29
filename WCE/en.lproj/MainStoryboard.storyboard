@@ -3549,17 +3549,32 @@ Are you charging any fees?  If yes how much do you charge?
                                             <outlet property="delegate" destination="a24-Hj-6Z9" id="FfF-UW-99r"/>
                                         </connections>
                                     </tableView>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Postal Code (zip):" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KxZ-Ur-kgp">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="26" id="Mha-Um-hXs"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7yq-0B-cHN">
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="textfieldReturn:" destination="a24-Hj-6Z9" eventType="editingDidEndOnExit" id="mvB-sZ-FFL"/>
+                                            <outlet property="delegate" destination="a24-Hj-6Z9" id="NaT-CD-CB8"/>
+                                        </connections>
+                                    </textField>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="pAC-Wd-cuw" firstAttribute="leading" secondItem="WcU-Es-Ofq" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="2S4-nT-Ctz"/>
                                     <constraint firstItem="7mj-ey-S6c" firstAttribute="leading" secondItem="WcU-Es-Ofq" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="3g7-YK-zQe"/>
                                     <constraint firstItem="Zfm-8O-vja" firstAttribute="leading" secondItem="WcU-Es-Ofq" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="84C-Pa-fmU"/>
                                     <constraint firstItem="Boi-FL-eJU" firstAttribute="leading" secondItem="WcU-Es-Ofq" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="8eX-Ur-f13"/>
-                                    <constraint firstAttribute="bottom" secondItem="7mj-ey-S6c" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="8m6-8S-jlJ"/>
-                                    <constraint firstItem="7mj-ey-S6c" firstAttribute="top" secondItem="WcU-Es-Ofq" secondAttribute="top" constant="367" id="B2A-vJ-Apb"/>
                                     <constraint firstItem="0Wm-fx-Ndr" firstAttribute="leading" secondItem="WcU-Es-Ofq" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="C5a-PY-e4Z"/>
+                                    <constraint firstItem="7yq-0B-cHN" firstAttribute="leading" secondItem="WcU-Es-Ofq" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="CAb-oT-aF5"/>
                                     <constraint firstItem="kFh-ve-PT1" firstAttribute="leading" secondItem="WcU-Es-Ofq" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="D1P-9u-NNn"/>
-                                    <constraint firstItem="Zfm-8O-vja" firstAttribute="centerX" secondItem="WcU-Es-Ofq" secondAttribute="centerX" type="default" id="GdY-bt-Yul"/>
+                                    <constraint firstAttribute="bottom" secondItem="7mj-ey-S6c" secondAttribute="bottom" constant="-43" id="HOn-7R-JUY"/>
                                     <constraint firstItem="ps4-Wf-R6s" firstAttribute="top" secondItem="WcU-Es-Ofq" secondAttribute="top" constant="20" symbolic="YES" type="default" id="HfA-Uf-xlh"/>
                                     <constraint firstItem="AtG-yc-stS" firstAttribute="top" secondItem="pAC-Wd-cuw" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="RGS-xm-vQU"/>
                                     <constraint firstAttribute="trailing" secondItem="pAC-Wd-cuw" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Sfy-p5-jFC"/>
@@ -3567,16 +3582,22 @@ Are you charging any fees?  If yes how much do you charge?
                                     <constraint firstItem="Boi-FL-eJU" firstAttribute="top" secondItem="vkb-X2-a7c" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="UMf-U6-GsT"/>
                                     <constraint firstAttribute="trailing" secondItem="7mj-ey-S6c" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="VQC-W0-bOb"/>
                                     <constraint firstItem="oGp-po-S2z" firstAttribute="top" secondItem="kFh-ve-PT1" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="WdH-Mh-t61"/>
+                                    <constraint firstItem="kFh-ve-PT1" firstAttribute="centerX" secondItem="WcU-Es-Ofq" secondAttribute="centerX" type="default" id="Wwe-l4-NlO"/>
                                     <constraint firstItem="Zfm-8O-vja" firstAttribute="top" secondItem="ps4-Wf-R6s" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="XO7-vn-f89"/>
                                     <constraint firstAttribute="trailing" secondItem="Zfm-8O-vja" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="ZYg-HP-vnY"/>
                                     <constraint firstItem="XP2-2z-49m" firstAttribute="top" secondItem="AtG-yc-stS" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="a3g-GV-Eec"/>
+                                    <constraint firstAttribute="trailing" secondItem="7yq-0B-cHN" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="bDB-9q-2p1"/>
                                     <constraint firstItem="AtG-yc-stS" firstAttribute="leading" secondItem="WcU-Es-Ofq" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="cPr-R4-z3r"/>
                                     <constraint firstAttribute="trailing" secondItem="XP2-2z-49m" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="ckx-a2-iaK"/>
+                                    <constraint firstItem="KxZ-Ur-kgp" firstAttribute="leading" secondItem="WcU-Es-Ofq" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="e1y-wg-VaF"/>
                                     <constraint firstItem="ps4-Wf-R6s" firstAttribute="leading" secondItem="WcU-Es-Ofq" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="gna-oX-lvz"/>
                                     <constraint firstItem="XP2-2z-49m" firstAttribute="leading" secondItem="WcU-Es-Ofq" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="jWf-og-BZy"/>
+                                    <constraint firstItem="KxZ-Ur-kgp" firstAttribute="top" secondItem="XP2-2z-49m" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="m3L-02-o0N"/>
+                                    <constraint firstItem="7mj-ey-S6c" firstAttribute="top" secondItem="WcU-Es-Ofq" secondAttribute="top" constant="430" id="mer-f9-wBh"/>
                                     <constraint firstItem="oGp-po-S2z" firstAttribute="leading" secondItem="WcU-Es-Ofq" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="o9c-D9-fFv"/>
                                     <constraint firstItem="0Wm-fx-Ndr" firstAttribute="top" secondItem="Boi-FL-eJU" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="rqh-h0-loV"/>
                                     <constraint firstAttribute="trailing" secondItem="kFh-ve-PT1" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="sTy-IO-6mV"/>
+                                    <constraint firstItem="7yq-0B-cHN" firstAttribute="top" secondItem="KxZ-Ur-kgp" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="tEP-v4-s0z"/>
                                     <constraint firstItem="vkb-X2-a7c" firstAttribute="top" secondItem="Zfm-8O-vja" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="tNx-Po-Cpd"/>
                                     <constraint firstItem="vkb-X2-a7c" firstAttribute="leading" secondItem="WcU-Es-Ofq" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="uTT-dd-UPo"/>
                                     <constraint firstItem="kFh-ve-PT1" firstAttribute="top" secondItem="0Wm-fx-Ndr" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="zJO-tA-7Cb"/>
@@ -3624,6 +3645,7 @@ Are you charging any fees?  If yes how much do you charge?
                         <outlet property="location" destination="Zfm-8O-vja" id="PQV-bk-uDi"/>
                         <outlet property="phone" destination="kFh-ve-PT1" id="qyD-ie-d4T"/>
                         <outlet property="scrollView" destination="WcU-Es-Ofq" id="DAO-hH-CDQ"/>
+                        <outlet property="zip" destination="7yq-0B-cHN" id="LDV-Bp-jUk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7VY-pE-X1N" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -3845,88 +3867,6 @@ I		                           nfo@WorldComputerExchange.org    		               
         <image name="first.png" width="30" height="30"/>
         <image name="second.png" width="30" height="30"/>
     </resources>
-    <classes>
-        <class className="AboutWCEViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AboutWCEViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="goToWebsite:"/>
-            </relationships>
-        </class>
-        <class className="AddLocationViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AddLocationViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="backgroundTouched:"/>
-                <relationship kind="action" name="cancelChanges:"/>
-                <relationship kind="action" name="saveChanges:"/>
-                <relationship kind="action" name="textfieldReturn:"/>
-                <relationship kind="outlet" name="address" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="city" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="contact" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="dropDownTableView" candidateClass="UITableView"/>
-                <relationship kind="outlet" name="location" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="phone" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
-            </relationships>
-        </class>
-        <class className="CoverSheetViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/CoverSheetViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="ChooseCountry" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-        <class className="FormsViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/FormsViewController.h"/>
-        </class>
-        <class className="LocationMapViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LocationMapViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
-            </relationships>
-        </class>
-        <class className="LocationViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LocationViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="enterEditingMode:"/>
-                <relationship kind="outlet" name="editButton" candidateClass="UIBarButtonItem"/>
-                <relationship kind="outlet" name="locationTableView" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-        <class className="LoginViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LoginViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="pushLocationView:"/>
-                <relationship kind="outlet" name="passcodeField" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="NewPartnerViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NewPartnerViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="cancel:"/>
-                <relationship kind="action" name="saveChanges:"/>
-                <relationship kind="outlet" name="nameField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="saveButton" candidateClass="UIBarButtonItem"/>
-            </relationships>
-        </class>
-        <class className="PartnerViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/PartnerViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="enterEditingMode:"/>
-                <relationship kind="outlet" name="editButton" candidateClass="UIBarButtonItem"/>
-                <relationship kind="outlet" name="partnerTableView" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-        <class className="WCETabBarController" superclassName="UITabBarController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/WCETabBarController.h"/>
-            <relationships>
-                <relationship kind="action" name="editButtonClicked:"/>
-                <relationship kind="action" name="logoffButtonClicked:"/>
-                <relationship kind="outlet" name="editButton" candidateClass="UIBarButtonItem"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

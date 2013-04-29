@@ -18,7 +18,7 @@
 @implementation AddLocationViewController
 
 @synthesize locations, countries, languages, actionSheet, dropDownTableView, dataArray, sharedUser, selectedCountry, selectedLanguage;
-@synthesize location, contact, phone, address, city;
+@synthesize location, contact, phone, address, city, zip;
 
 
 - (IBAction)backgroundTouched:(id)sender {
@@ -27,6 +27,7 @@
     [phone resignFirstResponder];
     [address resignFirstResponder];
     [city resignFirstResponder];
+    [zip resignFirstResponder];
 }
 
 - (IBAction)textfieldReturn:(id)sender{
@@ -58,17 +59,7 @@
     dataArray = [[NSArray alloc] initWithObjects:@"Country", @"Language", nil];
     
     countries = [[NSArray alloc] initWithObjects:
-                 @"Afghanistan", @"Bangladesh",  @"Benin", @"Bolivia", @"Bosnia", @"Botswana",
-                 @"Brasil", @"Bulgaria", @"Burkina Faso", @"Burundi",  @"Cambodia", @"Cameroon",
-                 @"Chile", @"Colombia", @"Congo",  @"Costa Rica", @"D.R. Congo",
-                 @"Dominican Republic", @"Ecuador", @"Egypt", @"El Salvador", @"Ethiopia",
-                 @"The Gambia", @"Ghana",  @"Georgia", @"Guatemala", @"Guinea",
-                 @"Guinea Bissau", @"Guyana", @"Haiti",  @"Honduras", @"India",
-                 @"Indonesia", @"Iraq", @"Jamaica", @"Jordan", @"Kenya", @"Liberia",
-                 @"Lithuania", @"Macedonia", @"Madagascar", @"Malawi", @"Mali",  @"Mexico",
-                 @"Mongolia", @"Nepal", @"Moldova", @"Morocco", @"Mozambique", @"Namibia",
-                 @"Nicaragua", @"Nigeria", @"Pakistan", @"Paraguay", @"Peru", @"Philippines",
-                 @"Russia", @"Senegal", @"Sri Lanka", @"Ukraine", @"Venezuala", nil];
+                 @"Afghanistan", @"Albania", @"Algeria", @"Andorra", @"Angola", @"Antigua and Barbuda", @"Argentina", @"Armenia", @"Aruba", @"Azerbaijan", @"Bahamas", @"Bahrain", @"Bangladesh", @"Barbados", @"Bassas da India", @"Belarus", @"Belize", @"Benin", @"Bermuda", @"Bhutan", @"Bolivia", @"Bosnia and Herzegovina", @"Botswana", @"Brasil", @"Brunei", @"Bulgaria", @"Burkina Faso", @"Burma", @"Burundi", @"Cambodia", @"Cameroon", @"Cape Verde", @"Cayman Islands", @"Central African Republic", @"Chad", @"Chile", @"China", @"Colombia", @"Comoros", @"Congo, Democratic Republic of the", @"Congo, Republic of the", @"Costa Rica", @"Cote d'Ivoire", @"Croatia", @"Cuba", @"Cyprus", @"Dhekelia", @"Dijibouti", @"Dominica", @"Dominican Republic", @"Ecuador", @"Egypt", @"El Salvador", @"Equatorial Guinea", @"Eritrea", @"Ethiopia", @"Fiji", @"French Guiana", @"French Polynesia", @"Gabon", @"The Gambia", @"Ghana", @"Georgia", @"Ghana", @"Guam", @"Guatemala", @"Guinea", @"Guinea Bissau", @"Guyana", @"Haiti", @"Honduras", @"India", @"Indonesia", @"Iran", @"Iraq", @"Jamaica", @"Jordan", @"Kazakhstan", @"Kenya", @"Kiribati", @"Kuwait", @"Kyrgyzstan", @"Laos", @"Lesotho", @"Liberia", @"Libya", @"Lithuania", @"Macau", @"Macedonia", @"Madagascar", @"Malawi", @"Malaysia", @"Mali", @"Marshall Islands", @"Martinique", @"Mauritania", @"Mauritius", @"Mayotte", @"Mexico", @"Micronesia", @"Mongolia", @"Moldova", @"Morocco", @"Mozambique", @"Namibia", @"Nepal", @"New Zealand", @"Nicaragua", @"Niger", @"Nigeria", @"Oman", @"Pakistan", @"Palau", @"Panama", @"Papua New Guinea", @"Paraguay", @"Peru", @"Philippines", @"Poland", @"Qatar", @"Romania", @"Russia", @"Rwanda", @"Saint Lucia", @"Samoa", @"Saudi Arabia", @"Senegal", @"Serbia and Montenegro", @"Sierra Leone", @"Singapore", @"Slovakia", @"Slovenia", @"Solomon Islands", @"Somalia", @"South Africa",  @"Sri Lanka",  @"Sudan",  @"Suriname",  @"Swaziland",  @"Syria",  @"Tajikistan",  @"Tanzania",  @"Thailand",  @"Timor-Leste",  @"Togo",  @"Tokelau",  @"Tonga",  @"Trinidad and Tobago",  @"Tunisia",  @"Turkey",  @"Turkmenistan",  @"Turks and Caicos Islands",  @"Tuvalu",  @"Uganda",  @"Ukraine",  @"United Arab Emirates",  @"United Kingdom",  @"United States", @"Uruguay",  @"Uzbekistan",  @"Vanuatu", @"Venezuala", @"Vietnam", @"Virgin Islands", @"Western Sahara", @"Yemen", @"Zambia", @"Zimbabwe", nil];
 
     languages = [[NSArray alloc] initWithObjects:@"French", @"Arabic", @"English", @"Spanish", nil];
 	
@@ -96,6 +87,7 @@
         phone.text = editingLocation.phone;
         address.text = editingLocation.address;
         city.text = editingLocation.city;
+        zip.text = editingLocation.zip;
         selectedLanguage = editingLocation.language;
         selectedCountry = editingLocation.country;
     }
