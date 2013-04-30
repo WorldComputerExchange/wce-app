@@ -7,5 +7,9 @@
 #import <UIKit/UIKit.h>
 
 @interface ImplementationViewController : UIViewController
+{
+}
+
+@property UIScrollView *scrollView;
 
 @end
