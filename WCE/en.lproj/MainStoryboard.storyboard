@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Change Pass View Controller-->
         <scene sceneID="C7H-sC-7sI">
             <objects>
-                <viewController id="SSU-wp-MNL" sceneMemberID="viewController">
+                <viewController id="SSU-wp-MNL" customClass="ChangePassViewController" sceneMemberID="viewController">
                     <view key="view" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="dyq-9g-tJ3">
                         <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -41,6 +41,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="saveNewPassword:" destination="SSU-wp-MNL" eventType="touchUpInside" id="rTj-rg-gRg"/>
+                                </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="New Password:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mnU-Gd-uYI">
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -4267,6 +4270,12 @@ I		                           nfo@WorldComputerExchange.org    		               
                 <relationship kind="outlet" name="phone" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
                 <relationship kind="outlet" name="zip" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="ChangePassViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ChangePassViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="saveNewPassword:"/>
             </relationships>
         </class>
         <class className="CoverSheetViewController" superclassName="UIViewController">

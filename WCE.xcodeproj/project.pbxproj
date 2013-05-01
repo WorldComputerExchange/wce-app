@@ -47,6 +47,7 @@
 		D0F334B7172AC647006BACED /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = D0F334B5172AC647006BACED /* first.png */; };
 		D0F334B8172AC647006BACED /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = D0F334B6172AC647006BACED /* second.png */; };
 		D0F745F41730A59300C9EC5F /* WCEContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F745F31730A59300C9EC5F /* WCEContentViewController.m */; };
+		D0F745F71730AB3B00C9EC5F /* ChangePassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F745F61730AB3B00C9EC5F /* ChangePassViewController.m */; };
 		FA44558116E284E900D08750 /* WCE Content V5 NEW.png in Resources */ = {isa = PBXBuildFile; fileRef = FA44558016E284E900D08750 /* WCE Content V5 NEW.png */; };
 		FA98E2941722F9EE005EC158 /* OrderFormViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA98E2931722F9EE005EC158 /* OrderFormViewController.m */; };
 		FA98E2971726062F005EC158 /* NewPartnerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA98E2961726062F005EC158 /* NewPartnerViewController.m */; };
@@ -113,6 +114,8 @@
 		D0F334B6172AC647006BACED /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
 		D0F745F21730A59300C9EC5F /* WCEContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCEContentViewController.h; sourceTree = "<group>"; };
 		D0F745F31730A59300C9EC5F /* WCEContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCEContentViewController.m; sourceTree = "<group>"; };
+		D0F745F51730AB3B00C9EC5F /* ChangePassViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangePassViewController.h; sourceTree = "<group>"; };
+		D0F745F61730AB3B00C9EC5F /* ChangePassViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangePassViewController.m; sourceTree = "<group>"; };
 		FA44558016E284E900D08750 /* WCE Content V5 NEW.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WCE Content V5 NEW.png"; sourceTree = "<group>"; };
 		FA98E2921722F9EE005EC158 /* OrderFormViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderFormViewController.h; sourceTree = "<group>"; };
 		FA98E2931722F9EE005EC158 /* OrderFormViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderFormViewController.m; sourceTree = "<group>"; };
@@ -189,6 +192,8 @@
 			children = (
 				8C27586916CC820E00DEDAC8 /* LoginViewController.h */,
 				8C27586A16CC820E00DEDAC8 /* LoginViewController.m */,
+				D0F745F51730AB3B00C9EC5F /* ChangePassViewController.h */,
+				D0F745F61730AB3B00C9EC5F /* ChangePassViewController.m */,
 			);
 			name = Login;
 			sourceTree = "<group>";
@@ -467,6 +472,7 @@
 				8C1B2979172A187700D359D4 /* FormsViewController.m in Sources */,
 				D0F334B4172AC38E006BACED /* WCETabBarController.m in Sources */,
 				D0F745F41730A59300C9EC5F /* WCEContentViewController.m in Sources */,
+				D0F745F71730AB3B00C9EC5F /* ChangePassViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
