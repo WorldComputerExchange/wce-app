@@ -16,6 +16,7 @@
 @property (strong, nonatomic) UIWindow *window;
 @property (strong, nonatomic, readonly) LoginViewController *loginController;
 @property (strong, nonatomic, readonly) WCETabBarController *tabBarController;
+@property (strong, nonatomic, readonly) UINavigationController *loginNavController;
 
 - (void)presentLoginViewControllerAnimated:(BOOL)animated;
 

@@ -14,6 +14,7 @@
 {
 	self.window.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"136676912132100.gif"]];
 	[[UINavigationBar appearance] setTintColor:[UIColor colorWithRed:255./255. green:140/255. blue:0./255. alpha:1]];
+	
 	// Override point for customization after application launch.
    
     return YES;
@@ -48,6 +49,9 @@
 	_loginController = [storyboard instantiateViewControllerWithIdentifier:@"login"];
 	_tabBarController = (WCETabBarController *)[navController topViewController];
 	[_loginController setDelegate:_tabBarController];
+	
+	// used for segue between password and change password:
+	//_loginNavController = [[UINavigationController alloc] initWithRootViewController:_loginController];
 	
 	if(!isLoggedIn)
 	{
