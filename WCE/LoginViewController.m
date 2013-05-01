@@ -47,8 +47,8 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)pushLocationView:(id)sender{
-	
+- (IBAction)pushLocationView:(id)sender
+{	
 	// "self.passcodeField.text" refers to the text currently entered in the passcode field (which is an outlet for this class, WCELoginViewController)
     if ([self.passcodeField.text isEqualToString:@"12345"]) // We compare it to the string "12345"
     {
