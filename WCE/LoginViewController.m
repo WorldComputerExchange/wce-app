@@ -39,6 +39,16 @@
 {
     [self.navigationController setNavigationBarHidden:YES];
 	[[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleBlackTranslucent animated:YES];
+	
+	// retrieve the password
+	BOOL hasSetPassword = [[NSUserDefaults standardUserDefaults] boolForKey:@"hasSetPassword"];
+	if(!hasSetPassword)
+		_password = @"12345";
+	else
+	{
+		_password = [[NSUserDefaults standardUserDefaults] stringForKey:@"password"];
+		[[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithBool:TRUE] forKey:@"hasSetPassword"];
+	}
 }
 
 - (void)didReceiveMemoryWarning
@@ -50,7 +60,7 @@
 - (IBAction)pushLocationView:(id)sender
 {	
 	// "self.passcodeField.text" refers to the text currently entered in the passcode field (which is an outlet for this class, WCELoginViewController)
-    if ([self.passcodeField.text isEqualToString:@"12345"]) // We compare it to the string "12345"
+    if ([self.passcodeField.text isEqualToString:_password]) // We compare it to the string "12345"
     {
         self.passcodeField.text = @""; // Erase the passcode entered in the text field
 		

@@ -18,6 +18,7 @@
 {
 }
 
+@property (nonatomic, strong, readonly) NSString *password;
 @property (nonatomic, weak) id <LoginViewControllerDelegate> delegate;
 
 @end

@@ -27,6 +27,8 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+	
+	[[self view] setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"136676912132100.gif"]]];
 }
 
 - (void)didReceiveMemoryWarning
@@ -36,7 +38,7 @@
 }
 
 - (IBAction)saveNewPassword:(id)sender
-{
+{	
 	[self dismissViewControllerAnimated:YES completion:nil];
 }
 @end
