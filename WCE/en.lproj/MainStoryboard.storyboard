@@ -7,7 +7,6 @@
         <!--Change Pass View Controller-->
         <scene sceneID="C7H-sC-7sI">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8Am-hI-pEI" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="SSU-wp-MNL" customClass="ChangePassViewController" sceneMemberID="viewController">
                     <view key="view" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="dyq-9g-tJ3">
                         <rect key="frame" x="0.0" y="20" width="320" height="548"/>
@@ -35,7 +34,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="New Password Hint:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8y8-ub-DWI">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Repeat Password: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8y8-ub-DWI">
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -81,6 +80,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="izA-PH-MMP"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Am-hI-pEI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="434" y="1093"/>
         </scene>
