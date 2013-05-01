@@ -42,19 +42,17 @@
 	
 	BOOL isLoggedIn = [[NSUserDefaults standardUserDefaults] boolForKey:@"loggedIn"];
 	
+	UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
+	UINavigationController *navController = (UINavigationController *)[[self window] rootViewController];
+	_loginController = [storyboard instantiateViewControllerWithIdentifier:@"login"];
+	_tabBarController = (WCETabBarController *)[navController topViewController];
+	[_loginController setDelegate:_tabBarController];
+	
 	if(!isLoggedIn)
 	{
-		UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
-		UINavigationController *navController = (UINavigationController *)[[self window] rootViewController];
-		_loginController = [storyboard instantiateViewControllerWithIdentifier:@"login"];
-		_tabBarController = (WCETabBarController *)[navController topViewController];
-		
-		NSLog(@"%@", [[[self window] rootViewController] class]);
-		
-		[[_tabBarController tabBar] setHidden:YES];
+		[[_tabBarController view] setHidden:YES];
 		[[_tabBarController navigationController] setNavigationBarHidden:YES];
 		
-		[_loginController setDelegate:_tabBarController];
 		[[[self window] rootViewController] presentViewController:_loginController animated:YES completion:nil];
 	}
 }

@@ -80,10 +80,7 @@
 	if(isLoggedIn)
 	{
 		//show navigation bar programmatically
-		[self.navigationController setNavigationBarHidden:NO];
 		[self.navigationItem setTitle:@"Choose Location"];
-		
-		[locationTableView setHidden:NO];
 		
 		[locationTableView setBackgroundView:nil];
 		[locationTableView setBackgroundColor:[UIColor clearColor]];
@@ -94,8 +91,6 @@
 		
 		[[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault animated:YES];
 	}
-	else
-		[locationTableView setHidden:YES];
 }
 
 

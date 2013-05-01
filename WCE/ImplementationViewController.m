@@ -11,6 +11,7 @@
 @end
 
 @implementation ImplementationViewController
+@synthesize scrollView;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -25,12 +26,8 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    // Add a "Save" button to the navigation controller
-	/*UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Back"
-																   style:UIBarButtonItemStyleDone
-																  target:nil
-																  action:nil];*/
-	self.presentingViewController.navigationItem.backBarButtonItem.title = @"Back";
+    
+    
 }
 
 - (void)didReceiveMemoryWarning
