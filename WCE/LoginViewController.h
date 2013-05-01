@@ -6,6 +6,7 @@
 
 #import <UIKit/UIKit.h>
 #import "LocationViewController.h"
+#import "ChangePassViewController.h"
 
 @class LoginViewController;
 @protocol LoginViewControllerDelegate <NSObject>
@@ -14,7 +15,7 @@
 
 @end
 
-@interface LoginViewController : UIViewController
+@interface LoginViewController : UIViewController <ChangePassViewControllerDelegate>
 {
 }
 

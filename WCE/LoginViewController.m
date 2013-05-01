@@ -47,8 +47,23 @@
 	else
 	{
 		_password = [[NSUserDefaults standardUserDefaults] stringForKey:@"password"];
-		[[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithBool:TRUE] forKey:@"hasSetPassword"];
+		//[[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithBool:TRUE] forKey:@"hasSetPassword"];
 	}
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+	if([[segue identifier] isEqualToString:@"pushChangePassword"])
+	{
+		ChangePassViewController *vc = (ChangePassViewController *)[segue destinationViewController];
+		[vc setOldPasswordToCheck:_password];
+		[vc setDelegate:self];
+	}
+}
+
+- (void)didDismissViewController:(ChangePassViewController *)viewController
+{
+	_password = [[NSUserDefaults standardUserDefaults] stringForKey:@"password"];
 }
 
 - (void)didReceiveMemoryWarning

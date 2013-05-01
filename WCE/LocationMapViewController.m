@@ -118,19 +118,25 @@ static NSArray *_previouslyGeocodedLocations;
 	[geocodingString appendString:@", "];
 	[geocodingString appendString:[thisLocation city]];
 	
+	if(![[thisLocation zip] isEqualToString:@"NA"])
+	{
+		[geocodingString appendString:@", "];
+		[geocodingString appendString:[thisLocation zip]];
+	}
+	
 	if(![[thisLocation country] isEqualToString:@"NA"])
 	{
 		[geocodingString appendString:@", "];
 		[geocodingString appendString:[thisLocation country]];
 	}
-	else
+	/*else
 	{
 		//// exit procedure
 		if(index < [array count] - 1)
 			[self addAnnotationWithArray:array atIndex:(index + 1)];
 		else
 			_previouslyGeocodedLocations = [array copy]; /// keep a record of which ones we've already geocoded
-	}
+	}*/
 	
 	NSLog(@"index of thing: %i", [_previouslyGeocodedLocations indexOfObject:thisLocation]);
 	if([_previouslyGeocodedLocations indexOfObject:thisLocation] == NSNotFound || [_previouslyGeocodedLocations count] == 0)
