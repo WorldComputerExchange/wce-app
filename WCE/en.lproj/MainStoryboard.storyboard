@@ -3779,43 +3779,36 @@ Are you charging any fees?  If yes how much do you charge?
             </objects>
             <point key="canvasLocation" x="2692" y="2069"/>
         </scene>
-        <!--View Controller - Content-->
+        <!--Content View Controller - Content-->
         <scene sceneID="u4i-pa-9pY">
             <objects>
-                <viewController title="Content" id="BdZ-ml-oe7" sceneMemberID="viewController">
+                <viewController title="Content" id="BdZ-ml-oe7" customClass="WCEContentViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SbZ-NK-kui">
                         <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="WCE Content V5 NEW.png" translatesAutoresizingMaskIntoConstraints="NO" id="1mw-dS-8pc">
-                                <gestureRecognizers/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vti-72-g1B">
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="zbf-ei-AOL" appends="YES" id="odx-XZ-J7f"/>
-                                    <outletCollection property="gestureRecognizers" destination="zeb-Ne-6wZ" appends="YES" id="bba-Ei-Wae"/>
-                                    <outletCollection property="gestureRecognizers" destination="DJp-ov-gPC" appends="YES" id="Hiu-P4-xFA"/>
-                                    <outletCollection property="gestureRecognizers" destination="prY-eB-JNC" appends="YES" id="ttz-sa-YKm"/>
-                                    <outletCollection property="gestureRecognizers" destination="ccu-QD-Zl2" appends="YES" id="Y56-ok-KdR"/>
+                                    <outlet property="delegate" destination="BdZ-ml-oe7" id="jhW-wq-I2w"/>
                                 </connections>
-                            </imageView>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="1mw-dS-8pc" firstAttribute="bottom" secondItem="SbZ-NK-kui" secondAttribute="bottom" type="default" id="5hu-op-fyG"/>
-                            <constraint firstItem="1mw-dS-8pc" firstAttribute="leading" secondItem="SbZ-NK-kui" secondAttribute="leading" type="default" id="EEK-iP-dpy"/>
-                            <constraint firstItem="1mw-dS-8pc" firstAttribute="trailing" secondItem="SbZ-NK-kui" secondAttribute="trailing" type="default" id="t2x-ri-bky"/>
-                            <constraint firstItem="1mw-dS-8pc" firstAttribute="top" secondItem="SbZ-NK-kui" secondAttribute="top" type="default" id="wI7-v6-3zd"/>
+                            <constraint firstItem="Vti-72-g1B" firstAttribute="trailing" secondItem="SbZ-NK-kui" secondAttribute="trailing" type="default" id="NgD-qK-hUu"/>
+                            <constraint firstItem="Vti-72-g1B" firstAttribute="leading" secondItem="SbZ-NK-kui" secondAttribute="leading" type="default" id="OCG-7e-amJ"/>
+                            <constraint firstItem="Vti-72-g1B" firstAttribute="bottom" secondItem="SbZ-NK-kui" secondAttribute="bottom" type="default" id="Rs2-Lb-xG0"/>
+                            <constraint firstItem="Vti-72-g1B" firstAttribute="top" secondItem="SbZ-NK-kui" secondAttribute="top" type="default" id="xuW-cb-dMy"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="CONTENT" id="HlQ-fn-X6g">
                         <barButtonItem key="backBarButtonItem" title="Back" id="ODE-Pg-RMq"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="scrollView" destination="Vti-72-g1B" id="G0D-6j-Tzt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NVc-aW-QJ2" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="zbf-ei-AOL"/>
-                <pinchGestureRecognizer id="zeb-Ne-6wZ"/>
-                <rotationGestureRecognizer id="DJp-ov-gPC"/>
-                <swipeGestureRecognizer direction="right" id="prY-eB-JNC"/>
-                <panGestureRecognizer minimumNumberOfTouches="1" id="ccu-QD-Zl2"/>
             </objects>
             <point key="canvasLocation" x="3338" y="716"/>
         </scene>
@@ -4249,7 +4242,6 @@ I		                           nfo@WorldComputerExchange.org    		               
         </scene>
     </scenes>
     <resources>
-        <image name="WCE Content V5 NEW.png" width="1275" height="2100"/>
         <image name="WCE_LogoWhite.png" width="221" height="60"/>
         <image name="button-1.png" width="92" height="39"/>
         <image name="button-2.png" width="217" height="40"/>
@@ -4257,6 +4249,98 @@ I		                           nfo@WorldComputerExchange.org    		               
         <image name="first.png" width="30" height="30"/>
         <image name="second.png" width="30" height="30"/>
     </resources>
+    <classes>
+        <class className="AboutWCEViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AboutWCEViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="goToWebsite:"/>
+            </relationships>
+        </class>
+        <class className="AddLocationViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AddLocationViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="backgroundTouched:"/>
+                <relationship kind="action" name="cancelChanges:"/>
+                <relationship kind="action" name="saveChanges:"/>
+                <relationship kind="action" name="textfieldReturn:"/>
+                <relationship kind="outlet" name="address" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="city" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="contact" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="dropDownTableView" candidateClass="UITableView"/>
+                <relationship kind="outlet" name="location" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="phone" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
+                <relationship kind="outlet" name="zip" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="CoverSheetViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CoverSheetViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="ChooseCountry" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="FormsViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FormsViewController.h"/>
+        </class>
+        <class className="ImplementationViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ImplementationViewController.h"/>
+        </class>
+        <class className="LocationMapViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LocationMapViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
+            </relationships>
+        </class>
+        <class className="LocationViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LocationViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="enterEditingMode:"/>
+                <relationship kind="outlet" name="editButton" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="locationTableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="LoginViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LoginViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="pushLocationView:"/>
+                <relationship kind="outlet" name="passcodeField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="NewPartnerViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NewPartnerViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="cancel:"/>
+                <relationship kind="action" name="saveChanges:"/>
+                <relationship kind="outlet" name="nameField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="saveButton" candidateClass="UIBarButtonItem"/>
+            </relationships>
+        </class>
+        <class className="PartnerViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PartnerViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="enterEditingMode:"/>
+                <relationship kind="outlet" name="editButton" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="partnerTableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="WCEContentViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/WCEContentViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
+            </relationships>
+        </class>
+        <class className="WCETabBarController" superclassName="UITabBarController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/WCETabBarController.h"/>
+            <relationships>
+                <relationship kind="action" name="editButtonClicked:"/>
+                <relationship kind="action" name="logoffButtonClicked:"/>
+                <relationship kind="outlet" name="editButton" candidateClass="UIBarButtonItem"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
