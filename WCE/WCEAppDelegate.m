@@ -12,7 +12,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 
 {
-	self.window.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"backgroundtest.png"]];
+	self.window.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"136676912132100.gif"]];
 	[[UINavigationBar appearance] setTintColor:[UIColor colorWithRed:255./255. green:140/255. blue:0./255. alpha:1]];
 	// Override point for customization after application launch.
    

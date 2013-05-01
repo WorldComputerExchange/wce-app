@@ -32,7 +32,7 @@
 	// Do any additional setup after loading the view.
     UIImage *image = [UIImage imageNamed:@"WCE_LogoWhite.png"];
     [[[self navigationController] navigationBar] setBackgroundImage:image forBarMetrics:UIBarMetricsDefault];
-	[[self view] setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"backgroundtest.png"]]];
+	[[self view] setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"136676912132100.gif"]]];
 }
 
 - (void)viewWillAppear:(BOOL)animated
