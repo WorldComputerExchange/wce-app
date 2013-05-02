@@ -3211,7 +3211,6 @@ CONDITIONS:  Full containers only.  WCE needs 4 months to raise the final 1/3 af
                             <constraint firstItem="nWd-IC-rHW" firstAttribute="top" secondItem="v5r-uN-5qC" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="8O8-iN-91l"/>
                             <constraint firstItem="7SZ-DV-jKK" firstAttribute="top" secondItem="svL-aN-oPe" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="8Wu-37-naF"/>
                             <constraint firstItem="v5r-uN-5qC" firstAttribute="leading" secondItem="YcU-JH-tfh" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="8e3-xC-1zq"/>
-                            <constraint firstItem="s3g-yI-dDy" firstAttribute="trailing" secondItem="Vj6-Vd-fYe" secondAttribute="trailing" type="default" id="8me-QJ-Elm"/>
                             <constraint firstItem="ltv-d8-lHA" firstAttribute="leading" secondItem="YcU-JH-tfh" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="9AK-ii-zNe"/>
                             <constraint firstItem="hqa-k6-hNp" firstAttribute="trailing" secondItem="rD9-pz-qQ9" secondAttribute="trailing" type="default" id="9hI-df-fkY"/>
                             <constraint firstItem="pzH-zP-oNq" firstAttribute="top" secondItem="h6X-jH-H3Y" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Ame-Ei-aDB"/>
@@ -3228,7 +3227,6 @@ CONDITIONS:  Full containers only.  WCE needs 4 months to raise the final 1/3 af
                             <constraint firstItem="v5r-uN-5qC" firstAttribute="top" secondItem="mbW-TH-Vwv" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Duf-Vt-cUL"/>
                             <constraint firstItem="fCB-ux-ww5" firstAttribute="top" secondItem="YcU-JH-tfh" secondAttribute="top" constant="2168" id="ETw-GI-Ylf"/>
                             <constraint firstItem="qiy-zj-ptC" firstAttribute="leading" secondItem="rD9-pz-qQ9" secondAttribute="leading" type="default" id="EjB-JJ-3nb"/>
-                            <constraint firstItem="fCB-ux-ww5" firstAttribute="trailing" secondItem="Vj6-Vd-fYe" secondAttribute="trailing" type="default" id="Fa2-7C-tW0"/>
                             <constraint firstItem="bkd-ef-GD9" firstAttribute="leading" secondItem="YcU-JH-tfh" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Fzq-TT-72c"/>
                             <constraint firstItem="XgO-0A-b4a" firstAttribute="top" secondItem="pzH-zP-oNq" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="GjX-fa-FoU"/>
                             <constraint firstItem="6PU-4M-J35" firstAttribute="top" secondItem="hqa-k6-hNp" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Gu4-JD-aAy"/>
@@ -3336,6 +3334,7 @@ CONDITIONS:  Full containers only.  WCE needs 4 months to raise the final 1/3 af
                     </scrollView>
                     <navigationItem key="navigationItem" title="Implementation Qs" id="mXn-Mq-x4q">
                         <barButtonItem key="backBarButtonItem" title="Back" id="IaM-bV-xaI"/>
+                        <barButtonItem key="rightBarButtonItem" title="Submit" id="n9E-11-9nV"/>
                     </navigationItem>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <connections>
@@ -4088,7 +4087,7 @@ Are you charging any fees?  If yes how much do you charge?
                                     <constraint firstAttribute="height" constant="401" id="pZ3-mg-R9i"/>
                                     <constraint firstAttribute="width" constant="299" id="rh4-0E-GFx"/>
                                 </constraints>
-                                <mutableString key="text">Helping bridge the global digital divide for youth
+                                <string key="text">Helping bridge the global digital divide for youth
 
 
 World Computer Exchange (WCE) is a global education and environment organization founded in 1999 to connect more youth in developing countries to opportunities, skills, and understanding via the Internet – while keeping working computers out of landfills.   With our 700 volunteers, WCE is the largest US non-profit provider of reused computers to connect youth in developing countries.  Studies show that the reuse of a computer is 25 times more carbon efficient than destroying one and re-manufacturing a new one.  Our work helps to implement the UN’s Millennium Development Goals in Education.
@@ -4137,7 +4136,7 @@ Info@WorldComputerExchange.org    		                           Website: www.Worl
 		                           
 Online &amp; onsite tech volunteers &amp; reused computers connecting youth in developing countries
 		                           		                          
-</mutableString>
+</string>
                                 <color key="textColor" red="0.99215692281723022" green="0.9960784912109375" blue="0.99215692281723022" alpha="1" colorSpace="deviceRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
