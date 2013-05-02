@@ -64,8 +64,9 @@
 			{
 				[_passwordNewOne setText:@""];
 				[_passwordNewTwo setText:@""];
+                [_passwordNewOne becomeFirstResponder];
 				
-				UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Passwords don't match" message:@"The new password and confirmed password fields do not match." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+				UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Passwords do not match" message:@"The passwords you have entered do not match. Please try again." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
 				[alert show];
 			}
 		}
