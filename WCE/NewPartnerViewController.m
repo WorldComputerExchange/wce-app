@@ -16,6 +16,18 @@
 
 @synthesize nameField, sharedUser, saveButton;
 
+
+- (IBAction)backgroundTouched:(id)sender {
+    [nameField resignFirstResponder];
+}
+
+- (IBAction)textfieldReturn:(id)sender{
+    [sender resignFirstResponder];
+}
+
+
+
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];

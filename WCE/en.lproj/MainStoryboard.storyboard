@@ -3689,7 +3689,7 @@ Are you charging any fees?  If yes how much do you charge?
         <scene sceneID="G4p-bJ-PmB">
             <objects>
                 <viewController id="91l-Qg-47C" customClass="NewPartnerViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="tk1-Og-nak">
+                    <view key="view" contentMode="scaleToFill" id="tk1-Og-nak" customClass="UIControl">
                         <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
@@ -3701,6 +3701,11 @@ Are you charging any fees?  If yes how much do you charge?
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="backgroundTouched:" destination="91l-Qg-47C" eventType="touchDown" id="9i7-ZI-bLR"/>
+                                            <action selector="textfieldReturn:" destination="91l-Qg-47C" eventType="editingDidEndOnExit" id="2tk-bu-FIh"/>
+                                            <outlet property="delegate" destination="91l-Qg-47C" id="HoY-7w-htE"/>
+                                        </connections>
                                     </textField>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Name:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eBu-Q7-20K">
                                         <constraints>
@@ -3749,6 +3754,10 @@ Are you charging any fees?  If yes how much do you charge?
                             <constraint firstAttribute="bottom" secondItem="ncK-pK-LpH" secondAttribute="bottom" constant="-44" id="OqN-My-BlS"/>
                             <constraint firstItem="ncK-pK-LpH" firstAttribute="leading" secondItem="tk1-Og-nak" secondAttribute="leading" type="default" id="xcj-tm-x7T"/>
                         </constraints>
+                        <connections>
+                            <action selector="backgroundTouched:" destination="91l-Qg-47C" eventType="touchDown" id="Js0-ur-Z4I"/>
+                            <action selector="textfieldReturn:" destination="91l-Qg-47C" eventType="editingDidEndOnExit" id="bPT-rs-7Gf"/>
+                        </connections>
                     </view>
                     <toolbarItems/>
                     <nil key="simulatedTopBarMetrics"/>
@@ -3849,6 +3858,7 @@ Are you charging any fees?  If yes how much do you charge?
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
+                                            <action selector="backgroundTouched:" destination="a24-Hj-6Z9" eventType="touchDown" id="RbZ-6n-Ucy"/>
                                             <action selector="textfieldReturn:" destination="a24-Hj-6Z9" eventType="editingDidEndOnExit" id="plx-E7-GsM"/>
                                             <outlet property="delegate" destination="a24-Hj-6Z9" id="gcV-wt-LMK"/>
                                         </connections>
@@ -3998,9 +4008,6 @@ Are you charging any fees?  If yes how much do you charge?
                             <constraint firstItem="BWL-yN-GXA" firstAttribute="trailing" secondItem="90W-QE-qtV" secondAttribute="trailing" type="default" id="cdo-2x-p35"/>
                             <constraint firstItem="WcU-Es-Ofq" firstAttribute="top" secondItem="BWL-yN-GXA" secondAttribute="bottom" type="default" id="cq4-V5-TAb"/>
                         </constraints>
-                        <connections>
-                            <action selector="backgroundTouched:" destination="a24-Hj-6Z9" eventType="touchDown" id="EOy-4B-OAf"/>
-                        </connections>
                     </view>
                     <navigationItem key="navigationItem" title="Add New Location" id="cXV-w4-dlm"/>
                     <connections>
@@ -4068,15 +4075,13 @@ Are you charging any fees?  If yes how much do you charge?
                         <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <scrollView opaque="NO" clearsContextBeforeDrawing="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uaD-c0-XRs">
-                                <subviews>
-                                    <textView opaque="NO" clearsContextBeforeDrawing="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bmy-mS-fTG">
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="373" id="PG1-VR-hXo"/>
-                                            <constraint firstAttribute="width" constant="299" id="rh4-0E-GFx"/>
-                                        </constraints>
-                                        <mutableString key="text">Helping bridge the global digital divide for youth
+                            <textView opaque="NO" clearsContextBeforeDrawing="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bmy-mS-fTG">
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="401" id="pZ3-mg-R9i"/>
+                                    <constraint firstAttribute="width" constant="299" id="rh4-0E-GFx"/>
+                                </constraints>
+                                <mutableString key="text">Helping bridge the global digital divide for youth
 
 
 World Computer Exchange (WCE) is a global education and environment organization founded in 1999 to connect more youth in developing countries to opportunities, skills, and understanding via the Internet – while keeping working computers out of landfills.   With our 700 volunteers, WCE is the largest US non-profit provider of reused computers to connect youth in developing countries.  Studies show that the reuse of a computer is 25 times more carbon efficient than destroying one and re-manufacturing a new one.  Our work helps to implement the UN’s Millennium Development Goals in Education.
@@ -4115,45 +4120,21 @@ Where We Are:
 Today, World Computer Exchange volunteers provide online support to 450 Partner organisations in 64 countries with support in planning, fund raising, technology, educational content and appropriate disposal of e-waste:
 
 
-Afghanistan
-Egypt                    Lithuania           Philippines
-Bangladesh          El Salvador	 Macedonia        Rwanda
-Bénin		Ethiopia		 Madagascar       Sénégal
-Bolivia		Georgia	               Malawi              Sierra Leone
-Bosnia		Ghana       	 Mali                  South Africa
-Botswana             Guatemala            México              Sri Lanka    
-Brasil                   Guinea                  Moldova           Tanzania 
-Bulgaria               Guyana                 Moçambique    Thailand
-Burundi	         	Haiti                     Mongolia          Togo
-Cameroon  	Indonesia              Morocco           Uganda
-Chile                    India                     Namibia            Ukraine
-Colombia             Iraq                       Nepal               Venezuela
-Costa Rica           Jamaica             	 Nicaragua        Viet Nam
-Côte d'Ivoire	Jordan	            	 Nigeria             Zambia  
-D. R. Congo	Kenya                   Pakistan           Zimbabwe
-Ecuador  	Liberia                  Perú                 Dominican Rep.
-		                                        
  
 HEADQUARTERS:
 936 Nantasket Ave, Hull, Massachusetts  02045  USA  + 781-925-3078
-		                           WCE-Canada: 941 Beaudry Street    Ottawa, Ontario K1K 3R9  + 781-925-3078
-I		                           nfo@WorldComputerExchange.org    		                           Website: www.WorldComputerExchange.org
-		                           Online &amp; onsite tech volunteers &amp; reused computers connecting youth in developing countries
+		                           
+WCE-Canada: 941 Beaudry Street    Ottawa, Ontario K1K 3R9  + 781-925-3078
+
+Info@WorldComputerExchange.org    		                           Website: www.WorldComputerExchange.org
+		                           
+Online &amp; onsite tech volunteers &amp; reused computers connecting youth in developing countries
 		                           		                          
 </mutableString>
-                                        <color key="textColor" red="0.99215692281723022" green="0.9960784912109375" blue="0.99215692281723022" alpha="1" colorSpace="deviceRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
-                                </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="bmy-mS-fTG" secondAttribute="bottom" constant="24" id="DBM-di-CN0"/>
-                                    <constraint firstItem="bmy-mS-fTG" firstAttribute="top" secondItem="uaD-c0-XRs" secondAttribute="top" constant="11" id="FmU-4S-sAr"/>
-                                    <constraint firstItem="bmy-mS-fTG" firstAttribute="centerX" secondItem="uaD-c0-XRs" secondAttribute="centerX" type="default" id="Pxa-yU-TT6"/>
-                                    <constraint firstAttribute="trailing" secondItem="bmy-mS-fTG" secondAttribute="trailing" constant="10" id="elo-SQ-SRb"/>
-                                </constraints>
-                            </scrollView>
+                                <color key="textColor" red="0.99215692281723022" green="0.9960784912109375" blue="0.99215692281723022" alpha="1" colorSpace="deviceRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                             <button opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0r6-z9-BqJ">
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -4174,12 +4155,10 @@ I		                           nfo@WorldComputerExchange.org    		               
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="uaD-c0-XRs" firstAttribute="leading" secondItem="7hD-dv-Bsr" secondAttribute="leading" type="default" id="06a-Rf-HPE"/>
-                            <constraint firstItem="uaD-c0-XRs" firstAttribute="top" secondItem="0r6-z9-BqJ" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Bgz-TN-a8m"/>
-                            <constraint firstAttribute="bottom" secondItem="uaD-c0-XRs" secondAttribute="bottom" constant="-1" id="Sza-ij-cd6"/>
-                            <constraint firstItem="0r6-z9-BqJ" firstAttribute="top" secondItem="7hD-dv-Bsr" secondAttribute="top" type="default" id="U8y-4q-ZER"/>
+                            <constraint firstItem="bmy-mS-fTG" firstAttribute="top" secondItem="0r6-z9-BqJ" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="9bw-y2-dD0"/>
+                            <constraint firstItem="0r6-z9-BqJ" firstAttribute="top" secondItem="7hD-dv-Bsr" secondAttribute="top" constant="-1" id="LQl-3l-PVa"/>
                             <constraint firstItem="0r6-z9-BqJ" firstAttribute="leading" secondItem="7hD-dv-Bsr" secondAttribute="leading" constant="78" id="k69-ab-vq2"/>
-                            <constraint firstItem="uaD-c0-XRs" firstAttribute="trailing" secondItem="7hD-dv-Bsr" secondAttribute="trailing" type="default" id="mnM-gR-VCL"/>
+                            <constraint firstItem="bmy-mS-fTG" firstAttribute="centerX" secondItem="7hD-dv-Bsr" secondAttribute="centerX" type="default" id="o1O-9Y-CsF"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="ABOUT WCE" id="IDo-UV-rdz">
@@ -4290,8 +4269,10 @@ I		                           nfo@WorldComputerExchange.org    		               
         <class className="NewPartnerViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NewPartnerViewController.h"/>
             <relationships>
+                <relationship kind="action" name="backgroundTouched:"/>
                 <relationship kind="action" name="cancel:"/>
                 <relationship kind="action" name="saveChanges:"/>
+                <relationship kind="action" name="textfieldReturn:"/>
                 <relationship kind="outlet" name="nameField" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="saveButton" candidateClass="UIBarButtonItem"/>
             </relationships>
