@@ -3834,7 +3834,7 @@ Are you charging any fees?  If yes how much do you charge?
                             <constraint firstItem="vaI-j5-JsR" firstAttribute="bottom" secondItem="FaG-6X-5HK" secondAttribute="bottom" type="default" id="kJw-2O-hUi"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="List" image="first.png" id="zff-jn-eA7"/>
+                    <tabBarItem key="tabBarItem" title="List" image="LocationListIcon.png" id="zff-jn-eA7"/>
                     <connections>
                         <outlet property="locationTableView" destination="vaI-j5-JsR" id="xv9-er-BB1"/>
                         <segue destination="a24-Hj-6Z9" kind="modal" identifier="pushAddLocation" id="KeE-IU-gD7"/>
@@ -4053,7 +4053,7 @@ Are you charging any fees?  If yes how much do you charge?
                             <constraint firstItem="gMt-tq-YUN" firstAttribute="trailing" secondItem="5oh-T7-BOe" secondAttribute="trailing" type="default" id="tai-EH-l2Y"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Map" image="second.png" id="35G-L6-ZMG"/>
+                    <tabBarItem key="tabBarItem" title="Map" image="MapIcon.png" id="35G-L6-ZMG"/>
                     <navigationItem key="navigationItem" id="mYu-5L-5On"/>
                     <connections>
                         <outlet property="mapView" destination="gMt-tq-YUN" id="GdJ-dx-mws"/>
@@ -4199,12 +4199,12 @@ Online &amp; onsite tech volunteers &amp; reused computers connecting youth in d
         </scene>
     </scenes>
     <resources>
+        <image name="LocationListIcon.png" width="30" height="30"/>
+        <image name="MapIcon.png" width="30" height="30"/>
         <image name="WCE_LogoWhite.png" width="221" height="60"/>
         <image name="button-1.png" width="92" height="39"/>
         <image name="button-2.png" width="217" height="40"/>
         <image name="button-3.png" width="173" height="40"/>
-        <image name="first.png" width="30" height="30"/>
-        <image name="second.png" width="30" height="30"/>
     </resources>
     <classes>
         <class className="AboutWCEViewController" superclassName="UIViewController">
