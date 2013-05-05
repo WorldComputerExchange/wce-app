@@ -2689,7 +2689,7 @@ Cg
                                         <constraints>
                                             <constraint firstAttribute="width" constant="305" id="heA-d7-Okb"/>
                                         </constraints>
-                                        <string key="text">~  Please no pdf files  ~  Please refer to our “Costs” page  ~
+                                        <mutableString key="text">~  Please no pdf files  ~  Please refer to our “Costs” page  ~
 
 
 1. Will you be sending us a letter of commitment from a Rotary Club, Peace Corps Volunteer or iEARN Country Coordinator for a 5% sourcing cost reduction (unless Sponsored)? __ Yes  __ No  
@@ -2736,10 +2736,10 @@ What can you give in exchange for their visit?
 14. Should we tell you about solar lights and midwife kits and other items?   __ Yes   __ No
 
 
-14. Are you interested in having WCE volunteers raise the last 1/3 of the sourcing and shipping costs from Sponsors outside of your country?     ___ Yes     ___ No  
+15. Are you interested in having WCE volunteers raise the last 1/3 of the sourcing and shipping costs from Sponsors outside of your country?     ___ Yes     ___ No  
 
 
-CONDITIONS:  Full containers only.  WCE needs 4 months to raise the final 1/3 after receipt of 2/3 of sourcing and shipping costs. The 15% cost for this work is added to the funds raised by WCE.  No additional 5% reduction for Sponsored Peace Corps, iEARN and Rotary shipments. Sponsorship is not available to for-profits, Partners that opt-out of our ping showing if a computer is connected to the internet, and not used to cover costs for Windows, laptops, LCD flat screen monitors or eGranary.</string>
+CONDITIONS:  Full containers only.  WCE needs 4 months to raise the final 1/3 after receipt of 2/3 of sourcing and shipping costs. The 15% cost for this work is added to the funds raised by WCE.  No additional 5% reduction for Sponsored Peace Corps, iEARN and Rotary shipments. Sponsorship is not available to for-profits, Partners that opt-out of our ping showing if a computer is connected to the internet, and not used to cover costs for Windows, laptops, LCD flat screen monitors or eGranary.</mutableString>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -2769,7 +2769,7 @@ CONDITIONS:  Full containers only.  WCE needs 4 months to raise the final 1/3 af
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HCf-Ow-YKa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3448" y="2219"/>
+            <point key="canvasLocation" x="3799" y="2218"/>
         </scene>
         <!--Implementation View Controller - Imp Questions-->
         <scene sceneID="w0n-j6-Zal">
@@ -2994,7 +2994,6 @@ CONDITIONS:  Full containers only.  WCE needs 4 months to raise the final 1/3 af
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="25. What are your greatest hopes and fears about this shipment?" lineBreakMode="wordWrap" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="nmI-f1-frY">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="280" id="0XT-rz-F48"/>
                                     <constraint firstAttribute="height" constant="43" id="XYf-2R-HG2"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -3108,7 +3107,6 @@ CONDITIONS:  Full containers only.  WCE needs 4 months to raise the final 1/3 af
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JuY-cI-74U">
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="275" id="Epz-w9-XUh"/>
                                     <constraint firstAttribute="height" constant="94" id="Hi5-i3-GVQ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
@@ -3190,43 +3188,38 @@ CONDITIONS:  Full containers only.  WCE needs 4 months to raise the final 1/3 af
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="pzH-zP-oNq" firstAttribute="leading" secondItem="XgO-0A-b4a" secondAttribute="leading" type="default" id="0YO-pT-wrd"/>
-                            <constraint firstItem="qiy-zj-ptC" firstAttribute="centerX" secondItem="7SZ-DV-jKK" secondAttribute="centerX" type="default" id="0wS-ue-K68"/>
                             <constraint firstItem="U6V-E2-Jin" firstAttribute="leading" secondItem="YcU-JH-tfh" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="1CF-PV-gsB"/>
                             <constraint firstItem="FBM-Fx-kVY" firstAttribute="leading" secondItem="YcU-JH-tfh" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="1Vk-9c-lQ9"/>
                             <constraint firstItem="s3g-yI-dDy" firstAttribute="top" secondItem="wiQ-sG-MLT" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="2Uc-Rw-we6"/>
                             <constraint firstItem="S2t-Ju-LHS" firstAttribute="trailing" secondItem="18F-xh-ibX" secondAttribute="trailing" type="default" id="2Uf-qA-eyp"/>
-                            <constraint firstItem="JuY-cI-74U" firstAttribute="leading" secondItem="7SZ-DV-jKK" secondAttribute="leading" type="default" id="2Zf-4f-uBD"/>
-                            <constraint firstItem="CbN-ve-Kr2" firstAttribute="centerX" secondItem="6PU-4M-J35" secondAttribute="centerX" type="default" id="2ac-dV-ftT"/>
                             <constraint firstItem="ThO-nw-5At" firstAttribute="top" secondItem="bXM-sQ-Dz6" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="3Nc-rZ-Lvu"/>
                             <constraint firstAttribute="trailing" secondItem="O3r-75-mgn" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="49p-wq-6g4"/>
+                            <constraint firstItem="wiQ-sG-MLT" firstAttribute="leading" secondItem="7Le-ML-Cr1" secondAttribute="leading" type="default" id="4eq-tO-cn3"/>
                             <constraint firstItem="aTm-Nb-lFh" firstAttribute="leading" secondItem="YcU-JH-tfh" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="5CS-EC-fjC"/>
-                            <constraint firstItem="hqa-k6-hNp" firstAttribute="leading" secondItem="bXM-sQ-Dz6" secondAttribute="leading" type="default" id="5PP-ln-tBg"/>
                             <constraint firstItem="oKU-jE-iFz" firstAttribute="centerX" secondItem="Cqi-jH-SN3" secondAttribute="centerX" type="default" id="6Dj-ms-eah"/>
                             <constraint firstItem="TEs-VR-2Ag" firstAttribute="leading" secondItem="YcU-JH-tfh" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="6Ow-ui-1Ph"/>
                             <constraint firstItem="oKU-jE-iFz" firstAttribute="top" secondItem="YcU-JH-tfh" secondAttribute="top" constant="42" id="6aR-3a-5X2"/>
                             <constraint firstAttribute="trailing" secondItem="CbN-ve-Kr2" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="6hn-Ws-yvL"/>
-                            <constraint firstItem="6PU-4M-J35" firstAttribute="leading" secondItem="7Fz-d5-BFR" secondAttribute="leading" type="default" id="6j1-dB-ExN"/>
                             <constraint firstItem="XgO-0A-b4a" firstAttribute="trailing" secondItem="svL-aN-oPe" secondAttribute="trailing" type="default" id="6jG-fD-gou"/>
-                            <constraint firstItem="7Fz-d5-BFR" firstAttribute="centerX" secondItem="7SZ-DV-jKK" secondAttribute="centerX" type="default" id="8Hv-Zx-aQr"/>
                             <constraint firstItem="nWd-IC-rHW" firstAttribute="top" secondItem="v5r-uN-5qC" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="8O8-iN-91l"/>
                             <constraint firstItem="7SZ-DV-jKK" firstAttribute="top" secondItem="svL-aN-oPe" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="8Wu-37-naF"/>
                             <constraint firstItem="v5r-uN-5qC" firstAttribute="leading" secondItem="YcU-JH-tfh" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="8e3-xC-1zq"/>
                             <constraint firstItem="ltv-d8-lHA" firstAttribute="leading" secondItem="YcU-JH-tfh" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="9AK-ii-zNe"/>
-                            <constraint firstItem="hqa-k6-hNp" firstAttribute="trailing" secondItem="rD9-pz-qQ9" secondAttribute="trailing" type="default" id="9hI-df-fkY"/>
                             <constraint firstItem="pzH-zP-oNq" firstAttribute="top" secondItem="h6X-jH-H3Y" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Ame-Ei-aDB"/>
                             <constraint firstItem="ZR7-U4-i4P" firstAttribute="trailing" secondItem="nWd-IC-rHW" secondAttribute="trailing" type="default" id="B5i-ES-BlI"/>
                             <constraint firstItem="5kk-pj-jen" firstAttribute="trailing" secondItem="18F-xh-ibX" secondAttribute="trailing" type="default" id="B8R-zn-jj7"/>
                             <constraint firstItem="aTm-Nb-lFh" firstAttribute="top" secondItem="ZR7-U4-i4P" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="BBS-VT-Nln"/>
                             <constraint firstItem="U6V-E2-Jin" firstAttribute="top" secondItem="XAH-3t-XaR" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="BjN-PA-F4d"/>
                             <constraint firstItem="5kk-pj-jen" firstAttribute="top" secondItem="YcU-JH-tfh" secondAttribute="top" constant="1897" id="C3y-nn-V3A"/>
-                            <constraint firstItem="Moj-UH-eMg" firstAttribute="leading" secondItem="ThO-nw-5At" secondAttribute="leading" type="default" id="Cgb-2u-Whg"/>
-                            <constraint firstItem="fCB-ux-ww5" firstAttribute="leading" secondItem="s3g-yI-dDy" secondAttribute="leading" type="default" id="ChS-GV-KIZ"/>
+                            <constraint firstItem="7Fz-d5-BFR" firstAttribute="leading" secondItem="nmI-f1-frY" secondAttribute="leading" type="default" id="CFK-oo-UL6"/>
                             <constraint firstItem="Moj-UH-eMg" firstAttribute="top" secondItem="YcU-JH-tfh" secondAttribute="top" constant="3113" id="Cl5-EH-3Xi"/>
+                            <constraint firstAttribute="trailing" secondItem="qiy-zj-ptC" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="DKU-Ia-iph"/>
                             <constraint firstItem="mbW-TH-Vwv" firstAttribute="leading" secondItem="YcU-JH-tfh" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="DRe-Sh-dIy"/>
                             <constraint firstAttribute="trailing" secondItem="7SZ-DV-jKK" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="DlQ-MJ-Tqi"/>
                             <constraint firstItem="v5r-uN-5qC" firstAttribute="top" secondItem="mbW-TH-Vwv" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Duf-Vt-cUL"/>
                             <constraint firstItem="fCB-ux-ww5" firstAttribute="top" secondItem="YcU-JH-tfh" secondAttribute="top" constant="2168" id="ETw-GI-Ylf"/>
                             <constraint firstItem="qiy-zj-ptC" firstAttribute="leading" secondItem="rD9-pz-qQ9" secondAttribute="leading" type="default" id="EjB-JJ-3nb"/>
+                            <constraint firstItem="TEs-VR-2Ag" firstAttribute="top" secondItem="YcU-JH-tfh" secondAttribute="top" constant="406" id="FV7-Pz-LEN"/>
                             <constraint firstItem="bkd-ef-GD9" firstAttribute="leading" secondItem="YcU-JH-tfh" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Fzq-TT-72c"/>
                             <constraint firstItem="XgO-0A-b4a" firstAttribute="top" secondItem="pzH-zP-oNq" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="GjX-fa-FoU"/>
                             <constraint firstItem="6PU-4M-J35" firstAttribute="top" secondItem="hqa-k6-hNp" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Gu4-JD-aAy"/>
@@ -3236,29 +3229,33 @@ CONDITIONS:  Full containers only.  WCE needs 4 months to raise the final 1/3 af
                             <constraint firstItem="h6X-jH-H3Y" firstAttribute="leading" secondItem="pzH-zP-oNq" secondAttribute="leading" type="default" id="HnN-wn-g3i"/>
                             <constraint firstItem="Ukt-E1-Q3A" firstAttribute="top" secondItem="O3r-75-mgn" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Ihl-2P-9mZ"/>
                             <constraint firstItem="4fj-QE-6l9" firstAttribute="top" secondItem="7Ch-ng-ddK" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="JGG-zb-JV7"/>
-                            <constraint firstItem="9xR-BS-nAZ" firstAttribute="leading" secondItem="wiQ-sG-MLT" secondAttribute="leading" type="default" id="KCQ-yB-cpN"/>
+                            <constraint firstAttribute="bottom" secondItem="Vj6-Vd-fYe" secondAttribute="bottom" constant="2764" id="KFo-EE-ytc"/>
                             <constraint firstItem="S2t-Ju-LHS" firstAttribute="top" secondItem="U6V-E2-Jin" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="LfC-5P-TOU"/>
                             <constraint firstAttribute="trailing" secondItem="7Fz-d5-BFR" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="LlJ-La-KQn"/>
+                            <constraint firstItem="s3g-yI-dDy" firstAttribute="leading" secondItem="wiQ-sG-MLT" secondAttribute="leading" type="default" id="Lur-Ud-P2a"/>
                             <constraint firstItem="O3r-75-mgn" firstAttribute="top" secondItem="YcU-JH-tfh" secondAttribute="top" constant="145" id="M6s-ka-Xty"/>
                             <constraint firstItem="Q9k-PK-4rU" firstAttribute="top" secondItem="nWd-IC-rHW" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="MGW-XM-dFL"/>
                             <constraint firstItem="mAn-36-lwP" firstAttribute="top" secondItem="S2t-Ju-LHS" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="NkK-nA-XFV"/>
                             <constraint firstItem="dGY-4d-Ri7" firstAttribute="top" secondItem="Q9k-PK-4rU" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Nn9-9G-oae"/>
-                            <constraint firstItem="TEs-VR-2Ag" firstAttribute="top" secondItem="YcU-JH-tfh" secondAttribute="top" constant="374" id="Ok4-eq-4wZ"/>
+                            <constraint firstItem="mbW-TH-Vwv" firstAttribute="top" secondItem="YcU-JH-tfh" secondAttribute="top" constant="425" id="NuC-3X-daO"/>
                             <constraint firstItem="Vj6-Vd-fYe" firstAttribute="top" secondItem="d66-ne-gvc" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="PWI-xH-asG"/>
                             <constraint firstItem="Z0S-3n-2Nm" firstAttribute="leading" secondItem="YcU-JH-tfh" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Pzc-2D-8y8"/>
                             <constraint firstItem="s3g-yI-dDy" firstAttribute="trailing" secondItem="7Le-ML-Cr1" secondAttribute="trailing" type="default" id="QM3-Yv-YlG"/>
+                            <constraint firstItem="9xR-BS-nAZ" firstAttribute="leading" secondItem="JuY-cI-74U" secondAttribute="leading" type="default" id="QWX-2I-Vjt"/>
                             <constraint firstAttribute="trailing" secondItem="FBM-Fx-kVY" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Qg9-3A-9Tg"/>
                             <constraint firstItem="JuY-cI-74U" firstAttribute="trailing" secondItem="4fj-QE-6l9" secondAttribute="trailing" type="default" id="QkJ-gv-5IC"/>
+                            <constraint firstItem="nmI-f1-frY" firstAttribute="leading" secondItem="6PU-4M-J35" secondAttribute="leading" type="default" id="RUh-rt-D5U"/>
                             <constraint firstItem="Moj-UH-eMg" firstAttribute="trailing" secondItem="ThO-nw-5At" secondAttribute="trailing" type="default" id="RfP-5r-2vx"/>
                             <constraint firstItem="18F-xh-ibX" firstAttribute="leading" secondItem="YcU-JH-tfh" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Ru5-bH-95s"/>
                             <constraint firstItem="D6t-xP-5TF" firstAttribute="leading" secondItem="YcU-JH-tfh" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="SHD-sv-A32"/>
+                            <constraint firstItem="nmI-f1-frY" firstAttribute="centerX" secondItem="ThO-nw-5At" secondAttribute="centerX" type="default" id="Sv4-Ax-Vnk"/>
                             <constraint firstItem="svL-aN-oPe" firstAttribute="trailing" secondItem="7Ch-ng-ddK" secondAttribute="trailing" type="default" id="TAd-LX-2ol"/>
-                            <constraint firstAttribute="bottom" secondItem="7Fz-d5-BFR" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="Tev-gA-OOf"/>
+                            <constraint firstItem="svL-aN-oPe" firstAttribute="leading" secondItem="7SZ-DV-jKK" secondAttribute="leading" type="default" id="TWI-dd-LoN"/>
                             <constraint firstItem="3ke-1r-s7V" firstAttribute="top" secondItem="6PU-4M-J35" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Tig-0J-5gq"/>
                             <constraint firstItem="9xR-BS-nAZ" firstAttribute="leading" secondItem="h6X-jH-H3Y" secondAttribute="leading" type="default" id="UGa-1b-Amn"/>
-                            <constraint firstItem="svL-aN-oPe" firstAttribute="centerX" secondItem="7Ch-ng-ddK" secondAttribute="centerX" type="default" id="UYD-6x-6sw"/>
                             <constraint firstAttribute="trailing" secondItem="aTm-Nb-lFh" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="UaP-Kw-e0a"/>
                             <constraint firstItem="S2t-Ju-LHS" firstAttribute="leading" secondItem="YcU-JH-tfh" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Ugh-oF-bmT"/>
+                            <constraint firstAttribute="trailing" secondItem="6PU-4M-J35" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="WGc-Xj-Gbm"/>
                             <constraint firstItem="D6t-xP-5TF" firstAttribute="top" secondItem="s3g-yI-dDy" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Wj8-aE-kV4"/>
                             <constraint firstItem="18F-xh-ibX" firstAttribute="top" secondItem="mAn-36-lwP" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Wqw-cr-ZBf"/>
                             <constraint firstItem="XgO-0A-b4a" firstAttribute="trailing" secondItem="fCB-ux-ww5" secondAttribute="trailing" type="default" id="WwC-uc-G1q"/>
@@ -3266,41 +3263,42 @@ CONDITIONS:  Full containers only.  WCE needs 4 months to raise the final 1/3 af
                             <constraint firstItem="XAH-3t-XaR" firstAttribute="top" secondItem="aTm-Nb-lFh" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="X1b-k3-WHe"/>
                             <constraint firstItem="S2t-Ju-LHS" firstAttribute="trailing" secondItem="XAH-3t-XaR" secondAttribute="trailing" type="default" id="XPp-SL-TOQ"/>
                             <constraint firstItem="bkd-ef-GD9" firstAttribute="top" secondItem="YcU-JH-tfh" secondAttribute="top" constant="1821" id="XXJ-U0-gf1"/>
+                            <constraint firstItem="rD9-pz-qQ9" firstAttribute="leading" secondItem="fCB-ux-ww5" secondAttribute="leading" type="default" id="XfI-dG-T3g"/>
                             <constraint firstItem="Moj-UH-eMg" firstAttribute="trailing" secondItem="7Ch-ng-ddK" secondAttribute="trailing" type="default" id="Y90-63-vnO"/>
+                            <constraint firstItem="ThO-nw-5At" firstAttribute="leading" secondItem="bXM-sQ-Dz6" secondAttribute="leading" type="default" id="YN7-b0-2xM"/>
+                            <constraint firstItem="ThO-nw-5At" firstAttribute="leading" secondItem="hqa-k6-hNp" secondAttribute="leading" type="default" id="Ybn-A3-y8j"/>
                             <constraint firstItem="8Sz-dQ-jb1" firstAttribute="top" secondItem="Ukt-E1-Q3A" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="YkD-tS-MYA"/>
                             <constraint firstItem="d66-ne-gvc" firstAttribute="leading" secondItem="YcU-JH-tfh" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Ysh-JR-iOX"/>
                             <constraint firstItem="h6X-jH-H3Y" firstAttribute="top" secondItem="9xR-BS-nAZ" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Z9y-ej-pRO"/>
                             <constraint firstItem="Vj6-Vd-fYe" firstAttribute="leading" secondItem="YcU-JH-tfh" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="a2z-5T-CmZ"/>
-                            <constraint firstItem="mbW-TH-Vwv" firstAttribute="top" secondItem="TEs-VR-2Ag" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="a8d-jc-AN9"/>
                             <constraint firstItem="A6T-UD-RyH" firstAttribute="trailing" secondItem="h6X-jH-H3Y" secondAttribute="trailing" type="default" id="ayc-UA-wWQ"/>
                             <constraint firstItem="O3r-75-mgn" firstAttribute="leading" secondItem="YcU-JH-tfh" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="b10-go-gjD"/>
+                            <constraint firstItem="hqa-k6-hNp" firstAttribute="trailing" secondItem="bXM-sQ-Dz6" secondAttribute="trailing" type="default" id="btK-2Z-JYG"/>
                             <constraint firstItem="XAH-3t-XaR" firstAttribute="leading" secondItem="YcU-JH-tfh" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="c7q-Ga-KDI"/>
                             <constraint firstItem="7SZ-DV-jKK" firstAttribute="leading" secondItem="7Ch-ng-ddK" secondAttribute="leading" type="default" id="cFL-Tz-ShF"/>
                             <constraint firstItem="nWd-IC-rHW" firstAttribute="trailing" secondItem="mbW-TH-Vwv" secondAttribute="trailing" type="default" id="cd2-md-QM4"/>
                             <constraint firstItem="9xR-BS-nAZ" firstAttribute="top" secondItem="A6T-UD-RyH" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="ckx-u8-I9W"/>
-                            <constraint firstItem="s3g-yI-dDy" firstAttribute="leading" secondItem="7Le-ML-Cr1" secondAttribute="leading" type="default" id="ddG-ZQ-zc8"/>
                             <constraint firstAttribute="trailing" secondItem="9xR-BS-nAZ" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="dyi-ca-x0j"/>
                             <constraint firstItem="CbN-ve-Kr2" firstAttribute="top" secondItem="YcU-JH-tfh" secondAttribute="top" constant="2719" id="eDT-2E-QmD"/>
                             <constraint firstAttribute="trailing" secondItem="Cqi-jH-SN3" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="eN4-Pb-99y"/>
                             <constraint firstItem="nWd-IC-rHW" firstAttribute="leading" secondItem="YcU-JH-tfh" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="eNE-mh-hrL"/>
                             <constraint firstItem="5x6-qz-wKe" firstAttribute="leading" secondItem="YcU-JH-tfh" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="eVK-lY-tNK"/>
                             <constraint firstItem="ZR7-U4-i4P" firstAttribute="top" secondItem="YcU-JH-tfh" secondAttribute="top" constant="1202" id="f6q-C2-lB6"/>
+                            <constraint firstItem="4fj-QE-6l9" firstAttribute="leading" secondItem="7Ch-ng-ddK" secondAttribute="leading" type="default" id="fW6-po-ae0"/>
                             <constraint firstItem="3ke-1r-s7V" firstAttribute="leading" secondItem="YcU-JH-tfh" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="fWF-d5-J74"/>
                             <constraint firstItem="ltv-d8-lHA" firstAttribute="top" secondItem="8Sz-dQ-jb1" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="g0P-bz-5g6"/>
-                            <constraint firstItem="Moj-UH-eMg" firstAttribute="leading" secondItem="7Ch-ng-ddK" secondAttribute="leading" type="default" id="gNv-Ym-8CK"/>
-                            <constraint firstItem="qiy-zj-ptC" firstAttribute="trailing" secondItem="6PU-4M-J35" secondAttribute="trailing" type="default" id="glL-vt-EqX"/>
                             <constraint firstItem="ZR7-U4-i4P" firstAttribute="leading" secondItem="YcU-JH-tfh" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="gyo-xt-jW3"/>
                             <constraint firstItem="XAH-3t-XaR" firstAttribute="trailing" secondItem="ZR7-U4-i4P" secondAttribute="trailing" type="default" id="hdk-GB-Klk"/>
                             <constraint firstItem="CbN-ve-Kr2" firstAttribute="leading" secondItem="svL-aN-oPe" secondAttribute="leading" type="default" id="hmz-69-qoS"/>
-                            <constraint firstItem="nmI-f1-frY" firstAttribute="leading" secondItem="svL-aN-oPe" secondAttribute="leading" type="default" id="ijo-7M-KMq"/>
                             <constraint firstItem="hqa-k6-hNp" firstAttribute="top" secondItem="ThO-nw-5At" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="jLD-fS-6aG"/>
                             <constraint firstItem="8Sz-dQ-jb1" firstAttribute="leading" secondItem="YcU-JH-tfh" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="jPO-r1-d3g"/>
                             <constraint firstItem="d66-ne-gvc" firstAttribute="top" secondItem="FBM-Fx-kVY" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="jjB-W6-eIp"/>
+                            <constraint firstItem="rD9-pz-qQ9" firstAttribute="trailing" secondItem="JuY-cI-74U" secondAttribute="trailing" type="default" id="juJ-2W-3nk"/>
                             <constraint firstAttribute="trailing" secondItem="v5r-uN-5qC" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="kCn-d1-dq5"/>
                             <constraint firstAttribute="trailing" secondItem="pzH-zP-oNq" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="kR3-VW-Mff"/>
                             <constraint firstAttribute="trailing" secondItem="D6t-xP-5TF" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="lB2-El-ckR"/>
                             <constraint firstAttribute="trailing" secondItem="Q9k-PK-4rU" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="lLh-V1-opz"/>
-                            <constraint firstItem="bXM-sQ-Dz6" firstAttribute="leading" secondItem="4fj-QE-6l9" secondAttribute="leading" type="default" id="lvx-f8-3aC"/>
+                            <constraint firstItem="qiy-zj-ptC" firstAttribute="leading" secondItem="s3g-yI-dDy" secondAttribute="leading" type="default" id="m9S-Dt-vkg"/>
                             <constraint firstAttribute="trailing" secondItem="bkd-ef-GD9" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="mf5-yj-itG"/>
                             <constraint firstItem="nmI-f1-frY" firstAttribute="top" secondItem="YcU-JH-tfh" secondAttribute="top" constant="3469" id="mzK-Vn-0Yj"/>
                             <constraint firstItem="5x6-qz-wKe" firstAttribute="top" secondItem="YcU-JH-tfh" secondAttribute="top" constant="80" id="nPa-uW-9ab"/>
@@ -3309,7 +3307,7 @@ CONDITIONS:  Full containers only.  WCE needs 4 months to raise the final 1/3 af
                             <constraint firstItem="7Fz-d5-BFR" firstAttribute="top" secondItem="nmI-f1-frY" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="pMh-V0-E25"/>
                             <constraint firstItem="bXM-sQ-Dz6" firstAttribute="top" secondItem="YcU-JH-tfh" secondAttribute="top" constant="3174" id="pq7-WJ-MBg"/>
                             <constraint firstItem="Z0S-3n-2Nm" firstAttribute="top" secondItem="5x6-qz-wKe" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="pqP-WA-0D4"/>
-                            <constraint firstItem="rD9-pz-qQ9" firstAttribute="leading" secondItem="4fj-QE-6l9" secondAttribute="leading" type="default" id="qHB-ZS-81R"/>
+                            <constraint firstItem="Moj-UH-eMg" firstAttribute="leading" secondItem="4fj-QE-6l9" secondAttribute="leading" type="default" id="q0r-6O-PDB"/>
                             <constraint firstItem="bXM-sQ-Dz6" firstAttribute="trailing" secondItem="4fj-QE-6l9" secondAttribute="trailing" type="default" id="qLO-Zg-7vg"/>
                             <constraint firstItem="FBM-Fx-kVY" firstAttribute="top" secondItem="D6t-xP-5TF" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="qWE-Ef-Iwx"/>
                             <constraint firstItem="Ukt-E1-Q3A" firstAttribute="leading" secondItem="YcU-JH-tfh" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="qi9-7Y-xKt"/>
@@ -3326,9 +3324,11 @@ CONDITIONS:  Full containers only.  WCE needs 4 months to raise the final 1/3 af
                             <constraint firstItem="dGY-4d-Ri7" firstAttribute="leading" secondItem="YcU-JH-tfh" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="uQW-IJ-TOI"/>
                             <constraint firstAttribute="trailing" secondItem="mAn-36-lwP" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="vKh-hW-XGt"/>
                             <constraint firstItem="dGY-4d-Ri7" firstAttribute="trailing" secondItem="d66-ne-gvc" secondAttribute="trailing" type="default" id="vXG-nF-pOi"/>
+                            <constraint firstItem="hqa-k6-hNp" firstAttribute="leading" secondItem="6PU-4M-J35" secondAttribute="leading" type="default" id="wCY-rJ-9OS"/>
                             <constraint firstItem="7Le-ML-Cr1" firstAttribute="top" secondItem="dGY-4d-Ri7" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="xPh-66-QGt"/>
                             <constraint firstItem="Cqi-jH-SN3" firstAttribute="top" secondItem="YcU-JH-tfh" secondAttribute="top" constant="20" symbolic="YES" type="default" id="y5D-UB-2IL"/>
                             <constraint firstItem="CbN-ve-Kr2" firstAttribute="leading" secondItem="XgO-0A-b4a" secondAttribute="leading" type="default" id="ySX-7Z-wJ0"/>
+                            <constraint firstItem="bXM-sQ-Dz6" firstAttribute="leading" secondItem="Moj-UH-eMg" secondAttribute="leading" type="default" id="zHC-03-6Qe"/>
                             <constraint firstItem="fCB-ux-ww5" firstAttribute="leading" secondItem="JuY-cI-74U" secondAttribute="leading" type="default" id="zIE-HW-LEX"/>
                         </constraints>
                     </scrollView>
@@ -3343,7 +3343,7 @@ CONDITIONS:  Full containers only.  WCE needs 4 months to raise the final 1/3 af
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z9S-sB-7DV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3410" y="2933"/>
+            <point key="canvasLocation" x="3455" y="2907"/>
         </scene>
         <!--View Controller - Costs-->
         <scene sceneID="0UZ-UL-EG8">
@@ -3469,7 +3469,7 @@ WCE Fundraising: WCE raises the final 1/3 of our sourcing &amp; shipping costs f
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zur-0D-h3M" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1804" y="3681"/>
+            <point key="canvasLocation" x="1788" y="3121"/>
         </scene>
         <!--Table View Controller - Forms Page-->
         <scene sceneID="2C8-9W-PxU">
@@ -3542,150 +3542,588 @@ WCE Fundraising: WCE raises the final 1/3 of our sourcing &amp; shipping costs f
         <scene sceneID="sQF-73-4Bx">
             <objects>
                 <viewController id="zcT-kN-snK" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8eL-Pg-63u">
-                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <scrollView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" id="NPu-4R-VUH">
+                        <rect key="frame" x="0.0" y="64" width="300" height="5000"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NPu-4R-VUH">
-                                <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C1j-Zp-as2">
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="285" id="4wl-xZ-3zS"/>
-                                            <constraint firstAttribute="height" constant="591" id="N6d-JZ-bql"/>
-                                        </constraints>
-                                        <attributedString key="attributedText">
-                                            <fragment>
-                                                <string key="content">Annual Evaluation 
-</string>
-                                                <attributes>
-                                                    <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <font key="NSFont" size="18" name="Helvetica"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment>
-                                                <string key="content">
-Name of your country:Name of your organization:
-
-
-Year your WCE computers arrived:Date you completed this form:
-
-
-How many computers did you receive from WCE?
-
-
-How many WCE computers are now working?
-
-
-How many WCE computers are now connected to the internet?  
-
-
-Which operating system are you now using? 
-
-
-Have you upgraded any WCE computers?
-
-
-Number of hours per week that the computers are available
-
-
-So far, how many youth used the WCE computers WITH internet?
-
-
-So far, how many youth used the computers withOUT internet?
-
-
-So far, how many girls used the WCE computers WITH internet?
-
-
-So far, how many girls used the computers withOUT internet?
-
-
-Are you involved with a Peace Corps or VSO volunteer?
-
-
-Have you recommended WCE to any other group?
-
-
-Is your school a member of iEARN?
-
-
-Are you charging any fees?  If yes how much do you charge?
-
-
-~ Please type your answers directly below each question leaving the question ~
-
-1. How have your answers to our implementation questions changed since receiving the computers?  What do you wish you had done differently?  Anything different to help ensure access to the computers for girls?
-
-
-2. What are youth using the computers and internet for? Are there any software programs that you are using that you would recommend to organizations similar to yours? Have you found anything special for girls?
-
-
-3. What impact do you see computers and the internet having on your youth?  (For example: more interest in attending school, spending too much time with games, or better opportunities, jobs, new businesses, etc.)
-
-
-4. How have you involved the local community in your project?  (For example: allowing adults access to computers after school, providing training to computer users, collaborating with local organizations on technology projects, we are also interested in any special programs for girls)
-
-
-5. What online capacity building help has WCE provided to you?  Was this useful?  What else do you need?
-
-
-6. What training do you provide to youth, teachers and/or others who are using the computers?  Have you received any onsite technology or teacher training from a WCE eCorps volunteer?  Please describe your specific needs that you think an eCorps volunteer can help you with.  What can you offer in exchange?
-
-
-7. What was the value to the youth (including girls) of the content we preloaded in your computers?
-
-
-8. Have you participated in any training that WCE is sometimes able to arrange through iEARN or New Horizons Computer Training Centers?  What additional training would be useful to you?
-
-
-9. With what organization do you recycle your computer equipment that no longer works?   Have you so far?
-
-
-10. What else would you like WCE to know about your project?   Anything about programs for girls?
-
-
-</string>
-                                                <attributes>
-                                                    <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <font key="NSFont" size="14" name="Helvetica"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment>
-                                                <string key="content">Last updated: 25 January 2013
-
-~ Please return this &amp; a digital picture of youth using the computers &amp; any story you have about their impact to: TAnderson@WorldComputerExchange.org ~</string>
-                                                <attributes>
-                                                    <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <font key="NSFont" size="12" name="Helvetica"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                                </attributes>
-                                            </fragment>
-                                        </attributedString>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
-                                </subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Annual Evaluation " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NFm-qq-ljV">
                                 <constraints>
-                                    <constraint firstItem="C1j-Zp-as2" firstAttribute="leading" secondItem="NPu-4R-VUH" secondAttribute="leading" constant="15" id="7sJ-i1-iz6"/>
-                                    <constraint firstAttribute="bottom" secondItem="C1j-Zp-as2" secondAttribute="bottom" constant="-56" id="8df-tF-jvd"/>
-                                    <constraint firstItem="C1j-Zp-as2" firstAttribute="top" secondItem="NPu-4R-VUH" secondAttribute="top" constant="13" id="oW2-tP-gbQ"/>
-                                    <constraint firstItem="C1j-Zp-as2" firstAttribute="trailing" secondItem="NPu-4R-VUH" secondAttribute="trailing" type="default" id="r5G-sR-Ab3"/>
+                                    <constraint firstAttribute="width" constant="154" id="jkh-RZ-0U3"/>
+                                    <constraint firstAttribute="height" constant="21" id="lYc-2e-Oei"/>
                                 </constraints>
-                            </scrollView>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Name of your country:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sjx-sV-2y2">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="3fm-Hf-GvH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ieu-Kn-bov">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Name of your organization:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hgC-bB-g0C">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="LuZ-mD-zlq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vgY-Gi-Los">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Year your computers arrived:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ft0-E0-cnd">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="EZt-1a-HD5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4eQ-hT-FF8">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="91" id="BoF-PP-bZh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Date you completed this form:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eE1-7k-gFO">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="c3B-Ir-cte"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1eQ-ws-s8i">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="191" id="nFM-ep-2sq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="How many computers did you receive from WCE?" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="254" translatesAutoresizingMaskIntoConstraints="NO" id="TP8-BZ-0ey">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="254" id="2l8-ko-LIp"/>
+                                    <constraint firstAttribute="height" constant="44" id="NtF-tf-GTd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Eo4-fl-ryw">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="How many computers are now working?" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="254" translatesAutoresizingMaskIntoConstraints="NO" id="1Rh-G1-f7v">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="mne-aP-VNh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iTG-sn-O3D">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="How many computers are now connected to the internet?" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="254" translatesAutoresizingMaskIntoConstraints="NO" id="rbk-Fs-B45">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="DCE-fu-Aim"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pfo-7Z-9Zg">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Which operating system are you now using?" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="254" translatesAutoresizingMaskIntoConstraints="NO" id="je5-6K-1U9">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="ZrM-Yf-DOh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fe0-8D-N2n">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Have you upgraded any of the computers?" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="254" translatesAutoresizingMaskIntoConstraints="NO" id="i15-f3-Plv">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="I15-9t-ymH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="SII-Cu-MGK">
+                                <segments>
+                                    <segment title="Yes"/>
+                                    <segment title="No"/>
+                                </segments>
+                            </segmentedControl>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Number of hours per week the computers are available:" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="254" translatesAutoresizingMaskIntoConstraints="NO" id="P9y-hX-dGI">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="UCP-ph-r8u"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZH4-hk-a6f">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="So far, how many youth used the WCE computers WITH internet?" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="254" translatesAutoresizingMaskIntoConstraints="NO" id="ipS-ry-ZN9">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="LaX-Yb-ph1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TXB-45-fWj">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="So far, how many youth used the WCE computers withOUT internet?" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="254" translatesAutoresizingMaskIntoConstraints="NO" id="rrJ-wd-lTy">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="mTg-hH-dRD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8pI-YD-ubS">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="So far, how many girls used the WCE computers WITH internet?" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="254" translatesAutoresizingMaskIntoConstraints="NO" id="qQL-Je-r6E">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="pyh-DF-Q5z"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rvd-Ky-tOU">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="So far, how many girls used the WCE computers withOUT internet?" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="254" translatesAutoresizingMaskIntoConstraints="NO" id="Tp4-ZP-8Fe">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="254" id="GCc-MW-jmg"/>
+                                    <constraint firstAttribute="height" constant="44" id="UnZ-uk-Cu5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eaf-MV-5x0">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Are you involved with a Peace Corps or VSO volunteer?" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="254" translatesAutoresizingMaskIntoConstraints="NO" id="cmI-cL-3Zi">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="nn4-a3-krt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Vai-av-9Vi">
+                                <segments>
+                                    <segment title="Yes"/>
+                                    <segment title="No"/>
+                                </segments>
+                            </segmentedControl>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Have you recommended WCE to any other group?" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="254" translatesAutoresizingMaskIntoConstraints="NO" id="E2j-um-p4W">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="5LX-dP-Jx3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="uol-9Y-U57">
+                                <segments>
+                                    <segment title="Yes"/>
+                                    <segment title="No"/>
+                                </segments>
+                            </segmentedControl>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Is your school a member of iEARN?" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="254" translatesAutoresizingMaskIntoConstraints="NO" id="cMt-fK-5mL">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="19" id="mrg-1z-eZh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="HQD-j1-sim">
+                                <segments>
+                                    <segment title="Yes"/>
+                                    <segment title="No"/>
+                                </segments>
+                            </segmentedControl>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Are you charging any fees? If yes how much do you charge?" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="254" translatesAutoresizingMaskIntoConstraints="NO" id="MR7-Kg-AzI">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="AUY-zT-3t9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GDz-xU-3GQ">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="wordWrap" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="263" translatesAutoresizingMaskIntoConstraints="NO" id="rmD-PC-O9s">
+                                <string key="text">1. How have your answers to our implementation questions changed since receiving the computers?  What do you wish you had done differently?  Anything different to help ensure access to the computers for girls?</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nuz-qW-bYW">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="138" id="nVi-Ay-kp2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="wordWrap" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="262" translatesAutoresizingMaskIntoConstraints="NO" id="8Zo-8c-aGe">
+                                <string key="text">2. What are youth using the computers and internet for? Are there any software programs that you are using that you would recommend to organizations similar to yours? Have you found anything special for girls?</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qjh-cT-LaP">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="138" id="gfA-u6-h7l"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="wordWrap" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="259" translatesAutoresizingMaskIntoConstraints="NO" id="Ggq-fE-47V">
+                                <string key="text">3. What impact do you see computers and the internet having on your youth?       (For example: more interest in attending school, spending too much time with games, or better opportunities, jobs, new businesses, etc.)</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mhy-1z-fJ4">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="138" id="ihe-vd-UqZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="wordWrap" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="262" translatesAutoresizingMaskIntoConstraints="NO" id="9iG-zn-FLk">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="157" id="4XQ-Bb-aG1"/>
+                                </constraints>
+                                <string key="text">4. How have you involved the local community in your project?  (For example: allowing adults access to computers after school, providing training to computer users, collaborating with local organizations on technology projects, we are also interested in any special programs for girls)</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Par-9H-bcZ">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="262" id="E6r-NZ-FpH"/>
+                                    <constraint firstAttribute="height" constant="138" id="ysM-iG-9XN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="5. What online capacity building help has WCE provided to you?  Was this useful?  What else do you need?" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="262" translatesAutoresizingMaskIntoConstraints="NO" id="9Mk-cV-1aA">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="66" id="RlG-3T-t5Q"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DeY-wP-ObU">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="138" id="GNi-gj-33z"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="wordWrap" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="262" translatesAutoresizingMaskIntoConstraints="NO" id="wiO-q0-6dH">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="157" id="npE-x1-4jK"/>
+                                </constraints>
+                                <string key="text">6. What training do you provide to youth, teachers and/or others who are using the computers?  Have you received any onsite technology or teacher training from a WCE eCorps volunteer?  Please describe your specific needs that you think an eCorps volunteer can help you with.  What can you offer in exchange?</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NhC-ux-prV">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="138" id="nUn-g3-Zte"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="7. What was the value to the youth (including girls) of the content we preloaded in your computers?" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="262" translatesAutoresizingMaskIntoConstraints="NO" id="96Q-GC-cLm">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="69" id="ooa-rI-qFp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SUN-QD-YyD">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="138" id="TVO-RE-mcV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="wordWrap" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="262" translatesAutoresizingMaskIntoConstraints="NO" id="0YF-hw-QIy">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="98" id="241-DQ-1NO"/>
+                                    <constraint firstAttribute="width" constant="262" id="Iwf-bo-Jhi"/>
+                                </constraints>
+                                <string key="text">8. Have you participated in any training that WCE is sometimes able to arrange through iEARN or New Horizons Computer Training Centers?  What additional training would be useful to you?
+</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uOF-3V-H8K">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="138" id="NJm-XA-R1g"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="9. With what organization do you recycle your computer equipment that no longer works?   Have you so far?" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="262" translatesAutoresizingMaskIntoConstraints="NO" id="vWI-1w-YPj">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="57" id="cYi-4x-Mpk"/>
+                                    <constraint firstAttribute="width" constant="262" id="uJ4-yy-kPq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vaf-T0-XPD">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="138" id="7kb-f0-ich"/>
+                                    <constraint firstAttribute="width" constant="262" id="C5v-Oe-wHq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="262" translatesAutoresizingMaskIntoConstraints="NO" id="F8K-HQ-c6z">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="57" id="jxK-yG-gz3"/>
+                                </constraints>
+                                <string key="text">10. What else would you like WCE to know about your project? Anything about programs for girls?
+</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vPU-6a-MVa">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="138" id="O6V-nh-K0Q"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="270" translatesAutoresizingMaskIntoConstraints="NO" id="PS9-eW-0cw">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="99" id="AC9-t9-Nu2"/>
+                                    <constraint firstAttribute="width" constant="270" id="v0R-Aj-IM7"/>
+                                </constraints>
+                                <string key="text">~ Please return this &amp; a digital picture of youth using the computers &amp; any story you have about their impact to: TAnderson@WorldComputerExchange.org ~</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="NPu-4R-VUH" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="EMi-fy-BKD"/>
-                            <constraint firstItem="NPu-4R-VUH" firstAttribute="bottom" secondItem="8eL-Pg-63u" secondAttribute="bottom" type="default" id="boQ-FQ-xCs"/>
-                            <constraint firstItem="NPu-4R-VUH" firstAttribute="top" secondItem="8eL-Pg-63u" secondAttribute="top" type="default" id="dFU-fz-L6c"/>
-                            <constraint firstItem="NPu-4R-VUH" firstAttribute="leading" secondItem="8eL-Pg-63u" secondAttribute="leading" type="default" id="lyV-rS-bGU"/>
+                            <constraint firstItem="vWI-1w-YPj" firstAttribute="top" secondItem="NPu-4R-VUH" secondAttribute="top" constant="4203" id="00g-bM-8V3"/>
+                            <constraint firstItem="8pI-YD-ubS" firstAttribute="top" secondItem="NPu-4R-VUH" secondAttribute="top" constant="1177" id="0F2-gc-VAU"/>
+                            <constraint firstItem="1Rh-G1-f7v" firstAttribute="leading" secondItem="NPu-4R-VUH" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="0jD-Rp-2l9"/>
+                            <constraint firstItem="F8K-HQ-c6z" firstAttribute="trailing" secondItem="0YF-hw-QIy" secondAttribute="trailing" type="default" id="1hm-H5-qHO"/>
+                            <constraint firstItem="0YF-hw-QIy" firstAttribute="leading" secondItem="F8K-HQ-c6z" secondAttribute="leading" type="default" id="1tw-st-J3I"/>
+                            <constraint firstItem="SUN-QD-YyD" firstAttribute="top" secondItem="NPu-4R-VUH" secondAttribute="top" constant="3758" id="29W-4Y-RFd"/>
+                            <constraint firstItem="Par-9H-bcZ" firstAttribute="trailing" secondItem="GDz-xU-3GQ" secondAttribute="trailing" type="default" id="30b-2m-Nai"/>
+                            <constraint firstItem="TP8-BZ-0ey" firstAttribute="trailing" secondItem="1Rh-G1-f7v" secondAttribute="trailing" type="default" id="3EQ-xW-cHw"/>
+                            <constraint firstItem="1eQ-ws-s8i" firstAttribute="leading" secondItem="NPu-4R-VUH" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="3Up-eL-bXI"/>
+                            <constraint firstItem="ZH4-hk-a6f" firstAttribute="trailing" secondItem="TXB-45-fWj" secondAttribute="trailing" type="default" id="4Bw-Wg-MYH"/>
+                            <constraint firstItem="rbk-Fs-B45" firstAttribute="trailing" secondItem="1Rh-G1-f7v" secondAttribute="trailing" type="default" id="4Xv-dX-cpl"/>
+                            <constraint firstItem="ieu-Kn-bov" firstAttribute="top" secondItem="sjx-sV-2y2" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="4s0-Gc-LLi"/>
+                            <constraint firstItem="mhy-1z-fJ4" firstAttribute="trailing" secondItem="Ggq-fE-47V" secondAttribute="trailing" type="default" id="556-KY-pDl"/>
+                            <constraint firstItem="NFm-qq-ljV" firstAttribute="top" secondItem="NPu-4R-VUH" secondAttribute="top" constant="20" symbolic="YES" type="default" id="5gF-LJ-VNJ"/>
+                            <constraint firstItem="eaf-MV-5x0" firstAttribute="top" secondItem="NPu-4R-VUH" secondAttribute="top" constant="1390" id="6dK-1p-gJb"/>
+                            <constraint firstItem="eaf-MV-5x0" firstAttribute="leading" secondItem="NPu-4R-VUH" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="74K-Us-1YK"/>
+                            <constraint firstItem="wiO-q0-6dH" firstAttribute="centerX" secondItem="rmD-PC-O9s" secondAttribute="centerX" type="default" id="7eN-QV-DO0"/>
+                            <constraint firstItem="MR7-Kg-AzI" firstAttribute="leading" secondItem="HQD-j1-sim" secondAttribute="leading" type="default" id="80w-eJ-qdT"/>
+                            <constraint firstItem="GDz-xU-3GQ" firstAttribute="centerX" secondItem="MR7-Kg-AzI" secondAttribute="centerX" type="default" id="85W-Fp-0qM"/>
+                            <constraint firstItem="TP8-BZ-0ey" firstAttribute="top" secondItem="NPu-4R-VUH" secondAttribute="top" constant="403" id="8Gz-y4-8c5"/>
+                            <constraint firstItem="hgC-bB-g0C" firstAttribute="leading" secondItem="NPu-4R-VUH" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="8NB-KE-La4"/>
+                            <constraint firstItem="ZH4-hk-a6f" firstAttribute="trailing" secondItem="pfo-7Z-9Zg" secondAttribute="trailing" type="default" id="8RA-kL-0iy"/>
+                            <constraint firstItem="fe0-8D-N2n" firstAttribute="leading" secondItem="NPu-4R-VUH" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="8UC-Yt-OcH"/>
+                            <constraint firstItem="Rvd-Ky-tOU" firstAttribute="top" secondItem="NPu-4R-VUH" secondAttribute="top" constant="1285" id="98q-sB-RQI"/>
+                            <constraint firstItem="8pI-YD-ubS" firstAttribute="trailing" secondItem="TXB-45-fWj" secondAttribute="trailing" type="default" id="9Vu-Wb-GHw"/>
+                            <constraint firstItem="rbk-Fs-B45" firstAttribute="top" secondItem="NPu-4R-VUH" secondAttribute="top" constant="597" id="9YN-yz-5AA"/>
+                            <constraint firstItem="fe0-8D-N2n" firstAttribute="trailing" secondItem="vgY-Gi-Los" secondAttribute="trailing" type="default" id="9d7-3T-a4W"/>
+                            <constraint firstItem="i15-f3-Plv" firstAttribute="trailing" secondItem="P9y-hX-dGI" secondAttribute="trailing" type="default" id="9tb-SV-Wha"/>
+                            <constraint firstItem="vPU-6a-MVa" firstAttribute="leading" secondItem="NPu-4R-VUH" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="9xd-xB-XGj"/>
+                            <constraint firstItem="rbk-Fs-B45" firstAttribute="leading" secondItem="NPu-4R-VUH" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="AsO-Ya-G1K"/>
+                            <constraint firstItem="Rvd-Ky-tOU" firstAttribute="trailing" secondItem="eaf-MV-5x0" secondAttribute="trailing" type="default" id="Auy-IC-qfN"/>
+                            <constraint firstItem="Vai-av-9Vi" firstAttribute="top" secondItem="cmI-cL-3Zi" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Ay8-pK-FH2"/>
+                            <constraint firstItem="je5-6K-1U9" firstAttribute="leading" secondItem="NPu-4R-VUH" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="BRM-ts-sPX"/>
+                            <constraint firstItem="TXB-45-fWj" firstAttribute="top" secondItem="NPu-4R-VUH" secondAttribute="top" constant="1073" id="BUX-Do-yVA"/>
+                            <constraint firstItem="TP8-BZ-0ey" firstAttribute="leading" secondItem="NPu-4R-VUH" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="CDT-EC-5yj"/>
+                            <constraint firstItem="9Mk-cV-1aA" firstAttribute="top" secondItem="NPu-4R-VUH" secondAttribute="top" constant="3111" id="Ctd-Mj-uuV"/>
+                            <constraint firstItem="vgY-Gi-Los" firstAttribute="trailing" secondItem="ieu-Kn-bov" secondAttribute="trailing" type="default" id="D0P-Iw-aO5"/>
+                            <constraint firstItem="MR7-Kg-AzI" firstAttribute="top" secondItem="NPu-4R-VUH" secondAttribute="top" constant="1804" id="D4d-4f-qu3"/>
+                            <constraint firstItem="wiO-q0-6dH" firstAttribute="leading" secondItem="NPu-4R-VUH" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="DZ0-vQ-BSZ"/>
+                            <constraint firstItem="PS9-eW-0cw" firstAttribute="top" secondItem="NPu-4R-VUH" secondAttribute="top" constant="4678" id="Dhj-Sl-NQH"/>
+                            <constraint firstItem="nuz-qW-bYW" firstAttribute="trailing" secondItem="fe0-8D-N2n" secondAttribute="trailing" type="default" id="DqG-6r-x31"/>
+                            <constraint firstItem="Ggq-fE-47V" firstAttribute="top" secondItem="NPu-4R-VUH" secondAttribute="top" constant="2491" id="EzV-KP-nUK"/>
+                            <constraint firstItem="SUN-QD-YyD" firstAttribute="trailing" secondItem="NhC-ux-prV" secondAttribute="trailing" type="default" id="FDt-uC-ybL"/>
+                            <constraint firstItem="cMt-fK-5mL" firstAttribute="leading" secondItem="NPu-4R-VUH" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="FKI-wi-irE"/>
+                            <constraint firstItem="qjh-cT-LaP" firstAttribute="leading" secondItem="9Mk-cV-1aA" secondAttribute="leading" type="default" id="G2H-Ve-z2R"/>
+                            <constraint firstItem="SII-Cu-MGK" firstAttribute="leading" secondItem="NPu-4R-VUH" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="G2b-bS-y6z"/>
+                            <constraint firstItem="ipS-ry-ZN9" firstAttribute="top" secondItem="NPu-4R-VUH" secondAttribute="top" constant="1026" id="GBx-Jy-aIb"/>
+                            <constraint firstItem="hgC-bB-g0C" firstAttribute="top" secondItem="NPu-4R-VUH" secondAttribute="top" constant="151" id="GzJ-ij-d3w"/>
+                            <constraint firstItem="NhC-ux-prV" firstAttribute="leading" secondItem="SUN-QD-YyD" secondAttribute="leading" type="default" id="HIs-Mc-KCW"/>
+                            <constraint firstItem="uol-9Y-U57" firstAttribute="top" secondItem="NPu-4R-VUH" secondAttribute="top" constant="1629" id="Hcx-99-W3R"/>
+                            <constraint firstItem="PS9-eW-0cw" firstAttribute="trailing" secondItem="vWI-1w-YPj" secondAttribute="trailing" type="default" id="Hqs-dr-Xn3"/>
+                            <constraint firstItem="8Zo-8c-aGe" firstAttribute="centerX" secondItem="fe0-8D-N2n" secondAttribute="centerX" type="default" id="HxX-bm-a9y"/>
+                            <constraint firstItem="1Rh-G1-f7v" firstAttribute="top" secondItem="NPu-4R-VUH" secondAttribute="top" constant="509" id="IJr-d5-eKg"/>
+                            <constraint firstItem="ft0-E0-cnd" firstAttribute="leading" secondItem="NPu-4R-VUH" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="J2T-yP-vy0"/>
+                            <constraint firstItem="nuz-qW-bYW" firstAttribute="leading" secondItem="Ggq-fE-47V" secondAttribute="leading" type="default" id="Jiy-QU-Ak9"/>
+                            <constraint firstItem="cMt-fK-5mL" firstAttribute="centerX" secondItem="9iG-zn-FLk" secondAttribute="centerX" type="default" id="JyK-OY-Q8a"/>
+                            <constraint firstItem="iTG-sn-O3D" firstAttribute="leading" secondItem="NPu-4R-VUH" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="KDf-bW-Lt9"/>
+                            <constraint firstItem="ipS-ry-ZN9" firstAttribute="trailing" secondItem="rrJ-wd-lTy" secondAttribute="trailing" type="default" id="Kac-H4-sQn"/>
+                            <constraint firstItem="SII-Cu-MGK" firstAttribute="top" secondItem="NPu-4R-VUH" secondAttribute="top" constant="851" id="L33-A0-RZP"/>
+                            <constraint firstItem="ft0-E0-cnd" firstAttribute="top" secondItem="NPu-4R-VUH" secondAttribute="top" constant="238" id="LBN-PD-dMz"/>
+                            <constraint firstItem="qQL-Je-r6E" firstAttribute="trailing" secondItem="cmI-cL-3Zi" secondAttribute="trailing" type="default" id="LlR-Zc-0cP"/>
+                            <constraint firstItem="Eo4-fl-ryw" firstAttribute="trailing" secondItem="iTG-sn-O3D" secondAttribute="trailing" type="default" id="MOA-y4-ZE8"/>
+                            <constraint firstItem="P9y-hX-dGI" firstAttribute="top" secondItem="NPu-4R-VUH" secondAttribute="top" constant="923" id="MQK-C8-dVN"/>
+                            <constraint firstItem="NFm-qq-ljV" firstAttribute="leading" secondItem="NPu-4R-VUH" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Mbh-l9-bOI"/>
+                            <constraint firstItem="Rvd-Ky-tOU" firstAttribute="trailing" secondItem="8pI-YD-ubS" secondAttribute="trailing" type="default" id="McZ-jY-1US"/>
+                            <constraint firstItem="uOF-3V-H8K" firstAttribute="top" secondItem="0YF-hw-QIy" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Mty-rd-p3c"/>
+                            <constraint firstItem="qQL-Je-r6E" firstAttribute="leading" secondItem="NPu-4R-VUH" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Nfj-QK-ZtR"/>
+                            <constraint firstItem="vPU-6a-MVa" firstAttribute="top" secondItem="NPu-4R-VUH" secondAttribute="top" constant="4514" id="Ng0-wP-buT"/>
+                            <constraint firstItem="wiO-q0-6dH" firstAttribute="top" secondItem="NPu-4R-VUH" secondAttribute="top" constant="3350" id="O8Z-h9-dc0"/>
+                            <constraint firstItem="PS9-eW-0cw" firstAttribute="centerX" secondItem="Vaf-T0-XPD" secondAttribute="centerX" type="default" id="OFN-E8-xre"/>
+                            <constraint firstItem="sjx-sV-2y2" firstAttribute="leading" secondItem="NPu-4R-VUH" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="OYg-Oh-RLE"/>
+                            <constraint firstItem="pfo-7Z-9Zg" firstAttribute="leading" secondItem="NPu-4R-VUH" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Olc-YQ-NTt"/>
+                            <constraint firstItem="96Q-GC-cLm" firstAttribute="trailing" secondItem="uOF-3V-H8K" secondAttribute="trailing" type="default" id="PVv-Oe-0fL"/>
+                            <constraint firstItem="fe0-8D-N2n" firstAttribute="top" secondItem="NPu-4R-VUH" secondAttribute="top" constant="743" id="Prr-od-5MH"/>
+                            <constraint firstItem="mhy-1z-fJ4" firstAttribute="leading" secondItem="Ggq-fE-47V" secondAttribute="leading" type="default" id="QMR-Ts-na8"/>
+                            <constraint firstItem="E2j-um-p4W" firstAttribute="leading" secondItem="NPu-4R-VUH" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="RdP-X2-7J4"/>
+                            <constraint firstItem="i15-f3-Plv" firstAttribute="leading" secondItem="NPu-4R-VUH" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="S3k-OJ-88N"/>
+                            <constraint firstItem="uOF-3V-H8K" firstAttribute="leading" secondItem="NPu-4R-VUH" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="TaO-rW-9fp"/>
+                            <constraint firstItem="cmI-cL-3Zi" firstAttribute="trailing" secondItem="E2j-um-p4W" secondAttribute="trailing" type="default" id="UDi-VA-dRs"/>
+                            <constraint firstItem="cMt-fK-5mL" firstAttribute="top" secondItem="NPu-4R-VUH" secondAttribute="top" constant="1702" id="Ulr-EJ-MZy"/>
+                            <constraint firstItem="8pI-YD-ubS" firstAttribute="leading" secondItem="NPu-4R-VUH" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="V2Q-c0-ULj"/>
+                            <constraint firstItem="ZH4-hk-a6f" firstAttribute="leading" secondItem="NPu-4R-VUH" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="VXL-BR-KUg"/>
+                            <constraint firstItem="96Q-GC-cLm" firstAttribute="trailing" secondItem="wiO-q0-6dH" secondAttribute="trailing" type="default" id="Vtb-gI-z48"/>
+                            <constraint firstItem="Par-9H-bcZ" firstAttribute="top" secondItem="9iG-zn-FLk" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Wmd-Wg-v33"/>
+                            <constraint firstItem="rrJ-wd-lTy" firstAttribute="top" secondItem="NPu-4R-VUH" secondAttribute="top" constant="1130" id="Wtt-pd-iss"/>
+                            <constraint firstItem="Eo4-fl-ryw" firstAttribute="leading" secondItem="NPu-4R-VUH" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="X0F-mL-H2g"/>
+                            <constraint firstItem="96Q-GC-cLm" firstAttribute="leading" secondItem="NPu-4R-VUH" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="X88-4l-mC0"/>
+                            <constraint firstItem="F8K-HQ-c6z" firstAttribute="top" secondItem="NPu-4R-VUH" secondAttribute="top" constant="4447" id="Xbe-EK-Pmf"/>
+                            <constraint firstItem="nuz-qW-bYW" firstAttribute="top" secondItem="rmD-PC-O9s" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="XrJ-xj-P0l"/>
+                            <constraint firstItem="NhC-ux-prV" firstAttribute="top" secondItem="wiO-q0-6dH" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Xwk-vL-Uxi"/>
+                            <constraint firstItem="4eQ-hT-FF8" firstAttribute="leading" secondItem="NPu-4R-VUH" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Y4a-8Y-RVZ"/>
+                            <constraint firstItem="Eo4-fl-ryw" firstAttribute="top" secondItem="NPu-4R-VUH" secondAttribute="top" constant="448" id="Y5n-kb-Cef"/>
+                            <constraint firstItem="uol-9Y-U57" firstAttribute="leading" secondItem="Vai-av-9Vi" secondAttribute="leading" type="default" id="Z0l-PO-l6I"/>
+                            <constraint firstItem="vPU-6a-MVa" firstAttribute="trailing" secondItem="uOF-3V-H8K" secondAttribute="trailing" type="default" id="Z6S-lj-G1g"/>
+                            <constraint firstItem="mhy-1z-fJ4" firstAttribute="top" secondItem="NPu-4R-VUH" secondAttribute="top" constant="2610" id="Z8y-U4-iRr"/>
+                            <constraint firstItem="cmI-cL-3Zi" firstAttribute="leading" secondItem="NPu-4R-VUH" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="aUb-Th-1fb"/>
+                            <constraint firstItem="HQD-j1-sim" firstAttribute="top" secondItem="NPu-4R-VUH" secondAttribute="top" constant="1733" id="b6d-d9-8gR"/>
+                            <constraint firstItem="NhC-ux-prV" firstAttribute="trailing" secondItem="DeY-wP-ObU" secondAttribute="trailing" type="default" id="cwz-e7-MqJ"/>
+                            <constraint firstItem="cMt-fK-5mL" firstAttribute="trailing" secondItem="E2j-um-p4W" secondAttribute="trailing" type="default" id="dDa-Fz-YWE"/>
+                            <constraint firstItem="E2j-um-p4W" firstAttribute="top" secondItem="NPu-4R-VUH" secondAttribute="top" constant="1576" id="dez-um-iUG"/>
+                            <constraint firstItem="ipS-ry-ZN9" firstAttribute="leading" secondItem="NPu-4R-VUH" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="eDJ-b2-RXw"/>
+                            <constraint firstItem="Rvd-Ky-tOU" firstAttribute="leading" secondItem="NPu-4R-VUH" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="ej6-Om-PYe"/>
+                            <constraint firstItem="DeY-wP-ObU" firstAttribute="leading" secondItem="NhC-ux-prV" secondAttribute="leading" type="default" id="f5E-7R-1we"/>
+                            <constraint firstItem="rmD-PC-O9s" firstAttribute="top" secondItem="NPu-4R-VUH" secondAttribute="top" constant="1912" id="f9v-Be-Qgh"/>
+                            <constraint firstItem="eE1-7k-gFO" firstAttribute="leading" secondItem="NPu-4R-VUH" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="fEf-TA-oI9"/>
+                            <constraint firstItem="je5-6K-1U9" firstAttribute="top" secondItem="NPu-4R-VUH" secondAttribute="top" constant="698" id="gMA-WI-kgq"/>
+                            <constraint firstItem="Vaf-T0-XPD" firstAttribute="top" secondItem="NPu-4R-VUH" secondAttribute="top" constant="4270" id="grG-Is-HeN"/>
+                            <constraint firstItem="P9y-hX-dGI" firstAttribute="trailing" secondItem="ipS-ry-ZN9" secondAttribute="trailing" type="default" id="hki-gw-Ma7"/>
+                            <constraint firstItem="cmI-cL-3Zi" firstAttribute="top" secondItem="NPu-4R-VUH" secondAttribute="top" constant="1452" id="iJS-AI-oRR"/>
+                            <constraint firstItem="Eo4-fl-ryw" firstAttribute="trailing" secondItem="4eQ-hT-FF8" secondAttribute="trailing" type="default" id="iM8-lE-7cz"/>
+                            <constraint firstItem="8Zo-8c-aGe" firstAttribute="top" secondItem="NPu-4R-VUH" secondAttribute="top" constant="2201" id="iM9-7s-w1B"/>
+                            <constraint firstItem="rrJ-wd-lTy" firstAttribute="trailing" secondItem="qQL-Je-r6E" secondAttribute="trailing" type="default" id="ic1-L2-sV1"/>
+                            <constraint firstAttribute="trailing" secondItem="qjh-cT-LaP" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="ixJ-ox-AJS"/>
+                            <constraint firstItem="1eQ-ws-s8i" firstAttribute="top" secondItem="eE1-7k-gFO" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="j57-lo-Axq"/>
+                            <constraint firstItem="qQL-Je-r6E" firstAttribute="top" secondItem="NPu-4R-VUH" secondAttribute="top" constant="1238" id="jx7-ew-3mW"/>
+                            <constraint firstItem="nuz-qW-bYW" firstAttribute="trailing" secondItem="Ggq-fE-47V" secondAttribute="trailing" type="default" id="kPo-Gl-Zwl"/>
+                            <constraint firstAttribute="trailing" secondItem="9Mk-cV-1aA" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="kjs-0t-vr7"/>
+                            <constraint firstItem="8Zo-8c-aGe" firstAttribute="leading" secondItem="qjh-cT-LaP" secondAttribute="leading" type="default" id="l5m-3d-mu2"/>
+                            <constraint firstItem="vgY-Gi-Los" firstAttribute="top" secondItem="hgC-bB-g0C" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="lOd-33-Ipl"/>
+                            <constraint firstItem="P9y-hX-dGI" firstAttribute="leading" secondItem="NPu-4R-VUH" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="lbl-Pa-5rY"/>
+                            <constraint firstItem="GDz-xU-3GQ" firstAttribute="leading" secondItem="MR7-Kg-AzI" secondAttribute="leading" type="default" id="ln2-69-SYi"/>
+                            <constraint firstItem="Tp4-ZP-8Fe" firstAttribute="leading" secondItem="8Zo-8c-aGe" secondAttribute="leading" type="default" id="mEn-QB-bc6"/>
+                            <constraint firstItem="Tp4-ZP-8Fe" firstAttribute="top" secondItem="NPu-4R-VUH" secondAttribute="top" constant="1343" id="n1G-eb-6fq"/>
+                            <constraint firstItem="ZH4-hk-a6f" firstAttribute="top" secondItem="NPu-4R-VUH" secondAttribute="top" constant="968" id="nCJ-45-XoG"/>
+                            <constraint firstItem="0YF-hw-QIy" firstAttribute="top" secondItem="NPu-4R-VUH" secondAttribute="top" constant="3926" id="nPz-ko-2io"/>
+                            <constraint firstItem="nuz-qW-bYW" firstAttribute="leading" secondItem="GDz-xU-3GQ" secondAttribute="leading" type="default" id="nf7-Eh-7d9"/>
+                            <constraint firstItem="96Q-GC-cLm" firstAttribute="top" secondItem="NPu-4R-VUH" secondAttribute="top" constant="3683" id="nh6-2r-hGS"/>
+                            <constraint firstAttribute="trailing" secondItem="8Zo-8c-aGe" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="no0-8z-MuX"/>
+                            <constraint firstItem="GDz-xU-3GQ" firstAttribute="trailing" secondItem="cMt-fK-5mL" secondAttribute="trailing" type="default" id="ptq-CG-lE6"/>
+                            <constraint firstItem="4eQ-hT-FF8" firstAttribute="top" secondItem="ft0-E0-cnd" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="qsS-5n-mix"/>
+                            <constraint firstItem="rrJ-wd-lTy" firstAttribute="leading" secondItem="NPu-4R-VUH" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="rDs-U0-Rb4"/>
+                            <constraint firstItem="DeY-wP-ObU" firstAttribute="top" secondItem="NPu-4R-VUH" secondAttribute="top" constant="3180" id="rRo-NR-uKm"/>
+                            <constraint firstItem="iTG-sn-O3D" firstAttribute="trailing" secondItem="pfo-7Z-9Zg" secondAttribute="trailing" type="default" id="sNm-JF-xHf"/>
+                            <constraint firstItem="pfo-7Z-9Zg" firstAttribute="top" secondItem="NPu-4R-VUH" secondAttribute="top" constant="642" id="sPk-7G-yAT"/>
+                            <constraint firstAttribute="bottom" secondItem="PS9-eW-0cw" secondAttribute="bottom" constant="223" id="sRW-vO-7io"/>
+                            <constraint firstItem="ieu-Kn-bov" firstAttribute="leading" secondItem="NPu-4R-VUH" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="t1y-Uc-g2I"/>
+                            <constraint firstItem="i15-f3-Plv" firstAttribute="top" secondItem="NPu-4R-VUH" secondAttribute="top" constant="800" id="tM7-Po-H4r"/>
+                            <constraint firstItem="uol-9Y-U57" firstAttribute="leading" secondItem="HQD-j1-sim" secondAttribute="leading" type="default" id="ti2-qb-LPJ"/>
+                            <constraint firstItem="iTG-sn-O3D" firstAttribute="top" secondItem="NPu-4R-VUH" secondAttribute="top" constant="538" id="u5i-h0-qMR"/>
+                            <constraint firstItem="9iG-zn-FLk" firstAttribute="trailing" secondItem="mhy-1z-fJ4" secondAttribute="trailing" type="default" id="u6f-1l-T1V"/>
+                            <constraint firstItem="DeY-wP-ObU" firstAttribute="leading" secondItem="9iG-zn-FLk" secondAttribute="leading" type="default" id="uIE-uO-L12"/>
+                            <constraint firstItem="vgY-Gi-Los" firstAttribute="leading" secondItem="NPu-4R-VUH" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="unQ-8i-HzW"/>
+                            <constraint firstItem="TXB-45-fWj" firstAttribute="leading" secondItem="NPu-4R-VUH" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="vVu-N3-LK1"/>
+                            <constraint firstItem="9iG-zn-FLk" firstAttribute="trailing" secondItem="DeY-wP-ObU" secondAttribute="trailing" type="default" id="ve3-07-t1J"/>
+                            <constraint firstItem="PS9-eW-0cw" firstAttribute="leading" secondItem="9Mk-cV-1aA" secondAttribute="leading" type="default" id="w3W-7X-JTn"/>
+                            <constraint firstItem="sjx-sV-2y2" firstAttribute="top" secondItem="NPu-4R-VUH" secondAttribute="top" constant="67" id="whX-40-Ayv"/>
+                            <constraint firstItem="eE1-7k-gFO" firstAttribute="top" secondItem="NPu-4R-VUH" secondAttribute="top" constant="323" id="wpG-7A-DYn"/>
+                            <constraint firstItem="je5-6K-1U9" firstAttribute="trailing" secondItem="i15-f3-Plv" secondAttribute="trailing" type="default" id="xOt-HK-hRs"/>
+                            <constraint firstItem="0YF-hw-QIy" firstAttribute="leading" secondItem="NPu-4R-VUH" secondAttribute="leading" constant="24" id="xlA-Ew-Hsh"/>
+                            <constraint firstItem="GDz-xU-3GQ" firstAttribute="top" secondItem="NPu-4R-VUH" secondAttribute="top" constant="1849" id="yrt-Yg-V8R"/>
+                            <constraint firstItem="qjh-cT-LaP" firstAttribute="top" secondItem="NPu-4R-VUH" secondAttribute="top" constant="2318" id="zCK-vT-1SF"/>
+                            <constraint firstItem="rmD-PC-O9s" firstAttribute="leading" secondItem="NPu-4R-VUH" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="zE2-DN-8iQ"/>
+                            <constraint firstItem="9iG-zn-FLk" firstAttribute="top" secondItem="NPu-4R-VUH" secondAttribute="top" constant="2778" id="zVO-DP-atE"/>
+                            <constraint firstItem="rbk-Fs-B45" firstAttribute="trailing" secondItem="je5-6K-1U9" secondAttribute="trailing" type="default" id="zqu-cr-GSA"/>
                         </constraints>
-                    </view>
+                    </scrollView>
                     <navigationItem key="navigationItem" title="Evaluation Form" id="rgn-qd-Exh">
                         <barButtonItem key="backBarButtonItem" title="Back" id="dlw-fb-yBO"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="PKq-No-BEp"/>
                     </navigationItem>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S1f-rU-u8Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -3775,7 +4213,7 @@ Are you charging any fees?  If yes how much do you charge?
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f68-Ux-hpU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2692" y="2069"/>
+            <point key="canvasLocation" x="3078" y="1863"/>
         </scene>
         <!--Content View Controller - Content-->
         <scene sceneID="u4i-pa-9pY">
@@ -4206,112 +4644,6 @@ Online &amp; onsite tech volunteers &amp; reused computers connecting youth in d
         <image name="button-2.png" width="217" height="40"/>
         <image name="button-3.png" width="173" height="40"/>
     </resources>
-    <classes>
-        <class className="AboutWCEViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AboutWCEViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="goToWebsite:"/>
-            </relationships>
-        </class>
-        <class className="AddLocationViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AddLocationViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="backgroundTouched:"/>
-                <relationship kind="action" name="cancelChanges:"/>
-                <relationship kind="action" name="saveChanges:"/>
-                <relationship kind="action" name="textfieldReturn:"/>
-                <relationship kind="outlet" name="address" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="city" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="contact" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="dropDownTableView" candidateClass="UITableView"/>
-                <relationship kind="outlet" name="location" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="phone" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
-                <relationship kind="outlet" name="zip" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="ChangePassViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ChangePassViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="cancelChangePassword:"/>
-                <relationship kind="action" name="saveNewPassword:"/>
-                <relationship kind="outlet" name="cancelButton" candidateClass="UIBarButtonItem"/>
-                <relationship kind="outlet" name="passwordNewOne" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="passwordNewTwo" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="passwordOld" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="saveButton" candidateClass="UIBarButtonItem"/>
-            </relationships>
-        </class>
-        <class className="CoverSheetViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/CoverSheetViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="ChooseCountry" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-        <class className="FormsViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/FormsViewController.h"/>
-        </class>
-        <class className="ImplementationViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ImplementationViewController.h"/>
-        </class>
-        <class className="LocationMapViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LocationMapViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
-            </relationships>
-        </class>
-        <class className="LocationViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LocationViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="enterEditingMode:"/>
-                <relationship kind="outlet" name="editButton" candidateClass="UIBarButtonItem"/>
-                <relationship kind="outlet" name="locationTableView" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-        <class className="LoginViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LoginViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="pushLocationView:"/>
-                <relationship kind="outlet" name="passcodeField" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="NewPartnerViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NewPartnerViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="backgroundTouched:"/>
-                <relationship kind="action" name="cancel:"/>
-                <relationship kind="action" name="saveChanges:"/>
-                <relationship kind="action" name="textfieldReturn:"/>
-                <relationship kind="outlet" name="nameField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="saveButton" candidateClass="UIBarButtonItem"/>
-            </relationships>
-        </class>
-        <class className="PartnerViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/PartnerViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="enterEditingMode:"/>
-                <relationship kind="outlet" name="editButton" candidateClass="UIBarButtonItem"/>
-                <relationship kind="outlet" name="partnerTableView" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-        <class className="WCEContentViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/WCEContentViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
-            </relationships>
-        </class>
-        <class className="WCETabBarController" superclassName="UITabBarController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/WCETabBarController.h"/>
-            <relationships>
-                <relationship kind="action" name="editButtonClicked:"/>
-                <relationship kind="action" name="logoffButtonClicked:"/>
-                <relationship kind="outlet" name="editButton" candidateClass="UIBarButtonItem"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
