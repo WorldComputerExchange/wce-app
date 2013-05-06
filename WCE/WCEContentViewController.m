@@ -25,6 +25,7 @@
 
 - (void)viewDidLoad
 {
+	[[self view] setBackgroundColor:[UIColor blackColor]];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -34,7 +35,7 @@
 	[super viewDidLoad];
 	// Do any additional setup after loading the view.
 	
-	UIImage *image = [UIImage imageNamed:@"WCE Content V5 NEW.png"];
+	UIImage *image = [UIImage imageNamed:@"WCE Content V5.png"];
 	_imageView = [[UIImageView alloc] initWithImage:image];
 	[_imageView setFrame:(CGRect){.origin=CGPointMake(0.0f, 0.0f), .size=image.size}];
 	[_scrollView addSubview:_imageView];

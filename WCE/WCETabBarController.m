@@ -54,8 +54,11 @@
 	}
 	else if([viewController isKindOfClass:[LocationViewController class]])
 	{
-		[_buttonsInToolbar addObject:[self editButton]];
-		[[self navigationItem] setRightBarButtonItems:_buttonsInToolbar animated:YES];
+		if(![_buttonsInToolbar containsObject:[self editButton]]) // prevent adding more than one 'Edit' button
+		{
+			[_buttonsInToolbar addObject:[self editButton]];
+			[[self navigationItem] setRightBarButtonItems:_buttonsInToolbar animated:YES];
+		}
 	}
 }
 
