@@ -358,7 +358,6 @@
 /// called when a text field is selected
 - (void)textFieldDidBeginEditing:(UITextField *)textField
 {
-	NSLog(@"text field began!!");
 	_activeField = textField;
 }
 

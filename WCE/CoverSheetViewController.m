@@ -16,7 +16,21 @@
 
 
 
-@synthesize regionArray, locationTableView, locations, actionSheet;
+@synthesize regionArray, locationTableView, locations, actionSheet, selectedCountry;
+
+
+
+/**Keyboard dismissed when background is clicked or when return is hit**/
+
+/**Does not work
+    Maybe need a gesture recognizer for this functionality**/
+- (IBAction)backgroundTouched:(id)sender {
+    [sender resignFirstResponder];
+}
+
+- (IBAction)textfieldReturn:(id)sender{
+    [sender resignFirstResponder];
+}
 
 /**TableView methods**/
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -33,13 +47,14 @@
 	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"LocationCellID"];
 	if (cell == nil)
 	{
-		cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"LocationCell"];
+		cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"LocationCell"];
 	}
 	//get the relevant location from the array
 	NSString *region =  [self.regionArray objectAtIndex:indexPath.row];
 	
 	cell.textLabel.text = region;
 	cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    cell.detailTextLabel.text = selectedCountry;
 	
 	return cell;
 }
@@ -62,7 +77,7 @@
     pickerView.dataSource = self;
     pickerView.delegate = self;
     
-    UISegmentedControl *closeButton = [[UISegmentedControl alloc] initWithItems:[NSArray arrayWithObject:@"Next"]];
+    UISegmentedControl *closeButton = [[UISegmentedControl alloc] initWithItems:[NSArray arrayWithObject:@"Done"]];
     closeButton.momentary = YES;
     closeButton.frame = CGRectMake(260, 7.0f, 50.0f, 30.0f);
     closeButton.segmentedControlStyle = UISegmentedControlStyleBar;
@@ -98,19 +113,17 @@
     return [locations objectAtIndex:row];
 }
 
+- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
+{
+    selectedCountry = [locations objectAtIndex:row];
+}
+
 - (void)pickerDoneClicked
 {
+    [locationTableView reloadData];
     [actionSheet dismissWithClickedButtonIndex:0 animated:YES];
-    
-    /**Here we should record infor about the country chosen in pickerView
-     We should also have the tableView respond to the selection perhaps by displaying
-     the country name chosen and deselecting the cell, 
-     Maybe we should use a UIButton instead? 
-     might be violation of
-     apples interface guidelines**/
-    
-    
 }
+
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -126,13 +139,13 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    regionArray = [[NSArray alloc] initWithObjects:@"County", nil];
+    regionArray = [[NSArray alloc] initWithObjects:@"Country", nil];
    
     
-    locations = [[NSArray alloc] initWithObjects:@"Japan", @"China", @"Your Face", @"Peter Goulakos", @"Is Fat", nil];
-    //Alex: needs to pull array from Locations page
-    //NSLog(@"%@", array);
-    
+    locations = [[NSArray alloc] initWithObjects:
+                 @"Afghanistan", @"Albania", @"Algeria", @"Andorra", @"Angola", @"Antigua and Barbuda", @"Argentina", @"Armenia", @"Aruba", @"Azerbaijan", @"Bahamas", @"Bahrain", @"Bangladesh", @"Barbados", @"Bassas da India", @"Belarus", @"Belize", @"Benin", @"Bermuda", @"Bhutan", @"Bolivia", @"Bosnia and Herzegovina", @"Botswana", @"Brasil", @"Brunei", @"Bulgaria", @"Burkina Faso", @"Burma", @"Burundi", @"Cambodia", @"Cameroon", @"Cape Verde", @"Cayman Islands", @"Central African Republic", @"Chad", @"Chile", @"China", @"Colombia", @"Comoros", @"Congo, Democratic Republic of the", @"Congo, Republic of the", @"Costa Rica", @"Cote d'Ivoire", @"Croatia", @"Cuba", @"Cyprus", @"Dhekelia", @"Dijibouti", @"Dominica", @"Dominican Republic", @"Ecuador", @"Egypt", @"El Salvador", @"Equatorial Guinea", @"Eritrea", @"Ethiopia", @"Fiji", @"French Guiana", @"French Polynesia", @"Gabon", @"The Gambia", @"Ghana", @"Georgia", @"Ghana", @"Guam", @"Guatemala", @"Guinea", @"Guinea Bissau", @"Guyana", @"Haiti", @"Honduras", @"India", @"Indonesia", @"Iran", @"Iraq", @"Jamaica", @"Jordan", @"Kazakhstan", @"Kenya", @"Kiribati", @"Kuwait", @"Kyrgyzstan", @"Laos", @"Lesotho", @"Liberia", @"Libya", @"Lithuania", @"Macau", @"Macedonia", @"Madagascar", @"Malawi", @"Malaysia", @"Mali", @"Marshall Islands", @"Martinique", @"Mauritania", @"Mauritius", @"Mayotte", @"Mexico", @"Micronesia", @"Mongolia", @"Moldova", @"Morocco", @"Mozambique", @"Namibia", @"Nepal", @"New Zealand", @"Nicaragua", @"Niger", @"Nigeria", @"Oman", @"Pakistan", @"Palau", @"Panama", @"Papua New Guinea", @"Paraguay", @"Peru", @"Philippines", @"Poland", @"Qatar", @"Romania", @"Russia", @"Rwanda", @"Saint Lucia", @"Samoa", @"Saudi Arabia", @"Senegal", @"Serbia and Montenegro", @"Sierra Leone", @"Singapore", @"Slovakia", @"Slovenia", @"Solomon Islands", @"Somalia", @"South Africa",  @"Sri Lanka",  @"Sudan",  @"Suriname",  @"Swaziland",  @"Syria",  @"Tajikistan",  @"Tanzania",  @"Thailand",  @"Timor-Leste",  @"Togo",  @"Tokelau",  @"Tonga",  @"Trinidad and Tobago",  @"Tunisia",  @"Turkey",  @"Turkmenistan",  @"Turks and Caicos Islands",  @"Tuvalu",  @"Uganda",  @"Ukraine",  @"United Arab Emirates",  @"United Kingdom",  @"United States", @"Uruguay",  @"Uzbekistan",  @"Vanuatu", @"Venezuala", @"Vietnam", @"Virgin Islands", @"Western Sahara", @"Yemen", @"Zambia", @"Zimbabwe", nil];
+      selectedCountry = @"None";
+
 }
 
 - (void)didReceiveMemoryWarning

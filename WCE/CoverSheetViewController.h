@@ -10,7 +10,6 @@
 
 @interface CoverSheetViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, UIPickerViewDelegate, UIPickerViewDataSource>
 {
-    IBOutlet UITableView *ChooseCountry;
     NSArray *regionArray;
     UIActionSheet *actionSheet;
     NSArray *locations;
@@ -19,8 +18,12 @@
 }
 
 @property (nonatomic, retain) NSArray *regionArray;
-@property (nonatomic,retain) UITableView* locationTableView;
+@property (nonatomic,retain) IBOutlet UITableView* locationTableView;
 @property (nonatomic, copy) NSArray *locations;
 @property (nonatomic, copy) UIActionSheet *actionSheet;
+@property (nonatomic, retain) NSString *selectedCountry;
+
+- (IBAction)textfieldReturn:(id)sender;
+- (IBAction)backgroundTouched:(id)sender;
 
 @end

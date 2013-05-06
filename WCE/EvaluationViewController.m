@@ -1,17 +1,19 @@
 //
-//  ImplementationViewController.m
+//  EvaluationViewController.m
 //  WCE
 //
+//  Created by  Brian Beckerle on 5/5/13.
+//  Copyright (c) 2013  Brian Beckerle. All rights reserved.
 //
 
-#import "ImplementationViewController.h"
+#import "EvaluationViewController.h"
 
-@interface ImplementationViewController ()
+@interface EvaluationViewController ()
 
 @end
 
-@implementation ImplementationViewController
-@synthesize scrollView;
+@implementation EvaluationViewController
+
 
 
 /**Keyboard dismissed when background is clicked or when return is hit**/
@@ -33,8 +35,6 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    
-    
 }
 
 - (void)didReceiveMemoryWarning
