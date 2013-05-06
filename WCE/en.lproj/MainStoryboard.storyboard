@@ -3884,7 +3884,7 @@ Cg
                     <textView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" id="jpk-D4-MJl">
                         <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                        <mutableString key="text">Pentium 4 Desktop refurbished with keyboard &amp; mouse = $40 plus content, monitor, shipping &amp; port clearing costs ($20 additional if higher specs like Dual Core are required)
+                        <string key="text">Pentium 4 Desktop refurbished with keyboard &amp; mouse = $40 plus content, monitor, shipping &amp; port clearing costs ($20 additional if higher specs like Dual Core are required)
 ~ Mostly Name Brand with minimum specs: 2.8 GHz, 40 gig hard drive, 512 MB RAM, CD ROM, Video, Sound &amp; Net Cards ~
 
 
@@ -3919,7 +3919,7 @@ eCorps Training: Two weeks onsite teacher and tech staff training = $1,500 per v
 iEARN Training: two-day training for 30 teachers in the educational use of the Internet = $2,500
 
 
-WCE Fundraising: WCE raises the final 1/3 of our sourcing &amp; shipping costs for you in 4 months from when you send your first 1/3. Shipping occurs one month after you send your second 1/3 as long as it is after the 4 months. (Not applicable: Windows, for-profits, adult-only use, large numbers of P4 laptops, LCD monitors &amp; items below.) (15% cost is added to Sponsor’s donation.)</mutableString>
+WCE Fundraising: WCE raises the final 1/3 of our sourcing &amp; shipping costs for you in 4 months from when you send your first 1/3. Shipping occurs one month after you send your second 1/3 as long as it is after the 4 months. (Not applicable: Windows, for-profits, adult-only use, large numbers of P4 laptops, LCD monitors &amp; items below.) (15% cost is added to Sponsor’s donation.)</string>
                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -4675,7 +4675,7 @@ WCE Fundraising: WCE raises the final 1/3 of our sourcing &amp; shipping costs f
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S1f-rU-u8Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2248" y="2449"/>
+            <point key="canvasLocation" x="2232" y="4029"/>
         </scene>
         <!--New Partner View Controller-->
         <scene sceneID="G4p-bJ-PmB">
@@ -5017,6 +5017,35 @@ WCE Fundraising: WCE raises the final 1/3 of our sourcing &amp; shipping costs f
             </objects>
             <point key="canvasLocation" x="1762" y="-11"/>
         </scene>
+        <!--Web View Controller - WCE-->
+        <scene sceneID="PJ0-7A-mai">
+            <objects>
+                <viewController id="LGf-k9-ktf" customClass="WCEWebViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fZN-ET-l23">
+                        <rect key="frame" x="0.0" y="64" width="320" height="2887"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="giw-Fd-Xim">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="giw-Fd-Xim" firstAttribute="bottom" secondItem="fZN-ET-l23" secondAttribute="bottom" type="default" id="2fy-CZ-asf"/>
+                            <constraint firstItem="giw-Fd-Xim" firstAttribute="top" secondItem="fZN-ET-l23" secondAttribute="top" type="default" id="6JN-rj-fzw"/>
+                            <constraint firstItem="giw-Fd-Xim" firstAttribute="trailing" secondItem="fZN-ET-l23" secondAttribute="trailing" type="default" id="BMx-Qj-cXT"/>
+                            <constraint firstItem="giw-Fd-Xim" firstAttribute="leading" secondItem="fZN-ET-l23" secondAttribute="leading" type="default" id="OxQ-cF-3Bf"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="WCE" id="XDi-yi-ll9"/>
+                    <connections>
+                        <outlet property="webView" destination="giw-Fd-Xim" id="eup-W7-oDS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xQI-4S-Dh1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2722" y="-159"/>
+        </scene>
         <!--Location Map View Controller - Map-->
         <scene sceneID="jyz-q1-ck8">
             <objects>
@@ -5063,20 +5092,16 @@ WCE Fundraising: WCE raises the final 1/3 of our sourcing &amp; shipping costs f
         <scene sceneID="dXi-wM-r1s">
             <objects>
                 <viewController id="G51-90-qjF" customClass="AboutWCEViewController" sceneMemberID="viewController">
-                    <view key="view" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="7hD-dv-Bsr">
-                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <scrollView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="sBP-L6-bVf">
+                        <rect key="frame" x="0.0" y="64" width="320" height="3000"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <subviews>
-                            <textView opaque="NO" clearsContextBeforeDrawing="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bmy-mS-fTG">
+                            <textView opaque="NO" clearsContextBeforeDrawing="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bmy-mS-fTG">
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="401" id="pZ3-mg-R9i"/>
-                                    <constraint firstAttribute="width" constant="299" id="rh4-0E-GFx"/>
+                                    <constraint firstAttribute="height" constant="2875" id="KND-sK-5sf"/>
                                 </constraints>
-                                <string key="text">Helping bridge the global digital divide for youth
-
-
-World Computer Exchange (WCE) is a global education and environment organization founded in 1999 to connect more youth in developing countries to opportunities, skills, and understanding via the Internet – while keeping working computers out of landfills.   With our 700 volunteers, WCE is the largest US non-profit provider of reused computers to connect youth in developing countries.  Studies show that the reuse of a computer is 25 times more carbon efficient than destroying one and re-manufacturing a new one.  Our work helps to implement the UN’s Millennium Development Goals in Education.
+                                <mutableString key="text">World Computer Exchange (WCE) is a global education and environment organization founded in 1999 to connect more youth in developing countries to opportunities, skills, and understanding via the Internet – while keeping working computers out of landfills.   With our 700 volunteers, WCE is the largest US non-profit provider of reused computers to connect youth in developing countries.  Studies show that the reuse of a computer is 25 times more carbon efficient than destroying one and re-manufacturing a new one.  Our work helps to implement the UN’s Millennium Development Goals in Education.
 
 
 
@@ -5122,16 +5147,16 @@ Info@WorldComputerExchange.org    		                           Website: www.Worl
 		                           
 Online &amp; onsite tech volunteers &amp; reused computers connecting youth in developing countries
 		                           		                          
-</string>
+</mutableString>
                                 <color key="textColor" red="0.99215692281723022" green="0.9960784912109375" blue="0.99215692281723022" alpha="1" colorSpace="deviceRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0r6-z9-BqJ">
+                            <button opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e1V-Mi-oWS">
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="VUe-Kd-rkA"/>
-                                    <constraint firstAttribute="width" constant="174" id="nML-DA-mgu"/>
+                                    <constraint firstAttribute="height" constant="40" id="LAl-vH-dGY"/>
+                                    <constraint firstAttribute="width" constant="174" id="ipe-aF-LL3"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" image="button-3.png">
@@ -5141,25 +5166,41 @@ Online &amp; onsite tech volunteers &amp; reused computers connecting youth in d
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="goToWebsite:" destination="G51-90-qjF" eventType="touchUpInside" id="efX-tO-Ysx"/>
+                                    <action selector="goToWebsite:" destination="G51-90-qjF" eventType="touchUpInside" id="72q-wK-2U3"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Helping bridge the global digital divide for youth" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q1k-IC-xQp">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="KN2-WK-GfW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="bmy-mS-fTG" firstAttribute="top" secondItem="0r6-z9-BqJ" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="9bw-y2-dD0"/>
-                            <constraint firstItem="0r6-z9-BqJ" firstAttribute="top" secondItem="7hD-dv-Bsr" secondAttribute="top" constant="-1" id="LQl-3l-PVa"/>
-                            <constraint firstItem="0r6-z9-BqJ" firstAttribute="leading" secondItem="7hD-dv-Bsr" secondAttribute="leading" constant="78" id="k69-ab-vq2"/>
-                            <constraint firstItem="bmy-mS-fTG" firstAttribute="centerX" secondItem="7hD-dv-Bsr" secondAttribute="centerX" type="default" id="o1O-9Y-CsF"/>
+                            <constraint firstItem="e1V-Mi-oWS" firstAttribute="centerX" secondItem="bmy-mS-fTG" secondAttribute="centerX" type="default" id="0uJ-Op-Mnb"/>
+                            <constraint firstItem="q1k-IC-xQp" firstAttribute="top" secondItem="sBP-L6-bVf" secondAttribute="top" constant="35" id="2gR-kt-Imv"/>
+                            <constraint firstItem="q1k-IC-xQp" firstAttribute="centerX" secondItem="sBP-L6-bVf" secondAttribute="centerX" type="default" id="5dc-2n-7Dm"/>
+                            <constraint firstItem="bmy-mS-fTG" firstAttribute="trailing" secondItem="sBP-L6-bVf" secondAttribute="trailing" type="default" id="UqX-vh-k9O"/>
+                            <constraint firstItem="e1V-Mi-oWS" firstAttribute="top" secondItem="sBP-L6-bVf" secondAttribute="top" constant="78" id="Vsx-bN-r7s"/>
+                            <constraint firstItem="bmy-mS-fTG" firstAttribute="bottom" secondItem="sBP-L6-bVf" secondAttribute="bottom" type="default" id="blZ-w0-EhU"/>
+                            <constraint firstItem="bmy-mS-fTG" firstAttribute="top" secondItem="sBP-L6-bVf" secondAttribute="top" constant="125" id="fb9-yB-EgY"/>
+                            <constraint firstItem="bmy-mS-fTG" firstAttribute="leading" secondItem="sBP-L6-bVf" secondAttribute="leading" type="default" id="gM0-dl-DAT"/>
+                            <constraint firstItem="q1k-IC-xQp" firstAttribute="centerX" secondItem="e1V-Mi-oWS" secondAttribute="centerX" type="default" id="vEI-bF-N1t"/>
                         </constraints>
-                    </view>
+                    </scrollView>
                     <navigationItem key="navigationItem" title="ABOUT WCE" id="IDo-UV-rdz">
                         <barButtonItem key="backBarButtonItem" title="Back" id="Imw-oQ-Y8l"/>
                     </navigationItem>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <segue destination="LGf-k9-ktf" kind="push" identifier="pushWebView" id="1IP-Cc-3K4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xiT-tM-Ztj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2258" y="698"/>
+            <point key="canvasLocation" x="2212" y="-698"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="UDX-uF-Pbt">
@@ -5312,6 +5353,12 @@ Online &amp; onsite tech volunteers &amp; reused computers connecting youth in d
                 <relationship kind="action" name="editButtonClicked:"/>
                 <relationship kind="action" name="logoffButtonClicked:"/>
                 <relationship kind="outlet" name="editButton" candidateClass="UIBarButtonItem"/>
+            </relationships>
+        </class>
+        <class className="WCEWebViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/WCEWebViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
             </relationships>
         </class>
     </classes>

@@ -187,27 +187,6 @@
 }
 
 
-
-// Returns a UIView that serves as the footer for this table view
-/*- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
-{
-	if(footerView == nil)
-	{
-		footerView = [[UIView alloc] init];
-		
-		chooseFromMap = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-		[chooseFromMap setFrame:CGRectMake(10, 20, 300, 40)];
-		[chooseFromMap setTitle:@"Choose from Map" forState:UIControlStateNormal];
-		[chooseFromMap addTarget:self
-						  action:@selector(showMap)
-				forControlEvents:UIControlEventTouchUpInside];
-		
-		[footerView addSubview:chooseFromMap];
-	}
-	
-	return footerView;
-}*/
-
 // Tells the table view how tall its footer should be (the footer contains the Choose from Map button)
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
 {

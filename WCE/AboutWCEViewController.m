@@ -36,6 +36,6 @@
 
 - (IBAction)goToWebsite:(id)sender
 {
-	[[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.worldcomputerexchange.org/"]];
+    [self performSegueWithIdentifier:@"pushWebView" sender:self];
 }
 @end

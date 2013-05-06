@@ -19,6 +19,7 @@
 		8C4C7B7C1735A9B000ED3E82 /* MapIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C4C7B7B1735A9B000ED3E82 /* MapIcon@2x.png */; };
 		8C4C7B801735AB8000ED3E82 /* MapIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C4C7B7F1735AB8000ED3E82 /* MapIcon.png */; };
 		8C4C7B851736D46200ED3E82 /* EvaluationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C4C7B841736D46200ED3E82 /* EvaluationViewController.m */; };
+		8C4C7B8917373C1100ED3E82 /* WCEWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C4C7B8817373C1000ED3E82 /* WCEWebViewController.m */; };
 		8C9C3AD116CC60D000F95A6B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C9C3AD016CC60D000F95A6B /* UIKit.framework */; };
 		8C9C3AD316CC60D000F95A6B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C9C3AD216CC60D000F95A6B /* Foundation.framework */; };
 		8C9C3AD516CC60D000F95A6B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C9C3AD416CC60D000F95A6B /* CoreGraphics.framework */; };
@@ -73,6 +74,8 @@
 		8C4C7B7F1735AB8000ED3E82 /* MapIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MapIcon.png; sourceTree = "<group>"; };
 		8C4C7B831736D46100ED3E82 /* EvaluationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EvaluationViewController.h; sourceTree = "<group>"; };
 		8C4C7B841736D46200ED3E82 /* EvaluationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EvaluationViewController.m; sourceTree = "<group>"; };
+		8C4C7B8717373C1000ED3E82 /* WCEWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCEWebViewController.h; sourceTree = "<group>"; };
+		8C4C7B8817373C1000ED3E82 /* WCEWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCEWebViewController.m; sourceTree = "<group>"; };
 		8C9C3ACC16CC60D000F95A6B /* WCE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WCE.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C9C3AD016CC60D000F95A6B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		8C9C3AD216CC60D000F95A6B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -361,6 +364,8 @@
 			children = (
 				D058DCD916FBD2A300132041 /* AboutWCEViewController.h */,
 				D058DCDA16FBD2A300132041 /* AboutWCEViewController.m */,
+				8C4C7B8717373C1000ED3E82 /* WCEWebViewController.h */,
+				8C4C7B8817373C1000ED3E82 /* WCEWebViewController.m */,
 			);
 			name = AboutWCE;
 			sourceTree = "<group>";
@@ -501,6 +506,7 @@
 				D0F745F41730A59300C9EC5F /* WCEContentViewController.m in Sources */,
 				D0F745F71730AB3B00C9EC5F /* ChangePassViewController.m in Sources */,
 				8C4C7B851736D46200ED3E82 /* EvaluationViewController.m in Sources */,
+				8C4C7B8917373C1100ED3E82 /* WCEWebViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
