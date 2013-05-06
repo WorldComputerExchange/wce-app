@@ -1,5 +1,4 @@
 wce-app
 =======
 
-World Computer Exchange iPad App Bundle made for Apps for Humanity
-It works
+World Computer Exchange iPhone App Bundle made for Apps for Humanity
