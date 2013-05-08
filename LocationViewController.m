@@ -155,7 +155,9 @@
         Location *curLocation = [[sharedUser savedLocations] objectAtIndex:indexPath.row];
         name =  [curLocation name];
 	}
-	cell.textLabel.text = name;
+
+    cell.textLabel.text = name;
+
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 
 	return cell;
@@ -165,7 +167,6 @@
 /**Editing Methods**/
 
 -(BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath{
-   // int idx = indexPath.row;
     return YES;
 }
 
