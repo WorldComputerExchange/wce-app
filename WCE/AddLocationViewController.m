@@ -307,8 +307,10 @@
             [[sharedUser savedLocations] replaceObjectAtIndex:savedIdx withObject:curLocation];
         }
         NSLog(@"Locations count %d", [[sharedUser savedLocations] count]);
-    
-    
+		
+		// save everything
+		[sharedUser saveAllLocations];
+		
         [self dismissViewControllerAnimated:YES completion:nil];
     }else{
         // Copied this right off a website, it just creates an alert box that tells you that the passcode you entered was wrong

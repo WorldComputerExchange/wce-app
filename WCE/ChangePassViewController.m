@@ -31,6 +31,11 @@
 	[[self view] setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"136676912132100.gif"]]];
 }
 
+- (void)viewDidAppear:(BOOL)animated
+{
+	[_passwordOld becomeFirstResponder];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

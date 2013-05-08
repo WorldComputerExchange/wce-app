@@ -61,21 +61,21 @@
                             <constraint firstItem="0d1-W7-3fl" firstAttribute="top" secondItem="8y8-ub-DWI" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="4yq-l4-tfs"/>
                             <constraint firstItem="cDu-oF-yzj" firstAttribute="leading" secondItem="dyq-9g-tJ3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="8yY-tT-p4Z"/>
                             <constraint firstItem="0d1-W7-3fl" firstAttribute="leading" secondItem="dyq-9g-tJ3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="A4j-QG-Xb9"/>
-                            <constraint firstItem="cF7-mo-bNz" firstAttribute="centerX" secondItem="cDu-oF-yzj" secondAttribute="centerX" type="default" id="A8T-p4-qbG"/>
+                            <constraint firstAttribute="trailing" secondItem="cDu-oF-yzj" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="EJI-rs-BXd"/>
                             <constraint firstItem="cF7-mo-bNz" firstAttribute="leading" secondItem="dyq-9g-tJ3" secondAttribute="leading" type="default" id="EvR-QK-3mk"/>
-                            <constraint firstItem="0d1-W7-3fl" firstAttribute="trailing" secondItem="NeO-MG-Zky" secondAttribute="trailing" type="default" id="I7Q-es-USz"/>
+                            <constraint firstAttribute="trailing" secondItem="0d1-W7-3fl" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="KpR-Nj-Kep"/>
                             <constraint firstItem="cF7-mo-bNz" firstAttribute="top" secondItem="dyq-9g-tJ3" secondAttribute="top" type="default" id="OJl-Zp-AuJ"/>
                             <constraint firstItem="8y8-ub-DWI" firstAttribute="leading" secondItem="dyq-9g-tJ3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="P3f-Zc-vTM"/>
                             <constraint firstItem="cDu-oF-yzj" firstAttribute="top" secondItem="8Kn-xW-OWv" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="dZZ-Va-bfr"/>
                             <constraint firstItem="8Kn-xW-OWv" firstAttribute="leading" secondItem="dyq-9g-tJ3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="dxm-nc-46k"/>
                             <constraint firstItem="cF7-mo-bNz" firstAttribute="trailing" secondItem="dyq-9g-tJ3" secondAttribute="trailing" type="default" id="f77-Xb-ALp"/>
                             <constraint firstItem="mnU-Gd-uYI" firstAttribute="leading" secondItem="dyq-9g-tJ3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="fWt-xI-vAt"/>
+                            <constraint firstItem="NeO-MG-Zky" firstAttribute="top" secondItem="dyq-9g-tJ3" secondAttribute="top" constant="139" id="g3F-E3-SOC"/>
                             <constraint firstItem="8y8-ub-DWI" firstAttribute="top" secondItem="NeO-MG-Zky" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="gyD-Nw-vbA"/>
-                            <constraint firstItem="NeO-MG-Zky" firstAttribute="top" secondItem="dyq-9g-tJ3" secondAttribute="top" constant="157" id="hKf-tg-Rc8"/>
-                            <constraint firstItem="8Kn-xW-OWv" firstAttribute="top" secondItem="dyq-9g-tJ3" secondAttribute="top" constant="67" id="i8q-1E-eFm"/>
-                            <constraint firstItem="cDu-oF-yzj" firstAttribute="trailing" secondItem="NeO-MG-Zky" secondAttribute="trailing" type="default" id="jqB-Sn-Ivl"/>
+                            <constraint firstAttribute="trailing" secondItem="NeO-MG-Zky" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="k97-xn-5jJ"/>
                             <constraint firstItem="mnU-Gd-uYI" firstAttribute="top" secondItem="cDu-oF-yzj" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="oi8-ad-6pX"/>
                             <constraint firstItem="NeO-MG-Zky" firstAttribute="leading" secondItem="dyq-9g-tJ3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="r1V-9U-jAZ"/>
+                            <constraint firstItem="8Kn-xW-OWv" firstAttribute="top" secondItem="dyq-9g-tJ3" secondAttribute="top" constant="49" id="umV-Qh-6JZ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="izA-PH-MMP"/>
@@ -4942,7 +4942,7 @@ WCE Fundraising: WCE raises the final 1/3 of our sourcing &amp; shipping costs f
                                     <constraint firstItem="0Wm-fx-Ndr" firstAttribute="leading" secondItem="WcU-Es-Ofq" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="C5a-PY-e4Z"/>
                                     <constraint firstItem="7yq-0B-cHN" firstAttribute="leading" secondItem="WcU-Es-Ofq" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="CAb-oT-aF5"/>
                                     <constraint firstItem="kFh-ve-PT1" firstAttribute="leading" secondItem="WcU-Es-Ofq" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="D1P-9u-NNn"/>
-                                    <constraint firstAttribute="bottom" secondItem="7mj-ey-S6c" secondAttribute="bottom" constant="-43" id="HOn-7R-JUY"/>
+                                    <constraint firstAttribute="bottom" secondItem="7mj-ey-S6c" secondAttribute="bottom" type="user" id="HOn-7R-JUY"/>
                                     <constraint firstItem="ps4-Wf-R6s" firstAttribute="top" secondItem="WcU-Es-Ofq" secondAttribute="top" constant="20" symbolic="YES" type="default" id="HfA-Uf-xlh"/>
                                     <constraint firstItem="AtG-yc-stS" firstAttribute="top" secondItem="pAC-Wd-cuw" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="RGS-xm-vQU"/>
                                     <constraint firstAttribute="trailing" secondItem="pAC-Wd-cuw" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Sfy-p5-jFC"/>
@@ -4950,7 +4950,6 @@ WCE Fundraising: WCE raises the final 1/3 of our sourcing &amp; shipping costs f
                                     <constraint firstItem="Boi-FL-eJU" firstAttribute="top" secondItem="vkb-X2-a7c" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="UMf-U6-GsT"/>
                                     <constraint firstAttribute="trailing" secondItem="7mj-ey-S6c" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="VQC-W0-bOb"/>
                                     <constraint firstItem="oGp-po-S2z" firstAttribute="top" secondItem="kFh-ve-PT1" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="WdH-Mh-t61"/>
-                                    <constraint firstItem="kFh-ve-PT1" firstAttribute="centerX" secondItem="WcU-Es-Ofq" secondAttribute="centerX" type="default" id="Wwe-l4-NlO"/>
                                     <constraint firstItem="Zfm-8O-vja" firstAttribute="top" secondItem="ps4-Wf-R6s" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="XO7-vn-f89"/>
                                     <constraint firstAttribute="trailing" secondItem="Zfm-8O-vja" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="ZYg-HP-vnY"/>
                                     <constraint firstItem="XP2-2z-49m" firstAttribute="top" secondItem="AtG-yc-stS" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="a3g-GV-Eec"/>
@@ -4961,6 +4960,7 @@ WCE Fundraising: WCE raises the final 1/3 of our sourcing &amp; shipping costs f
                                     <constraint firstItem="ps4-Wf-R6s" firstAttribute="leading" secondItem="WcU-Es-Ofq" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="gna-oX-lvz"/>
                                     <constraint firstItem="XP2-2z-49m" firstAttribute="leading" secondItem="WcU-Es-Ofq" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="jWf-og-BZy"/>
                                     <constraint firstItem="KxZ-Ur-kgp" firstAttribute="top" secondItem="XP2-2z-49m" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="m3L-02-o0N"/>
+                                    <constraint firstItem="7yq-0B-cHN" firstAttribute="centerX" secondItem="WcU-Es-Ofq" secondAttribute="centerX" type="default" id="m5q-0j-NVq"/>
                                     <constraint firstItem="7mj-ey-S6c" firstAttribute="top" secondItem="WcU-Es-Ofq" secondAttribute="top" constant="430" id="mer-f9-wBh"/>
                                     <constraint firstItem="oGp-po-S2z" firstAttribute="leading" secondItem="WcU-Es-Ofq" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="o9c-D9-fFv"/>
                                     <constraint firstItem="0Wm-fx-Ndr" firstAttribute="top" secondItem="Boi-FL-eJU" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="rqh-h0-loV"/>
@@ -5101,7 +5101,7 @@ WCE Fundraising: WCE raises the final 1/3 of our sourcing &amp; shipping costs f
                                 <constraints>
                                     <constraint firstAttribute="height" constant="2875" id="KND-sK-5sf"/>
                                 </constraints>
-                                <mutableString key="text">World Computer Exchange (WCE) is a global education and environment organization founded in 1999 to connect more youth in developing countries to opportunities, skills, and understanding via the Internet – while keeping working computers out of landfills.   With our 700 volunteers, WCE is the largest US non-profit provider of reused computers to connect youth in developing countries.  Studies show that the reuse of a computer is 25 times more carbon efficient than destroying one and re-manufacturing a new one.  Our work helps to implement the UN’s Millennium Development Goals in Education.
+                                <string key="text">World Computer Exchange (WCE) is a global education and environment organization founded in 1999 to connect more youth in developing countries to opportunities, skills, and understanding via the Internet – while keeping working computers out of landfills.   With our 700 volunteers, WCE is the largest US non-profit provider of reused computers to connect youth in developing countries.  Studies show that the reuse of a computer is 25 times more carbon efficient than destroying one and re-manufacturing a new one.  Our work helps to implement the UN’s Millennium Development Goals in Education.
 
 
 
@@ -5147,7 +5147,7 @@ Info@WorldComputerExchange.org    		                           Website: www.Worl
 		                           
 Online &amp; onsite tech volunteers &amp; reused computers connecting youth in developing countries
 		                           		                          
-</mutableString>
+</string>
                                 <color key="textColor" red="0.99215692281723022" green="0.9960784912109375" blue="0.99215692281723022" alpha="1" colorSpace="deviceRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>

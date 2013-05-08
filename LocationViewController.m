@@ -183,6 +183,9 @@
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         [[sharedUser savedLocations] removeObjectAtIndex:indexPath.row];
         [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+		
+		// save these changes
+		[sharedUser saveAllLocations];
     }
 }
 

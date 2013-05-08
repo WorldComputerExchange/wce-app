@@ -46,10 +46,46 @@ static User* _sharedUser = nil;
         self.editingLocation = [[Location alloc] init];
         self.isEditingPartner = false;
         self.editingPartner = @"";
+		
+		// retrieve saved locations from NSUserDefaults
+		NSArray *locations = [[NSUserDefaults standardUserDefaults] objectForKey:@"locations"];
+		if([locations count] > 0)
+		{
+			for(int i = 0; i < [locations count]; i++)
+			{
+				Location *loc = [[Location alloc] init];
+				NSDictionary *dict = [locations objectAtIndex:i];
+				
+				loc.name = [dict objectForKey:@"name"];
+				loc.contact = [dict objectForKey:@"contact"];
+				loc.phone = [dict objectForKey:@"phone"];
+				loc.address = [dict objectForKey:@"address"];
+				loc.city = [dict objectForKey:@"city"];
+				loc.country = [dict objectForKey:@"country"];
+				loc.language = [dict objectForKey:@"language"];
+				loc.zip = [dict objectForKey:@"zip"];
+				
+				[savedLocations addObject:loc];
+			}
+		}
     }
     return self;
 }
 
+- (void)saveAllLocations
+{
+	// save to NSUserDefaults
+	NSMutableArray *locations = [[NSMutableArray alloc] initWithCapacity:[savedLocations count]];
+	
+	for(Location *loc in savedLocations)
+	{
+		NSDictionary *location = [[NSDictionary alloc] initWithObjectsAndKeys:[loc name], @"name", [loc contact], @"contact", [loc phone], @"phone", [loc address], @"address", [loc city], @"city", [loc country], @"country", [loc language], @"language", [loc zip], @"zip", nil];
+		[locations addObject:location];
+	}
+	
+	[[NSUserDefaults standardUserDefaults] setObject:locations forKey:@"locations"];
+	[[NSUserDefaults standardUserDefaults] synchronize];
+}
 
 
 @end

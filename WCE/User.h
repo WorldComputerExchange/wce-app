@@ -20,4 +20,6 @@
 @property (nonatomic, retain) NSString *sharedPartner;
 
 + (User *)sharedUser;
+- (void)saveAllLocations;
+
 @end
