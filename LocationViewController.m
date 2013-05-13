@@ -121,6 +121,13 @@
         NSString *selectedName =  [selectedLocation name];
         
         [sharedLocation setName:selectedName];
+        [sharedLocation setContact:[selectedLocation contact]];
+        [sharedLocation setAddress: [selectedLocation address]];
+        [sharedLocation setPhone:[selectedLocation phone]];
+        [sharedLocation setCity: [selectedLocation city]];
+        [sharedLocation setCountry:[selectedLocation country]];
+        [sharedLocation setZip: [selectedLocation zip]];
+        [sharedLocation setLanguage: [selectedLocation language]];
         
         NSLog(@"%@", selectedName);
         NSLog(@"%@", [sharedLocation name]);

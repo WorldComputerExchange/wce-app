@@ -17,6 +17,7 @@
 		8C38594D173AC558003A323B /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C38594C173AC558003A323B /* libsqlite3.0.dylib */; };
 		8C385951173AF07C003A323B /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C385950173AF07C003A323B /* Icon@2x.png */; };
 		8C385953173AF15C003A323B /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C385952173AF15C003A323B /* Icon.png */; };
+		8C38595617417FF5003A323B /* MainMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C38595517417FF5003A323B /* MainMenuViewController.m */; };
 		8C4C7B741735A6CD00ED3E82 /* LocationListIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C4C7B731735A6CD00ED3E82 /* LocationListIcon.png */; };
 		8C4C7B761735A6D400ED3E82 /* LocationListIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C4C7B751735A6D400ED3E82 /* LocationListIcon@2x.png */; };
 		8C4C7B7C1735A9B000ED3E82 /* MapIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C4C7B7B1735A9B000ED3E82 /* MapIcon@2x.png */; };
@@ -74,6 +75,8 @@
 		8C38594C173AC558003A323B /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		8C385950173AF07C003A323B /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		8C385952173AF15C003A323B /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		8C38595417417FF5003A323B /* MainMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenuViewController.h; sourceTree = "<group>"; };
+		8C38595517417FF5003A323B /* MainMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenuViewController.m; sourceTree = "<group>"; };
 		8C4C7B731735A6CD00ED3E82 /* LocationListIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LocationListIcon.png; sourceTree = "<group>"; };
 		8C4C7B751735A6D400ED3E82 /* LocationListIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LocationListIcon@2x.png"; sourceTree = "<group>"; };
 		8C4C7B7B1735A9B000ED3E82 /* MapIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MapIcon@2x.png"; sourceTree = "<group>"; };
@@ -218,6 +221,15 @@
 			name = Objects;
 			sourceTree = "<group>";
 		};
+		8C38595717417FFD003A323B /* MainMenu */ = {
+			isa = PBXGroup;
+			children = (
+				8C38595417417FF5003A323B /* MainMenuViewController.h */,
+				8C38595517417FF5003A323B /* MainMenuViewController.m */,
+			);
+			name = MainMenu;
+			sourceTree = "<group>";
+		};
 		8C4C7B721735A69C00ED3E82 /* Tab Bar Icons */ = {
 			isa = PBXGroup;
 			children = (
@@ -334,6 +346,7 @@
 		8CB0441E16DC4D420000AD0F /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				8C38595717417FFD003A323B /* MainMenu */,
 				D0F745F11730A57C00C9EC5F /* Content */,
 				D0F334B1172AC374006BACED /* Tab Bar */,
 				8C1B2972172A11BE00D359D4 /* Forms */,
@@ -519,6 +532,7 @@
 				D0F745F71730AB3B00C9EC5F /* ChangePassViewController.m in Sources */,
 				8C4C7B851736D46200ED3E82 /* EvaluationViewController.m in Sources */,
 				8C4C7B8917373C1100ED3E82 /* WCEWebViewController.m in Sources */,
+				8C38595617417FF5003A323B /* MainMenuViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
