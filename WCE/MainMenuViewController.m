@@ -3,6 +3,7 @@
 //  WCE
 //
 //
+/**Info, Forms, Phrases, Misc Menu**/
 
 #import "MainMenuViewController.h"
 
@@ -50,6 +51,8 @@
     // Return the number of rows in the section.
     return 4;
 }
+
+/**Set up the table**/
 - (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
 	//initialize a cell
@@ -72,6 +75,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    /*Phrases selected, get current language and display corresponding phrases**/
     if(indexPath.row == 2){
         NSLog(@"Current Language is : %@", sharedLocation.language);
         if ([sharedLocation.language isEqualToString:@"Arabic"]){

@@ -3,8 +3,12 @@
 //  WCE
 //
 //  Created by Peter on 4/30/13.
-//  Copyright (c) 2013  Brian Beckerle. All rights reserved.
 //
+/**Content Screen displaying WCE Content Graphic
+ Choose Location
+    >Home
+        >Info
+            >Content     **/
 
 #import "WCEContentViewController.h"
 

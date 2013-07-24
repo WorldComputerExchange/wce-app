@@ -73,8 +73,8 @@
 }
 
 - (IBAction)pushLocationView:(id)sender
-{	
-	// "self.passcodeField.text" refers to the text currently entered in the passcode field (which is an outlet for this class, WCELoginViewController)
+{
+    
     if ([self.passcodeField.text isEqualToString:_password]) // We compare it to the string "12345"
     {
         self.passcodeField.text = @""; // Erase the passcode entered in the text field
@@ -82,11 +82,7 @@
 		// Remeber that the user has logged in
 		[[NSUserDefaults standardUserDefaults] setBool:TRUE forKey:@"loggedIn"];
 		[[NSUserDefaults standardUserDefaults] synchronize];
-        
-        // Tell this view controller (WCELoginViewController) to do a "segue" transition to the next page of the app. The way you set this up is in
-        // the storyboard. You drag a line (by holding the control key) from the view controller that you're starting from, to the view controller that you want
-        // to "segue" to. You know, I'll just make a screen capture video that'll be easier to show you with.
-        //[self performSegueWithIdentifier:@"pushLocation" sender:self];
+
 		
 		[_delegate willDismissPresentedViewController];
 		[self dismissViewControllerAnimated:YES completion:nil];

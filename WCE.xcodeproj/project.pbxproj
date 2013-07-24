@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8C03242316DC2AB30089CB81 /* SaveLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C03242216DC2AB30089CB81 /* SaveLocationViewController.m */; };
 		8C03243416DC41850089CB81 /* AddLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C03243316DC41850089CB81 /* AddLocationViewController.m */; };
 		8C1B2976172A131600D359D4 /* ImplementationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C1B2975172A131600D359D4 /* ImplementationViewController.m */; };
 		8C1B2979172A187700D359D4 /* FormsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C1B2978172A187700D359D4 /* FormsViewController.m */; };
@@ -58,8 +57,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		8C03242116DC2AB30089CB81 /* SaveLocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SaveLocationViewController.h; sourceTree = "<group>"; };
-		8C03242216DC2AB30089CB81 /* SaveLocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SaveLocationViewController.m; sourceTree = "<group>"; };
 		8C03243216DC41850089CB81 /* AddLocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddLocationViewController.h; sourceTree = "<group>"; };
 		8C03243316DC41850089CB81 /* AddLocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddLocationViewController.m; sourceTree = "<group>"; };
 		8C1B2974172A131600D359D4 /* ImplementationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImplementationViewController.h; sourceTree = "<group>"; };
@@ -150,15 +147,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		8C03241F16DC2A7A0089CB81 /* SaveLocation */ = {
-			isa = PBXGroup;
-			children = (
-				8C03242116DC2AB30089CB81 /* SaveLocationViewController.h */,
-				8C03242216DC2AB30089CB81 /* SaveLocationViewController.m */,
-			);
-			name = SaveLocation;
-			sourceTree = "<group>";
-		};
 		8C03243516DC424D0089CB81 /* AddLocation */ = {
 			isa = PBXGroup;
 			children = (
@@ -356,7 +344,6 @@
 				8C27586F16CC829A00DEDAC8 /* Location */,
 				8CB0441516DC476E0000AD0F /* LocationMap */,
 				8C03243516DC424D0089CB81 /* AddLocation */,
-				8C03241F16DC2A7A0089CB81 /* SaveLocation */,
 				8CD27FF41728355100973A04 /* Partner */,
 				FA98E2981726063E005EC158 /* AddPartner */,
 				8C27587016CC82A500DEDAC8 /* Login */,
@@ -514,7 +501,6 @@
 				8C9C3AE116CC60D000F95A6B /* WCEAppDelegate.m in Sources */,
 				8C27586B16CC820E00DEDAC8 /* LoginViewController.m in Sources */,
 				8C27586E16CC828F00DEDAC8 /* LocationViewController.m in Sources */,
-				8C03242316DC2AB30089CB81 /* SaveLocationViewController.m in Sources */,
 				8C03243416DC41850089CB81 /* AddLocationViewController.m in Sources */,
 				8CB0441916DC47910000AD0F /* LocationMapViewController.m in Sources */,
 				9ED3259D16DD53FF00EA38E0 /* AddressAnnotation.m in Sources */,

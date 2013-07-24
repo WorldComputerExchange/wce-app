@@ -3,7 +3,6 @@
 //  WCE
 //
 //  Created by Peter on 4/30/13.
-//  Copyright (c) 2013  Brian Beckerle. All rights reserved.
 //
 
 #import "ChangePassViewController.h"
@@ -28,7 +27,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
 	
-	[[self view] setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"136676912132100.gif"]]];
+	[[self view] setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"background.gif"]]];
 }
 
 - (void)viewDidAppear:(BOOL)animated

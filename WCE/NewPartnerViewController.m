@@ -41,7 +41,6 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-   // [saveButton setAction:@selector(saveChanges:)];
     
     sharedUser = [User sharedUser];
     
