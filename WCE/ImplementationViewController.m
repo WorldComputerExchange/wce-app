@@ -16,7 +16,7 @@
 
 
 
-@synthesize iqq1, iqq2, iqq3, iqq4, iqq5, iqq6;
+@synthesize iqq1, iqq2, iqq3, iqq4, iqq5, iqq6, iqq7, iqq8, iqq9, iqq10, iqq11, iqq12, iqq13, iqq14, iqq15, iqq16, iqq17, iqq18, iqq19, iqq20, iqq21, iqq22, iqq23, iqq24, iqq25;
 
 
 
@@ -36,6 +36,27 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
     [iqq4 resignFirstResponder];
     [iqq5 resignFirstResponder];
     [iqq6 resignFirstResponder];
+    [iqq7 resignFirstResponder];
+    [iqq8 resignFirstResponder];
+    [iqq9 resignFirstResponder];
+    [iqq10 resignFirstResponder];
+    [iqq11 resignFirstResponder];
+    [iqq12 resignFirstResponder];
+    [iqq13 resignFirstResponder];
+    [iqq14 resignFirstResponder];
+    [iqq15 resignFirstResponder];
+    [iqq16 resignFirstResponder];
+    [iqq17 resignFirstResponder];
+    [iqq18 resignFirstResponder];
+    [iqq19 resignFirstResponder];
+    [iqq20 resignFirstResponder];
+    [iqq21 resignFirstResponder];
+    [iqq22 resignFirstResponder];
+    [iqq23 resignFirstResponder];
+    [iqq24 resignFirstResponder];
+    [iqq25 resignFirstResponder];
+
+
     
 }
 
@@ -157,10 +178,16 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
     [UIView commitAnimations];
 }
 
-//dismisses the keyboard when the return/done button is pressed.
+//dismisses the keyboard when the return/done button is pressed for TextFields.
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
     [textField resignFirstResponder];
+    return YES;
+}
+//dismisses the keyboard when the return/done button is pressed for TextViews.
+- (BOOL)textViewShouldReturn:(UITextView *)textView
+{
+    [textView resignFirstResponder];
     return YES;
 }
 
@@ -243,12 +270,7 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
     [UIView commitAnimations];
 }
 
-//dismisses the keyboard when the return/done button is pressed.
-- (BOOL)textViewShouldReturn:(UITextView *)textView
-{
-    [textView resignFirstResponder];
-    return YES;
-}
+
 
 
 
