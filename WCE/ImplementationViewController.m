@@ -11,7 +11,7 @@
 @end
 
 @implementation ImplementationViewController
-@synthesize scrollView;
+//@synthesize scrollView;
 
 
 
@@ -54,10 +54,7 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
     [iqq22 resignFirstResponder];
     [iqq23 resignFirstResponder];
     [iqq24 resignFirstResponder];
-    [iqq25 resignFirstResponder];
-
-
-    
+    [iqq25 resignFirstResponder];    
 }
 
 

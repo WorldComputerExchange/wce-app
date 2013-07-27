@@ -1009,6 +1009,9 @@ Et toi?/ Et vous? (polite)
                                     <segment title="Yes"/>
                                     <segment title="No"/>
                                 </segments>
+                                <connections>
+                                    <action selector="textfieldReturn:" destination="7NW-1i-Xqm" eventType="editingDidEndOnExit" id="KVB-o6-6m4"/>
+                                </connections>
                             </segmentedControl>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="2. Computer order (see cost list):  Please enter the number of computers on the lines provided: " lineBreakMode="wordWrap" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="281" translatesAutoresizingMaskIntoConstraints="NO" id="nKG-k2-DDw">
                                 <constraints>
@@ -1025,7 +1028,9 @@ Et toi?/ Et vous? (polite)
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
                                 <connections>
+                                    <action selector="backgroundTouched:" destination="7NW-1i-Xqm" eventType="touchDown" id="4D0-IA-GTK"/>
                                     <action selector="textfieldReturn:" destination="7NW-1i-Xqm" eventType="editingDidEndOnExit" id="p9t-kc-hm5"/>
+                                    <outlet property="delegate" destination="7NW-1i-Xqm" id="uT5-LM-tVY"/>
                                 </connections>
                             </textField>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Pentium 4s &amp; 5s" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eXP-tK-yUz">
@@ -1040,7 +1045,9 @@ Et toi?/ Et vous? (polite)
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
                                 <connections>
+                                    <action selector="backgroundTouched:" destination="7NW-1i-Xqm" eventType="touchDown" id="08D-2K-xrv"/>
                                     <action selector="textfieldReturn:" destination="7NW-1i-Xqm" eventType="editingDidEndOnExit" id="8hy-sO-gPk"/>
+                                    <outlet property="delegate" destination="7NW-1i-Xqm" id="TkC-aw-R4b"/>
                                 </connections>
                             </textField>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Pentium 3s with 20% P4s" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kqg-9k-bBv">
@@ -1055,7 +1062,9 @@ Et toi?/ Et vous? (polite)
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
                                 <connections>
+                                    <action selector="backgroundTouched:" destination="7NW-1i-Xqm" eventType="touchDown" id="iQY-Fx-NqN"/>
                                     <action selector="textfieldReturn:" destination="7NW-1i-Xqm" eventType="editingDidEndOnExit" id="8uv-WW-M3H"/>
+                                    <outlet property="delegate" destination="7NW-1i-Xqm" id="z0f-pA-4jJ"/>
                                 </connections>
                             </textField>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Pentium 2s " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kzD-Nf-tdO">
@@ -1079,6 +1088,9 @@ Et toi?/ Et vous? (polite)
                                     <segment title="Yes"/>
                                     <segment title="No"/>
                                 </segments>
+                                <connections>
+                                    <action selector="textfieldReturn:" destination="7NW-1i-Xqm" eventType="editingDidEndOnExit" id="0RX-nu-ryC"/>
+                                </connections>
                             </segmentedControl>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="4. Are you willing to pay extra to get laptops?" lineBreakMode="wordWrap" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="281" translatesAutoresizingMaskIntoConstraints="NO" id="rV9-lB-bnz">
                                 <constraints>
@@ -1093,6 +1105,9 @@ Et toi?/ Et vous? (polite)
                                     <segment title="Yes"/>
                                     <segment title="No"/>
                                 </segments>
+                                <connections>
+                                    <action selector="textfieldReturn:" destination="7NW-1i-Xqm" eventType="editingDidEndOnExit" id="uuG-R1-9Tq"/>
+                                </connections>
                             </segmentedControl>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="How many?" lineBreakMode="wordWrap" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="281" translatesAutoresizingMaskIntoConstraints="NO" id="ksj-K9-aom">
                                 <constraints>
@@ -1106,7 +1121,9 @@ Et toi?/ Et vous? (polite)
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
                                 <connections>
+                                    <action selector="backgroundTouched:" destination="7NW-1i-Xqm" eventType="touchDown" id="Im0-OQ-rcM"/>
                                     <action selector="textfieldReturn:" destination="7NW-1i-Xqm" eventType="editingDidEndOnExit" id="Oxt-vf-kzU"/>
+                                    <outlet property="delegate" destination="7NW-1i-Xqm" id="bHF-jw-M7t"/>
                                 </connections>
                             </textField>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Pentium 4s" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kXz-hy-CUU">
@@ -1122,7 +1139,9 @@ Et toi?/ Et vous? (polite)
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
                                 <connections>
+                                    <action selector="backgroundTouched:" destination="7NW-1i-Xqm" eventType="touchDown" id="GYB-9d-BQc"/>
                                     <action selector="textfieldReturn:" destination="7NW-1i-Xqm" eventType="editingDidEndOnExit" id="ZyL-Yr-tDz"/>
+                                    <outlet property="delegate" destination="7NW-1i-Xqm" id="63u-hn-lCD"/>
                                 </connections>
                             </textField>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Pentium 3s" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bvd-tE-Pb2">
@@ -1143,6 +1162,9 @@ Et toi?/ Et vous? (polite)
                                     <segment title="Yes"/>
                                     <segment title="No"/>
                                 </segments>
+                                <connections>
+                                    <action selector="textfieldReturn:" destination="7NW-1i-Xqm" eventType="editingDidEndOnExit" id="3mo-wx-pCk"/>
+                                </connections>
                             </segmentedControl>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="How many?" lineBreakMode="wordWrap" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="281" translatesAutoresizingMaskIntoConstraints="NO" id="ZHQ-vm-5qG">
                                 <constraints>
@@ -1156,7 +1178,9 @@ Et toi?/ Et vous? (polite)
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
                                 <connections>
+                                    <action selector="backgroundTouched:" destination="7NW-1i-Xqm" eventType="touchDown" id="B3L-bu-srP"/>
                                     <action selector="textfieldReturn:" destination="7NW-1i-Xqm" eventType="editingDidEndOnExit" id="H9h-da-oRx"/>
+                                    <outlet property="delegate" destination="7NW-1i-Xqm" id="1jQ-0h-zpn"/>
                                 </connections>
                             </textField>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="LCD 15-17” flat screen monitors" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Rx-OR-gD3">
@@ -1171,7 +1195,9 @@ Et toi?/ Et vous? (polite)
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
                                 <connections>
+                                    <action selector="backgroundTouched:" destination="7NW-1i-Xqm" eventType="touchDown" id="Sww-vD-aAc"/>
                                     <action selector="textfieldReturn:" destination="7NW-1i-Xqm" eventType="editingDidEndOnExit" id="Tia-Vt-nAE"/>
+                                    <outlet property="delegate" destination="7NW-1i-Xqm" id="zpl-Eu-kyC"/>
                                 </connections>
                             </textField>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="CRT 15-19” color monitors " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="heS-O0-aTo">
@@ -1191,7 +1217,9 @@ Et toi?/ Et vous? (polite)
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
                                 <connections>
+                                    <action selector="backgroundTouched:" destination="7NW-1i-Xqm" eventType="touchDown" id="0U8-2w-POD"/>
                                     <action selector="textfieldReturn:" destination="7NW-1i-Xqm" eventType="editingDidEndOnExit" id="MRo-Qj-EST"/>
+                                    <outlet property="delegate" destination="7NW-1i-Xqm" id="eg2-3q-DuA"/>
                                 </connections>
                             </textField>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Dot Matrix" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Xz-TF-y2V">
@@ -1206,7 +1234,9 @@ Et toi?/ Et vous? (polite)
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
                                 <connections>
+                                    <action selector="backgroundTouched:" destination="7NW-1i-Xqm" eventType="touchDown" id="9fU-G1-4Oo"/>
                                     <action selector="textfieldReturn:" destination="7NW-1i-Xqm" eventType="editingDidEndOnExit" id="QjF-fH-XSb"/>
+                                    <outlet property="delegate" destination="7NW-1i-Xqm" id="UOw-Gu-Eiv"/>
                                 </connections>
                             </textField>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Ink Jet" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J8g-FV-gzE">
@@ -1221,7 +1251,9 @@ Et toi?/ Et vous? (polite)
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
                                 <connections>
+                                    <action selector="backgroundTouched:" destination="7NW-1i-Xqm" eventType="touchDown" id="oBg-Wo-z4l"/>
                                     <action selector="textfieldReturn:" destination="7NW-1i-Xqm" eventType="editingDidEndOnExit" id="xEf-Kj-zXv"/>
+                                    <outlet property="delegate" destination="7NW-1i-Xqm" id="l9N-Qx-Dzc"/>
                                 </connections>
                             </textField>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Laser" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xgF-oc-r2g">
@@ -1236,7 +1268,9 @@ Et toi?/ Et vous? (polite)
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
                                 <connections>
+                                    <action selector="backgroundTouched:" destination="7NW-1i-Xqm" eventType="touchDown" id="0o5-JW-AN3"/>
                                     <action selector="textfieldReturn:" destination="7NW-1i-Xqm" eventType="editingDidEndOnExit" id="i2p-fl-EuY"/>
+                                    <outlet property="delegate" destination="7NW-1i-Xqm" id="QRO-tz-OCg"/>
                                 </connections>
                             </textField>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Printer/Copier (if available)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b2E-zu-CIp">
@@ -1261,6 +1295,9 @@ Et toi?/ Et vous? (polite)
                                     <segment title="Yes"/>
                                     <segment title="No"/>
                                 </segments>
+                                <connections>
+                                    <action selector="textfieldReturn:" destination="7NW-1i-Xqm" eventType="editingDidEndOnExit" id="dJS-yE-X4H"/>
+                                </connections>
                             </segmentedControl>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="281" translatesAutoresizingMaskIntoConstraints="NO" id="sCl-e5-AYf">
                                 <constraints>
@@ -1276,6 +1313,9 @@ Et toi?/ Et vous? (polite)
                                     <segment title="Yes"/>
                                     <segment title="No"/>
                                 </segments>
+                                <connections>
+                                    <action selector="textfieldReturn:" destination="7NW-1i-Xqm" eventType="editingDidEndOnExit" id="X9b-Xc-MQ7"/>
+                                </connections>
                             </segmentedControl>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="281" translatesAutoresizingMaskIntoConstraints="NO" id="aYY-VP-6vB">
                                 <string key="text">8. Language in which you would like WCE to install the above content:  Please note that we usually ship English keyboards. (we can send directions for switching them over)</string>
@@ -1290,7 +1330,9 @@ Et toi?/ Et vous? (polite)
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
+                                    <action selector="backgroundTouched:" destination="7NW-1i-Xqm" eventType="touchDown" id="DqJ-hf-Qye"/>
                                     <action selector="textfieldReturn:" destination="7NW-1i-Xqm" eventType="editingDidEndOnExit" id="hgM-04-Kso"/>
+                                    <outlet property="delegate" destination="7NW-1i-Xqm" id="99f-i8-Gie"/>
                                 </connections>
                             </textField>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="9. Are you willing to pay WCE for online &amp; onsite iEARN teacher training? " lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="264" translatesAutoresizingMaskIntoConstraints="NO" id="E40-TK-C59">
@@ -1303,6 +1345,9 @@ Et toi?/ Et vous? (polite)
                                     <segment title="Yes"/>
                                     <segment title="No"/>
                                 </segments>
+                                <connections>
+                                    <action selector="textfieldReturn:" destination="7NW-1i-Xqm" eventType="editingDidEndOnExit" id="oIG-lz-osI"/>
+                                </connections>
                             </segmentedControl>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="wordWrap" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="267" translatesAutoresizingMaskIntoConstraints="NO" id="S7t-6y-bd8">
                                 <constraints>
@@ -1318,6 +1363,9 @@ Et toi?/ Et vous? (polite)
                                     <segment title="Yes"/>
                                     <segment title="No"/>
                                 </segments>
+                                <connections>
+                                    <action selector="textfieldReturn:" destination="7NW-1i-Xqm" eventType="editingDidEndOnExit" id="baG-6k-Sj0"/>
+                                </connections>
                             </segmentedControl>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="264" translatesAutoresizingMaskIntoConstraints="NO" id="pG8-Pa-S4F">
                                 <string key="text">11. Are you willing to pay WCE $2,000 to deliver a 4 Terabyte copy of the 12 million document university-level eGranary digital library (English only) in a server?</string>
@@ -1330,6 +1378,9 @@ Et toi?/ Et vous? (polite)
                                     <segment title="Yes"/>
                                     <segment title="No"/>
                                 </segments>
+                                <connections>
+                                    <action selector="textfieldReturn:" destination="7NW-1i-Xqm" eventType="editingDidEndOnExit" id="1g6-Vp-K9V"/>
+                                </connections>
                             </segmentedControl>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="wordWrap" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="261" translatesAutoresizingMaskIntoConstraints="NO" id="BwS-gK-9CV">
                                 <constraints>
@@ -1345,6 +1396,9 @@ Et toi?/ Et vous? (polite)
                                     <segment title="Yes"/>
                                     <segment title="No"/>
                                 </segments>
+                                <connections>
+                                    <action selector="textfieldReturn:" destination="7NW-1i-Xqm" eventType="editingDidEndOnExit" id="zUz-gS-900"/>
+                                </connections>
                             </segmentedControl>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="13. Are you interested in having a small team of our technology and teacher training eCorps volunteers visit you?" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="261" translatesAutoresizingMaskIntoConstraints="NO" id="tZm-i9-kcd">
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -1356,6 +1410,9 @@ Et toi?/ Et vous? (polite)
                                     <segment title="Yes"/>
                                     <segment title="No"/>
                                 </segments>
+                                <connections>
+                                    <action selector="textfieldReturn:" destination="7NW-1i-Xqm" eventType="editingDidEndOnExit" id="oaZ-1H-80P"/>
+                                </connections>
                             </segmentedControl>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="What can you give in exchange for their visit?  " lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="261" translatesAutoresizingMaskIntoConstraints="NO" id="BrG-ik-OmY">
                                 <constraints>
@@ -1372,6 +1429,9 @@ Et toi?/ Et vous? (polite)
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <connections>
+                                    <outlet property="delegate" destination="7NW-1i-Xqm" id="Xen-Ab-wpF"/>
+                                </connections>
                             </textView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="14. Should we tell you about solar lights and midwife kits and other items?" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="264" translatesAutoresizingMaskIntoConstraints="NO" id="MsK-uf-gUh">
                                 <constraints>
@@ -1568,6 +1628,33 @@ Et toi?/ Et vous? (polite)
                         <barButtonItem key="backBarButtonItem" title="Back" id="B2W-uQ-5C6"/>
                     </navigationItem>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="ofq1" destination="MER-e5-PZF" id="aSN-ZC-TVH"/>
+                        <outlet property="ofq10" destination="nrS-e0-pZZ" id="2Pz-nK-dMG"/>
+                        <outlet property="ofq11" destination="bf2-vp-elm" id="qTr-PO-eOW"/>
+                        <outlet property="ofq12" destination="Pzg-lZ-3tR" id="174-yC-CVL"/>
+                        <outlet property="ofq13a" destination="t5Y-vT-IWc" id="B5F-Lc-gcd"/>
+                        <outlet property="ofq13b" destination="Q3T-uJ-kK1" id="PiT-NW-aXn"/>
+                        <outlet property="ofq14" destination="bcz-eV-J66" id="fsc-42-rcK"/>
+                        <outlet property="ofq2a" destination="8w0-ZE-8zp" id="gae-Vj-CKS"/>
+                        <outlet property="ofq2b" destination="XOu-u3-RWo" id="Xg5-FH-dJN"/>
+                        <outlet property="ofq2c" destination="2Un-Fv-6eR" id="aK4-qO-Q8x"/>
+                        <outlet property="ofq3" destination="gvI-bS-VV3" id="tLM-r4-Qla"/>
+                        <outlet property="ofq4a" destination="COQ-wG-UnS" id="A5N-sN-9Gw"/>
+                        <outlet property="ofq4b" destination="hQj-JO-i8K" id="LLg-yA-WKH"/>
+                        <outlet property="ofq4c" destination="rJN-he-ZzN" id="p21-1j-TZ4"/>
+                        <outlet property="ofq5a" destination="g0Y-04-tSo" id="9sv-Pv-tav"/>
+                        <outlet property="ofq5b" destination="U2h-eO-Hib" id="L40-tl-DHq"/>
+                        <outlet property="ofq5c" destination="2vz-fs-Tb8" id="hDq-rE-AIb"/>
+                        <outlet property="ofq6a" destination="zqr-2J-Abs" id="oad-rX-C6Y"/>
+                        <outlet property="ofq6b" destination="sar-uH-2mo" id="9Ey-zW-B7u"/>
+                        <outlet property="ofq6c" destination="U8A-1J-26N" id="zJO-BB-p7K"/>
+                        <outlet property="ofq6d" destination="yxL-du-Bnb" id="Nxz-Nw-nSV"/>
+                        <outlet property="ofq7a" destination="LAc-2i-YX3" id="3pM-yB-dmD"/>
+                        <outlet property="ofq7b" destination="3ql-O4-Y0O" id="sL5-5U-tFV"/>
+                        <outlet property="ofq8" destination="i71-PI-egY" id="OKF-wD-W3K"/>
+                        <outlet property="ofq9" destination="lju-6s-PGe" id="bIx-Ed-q6G"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HCf-Ow-YKa" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="sX3-8D-Kd0">
@@ -5200,196 +5287,6 @@ Cg
         <image name="button-2.png" width="217" height="40"/>
         <image name="button-3.png" width="173" height="40"/>
     </resources>
-    <classes>
-        <class className="AboutWCEViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AboutWCEViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="goToWebsite:"/>
-            </relationships>
-        </class>
-        <class className="AddLocationViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AddLocationViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="backgroundTouched:"/>
-                <relationship kind="action" name="cancelChanges:"/>
-                <relationship kind="action" name="saveChanges:"/>
-                <relationship kind="action" name="textfieldReturn:"/>
-                <relationship kind="outlet" name="address" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="city" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="contact" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="dropDownTableView" candidateClass="UITableView"/>
-                <relationship kind="outlet" name="location" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="phone" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
-                <relationship kind="outlet" name="zip" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="ChangePassViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ChangePassViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="cancelChangePassword:"/>
-                <relationship kind="action" name="saveNewPassword:"/>
-                <relationship kind="outlet" name="cancelButton" candidateClass="UIBarButtonItem"/>
-                <relationship kind="outlet" name="passwordNewOne" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="passwordNewTwo" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="passwordOld" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="saveButton" candidateClass="UIBarButtonItem"/>
-            </relationships>
-        </class>
-        <class className="CoverSheetViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/CoverSheetViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="backgroundTouched:"/>
-                <relationship kind="action" name="textfieldReturn:"/>
-                <relationship kind="outlet" name="locationTableView" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-        <class className="EvaluationViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/EvaluationViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="backgroundTouched:"/>
-                <relationship kind="action" name="textfieldReturn:"/>
-                <relationship kind="outlet" name="efq1" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="efq10" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="efq11" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="efq12" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="efq13" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="efq14" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="efq15" candidateClass="UISegmentedControl"/>
-                <relationship kind="outlet" name="efq16" candidateClass="UISegmentedControl"/>
-                <relationship kind="outlet" name="efq17" candidateClass="UISegmentedControl"/>
-                <relationship kind="outlet" name="efq18" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="efq19" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="efq2" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="efq20" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="efq21" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="efq22" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="efq23" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="efq24" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="efq25" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="efq26" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="efq27" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="efq28" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="efq3" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="efq4" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="efq5" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="efq6" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="efq7" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="efq8" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="efq9" candidateClass="UISegmentedControl"/>
-                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
-            </relationships>
-        </class>
-        <class className="FormsViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/FormsViewController.h"/>
-        </class>
-        <class className="ImplementationViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ImplementationViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="backgroundTouched:"/>
-                <relationship kind="action" name="textfieldReturn:"/>
-                <relationship kind="action" name="textviewReturn:"/>
-                <relationship kind="outlet" name="iqq1" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="iqq10" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="iqq11" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="iqq12" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="iqq13" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="iqq14" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="iqq15" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="iqq16" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="iqq17" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="iqq18" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="iqq19" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="iqq2" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="iqq20" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="iqq21" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="iqq22" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="iqq23" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="iqq24" candidateClass="UISegmentedControl"/>
-                <relationship kind="outlet" name="iqq25" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="iqq3" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="iqq4" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="iqq5" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="iqq6" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="iqq7" candidateClass="UISegmentedControl"/>
-                <relationship kind="outlet" name="iqq8" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="iqq9" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
-            </relationships>
-        </class>
-        <class className="LocationMapViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LocationMapViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
-            </relationships>
-        </class>
-        <class className="LocationViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LocationViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="enterEditingMode:"/>
-                <relationship kind="outlet" name="editButton" candidateClass="UIBarButtonItem"/>
-                <relationship kind="outlet" name="locationTableView" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-        <class className="LoginViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LoginViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="pushLocationView:"/>
-                <relationship kind="outlet" name="passcodeField" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="MainMenuViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MainMenuViewController.h"/>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="NewPartnerViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NewPartnerViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="backgroundTouched:"/>
-                <relationship kind="action" name="cancel:"/>
-                <relationship kind="action" name="saveChanges:"/>
-                <relationship kind="action" name="textfieldReturn:"/>
-                <relationship kind="outlet" name="nameField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="saveButton" candidateClass="UIBarButtonItem"/>
-            </relationships>
-        </class>
-        <class className="OrderFormViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/OrderFormViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="textfieldReturn:"/>
-            </relationships>
-        </class>
-        <class className="PartnerViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/PartnerViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="enterEditingMode:"/>
-                <relationship kind="outlet" name="editButton" candidateClass="UIBarButtonItem"/>
-                <relationship kind="outlet" name="partnerTableView" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-        <class className="WCEContentViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/WCEContentViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
-            </relationships>
-        </class>
-        <class className="WCETabBarController" superclassName="UITabBarController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/WCETabBarController.h"/>
-            <relationships>
-                <relationship kind="action" name="editButtonClicked:"/>
-                <relationship kind="action" name="logoffButtonClicked:"/>
-                <relationship kind="outlet" name="editButton" candidateClass="UIBarButtonItem"/>
-            </relationships>
-        </class>
-        <class className="WCEWebViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/WCEWebViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
