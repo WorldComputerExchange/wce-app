@@ -2,7 +2,7 @@
 //  main.m
 //  WCE
 //
-//
+//git is annoying
 
 #import <UIKit/UIKit.h>
 
