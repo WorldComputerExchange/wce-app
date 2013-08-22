@@ -17,6 +17,8 @@
 @property (strong, nonatomic, readonly) LoginViewController *loginController;
 @property (strong, nonatomic, readonly) WCETabBarController *tabBarController;
 @property (strong, nonatomic, readonly) UINavigationController *loginNavController;
+@property (strong, nonatomic) NSString *databaseName;
+@property (strong, nonatomic) NSString *databasePath;
 
 - (void)presentLoginViewControllerAnimated:(BOOL)animated;
 

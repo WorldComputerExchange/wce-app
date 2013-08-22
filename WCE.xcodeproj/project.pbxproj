@@ -35,6 +35,8 @@
 		8C9C3AEA16CC60D000F95A6B /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C9C3AE816CC60D000F95A6B /* MainStoryboard.storyboard */; };
 		8CA9678117A2FE7B003C3B70 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CA9678017A2FE7B003C3B70 /* FMDatabase.m */; };
 		8CA9678417A2FEBE003C3B70 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CA9678317A2FEBE003C3B70 /* FMResultSet.m */; };
+		8CA9678817AB292C003C3B70 /* Wce.db in Resources */ = {isa = PBXBuildFile; fileRef = 8CA9678717AB292C003C3B70 /* Wce.db */; };
+		8CA9678B17AC4130003C3B70 /* DataAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CA9678A17AC4130003C3B70 /* DataAccess.m */; };
 		8CB0441916DC47910000AD0F /* LocationMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CB0441816DC47910000AD0F /* LocationMapViewController.m */; };
 		8CD27FEE1720BC6B00973A04 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CD27FED1720BC6B00973A04 /* User.m */; };
 		8CD27FF31728354500973A04 /* PartnerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CD27FF21728354400973A04 /* PartnerViewController.m */; };
@@ -102,6 +104,9 @@
 		8CA9678017A2FE7B003C3B70 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMDatabase.m; path = "../../../../../fmdb-master/src/FMDatabase.m"; sourceTree = "<group>"; };
 		8CA9678217A2FEBE003C3B70 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMResultSet.h; path = "../../../../../fmdb-master/src/FMResultSet.h"; sourceTree = "<group>"; };
 		8CA9678317A2FEBE003C3B70 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMResultSet.m; path = "../../../../../fmdb-master/src/FMResultSet.m"; sourceTree = "<group>"; };
+		8CA9678717AB292C003C3B70 /* Wce.db */ = {isa = PBXFileReference; lastKnownFileType = file; name = Wce.db; path = ../Wce.db; sourceTree = "<group>"; };
+		8CA9678917AC4130003C3B70 /* DataAccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataAccess.h; sourceTree = "<group>"; };
+		8CA9678A17AC4130003C3B70 /* DataAccess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataAccess.m; sourceTree = "<group>"; };
 		8CB0441716DC47910000AD0F /* LocationMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationMapViewController.h; sourceTree = "<group>"; };
 		8CB0441816DC47910000AD0F /* LocationMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationMapViewController.m; sourceTree = "<group>"; };
 		8CD27FEC1720BC6B00973A04 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
@@ -211,6 +216,8 @@
 				8C32DF4416E26BB8005AFA89 /* Location.m */,
 				8CD27FEC1720BC6B00973A04 /* User.h */,
 				8CD27FED1720BC6B00973A04 /* User.m */,
+				8CA9678917AC4130003C3B70 /* DataAccess.h */,
+				8CA9678A17AC4130003C3B70 /* DataAccess.m */,
 			);
 			name = Objects;
 			sourceTree = "<group>";
@@ -313,6 +320,7 @@
 		8C9C3AD716CC60D000F95A6B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				8CA9678717AB292C003C3B70 /* Wce.db */,
 				8C4C7B821735AD8C00ED3E82 /* Buttons */,
 				8C4C7B811735AD1600ED3E82 /* Content Files */,
 				8C4C7B721735A69C00ED3E82 /* Tab Bar Icons */,
@@ -505,6 +513,7 @@
 				8C4C7B801735AB8000ED3E82 /* MapIcon.png in Resources */,
 				8C385951173AF07C003A323B /* Icon@2x.png in Resources */,
 				8C385953173AF15C003A323B /* Icon.png in Resources */,
+				8CA9678817AB292C003C3B70 /* Wce.db in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -539,6 +548,7 @@
 				8C38595617417FF5003A323B /* MainMenuViewController.m in Sources */,
 				8CA9678117A2FE7B003C3B70 /* FMDatabase.m in Sources */,
 				8CA9678417A2FEBE003C3B70 /* FMResultSet.m in Sources */,
+				8CA9678B17AC4130003C3B70 /* DataAccess.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

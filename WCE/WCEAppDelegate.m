@@ -8,16 +8,45 @@
 #import "WCEAppDelegate.h"
 
 @implementation WCEAppDelegate
+@synthesize databaseName, databasePath;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 
 {
+    //Set the database name and path to check for a database
+    self.databaseName = @"Wce.db";
+    
+    NSArray *documentPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentDir = [documentPaths objectAtIndex:0];
+    self.databasePath = [documentDir stringByAppendingPathComponent:self.databaseName];
+    
+    //check if a database exists, if one doesn't create one
+    [self createAndCheckDatabase];
+    
+    //set the background image and navigation bar color
 	self.window.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background.gif"]];
 	[[UINavigationBar appearance] setTintColor:[UIColor colorWithRed:255./255. green:140/255. blue:0./255. alpha:1]];
 	
 	// Override point for customization after application launch.
    
     return YES;
+}
+
+/***
+ Check if a database exists for the application, if one doesn't create one
+ ***/
+-(void)createAndCheckDatabase
+{
+    BOOL success;
+    
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    success = [fileManager fileExistsAtPath:databasePath];
+    
+    if(success) return;
+    
+    NSString *databasePathFromApp = [[[NSBundle mainBundle] resourcePath]
+                                     stringByAppendingPathComponent:self.databaseName];
+    [fileManager copyItemAtPath:databasePathFromApp toPath:databasePath error:nil];
 }
 							
 - (void)applicationWillResignActive:(UIApplication *)application

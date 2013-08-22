@@ -4,10 +4,15 @@
 //
 //
 
+/**
+ Location menu where a user can add or choose a location
+ **/
+
 #import "LocationViewController.h"
 #import "Location.h"
 #import "User.h"
 #import "WCETabBarController.h"
+#import "DataAccess.h"
 
 @interface LocationViewController ()
 
@@ -40,28 +45,35 @@
     sharedUser = [User sharedUser];
 }
 
-// Called when Choose from Map button is pressed
+/**Push the Map View Screen
+   Called when Map icon in tab bar is pushed**/
 - (void)showMap
 {
 	[self performSegueWithIdentifier:@"pushMapView" sender:self];
 }
 
+
+/**Enables/Disables editing of table rows, deleting and editing locations
+ Called when edit button in nav bar is pushed**/
 -(IBAction)enterEditingMode:(id)sender{
-    if([locationTableView isEditing]){
+    
+    if([locationTableView isEditing]){ //Exit editing mode
         NSLog(@"Exited editing mode");
         [locationTableView setEditing:NO animated:YES];
 		
+        //Replace done button with edit button
 		if([sender isKindOfClass:[WCETabBarController class]])
 		{
 			WCETabBarController *tabController = (WCETabBarController *)sender;
 			[[tabController editButton] setStyle:UIBarButtonItemStylePlain];
 			[[tabController editButton] setTitle:@"Edit"];
 		}
-    }else {
+    }else { //Enter editing mode 
          NSLog(@"Entered editing mode");
         [locationTableView setEditing:YES animated:YES];
         [locationTableView setAllowsSelectionDuringEditing:YES];
 		
+        //replace edit button with done button
 		if([sender isKindOfClass:[WCETabBarController class]])
 		{
 			WCETabBarController *tabController = (WCETabBarController *)sender;
@@ -104,19 +116,17 @@
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    
-    /**set the region name to that chosen in the table**/
     int idx = indexPath.row;
     Location *selectedLocation;
     
-    if (idx >= [[sharedUser savedLocations] count]){
+    if (idx >= [[sharedUser savedLocations] count]){ //Add location row selected
         [self performSegueWithIdentifier:@"pushAddLocation" sender:self];
-    }else if  ([locationTableView isEditing]){
+    }else if  ([locationTableView isEditing]){ //location selected in editing mode
         selectedLocation = [[sharedUser savedLocations] objectAtIndex:idx];
         [sharedUser setIsEditingLocation:YES];
         [sharedUser setEditingLocation:selectedLocation];
         [self performSegueWithIdentifier:@"pushAddLocation" sender:self];
-    }else{
+    }else{ //location selected NOT in editing mode
         selectedLocation = [[sharedUser savedLocations] objectAtIndex:idx];
         NSString *selectedName =  [selectedLocation name];
         
@@ -186,14 +196,28 @@
 }
 
 
+/**
+ Delete button hit
+ remove the location from the array and database
+ **/
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     // If row is deleted, remove it from the list.
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        [[sharedUser savedLocations] removeObjectAtIndex:indexPath.row];
+        Location *curLocation = [[sharedUser savedLocations] objectAtIndex:indexPath.row];
+        
+        DataAccess *db = [[DataAccess alloc] init];
+        
+        BOOL success = [db deleteLocation:curLocation]; //delete from database
+        
+        if(!success){
+            NSLog(@"Location %@ could not be deleted from the database", curLocation.name);
+        }else{
+            NSLog(@"Location %@ successfully deleted from the database", curLocation.name);
+        }
+        
+        [[sharedUser savedLocations] removeObjectAtIndex:indexPath.row]; //remove from User array
+        
         [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
-		
-		// save these changes
-		[sharedUser saveAllLocations];
     }
 }
 

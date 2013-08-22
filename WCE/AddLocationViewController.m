@@ -7,6 +7,7 @@
 #import "AddLocationViewController.h"
 #import "User.h"
 #import "Location.h"
+#import "DataAccess.h"
 
 @interface AddLocationViewController ()
 
@@ -47,14 +48,12 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
-	[[self view] setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"136676912132100.gif"]]];
+	[[self view] setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"background.gif"]]];
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
-    
     
     dataArray = [[NSArray alloc] initWithObjects:@"Country", @"Language", nil];
     
@@ -67,7 +66,7 @@
 	UIBarButtonItem *saveButton = [[UIBarButtonItem alloc] initWithTitle:@"Save"
 																   style:UIBarButtonItemStyleDone
 																  target:self
-																  action:@selector(saveInfo)];
+																  action:@selector(saveChanges)];
 	[[self navigationItem] setRightBarButtonItem:saveButton];
 	
 	// Listen for keyboard notifications
@@ -141,12 +140,6 @@
     [dropDownTableView reloadData];
     [actionSheet dismissWithClickedButtonIndex:0 animated:YES];
 }
-
-- (IBAction)saveInfo
-{
-	NSLog(@"saving!!!");
-}
-
 
 /**TableView methods**/
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -223,18 +216,7 @@
 }
 
 - (IBAction)cancelChanges:(id)sender
-{
-	///// Here's both a UIAlertView and a UIActionSheet--I don't know what you might think looks better so both of them are here to try out
-	
-	//UIAlertView *cancelConfirmation = [[UIAlertView alloc] initWithTitle:@"Discard changes?"
-															//	 message:@"The changes you made here won't be saved. Do you want to continue?"
-																//delegate:self
-													//   cancelButtonTitle:@"Cancel"
-													  // otherButtonTitles:@"Discard", nil];
-	
-	//[cancelConfirmation show];
-	
-	
+{	
 	UIActionSheet *cancelConfirmation = [[UIActionSheet alloc] initWithTitle:@"Are you sure you want to discard the changes you've made to this location?"
 																	delegate:self
 														   cancelButtonTitle:@"Cancel"
@@ -259,6 +241,7 @@
         [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+//Call method to save new location
 - (IBAction)saveChanges:(id)sender
 {
 	[self saveNewLocation];
@@ -289,6 +272,8 @@
         /**check if a location with this name exists already and replace it if it does**/
         int savedIdx;
         BOOL replaced = false;
+        
+        NSInteger savedLocationId; //if this location exists get its locationId for updating
     
         NSMutableArray *savedLocations = [sharedUser savedLocations];
         for (int idx = 0; idx < [savedLocations count]; idx++){
@@ -297,23 +282,58 @@
                 [cur.name isEqualToString: [[sharedUser editingLocation] name]]){
                 replaced = true;
                 savedIdx = idx;
+                savedLocationId = cur.locationId;
             }
-            // NSLog(@"locations count %d", [[sharedUser savedLocations] count]);
             NSLog(@"index %d", idx);
         }
-        if (!replaced){
+        
+        //create dataAccess object
+        DataAccess *db = [[DataAccess alloc] init];
+        
+        NSInteger curLocationId;
+        
+        if (!replaced){ //location not found, add the location
+            //Save to database
+            //remove redundancy once this is working
+            
+            BOOL success = [db insertLocation:curLocation];
+            
+            if(success){
+                NSLog(@"Location %@ successfully added to database.", curLocation.name);
+                //get the location id of the added location to add to the array
+                curLocationId = [[db getLocationForName:curLocation.name] locationId];
+                curLocation.locationId = curLocationId;
+            }else{
+                NSLog(@"Adding location %@ failed", curLocation.name);
+            }
             [[sharedUser savedLocations] addObject:curLocation];
-        }else{
+            
+            
+        }else{ //location exists update the location
             [[sharedUser savedLocations] replaceObjectAtIndex:savedIdx withObject:curLocation];
+            
+            curLocation.locationId = 1; //savedLocationId; //set the locationId to that of found location
+            NSLog(@"Saved Location id: %i", savedLocationId);
+            
+            BOOL success = [db updateLocation:curLocation withName:[[sharedUser editingLocation] name]]; //update the location
+            
+            if(success){
+                NSLog(@"Location %@ successfully updated database.", curLocation.name);
+            }else{
+                NSLog(@"Updating location %@ failed", curLocation.name);
+            }
+            
         }
+        
         NSLog(@"Locations count %d", [[sharedUser savedLocations] count]);
 		
 		// save everything
-		[sharedUser saveAllLocations];
+		//[sharedUser saveAllLocations];
+        
 		
         [self dismissViewControllerAnimated:YES completion:nil];
     }else{
-        // Copied this right off a website, it just creates an alert box that tells you that the passcode you entered was wrong
+        //Alert the user that a blank location name has been entered
         UIAlertView *blankNameMessage = [[UIAlertView alloc] initWithTitle:@"Blank Location Name" message:@"Please enter a location name." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
         
         // Actually shows the alert message

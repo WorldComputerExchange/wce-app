@@ -6,6 +6,8 @@
 
 #import <UIKit/UIKit.h>
 #import "User.h"
+#import "Location.h"
+#import "DataAccess.h"
 #define countryPicker 0
 #define languagePicker 1
 

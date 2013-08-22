@@ -9,6 +9,7 @@
 
 @interface Location : NSObject
 
+@property (nonatomic, assign) NSInteger locationId;
 @property (nonatomic, retain) NSString * name;
 @property (nonatomic, retain) NSString * contact;
 @property (nonatomic, retain) NSString * phone;

@@ -4,9 +4,17 @@
 //
 //
 
+/**
+ Location menu where a user can add or choose a location
+ **/
+
 #import <UIKit/UIKit.h>
 #import "Location.h"
 #import "User.h"
+#import "FMDatabase.h"
+#import "FMResultSet.h"
+#import "DataAccess.h"
+
 
 @interface LocationViewController : UIViewController <UITableViewDelegate, UITableViewDataSource> {
     IBOutlet UITableView *locationTableView;
@@ -28,5 +36,4 @@
 @property (nonatomic, retain) User *sharedUser;
 
 -(IBAction)enterEditingMode:(id)sender;
-
 @end
