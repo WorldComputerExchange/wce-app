@@ -127,8 +127,10 @@
         [sharedUser setEditingLocation:selectedLocation];
         [self performSegueWithIdentifier:@"pushAddLocation" sender:self];
     }else{ //location selected NOT in editing mode
+        
         selectedLocation = [[sharedUser savedLocations] objectAtIndex:idx];
         NSString *selectedName =  [selectedLocation name];
+
         
         [sharedLocation setName:selectedName];
         [sharedLocation setContact:[selectedLocation contact]];
@@ -138,6 +140,7 @@
         [sharedLocation setCountry:[selectedLocation country]];
         [sharedLocation setZip: [selectedLocation zip]];
         [sharedLocation setLanguage: [selectedLocation language]];
+        [sharedLocation setLocationId:[selectedLocation locationId]];
         
         NSLog(@"%@", selectedName);
         NSLog(@"%@", [sharedLocation name]);

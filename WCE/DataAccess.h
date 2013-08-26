@@ -13,18 +13,27 @@
 #import "FMResultSet.h"
 #import "FMDatabase.h"
 #import "Location.h"
+#import "Partner.h"
 
 @interface DataAccess : NSObject
 {
     
 }
--(NSString *)getDatabasePath;
+-(NSString *)getDatabasePath; //return database path in application
+
+//Partner access methods
+-(NSMutableArray *)getPartnersForLocationName:(NSString *)name;
+-(BOOL)insertPartner:(Partner *) partner;
+-(BOOL)updatePartner:(Partner *) partner; //needs updated partner object with a valid id
+-(BOOL)deletePartner:(Partner *) partner;
+
+//Location access methods
 -(NSMutableArray *)getLocations;
 -(Location *)getLocationForName:(NSString *)name;
-//-(Location *)getLocationForId:(NSInteger *)locationId;
+-(NSInteger)getLocationIdForName:(NSString *)name;
 -(BOOL)insertLocation:(Location *) location;
 -(BOOL)updateLocation:(Location *) location;
--(BOOL)updateLocation:(Location *) location withName:(NSString *)name;
+-(BOOL)updateLocation:(Location *) location withName:(NSString *)name; //needs updated location object and the OLD location name
 -(BOOL)deleteLocation:(Location *) location;
 
 @end

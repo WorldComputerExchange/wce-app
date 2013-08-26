@@ -17,7 +17,7 @@
 }
 
 @property (nonatomic,retain) UITableView* partnerTableView;
-@property (nonatomic, copy) NSArray *partners;
+@property (nonatomic, retain) NSMutableArray *partners;
 @property (nonatomic, retain) User *sharedUser;
 
 -(IBAction)enterEditingMode:(id)sender;

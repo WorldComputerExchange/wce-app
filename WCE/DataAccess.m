@@ -14,6 +14,24 @@
 
 @implementation DataAccess
 
+
+
+
+/**
+ Get path of database in the app
+ **/
+-(NSString *)getDatabasePath{
+    WCEAppDelegate *appDelegate = (WCEAppDelegate *) [[UIApplication sharedApplication] delegate];
+    
+    NSString *dbPath = [appDelegate databasePath];
+    
+    return dbPath;
+}
+
+
+//Location Access Methods
+//location names are enforced as unique so a name can be used as an id
+
 /**
  Get all the locations in the database 
  Returned as an array of Location objects defined in Location.h
@@ -32,10 +50,16 @@
     while([results next])
     {
         Location *curLocation = [[Location alloc] init];
-
-        curLocation.locationId = [results intForColumn:@"id"];
+        
+        NSInteger nsi = 1;
+        int i = [results intForColumn:@"id"];
+        nsi = i;
+        
+        curLocation.locationId = nsi;
         
         curLocation.name = [results stringForColumn:@"name"];
+        
+         NSLog(@" Current Location id %i current location name: %@", nsi, curLocation.name);
         
         curLocation.contact = [results stringForColumn:@"contact"];
         
@@ -59,6 +83,10 @@
     return locations;
 
 }
+
+/**
+ return a location for a given name
+ **/
 -(Location *)getLocationForName:(NSString *)name{
     
     FMDatabase *db = [FMDatabase databaseWithPath:[self getDatabasePath]];
@@ -66,14 +94,21 @@
     //wrap in try catch blocks!!
     [db open];
     
-    FMResultSet *results = [db executeQuery:@"SELECT * FROM location WHERE locationName = ?", name];
+    FMResultSet *results = [db executeQuery:@"SELECT * FROM location WHERE name = ?", name];
     
     Location *curLocation = [[Location alloc] init];
     
     if([results next]){
-        curLocation.locationId = [results intForColumn:@"id"];
+        
+        NSInteger nsi = 1;
+        int i = [results intForColumn:@"id"];
+        nsi = i;
+        
+        curLocation.locationId = nsi;
         
         curLocation.name = [results stringForColumn:@"name"];
+        
+        NSLog(@" Current Location id %i name: %@", nsi, curLocation.name);
         
         curLocation.contact = [results stringForColumn:@"contact"];
         
@@ -93,13 +128,19 @@
     [db close];
     
     return curLocation;
-   
-    
 }
 
-/*-(Location *)getLocationForId:(NSInteger *)locationId{
+/**
+ get a locationId for a given name
+ **/
+-(NSInteger)getLocationIdForName:(NSString *)name{
+    Location *cur = [self getLocationForName:name];
     
-}*/
+    NSLog(@"Location id returned %i for name: %@", cur.locationId, cur.name);
+    
+    return cur.locationId;
+}
+
 
 /**
  Insert location into database
@@ -116,6 +157,7 @@
     return success;
 
 }
+
 
 /**
  Update a given location in the database
@@ -181,16 +223,93 @@
     return success;
 }
 
+//Partner access methods
+//partner names are not guaranteed to be unique so partnerId must be used as an id
+//partners also need a location id in order to show up in the application
 /**
- Get path of database in the app
+ return partners for a given location name
  **/
--(NSString *)getDatabasePath{
-    WCEAppDelegate *appDelegate = (WCEAppDelegate *) [[UIApplication sharedApplication] delegate];
+-(NSMutableArray *)getPartnersForLocationName:(NSString *)name{
+    FMDatabase *db = [FMDatabase databaseWithPath:[self getDatabasePath]];
     
-    NSString *dbPath = [appDelegate databasePath];
+    [db open];
     
-    return dbPath;
+    FMResultSet *results = [db executeQuery:@"SELECT * FROM partner WHERE locationId = (SELECT id FROM location WHERE name=?)", name];
+    
+    NSMutableArray *partners = [[NSMutableArray alloc] init];
+    
+    while([results next]){
+        Partner *curPartner = [[Partner alloc] init];
+        curPartner.partnerId = [results intForColumn:@"id"];
+        curPartner.locationId = [results intForColumn:@"locationId"];
+        curPartner.name = [results stringForColumn:@"name"];
+        [partners addObject:curPartner];
+    }
+    
+    [db close];
+    
+    return partners;
 }
+
+
+/**
+ Insert partner into database
+ A partner NEEDS a valid location id in order to show up in the application
+ use getLocationIdForPartner to obtain it
+ **/
+-(BOOL)insertPartner:(Partner *) partner{
+    FMDatabase *db = [FMDatabase databaseWithPath:[self getDatabasePath]];
+    
+    [db open];
+    
+    BOOL success =  [db executeUpdate:@"INSERT INTO partner (name, locationId) VALUES (?, ?);", partner.name, [NSNumber numberWithInteger:partner.locationId], nil];
+    
+    [db close];
+    
+    return success;
+}
+
+
+/**
+ Use this method to update a partner 
+ needs a valid partner id for updating
+ **/
+-(BOOL)updatePartner:(Partner *) partner {
+    FMDatabase *db = [FMDatabase databaseWithPath:[self getDatabasePath]];
+    
+    [db open];
+    
+    BOOL success = [db executeUpdate:@"UPDATE partner SET name = ? WHERE id= ?;", partner.name, [NSNumber numberWithInteger:partner.partnerId]];
+    
+    if (!success){
+        NSLog(@"%@", [db lastErrorMessage]);
+    }
+    [db close];
+    
+    return success;
+}
+
+
+/**
+ Delete a given partner in the database
+ needs a valid partner id
+ **/
+-(BOOL)deletePartner:(Partner *) partner{
+    FMDatabase *db = [FMDatabase databaseWithPath:[self getDatabasePath]];
+    
+    [db open];
+    
+    BOOL success = [db executeUpdate:@"DELETE FROM partner WHERE id=?;", [NSNumber numberWithInteger:partner.partnerId]];
+    
+    if (!success){
+        NSLog(@"%@", [db lastErrorMessage]);
+    }
+    [db close];
+    
+    
+    return success;
+}
+
 @end
 
 

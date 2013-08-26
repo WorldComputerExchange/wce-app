@@ -301,8 +301,11 @@
             if(success){
                 NSLog(@"Location %@ successfully added to database.", curLocation.name);
                 //get the location id of the added location to add to the array
-                curLocationId = [[db getLocationForName:curLocation.name] locationId];
-                curLocation.locationId = curLocationId;
+                curLocationId = [db getLocationIdForName:curLocation.name]; //not working always returns 0
+                
+                NSLog(@"Current location id %i", curLocationId);
+                
+                [curLocation setLocationId:curLocationId];
             }else{
                 NSLog(@"Adding location %@ failed", curLocation.name);
             }
@@ -312,7 +315,7 @@
         }else{ //location exists update the location
             [[sharedUser savedLocations] replaceObjectAtIndex:savedIdx withObject:curLocation];
             
-            curLocation.locationId = 1; //savedLocationId; //set the locationId to that of found location
+            curLocation.locationId = savedLocationId; //set the locationId to that of found location
             NSLog(@"Saved Location id: %i", savedLocationId);
             
             BOOL success = [db updateLocation:curLocation withName:[[sharedUser editingLocation] name]]; //update the location

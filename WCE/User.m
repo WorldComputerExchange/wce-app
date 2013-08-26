@@ -46,7 +46,6 @@ static User* _sharedUser = nil;
         self.isEditingLocation = false;
         self.editingLocation = [[Location alloc] init];
         self.isEditingPartner = false;
-        self.editingPartner = @"";
 		
         //retrieve saved locations from database
         DataAccess *db = [[DataAccess alloc] init];

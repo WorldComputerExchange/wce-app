@@ -7,6 +7,7 @@
 
 #import "NewPartnerViewController.h"
 #import "User.h"
+#import "DataAccess.h"
 
 @interface NewPartnerViewController ()
 
@@ -45,13 +46,13 @@
     sharedUser = [User sharedUser];
     
     if ([sharedUser isEditingPartner]){
-        [nameField setText:[sharedUser editingPartner]];
+        [nameField setText:[[sharedUser editingPartner] name]];
     }
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
-	[[self view] setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"136676912132100.gif"]]];
+	[[self view] setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"background.gif"]]];
 }
 
 - (void)viewDidDisappear:(BOOL)animated{
@@ -68,33 +69,51 @@
 
 - (void)saveChanges:(id)sender  
 {
-    /*save input fields to our user
+    /*save input fields to our user and database
      Should check that these values are non-null!*/
-    NSLog(@"changes being saved!");
-    NSString *name = nameField.text;
-    if (name.length > 0){
     
-        /**check if a location with this name exists already and replace it if it does**/
-        int savedIdx;
-        BOOL replaced = false;
+    Partner *curPartner = [[Partner alloc] init];
+    curPartner.name = nameField.text;
     
-        NSMutableArray *savedPartners = [sharedUser savedPartners];
-        for (int idx = 0; idx < [savedPartners count]; idx++){
-            NSString *cur = [savedPartners objectAtIndex:idx];
-            if ([cur isEqualToString:name]){
-                replaced = true;
-                savedIdx = idx;
-            }   
-        }
-        if (!replaced){
-            [[sharedUser savedPartners] addObject:name];
+    if (curPartner.name.length > 0){
+    
+        //create dataAccess object
+        DataAccess *db = [[DataAccess alloc] init];
+        
+        NSString *curLocationName = [[Location sharedLocation] name];
+        
+        [curPartner setLocationId:[db getLocationIdForName:curLocationName]];
+        
+        BOOL success;
+        
+        if ([sharedUser isEditingPartner]){
+            Partner *oldPartner = [sharedUser editingPartner];
+            [curPartner setPartnerId:[oldPartner partnerId]];
+            success = [db updatePartner:curPartner];
         }else{
-            [[sharedUser savedPartners] replaceObjectAtIndex:savedIdx withObject:name];
+            success = [db insertPartner:curPartner];
         }
-        NSLog(@"Number of saved partners %d", [[sharedUser savedPartners] count]);
-    }
+        
+        if (!success){ //user tried to create a partner with same name as another
+        
+            UIAlertView *repeatPartnerMessage = [[UIAlertView alloc] initWithTitle:@"Repeat Partner Name" message:@"Partner names must be unique." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+            
+            //show the alert message
+            [repeatPartnerMessage show];
+            
+        }else{
+            
+            [self dismissViewControllerAnimated:YES completion:nil];
+        }
     
-    [self dismissViewControllerAnimated:YES completion:nil];
+    }else{
+       
+        //Alert the user that a blank location name has been entered
+        UIAlertView *blankNameMessage = [[UIAlertView alloc] initWithTitle:@"Blank Partner Name" message:@"Please enter a partner name." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+        
+        //show the alert message
+        [blankNameMessage show];
+    }
 }
 
 - (void)cancel:(id)sender
