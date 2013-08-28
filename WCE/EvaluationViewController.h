@@ -6,6 +6,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Evaluation.h"
+#import "Location.h"
 
 
 @interface EvaluationViewController : UIViewController <UIActionSheetDelegate, UITextFieldDelegate, UITextViewDelegate>
@@ -15,36 +17,43 @@
 }
 
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
-@property (weak, nonatomic) IBOutlet UITextField *efq1;
-@property (weak, nonatomic) IBOutlet UITextField *efq2;
-@property (weak, nonatomic) IBOutlet UITextField *efq3;
-@property (weak, nonatomic) IBOutlet UITextField *efq4;
-@property (weak, nonatomic) IBOutlet UITextField *efq5;
-@property (weak, nonatomic) IBOutlet UITextField *efq6;
-@property (weak, nonatomic) IBOutlet UITextField *efq7;
-@property (weak, nonatomic) IBOutlet UITextField *efq8;
-@property (weak, nonatomic) IBOutlet UISegmentedControl *efq9;
-@property (weak, nonatomic) IBOutlet UITextField *efq10;
-@property (weak, nonatomic) IBOutlet UITextField *efq11;
-@property (weak, nonatomic) IBOutlet UITextField *efq12;
-@property (weak, nonatomic) IBOutlet UITextField *efq13;
-@property (weak, nonatomic) IBOutlet UITextField *efq14;
-@property (weak, nonatomic) IBOutlet UISegmentedControl *efq15;
-@property (weak, nonatomic) IBOutlet UISegmentedControl *efq16;
-@property (weak, nonatomic) IBOutlet UISegmentedControl *efq17;
-@property (weak, nonatomic) IBOutlet UITextField *efq18;
-@property (weak, nonatomic) IBOutlet UITextView *efq19;
-@property (weak, nonatomic) IBOutlet UITextView *efq20;
-@property (weak, nonatomic) IBOutlet UITextView *efq21;
-@property (weak, nonatomic) IBOutlet UITextView *efq22;
-@property (weak, nonatomic) IBOutlet UITextView *efq23;
-@property (weak, nonatomic) IBOutlet UITextView *efq24;
-@property (weak, nonatomic) IBOutlet UITextView *efq25;
-@property (weak, nonatomic) IBOutlet UITextView *efq26;
-@property (weak, nonatomic) IBOutlet UITextView *efq27;
-@property (weak, nonatomic) IBOutlet UITextView *efq28;
+@property (weak, nonatomic) IBOutlet UITextField *q1;
+@property (weak, nonatomic) IBOutlet UITextField *q2;
+@property (weak, nonatomic) IBOutlet UITextField *q3;
+@property (weak, nonatomic) IBOutlet UITextField *q4;
+@property (weak, nonatomic) IBOutlet UITextField *q5;
+@property (weak, nonatomic) IBOutlet UITextField *q6;
+@property (weak, nonatomic) IBOutlet UITextField *q7;
+@property (weak, nonatomic) IBOutlet UITextField *q8;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *q9; //Yes = 0, No = 1
+@property (weak, nonatomic) IBOutlet UITextField *q10;
+@property (weak, nonatomic) IBOutlet UITextField *q11;
+@property (weak, nonatomic) IBOutlet UITextField *q12;
+@property (weak, nonatomic) IBOutlet UITextField *q13;
+@property (weak, nonatomic) IBOutlet UITextField *q14;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *q15;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *q16;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *q17;
+@property (weak, nonatomic) IBOutlet UITextField *q18;
+@property (weak, nonatomic) IBOutlet UITextView *q19;
+@property (weak, nonatomic) IBOutlet UITextView *q20;
+@property (weak, nonatomic) IBOutlet UITextView *q21;
+@property (weak, nonatomic) IBOutlet UITextView *q22;
+@property (weak, nonatomic) IBOutlet UITextView *q23;
+@property (weak, nonatomic) IBOutlet UITextView *q24;
+@property (weak, nonatomic) IBOutlet UITextView *q25;
+@property (weak, nonatomic) IBOutlet UITextView *q26;
+@property (weak, nonatomic) IBOutlet UITextView *q27;
+@property (weak, nonatomic) IBOutlet UITextView *q28;
+@property (nonatomic, retain) Evaluation *savedEvalForm;
+@property (nonatomic, retain) Location *sharedLocation;
+@property (nonatomic, assign) BOOL hasEvalForm;
 
 - (IBAction)backgroundTouched:(id)sender;
 - (IBAction)textfieldReturn:(id)sender;
+- (IBAction)saveChanges:(id)sender; 
+
+-(NSInteger)segmentIndexForString:(NSString *)string;
+-(NSString *)stringForSegmentIndex:(NSInteger)segIndex;
 
 @end

@@ -313,6 +313,8 @@
 
 /**Form Access Methods**/
 
+
+//COVER SHEET
 /**
 Get a cover sheet for a given partner
  **/
@@ -403,6 +405,101 @@ Get a cover sheet for a given partner
     
     return success;
 }
+
+
+//EVAL FORM
+/**
+ Get an Eval Form for a given location
+ **/
+-(Evaluation *)getEvalForLocation:(Location *)location{
+    FMDatabase *db = [FMDatabase databaseWithPath:[self getDatabasePath]];
+    
+    [db open];
+    
+    FMResultSet *results = [db executeQuery:@"SELECT * FROM evalForm WHERE locationid = ?", [NSNumber numberWithInteger:location.locationId]];
+    
+    Evaluation *curEvalForm = [[Evaluation alloc] init];
+    
+    if([results next]){
+        curEvalForm.locationId = [results intForColumn:@"locationid"];
+        curEvalForm.evalId = [results intForColumn:@"id"];
+        curEvalForm.q1 = [results stringForColumn:@"q1"];
+        curEvalForm.q2 = [results stringForColumn:@"q2"];
+        curEvalForm.q3 = [results stringForColumn:@"q3"];
+        curEvalForm.q4 = [results stringForColumn:@"q4"];
+        curEvalForm.q5 = [results stringForColumn:@"q5"];
+        curEvalForm.q6 = [results stringForColumn:@"q6"];
+        curEvalForm.q7 = [results stringForColumn:@"q7"];
+        curEvalForm.q8 = [results stringForColumn:@"q8"];
+        curEvalForm.q9 = [results stringForColumn:@"q9"];
+        curEvalForm.q10 = [results stringForColumn:@"q10"];
+        curEvalForm.q11 = [results stringForColumn:@"q11"];
+        curEvalForm.q12 = [results stringForColumn:@"q12"];
+        curEvalForm.q13 = [results stringForColumn:@"q13"];
+        curEvalForm.q14 = [results stringForColumn:@"q14"];
+        curEvalForm.q15 = [results stringForColumn:@"q15"];
+        curEvalForm.q16 = [results stringForColumn:@"q16"];
+        curEvalForm.q17 = [results stringForColumn:@"q17"];
+        curEvalForm.q18 = [results stringForColumn:@"q18"];
+        curEvalForm.q19 = [results stringForColumn:@"q19"];
+        curEvalForm.q20 = [results stringForColumn:@"q20"];
+        curEvalForm.q21 = [results stringForColumn:@"q21"];
+        curEvalForm.q22 = [results stringForColumn:@"q22"];
+        curEvalForm.q23 = [results stringForColumn:@"q23"];
+        curEvalForm.q24 = [results stringForColumn:@"q24"];
+        curEvalForm.q25 = [results stringForColumn:@"q25"];
+        curEvalForm.q26 = [results stringForColumn:@"q26"];
+        curEvalForm.q27 = [results stringForColumn:@"q27"];
+        curEvalForm.q28 = [results stringForColumn:@"q28"];
+    }
+    
+    [db close];
+    
+    return curEvalForm;
+}
+
+/**
+ Insert Evaluation Form into database
+ An Evaluation NEEDS a valid locationId in order to show up in the database
+ **/
+-(BOOL)insertEval:(Evaluation *)eval{
+    FMDatabase *db = [FMDatabase databaseWithPath:[self getDatabasePath]];
+    
+    [db open];
+    
+    BOOL success =  [db executeUpdate:@"INSERT INTO evalForm (locationid, q1, q2, q3, q4, q5, q6, q7, q8, q9, q10, q11, q12, q13, q14, q15, q16, q17, q18, q19, q20, q21, q22, q23, q24,q25, q26, q27, q28) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);", [NSNumber numberWithInteger:eval.locationId], eval.q1, eval.q2, eval.q3, eval.q4, eval.q5, eval.q6, eval.q7,
+                     eval.q8, eval.q9, eval.q10, eval.q11, eval.q12, eval.q13, eval.q14, eval.q15, eval.q16,
+                     eval.q17, eval.q18, eval.q19, eval.q20, eval.q21, eval.q22, eval.q23, eval.q24,
+                     eval.q25, eval.q26, eval.q27, eval.q28, nil];
+    
+    if(!success){
+        NSLog(@"%@", [db lastErrorMessage]);
+    }
+    
+    [db close];
+    
+    return success;
+}
+
+/**
+ Use this method to update an Evaluation Form
+ needs a valid evalId for updating
+ **/
+-(BOOL)updateEval:(Evaluation *)eval{
+    FMDatabase *db = [FMDatabase databaseWithPath:[self getDatabasePath]];
+    
+    [db open];
+    
+    BOOL success = [db executeUpdate:@"UPDATE evalForm SET q1 = ?, q2 = ?, q3 = ?, q4 = ?, q5 = ?, q6 = ?, q7 = ?, q8 = ?, q9 = ?, q10 = ?, q11 = ?, q12 = ?, q13 = ?, q14 = ?, q15 = ?, q16 = ?, q17 = ?, q18 = ?, q19 = ?, q20 = ?, q21 = ?, q22 = ?, q23 = ?, q24 = ?, q25 = ?, q26 = ?, q27 = ?, q28 = ? WHERE id= ?;",eval.q1, eval.q2, eval.q3, eval.q4, eval.q5, eval.q6, eval.q7, eval.q8, eval.q9, eval.q10, eval.q11, eval.q12, eval.q13, eval.q14, eval.q15, eval.q16, eval.q17, eval.q18, eval.q19, eval.q20, eval.q21, eval.q22, eval.q23, eval.q24, eval.q25, eval.q26, eval.q27, eval.q28, [NSNumber numberWithInteger:eval.evalId], nil];
+    
+    if (!success){
+        NSLog(@"%@", [db lastErrorMessage]);
+    }
+    [db close];
+    
+    return success;
+}
+
 
 @end
 

@@ -40,6 +40,7 @@
 		8CA9678817AB292C003C3B70 /* Wce.db in Resources */ = {isa = PBXBuildFile; fileRef = 8CA9678717AB292C003C3B70 /* Wce.db */; };
 		8CA9678B17AC4130003C3B70 /* DataAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CA9678A17AC4130003C3B70 /* DataAccess.m */; };
 		8CB0441916DC47910000AD0F /* LocationMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CB0441816DC47910000AD0F /* LocationMapViewController.m */; };
+		8CCEF95717CE66C500DD52AA /* Evaluation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CCEF95617CE66C500DD52AA /* Evaluation.m */; };
 		8CD27FEE1720BC6B00973A04 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CD27FED1720BC6B00973A04 /* User.m */; };
 		8CD27FF31728354500973A04 /* PartnerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CD27FF21728354400973A04 /* PartnerViewController.m */; };
 		9E067AC71727763B00C770A0 /* background.gif in Resources */ = {isa = PBXBuildFile; fileRef = 9E067AC61727763B00C770A0 /* background.gif */; };
@@ -115,6 +116,8 @@
 		8CA9678A17AC4130003C3B70 /* DataAccess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataAccess.m; sourceTree = "<group>"; };
 		8CB0441716DC47910000AD0F /* LocationMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationMapViewController.h; sourceTree = "<group>"; };
 		8CB0441816DC47910000AD0F /* LocationMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationMapViewController.m; sourceTree = "<group>"; };
+		8CCEF95517CE66C500DD52AA /* Evaluation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Evaluation.h; sourceTree = "<group>"; };
+		8CCEF95617CE66C500DD52AA /* Evaluation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Evaluation.m; sourceTree = "<group>"; };
 		8CD27FEC1720BC6B00973A04 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		8CD27FED1720BC6B00973A04 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		8CD27FF11728354400973A04 /* PartnerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PartnerViewController.h; sourceTree = "<group>"; };
@@ -220,6 +223,8 @@
 			children = (
 				8C2AE38F17CD52DB00C00BAF /* CoverSheet.h */,
 				8C2AE39017CD52DB00C00BAF /* CoverSheet.m */,
+				8CCEF95517CE66C500DD52AA /* Evaluation.h */,
+				8CCEF95617CE66C500DD52AA /* Evaluation.m */,
 			);
 			name = Forms;
 			sourceTree = "<group>";
@@ -369,6 +374,8 @@
 		8CB0441516DC476E0000AD0F /* LocationMap */ = {
 			isa = PBXGroup;
 			children = (
+				9ED3259B16DD53FF00EA38E0 /* AddressAnnotation.h */,
+				9ED3259C16DD53FF00EA38E0 /* AddressAnnotation.m */,
 				8CB0441716DC47910000AD0F /* LocationMapViewController.h */,
 				8CB0441816DC47910000AD0F /* LocationMapViewController.m */,
 			);
@@ -382,8 +389,6 @@
 				D0F745F11730A57C00C9EC5F /* Content */,
 				D0F334B1172AC374006BACED /* Tab Bar */,
 				8C1B2972172A11BE00D359D4 /* Forms */,
-				9ED3259B16DD53FF00EA38E0 /* AddressAnnotation.h */,
-				9ED3259C16DD53FF00EA38E0 /* AddressAnnotation.m */,
 				D058DCD816FBD28900132041 /* AboutWCE */,
 				8C27586F16CC829A00DEDAC8 /* Location */,
 				8CB0441516DC476E0000AD0F /* LocationMap */,
@@ -569,6 +574,7 @@
 				8CA9678B17AC4130003C3B70 /* DataAccess.m in Sources */,
 				8C2AE38E17C90D6B00C00BAF /* Partner.m in Sources */,
 				8C2AE39117CD52DB00C00BAF /* CoverSheet.m in Sources */,
+				8CCEF95717CE66C500DD52AA /* Evaluation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

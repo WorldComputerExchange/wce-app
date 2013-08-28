@@ -6,6 +6,8 @@
 //
 
 #import "EvaluationViewController.h"
+#import "Location.h"
+#import "DataAccess.h"
 
 @interface EvaluationViewController ()
 @property (nonatomic, readonly) CGPoint originalOffset;
@@ -14,7 +16,7 @@
 
 @implementation EvaluationViewController
 
-@synthesize efq1, efq2, efq3, efq4, efq5, efq6, efq7, efq8, efq9, efq10, efq11, efq12, efq13, efq14, efq15, efq16, efq17, efq18, efq19, efq20, efq21, efq22, efq23, efq24, efq25, efq26, efq27, efq28;
+@synthesize q1, q2, q3, q4, q5, q6, q7, q8, q9, q10, q11, q12, q13, q14, q15, q16, q17, q18, q19, q20, q21, q22, q23, q24, q25, q26, q27, q28, savedEvalForm, sharedLocation, hasEvalForm;
 
 
 
@@ -27,40 +29,186 @@ static const CGFloat MAXIMUM_SCROLL_FRACTION = 0.8;
 static const CGFloat PORTRAIT_KEYBOARD_HEIGHT = 216;
 static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
 
-- (IBAction)backgroundTouched:(id)sender {
-    [efq1 resignFirstResponder];
-    [efq2 resignFirstResponder];
-    [efq3 resignFirstResponder];
-    [efq4 resignFirstResponder];
-    [efq5 resignFirstResponder];
-    [efq6 resignFirstResponder];
-    [efq7 resignFirstResponder];
-    [efq8 resignFirstResponder];
-    [efq9 resignFirstResponder];
-    [efq10 resignFirstResponder];
-    [efq11 resignFirstResponder];
-    [efq12 resignFirstResponder];
-    [efq13 resignFirstResponder];
-    [efq14 resignFirstResponder];
-    [efq15 resignFirstResponder];
-    [efq16 resignFirstResponder];
-    [efq17 resignFirstResponder];
-    [efq18 resignFirstResponder];
-    [efq19 resignFirstResponder];
-    [efq20 resignFirstResponder];
-    [efq21 resignFirstResponder];
-    [efq22 resignFirstResponder];
-    [efq23 resignFirstResponder];
-    [efq24 resignFirstResponder];
-    [efq25 resignFirstResponder];
-    [efq26 resignFirstResponder];
-    [efq27 resignFirstResponder];
-    [efq28 resignFirstResponder];
+
+
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        // Custom initialization
+    }
+    return self;
+}
+
+
+- (void) viewWillDisappear: (BOOL)animated{
+    
+    [super viewWillDisappear:animated];
+    
+    NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
+    [nc removeObserver:self name: UIKeyboardWillShowNotification object:nil];
+    [nc removeObserver:self name: UIKeyboardWillHideNotification object:nil];
 }
 
 
 
 
+
+- (void)viewWillAppear:(BOOL)animated
+{
+	[[self view] setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"background.gif"]]];
+    
+}
+
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+	// Do any additional setup after loading the view.
+    
+    
+    //get the coversheet for the current partner from the database if it exists
+    sharedLocation = [Location sharedLocation];
+    
+    DataAccess *db = [[DataAccess alloc] init];
+    
+    savedEvalForm = [[Evaluation alloc] init];
+    savedEvalForm = [db getEvalForLocation:sharedLocation];
+    
+    if (savedEvalForm.evalId < 0) { //no cover sheet found
+        hasEvalForm = false;
+    }else {
+        hasEvalForm = true;
+        self.q1.text = savedEvalForm.q1;
+        self.q2.text = savedEvalForm.q2;
+        self.q3.text = savedEvalForm.q3;
+        self.q4.text = savedEvalForm.q4;
+        self.q5.text = savedEvalForm.q5;
+        self.q6.text = savedEvalForm.q6;
+        self.q7.text = savedEvalForm.q7;
+        self.q8.text = savedEvalForm.q8;
+        self.q9.selectedSegmentIndex = [self segmentIndexForString:savedEvalForm.q9];
+        self.q10.text = savedEvalForm.q10;
+        self.q11.text = savedEvalForm.q11;
+        self.q12.text = savedEvalForm.q12;
+        self.q13.text = savedEvalForm.q13;
+        self.q14.text = savedEvalForm.q14;
+        self.q15.selectedSegmentIndex = [self segmentIndexForString:savedEvalForm.q15];
+        self.q16.selectedSegmentIndex = [self segmentIndexForString:savedEvalForm.q16];
+        self.q17.selectedSegmentIndex = [self segmentIndexForString:savedEvalForm.q17];
+        self.q18.text = savedEvalForm.q18;
+        self.q19.text = savedEvalForm.q19;
+        self.q20.text = savedEvalForm.q20;
+        self.q21.text = savedEvalForm.q21;
+        self.q22.text = savedEvalForm.q22;
+        self.q23.text = savedEvalForm.q23;
+        self.q24.text = savedEvalForm.q24;
+        self.q25.text = savedEvalForm.q25;
+        self.q26.text = savedEvalForm.q26;
+        self.q27.text = savedEvalForm.q27;
+        self.q28.text = savedEvalForm.q28;
+    }
+    
+    
+}
+
+- (IBAction)backgroundTouched:(id)sender {
+    [q1 resignFirstResponder];
+    [q2 resignFirstResponder];
+    [q3 resignFirstResponder];
+    [q4 resignFirstResponder];
+    [q5 resignFirstResponder];
+    [q6 resignFirstResponder];
+    [q7 resignFirstResponder];
+    [q8 resignFirstResponder];
+    [q9 resignFirstResponder];
+    [q10 resignFirstResponder];
+    [q11 resignFirstResponder];
+    [q12 resignFirstResponder];
+    [q13 resignFirstResponder];
+    [q14 resignFirstResponder];
+    [q15 resignFirstResponder];
+    [q16 resignFirstResponder];
+    [q17 resignFirstResponder];
+    [q18 resignFirstResponder];
+    [q19 resignFirstResponder];
+    [q20 resignFirstResponder];
+    [q21 resignFirstResponder];
+    [q22 resignFirstResponder];
+    [q23 resignFirstResponder];
+    [q24 resignFirstResponder];
+    [q25 resignFirstResponder];
+    [q26 resignFirstResponder];
+    [q27 resignFirstResponder];
+    [q28 resignFirstResponder];
+}
+
+
+- (IBAction)saveChanges:(id)sender{
+    NSLog(@"Saving changes to evaluation");
+    
+    Evaluation *curEvalForm =[[Evaluation alloc] init];
+    
+    curEvalForm.locationId = [sharedLocation locationId];
+    
+    curEvalForm.q1 = self.q1.text;
+    curEvalForm.q2 = self.q2.text;
+    curEvalForm.q3 = self.q3.text;
+    curEvalForm.q4 = self.q4.text;
+    curEvalForm.q5 = self.q5.text;
+    curEvalForm.q6 = self.q6.text;
+    curEvalForm.q7 = self.q7.text;
+    curEvalForm.q8 = self.q8.text;
+    curEvalForm.q9 = [self stringForSegmentIndex:self.q9.selectedSegmentIndex];
+    curEvalForm.q10 = self.q10.text;
+    curEvalForm.q11 = self.q11.text;
+    curEvalForm.q12 = self.q12.text;
+    curEvalForm.q13 = self.q13.text;
+    curEvalForm.q14 = self.q14.text;
+    curEvalForm.q15 = [self stringForSegmentIndex:self.q15.selectedSegmentIndex];
+    curEvalForm.q16 = [self stringForSegmentIndex:self.q16.selectedSegmentIndex];
+    curEvalForm.q17 = [self stringForSegmentIndex:self.q17.selectedSegmentIndex];
+    curEvalForm.q18 = self.q18.text;
+    curEvalForm.q19 = self.q19.text;
+    curEvalForm.q20 = self.q20.text;
+    curEvalForm.q21 = self.q21.text;
+    curEvalForm.q22 = self.q22.text;
+    curEvalForm.q23 = self.q23.text;
+    curEvalForm.q24 = self.q24.text;
+    curEvalForm.q25 = self.q25.text;
+    curEvalForm.q26 = self.q26.text;
+    curEvalForm.q27 = self.q27.text;
+    curEvalForm.q28 = self.q28.text;
+    
+    DataAccess *db = [[DataAccess alloc] init];
+    
+    if (!hasEvalForm){
+        [db insertEval:curEvalForm];
+    }else{
+        curEvalForm.evalId = savedEvalForm.evalId;
+        [db updateEval:curEvalForm];
+    }
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+//return the correct segment (YES or NO) for the given string
+-(NSInteger)segmentIndexForString:(NSString *)string{
+    if([[string lowercaseString] characterAtIndex:0] == 'y'){
+        return 0;
+    }else{
+        return 1;
+    }
+}
+
+//return YES or NO depending on segment index
+-(NSString *)stringForSegmentIndex:(NSInteger)segIndex{
+    if(segIndex == 0){
+        return @"YES";
+    }else{
+        return @"NO";
+    }
+}
 
 //dismisses the keyboard when the return/done button is pressed for TextFields.
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
@@ -240,43 +388,6 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
 
 - (IBAction)textfieldReturn:(id)sender{
     [sender resignFirstResponder];
-}
-
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
-
-- (void) viewWillDisappear: (BOOL)animated{
-    
-    [super viewWillDisappear:animated];
-    
-    NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
-    [nc removeObserver:self name: UIKeyboardWillShowNotification object:nil];
-    [nc removeObserver:self name: UIKeyboardWillHideNotification object:nil];
-}
-
-
-
-
-
-- (void)viewWillAppear:(BOOL)animated
-{
-	[[self view] setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"background.gif"]]];
-
-}
-
-
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-
-    
 }
 
 - (void)didReceiveMemoryWarning

@@ -15,6 +15,7 @@
 #import "Location.h"
 #import "Partner.h"
 #import "CoverSheet.h"
+#import "Evaluation.h"
 
 @interface DataAccess : NSObject
 {
@@ -45,4 +46,8 @@
 -(BOOL)insertCoverSheet:(CoverSheet *)coverSheet;
 -(BOOL)updateCoverSheet:(CoverSheet *)coverSheet; //needs updated coverSheet object with a valid id
 
+//Evaluation form access methods
+-(Evaluation *)getEvalForLocation:(Location *)location;
+-(BOOL)insertEval:(Evaluation *)eval;
+-(BOOL)updateEval:(Evaluation *)eval;
 @end
