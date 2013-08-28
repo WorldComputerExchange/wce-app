@@ -95,6 +95,7 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+//Test
 /**Keyboard dismissed when background is clicked or when return is hit**/
 
 /**Does not work
