@@ -92,7 +92,7 @@
         [db updateCoverSheet:curCoverSheet];
     }
     
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 /**Keyboard dismissed when background is clicked or when return is hit**/

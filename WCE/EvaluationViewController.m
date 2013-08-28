@@ -189,7 +189,7 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
         [db updateEval:curEvalForm];
     }
     
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 //return the correct segment (YES or NO) for the given string

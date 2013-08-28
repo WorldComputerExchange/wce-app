@@ -460,7 +460,7 @@ Get a cover sheet for a given partner
 
 /**
  Insert Evaluation Form into database
- An Evaluation NEEDS a valid locationId in order to show up in the database
+ An Evaluation NEEDS a valid locationId in order to show up in the application
  **/
 -(BOOL)insertEval:(Evaluation *)eval{
     FMDatabase *db = [FMDatabase databaseWithPath:[self getDatabasePath]];
@@ -500,6 +500,95 @@ Get a cover sheet for a given partner
     return success;
 }
 
+
+//IMPLEMENTATION QUESTIONS
+/**
+ Get an Implementation Questions Form for a given partner
+ **/
+-(ImpQuestions *)getImpForPartner:(Partner *)partner{
+    FMDatabase *db = [FMDatabase databaseWithPath:[self getDatabasePath]];
+    
+    [db open];
+    
+    FMResultSet *results = [db executeQuery:@"SELECT * FROM impQuestions WHERE partnerid = ?", [NSNumber numberWithInteger:partner.partnerId]];
+    
+    ImpQuestions *curImpQues = [[ImpQuestions alloc] init];
+    
+    if([results next]){
+        curImpQues.partnerId = [results intForColumn:@"partnerid"];
+        curImpQues.impId = [results intForColumn:@"id"];
+        curImpQues.q1 = [results stringForColumn:@"q1"];
+        curImpQues.q2 = [results stringForColumn:@"q2"];
+        curImpQues.q3 = [results stringForColumn:@"q3"];
+        curImpQues.q4 = [results stringForColumn:@"q4"];
+        curImpQues.q5 = [results stringForColumn:@"q5"];
+        curImpQues.q6 = [results stringForColumn:@"q6"];
+        curImpQues.q7 = [results stringForColumn:@"q7"];
+        curImpQues.q8 = [results stringForColumn:@"q8"];
+        curImpQues.q9 = [results stringForColumn:@"q9"];
+        curImpQues.q10 = [results stringForColumn:@"q10"];
+        curImpQues.q11 = [results stringForColumn:@"q11"];
+        curImpQues.q12 = [results stringForColumn:@"q12"];
+        curImpQues.q13 = [results stringForColumn:@"q13"];
+        curImpQues.q14 = [results stringForColumn:@"q14"];
+        curImpQues.q15 = [results stringForColumn:@"q15"];
+        curImpQues.q16 = [results stringForColumn:@"q16"];
+        curImpQues.q17 = [results stringForColumn:@"q17"];
+        curImpQues.q18 = [results stringForColumn:@"q18"];
+        curImpQues.q19 = [results stringForColumn:@"q19"];
+        curImpQues.q20 = [results stringForColumn:@"q20"];
+        curImpQues.q21 = [results stringForColumn:@"q21"];
+        curImpQues.q22 = [results stringForColumn:@"q22"];
+        curImpQues.q23 = [results stringForColumn:@"q23"];
+        curImpQues.q24 = [results stringForColumn:@"q24"];
+        curImpQues.q25 = [results stringForColumn:@"q25"];
+    }
+    
+    [db close];
+    
+    return curImpQues;
+}
+
+
+/**
+ Insert Implementation Questions into database
+ An ImpQuestions NEEDS a valid partnerId in order to show up in the application
+ **/
+-(BOOL)insertImp:(ImpQuestions *)impQues{
+    FMDatabase *db = [FMDatabase databaseWithPath:[self getDatabasePath]];
+    
+    [db open];
+    
+    BOOL success =  [db executeUpdate:@"INSERT INTO impQuestions (partnerid, q1, q2, q3, q4, q5, q6, q7, q8, q9, q10, q11, q12, q13, q14, q15, q16, q17, q18, q19, q20, q21, q22, q23, q24, q25) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);", [NSNumber numberWithInteger:impQues.partnerId], impQues.q1, impQues.q2, impQues.q3, impQues.q4, impQues.q5, impQues.q6, impQues.q7, impQues.q8, impQues.q9, impQues.q10, impQues.q11, impQues.q12, impQues.q13, impQues.q14, impQues.q15, impQues.q16, impQues.q17, impQues.q18, impQues.q19, impQues.q20, impQues.q21, impQues.q22, impQues.q23, impQues.q24, impQues.q25, nil];
+    
+    if(!success){
+        NSLog(@"%@", [db lastErrorMessage]);
+    }
+    
+    [db close];
+    
+    return success;
+}
+
+
+/**
+ Use this method to update Implementation Questions
+ needs a valid impId for updating
+ **/
+-(BOOL)updateImp:(ImpQuestions *)impQues{
+    FMDatabase *db = [FMDatabase databaseWithPath:[self getDatabasePath]];
+    
+    [db open];
+    
+    BOOL success = [db executeUpdate:@"UPDATE impQuestions SET q1 = ?, q2 = ?, q3 = ?, q4 = ?, q5 = ?, q6 = ?, q7 = ?, q8 = ?, q9 = ?, q10 = ?, q11 = ?, q12 = ?, q13 = ?, q14 = ?, q15 = ?, q16 = ?, q17 = ?, q18 = ?, q19 = ?, q20 = ?, q21 = ?, q22 = ?, q23 = ?, q24 = ?, q25 = ? WHERE id= ?;", impQues.q1, impQues.q2, impQues.q3, impQues.q4, impQues.q5, impQues.q6, impQues.q7, impQues.q8, impQues.q9, impQues.q10, impQues.q11, impQues.q12, impQues.q13, impQues.q14, impQues.q15, impQues.q16, impQues.q17, impQues.q18, impQues.q19, impQues.q20, impQues.q21, impQues.q22, impQues.q23, impQues.q24, impQues.q25, [NSNumber numberWithInteger:impQues.impId], nil];
+    
+    if (!success){
+        NSLog(@"%@", [db lastErrorMessage]);
+    }
+    [db close];
+    
+    return success;
+}
 
 @end
 

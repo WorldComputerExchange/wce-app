@@ -5,6 +5,8 @@
 //
 
 #import "ImplementationViewController.h"
+#import "User.h" 
+#import "DataAccess.h" 
 
 @interface ImplementationViewController ()
 
@@ -15,7 +17,7 @@
 
 
 
-@synthesize iqq1, iqq2, iqq3, iqq4, iqq5, iqq6, iqq7, iqq8, iqq9, iqq10, iqq11, iqq12, iqq13, iqq14, iqq15, iqq16, iqq17, iqq18, iqq19, iqq20, iqq21, iqq22, iqq23, iqq24, iqq25;
+@synthesize q1, q2, q3, q4, q5, q6, q7, q8, q9, q10, q11, q12, q13, q14, q15, q16, q17, q18, q19, q20, q21, q22, q23, q24, q25, sharedPartner, savedImpQues, hasImpQues;
 
 
 
@@ -29,37 +31,148 @@ static const CGFloat PORTRAIT_KEYBOARD_HEIGHT = 216;
 static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
 
 - (IBAction)backgroundTouched:(id)sender {
-    [iqq1 resignFirstResponder];
-    [iqq2 resignFirstResponder];
-    [iqq3 resignFirstResponder];
-    [iqq4 resignFirstResponder];
-    [iqq5 resignFirstResponder];
-    [iqq6 resignFirstResponder];
-    [iqq7 resignFirstResponder];
-    [iqq8 resignFirstResponder];
-    [iqq9 resignFirstResponder];
-    [iqq10 resignFirstResponder];
-    [iqq11 resignFirstResponder];
-    [iqq12 resignFirstResponder];
-    [iqq13 resignFirstResponder];
-    [iqq14 resignFirstResponder];
-    [iqq15 resignFirstResponder];
-    [iqq16 resignFirstResponder];
-    [iqq17 resignFirstResponder];
-    [iqq18 resignFirstResponder];
-    [iqq19 resignFirstResponder];
-    [iqq20 resignFirstResponder];
-    [iqq21 resignFirstResponder];
-    [iqq22 resignFirstResponder];
-    [iqq23 resignFirstResponder];
-    [iqq24 resignFirstResponder];
-    [iqq25 resignFirstResponder];    
+    [q1 resignFirstResponder];
+    [q2 resignFirstResponder];
+    [q3 resignFirstResponder];
+    [q4 resignFirstResponder];
+    [q5 resignFirstResponder];
+    [q6 resignFirstResponder];
+    [q7 resignFirstResponder];
+    [q8 resignFirstResponder];
+    [q9 resignFirstResponder];
+    [q10 resignFirstResponder];
+    [q11 resignFirstResponder];
+    [q12 resignFirstResponder];
+    [q13 resignFirstResponder];
+    [q14 resignFirstResponder];
+    [q15 resignFirstResponder];
+    [q16 resignFirstResponder];
+    [q17 resignFirstResponder];
+    [q18 resignFirstResponder];
+    [q19 resignFirstResponder];
+    [q20 resignFirstResponder];
+    [q21 resignFirstResponder];
+    [q22 resignFirstResponder];
+    [q23 resignFirstResponder];
+    [q24 resignFirstResponder];
+    [q25 resignFirstResponder];    
+}
+
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+	// Do any additional setup after loading the view.
+    
+    
+    //get the impQuestions for the current partner if it exists
+    User *sharedUser = [User sharedUser];
+    
+    sharedPartner = [sharedUser sharedPartner];
+    
+    DataAccess *db = [[DataAccess alloc] init];
+    
+    savedImpQues = [[ImpQuestions alloc] init];
+    savedImpQues = [db getImpForPartner:sharedPartner];
+    
+    if (savedImpQues.impId < 0) { //no cover sheet found
+        hasImpQues = false;
+    }else {
+        hasImpQues= true;
+        self.q1.text = savedImpQues.q1;
+        self.q2.text = savedImpQues.q2;
+        self.q3.text = savedImpQues.q3;
+        self.q4.text = savedImpQues.q4;
+        self.q5.text = savedImpQues.q5;
+        self.q6.text = savedImpQues.q6;
+        self.q7.selectedSegmentIndex = [self segmentIndexForString:savedImpQues.q7];
+        self.q8.text = savedImpQues.q8;
+        self.q9.text = savedImpQues.q9;
+        self.q10.text = savedImpQues.q10;
+        self.q11.text = savedImpQues.q11;
+        self.q12.text = savedImpQues.q12;
+        self.q13.text = savedImpQues.q13;
+        self.q14.text = savedImpQues.q14;
+        self.q15.text = savedImpQues.q15;
+        self.q16.text = savedImpQues.q16;
+        self.q17.text = savedImpQues.q17;
+        self.q18.text = savedImpQues.q18;
+        self.q19.text = savedImpQues.q19;
+        self.q20.text = savedImpQues.q20;
+        self.q21.text = savedImpQues.q21;
+        self.q22.text = savedImpQues.q22;
+        self.q23.text = savedImpQues.q23;
+        self.q24.selectedSegmentIndex = [self segmentIndexForString:savedImpQues.q24];
+        self.q25.text = savedImpQues.q25;
+    }
+    
+    
 }
 
 
 
+- (IBAction)saveChanges:(id)sender{
+    NSLog(@"Saving changes to impQuestions");
+    
+    ImpQuestions *curImpQues =[[ImpQuestions alloc] init];
+    
+    curImpQues.partnerId = [sharedPartner partnerId];
+    
+    curImpQues.q1 = self.q1.text;
+    curImpQues.q2 = self.q2.text;
+    curImpQues.q3 = self.q3.text;
+    curImpQues.q4 = self.q4.text;
+    curImpQues.q5 = self.q5.text;
+    curImpQues.q6 = self.q6.text;
+    curImpQues.q7 = [self stringForSegmentIndex:self.q7.selectedSegmentIndex];
+    curImpQues.q8 = self.q8.text;
+    curImpQues.q9 = self.q9.text;
+    curImpQues.q10 = self.q10.text;
+    curImpQues.q11 = self.q11.text;
+    curImpQues.q12 = self.q12.text;
+    curImpQues.q13 = self.q13.text;
+    curImpQues.q14 = self.q14.text;
+    curImpQues.q15 = self.q15.text;
+    curImpQues.q16 = self.q16.text;
+    curImpQues.q17 = self.q17.text;
+    curImpQues.q18 = self.q18.text;
+    curImpQues.q19 = self.q19.text;
+    curImpQues.q20 = self.q20.text;
+    curImpQues.q21 = self.q21.text;
+    curImpQues.q22 = self.q22.text;
+    curImpQues.q23 = self.q23.text;
+    curImpQues.q24 = [self stringForSegmentIndex:self.q24.selectedSegmentIndex];
+    curImpQues.q25 = self.q25.text;
+    
+    DataAccess *db = [[DataAccess alloc] init];
+    
+    if (!hasImpQues){
+        [db insertImp:curImpQues];
+    }else{
+        curImpQues.impId = savedImpQues.impId;
+        [db updateImp:curImpQues];
+    }
+    
+    [self.navigationController popViewControllerAnimated:YES];
+}
 
+//return the correct segment (YES or NO) for the given string
+-(NSInteger)segmentIndexForString:(NSString *)string{
+    if([[string lowercaseString] characterAtIndex:0] == 'y'){
+        return 0;
+    }else{
+        return 1;
+    }
+}
 
+//return YES or NO depending on segment index
+-(NSString *)stringForSegmentIndex:(NSInteger)segIndex{
+    if(segIndex == 0){
+        return @"YES";
+    }else{
+        return @"NO";
+    }
+}
 
 /**Keyboard dismissed when background is clicked or when return is hit**/
 
@@ -79,15 +192,7 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
         // Custom initialization
     }
     return self;
-}
-
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-	// Do any additional setup after loading the view.
-    
-    
-}
+} 
 
 - (void)didReceiveMemoryWarning
 {

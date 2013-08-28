@@ -16,6 +16,7 @@
 #import "Partner.h"
 #import "CoverSheet.h"
 #import "Evaluation.h"
+#import "ImpQuestions.h"
 
 @interface DataAccess : NSObject
 {
@@ -50,4 +51,9 @@
 -(Evaluation *)getEvalForLocation:(Location *)location;
 -(BOOL)insertEval:(Evaluation *)eval;
 -(BOOL)updateEval:(Evaluation *)eval;
+
+//Implementation Questions access methods
+-(ImpQuestions *)getImpForPartner:(Partner *)partner;
+-(BOOL)insertImp:(ImpQuestions *)impQues;
+-(BOOL)updateImp:(ImpQuestions *)impQues;
 @end

@@ -41,6 +41,7 @@
 		8CA9678B17AC4130003C3B70 /* DataAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CA9678A17AC4130003C3B70 /* DataAccess.m */; };
 		8CB0441916DC47910000AD0F /* LocationMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CB0441816DC47910000AD0F /* LocationMapViewController.m */; };
 		8CCEF95717CE66C500DD52AA /* Evaluation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CCEF95617CE66C500DD52AA /* Evaluation.m */; };
+		8CCEF95A17CEA57400DD52AA /* ImpQuestions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CCEF95917CEA57400DD52AA /* ImpQuestions.m */; };
 		8CD27FEE1720BC6B00973A04 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CD27FED1720BC6B00973A04 /* User.m */; };
 		8CD27FF31728354500973A04 /* PartnerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CD27FF21728354400973A04 /* PartnerViewController.m */; };
 		9E067AC71727763B00C770A0 /* background.gif in Resources */ = {isa = PBXBuildFile; fileRef = 9E067AC61727763B00C770A0 /* background.gif */; };
@@ -118,6 +119,8 @@
 		8CB0441816DC47910000AD0F /* LocationMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationMapViewController.m; sourceTree = "<group>"; };
 		8CCEF95517CE66C500DD52AA /* Evaluation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Evaluation.h; sourceTree = "<group>"; };
 		8CCEF95617CE66C500DD52AA /* Evaluation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Evaluation.m; sourceTree = "<group>"; };
+		8CCEF95817CEA57400DD52AA /* ImpQuestions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImpQuestions.h; sourceTree = "<group>"; };
+		8CCEF95917CEA57400DD52AA /* ImpQuestions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImpQuestions.m; sourceTree = "<group>"; };
 		8CD27FEC1720BC6B00973A04 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		8CD27FED1720BC6B00973A04 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		8CD27FF11728354400973A04 /* PartnerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PartnerViewController.h; sourceTree = "<group>"; };
@@ -225,6 +228,8 @@
 				8C2AE39017CD52DB00C00BAF /* CoverSheet.m */,
 				8CCEF95517CE66C500DD52AA /* Evaluation.h */,
 				8CCEF95617CE66C500DD52AA /* Evaluation.m */,
+				8CCEF95817CEA57400DD52AA /* ImpQuestions.h */,
+				8CCEF95917CEA57400DD52AA /* ImpQuestions.m */,
 			);
 			name = Forms;
 			sourceTree = "<group>";
@@ -575,6 +580,7 @@
 				8C2AE38E17C90D6B00C00BAF /* Partner.m in Sources */,
 				8C2AE39117CD52DB00C00BAF /* CoverSheet.m in Sources */,
 				8CCEF95717CE66C500DD52AA /* Evaluation.m in Sources */,
+				8CCEF95A17CEA57400DD52AA /* ImpQuestions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
