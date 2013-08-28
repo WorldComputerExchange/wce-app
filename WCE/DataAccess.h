@@ -14,6 +14,7 @@
 #import "FMDatabase.h"
 #import "Location.h"
 #import "Partner.h"
+#import "CoverSheet.h"
 
 @interface DataAccess : NSObject
 {
@@ -35,5 +36,13 @@
 -(BOOL)updateLocation:(Location *) location;
 -(BOOL)updateLocation:(Location *) location withName:(NSString *)name; //needs updated location object and the OLD location name
 -(BOOL)deleteLocation:(Location *) location;
+
+/**Form Access Methods**/
+
+//Cover sheet access methods
+-(CoverSheet *)getCoverSheetForPartner:(Partner *)partner;
+-(NSInteger)getCoverSheetIdForPartner:(Partner *)partner;
+-(BOOL)insertCoverSheet:(CoverSheet *)coverSheet;
+-(BOOL)updateCoverSheet:(CoverSheet *)coverSheet; //needs updated coverSheet object with a valid id
 
 @end

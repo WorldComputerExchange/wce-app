@@ -3,7 +3,6 @@
 //  WCE
 //
 //  Created by  Brian Beckerle on 5/5/13.
-//  Copyright (c) 2013  Brian Beckerle. All rights reserved.
 //
 
 #import "EvaluationViewController.h"
@@ -14,9 +13,6 @@
 @end
 
 @implementation EvaluationViewController
-
-
-//@synthesize locations, countries, languages, actionSheet, dropDownTableView, dataArray, sharedUser, selectedCountry, selectedLanguage;
 
 @synthesize efq1, efq2, efq3, efq4, efq5, efq6, efq7, efq8, efq9, efq10, efq11, efq12, efq13, efq14, efq15, efq16, efq17, efq18, efq19, efq20, efq21, efq22, efq23, efq24, efq25, efq26, efq27, efq28;
 
@@ -240,33 +236,6 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /**Keyboard dismissed when background is clicked or when return is hit**/
 
 - (IBAction)textfieldReturn:(id)sender{
@@ -283,23 +252,6 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
 }
 
 
-
-
-
-
-//from stackoverflow.com/questions/7130982/keyboardwasshown-method-not-being-called-on-my-uitextview
-/**
--(void) viewWillAppear: (BOOL)animated
-{
-    [super viewWillAppear:animated];
-    
-    [[self view] setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"136676912132100.gif"]]];
-    
-    NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
-    [nc addObserver:self selector:@selector(keyboardWasShown:) name: UIKeyboardWillShowNotification object:nil];
-    [nc addObserver:self selector:@selector(keyboardWasHidden:) name: UIKeyboardWillHideNotification object:nil];
-
-}*/
 - (void) viewWillDisappear: (BOOL)animated{
     
     [super viewWillDisappear:animated];
@@ -315,16 +267,9 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
 
 - (void)viewWillAppear:(BOOL)animated
 {
-	[[self view] setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"136676912132100.gif"]]];
+	[[self view] setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"background.gif"]]];
 
 }
-
-
-
-
-
-
-
 
 
 - (void)viewDidLoad
@@ -334,149 +279,11 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
     
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-
-
-
-
-/*
-
-
-/// called when a text field is selected
-//- (void)textFieldDidBeginEditing:(UITextField *)textField
-//{
-	//_activeField = textField;
-//}
-
-
-
-//- (void)textFieldDidBeginEditing:(UITextField *)textField
-//{
-  //  [self animateTextField: textField up: YES];
-//}
-
-
-
-
-
-- (void)textFieldDidEndEditing:(UITextField *)textField
-{
-    [self animateTextField: textField up: YES];
-}
-
-- (void) animateTextField: (UITextField*) textField up: (BOOL) up
-{
-    const int movementDistance = 80; // tweak as needed
-    const float movementDuration = 0.3f; // tweak as needed
-    
-    int movement = (up ? -movementDistance : movementDistance);
-    
-    [UIView beginAnimations: @"anim" context: nil];
-    [UIView setAnimationBeginsFromCurrentState: YES];
-    [UIView setAnimationDuration: movementDuration];
-    self.view.frame = CGRectOffset(self.view.frame, 0, movement);
-    [UIView commitAnimations];
-}
-
-
-
-
-
-
-
-
-
-
-// Called when a button is clicked in the UIAlertView
-- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
-{
-	if(buttonIndex == 1)
-		[self dismissViewControllerAnimated:YES completion:nil];
-}
-
-// Called when a button is clicked in the UIActionSheet
-- (void)actionSheet:(UIActionSheet *)actionSheet willDismissWithButtonIndex:(NSInteger)buttonIndex
-{
-    if(buttonIndex == 0)
-        [self dismissViewControllerAnimated:YES completion:nil];
-}
-
-
-
-
-
-
-
-// called when the keyboard is shown
-- (void)keyboardWasShown:(NSNotification*)aNotification
-{
-    NSDictionary* info = [aNotification userInfo];
-    CGRect kbRect = [[info objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue];
-    kbRect = [self.view convertRect:kbRect toView:nil];
-    UIEdgeInsets contentInsets = UIEdgeInsetsMake(0.0, 0.0, kbRect.size.height, 0.0);
-    _scrollView.contentInset = contentInsets;
-    _scrollView.scrollIndicatorInsets = contentInsets;
-	
-    CGRect aRect = self.view.frame;
-    aRect.size.height -= kbRect.size.height;
-    //aRect.size.height -= self.toolbar.frame.size.height;
-    CGPoint fieldOrigin = _activeField.frame.origin;
-    fieldOrigin.y -= _scrollView.contentOffset.y;
-    fieldOrigin = [self.view convertPoint:fieldOrigin toView:self.view.superview];
-    _originalOffset = _scrollView.contentOffset;
-	
-	// scroll the scrollview down a tiny bit more
-	CGRect fieldRect = _activeField.frame;
-	CGRect tallerRect = CGRectMake(fieldRect.origin.x, fieldRect.origin.y, fieldRect.size.width, fieldRect.size.height + 50); // 50 more
-	
-    if (!CGRectContainsPoint(aRect, fieldOrigin) ) {
-        [_scrollView scrollRectToVisible:tallerRect animated:YES];
-    }
-}
-
-
- 
-
-
--- from stackoverflow.com/questions/7952762/xcode-ios5-move-uiview-up-when-keyboard-appears?answertab=active#tab-top
-- (void)textFieldDidBeginEditing:(UITextField *)textField
-{
-    [UIView beginAnimations:nil context:NULL];
-    [UIView setAnimationDuration:0.25];
-    self.view.frame = CGRectMake(0,-10,320,400);
-    [UIView commitAnimations];
-    
-}
-*/
-
-/*
-/// called when the keyboard is hidden
-- (void)keyboardWillBeHidden:(NSNotification*)aNotification {
-	UIEdgeInsets contentInsets = UIEdgeInsetsZero;
-	_scrollView.contentInset = contentInsets;
-	_scrollView.scrollIndicatorInsets = contentInsets;
-	[_scrollView setContentOffset:_originalOffset animated:YES];
-}
-*/
-
 
 
 

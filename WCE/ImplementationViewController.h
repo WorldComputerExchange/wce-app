@@ -14,8 +14,6 @@
 }
 
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
-//@property (nonatomic, copy) UIActionSheet *actionSheet;
-
 @property (weak, nonatomic) IBOutlet UITextField *iqq1;
 @property (weak, nonatomic) IBOutlet UITextField *iqq2;
 @property (weak, nonatomic) IBOutlet UITextView *iqq3;
@@ -44,11 +42,5 @@
 
 - (IBAction)backgroundTouched:(id)sender;
 - (IBAction)textfieldReturn:(id)sender;
-//- (IBAction)textviewReturn:(id)sender;
-
-
-
-//- (IBAction)cancelChanges:(id)sender;
-//- (IBAction)saveChanges:(id)sender;
 
 @end

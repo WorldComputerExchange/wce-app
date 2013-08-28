@@ -3,7 +3,6 @@
 //  WCE
 //
 //  Created by  Brian Beckerle on 5/5/13.
-//  Copyright (c) 2013  Brian Beckerle. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
@@ -15,11 +14,7 @@
     
 }
 
-//@interface EvaluationViewController : UIViewController
-
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
-//@property (nonatomic, copy) UIActionSheet *actionSheet;
-
 @property (weak, nonatomic) IBOutlet UITextField *efq1;
 @property (weak, nonatomic) IBOutlet UITextField *efq2;
 @property (weak, nonatomic) IBOutlet UITextField *efq3;

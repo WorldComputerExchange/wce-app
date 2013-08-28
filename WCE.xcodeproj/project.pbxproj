@@ -13,6 +13,7 @@
 		8C27586B16CC820E00DEDAC8 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C27586A16CC820E00DEDAC8 /* LoginViewController.m */; };
 		8C27586E16CC828F00DEDAC8 /* LocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C27586D16CC828F00DEDAC8 /* LocationViewController.m */; };
 		8C2AE38E17C90D6B00C00BAF /* Partner.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C2AE38D17C90D6B00C00BAF /* Partner.m */; };
+		8C2AE39117CD52DB00C00BAF /* CoverSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C2AE39017CD52DB00C00BAF /* CoverSheet.m */; };
 		8C32DF4516E26BB8005AFA89 /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C32DF4416E26BB8005AFA89 /* Location.m */; };
 		8C38594D173AC558003A323B /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C38594C173AC558003A323B /* libsqlite3.0.dylib */; };
 		8C385951173AF07C003A323B /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C385950173AF07C003A323B /* Icon@2x.png */; };
@@ -74,6 +75,8 @@
 		8C27586D16CC828F00DEDAC8 /* LocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LocationViewController.m; path = ../LocationViewController.m; sourceTree = "<group>"; };
 		8C2AE38C17C90D6B00C00BAF /* Partner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Partner.h; sourceTree = "<group>"; };
 		8C2AE38D17C90D6B00C00BAF /* Partner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Partner.m; sourceTree = "<group>"; };
+		8C2AE38F17CD52DB00C00BAF /* CoverSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoverSheet.h; sourceTree = "<group>"; };
+		8C2AE39017CD52DB00C00BAF /* CoverSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoverSheet.m; sourceTree = "<group>"; };
 		8C32DF4316E26BB8005AFA89 /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Location.h; sourceTree = "<group>"; };
 		8C32DF4416E26BB8005AFA89 /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Location.m; sourceTree = "<group>"; };
 		8C38594C173AC558003A323B /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
@@ -212,9 +215,19 @@
 			name = Login;
 			sourceTree = "<group>";
 		};
+		8C2AE39217CD52F100C00BAF /* Forms */ = {
+			isa = PBXGroup;
+			children = (
+				8C2AE38F17CD52DB00C00BAF /* CoverSheet.h */,
+				8C2AE39017CD52DB00C00BAF /* CoverSheet.m */,
+			);
+			name = Forms;
+			sourceTree = "<group>";
+		};
 		8C32DF2C16E26B22005AFA89 /* Objects */ = {
 			isa = PBXGroup;
 			children = (
+				8C2AE39217CD52F100C00BAF /* Forms */,
 				8C32DF4316E26BB8005AFA89 /* Location.h */,
 				8C32DF4416E26BB8005AFA89 /* Location.m */,
 				8CD27FEC1720BC6B00973A04 /* User.h */,
@@ -555,6 +568,7 @@
 				8CA9678417A2FEBE003C3B70 /* FMResultSet.m in Sources */,
 				8CA9678B17AC4130003C3B70 /* DataAccess.m in Sources */,
 				8C2AE38E17C90D6B00C00BAF /* Partner.m in Sources */,
+				8C2AE39117CD52DB00C00BAF /* CoverSheet.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

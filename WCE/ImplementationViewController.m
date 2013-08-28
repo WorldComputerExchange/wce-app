@@ -11,7 +11,6 @@
 @end
 
 @implementation ImplementationViewController
-//@synthesize scrollView;
 
 
 

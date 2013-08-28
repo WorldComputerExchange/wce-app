@@ -310,6 +310,100 @@
     return success;
 }
 
+
+/**Form Access Methods**/
+
+/**
+Get a cover sheet for a given partner
+ **/
+-(CoverSheet *)getCoverSheetForPartner:(Partner *)partner{
+    FMDatabase *db = [FMDatabase databaseWithPath:[self getDatabasePath]];
+    
+    [db open];
+    
+    FMResultSet *results = [db executeQuery:@"SELECT * FROM coverSheet WHERE partnerId = ?", [NSNumber numberWithInteger:partner.partnerId]];
+    
+    CoverSheet *curCoverSheet = [[CoverSheet alloc] init];
+    
+    if([results next]){
+        curCoverSheet.partnerId = [results intForColumn:@"partnerid"];
+        curCoverSheet.coverSheetId = [results intForColumn:@"id"];
+        curCoverSheet.q1 = [results stringForColumn:@"q1"];
+        curCoverSheet.q2 = [results stringForColumn:@"q2"];
+        curCoverSheet.q3 = [results stringForColumn:@"q3"];
+        curCoverSheet.q4 = [results stringForColumn:@"q4"];
+        curCoverSheet.q5 = [results stringForColumn:@"q5"];
+        curCoverSheet.q6 = [results stringForColumn:@"q6"];
+    }
+    
+    [db close];
+    
+    return curCoverSheet;
+}
+
+-(NSInteger)getCoverSheetIdForPartner:(Partner *)partner{
+    FMDatabase *db = [FMDatabase databaseWithPath:[self getDatabasePath]];
+    
+    [db open];
+    
+    FMResultSet *results = [db executeQuery:@"SELECT * FROM coverSheet WHERE partnerId = ?", [NSNumber numberWithInteger:partner.partnerId]];
+    
+    NSInteger partnerId = 0;
+    
+    if([results next]){
+        partnerId = [results intForColumn:@"partnerid"];
+    }
+    
+    [db close];
+    
+    return partnerId;
+}
+
+/**
+ Insert cover sheet into database
+ A cover sheet NEEDS a valid partner id in order to show up in the application
+ **/
+-(BOOL)insertCoverSheet:(CoverSheet *)coverSheet{
+    FMDatabase *db = [FMDatabase databaseWithPath:[self getDatabasePath]];
+    
+    [db open];
+    
+    //@"INSERT INTO partner (name, locationId) VALUES (?, ?);"
+    BOOL success =  [db executeUpdate:@"INSERT INTO coverSheet (partnerid, q1, q2, q3, q4, q5, q6) VALUES (?, ?, ?, ?, ?, ?, ?);",
+                     [NSNumber numberWithInteger:coverSheet.partnerId], coverSheet.q1,
+                     coverSheet.q2, coverSheet.q3, coverSheet.q4, coverSheet.q5, coverSheet.q6, nil];
+    
+    if(!success){
+        NSLog(@"%@", [db lastErrorMessage]);
+    }
+    
+    [db close];
+    
+    return success;
+}
+
+/**
+ Use this method to update a coverSheet
+ needs a valid coverSheet id for updating
+ **/
+-(BOOL)updateCoverSheet:(CoverSheet *)coverSheet{
+    FMDatabase *db = [FMDatabase databaseWithPath:[self getDatabasePath]];
+    
+    [db open];
+    
+    BOOL success = [db executeUpdate:@"UPDATE coverSheet SET q1 = ?, q2 = ?, q3 = ?, q4 = ?, q5 = ?, q6 = ?, partnerid = ? WHERE id= ?;"
+                    , coverSheet.q1, coverSheet.q2, coverSheet.q3, coverSheet.q4, coverSheet.q5, coverSheet.q6,
+                    [NSNumber numberWithInteger:coverSheet.partnerId],
+                    [NSNumber numberWithInteger:coverSheet.coverSheetId]];
+    
+    if (!success){
+        NSLog(@"%@", [db lastErrorMessage]);
+    }
+    [db close];
+    
+    return success;
+}
+
 @end
 
 
