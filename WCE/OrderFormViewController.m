@@ -6,6 +6,8 @@
 //
 
 #import "OrderFormViewController.h"
+#import "DataAccess.h"
+#import "User.h"
 
 @interface OrderFormViewController ()
 
@@ -17,7 +19,7 @@
 
 
 
-@synthesize ofq1, ofq2a, ofq2b, ofq2c, ofq3, ofq4a, ofq4b, ofq4c, ofq5a, ofq5b, ofq5c, ofq6a, ofq6b, ofq6c, ofq6d, ofq7a, ofq7b, ofq8, ofq9, ofq10, ofq11, ofq12, ofq13a, ofq13b, ofq14, ofq15;
+@synthesize q1, q2_1, q2_2, q2_3, q3, q4_1, q4_2, q4_3, q5_1, q5_2, q5_3, q6_1, q6_2, q6_3, q6_4, q7_1, q7_2, q8, q9, q10, q11, q12, q13_1, q13_2, q14, q15, sharedPartner, savedOrder, hasOrder;
 
 
 
@@ -31,33 +33,147 @@ static const CGFloat PORTRAIT_KEYBOARD_HEIGHT = 216;
 static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
 
 - (IBAction)backgroundTouched:(id)sender {
-    [ofq1 resignFirstResponder];
-    [ofq2a resignFirstResponder];
-    [ofq2b resignFirstResponder];
-    [ofq2c resignFirstResponder];
-    [ofq3 resignFirstResponder];
-    [ofq4a resignFirstResponder];
-    [ofq4b resignFirstResponder];
-    [ofq4c resignFirstResponder];
-    [ofq5a resignFirstResponder];
-    [ofq5b resignFirstResponder];
-    [ofq5c resignFirstResponder];
-    [ofq6a resignFirstResponder];
-    [ofq6b resignFirstResponder];
-    [ofq6c resignFirstResponder];
-    [ofq6d resignFirstResponder];
-    [ofq7a resignFirstResponder];
-    [ofq7b resignFirstResponder];
-    [ofq8 resignFirstResponder];
-    [ofq9 resignFirstResponder];
-    [ofq10 resignFirstResponder];
-    [ofq11 resignFirstResponder];
-    [ofq12 resignFirstResponder];
-    [ofq13a resignFirstResponder];
-    [ofq13b resignFirstResponder];
-    [ofq14 resignFirstResponder];
-    [ofq15 resignFirstResponder];
+    [q1 resignFirstResponder];
+    [q2_1 resignFirstResponder];
+    [q2_2 resignFirstResponder];
+    [q2_3 resignFirstResponder];
+    [q3 resignFirstResponder];
+    [q4_1 resignFirstResponder];
+    [q4_2 resignFirstResponder];
+    [q4_3 resignFirstResponder];
+    [q5_1 resignFirstResponder];
+    [q5_2 resignFirstResponder];
+    [q5_3 resignFirstResponder];
+    [q6_1 resignFirstResponder];
+    [q6_2 resignFirstResponder];
+    [q6_3 resignFirstResponder];
+    [q6_4 resignFirstResponder];
+    [q7_1 resignFirstResponder];
+    [q7_2 resignFirstResponder];
+    [q8 resignFirstResponder];
+    [q9 resignFirstResponder];
+    [q10 resignFirstResponder];
+    [q11 resignFirstResponder];
+    [q12 resignFirstResponder];
+    [q13_1 resignFirstResponder];
+    [q13_2 resignFirstResponder];
+    [q14 resignFirstResponder];
+    [q15 resignFirstResponder];
+}
 
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+	// Do any additional setup after loading the view.
+    
+    
+    //get the impQuestions for the current partner if it exists
+    User *sharedUser = [User sharedUser];
+    
+    sharedPartner = [sharedUser sharedPartner];
+    
+    DataAccess *db = [[DataAccess alloc] init];
+    
+    savedOrder = [[Order alloc] init];
+    savedOrder = [db getOrderForPartner:sharedPartner];
+    
+    if (savedOrder.orderId < 0) { //no cover sheet found
+        hasOrder = false;
+    }else {
+        hasOrder = true;
+        self.q1.selectedSegmentIndex = [self segmentIndexForString:savedOrder.q1];
+        self.q2_1.text = savedOrder.q2_1;
+        self.q2_2.text = savedOrder.q2_2;
+        self.q2_3.text = savedOrder.q2_3;
+        self.q3.selectedSegmentIndex = [self segmentIndexForString:savedOrder.q3];
+        self.q4_1.selectedSegmentIndex = [self segmentIndexForString:savedOrder.q4_1];
+        self.q4_2.text = savedOrder.q4_2;
+        self.q4_3.text = savedOrder.q4_3;
+        self.q5_1.selectedSegmentIndex = [self segmentIndexForString:savedOrder.q5_1];
+        self.q5_2.text = savedOrder.q5_2;
+        self.q5_3.text = savedOrder.q5_3;
+        self.q6_1.text = savedOrder.q6_1;
+        self.q6_2.text = savedOrder.q6_2;
+        self.q6_3.text = savedOrder.q6_4;
+        self.q6_4.text = savedOrder.q6_4;
+        self.q7_1.selectedSegmentIndex = [self segmentIndexForString:savedOrder.q7_1];
+        self.q7_2.selectedSegmentIndex = [self segmentIndexForString:savedOrder.q7_2];
+        self.q8.text = savedOrder.q8;
+        self.q9.selectedSegmentIndex = [self segmentIndexForString:savedOrder.q9];
+        self.q10.selectedSegmentIndex = [self segmentIndexForString:savedOrder.q10];
+        self.q11.selectedSegmentIndex = [self segmentIndexForString:savedOrder.q11];
+        self.q12.selectedSegmentIndex = [self segmentIndexForString:savedOrder.q12];
+        self.q13_1.selectedSegmentIndex = [self segmentIndexForString:savedOrder.q13_1];
+        self.q13_2.text = savedOrder.q13_2;
+        self.q14.selectedSegmentIndex = [self segmentIndexForString:savedOrder.q14];
+        self.q15.selectedSegmentIndex = [self segmentIndexForString:savedOrder.q15];
+    }
+    
+    
+}
+
+- (IBAction)saveChanges:(id)sender{
+    NSLog(@"Saving changes to impQuestions");
+    
+    Order *curOrder =[[Order alloc] init];
+    
+    curOrder.partnerId = [sharedPartner partnerId];
+    
+    curOrder.q1 = [self stringForSegmentIndex:self.q1.selectedSegmentIndex];
+    curOrder.q2_1 = self.q2_1.text;
+    curOrder.q2_2 = self.q2_2.text;
+    curOrder.q2_3 = self.q2_3.text;
+    curOrder.q3 = [self stringForSegmentIndex:self.q3.selectedSegmentIndex];
+    curOrder.q4_1 = [self stringForSegmentIndex:self.q4_1.selectedSegmentIndex];
+    curOrder.q4_2 = self.q4_2.text;
+    curOrder.q4_3 = self.q4_3.text;
+    curOrder.q5_1 = [self stringForSegmentIndex:self.q5_1.selectedSegmentIndex];
+    curOrder.q5_2 = self.q5_2.text;
+    curOrder.q5_3 = self.q5_3.text;
+    curOrder.q6_1 = self.q6_1.text;
+    curOrder.q6_2 = self.q6_2.text;
+    curOrder.q6_3 = self.q6_3.text;
+    curOrder.q6_4 = self.q6_4.text;
+    curOrder.q7_1 = [self stringForSegmentIndex:self.q7_1.selectedSegmentIndex];
+    curOrder.q7_2 = [self stringForSegmentIndex:self.q7_2.selectedSegmentIndex];
+    curOrder.q8 = self.q8.text;
+    curOrder.q9 = [self stringForSegmentIndex:self.q9.selectedSegmentIndex];
+    curOrder.q10 = [self stringForSegmentIndex:self.q10.selectedSegmentIndex];
+    curOrder.q11 = [self stringForSegmentIndex:self.q11.selectedSegmentIndex];
+    curOrder.q12 = [self stringForSegmentIndex:self.q12.selectedSegmentIndex];
+    curOrder.q13_1 = [self stringForSegmentIndex:self.q13_1.selectedSegmentIndex];
+    curOrder.q13_2 = self.q13_2.text;
+    curOrder.q14 = [self stringForSegmentIndex:self.q14.selectedSegmentIndex];
+    curOrder.q15 = [self stringForSegmentIndex:self.q15.selectedSegmentIndex];
+    
+    DataAccess *db = [[DataAccess alloc] init];
+    
+    if (!hasOrder){
+        [db insertOrder:curOrder];
+    }else{
+        curOrder.orderId = savedOrder.orderId;
+        [db updateOrder:curOrder];
+    }
+    
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+//return the correct segment (YES or NO) for the given string
+-(NSInteger)segmentIndexForString:(NSString *)string{
+    if([[string lowercaseString] characterAtIndex:0] == 'y'){
+        return 0;
+    }else{
+        return 1;
+    }
+}
+
+//return YES or NO depending on segment index
+-(NSString *)stringForSegmentIndex:(NSInteger)segIndex{
+    if(segIndex == 0){
+        return @"YES";
+    }else{
+        return @"NO";
+    }
 }
 
 
@@ -86,12 +202,6 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
         // Custom initialization
     }
     return self;
-}
-
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-	// Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning

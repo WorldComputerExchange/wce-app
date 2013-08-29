@@ -590,6 +590,106 @@ Get a cover sheet for a given partner
     return success;
 }
 
+
+//ORDER FORM
+/**
+ Get an Order Form for a given partner
+ **/
+
+-(Order *)getOrderForPartner:(Partner *)partner{
+    FMDatabase *db = [FMDatabase databaseWithPath:[self getDatabasePath]];
+    
+    [db open];
+    
+    FMResultSet *results = [db executeQuery:@"SELECT * FROM orderForm WHERE partnerid = ?", [NSNumber numberWithInteger:partner.partnerId]];
+    
+    Order *curOrder = [[Order alloc] init];
+    
+    if([results next]){
+        curOrder.partnerId = [results intForColumn:@"partnerid"];
+        curOrder.orderId = [results intForColumn:@"id"];
+        curOrder.q1 = [results stringForColumn:@"q1"];
+        curOrder.q2_1 = [results stringForColumn:@"q2_1"];
+        curOrder.q2_2 = [results stringForColumn:@"q2_2"];
+        curOrder.q2_3 = [results stringForColumn:@"q2_3"];
+        curOrder.q3 = [results stringForColumn:@"q3"];
+        curOrder.q4_1 = [results stringForColumn:@"q4_1"];
+        curOrder.q4_2 = [results stringForColumn:@"q4_2"];
+        curOrder.q4_3 = [results stringForColumn:@"q4_3"];
+        curOrder.q5_1 = [results stringForColumn:@"q5_1"];
+        curOrder.q5_2 = [results stringForColumn:@"q5_2"];
+        curOrder.q5_3 = [results stringForColumn:@"q5_3"];
+        curOrder.q6_1 = [results stringForColumn:@"q6_1"];
+        curOrder.q6_2 = [results stringForColumn:@"q6_2"];
+        curOrder.q6_3 = [results stringForColumn:@"q6_3"];
+        curOrder.q6_4 = [results stringForColumn:@"q6_4"];
+        curOrder.q7_1 = [results stringForColumn:@"q7_1"];
+        curOrder.q7_2 = [results stringForColumn:@"q7_2"];
+        curOrder.q8 = [results stringForColumn:@"q8"];
+        curOrder.q9 = [results stringForColumn:@"q9"];
+        curOrder.q10 = [results stringForColumn:@"q10"];
+        curOrder.q11 = [results stringForColumn:@"q11"];
+        curOrder.q12 = [results stringForColumn:@"q12"];
+        curOrder.q13_1 = [results stringForColumn:@"q13_1"];
+        curOrder.q13_2 = [results stringForColumn:@"q13_2"];
+        curOrder.q14 = [results stringForColumn:@"q14"];
+        curOrder.q15 = [results stringForColumn:@"q15"];
+    }
+    
+    [db close];
+    
+    return curOrder;
+}
+
+
+/**
+ Insert Order Form into database
+ An Order Form NEEDS a valid partnerId in order to show up in the application
+ **/
+-(BOOL)insertOrder:(Order *)order{
+    FMDatabase *db = [FMDatabase databaseWithPath:[self getDatabasePath]];
+    
+    [db open];
+    
+    /**
+     CREATE TABLE orderForm(partnerid INTEGER references partner, id INTEGER PRIMARY KEY, q1 varchar(5), q2 varchar(5),  q2_1 varchar(5), q2_2 varchar(5), q2_3 varchar(5), q3 varchar(5),  q4_1 varchar(5), q4_2 varchar(5), q4_3 varchar(5), q5_1 varchar(5),  q5_2 varchar(5), q5_3 varchar(5), q6_1 varchar(5), q6_2 varchar(5),  q6_3 varchar(5), q6_4 varchar(5), q7_1 varchar(5), q7_2 varchar(5),  q8 varchar(30), q9 varchar(5), q10 varchar(5), q11 varchar(5),  q12 varchar(5), q13_1 varchar(5), q13_2 varchar(500), q14 varchar(5),  q15 varchar(5))
+     **/
+    
+    BOOL success =
+    [db executeUpdate:@"INSERT INTO orderForm (partnerid, q1, q2_1, q2_2, q2_3, q3, q4_1, q4_2, q4_3, q5_1, q5_2, q5_3, q6_1, q6_2, q6_3, q6_4, q7_1, q7_2, q8, q9, q10, q11, q12, q13_1, q13_2, q14, q15) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);", [NSNumber numberWithInteger:order.partnerId], order.q1, order.q2_1, order.q2_2, order.q2_3, order.q3, order.q4_1, order.q4_2, order.q4_3, order.q5_1, order.q5_2, order.q5_3, order.q6_1, order.q6_2, order.q6_3, order.q6_4, order.q7_1, order.q7_2, order.q8, order.q9, order.q10, order.q11, order.q12, order.q13_1, order.q13_2, order.q14, order.q15, nil];
+    
+    if(!success){
+        NSLog(@"%@", [db lastErrorMessage]);
+    }
+    
+    [db close];
+    
+    return success;
+}
+
+
+/**
+ Use this method to update an Order Form
+ needs a valid orderId for updating
+ **/
+-(BOOL)updateOrder:(Order *)order{
+    FMDatabase *db = [FMDatabase databaseWithPath:[self getDatabasePath]];
+    
+    [db open];
+    
+    BOOL success = [db executeUpdate:@"UPDATE orderForm SET q1 = ?, q2_1 = ?, q2_2 = ?, q2_3 = ?, q3 = ?, q4_1 = ?, q4_2 = ?, q4_3 = ?, q5_1 = ?, q5_2 = ?, q5_3 = ?, q6_1 = ?, q6_2 = ?, q6_3 = ?, q6_4 = ?, q7_1 = ?, q7_2 = ?, q8 = ?, q9 = ?, q10 = ?, q11 = ?, q12 = ?, q13 = ?, q14 = ?, q15 = ? WHERE id= ?;", order.q1, order.q2_1, order.q2_2, order.q2_3, order.q3, order.q4_1, order.q4_2, order.q4_3, order.q5_1, order.q5_2, order.q5_3, order.q6_1, order.q6_2, order.q6_3, order.q6_4, order.q7_1, order.q7_2, order.q8, order.q9, order.q10, order.q11, order.q12, order.q13_1, order.q13_2, order.q14, [NSNumber numberWithInteger:order.orderId], nil];
+    
+    if (!success){
+        NSLog(@"%@", [db lastErrorMessage]);
+    }
+    [db close];
+    
+    return success;
+}
+
+
+
+
 @end
 
 

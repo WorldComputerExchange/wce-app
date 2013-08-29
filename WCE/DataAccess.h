@@ -17,6 +17,7 @@
 #import "CoverSheet.h"
 #import "Evaluation.h"
 #import "ImpQuestions.h"
+#import "Order.h"
 
 @interface DataAccess : NSObject
 {
@@ -56,4 +57,9 @@
 -(ImpQuestions *)getImpForPartner:(Partner *)partner;
 -(BOOL)insertImp:(ImpQuestions *)impQues;
 -(BOOL)updateImp:(ImpQuestions *)impQues;
+
+//Order Form access methods
+-(Order *)getOrderForPartner:(Partner *)partner;
+-(BOOL)insertOrder:(Order *)order;
+-(BOOL)updateOrder:(Order *)order;
 @end
