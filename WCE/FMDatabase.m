@@ -279,7 +279,7 @@
 }
 
 - (NSString *)stringFromDate:(NSDate *)date {
-        return [_dateFormat stringFromDate:date];
+    return [_dateFormat stringFromDate:date];
 }
 
 
@@ -704,7 +704,7 @@
         statement = [[FMStatement alloc] init];
         [statement setStatement:pStmt];
         
-        if (_shouldCacheStatements) {
+        if (_shouldCacheStatements && sql) {
             [self setCachedStatement:statement forQuery:sql];
         }
     }
@@ -1067,11 +1067,9 @@
 
 - (BOOL)startSavePointWithName:(NSString*)name error:(NSError**)outErr {
     
-    // FIXME: make sure the savepoint name doesn't have a ' in it.
-    
     NSParameterAssert(name);
     
-    if (![self executeUpdate:[NSString stringWithFormat:@"savepoint '%@';", name]]) {
+    if (![self executeUpdate:@"savepoint '?';", name]) {
 
         if (outErr) {
             *outErr = [self lastError];
@@ -1087,7 +1085,7 @@
     
     NSParameterAssert(name);
     
-    BOOL worked = [self executeUpdate:[NSString stringWithFormat:@"release savepoint '%@';", name]];
+    BOOL worked = [self executeUpdate:@"release savepoint '?';", name];
     
     if (!worked && outErr) {
         *outErr = [self lastError];
@@ -1100,9 +1098,9 @@
     
     NSParameterAssert(name);
     
-    BOOL worked = [self executeUpdate:[NSString stringWithFormat:@"rollback transaction to savepoint '%@';", name]];
+    BOOL worked = [self executeUpdate:@"rollback transaction to savepoint '?';", name];
     
-    if (!worked && *outErr) {
+    if (!worked && outErr) {
         *outErr = [self lastError];
     }
     

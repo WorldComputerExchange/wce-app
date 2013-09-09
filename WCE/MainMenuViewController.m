@@ -70,6 +70,28 @@
 	return cell;
 }
 
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath{
+    // cell background image view
+    UIImageView *background;
+    // first cell check
+    if (indexPath.row == 0) {
+        background = [[UIImageView alloc] initWithImage:
+                      [UIImage imageNamed:@"top-cell-bg.png"]];
+        // last cell check
+    } else if (indexPath.row ==
+               [tableView numberOfRowsInSection:indexPath.section] - 1) {
+        background = [[UIImageView alloc] initWithImage:
+                      [UIImage imageNamed:@"bottom-cell-bg.png"]];
+        // middle cells*/
+    } else {
+        background = [[UIImageView alloc] initWithImage:
+                      [UIImage imageNamed:@"middle-cell-bg.png"]];
+    }
+    // set background view
+    [cell setBackgroundView:background];
+    // release image view
+}
+
 
 #pragma mark - Table view delegate
 
