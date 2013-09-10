@@ -14,7 +14,6 @@
 #import "WCETabBarController.h"
 #import "DataAccess.h"
 #import "CustomCell.h"
-#import <QuartzCore/QuartzCore.h>
 
 @interface LocationViewController ()
 
@@ -42,10 +41,6 @@
 
     [locationTableView registerClass:[CustomCell class]
            forCellReuseIdentifier:@"customCell"];
-    locationTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    locationTableView.backgroundColor = [UIColor colorWithWhite:0.25 alpha:1.0];
-    
-    locationTableView.layer.cornerRadius = 4;
     
     //get shared location instance
     sharedLocation = [Location sharedLocation];
@@ -105,9 +100,6 @@
 		[self.navigationItem setTitle:@"Choose Location"];
 		
 		[locationTableView setBackgroundView:nil];
-		[locationTableView setBackgroundColor:[UIColor clearColor]];
-		[locationTableView setSeparatorColor:[UIColor lightGrayColor]];
-		[locationTableView setSeparatorStyle:UITableViewCellSeparatorStyleSingleLineEtched];
 		
 		[locationTableView reloadData];
 		
@@ -152,9 +144,6 @@
         [sharedLocation setLanguage: [selectedLocation language]];
         [sharedLocation setLocationId:[selectedLocation locationId]];
         
-        NSLog(@"%@", selectedName);
-        NSLog(@"%@", [sharedLocation name]);
-        
         [self performSegueWithIdentifier:@"pushMainMenu" sender:self];
     }
 }
@@ -165,15 +154,18 @@
 }
 
 - (NSInteger)tableView:(UITableView *)table numberOfRowsInSection:(NSInteger)section {
-    NSLog(@"#of saved locations: %d", [[sharedUser savedLocations] count]);
 	return [[sharedUser savedLocations] count] + 1;
 }
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath{
     // cell background image view
     UIImageView *background;
+    
     // first cell check
-    if (indexPath.row == 0) {
+    if ([[sharedUser savedLocations] count] == 0){
+        background = [[UIImageView alloc] initWithImage:
+                      [UIImage imageNamed:@"solo-cell-bg.png"]];
+    }else if (indexPath.row == 0) {
         background = [[UIImageView alloc] initWithImage:
                       [UIImage imageNamed:@"top-cell-bg.png"]];
         // last cell check
@@ -186,6 +178,7 @@
         background = [[UIImageView alloc] initWithImage:
                       [UIImage imageNamed:@"middle-cell-bg.png"]];
     }
+    background.alpha = 0.70; //make background semitransparent
     // set background view
     [cell setBackgroundView:background];
     // release image view
@@ -214,9 +207,9 @@
 	return cell;
 }
 
--(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+/*-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 44;
-}
+}*/
 
 /**Editing Methods**/
 
@@ -258,12 +251,6 @@
     }
 }
 
-
-// Tells the table view how tall its footer should be (the footer contains the Choose from Map button)
-- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
-{
-	return 0;
-}
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
