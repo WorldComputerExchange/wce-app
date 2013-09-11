@@ -18,7 +18,7 @@
 
 @implementation AddLocationViewController
 
-@synthesize locations, countries, languages, actionSheet, dropDownTableView, dataArray, sharedUser, selectedCountry, selectedLanguage;
+@synthesize locations, countries, languages, actionSheet, dataArray, sharedUser, selectedCountry, selectedLanguage;
 @synthesize location, contact, phone, address, city, zip;
 
 

@@ -22,7 +22,6 @@
     
     
 	UIButton *chooseFromMap;
-	UIView *footerView;
     Location *sharedLocation;
     User *sharedUser;
 }
@@ -31,7 +30,6 @@
 @property (nonatomic, copy) NSArray *locations;
 
 @property (nonatomic, retain) UIButton *chooseFromMap;
-@property (nonatomic, retain) UIView *footerView;
 @property (nonatomic, retain) Location *sharedLocation;
 @property (nonatomic, retain) User *sharedUser;
 

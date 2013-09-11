@@ -12,8 +12,7 @@
 
 @interface EvaluationViewController : UIViewController <UIActionSheetDelegate, UITextFieldDelegate, UITextViewDelegate>
 {
-    UIActionSheet *actionSheet;
-    
+    UIActionSheet *actionSheet;    
 }
 
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;

@@ -6,6 +6,7 @@
 /**Info, Forms, Phrases, Misc Menu**/
 
 #import "MainMenuViewController.h"
+#import "CustomCell.h"
 
 @interface MainMenuViewController ()
 
@@ -30,6 +31,8 @@
 
     sharedLocation = [Location sharedLocation];
     
+    [mainMenuTableView registerClass:[CustomCell class]
+              forCellReuseIdentifier:@"customCell"];
 }
 
 - (void)didReceiveMemoryWarning
@@ -55,17 +58,25 @@
 /**Set up the table**/
 - (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-	//initialize a cell
-    UITableViewCell *cell;
+    
+    static NSString *CellIdentifier = @"customCell";
+    
+    CustomCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+
+    NSString *name; 
     if (indexPath.row == 0){
-        cell = [tableView dequeueReusableCellWithIdentifier:@"Info"];
+        name = @"Info";
     }else if (indexPath.row == 1){
-        cell = [tableView dequeueReusableCellWithIdentifier:@"Forms"];
+        name = @"Forms";
     }else if (indexPath.row == 2){
-        cell = [tableView dequeueReusableCellWithIdentifier:@"Phrases"];
+        name = @"Phrases";
     }else {
-        cell = [tableView dequeueReusableCellWithIdentifier:@"Misc"];
+        name = @"Misc";
     }
+    
+    cell.mainTextLabel.text = name;
+    
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
 	return cell;
 }
@@ -87,6 +98,7 @@
         background = [[UIImageView alloc] initWithImage:
                       [UIImage imageNamed:@"middle-cell-bg.png"]];
     }
+    background.alpha = 0.70; //make background semitransparent
     // set background view
     [cell setBackgroundView:background];
     // release image view
@@ -97,8 +109,11 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    /*Phrases selected, get current language and display corresponding phrases**/
-    if(indexPath.row == 2){
+    if(indexPath.row == 0){
+        [self performSegueWithIdentifier:@"pushInfo" sender:self];
+    }else if(indexPath.row == 1){
+        [self performSegueWithIdentifier:@"pushForms" sender:self];
+    }else if(indexPath.row == 2){
         NSLog(@"Current Language is : %@", sharedLocation.language);
         if ([sharedLocation.language isEqualToString:@"Arabic"]){
             [self performSegueWithIdentifier:@"pushArabic" sender:self];
@@ -109,7 +124,8 @@
         }else{
             [self performSegueWithIdentifier:@"pushSpanish" sender:self];
         }
-        
+    }else{
+        [self performSegueWithIdentifier:@"pushMisc" sender:self];
     }
 }
 

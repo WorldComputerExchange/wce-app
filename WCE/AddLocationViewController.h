@@ -23,7 +23,6 @@
 
 @property (nonatomic, copy) NSArray *locations;
 @property (nonatomic, copy) UIActionSheet *actionSheet;
-@property (nonatomic, retain) IBOutlet UITableView *dropDownTableView;
 @property (nonatomic, retain) NSArray *dataArray;
 @property (nonatomic, retain) NSArray *countries;
 @property (nonatomic, retain) NSArray *languages;

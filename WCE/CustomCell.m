@@ -61,11 +61,6 @@
     CGFloat width = textSize.width;
     CGFloat height = self.contentView.frame.size.height - (2 * VerticalMargin);
     self.mainTextLabel.frame = CGRectMake(x, y, width, height);
-    
-   /* x += width + HorizontalMargin;
-    textSize = [self.subTextLabel.text sizeWithFont:self.subTextLabel.font];
-    width = textSize.width;
-    self.subTextLabel.frame = CGRectMake(x, y, width, height);*/
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated

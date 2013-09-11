@@ -21,7 +21,7 @@
 
 @implementation LocationViewController
 
-@synthesize locationTableView, footerView, chooseFromMap, sharedLocation, sharedUser;
+@synthesize locationTableView, chooseFromMap, sharedLocation, sharedUser;
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil

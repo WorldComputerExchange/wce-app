@@ -1,18 +1,18 @@
 //
-//  FormsViewController.m
+//  FormsMenuViewController.m
 //  WCE
 //
-//  Created by  Brian Beckerle on 4/25/13.
+//  Created by  Brian Beckerle on 9/11/13.
 //
 
-#import "FormsViewController.h"
+#import "FormsMenuViewController.h"
 #import "CustomCell.h"
 
-@interface FormsViewController ()
+@interface FormsMenuViewController ()
 
 @end
 
-@implementation FormsViewController
+@implementation FormsMenuViewController
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -27,15 +27,8 @@
 {
     [super viewDidLoad];
     
-    UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Back"
-                                                                   style:UIBarButtonItemStylePlain target:nil action:nil];
-    
-    [formsTableView registerClass:[CustomCell class]
-               forCellReuseIdentifier:@"customCell"];
-    
-    self.navigationItem.backBarButtonItem = backButton;
-    //self.navigationItem.backBarButtonItem.title = @"Back";
-    
+    [formsMenuTableView registerClass:[CustomCell class]
+              forCellReuseIdentifier:@"customCell"];
 }
 
 - (void)didReceiveMemoryWarning
@@ -53,7 +46,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 3;
+    return 2;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -64,11 +57,9 @@
     
     NSString *name;
     if (indexPath.row == 0){
-        name = @"Cover Sheet";
-    }else if (indexPath.row == 1){
-        name = @"Order Form";
-    }else {
-        name = @"Implementation Questions";
+        name = @"Evaluation Form";
+    }else{
+        name = @"New Partners";
     }
     
     cell.mainTextLabel.text = name;
@@ -86,16 +77,14 @@
         background = [[UIImageView alloc] initWithImage:
                       [UIImage imageNamed:@"top-cell-bg.png"]];
         // last cell check
-    }else if (indexPath.row == 1){
-        background = [[UIImageView alloc] initWithImage:
-                      [UIImage imageNamed:@"middle-cell-bg.png"]];
     } else  {
         background = [[UIImageView alloc] initWithImage:
                       [UIImage imageNamed:@"bottom-cell-bg.png"]];
-    }
+    } 
     background.alpha = 0.70; //make background semitransparent
     // set background view
     [cell setBackgroundView:background];
+    // release image view
 }
 
 #pragma mark - Table view delegate
@@ -103,11 +92,10 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if(indexPath.row ==0){
-        [self performSegueWithIdentifier:@"pushCoverSheet" sender:self];
-    }else if (indexPath.row == 1){
-        [self performSegueWithIdentifier:@"pushOrder" sender:self];
-    }else {
-        [self performSegueWithIdentifier:@"pushImpQues" sender:self];
+        [self performSegueWithIdentifier:@"pushEvalForm" sender:self];
+    }else{
+        [self performSegueWithIdentifier:@"pushNewPartners" sender:self];
     }
 }
+
 @end

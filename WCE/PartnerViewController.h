@@ -16,7 +16,6 @@
     User *sharedUser;
 }
 
-@property (nonatomic,retain) UITableView* partnerTableView;
 @property (nonatomic, retain) NSMutableArray *partners;
 @property (nonatomic, retain) User *sharedUser;
 

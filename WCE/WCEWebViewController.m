@@ -12,7 +12,7 @@
 
 @implementation WCEWebViewController
 
-@synthesize webView, spinner;
+@synthesize spinner;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

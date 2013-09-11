@@ -24,7 +24,7 @@
     [self createAndCheckDatabase];
     
     //set the background image and navigation bar color
-	self.window.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background.gif"]];
+	self.window.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background.png"]];
     
    // UIImage *bg = [UIImage imageNamed:@"navBar-bg.png"];
     //UIImageView *bgView = [[UIImageView alloc] initWithImage:bg];

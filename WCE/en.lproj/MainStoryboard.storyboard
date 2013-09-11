@@ -224,7 +224,7 @@
                                 </view>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
-                                    <segue destination="tkG-4S-fd1" kind="push" id="RTe-Fv-xyK"/>
+                                    <segue destination="tkG-4S-fd1" kind="push" identifier="pushInfo" id="RTe-Fv-xyK"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Forms" textLabel="gQW-IJ-0G3" style="IBUITableViewCellStyleDefault" id="en3-iD-XI6">
@@ -245,7 +245,7 @@
                                 </view>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
-                                    <segue destination="SuZ-oP-kTY" kind="push" id="6X5-fs-LcP"/>
+                                    <segue destination="SuZ-oP-kTY" kind="push" identifier="pushForms" id="6X5-fs-LcP"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Phrases" textLabel="DnA-Ye-swQ" style="IBUITableViewCellStyleDefault" id="ToL-K4-JAr">
@@ -284,7 +284,7 @@
                                 </view>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
-                                    <segue destination="DJM-Rc-Ddq" kind="push" id="A8G-g4-h9x"/>
+                                    <segue destination="DJM-Rc-Ddq" kind="push" identifier="pushMisc" id="A8G-g4-h9x"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -298,6 +298,7 @@
                         <barButtonItem key="backBarButtonItem" title="Back" id="rCQ-Nh-TyL"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="mainMenuTableView" destination="av4-vI-bhX" id="6H6-U6-UCc"/>
                         <segue destination="HL6-OZ-kno" kind="push" identifier="pushFrench" id="SXg-4z-NxE"/>
                         <segue destination="QrA-zp-I7D" kind="push" identifier="pushSpanish" id="7U6-3H-aIB"/>
                         <segue destination="GlI-jh-diX" kind="push" identifier="pushArabic" id="9Wc-1o-paO"/>
@@ -307,100 +308,98 @@
             </objects>
             <point key="canvasLocation" x="1254" y="671"/>
         </scene>
-        <!--Table View Controller - Info Page-->
+        <!--Info View Controller - Info Page-->
         <scene sceneID="6q0-xm-r4h">
             <objects>
-                <tableViewController title="Info Page" id="tkG-4S-fd1" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="1He-LX-XcI">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s9o-Gf-Anm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tableViewController title="Info Page" id="tkG-4S-fd1" customClass="InfoViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="1He-LX-XcI">
                         <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                        <sections>
-                            <tableViewSection headerTitle="" id="0lt-TG-8Jp">
-                                <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="pDZ-fM-S3K" style="IBUITableViewCellStyleDefault" id="UpZ-29-5Rc">
-                                        <rect key="frame" x="0.0" y="10" width="320" height="45"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="10" y="1" width="280" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="About WCE" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pDZ-fM-S3K">
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                </label>
-                                            </subviews>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        </view>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <connections>
-                                            <segue destination="G51-90-qjF" kind="push" id="6aD-ek-21i"/>
-                                        </connections>
-                                    </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="vkw-WJ-E2M" style="IBUITableViewCellStyleDefault" id="Cbc-bi-Jrf">
-                                        <rect key="frame" x="0.0" y="55" width="320" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="10" y="0.0" width="280" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="History" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vkw-WJ-E2M">
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                </label>
-                                            </subviews>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        </view>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <connections>
-                                            <segue destination="K4a-rk-o8I" kind="push" id="ZfQ-Rc-IGT"/>
-                                        </connections>
-                                    </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="Juh-L5-EFc" style="IBUITableViewCellStyleDefault" id="E3w-6P-jRw">
-                                        <rect key="frame" x="0.0" y="99" width="320" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="10" y="0.0" width="280" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Content" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Juh-L5-EFc">
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                </label>
-                                            </subviews>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        </view>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <connections>
-                                            <segue destination="BdZ-ml-oe7" kind="push" id="Cjx-bY-dCu"/>
-                                        </connections>
-                                    </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="jYW-0S-sDj" style="IBUITableViewCellStyleDefault" id="EIh-hK-oUc">
-                                        <rect key="frame" x="0.0" y="143" width="320" height="45"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="10" y="0.0" width="280" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Costs" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jYW-0S-sDj">
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                </label>
-                                            </subviews>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        </view>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <connections>
-                                            <segue destination="Y6k-6c-ht6" kind="push" id="Djj-uD-7fa"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                        </sections>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AboutWCE" textLabel="x2K-FN-Muh" style="IBUITableViewCellStyleDefault" id="UpZ-29-5Rc">
+                                <rect key="frame" x="0.0" y="46" width="320" height="45"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="10" y="1" width="280" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="About WCE" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x2K-FN-Muh">
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <segue destination="G51-90-qjF" kind="push" identifier="pushAboutWCE" id="6aD-ek-21i"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="History" textLabel="dHO-YL-gPw" style="IBUITableViewCellStyleDefault" id="Cbc-bi-Jrf">
+                                <rect key="frame" x="0.0" y="91" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="10" y="0.0" width="280" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="History" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dHO-YL-gPw">
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <segue destination="K4a-rk-o8I" kind="push" identifier="pushHistory" id="ZfQ-Rc-IGT"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Content" textLabel="y05-km-7Ff" style="IBUITableViewCellStyleDefault" id="E3w-6P-jRw">
+                                <rect key="frame" x="0.0" y="135" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="10" y="0.0" width="280" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Content" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y05-km-7Ff">
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <segue destination="BdZ-ml-oe7" kind="push" identifier="pushContent" id="Cjx-bY-dCu"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Costs" textLabel="wea-Aq-E2H" style="IBUITableViewCellStyleDefault" id="EIh-hK-oUc">
+                                <rect key="frame" x="0.0" y="179" width="320" height="45"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="10" y="0.0" width="280" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Costs" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wea-Aq-E2H">
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <segue destination="Y6k-6c-ht6" kind="push" identifier="pushCosts" id="Djj-uD-7fa"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <sections/>
                         <connections>
                             <outlet property="dataSource" destination="tkG-4S-fd1" id="dsp-pC-38D"/>
                             <outlet property="delegate" destination="tkG-4S-fd1" id="4sA-eR-R4J"/>
@@ -409,8 +408,10 @@
                     <navigationItem key="navigationItem" title="INFO" id="wGH-XY-kqb">
                         <barButtonItem key="backBarButtonItem" title="Back" id="q5J-2d-KNx"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="infoTableView" destination="1He-LX-XcI" id="rWC-Yh-ywC"/>
+                    </connections>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="s9o-Gf-Anm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1754" y="707"/>
         </scene>
@@ -763,7 +764,7 @@ Et toi?/ Et vous? (polite)
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <accessibility key="accessibilityConfiguration" label="Cover Sheet"/>
                                         <connections>
-                                            <segue destination="NnU-84-OpA" kind="push" id="XW1-XP-hsi"/>
+                                            <segue destination="NnU-84-OpA" kind="push" identifier="pushCoverSheet" id="XW1-XP-hsi"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="orderForm" textLabel="aas-rF-Qas" style="IBUITableViewCellStyleDefault" id="KRN-z6-MaN">
@@ -784,7 +785,7 @@ Et toi?/ Et vous? (polite)
                                         </view>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <connections>
-                                            <segue destination="7NW-1i-Xqm" kind="push" id="Jaz-LD-sru"/>
+                                            <segue destination="7NW-1i-Xqm" kind="push" identifier="pushOrder" id="Jaz-LD-sru"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="implementation" textLabel="pvI-2i-7G1" style="IBUITableViewCellStyleDefault" id="erM-iS-Pa4">
@@ -805,7 +806,7 @@ Et toi?/ Et vous? (polite)
                                         </view>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <connections>
-                                            <segue destination="bVi-sj-C7C" kind="push" id="9vk-t2-IPl"/>
+                                            <segue destination="bVi-sj-C7C" kind="push" identifier="pushImpQues" id="9vk-t2-IPl"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -817,6 +818,9 @@ Et toi?/ Et vous? (polite)
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="7J5-iL-1BH"/>
+                    <connections>
+                        <outlet property="formsTableView" destination="udV-f9-eQe" id="gCm-VF-Ktu"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vgD-Aw-hdy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -2472,10 +2476,10 @@ WCE Fundraising: WCE raises the final 1/3 of our sourcing &amp; shipping costs f
             </objects>
             <point key="canvasLocation" x="1316" y="4529"/>
         </scene>
-        <!--Table View Controller - Forms Page-->
+        <!--Forms Menu View Controller - Forms Page-->
         <scene sceneID="2C8-9W-PxU">
             <objects>
-                <tableViewController title="Forms Page" id="SuZ-oP-kTY" sceneMemberID="viewController">
+                <tableViewController title="Forms Page" id="SuZ-oP-kTY" customClass="FormsMenuViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="FFG-o8-aSx">
                         <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2500,7 +2504,7 @@ WCE Fundraising: WCE raises the final 1/3 of our sourcing &amp; shipping costs f
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <connections>
-                                            <segue destination="zcT-kN-snK" kind="push" id="ClB-6a-3do"/>
+                                            <segue destination="zcT-kN-snK" kind="push" identifier="pushEvalForm" id="ClB-6a-3do"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="Vm2-yR-hJy" style="IBUITableViewCellStyleDefault" id="gnW-e3-Gcq">
@@ -2520,7 +2524,7 @@ WCE Fundraising: WCE raises the final 1/3 of our sourcing &amp; shipping costs f
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <connections>
-                                            <segue destination="JU5-ky-5R4" kind="push" id="2BM-oB-Gi1"/>
+                                            <segue destination="JU5-ky-5R4" kind="push" identifier="pushNewPartners" id="2BM-oB-Gi1"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -2534,6 +2538,9 @@ WCE Fundraising: WCE raises the final 1/3 of our sourcing &amp; shipping costs f
                     <navigationItem key="navigationItem" title="FORMS" id="2jh-e1-yzQ">
                         <barButtonItem key="backBarButtonItem" title="Back" id="MjZ-vq-S1J"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="formsMenuTableView" destination="FFG-o8-aSx" id="mhb-f2-21P"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YIT-Zn-LeM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -5358,12 +5365,259 @@ Cg
         <image name="cell-bg.png" width="16" height="16"/>
         <image name="top-cell-bg.png" width="320" height="44"/>
     </resources>
+    <classes>
+        <class className="AboutWCEViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AboutWCEViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="goToWebsite:"/>
+            </relationships>
+        </class>
+        <class className="AddLocationViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AddLocationViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="backgroundTouched:"/>
+                <relationship kind="action" name="cancelChanges:"/>
+                <relationship kind="action" name="saveChanges:"/>
+                <relationship kind="action" name="textfieldReturn:"/>
+                <relationship kind="outlet" name="address" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="city" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="contact" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="dropDownTableView" candidateClass="UITableView"/>
+                <relationship kind="outlet" name="location" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="phone" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
+                <relationship kind="outlet" name="zip" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="ChangePassViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ChangePassViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="cancelChangePassword:"/>
+                <relationship kind="action" name="saveNewPassword:"/>
+                <relationship kind="outlet" name="cancelButton" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="passwordNewOne" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="passwordNewTwo" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="passwordOld" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="saveButton" candidateClass="UIBarButtonItem"/>
+            </relationships>
+        </class>
+        <class className="CoverSheetViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CoverSheetViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="backgroundTouched:"/>
+                <relationship kind="action" name="saveChanges:"/>
+                <relationship kind="action" name="textfieldReturn:"/>
+                <relationship kind="outlet" name="locationTableView" candidateClass="UITableView"/>
+                <relationship kind="outlet" name="q2" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="q3" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="q4" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="q5" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="q6" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="CustomCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CustomCell.h"/>
+        </class>
+        <class className="EvaluationViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EvaluationViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="backgroundTouched:"/>
+                <relationship kind="action" name="saveChanges:"/>
+                <relationship kind="action" name="textfieldReturn:"/>
+                <relationship kind="outlet" name="q1" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="q10" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="q11" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="q12" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="q13" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="q14" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="q15" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="q16" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="q17" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="q18" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="q19" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="q2" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="q20" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="q21" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="q22" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="q23" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="q24" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="q25" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="q26" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="q27" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="q28" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="q3" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="q4" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="q5" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="q6" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="q7" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="q8" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="q9" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
+            </relationships>
+        </class>
+        <class className="FormsMenuViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FormsMenuViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="formsMenuTableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="FormsViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FormsViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="formsTableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="ImplementationViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ImplementationViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="backgroundTouched:"/>
+                <relationship kind="action" name="saveChanges:"/>
+                <relationship kind="action" name="textfieldReturn:"/>
+                <relationship kind="outlet" name="q1" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="q10" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="q11" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="q12" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="q13" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="q14" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="q15" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="q16" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="q17" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="q18" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="q19" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="q2" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="q20" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="q21" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="q22" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="q23" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="q24" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="q25" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="q3" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="q4" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="q5" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="q6" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="q7" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="q8" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="q9" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
+            </relationships>
+        </class>
+        <class className="InfoViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/InfoViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="infoTableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="LocationMapViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LocationMapViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
+            </relationships>
+        </class>
+        <class className="LocationViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LocationViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="enterEditingMode:"/>
+                <relationship kind="outlet" name="editButton" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="locationTableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="LoginViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LoginViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="pushLocationView:"/>
+                <relationship kind="outlet" name="passcodeField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="MainMenuViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MainMenuViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="mainMenuTableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="NewPartnerViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NewPartnerViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="backgroundTouched:"/>
+                <relationship kind="action" name="cancel:"/>
+                <relationship kind="action" name="saveChanges:"/>
+                <relationship kind="action" name="textfieldReturn:"/>
+                <relationship kind="outlet" name="nameField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="saveButton" candidateClass="UIBarButtonItem"/>
+            </relationships>
+        </class>
+        <class className="OrderFormViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/OrderFormViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="backgroundTouched:"/>
+                <relationship kind="action" name="saveChanges:"/>
+                <relationship kind="action" name="textfieldReturn:"/>
+                <relationship kind="outlet" name="q1" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="q10" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="q11" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="q12" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="q13_1" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="q13_2" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="q14" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="q15" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="q2_1" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="q2_2" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="q2_3" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="q3" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="q4_1" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="q4_2" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="q4_3" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="q5_1" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="q5_2" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="q5_3" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="q6_1" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="q6_2" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="q6_3" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="q6_4" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="q7_1" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="q7_2" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="q8" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="q9" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
+            </relationships>
+        </class>
+        <class className="PartnerViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PartnerViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="enterEditingMode:"/>
+                <relationship kind="outlet" name="editButton" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="partnerTableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="WCEContentViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/WCEContentViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
+            </relationships>
+        </class>
+        <class className="WCETabBarController" superclassName="UITabBarController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/WCETabBarController.h"/>
+            <relationships>
+                <relationship kind="action" name="editButtonClicked:"/>
+                <relationship kind="action" name="logoffButtonClicked:"/>
+                <relationship kind="outlet" name="editButton" candidateClass="UIBarButtonItem"/>
+            </relationships>
+        </class>
+        <class className="WCEWebViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/WCEWebViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="Y5u-3N-Zg9"/>
+        <segue reference="5ef-re-9LN"/>
     </inferredMetricsTieBreakers>
 </document>

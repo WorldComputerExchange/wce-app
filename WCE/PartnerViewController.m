@@ -14,7 +14,7 @@
 @end
 
 @implementation PartnerViewController
-@synthesize partnerTableView, partners, sharedUser;
+@synthesize partners, sharedUser;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
