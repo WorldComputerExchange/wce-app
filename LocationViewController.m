@@ -65,6 +65,7 @@
     if([locationTableView isEditing]){ //Exit editing mode
         NSLog(@"Exited editing mode");
         [locationTableView setEditing:NO animated:YES];
+        [locationTableView reloadData];
 		
         //Replace done button with edit button
 		if([sender isKindOfClass:[WCETabBarController class]])
@@ -207,10 +208,6 @@
 	return cell;
 }
 
-/*-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 44;
-}*/
-
 /**Editing Methods**/
 
 -(BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -248,6 +245,7 @@
         [[sharedUser savedLocations] removeObjectAtIndex:indexPath.row]; //remove from User array
         
         [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+        
     }
 }
 

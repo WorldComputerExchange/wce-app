@@ -8,6 +8,7 @@
 #import "PartnerViewController.h"
 #import "DataAccess.h"
 #import "Partner.h"
+#import "CustomCell.h"
 
 @interface PartnerViewController ()
 
@@ -39,6 +40,10 @@
     partners = [[NSMutableArray alloc] init];
     
     partners = [db getPartnersForLocationName:[curLocation name]];
+    
+    [partnerTableView registerClass:[CustomCell class]
+             forCellReuseIdentifier:@"customCell"];
+    
 }
 
     
@@ -96,14 +101,39 @@
 	return [partners count] + 1;
 }
 
+
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath{
+    // cell background image view
+    UIImageView *background;
+    
+    // first cell check
+    if ([partners count] == 0){
+        background = [[UIImageView alloc] initWithImage:
+                      [UIImage imageNamed:@"solo-cell-bg.png"]];
+    }else if (indexPath.row == 0) {
+        background = [[UIImageView alloc] initWithImage:
+                      [UIImage imageNamed:@"top-cell-bg.png"]];
+        // last cell check
+    } else if (indexPath.row ==
+               [tableView numberOfRowsInSection:indexPath.section] - 1) {
+        background = [[UIImageView alloc] initWithImage:
+                      [UIImage imageNamed:@"bottom-cell-bg.png"]];
+        // middle cells*/
+    } else {
+        background = [[UIImageView alloc] initWithImage:
+                      [UIImage imageNamed:@"middle-cell-bg.png"]];
+    }
+    background.alpha = 0.70; //make background semitransparent
+    // set background view
+    [cell setBackgroundView:background];
+    // release image view
+}
+
 - (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-	//initialize a cell
-	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PartnerCellID"];
-	if (cell == nil)
-	{
-		cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"PartnerCell"];
-	}
+    static NSString *CellIdentifier = @"customCell";
+    
+    CustomCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
 	//get the relevant partner from the array
     NSString *name;
     if (indexPath.row == [partners count]){
@@ -112,11 +142,14 @@
         Partner *curPartner = [partners objectAtIndex:indexPath.row]; 
         name =  curPartner.name;
 	}
-	cell.textLabel.text = name;
+    
+    cell.mainTextLabel.text = name;
+    
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
 	return cell;
 }
+
 
 
 /**Editing Methods**/
