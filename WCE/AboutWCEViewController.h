@@ -7,7 +7,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AboutWCEViewController : UIViewController
+@interface AboutWCEViewController : UIViewController{
+    IBOutlet UIButton *website;
+}
 
 - (IBAction)goToWebsite:(id)sender;
 

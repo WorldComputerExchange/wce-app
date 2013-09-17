@@ -26,6 +26,9 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    UIImage *bg = [UIImage imageNamed:@"button-bg.png"];
+    UIImage *stretchable_bg = [bg stretchableImageWithLeftCapWidth:12 topCapHeight:0];
+    [website setBackgroundImage:stretchable_bg forState:UIControlStateNormal];
 }
 
 - (void)didReceiveMemoryWarning

@@ -32,7 +32,13 @@
 	// Do any additional setup after loading the view.
     UIImage *image = [UIImage imageNamed:@"WCE_LogoWhite.png"];
     [[[self navigationController] navigationBar] setBackgroundImage:image forBarMetrics:UIBarMetricsDefault];
-	[[self view] setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"136676912132100.gif"]]];
+	[[self view] setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"background.png"]]];
+    
+    
+    UIImage *bg = [UIImage imageNamed:@"button-bg.png"];
+    UIImage *stretchable_bg = [bg stretchableImageWithLeftCapWidth:12 topCapHeight:0];
+    [login setBackgroundImage:stretchable_bg forState:UIControlStateNormal];
+    [changePass setBackgroundImage:stretchable_bg forState:UIControlStateNormal];
 }
 
 - (void)viewWillAppear:(BOOL)animated

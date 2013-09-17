@@ -42,6 +42,8 @@
     [locationTableView registerClass:[CustomCell class]
            forCellReuseIdentifier:@"customCell"];
     
+    
+    
     //get shared location instance
     sharedLocation = [Location sharedLocation];
     NSLog(@"sharedLocation %@", [sharedLocation name]);
@@ -204,7 +206,6 @@
     cell.mainTextLabel.text = name;
 
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-
 	return cell;
 }
 

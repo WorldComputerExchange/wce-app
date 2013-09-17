@@ -17,6 +17,8 @@
 
 @interface LoginViewController : UIViewController <ChangePassViewControllerDelegate>
 {
+    IBOutlet UIButton *login;
+    IBOutlet UIButton *changePass;
 }
 
 @property (nonatomic, strong, readonly) NSString *password;
