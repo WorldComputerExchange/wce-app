@@ -26,9 +26,13 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    UIImage *bg = [UIImage imageNamed:@"button-bg.png"];
-    UIImage *stretchable_bg = [bg stretchableImageWithLeftCapWidth:12 topCapHeight:0];
-    [website setBackgroundImage:stretchable_bg forState:UIControlStateNormal];
+    
+    //followed nathan barry's tutorial http://nathanbarry.com/designing-buttons-ios5/
+    //to create these buttons
+    UIImage *bg = [[UIImage imageNamed:@"button-bg.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(18, 18, 18, 18)];
+    [website setBackgroundImage:bg forState:UIControlStateNormal];
+    
+    
 }
 
 - (void)didReceiveMemoryWarning

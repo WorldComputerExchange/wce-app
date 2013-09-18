@@ -107,10 +107,10 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numbersAndPunctuation" keyboardAppearance="alert" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                             </textField>
-                            <imageView userInteractionEnabled="NO" contentMode="center" image="WCE_LogoWhite.png" translatesAutoresizingMaskIntoConstraints="NO" id="yfQ-Bp-V75">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="wce-logo-mod.png" translatesAutoresizingMaskIntoConstraints="NO" id="yfQ-Bp-V75">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="64" id="KqQ-P5-AYv"/>
-                                    <constraint firstAttribute="width" constant="225" id="xrW-JM-W0E"/>
+                                    <constraint firstAttribute="width" constant="258" id="1Ej-qf-zmM"/>
+                                    <constraint firstAttribute="height" constant="102" id="4SB-WH-00H"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PEE-h6-IeA">
@@ -148,12 +148,12 @@
                         <constraints>
                             <constraint firstItem="PEE-h6-IeA" firstAttribute="centerX" secondItem="Dd4-pk-PvU" secondAttribute="centerX" type="default" id="68U-kx-MME"/>
                             <constraint firstItem="Dd4-pk-PvU" firstAttribute="top" secondItem="3" secondAttribute="top" constant="116" id="8pi-Bs-Wec"/>
-                            <constraint firstItem="g0F-Bc-zcm" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" type="default" id="D5M-vV-kxg"/>
-                            <constraint firstItem="yfQ-Bp-V75" firstAttribute="top" secondItem="3" secondAttribute="top" constant="34" id="Ocb-7r-0SV"/>
-                            <constraint firstItem="Dd4-pk-PvU" firstAttribute="centerX" secondItem="yfQ-Bp-V75" secondAttribute="centerX" type="default" id="PhA-CL-UEd"/>
+                            <constraint firstItem="yfQ-Bp-V75" firstAttribute="top" secondItem="3" secondAttribute="top" constant="20" symbolic="YES" type="default" id="FcF-lb-qmP"/>
                             <constraint firstItem="PEE-h6-IeA" firstAttribute="top" secondItem="3" secondAttribute="top" constant="159" id="Slm-l8-Ybh"/>
+                            <constraint firstItem="yfQ-Bp-V75" firstAttribute="centerX" secondItem="Dd4-pk-PvU" secondAttribute="centerX" type="default" id="epU-eM-HTh"/>
                             <constraint firstItem="PEE-h6-IeA" firstAttribute="centerX" secondItem="g0F-Bc-zcm" secondAttribute="centerX" type="default" id="j2l-Ph-7fK"/>
                             <constraint firstItem="g0F-Bc-zcm" firstAttribute="top" secondItem="3" secondAttribute="top" constant="215" id="qx0-s0-bzJ"/>
+                            <constraint firstItem="Dd4-pk-PvU" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" type="default" id="rTd-zg-3zW"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="yaR-XD-8jg"/>
@@ -5366,9 +5366,9 @@ Cg
     <resources>
         <image name="LocationListIcon.png" width="30" height="30"/>
         <image name="MapIcon.png" width="30" height="30"/>
-        <image name="WCE_LogoWhite.png" width="221" height="60"/>
         <image name="cell-bg.png" width="16" height="16"/>
         <image name="top-cell-bg.png" width="320" height="44"/>
+        <image name="wce-logo-mod.png" width="500" height="200"/>
     </resources>
     <classes>
         <class className="AboutWCEViewController" superclassName="UIViewController">

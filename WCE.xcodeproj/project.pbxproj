@@ -10,6 +10,9 @@
 		8C03243416DC41850089CB81 /* AddLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C03243316DC41850089CB81 /* AddLocationViewController.m */; };
 		8C1B2976172A131600D359D4 /* ImplementationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C1B2975172A131600D359D4 /* ImplementationViewController.m */; };
 		8C1B2979172A187700D359D4 /* FormsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C1B2978172A187700D359D4 /* FormsViewController.m */; };
+		8C25886B17EA580F0000EA7F /* button-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C25886917EA580F0000EA7F /* button-bg.png */; };
+		8C25886C17EA580F0000EA7F /* button-bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C25886A17EA580F0000EA7F /* button-bg@2x.png */; };
+		8C25886E17EA69070000EA7F /* wce-logo-mod.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C25886D17EA69070000EA7F /* wce-logo-mod.png */; };
 		8C27586B16CC820E00DEDAC8 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C27586A16CC820E00DEDAC8 /* LoginViewController.m */; };
 		8C27586E16CC828F00DEDAC8 /* LocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C27586D16CC828F00DEDAC8 /* LocationViewController.m */; };
 		8C2AE38E17C90D6B00C00BAF /* Partner.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C2AE38D17C90D6B00C00BAF /* Partner.m */; };
@@ -47,8 +50,6 @@
 		8C66ED7517E5180300B2091F /* top-cell-bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C66ED7117E5180000B2091F /* top-cell-bg@2x.png */; };
 		8C66ED7817E518D500B2091F /* middle-cell-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C66ED7617E518BF00B2091F /* middle-cell-bg.png */; };
 		8C66ED7917E518D500B2091F /* middle-cell-bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C66ED7717E518C700B2091F /* middle-cell-bg@2x.png */; };
-		8C66ED8017E7D0E200B2091F /* button-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C66ED7E17E7D0C400B2091F /* button-bg.png */; };
-		8C66ED8117E7D0E200B2091F /* button-bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C66ED7F17E7D0CC00B2091F /* button-bg@2x.png */; };
 		8C9C3AD116CC60D000F95A6B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C9C3AD016CC60D000F95A6B /* UIKit.framework */; };
 		8C9C3AD316CC60D000F95A6B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C9C3AD216CC60D000F95A6B /* Foundation.framework */; };
 		8C9C3AD516CC60D000F95A6B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C9C3AD416CC60D000F95A6B /* CoreGraphics.framework */; };
@@ -71,7 +72,6 @@
 		9ED695B316E28332005D1EDB /* WCE Content V5 copy.png in Resources */ = {isa = PBXBuildFile; fileRef = 9ED695B216E28332005D1EDB /* WCE Content V5 copy.png */; };
 		D02C62FA1723112B005D92AB /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D02C62F91723112B005D92AB /* CoreLocation.framework */; };
 		D058DCDB16FBD2A300132041 /* AboutWCEViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D058DCDA16FBD2A300132041 /* AboutWCEViewController.m */; };
-		D07A3B0316D6F7C4003B6074 /* WCE_LogoWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = D07A3B0216D6F7C4003B6074 /* WCE_LogoWhite.png */; };
 		D0F334B4172AC38E006BACED /* WCETabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F334B3172AC38E006BACED /* WCETabBarController.m */; };
 		D0F745F41730A59300C9EC5F /* WCEContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F745F31730A59300C9EC5F /* WCEContentViewController.m */; };
 		D0F745F71730AB3B00C9EC5F /* ChangePassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F745F61730AB3B00C9EC5F /* ChangePassViewController.m */; };
@@ -87,6 +87,9 @@
 		8C1B2975172A131600D359D4 /* ImplementationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImplementationViewController.m; sourceTree = "<group>"; };
 		8C1B2977172A187700D359D4 /* FormsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FormsViewController.h; sourceTree = "<group>"; };
 		8C1B2978172A187700D359D4 /* FormsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FormsViewController.m; sourceTree = "<group>"; };
+		8C25886917EA580F0000EA7F /* button-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button-bg.png"; sourceTree = "<group>"; };
+		8C25886A17EA580F0000EA7F /* button-bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button-bg@2x.png"; sourceTree = "<group>"; };
+		8C25886D17EA69070000EA7F /* wce-logo-mod.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wce-logo-mod.png"; sourceTree = "<group>"; };
 		8C27586916CC820E00DEDAC8 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		8C27586A16CC820E00DEDAC8 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		8C27586C16CC828F00DEDAC8 /* LocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LocationViewController.h; path = ../LocationViewController.h; sourceTree = "<group>"; };
@@ -139,8 +142,6 @@
 		8C66ED7117E5180000B2091F /* top-cell-bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "top-cell-bg@2x.png"; sourceTree = "<group>"; };
 		8C66ED7617E518BF00B2091F /* middle-cell-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "middle-cell-bg.png"; path = "../middle-cell-bg.png"; sourceTree = "<group>"; };
 		8C66ED7717E518C700B2091F /* middle-cell-bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "middle-cell-bg@2x.png"; path = "../middle-cell-bg@2x.png"; sourceTree = "<group>"; };
-		8C66ED7E17E7D0C400B2091F /* button-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "button-bg.png"; path = "../button-bg.png"; sourceTree = "<group>"; };
-		8C66ED7F17E7D0CC00B2091F /* button-bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "button-bg@2x.png"; path = "../button-bg@2x.png"; sourceTree = "<group>"; };
 		8C9C3ACC16CC60D000F95A6B /* WCE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WCE.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C9C3AD016CC60D000F95A6B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		8C9C3AD216CC60D000F95A6B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -177,7 +178,6 @@
 		D02C62F91723112B005D92AB /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		D058DCD916FBD2A300132041 /* AboutWCEViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutWCEViewController.h; sourceTree = "<group>"; };
 		D058DCDA16FBD2A300132041 /* AboutWCEViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutWCEViewController.m; sourceTree = "<group>"; };
-		D07A3B0216D6F7C4003B6074 /* WCE_LogoWhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WCE_LogoWhite.png; sourceTree = "<group>"; };
 		D0F334B2172AC38E006BACED /* WCETabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCETabBarController.h; sourceTree = "<group>"; };
 		D0F334B3172AC38E006BACED /* WCETabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCETabBarController.m; sourceTree = "<group>"; };
 		D0F745F21730A59300C9EC5F /* WCEContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCEContentViewController.h; sourceTree = "<group>"; };
@@ -318,8 +318,8 @@
 		8C4C7B821735AD8C00ED3E82 /* Buttons */ = {
 			isa = PBXGroup;
 			children = (
-				8C66ED7E17E7D0C400B2091F /* button-bg.png */,
-				8C66ED7F17E7D0CC00B2091F /* button-bg@2x.png */,
+				8C25886917EA580F0000EA7F /* button-bg.png */,
+				8C25886A17EA580F0000EA7F /* button-bg@2x.png */,
 			);
 			name = Buttons;
 			sourceTree = "<group>";
@@ -443,7 +443,7 @@
 				8C385950173AF07C003A323B /* Icon@2x.png */,
 				8C66ED4317DFC5F200B2091F /* background@2x.png */,
 				8C66ED4417DFC5F200B2091F /* background.png */,
-				D07A3B0216D6F7C4003B6074 /* WCE_LogoWhite.png */,
+				8C25886D17EA69070000EA7F /* wce-logo-mod.png */,
 				8C9C3AD816CC60D000F95A6B /* WCE-Info.plist */,
 				8C9C3AD916CC60D000F95A6B /* InfoPlist.strings */,
 				8C9C3ADC16CC60D000F95A6B /* main.m */,
@@ -616,7 +616,6 @@
 			files = (
 				8C9C3ADB16CC60D000F95A6B /* InfoPlist.strings in Resources */,
 				8C9C3AEA16CC60D000F95A6B /* MainStoryboard.storyboard in Resources */,
-				D07A3B0316D6F7C4003B6074 /* WCE_LogoWhite.png in Resources */,
 				9E2476DD16E27D9C0049ED27 /* WCE Content V5.png in Resources */,
 				9ED695B316E28332005D1EDB /* WCE Content V5 copy.png in Resources */,
 				FA44558116E284E900D08750 /* WCE Content V5 NEW.png in Resources */,
@@ -642,8 +641,9 @@
 				8C66ED7517E5180300B2091F /* top-cell-bg@2x.png in Resources */,
 				8C66ED7817E518D500B2091F /* middle-cell-bg.png in Resources */,
 				8C66ED7917E518D500B2091F /* middle-cell-bg@2x.png in Resources */,
-				8C66ED8017E7D0E200B2091F /* button-bg.png in Resources */,
-				8C66ED8117E7D0E200B2091F /* button-bg@2x.png in Resources */,
+				8C25886B17EA580F0000EA7F /* button-bg.png in Resources */,
+				8C25886C17EA580F0000EA7F /* button-bg@2x.png in Resources */,
+				8C25886E17EA69070000EA7F /* wce-logo-mod.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

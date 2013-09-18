@@ -34,11 +34,13 @@
     [[[self navigationController] navigationBar] setBackgroundImage:image forBarMetrics:UIBarMetricsDefault];
 	[[self view] setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"background.png"]]];
     
-    
-    UIImage *bg = [UIImage imageNamed:@"button-bg.png"];
-    UIImage *stretchable_bg = [bg stretchableImageWithLeftCapWidth:12 topCapHeight:0];
-    [login setBackgroundImage:stretchable_bg forState:UIControlStateNormal];
-    [changePass setBackgroundImage:stretchable_bg forState:UIControlStateNormal];
+    //followed nathan barry's tutorial http://nathanbarry.com/designing-buttons-ios5/
+    //to create these buttons
+    UIImage *bg = [[UIImage imageNamed:@"button-bg.png"]
+                            resizableImageWithCapInsets:UIEdgeInsetsMake(18, 18, 18, 18)];
+ 
+    [login setBackgroundImage:bg forState:UIControlStateNormal];
+    [changePass setBackgroundImage:bg forState:UIControlStateNormal];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -53,7 +55,7 @@
 	else
 	{
 		_password = [[NSUserDefaults standardUserDefaults] stringForKey:@"password"];
-		//[[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithBool:TRUE] forKey:@"hasSetPassword"];
+        NSLog(@"Password is: %@", _password);		//[[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithBool:TRUE] forKey:@"hasSetPassword"];
 	}
 }
 

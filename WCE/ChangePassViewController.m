@@ -43,6 +43,7 @@
 
 - (IBAction)saveNewPassword:(id)sender
 {
+    NSLog(@"Save new password");
 	if([[_passwordOld text] isEqualToString:_oldPasswordToCheck])
 	{
 		if(![[_passwordNewOne text] isEqualToString:@""] && ![[_passwordNewTwo text] isEqualToString:@""])
@@ -89,10 +90,13 @@
 
 - (IBAction)cancelChangePassword:(id)sender
 {
+    NSLog(@"Password change canceled");
 	[_passwordOld setText:@""];
 	[_passwordNewOne setText:@""];
 	[_passwordNewTwo setText:@""];
-	
+    
+    NSString *newPass = [[NSUserDefaults standardUserDefaults] stringForKey:@"password"];
+	NSLog(@"New password is: %@", newPass);
 	[self dismissSelf];
 }
 
