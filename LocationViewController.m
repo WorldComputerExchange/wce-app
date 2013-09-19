@@ -196,16 +196,22 @@
     
 	//get the relevant location from the array
     NSString *name;
+
+    //set up edit accessory view
+    UIImage *edit= [UIImage imageNamed:@"edit-disclosure.png"];
+    UIImageView* editView = [[UIImageView alloc] initWithImage:edit];
     if (indexPath.row == [[sharedUser savedLocations] count]){
         name = @"Add New Location";
     }else {
         Location *curLocation = [[sharedUser savedLocations] objectAtIndex:indexPath.row];
         name =  [curLocation name];
+        cell.editingAccessoryView = editView;
 	}
 
     cell.mainTextLabel.text = name;
 
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    
 	return cell;
 }
 

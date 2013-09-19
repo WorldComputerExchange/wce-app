@@ -26,11 +26,6 @@
     //set the background image and navigation bar color
 	self.window.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background.png"]];
     
-   // UIImage *bg = [UIImage imageNamed:@"navBar-bg.png"];
-    //UIImageView *bgView = [[UIImageView alloc] initWithImage:bg];
-    
-    
-    //[[UINavigationBar appearance] setBackgroundImage:bg];
 	[[UINavigationBar appearance] setTintColor:[UIColor colorWithRed:135./255. green:0./255. blue:0./255. alpha:1.0]];
 	
 	// Override point for customization after application launch.

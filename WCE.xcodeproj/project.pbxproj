@@ -13,6 +13,12 @@
 		8C25886B17EA580F0000EA7F /* button-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C25886917EA580F0000EA7F /* button-bg.png */; };
 		8C25886C17EA580F0000EA7F /* button-bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C25886A17EA580F0000EA7F /* button-bg@2x.png */; };
 		8C25886E17EA69070000EA7F /* wce-logo-mod.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C25886D17EA69070000EA7F /* wce-logo-mod.png */; };
+		8C25887317EB85AB0000EA7F /* disclosure-check-green@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C25886F17EB85AB0000EA7F /* disclosure-check-green@2x.png */; };
+		8C25887417EB85AB0000EA7F /* disclosure-check-green.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C25887017EB85AB0000EA7F /* disclosure-check-green.png */; };
+		8C25887517EB85AB0000EA7F /* disclosure-check-yellow.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C25887117EB85AB0000EA7F /* disclosure-check-yellow.png */; };
+		8C25887617EB85AB0000EA7F /* disclosure-check-yellow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C25887217EB85AB0000EA7F /* disclosure-check-yellow@2x.png */; };
+		8C25887917EB99F60000EA7F /* edit-disclosure.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C25887717EB99F50000EA7F /* edit-disclosure.png */; };
+		8C25887A17EB99F60000EA7F /* edit-disclosure@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C25887817EB99F60000EA7F /* edit-disclosure@2x.png */; };
 		8C27586B16CC820E00DEDAC8 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C27586A16CC820E00DEDAC8 /* LoginViewController.m */; };
 		8C27586E16CC828F00DEDAC8 /* LocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C27586D16CC828F00DEDAC8 /* LocationViewController.m */; };
 		8C2AE38E17C90D6B00C00BAF /* Partner.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C2AE38D17C90D6B00C00BAF /* Partner.m */; };
@@ -90,6 +96,12 @@
 		8C25886917EA580F0000EA7F /* button-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button-bg.png"; sourceTree = "<group>"; };
 		8C25886A17EA580F0000EA7F /* button-bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button-bg@2x.png"; sourceTree = "<group>"; };
 		8C25886D17EA69070000EA7F /* wce-logo-mod.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wce-logo-mod.png"; sourceTree = "<group>"; };
+		8C25886F17EB85AB0000EA7F /* disclosure-check-green@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "disclosure-check-green@2x.png"; sourceTree = "<group>"; };
+		8C25887017EB85AB0000EA7F /* disclosure-check-green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "disclosure-check-green.png"; sourceTree = "<group>"; };
+		8C25887117EB85AB0000EA7F /* disclosure-check-yellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "disclosure-check-yellow.png"; sourceTree = "<group>"; };
+		8C25887217EB85AB0000EA7F /* disclosure-check-yellow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "disclosure-check-yellow@2x.png"; sourceTree = "<group>"; };
+		8C25887717EB99F50000EA7F /* edit-disclosure.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "edit-disclosure.png"; sourceTree = "<group>"; };
+		8C25887817EB99F60000EA7F /* edit-disclosure@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "edit-disclosure@2x.png"; sourceTree = "<group>"; };
 		8C27586916CC820E00DEDAC8 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		8C27586A16CC820E00DEDAC8 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		8C27586C16CC828F00DEDAC8 /* LocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LocationViewController.h; path = ../LocationViewController.h; sourceTree = "<group>"; };
@@ -336,6 +348,12 @@
 		8C66ECC017D62E9200B2091F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				8C25887717EB99F50000EA7F /* edit-disclosure.png */,
+				8C25887817EB99F60000EA7F /* edit-disclosure@2x.png */,
+				8C25886F17EB85AB0000EA7F /* disclosure-check-green@2x.png */,
+				8C25887017EB85AB0000EA7F /* disclosure-check-green.png */,
+				8C25887117EB85AB0000EA7F /* disclosure-check-yellow.png */,
+				8C25887217EB85AB0000EA7F /* disclosure-check-yellow@2x.png */,
 				8C66ED7617E518BF00B2091F /* middle-cell-bg.png */,
 				8C66ED7717E518C700B2091F /* middle-cell-bg@2x.png */,
 				8C66ED6617E516EF00B2091F /* bottom-cell-bg.png */,
@@ -644,6 +662,12 @@
 				8C25886B17EA580F0000EA7F /* button-bg.png in Resources */,
 				8C25886C17EA580F0000EA7F /* button-bg@2x.png in Resources */,
 				8C25886E17EA69070000EA7F /* wce-logo-mod.png in Resources */,
+				8C25887317EB85AB0000EA7F /* disclosure-check-green@2x.png in Resources */,
+				8C25887417EB85AB0000EA7F /* disclosure-check-green.png in Resources */,
+				8C25887517EB85AB0000EA7F /* disclosure-check-yellow.png in Resources */,
+				8C25887617EB85AB0000EA7F /* disclosure-check-yellow@2x.png in Resources */,
+				8C25887917EB99F60000EA7F /* edit-disclosure.png in Resources */,
+				8C25887A17EB99F60000EA7F /* edit-disclosure@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
