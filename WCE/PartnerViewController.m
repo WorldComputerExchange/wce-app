@@ -136,11 +136,17 @@
     CustomCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
 	//get the relevant partner from the array
     NSString *name;
+    
+    UIImage *edit= [UIImage imageNamed:@"edit-disclosure.png"];
+    UIImageView* editView = [[UIImageView alloc] initWithImage:edit];
+    
     if (indexPath.row == [partners count]){
         name = @"Add New Partner";
+        cell.editingAccessoryView = nil;
     }else {
         Partner *curPartner = [partners objectAtIndex:indexPath.row]; 
         name =  curPartner.name;
+        cell.editingAccessoryView = editView;
 	}
     
     cell.mainTextLabel.text = name;
@@ -185,6 +191,7 @@
     if([partnerTableView isEditing]){
         NSLog(@"Exited editing mode");
         [partnerTableView setEditing:NO animated:YES];
+        [partnerTableView reloadData];
     }else {
         NSLog(@"Entered editing mode");
         [partnerTableView setEditing:YES animated:YES];

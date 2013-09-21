@@ -176,7 +176,7 @@
                [tableView numberOfRowsInSection:indexPath.section] - 1) {
         background = [[UIImageView alloc] initWithImage:
                       [UIImage imageNamed:@"bottom-cell-bg.png"]];
-        // middle cells*/
+        // middle cells
     } else {
         background = [[UIImageView alloc] initWithImage:
                       [UIImage imageNamed:@"middle-cell-bg.png"]];
@@ -184,7 +184,6 @@
     background.alpha = 0.70; //make background semitransparent
     // set background view
     [cell setBackgroundView:background];
-    // release image view
 }
 
 - (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -202,6 +201,7 @@
     UIImageView* editView = [[UIImageView alloc] initWithImage:edit];
     if (indexPath.row == [[sharedUser savedLocations] count]){
         name = @"Add New Location";
+        cell.editingAccessoryView = nil;
     }else {
         Location *curLocation = [[sharedUser savedLocations] objectAtIndex:indexPath.row];
         name =  [curLocation name];

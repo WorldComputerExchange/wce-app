@@ -39,6 +39,9 @@
 @property (weak, nonatomic) IBOutlet UITextField *city;
 @property (weak, nonatomic) IBOutlet UITextField *zip;
 
+@property (nonatomic, readonly) CGPoint originalOffset;
+@property (nonatomic, readonly) UIView *activeField;
+
 
 - (IBAction)cancelChanges:(id)sender;
 - (IBAction)saveChanges:(id)sender;
