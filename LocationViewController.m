@@ -38,11 +38,8 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-
     [locationTableView registerClass:[CustomCell class]
            forCellReuseIdentifier:@"customCell"];
-    
-    
     
     //get shared location instance
     sharedLocation = [Location sharedLocation];
@@ -165,24 +162,23 @@
     UIImageView *background;
     UIImageView *selectedBackground;
     
-    // first cell check
-    if ([[sharedUser savedLocations] count] == 0){
+    //no locations, solo cell
+    if ([tableView numberOfRowsInSection:indexPath.section] == 1){
         background = [[UIImageView alloc] initWithImage:
                       [UIImage imageNamed:@"solo-cell-bg.png"]];
         selectedBackground = [[UIImageView alloc] initWithImage:
                               [UIImage imageNamed:@"solo-cell-bg-selected.png"]];
-    }else if (indexPath.row == 0) {
+    }else if (indexPath.row == 0) { //first cell
         background = [[UIImageView alloc] initWithImage:
                       [UIImage imageNamed:@"top-cell-bg.png"]];
-        selectedBackground = [[UIImageView alloc] initWithImage:
-                              [UIImage imageNamed:@"top-cell-bg-selected.png"]];
-        // last cell check
+        selectedBackground =  [[UIImageView alloc] initWithImage:
+                               [UIImage imageNamed:@"top-cell-bg-selected.png"]];
     } else if (indexPath.row ==
-               [tableView numberOfRowsInSection:indexPath.section] - 1) {
+               [tableView numberOfRowsInSection:indexPath.section] - 1) { //last cell
         background = [[UIImageView alloc] initWithImage:
                       [UIImage imageNamed:@"bottom-cell-bg.png"]];
         selectedBackground = [[UIImageView alloc] initWithImage:
-                              [UIImage imageNamed:@"bottom-cell-bg-selected.png"]];
+                              [UIImage imageNamed:@"bottom-cell-selected-bg.png"]];
         // middle cells
     } else {
         background = [[UIImageView alloc] initWithImage:

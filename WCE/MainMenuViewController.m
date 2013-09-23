@@ -84,24 +84,32 @@
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath{
     // cell background image view
     UIImageView *background;
+    UIImageView *selectedBackground;
     // first cell check
     if (indexPath.row == 0) {
         background = [[UIImageView alloc] initWithImage:
                       [UIImage imageNamed:@"top-cell-bg.png"]];
+        selectedBackground = [[UIImageView alloc] initWithImage:
+                              [UIImage imageNamed:@"top-cell-bg-selected.png"]];
         // last cell check
     } else if (indexPath.row ==
                [tableView numberOfRowsInSection:indexPath.section] - 1) {
         background = [[UIImageView alloc] initWithImage:
                       [UIImage imageNamed:@"bottom-cell-bg.png"]];
+        selectedBackground = [[UIImageView alloc] initWithImage:
+                              [UIImage imageNamed:@"bottom-cell-bg-selected.png"]];
         // middle cells*/
     } else {
         background = [[UIImageView alloc] initWithImage:
                       [UIImage imageNamed:@"middle-cell-bg.png"]];
+        selectedBackground = [[UIImageView alloc] initWithImage:
+                              [UIImage imageNamed:@"middle-cell-bg-selected.png"]];
     }
     background.alpha = 0.70; //make background semitransparent
     // set background view
-    [cell setBackgroundView:background];
-    // release image view
+    
+    [cell setSelectedBackgroundView:selectedBackground];  
+    [cell setBackgroundView:background];   
 }
 
 

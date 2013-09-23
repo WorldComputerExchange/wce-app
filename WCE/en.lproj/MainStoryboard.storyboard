@@ -105,7 +105,7 @@
                                 </constraints>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numbersAndPunctuation" keyboardAppearance="alert" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numbersAndPunctuation" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                             </textField>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="wce-logo-mod.png" translatesAutoresizingMaskIntoConstraints="NO" id="yfQ-Bp-V75">
                                 <constraints>
@@ -5370,6 +5370,259 @@ Cg
         <image name="top-cell-bg.png" width="320" height="44"/>
         <image name="wce-logo-mod.png" width="500" height="200"/>
     </resources>
+    <classes>
+        <class className="AboutWCEViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AboutWCEViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="goToWebsite:"/>
+                <relationship kind="outlet" name="website" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="AddLocationViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AddLocationViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="backgroundTouched:"/>
+                <relationship kind="action" name="cancelChanges:"/>
+                <relationship kind="action" name="saveChanges:"/>
+                <relationship kind="action" name="textfieldReturn:"/>
+                <relationship kind="outlet" name="address" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="city" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="contact" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="dropDownTableView" candidateClass="UITableView"/>
+                <relationship kind="outlet" name="location" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="phone" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
+                <relationship kind="outlet" name="zip" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="ChangePassViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ChangePassViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="cancelChangePassword:"/>
+                <relationship kind="action" name="saveNewPassword:"/>
+                <relationship kind="outlet" name="cancelButton" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="passwordNewOne" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="passwordNewTwo" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="passwordOld" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="saveButton" candidateClass="UIBarButtonItem"/>
+            </relationships>
+        </class>
+        <class className="CoverSheetViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CoverSheetViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="backgroundTouched:"/>
+                <relationship kind="action" name="saveChanges:"/>
+                <relationship kind="action" name="textfieldReturn:"/>
+                <relationship kind="outlet" name="locationTableView" candidateClass="UITableView"/>
+                <relationship kind="outlet" name="q2" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="q3" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="q4" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="q5" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="q6" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="CustomCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CustomCell.h"/>
+        </class>
+        <class className="CustomNavigationBar" superclassName="UINavigationBar">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CustomNavigationBar.h"/>
+        </class>
+        <class className="EvaluationViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EvaluationViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="backgroundTouched:"/>
+                <relationship kind="action" name="saveChanges:"/>
+                <relationship kind="action" name="textfieldReturn:"/>
+                <relationship kind="outlet" name="q1" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="q10" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="q11" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="q12" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="q13" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="q14" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="q15" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="q16" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="q17" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="q18" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="q19" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="q2" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="q20" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="q21" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="q22" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="q23" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="q24" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="q25" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="q26" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="q27" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="q28" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="q3" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="q4" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="q5" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="q6" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="q7" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="q8" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="q9" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
+            </relationships>
+        </class>
+        <class className="FormsMenuViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FormsMenuViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="formsMenuTableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="FormsViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FormsViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="formsTableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="ImplementationViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ImplementationViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="backgroundTouched:"/>
+                <relationship kind="action" name="saveChanges:"/>
+                <relationship kind="action" name="textfieldReturn:"/>
+                <relationship kind="outlet" name="q1" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="q10" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="q11" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="q12" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="q13" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="q14" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="q15" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="q16" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="q17" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="q18" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="q19" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="q2" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="q20" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="q21" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="q22" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="q23" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="q24" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="q25" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="q3" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="q4" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="q5" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="q6" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="q7" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="q8" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="q9" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
+            </relationships>
+        </class>
+        <class className="InfoViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/InfoViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="infoTableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="LocationMapViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LocationMapViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
+            </relationships>
+        </class>
+        <class className="LocationViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LocationViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="enterEditingMode:"/>
+                <relationship kind="outlet" name="editButton" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="locationTableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="LoginViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LoginViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="pushLocationView:"/>
+                <relationship kind="outlet" name="changePass" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="login" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="passcodeField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="MainMenuViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MainMenuViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="mainMenuTableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="NewPartnerViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NewPartnerViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="backgroundTouched:"/>
+                <relationship kind="action" name="cancel:"/>
+                <relationship kind="action" name="saveChanges:"/>
+                <relationship kind="action" name="textfieldReturn:"/>
+                <relationship kind="outlet" name="nameField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="saveButton" candidateClass="UIBarButtonItem"/>
+            </relationships>
+        </class>
+        <class className="OrderFormViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/OrderFormViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="backgroundTouched:"/>
+                <relationship kind="action" name="saveChanges:"/>
+                <relationship kind="action" name="textfieldReturn:"/>
+                <relationship kind="outlet" name="q1" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="q10" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="q11" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="q12" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="q13_1" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="q13_2" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="q14" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="q15" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="q2_1" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="q2_2" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="q2_3" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="q3" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="q4_1" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="q4_2" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="q4_3" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="q5_1" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="q5_2" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="q5_3" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="q6_1" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="q6_2" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="q6_3" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="q6_4" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="q7_1" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="q7_2" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="q8" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="q9" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
+            </relationships>
+        </class>
+        <class className="PartnerViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PartnerViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="enterEditingMode:"/>
+                <relationship kind="outlet" name="editButton" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="partnerTableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="WCEContentViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/WCEContentViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
+            </relationships>
+        </class>
+        <class className="WCETabBarController" superclassName="UITabBarController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/WCETabBarController.h"/>
+            <relationships>
+                <relationship kind="action" name="editButtonClicked:"/>
+                <relationship kind="action" name="logoffButtonClicked:"/>
+                <relationship kind="outlet" name="editButton" candidateClass="UIBarButtonItem"/>
+            </relationships>
+        </class>
+        <class className="WCEWebViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/WCEWebViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
