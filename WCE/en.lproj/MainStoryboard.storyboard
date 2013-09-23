@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Fvu-h0-ZII">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="11G63b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Fvu-h0-ZII">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
@@ -58,9 +58,11 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="NeO-MG-Zky" firstAttribute="top" secondItem="dyq-9g-tJ3" secondAttribute="top" constant="147" id="1FX-vI-laB"/>
                             <constraint firstItem="0d1-W7-3fl" firstAttribute="top" secondItem="8y8-ub-DWI" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="4yq-l4-tfs"/>
                             <constraint firstItem="cDu-oF-yzj" firstAttribute="leading" secondItem="dyq-9g-tJ3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="8yY-tT-p4Z"/>
                             <constraint firstItem="0d1-W7-3fl" firstAttribute="leading" secondItem="dyq-9g-tJ3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="A4j-QG-Xb9"/>
+                            <constraint firstItem="8Kn-xW-OWv" firstAttribute="top" secondItem="dyq-9g-tJ3" secondAttribute="top" constant="57" id="CZs-Gu-3CV"/>
                             <constraint firstAttribute="trailing" secondItem="cDu-oF-yzj" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="EJI-rs-BXd"/>
                             <constraint firstItem="cF7-mo-bNz" firstAttribute="leading" secondItem="dyq-9g-tJ3" secondAttribute="leading" type="default" id="EvR-QK-3mk"/>
                             <constraint firstAttribute="trailing" secondItem="0d1-W7-3fl" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="KpR-Nj-Kep"/>
@@ -70,12 +72,10 @@
                             <constraint firstItem="8Kn-xW-OWv" firstAttribute="leading" secondItem="dyq-9g-tJ3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="dxm-nc-46k"/>
                             <constraint firstItem="cF7-mo-bNz" firstAttribute="trailing" secondItem="dyq-9g-tJ3" secondAttribute="trailing" type="default" id="f77-Xb-ALp"/>
                             <constraint firstItem="mnU-Gd-uYI" firstAttribute="leading" secondItem="dyq-9g-tJ3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="fWt-xI-vAt"/>
-                            <constraint firstItem="NeO-MG-Zky" firstAttribute="top" secondItem="dyq-9g-tJ3" secondAttribute="top" constant="139" id="g3F-E3-SOC"/>
                             <constraint firstItem="8y8-ub-DWI" firstAttribute="top" secondItem="NeO-MG-Zky" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="gyD-Nw-vbA"/>
                             <constraint firstAttribute="trailing" secondItem="NeO-MG-Zky" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="k97-xn-5jJ"/>
                             <constraint firstItem="mnU-Gd-uYI" firstAttribute="top" secondItem="cDu-oF-yzj" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="oi8-ad-6pX"/>
                             <constraint firstItem="NeO-MG-Zky" firstAttribute="leading" secondItem="dyq-9g-tJ3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="r1V-9U-jAZ"/>
-                            <constraint firstItem="8Kn-xW-OWv" firstAttribute="top" secondItem="dyq-9g-tJ3" secondAttribute="top" constant="49" id="umV-Qh-6JZ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="izA-PH-MMP"/>
@@ -115,8 +115,8 @@
                             </imageView>
                             <button opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PEE-h6-IeA">
                                 <constraints>
+                                    <constraint firstAttribute="height" constant="37" id="Fhz-2Q-MHG"/>
                                     <constraint firstAttribute="width" constant="84" id="HX5-f9-DVd"/>
-                                    <constraint firstAttribute="height" constant="44" id="RWM-lg-uJ4"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <size key="titleShadowOffset" width="0.0" height="1"/>
@@ -131,7 +131,7 @@
                             <button opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g0F-Bc-zcm">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="174" id="Btk-RT-Whx"/>
-                                    <constraint firstAttribute="height" constant="44" id="dcs-n3-f1f"/>
+                                    <constraint firstAttribute="height" constant="37" id="E0N-VW-YBW"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <size key="titleShadowOffset" width="0.0" height="1"/>
@@ -147,13 +147,13 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="PEE-h6-IeA" firstAttribute="centerX" secondItem="Dd4-pk-PvU" secondAttribute="centerX" type="default" id="68U-kx-MME"/>
-                            <constraint firstItem="Dd4-pk-PvU" firstAttribute="top" secondItem="3" secondAttribute="top" constant="116" id="8pi-Bs-Wec"/>
-                            <constraint firstItem="yfQ-Bp-V75" firstAttribute="top" secondItem="3" secondAttribute="top" constant="20" symbolic="YES" type="default" id="FcF-lb-qmP"/>
-                            <constraint firstItem="PEE-h6-IeA" firstAttribute="top" secondItem="3" secondAttribute="top" constant="159" id="Slm-l8-Ybh"/>
+                            <constraint firstItem="PEE-h6-IeA" firstAttribute="top" secondItem="Dd4-pk-PvU" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="AKA-bD-s0S"/>
+                            <constraint firstItem="Dd4-pk-PvU" firstAttribute="top" secondItem="3" secondAttribute="top" constant="113" id="Hk8-OT-rqJ"/>
+                            <constraint firstItem="yfQ-Bp-V75" firstAttribute="top" secondItem="3" secondAttribute="top" constant="13" id="X4u-Wf-wfT"/>
                             <constraint firstItem="yfQ-Bp-V75" firstAttribute="centerX" secondItem="Dd4-pk-PvU" secondAttribute="centerX" type="default" id="epU-eM-HTh"/>
                             <constraint firstItem="PEE-h6-IeA" firstAttribute="centerX" secondItem="g0F-Bc-zcm" secondAttribute="centerX" type="default" id="j2l-Ph-7fK"/>
-                            <constraint firstItem="g0F-Bc-zcm" firstAttribute="top" secondItem="3" secondAttribute="top" constant="215" id="qx0-s0-bzJ"/>
-                            <constraint firstItem="Dd4-pk-PvU" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" type="default" id="rTd-zg-3zW"/>
+                            <constraint firstItem="g0F-Bc-zcm" firstAttribute="top" secondItem="PEE-h6-IeA" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="kig-zE-j3j"/>
+                            <constraint firstItem="g0F-Bc-zcm" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" type="default" id="zel-f6-Nqw"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="yaR-XD-8jg"/>
@@ -675,15 +675,15 @@ Et toi?/ Et vous? (polite)
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="addNewPartnerCell" textLabel="rYk-R4-NUG" style="IBUITableViewCellStyleDefault" id="JvO-wT-JW8">
-                                <rect key="frame" x="0.0" y="46" width="320" height="45"/>
+                            <tableViewCell opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="addNewPartnerCell" textLabel="rYk-R4-NUG" rowHeight="45" style="IBUITableViewCellStyleDefault" id="JvO-wT-JW8">
+                                <rect key="frame" x="0.0" y="46" width="320" height="46"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="10" y="1" width="280" height="43"/>
+                                    <rect key="frame" x="10" y="1" width="280" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Add New Partner" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rYk-R4-NUG">
-                                            <rect key="frame" x="10" y="0.0" width="260" height="43"/>
+                                            <rect key="frame" x="10" y="0.0" width="260" height="44"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -697,7 +697,7 @@ Et toi?/ Et vous? (polite)
                                 </connections>
                             </tableViewCell>
                             <tableViewCell opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="partnerCell" id="dV5-ff-jwR">
-                                <rect key="frame" x="0.0" y="91" width="320" height="45"/>
+                                <rect key="frame" x="0.0" y="92" width="320" height="45"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="10" y="0.0" width="280" height="43"/>
@@ -5482,6 +5482,7 @@ Cg
                 <relationship kind="action" name="backgroundTouched:"/>
                 <relationship kind="action" name="saveChanges:"/>
                 <relationship kind="action" name="textfieldReturn:"/>
+                <relationship kind="action" name="textviewReturn:"/>
                 <relationship kind="outlet" name="q1" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="q10" candidateClass="UITextView"/>
                 <relationship kind="outlet" name="q11" candidateClass="UITextView"/>
@@ -5565,6 +5566,7 @@ Cg
                 <relationship kind="action" name="backgroundTouched:"/>
                 <relationship kind="action" name="saveChanges:"/>
                 <relationship kind="action" name="textfieldReturn:"/>
+                <relationship kind="action" name="textviewReturn:"/>
                 <relationship kind="outlet" name="q1" candidateClass="UISegmentedControl"/>
                 <relationship kind="outlet" name="q10" candidateClass="UISegmentedControl"/>
                 <relationship kind="outlet" name="q11" candidateClass="UISegmentedControl"/>
@@ -5629,6 +5631,6 @@ Cg
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="5ef-re-9LN"/>
+        <segue reference="Y5u-3N-Zg9"/>
     </inferredMetricsTieBreakers>
 </document>
