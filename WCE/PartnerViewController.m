@@ -108,7 +108,7 @@
     UIImageView *selectedBackground;
     
     // first cell check
-    if ([tableView numberOfRowsInSection:indexPath.section] == 0){
+    if ([tableView numberOfRowsInSection:indexPath.section] == 1){
         background = [[UIImageView alloc] initWithImage:
                       [UIImage imageNamed:@"solo-cell-bg.png"]];
         selectedBackground = [[UIImageView alloc] initWithImage:
