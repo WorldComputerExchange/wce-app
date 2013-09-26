@@ -17,8 +17,15 @@
 
 @implementation CoverSheetViewController
 
-//q1
-@synthesize  q2, q3, q4, q5, q6, q7, q8, q9, q10, q11, q12_1, q12_2, q13_1, q13_2, q14, q15, q16_1, q16_2, q17, regionArray, locationTableView, locations, actionSheet, selectedCountry, sharedUser, hasCoverSheet, savedCoverSheet;
+@synthesize  q1, q2, q3, q4, q5, q6, q7, q8, q9, q10, q11, q12_1, q12_2, q13_1, q13_2, q14, q15, q16_1, q16_2, q17;
+
+
+@synthesize regionArray, locations, actionSheet, selectedCountry, sharedUser, hasCoverSheet, savedCoverSheet;
+
+//removed
+
+
+
 
 
 //FROM TUTORIAL Cocoa W/Love; need the following instance variables
@@ -31,7 +38,7 @@ static const CGFloat PORTRAIT_KEYBOARD_HEIGHT = 216;
 static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
 
 - (IBAction)backgroundTouched:(id)sender {
-   // [q1 resignFirstResponder];
+    [q1 resignFirstResponder];
     [q2 resignFirstResponder];
     [q3 resignFirstResponder];
     [q4 resignFirstResponder];
@@ -92,7 +99,7 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
         selectedCountry = @"None";
     }else {
         hasCoverSheet = true;
-        selectedCountry = savedCoverSheet.q1;
+        self.q1.text = savedCoverSheet.q1;
         self.q2.text = savedCoverSheet.q2;
         self.q3.text = savedCoverSheet.q3;
         self.q4.text = savedCoverSheet.q4;
@@ -132,7 +139,7 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
     
     curCoverSheet.partnerId = [[sharedUser sharedPartner] partnerId];
     
-    curCoverSheet.q1 = selectedCountry;
+    curCoverSheet.q1 = self.q1.text;
     curCoverSheet.q2 = self.q2.text;
     curCoverSheet.q3 = self.q3.text;
     curCoverSheet.q4 = self.q4.text;
@@ -296,11 +303,11 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
     selectedCountry = [locations objectAtIndex:row];
 }
 
-- (void)pickerDoneClicked
-{
-    [locationTableView reloadData];
-    [actionSheet dismissWithClickedButtonIndex:0 animated:YES];
-}
+//- (void)pickerDoneClicked
+//{
+  //  [locationTableView reloadData];
+    //[actionSheet dismissWithClickedButtonIndex:0 animated:YES];
+//}
 
 
 

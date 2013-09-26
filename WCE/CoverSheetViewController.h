@@ -2,8 +2,7 @@
 //  CoverSheetViewController.h
 //  WCE
 //
-//  Created by Sushruth Chandrasekar on 3/21/13.
-//
+//  Created by Alex Higuera 9/26/2013
 
 #import <UIKit/UIKit.h>
 #import "Location.h"
@@ -21,11 +20,11 @@
 
 @property (nonatomic, retain) User *sharedUser;
 @property (nonatomic, retain) NSArray *regionArray;
-@property (nonatomic,retain) IBOutlet UITableView* locationTableView;
+@property (nonatomic, retain) IBOutlet UITextField *q1;
 @property (nonatomic, retain) IBOutlet UITextField *q2;
 @property (nonatomic, retain) IBOutlet UITextField *q3;
 @property (nonatomic, retain) IBOutlet UITextField *q4;
-@property (nonatomic, retain) IBOutlet UITextField *q5;
+@property (nonatomic, retain) IBOutlet UITextView *q5;
 @property (nonatomic, retain) IBOutlet UITextField *q6;
 @property (nonatomic, retain) IBOutlet UITextField *q7;
 @property (nonatomic, retain) IBOutlet UITextField *q8;
