@@ -867,6 +867,7 @@ Et toi?/ Et vous? (polite)
                                 <connections>
                                     <action selector="backgroundTouched:" destination="NnU-84-OpA" eventType="touchDown" id="QFb-Qf-se8"/>
                                     <action selector="textfieldReturn:" destination="NnU-84-OpA" eventType="editingDidEndOnExit" id="I5T-sw-RpY"/>
+                                    <outlet property="delegate" destination="NnU-84-OpA" id="CTd-fb-Hyh"/>
                                 </connections>
                             </textField>
                             <textField opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TTD-Qw-a9T">
@@ -876,6 +877,7 @@ Et toi?/ Et vous? (polite)
                                 <connections>
                                     <action selector="backgroundTouched:" destination="NnU-84-OpA" eventType="touchDown" id="ksF-Je-vsk"/>
                                     <action selector="textfieldReturn:" destination="NnU-84-OpA" eventType="editingDidEndOnExit" id="Zkm-Fp-LX1"/>
+                                    <outlet property="delegate" destination="NnU-84-OpA" id="4Wj-Ay-hJ3"/>
                                 </connections>
                             </textField>
                             <textField opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7ze-if-1E2">
@@ -885,6 +887,7 @@ Et toi?/ Et vous? (polite)
                                 <connections>
                                     <action selector="backgroundTouched:" destination="NnU-84-OpA" eventType="touchDown" id="IlP-TK-Hg9"/>
                                     <action selector="textfieldReturn:" destination="NnU-84-OpA" eventType="editingDidEndOnExit" id="aOB-j3-sBL"/>
+                                    <outlet property="delegate" destination="NnU-84-OpA" id="dTX-Vm-Hf8"/>
                                 </connections>
                             </textField>
                             <textField opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jEu-ay-YGm">
@@ -903,6 +906,7 @@ Et toi?/ Et vous? (polite)
                                 <connections>
                                     <action selector="backgroundTouched:" destination="NnU-84-OpA" eventType="touchDown" id="M90-qM-ZAw"/>
                                     <action selector="textfieldReturn:" destination="NnU-84-OpA" eventType="editingDidEndOnExit" id="h4X-UF-YhO"/>
+                                    <outlet property="delegate" destination="NnU-84-OpA" id="LDx-1y-JIG"/>
                                 </connections>
                             </textField>
                             <label opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="left" text="Q1. Your Country:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Xq-tw-3nj">
@@ -973,10 +977,20 @@ Et toi?/ Et vous? (polite)
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cLz-AE-ko3">
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="backgroundTouched:" destination="NnU-84-OpA" eventType="touchDown" id="GRg-3S-P4F"/>
+                                    <action selector="textfieldReturn:" destination="NnU-84-OpA" eventType="editingDidEndOnExit" id="B6G-6x-IA5"/>
+                                    <outlet property="delegate" destination="NnU-84-OpA" id="xzw-gP-3vf"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nfE-cu-Hya">
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="backgroundTouched:" destination="NnU-84-OpA" eventType="touchDown" id="ymU-3R-qbi"/>
+                                    <action selector="textfieldReturn:" destination="NnU-84-OpA" eventType="editingDidEndOnExit" id="iBe-pl-Bgq"/>
+                                    <outlet property="delegate" destination="NnU-84-OpA" id="fKW-n2-kE8"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Q8. Telephone:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1gr-4y-mQe">
                                 <constraints>
@@ -999,10 +1013,20 @@ Et toi?/ Et vous? (polite)
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uZA-p4-9zM">
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="backgroundTouched:" destination="NnU-84-OpA" eventType="touchDown" id="ZGf-i7-PfO"/>
+                                    <action selector="textfieldReturn:" destination="NnU-84-OpA" eventType="editingDidEndOnExit" id="DHO-Te-SA2"/>
+                                    <outlet property="delegate" destination="NnU-84-OpA" id="iU7-2k-Bz0"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LgJ-4r-09X">
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="backgroundTouched:" destination="NnU-84-OpA" eventType="touchDown" id="YNX-dL-DOO"/>
+                                    <action selector="textfieldReturn:" destination="NnU-84-OpA" eventType="editingDidEndOnExit" id="LNH-gX-yBW"/>
+                                    <outlet property="delegate" destination="NnU-84-OpA" id="zJU-vI-RGc"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Q10. Website:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BAv-Pb-Hkj">
                                 <constraints>
@@ -1024,16 +1048,29 @@ Et toi?/ Et vous? (polite)
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eTF-9n-77T">
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="backgroundTouched:" destination="NnU-84-OpA" eventType="touchDown" id="B2R-4M-dZA"/>
+                                    <action selector="textfieldReturn:" destination="NnU-84-OpA" eventType="editingDidEndOnExit" id="6aD-hB-Wvh"/>
+                                    <outlet property="delegate" destination="NnU-84-OpA" id="1Pz-Ur-MwU"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="33X-YJ-0IT">
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="backgroundTouched:" destination="NnU-84-OpA" eventType="touchDown" id="zMu-dT-oae"/>
+                                    <action selector="textfieldReturn:" destination="NnU-84-OpA" eventType="editingDidEndOnExit" id="Agq-18-vaD"/>
+                                    <outlet property="delegate" destination="NnU-84-OpA" id="QQn-K4-4sc"/>
+                                </connections>
                             </textField>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="x8Z-ev-ztI">
                                 <segments>
                                     <segment title="Yes"/>
                                     <segment title="No"/>
                                 </segments>
+                                <connections>
+                                    <action selector="textfieldReturn:" destination="NnU-84-OpA" eventType="editingDidEndOnExit" id="1lz-rL-5Q3"/>
+                                </connections>
                             </segmentedControl>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Q12. Total % of computers you expect to connect to internet within:" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="256" translatesAutoresizingMaskIntoConstraints="NO" id="cC8-Nq-8wi">
                                 <constraints>
@@ -1056,7 +1093,7 @@ Et toi?/ Et vous? (polite)
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Q13. Estimated total number of youth up to age 24 to be connected per year:" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="259" translatesAutoresizingMaskIntoConstraints="NO" id="CjR-Aj-f4I">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Q13. Estimated total number of youth up to age 24 to be connected per year:" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="256" translatesAutoresizingMaskIntoConstraints="NO" id="CjR-Aj-f4I">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="bTS-Wq-gJ0"/>
                                 </constraints>
@@ -1067,6 +1104,11 @@ Et toi?/ Et vous? (polite)
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="65O-kr-oeF">
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="backgroundTouched:" destination="NnU-84-OpA" eventType="touchDown" id="mJQ-8d-SLW"/>
+                                    <action selector="textfieldReturn:" destination="NnU-84-OpA" eventType="editingDidEndOnExit" id="0Bx-yy-IkA"/>
+                                    <outlet property="delegate" destination="NnU-84-OpA" id="gqx-mG-J88"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WfP-nk-jnR">
                                 <constraints>
@@ -1074,6 +1116,11 @@ Et toi?/ Et vous? (polite)
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="backgroundTouched:" destination="NnU-84-OpA" eventType="touchDown" id="Sl0-MY-Px8"/>
+                                    <action selector="textfieldReturn:" destination="NnU-84-OpA" eventType="editingDidEndOnExit" id="s0y-bY-W7v"/>
+                                    <outlet property="delegate" destination="NnU-84-OpA" id="KVC-A8-UB4"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="# Females" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T9J-qe-lnE">
                                 <constraints>
@@ -1110,6 +1157,11 @@ Et toi?/ Et vous? (polite)
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="backgroundTouched:" destination="NnU-84-OpA" eventType="touchDown" id="uXH-BS-QDv"/>
+                                    <action selector="textfieldReturn:" destination="NnU-84-OpA" eventType="editingDidEndOnExit" id="zfH-3u-wtP"/>
+                                    <outlet property="delegate" destination="NnU-84-OpA" id="40z-wf-91I"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tn7-VX-vhx">
                                 <constraints>
@@ -1117,14 +1169,29 @@ Et toi?/ Et vous? (polite)
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="backgroundTouched:" destination="NnU-84-OpA" eventType="touchDown" id="Q8n-ua-3si"/>
+                                    <action selector="textfieldReturn:" destination="NnU-84-OpA" eventType="editingDidEndOnExit" id="6aJ-Km-MHF"/>
+                                    <outlet property="delegate" destination="NnU-84-OpA" id="DeT-8z-Yqm"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EOX-dh-mMj">
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="backgroundTouched:" destination="NnU-84-OpA" eventType="touchDown" id="tmb-EG-aQV"/>
+                                    <action selector="textfieldReturn:" destination="NnU-84-OpA" eventType="editingDidEndOnExit" id="wAF-Us-ZsJ"/>
+                                    <outlet property="delegate" destination="NnU-84-OpA" id="rZo-wL-ebc"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XHn-A0-Ml9">
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="backgroundTouched:" destination="NnU-84-OpA" eventType="touchDown" id="gbH-CA-Fuo"/>
+                                    <action selector="textfieldReturn:" destination="NnU-84-OpA" eventType="editingDidEndOnExit" id="lKE-oc-dRp"/>
+                                    <outlet property="delegate" destination="NnU-84-OpA" id="U2T-Gi-LSp"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="wordWrap" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="260" translatesAutoresizingMaskIntoConstraints="NO" id="RnO-l2-yoh">
                                 <constraints>
@@ -1136,7 +1203,7 @@ Et toi?/ Et vous? (polite)
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Q16. How are you charged for internet access?" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="260" translatesAutoresizingMaskIntoConstraints="NO" id="80i-gH-taN">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Q16. How are you charged for internet access?" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="259" translatesAutoresizingMaskIntoConstraints="NO" id="80i-gH-taN">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="41" id="Kbf-yk-8CT"/>
                                 </constraints>
@@ -1175,6 +1242,9 @@ Et toi?/ Et vous? (polite)
                                     <segment title="Yes"/>
                                     <segment title="No"/>
                                 </segments>
+                                <connections>
+                                    <action selector="textfieldReturn:" destination="NnU-84-OpA" eventType="editingDidEndOnExit" id="70y-WE-YWg"/>
+                                </connections>
                             </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -1306,11 +1376,25 @@ Et toi?/ Et vous? (polite)
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="locationTableView" destination="gS5-v5-192" id="ulC-Q7-z3r"/>
+                        <outlet property="q10" destination="LgJ-4r-09X" id="YyY-Yy-F29"/>
+                        <outlet property="q11" destination="x8Z-ev-ztI" id="YZP-f7-jaP"/>
+                        <outlet property="q12_1" destination="eTF-9n-77T" id="Rjv-iS-F7U"/>
+                        <outlet property="q12_2" destination="33X-YJ-0IT" id="kiE-2B-XOP"/>
+                        <outlet property="q13_1" destination="65O-kr-oeF" id="S5f-aB-sfl"/>
+                        <outlet property="q13_2" destination="WfP-nk-jnR" id="pfE-f1-apT"/>
+                        <outlet property="q14" destination="CvU-Cq-7pR" id="c6M-wl-MPB"/>
+                        <outlet property="q15" destination="tn7-VX-vhx" id="Nu1-jW-tk2"/>
+                        <outlet property="q16_1" destination="EOX-dh-mMj" id="LNs-QG-K4d"/>
+                        <outlet property="q16_2" destination="XHn-A0-Ml9" id="GeB-3H-oR7"/>
+                        <outlet property="q17" destination="mfh-LZ-McY" id="QKo-jm-PZS"/>
                         <outlet property="q2" destination="jZp-s7-Lgf" id="0k6-Dy-RnV"/>
                         <outlet property="q3" destination="TTD-Qw-a9T" id="Jhr-nB-6aZ"/>
                         <outlet property="q4" destination="7ze-if-1E2" id="n6e-XI-8Ep"/>
                         <outlet property="q5" destination="jEu-ay-YGm" id="LDb-3V-Oo0"/>
                         <outlet property="q6" destination="57T-SS-3LB" id="ehq-th-zxI"/>
+                        <outlet property="q7" destination="cLz-AE-ko3" id="Sdc-a5-Qsp"/>
+                        <outlet property="q8" destination="nfE-cu-Hya" id="b4x-X7-imR"/>
+                        <outlet property="q9" destination="uZA-p4-9zM" id="7RY-Mt-Ve0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="krM-LY-bwo" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -3775,7 +3859,7 @@ WCE Fundraising: WCE raises the final 1/3 of our sourcing &amp; shipping costs f
                                         </view>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="addLocationCell" textLabel="DBo-jf-yB4" imageView="uE6-tJ-KS4" style="IBUITableViewCellStyleDefault" id="gXV-8U-2wh" customClass="CustomCell">
-                                        <rect key="frame" x="0.0" y="91" width="320" height="45"/>
+                                        <rect key="frame" x="0.0" y="91" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="0.0" width="300" height="43"/>
@@ -5729,12 +5813,27 @@ Cg
                 <relationship kind="action" name="backgroundTouched:"/>
                 <relationship kind="action" name="saveChanges:"/>
                 <relationship kind="action" name="textfieldReturn:"/>
+                <relationship kind="action" name="textviewReturn:"/>
                 <relationship kind="outlet" name="locationTableView" candidateClass="UITableView"/>
+                <relationship kind="outlet" name="q10" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="q11" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="q12_1" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="q12_2" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="q13_1" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="q13_2" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="q14" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="q15" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="q16_1" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="q16_2" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="q17" candidateClass="UISegmentedControl"/>
                 <relationship kind="outlet" name="q2" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="q3" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="q4" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="q5" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="q6" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="q7" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="q8" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="q9" candidateClass="UITextField"/>
             </relationships>
         </class>
         <class className="CustomCell" superclassName="UITableViewCell">

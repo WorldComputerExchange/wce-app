@@ -27,6 +27,23 @@
 @property (nonatomic, retain) IBOutlet UITextField *q4;
 @property (nonatomic, retain) IBOutlet UITextField *q5;
 @property (nonatomic, retain) IBOutlet UITextField *q6;
+@property (nonatomic, retain) IBOutlet UITextField *q7;
+@property (nonatomic, retain) IBOutlet UITextField *q8;
+@property (nonatomic, retain) IBOutlet UITextField *q9;
+@property (nonatomic, retain) IBOutlet UITextField *q10;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *q11;
+@property (nonatomic, retain) IBOutlet UITextField *q12_1;
+@property (nonatomic, retain) IBOutlet UITextField *q12_2;
+@property (nonatomic, retain) IBOutlet UITextField *q13_1;
+@property (nonatomic, retain) IBOutlet UITextField *q13_2;
+@property (nonatomic, retain) IBOutlet UITextField *q14;
+@property (nonatomic, retain) IBOutlet UITextField *q15;
+@property (nonatomic, retain) IBOutlet UITextField *q16_1;
+@property (nonatomic, retain) IBOutlet UITextField *q16_2;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *q17;
+
+
+
 @property (nonatomic, copy) NSArray *locations;
 @property (nonatomic, copy) UIActionSheet *actionSheet;
 @property (nonatomic, retain) NSString *selectedCountry;
