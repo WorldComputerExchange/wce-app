@@ -41,8 +41,6 @@
 @property (nonatomic, retain) IBOutlet UITextField *q16_2;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *q17;
 
-
-
 @property (nonatomic, copy) NSArray *locations;
 @property (nonatomic, copy) UIActionSheet *actionSheet;
 @property (nonatomic, retain) NSString *selectedCountry;
@@ -53,5 +51,8 @@
 
 - (IBAction)textfieldReturn:(id)sender;
 - (IBAction)backgroundTouched:(id)sender;
+
+-(NSInteger)segmentIndexForString:(NSString *)string;
+-(NSString *)stringForSegmentIndex:(NSInteger)segIndex;
 
 @end
