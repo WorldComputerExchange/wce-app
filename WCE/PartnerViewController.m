@@ -193,6 +193,12 @@
         [partners removeObjectAtIndex:indexPath.row];
          
         [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+        
+        if (indexPath.row == 0) {
+            //reload the top cell with an animation because image needs to be modified
+            NSIndexPath *modifiedCellIdx = [NSIndexPath indexPathForRow:0 inSection:0];
+            [tableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:modifiedCellIdx] withRowAnimation:UITableViewRowAnimationAutomatic];
+        }
     }
 }
 
@@ -201,7 +207,6 @@
     if([partnerTableView isEditing]){
         NSLog(@"Exited editing mode");
         [partnerTableView setEditing:NO animated:YES];
-        [partnerTableView reloadData];
     }else {
         NSLog(@"Entered editing mode");
         [partnerTableView setEditing:YES animated:YES];

@@ -515,8 +515,8 @@
 		8C9C3AD716CC60D000F95A6B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				8C25888417ED3A950000EA7F /* Backgrounds */,
 				8CA9678717AB292C003C3B70 /* Wce.db */,
+				8C25888417ED3A950000EA7F /* Backgrounds */,
 				8C25888117ED3A070000EA7F /* Tableview images */,
 				8C4C7B821735AD8C00ED3E82 /* Buttons */,
 				8C4C7B811735AD1600ED3E82 /* Content Files */,

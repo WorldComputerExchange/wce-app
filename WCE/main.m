@@ -2,7 +2,6 @@
 //  main.m
 //  WCE
 //
-//
 
 #import <UIKit/UIKit.h>
 

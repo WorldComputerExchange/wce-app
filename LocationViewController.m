@@ -64,8 +64,7 @@
     if([locationTableView isEditing]){ //Exit editing mode
         NSLog(@"Exited editing mode");
         [locationTableView setEditing:NO animated:YES];
-        [locationTableView reloadData];
-		
+        
         //Replace done button with edit button
 		if([sender isKindOfClass:[WCETabBarController class]])
 		{
@@ -260,6 +259,12 @@
         [[sharedUser savedLocations] removeObjectAtIndex:indexPath.row]; //remove from User array
         
         [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+        
+        if (indexPath.row == 0) {
+            //reload the top cell with an animation because image needs to be modified
+            NSIndexPath *modifiedCellIdx = [NSIndexPath indexPathForRow:0 inSection:0];
+            [tableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:modifiedCellIdx] withRowAnimation:UITableViewRowAnimationAutomatic];
+        }
         
     }
 }
