@@ -4,8 +4,8 @@
 //
 //  Created by Peter on 4/25/13.
 //
-
 #import "WCETabBarController.h"
+#import "LoginViewController.h"
 #import "LocationViewController.h"
 #import "LocationMapViewController.h"
 
@@ -33,6 +33,8 @@
 	
 	_buttonsInToolbar = [[NSMutableArray alloc] init];
 	
+    
+    [[UINavigationBar appearance] setTintColor:[UIColor colorWithRed:135./255. green:0./255. blue:0./255. alpha:1.0]];
 	// Do any additional setup after loading the view.
 }
 
@@ -67,18 +69,4 @@
 	[[self navigationController] setNavigationBarHidden:NO];
 }
 
-- (IBAction)editButtonClicked:(id)sender
-{
-	LocationViewController *viewController = (LocationViewController *)[[self viewControllers] objectAtIndex:0];
-	[viewController enterEditingMode:self];
-}
-
-- (IBAction)logoffButtonClicked:(id)sender
-{
-	[[NSUserDefaults standardUserDefaults] setBool:FALSE forKey:@"loggedIn"];
-	[[NSUserDefaults standardUserDefaults] synchronize];
-	
-	WCEAppDelegate *appDelegate = (WCEAppDelegate *)[[UIApplication sharedApplication] delegate];
-	[appDelegate presentLoginViewControllerAnimated:YES];
-}
 @end

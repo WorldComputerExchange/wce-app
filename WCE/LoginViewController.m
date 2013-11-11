@@ -5,13 +5,8 @@
 //
 
 #import "LoginViewController.h"
-#import "LocationViewController.h"
 
 @interface LoginViewController ()
-
-@property (weak, nonatomic) IBOutlet UITextField *passcodeField;
-
-- (IBAction)pushLocationView:(id)sender;
 
 @end
 
@@ -45,7 +40,7 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    [self.navigationController setNavigationBarHidden:YES];
+    //[self.navigationController setNavigationBarHidden:YES];
 	[[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleBlackTranslucent animated:YES];
 	
 	// retrieve the password

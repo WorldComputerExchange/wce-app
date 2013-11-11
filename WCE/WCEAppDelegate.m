@@ -26,8 +26,11 @@
     //set the background image and navigation bar color
 	self.window.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"Default.png"]];
     
-	[[UINavigationBar appearance] setTintColor:[UIColor colorWithRed:135./255. green:0./255. blue:0./255. alpha:1.0]];
-	
+    
+    UIImage *navBackgroundImage = [UIImage imageNamed:@"navBar-bg.png"];
+    [[UINavigationBar appearance] setBackgroundImage:navBackgroundImage forBarMetrics:UIBarMetricsDefault];
+    [[UINavigationBar appearance] setTintColor:[UIColor colorWithRed:135./255. green:0./255. blue:0./255. alpha:1.0]];
+	 
 	// Override point for customization after application launch.
    
     return YES;
@@ -75,9 +78,10 @@
 	BOOL isLoggedIn = [[NSUserDefaults standardUserDefaults] boolForKey:@"loggedIn"];
 	
 	UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
-	UINavigationController *navController = (UINavigationController *)[[self window] rootViewController];
+	//UINavigationController *navController = (UINavigationController *)[[self window] rootViewController];
+    
 	_loginController = [storyboard instantiateViewControllerWithIdentifier:@"login"];
-	_tabBarController = (WCETabBarController *)[navController topViewController];
+	_tabBarController = (WCETabBarController *)[[self window] rootViewController];//[navController topViewController];
 	[_loginController setDelegate:_tabBarController];
 	
 	// used for segue between password and change password:
@@ -85,8 +89,8 @@
 	
 	if(!isLoggedIn)
 	{
-		[[_tabBarController view] setHidden:YES];
-		[[_tabBarController navigationController] setNavigationBarHidden:YES];
+		//[[_loginController view] setHidden:YES];
+		//[[_tabBarController navigationController] setNavigationBarHidden:YES];
 		
 		[[[self window] rootViewController] presentViewController:_loginController animated:YES completion:nil];
 	}

@@ -21,7 +21,7 @@
 
 @implementation LocationViewController
 
-@synthesize locationTableView, chooseFromMap, sharedLocation, sharedUser;
+@synthesize locationTableView, chooseFromMap, sharedLocation, sharedUser, editButton, logOffButton;
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -66,25 +66,26 @@
         [locationTableView setEditing:NO animated:YES];
         
         //Replace done button with edit button
-		if([sender isKindOfClass:[WCETabBarController class]])
-		{
-			WCETabBarController *tabController = (WCETabBarController *)sender;
-			[[tabController editButton] setStyle:UIBarButtonItemStylePlain];
-			[[tabController editButton] setTitle:@"Edit"];
-		}
+        [[self editButton] setStyle:UIBarButtonItemStylePlain];
+        [[self editButton] setTitle:@"Edit"];
+        
     }else { //Enter editing mode 
          NSLog(@"Entered editing mode");
         [locationTableView setEditing:YES animated:YES];
         [locationTableView setAllowsSelectionDuringEditing:YES];
 		
         //replace edit button with done button
-		if([sender isKindOfClass:[WCETabBarController class]])
-		{
-			WCETabBarController *tabController = (WCETabBarController *)sender;
-			[[tabController editButton] setStyle:UIBarButtonItemStyleDone];
-			[[tabController editButton] setTitle:@"Done"];
-		}
+        [[self editButton] setStyle:UIBarButtonItemStyleDone];
+        [[self editButton] setTitle:@"Done"];
     }
+}
+
+-(IBAction)logoff:(id)sender{
+    [[NSUserDefaults standardUserDefaults] setBool:FALSE forKey:@"loggedIn"];
+	[[NSUserDefaults standardUserDefaults] synchronize];
+	
+	WCEAppDelegate *appDelegate = (WCEAppDelegate *)[[UIApplication sharedApplication] delegate];
+	[appDelegate presentLoginViewControllerAnimated:YES];
 }
 
 - (void)viewWillAppear:(BOOL)animated

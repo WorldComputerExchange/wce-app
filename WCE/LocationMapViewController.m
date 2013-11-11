@@ -113,30 +113,35 @@ static NSArray *_previouslyGeocodedLocations;
 	//NSLog(@"geocoding location with address: %@", [(Location *)[array objectAtIndex:index] address]);
 	
 	Location *thisLocation = (Location *)[array objectAtIndex:index];
+
+    
+    //if this locations address has not been specified go to the next location
+    if (![thisLocation address] || [[thisLocation address] isEqualToString:@"NA"]){
+        if(index < [array count] - 1)
+			[self addAnnotationWithArray:array atIndex:(index + 1)];
+		else
+			_previouslyGeocodedLocations = [array copy];
+            return;/// keep a record of which ones we've already geocoded
+    }
+    
+    NSMutableString *geocodingString = [NSMutableString stringWithString:[thisLocation address]];
+    
+    if(![[thisLocation city] isEqualToString:@"NA"] && [thisLocation city]){
+        [geocodingString appendString:@", "];
+        [geocodingString appendString:[thisLocation city]];
+    }
 	
-	NSMutableString *geocodingString = [NSMutableString stringWithString:[thisLocation address]];
-	[geocodingString appendString:@", "];
-	[geocodingString appendString:[thisLocation city]];
-	
-	if(![[thisLocation zip] isEqualToString:@"NA"])
+	if(![[thisLocation zip] isEqualToString:@"NA"] && [thisLocation zip])
 	{
 		[geocodingString appendString:@", "];
 		[geocodingString appendString:[thisLocation zip]];
 	}
 	
-	if(![[thisLocation country] isEqualToString:@"NA"])
+	if(![[thisLocation country] isEqualToString:@"NA"] && [thisLocation country])
 	{
 		[geocodingString appendString:@", "];
 		[geocodingString appendString:[thisLocation country]];
 	}
-	/*else
-	{
-		//// exit procedure
-		if(index < [array count] - 1)
-			[self addAnnotationWithArray:array atIndex:(index + 1)];
-		else
-			_previouslyGeocodedLocations = [array copy]; /// keep a record of which ones we've already geocoded
-	}*/
 	
 	NSLog(@"index of thing: %i", [_previouslyGeocodedLocations indexOfObject:thisLocation]);
 	if([_previouslyGeocodedLocations indexOfObject:thisLocation] == NSNotFound || [_previouslyGeocodedLocations count] == 0)

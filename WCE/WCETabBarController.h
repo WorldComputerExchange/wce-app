@@ -6,14 +6,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "LoginViewController.h"
-#import "WCEAppDelegate.h"
+#import "LoginViewControllerDelegate.h"
 
 @interface WCETabBarController : UITabBarController <UITabBarControllerDelegate, LoginViewControllerDelegate>
 
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *editButton;
-
-- (IBAction)editButtonClicked:(id)sender;
-- (IBAction)logoffButtonClicked:(id)sender;
 
 @end

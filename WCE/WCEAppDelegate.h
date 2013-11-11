@@ -5,16 +5,17 @@
 //
 
 #import <UIKit/UIKit.h>
-
-#import "LoginViewController.h"
 #import "WCETabBarController.h"
+#import "LocationViewController.h"
+#import "LoginViewController.h"
 
-@class WCETabBarController;
+@class WCEAppDelegate;
 
 @interface WCEAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-@property (strong, nonatomic, readonly) LoginViewController *loginController;
+@property (strong, nonatomic) LoginViewController *loginController;
+//@property (strong, nonatomic) LocationViewController *locationController;
 @property (strong, nonatomic, readonly) WCETabBarController *tabBarController;
 @property (strong, nonatomic, readonly) UINavigationController *loginNavController;
 @property (strong, nonatomic) NSString *databaseName;

@@ -19,7 +19,6 @@
 		8C25887617EB85AB0000EA7F /* disclosure-check-yellow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C25887217EB85AB0000EA7F /* disclosure-check-yellow@2x.png */; };
 		8C25887917EB99F60000EA7F /* edit-disclosure.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C25887717EB99F50000EA7F /* edit-disclosure.png */; };
 		8C25887A17EB99F60000EA7F /* edit-disclosure@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C25887817EB99F60000EA7F /* edit-disclosure@2x.png */; };
-		8C25887C17ECA21E0000EA7F /* Reveal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C25887B17ECA21E0000EA7F /* Reveal.framework */; };
 		8C25887E17ECA2600000EA7F /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C25887D17ECA2600000EA7F /* CFNetwork.framework */; };
 		8C25888017ECA2720000EA7F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C25887F17ECA2710000EA7F /* QuartzCore.framework */; };
 		8C25889917EE3D3E0000EA7F /* middle-cell-bg-selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C25889717EE3D3D0000EA7F /* middle-cell-bg-selected@2x.png */; };
@@ -198,6 +197,7 @@
 		8CD27FED1720BC6B00973A04 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		8CD27FF11728354400973A04 /* PartnerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PartnerViewController.h; sourceTree = "<group>"; };
 		8CD27FF21728354400973A04 /* PartnerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PartnerViewController.m; sourceTree = "<group>"; };
+		8CDF7C2818304141004D0C37 /* LoginViewControllerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewControllerDelegate.h; sourceTree = "<group>"; };
 		9E2476DC16E27D9C0049ED27 /* WCE Content V5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WCE Content V5.png"; sourceTree = "<group>"; };
 		9E4B58C016FBD95F007BE176 /* CoverSheetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoverSheetViewController.h; sourceTree = "<group>"; };
 		9E4B58C116FBD95F007BE176 /* CoverSheetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoverSheetViewController.m; sourceTree = "<group>"; };
@@ -234,7 +234,6 @@
 				8C9C3AD116CC60D000F95A6B /* UIKit.framework in Frameworks */,
 				8C9C3AD316CC60D000F95A6B /* Foundation.framework in Frameworks */,
 				8C9C3AD516CC60D000F95A6B /* CoreGraphics.framework in Frameworks */,
-				8C25887C17ECA21E0000EA7F /* Reveal.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,6 +342,7 @@
 			children = (
 				8C27586916CC820E00DEDAC8 /* LoginViewController.h */,
 				8C27586A16CC820E00DEDAC8 /* LoginViewController.m */,
+				8CDF7C2818304141004D0C37 /* LoginViewControllerDelegate.h */,
 				D0F745F51730AB3B00C9EC5F /* ChangePassViewController.h */,
 				D0F745F61730AB3B00C9EC5F /* ChangePassViewController.m */,
 			);
@@ -866,6 +866,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WCE/WCE-Prefix.pch";
 				INFOPLIST_FILE = "WCE/WCE-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -882,6 +883,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WCE/WCE-Prefix.pch";
 				INFOPLIST_FILE = "WCE/WCE-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
