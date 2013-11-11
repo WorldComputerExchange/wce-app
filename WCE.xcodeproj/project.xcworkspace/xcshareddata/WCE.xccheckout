@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>70BA11B0-ED29-4D9A-88DC-BB7224BCF7EA</string>
+	<key>IDESourceControlProjectName</key>
+	<string>WCE</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>B77699C4-52EA-4163-B27B-2E5BA7FA295F</key>
+		<string>https://github.com/WorldComputerExchange/wce-app.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>WCE.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>B77699C4-52EA-4163-B27B-2E5BA7FA295F</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/WorldComputerExchange/wce-app.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>B77699C4-52EA-4163-B27B-2E5BA7FA295F</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>B77699C4-52EA-4163-B27B-2E5BA7FA295F</string>
+			<key>IDESourceControlWCCName</key>
+			<string>wce-app</string>
+		</dict>
+	</array>
+</dict>
+</plist>

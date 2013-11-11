@@ -71,7 +71,6 @@
 		8C9C3ADD16CC60D000F95A6B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C9C3ADC16CC60D000F95A6B /* main.m */; };
 		8C9C3AE116CC60D000F95A6B /* WCEAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C9C3AE016CC60D000F95A6B /* WCEAppDelegate.m */; };
 		8C9C3AEA16CC60D000F95A6B /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C9C3AE816CC60D000F95A6B /* MainStoryboard.storyboard */; };
-		8CA9678817AB292C003C3B70 /* Wce.db in Resources */ = {isa = PBXBuildFile; fileRef = 8CA9678717AB292C003C3B70 /* Wce.db */; };
 		8CA9678B17AC4130003C3B70 /* DataAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CA9678A17AC4130003C3B70 /* DataAccess.m */; };
 		8CB0441916DC47910000AD0F /* LocationMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CB0441816DC47910000AD0F /* LocationMapViewController.m */; };
 		8CCEF95717CE66C500DD52AA /* Evaluation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CCEF95617CE66C500DD52AA /* Evaluation.m */; };
@@ -79,6 +78,7 @@
 		8CCEF95D17CEBA9A00DD52AA /* Order.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CCEF95C17CEBA9A00DD52AA /* Order.m */; };
 		8CD27FEE1720BC6B00973A04 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CD27FED1720BC6B00973A04 /* User.m */; };
 		8CD27FF31728354500973A04 /* PartnerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CD27FF21728354400973A04 /* PartnerViewController.m */; };
+		8CDF7C2B183092F1004D0C37 /* Wce.db in Resources */ = {isa = PBXBuildFile; fileRef = 8CDF7C2A183092F1004D0C37 /* Wce.db */; };
 		9E2476DD16E27D9C0049ED27 /* WCE Content V5.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E2476DC16E27D9C0049ED27 /* WCE Content V5.png */; };
 		9E4B58C216FBD95F007BE176 /* CoverSheetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E4B58C116FBD95F007BE176 /* CoverSheetViewController.m */; };
 		9ED3259D16DD53FF00EA38E0 /* AddressAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ED3259C16DD53FF00EA38E0 /* AddressAnnotation.m */; };
@@ -95,81 +95,81 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		8C03243216DC41850089CB81 /* AddLocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddLocationViewController.h; sourceTree = "<group>"; };
-		8C03243316DC41850089CB81 /* AddLocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddLocationViewController.m; sourceTree = "<group>"; };
-		8C1B2974172A131600D359D4 /* ImplementationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImplementationViewController.h; sourceTree = "<group>"; };
-		8C1B2975172A131600D359D4 /* ImplementationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImplementationViewController.m; sourceTree = "<group>"; };
-		8C1B2977172A187700D359D4 /* FormsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FormsViewController.h; sourceTree = "<group>"; };
-		8C1B2978172A187700D359D4 /* FormsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FormsViewController.m; sourceTree = "<group>"; };
-		8C25886917EA580F0000EA7F /* button-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button-bg.png"; sourceTree = "<group>"; };
-		8C25886A17EA580F0000EA7F /* button-bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button-bg@2x.png"; sourceTree = "<group>"; };
-		8C25886D17EA69070000EA7F /* wce-logo-mod.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wce-logo-mod.png"; sourceTree = "<group>"; };
-		8C25886F17EB85AB0000EA7F /* disclosure-check-green@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "disclosure-check-green@2x.png"; sourceTree = "<group>"; };
-		8C25887017EB85AB0000EA7F /* disclosure-check-green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "disclosure-check-green.png"; sourceTree = "<group>"; };
-		8C25887117EB85AB0000EA7F /* disclosure-check-yellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "disclosure-check-yellow.png"; sourceTree = "<group>"; };
-		8C25887217EB85AB0000EA7F /* disclosure-check-yellow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "disclosure-check-yellow@2x.png"; sourceTree = "<group>"; };
-		8C25887717EB99F50000EA7F /* edit-disclosure.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "edit-disclosure.png"; sourceTree = "<group>"; };
-		8C25887817EB99F60000EA7F /* edit-disclosure@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "edit-disclosure@2x.png"; sourceTree = "<group>"; };
+		8C03243216DC41850089CB81 /* AddLocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddLocationViewController.h; path = ViewControllers/AddLocation/AddLocationViewController.h; sourceTree = "<group>"; };
+		8C03243316DC41850089CB81 /* AddLocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddLocationViewController.m; path = ViewControllers/AddLocation/AddLocationViewController.m; sourceTree = "<group>"; };
+		8C1B2974172A131600D359D4 /* ImplementationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImplementationViewController.h; path = "ViewControllers/Forms/Implementation Form/ImplementationViewController.h"; sourceTree = "<group>"; };
+		8C1B2975172A131600D359D4 /* ImplementationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImplementationViewController.m; path = "ViewControllers/Forms/Implementation Form/ImplementationViewController.m"; sourceTree = "<group>"; };
+		8C1B2977172A187700D359D4 /* FormsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FormsViewController.h; path = ViewControllers/Forms/FormsViewController.h; sourceTree = "<group>"; };
+		8C1B2978172A187700D359D4 /* FormsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FormsViewController.m; path = ViewControllers/Forms/FormsViewController.m; sourceTree = "<group>"; };
+		8C25886917EA580F0000EA7F /* button-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "button-bg.png"; path = "Supporting Files/Buttons/button-bg.png"; sourceTree = "<group>"; };
+		8C25886A17EA580F0000EA7F /* button-bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "button-bg@2x.png"; path = "Supporting Files/Buttons/button-bg@2x.png"; sourceTree = "<group>"; };
+		8C25886D17EA69070000EA7F /* wce-logo-mod.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "wce-logo-mod.png"; path = "Supporting Files/wce-logo-mod.png"; sourceTree = "<group>"; };
+		8C25886F17EB85AB0000EA7F /* disclosure-check-green@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "disclosure-check-green@2x.png"; path = "Supporting Files/Tableview images/disclosure-check-green@2x.png"; sourceTree = "<group>"; };
+		8C25887017EB85AB0000EA7F /* disclosure-check-green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "disclosure-check-green.png"; path = "Supporting Files/Tableview images/disclosure-check-green.png"; sourceTree = "<group>"; };
+		8C25887117EB85AB0000EA7F /* disclosure-check-yellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "disclosure-check-yellow.png"; path = "Supporting Files/Tableview images/disclosure-check-yellow.png"; sourceTree = "<group>"; };
+		8C25887217EB85AB0000EA7F /* disclosure-check-yellow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "disclosure-check-yellow@2x.png"; path = "Supporting Files/Tableview images/disclosure-check-yellow@2x.png"; sourceTree = "<group>"; };
+		8C25887717EB99F50000EA7F /* edit-disclosure.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "edit-disclosure.png"; path = "Supporting Files/Tableview images/edit-disclosure.png"; sourceTree = "<group>"; };
+		8C25887817EB99F60000EA7F /* edit-disclosure@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "edit-disclosure@2x.png"; path = "Supporting Files/Tableview images/edit-disclosure@2x.png"; sourceTree = "<group>"; };
 		8C25887D17ECA2600000EA7F /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		8C25887F17ECA2710000EA7F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		8C25889717EE3D3D0000EA7F /* middle-cell-bg-selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "middle-cell-bg-selected@2x.png"; path = "../middle-cell-bg-selected@2x.png"; sourceTree = "<group>"; };
-		8C25889817EE3D3D0000EA7F /* middle-cell-bg-selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "middle-cell-bg-selected.png"; path = "../middle-cell-bg-selected.png"; sourceTree = "<group>"; };
-		8C25889B17EE3E7B0000EA7F /* solo-cell-bg-selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "solo-cell-bg-selected@2x.png"; path = "../solo-cell-bg-selected@2x.png"; sourceTree = "<group>"; };
-		8C25889C17EE3E7C0000EA7F /* solo-cell-bg-selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "solo-cell-bg-selected.png"; path = "../solo-cell-bg-selected.png"; sourceTree = "<group>"; };
-		8C25889F17EE3F170000EA7F /* top-cell-bg-selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "top-cell-bg-selected@2x.png"; sourceTree = "<group>"; };
-		8C2588A017EE3F170000EA7F /* top-cell-bg-selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "top-cell-bg-selected.png"; sourceTree = "<group>"; };
-		8C2588A317EE3F7E0000EA7F /* bottom-cell-bg-selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bottom-cell-bg-selected@2x.png"; sourceTree = "<group>"; };
-		8C2588A417EE3F7E0000EA7F /* bottom-cell-bg-selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bottom-cell-bg-selected.png"; sourceTree = "<group>"; };
-		8C27586916CC820E00DEDAC8 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
-		8C27586A16CC820E00DEDAC8 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
-		8C27586C16CC828F00DEDAC8 /* LocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LocationViewController.h; path = ../LocationViewController.h; sourceTree = "<group>"; };
-		8C27586D16CC828F00DEDAC8 /* LocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LocationViewController.m; path = ../LocationViewController.m; sourceTree = "<group>"; };
-		8C2AE38C17C90D6B00C00BAF /* Partner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Partner.h; sourceTree = "<group>"; };
-		8C2AE38D17C90D6B00C00BAF /* Partner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Partner.m; sourceTree = "<group>"; };
-		8C2AE38F17CD52DB00C00BAF /* CoverSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoverSheet.h; sourceTree = "<group>"; };
-		8C2AE39017CD52DB00C00BAF /* CoverSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoverSheet.m; sourceTree = "<group>"; };
-		8C32DF4316E26BB8005AFA89 /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Location.h; sourceTree = "<group>"; };
-		8C32DF4416E26BB8005AFA89 /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Location.m; sourceTree = "<group>"; };
+		8C25889717EE3D3D0000EA7F /* middle-cell-bg-selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "middle-cell-bg-selected@2x.png"; path = "Supporting Files/Tableview images/middle-cell-bg-selected@2x.png"; sourceTree = "<group>"; };
+		8C25889817EE3D3D0000EA7F /* middle-cell-bg-selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "middle-cell-bg-selected.png"; path = "Supporting Files/Tableview images/middle-cell-bg-selected.png"; sourceTree = "<group>"; };
+		8C25889B17EE3E7B0000EA7F /* solo-cell-bg-selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "solo-cell-bg-selected@2x.png"; path = "Supporting Files/Tableview images/solo-cell-bg-selected@2x.png"; sourceTree = "<group>"; };
+		8C25889C17EE3E7C0000EA7F /* solo-cell-bg-selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "solo-cell-bg-selected.png"; path = "Supporting Files/Tableview images/solo-cell-bg-selected.png"; sourceTree = "<group>"; };
+		8C25889F17EE3F170000EA7F /* top-cell-bg-selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "top-cell-bg-selected@2x.png"; path = "Supporting Files/Tableview images/top-cell-bg-selected@2x.png"; sourceTree = "<group>"; };
+		8C2588A017EE3F170000EA7F /* top-cell-bg-selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "top-cell-bg-selected.png"; path = "Supporting Files/Tableview images/top-cell-bg-selected.png"; sourceTree = "<group>"; };
+		8C2588A317EE3F7E0000EA7F /* bottom-cell-bg-selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "bottom-cell-bg-selected@2x.png"; path = "Supporting Files/Tableview images/bottom-cell-bg-selected@2x.png"; sourceTree = "<group>"; };
+		8C2588A417EE3F7E0000EA7F /* bottom-cell-bg-selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "bottom-cell-bg-selected.png"; path = "Supporting Files/Tableview images/bottom-cell-bg-selected.png"; sourceTree = "<group>"; };
+		8C27586916CC820E00DEDAC8 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = ViewControllers/Login/LoginViewController.h; sourceTree = "<group>"; };
+		8C27586A16CC820E00DEDAC8 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = ViewControllers/Login/LoginViewController.m; sourceTree = "<group>"; };
+		8C27586C16CC828F00DEDAC8 /* LocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LocationViewController.h; path = ViewControllers/Location/LocationViewController.h; sourceTree = "<group>"; };
+		8C27586D16CC828F00DEDAC8 /* LocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LocationViewController.m; path = ViewControllers/Location/LocationViewController.m; sourceTree = "<group>"; };
+		8C2AE38C17C90D6B00C00BAF /* Partner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Partner.h; path = "Objects/Data Objects/Partner.h"; sourceTree = "<group>"; };
+		8C2AE38D17C90D6B00C00BAF /* Partner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Partner.m; path = "Objects/Data Objects/Partner.m"; sourceTree = "<group>"; };
+		8C2AE38F17CD52DB00C00BAF /* CoverSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CoverSheet.h; path = Objects/Forms/CoverSheet.h; sourceTree = "<group>"; };
+		8C2AE39017CD52DB00C00BAF /* CoverSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CoverSheet.m; path = Objects/Forms/CoverSheet.m; sourceTree = "<group>"; };
+		8C32DF4316E26BB8005AFA89 /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Location.h; path = "Objects/Data Objects/Location.h"; sourceTree = "<group>"; };
+		8C32DF4416E26BB8005AFA89 /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Location.m; path = "Objects/Data Objects/Location.m"; sourceTree = "<group>"; };
 		8C38594C173AC558003A323B /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
-		8C385950173AF07C003A323B /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "../Icon@2x.png"; sourceTree = "<group>"; };
-		8C385952173AF15C003A323B /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = ../Icon.png; sourceTree = "<group>"; };
-		8C38595417417FF5003A323B /* MainMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenuViewController.h; sourceTree = "<group>"; };
-		8C38595517417FF5003A323B /* MainMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenuViewController.m; sourceTree = "<group>"; };
-		8C4C7B731735A6CD00ED3E82 /* LocationListIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LocationListIcon.png; sourceTree = "<group>"; };
-		8C4C7B751735A6D400ED3E82 /* LocationListIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LocationListIcon@2x.png"; sourceTree = "<group>"; };
-		8C4C7B7B1735A9B000ED3E82 /* MapIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MapIcon@2x.png"; sourceTree = "<group>"; };
-		8C4C7B7F1735AB8000ED3E82 /* MapIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MapIcon.png; sourceTree = "<group>"; };
-		8C4C7B831736D46100ED3E82 /* EvaluationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EvaluationViewController.h; sourceTree = "<group>"; };
-		8C4C7B841736D46200ED3E82 /* EvaluationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EvaluationViewController.m; sourceTree = "<group>"; };
-		8C4C7B8717373C1000ED3E82 /* WCEWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCEWebViewController.h; sourceTree = "<group>"; };
-		8C4C7B8817373C1000ED3E82 /* WCEWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCEWebViewController.m; sourceTree = "<group>"; };
-		8C66ECB517D54DD900B2091F /* CustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCell.h; sourceTree = "<group>"; };
-		8C66ECB617D54DD900B2091F /* CustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCell.m; sourceTree = "<group>"; };
-		8C66ED1B17DE548400B2091F /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
-		8C66ED1C17DE548400B2091F /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
-		8C66ED1E17DE549A00B2091F /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
-		8C66ED1F17DE549A00B2091F /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
-		8C66ED2117DE558300B2091F /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
-		8C66ED2217DE558300B2091F /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
-		8C66ED3917DFACA000B2091F /* solo-cell-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "solo-cell-bg.png"; path = "../solo-cell-bg.png"; sourceTree = "<group>"; };
-		8C66ED3A17DFACA100B2091F /* solo-cell-bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "solo-cell-bg@2x.png"; path = "../solo-cell-bg@2x.png"; sourceTree = "<group>"; };
-		8C66ED4917DFC62B00B2091F /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../Default.png; sourceTree = "<group>"; };
-		8C66ED4B17DFC63500B2091F /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../Default@2x.png"; sourceTree = "<group>"; };
-		8C66ED4D17DFC63A00B2091F /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
-		8C66ED5117E0E28100B2091F /* InfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoViewController.h; sourceTree = "<group>"; };
-		8C66ED5217E0E28100B2091F /* InfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoViewController.m; sourceTree = "<group>"; };
-		8C66ED5417E0F14800B2091F /* FormsMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FormsMenuViewController.h; sourceTree = "<group>"; };
-		8C66ED5517E0F14800B2091F /* FormsMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FormsMenuViewController.m; sourceTree = "<group>"; };
-		8C66ED5B17E2515100B2091F /* CustomNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomNavigationBar.h; sourceTree = "<group>"; };
-		8C66ED5C17E2515100B2091F /* CustomNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomNavigationBar.m; sourceTree = "<group>"; };
-		8C66ED6217E5100400B2091F /* navBar-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navBar-bg.png"; sourceTree = "<group>"; };
-		8C66ED6317E5100500B2091F /* navBar-bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navBar-bg@2x.png"; sourceTree = "<group>"; };
-		8C66ED6617E516EF00B2091F /* bottom-cell-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bottom-cell-bg.png"; sourceTree = "<group>"; };
-		8C66ED6717E516EF00B2091F /* bottom-cell-bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bottom-cell-bg@2x.png"; sourceTree = "<group>"; };
-		8C66ED7017E517FE00B2091F /* top-cell-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "top-cell-bg.png"; sourceTree = "<group>"; };
-		8C66ED7117E5180000B2091F /* top-cell-bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "top-cell-bg@2x.png"; sourceTree = "<group>"; };
-		8C66ED7617E518BF00B2091F /* middle-cell-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "middle-cell-bg.png"; path = "../middle-cell-bg.png"; sourceTree = "<group>"; };
-		8C66ED7717E518C700B2091F /* middle-cell-bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "middle-cell-bg@2x.png"; path = "../middle-cell-bg@2x.png"; sourceTree = "<group>"; };
+		8C385950173AF07C003A323B /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "Supporting Files/Icons/Icon@2x.png"; sourceTree = "<group>"; };
+		8C385952173AF15C003A323B /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = "Supporting Files/Icons/Icon.png"; sourceTree = "<group>"; };
+		8C38595417417FF5003A323B /* MainMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainMenuViewController.h; path = ViewControllers/MainMenu/MainMenuViewController.h; sourceTree = "<group>"; };
+		8C38595517417FF5003A323B /* MainMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainMenuViewController.m; path = ViewControllers/MainMenu/MainMenuViewController.m; sourceTree = "<group>"; };
+		8C4C7B731735A6CD00ED3E82 /* LocationListIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = LocationListIcon.png; path = "Supporting Files/Tab Bar Icons/LocationListIcon.png"; sourceTree = "<group>"; };
+		8C4C7B751735A6D400ED3E82 /* LocationListIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "LocationListIcon@2x.png"; path = "Supporting Files/Tab Bar Icons/LocationListIcon@2x.png"; sourceTree = "<group>"; };
+		8C4C7B7B1735A9B000ED3E82 /* MapIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "MapIcon@2x.png"; path = "Supporting Files/Tab Bar Icons/MapIcon@2x.png"; sourceTree = "<group>"; };
+		8C4C7B7F1735AB8000ED3E82 /* MapIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MapIcon.png; path = "Supporting Files/Tab Bar Icons/MapIcon.png"; sourceTree = "<group>"; };
+		8C4C7B831736D46100ED3E82 /* EvaluationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EvaluationViewController.h; path = "ViewControllers/Forms/Evaluation Form/EvaluationViewController.h"; sourceTree = "<group>"; };
+		8C4C7B841736D46200ED3E82 /* EvaluationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EvaluationViewController.m; path = "ViewControllers/Forms/Evaluation Form/EvaluationViewController.m"; sourceTree = "<group>"; };
+		8C4C7B8717373C1000ED3E82 /* WCEWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WCEWebViewController.h; path = ViewControllers/AboutWCE/WCEWebViewController.h; sourceTree = "<group>"; };
+		8C4C7B8817373C1000ED3E82 /* WCEWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WCEWebViewController.m; path = ViewControllers/AboutWCE/WCEWebViewController.m; sourceTree = "<group>"; };
+		8C66ECB517D54DD900B2091F /* CustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomCell.h; path = UIComponents/CustomCell.h; sourceTree = "<group>"; };
+		8C66ECB617D54DD900B2091F /* CustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomCell.m; path = UIComponents/CustomCell.m; sourceTree = "<group>"; };
+		8C66ED1B17DE548400B2091F /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMDatabase.h; path = Fmdb/FMDatabase.h; sourceTree = "<group>"; };
+		8C66ED1C17DE548400B2091F /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMDatabase.m; path = Fmdb/FMDatabase.m; sourceTree = "<group>"; };
+		8C66ED1E17DE549A00B2091F /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMResultSet.h; path = Fmdb/FMResultSet.h; sourceTree = "<group>"; };
+		8C66ED1F17DE549A00B2091F /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMResultSet.m; path = Fmdb/FMResultSet.m; sourceTree = "<group>"; };
+		8C66ED2117DE558300B2091F /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMDatabasePool.h; path = Fmdb/FMDatabasePool.h; sourceTree = "<group>"; };
+		8C66ED2217DE558300B2091F /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMDatabasePool.m; path = Fmdb/FMDatabasePool.m; sourceTree = "<group>"; };
+		8C66ED3917DFACA000B2091F /* solo-cell-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "solo-cell-bg.png"; path = "Supporting Files/Tableview images/solo-cell-bg.png"; sourceTree = "<group>"; };
+		8C66ED3A17DFACA100B2091F /* solo-cell-bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "solo-cell-bg@2x.png"; path = "Supporting Files/Tableview images/solo-cell-bg@2x.png"; sourceTree = "<group>"; };
+		8C66ED4917DFC62B00B2091F /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = "Supporting Files/Backgrounds/Default.png"; sourceTree = "<group>"; };
+		8C66ED4B17DFC63500B2091F /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "Supporting Files/Backgrounds/Default@2x.png"; sourceTree = "<group>"; };
+		8C66ED4D17DFC63A00B2091F /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "Supporting Files/Backgrounds/Default-568h@2x.png"; sourceTree = "<group>"; };
+		8C66ED5117E0E28100B2091F /* InfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InfoViewController.h; path = ViewControllers/Info/InfoViewController.h; sourceTree = "<group>"; };
+		8C66ED5217E0E28100B2091F /* InfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InfoViewController.m; path = ViewControllers/Info/InfoViewController.m; sourceTree = "<group>"; };
+		8C66ED5417E0F14800B2091F /* FormsMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FormsMenuViewController.h; path = ViewControllers/Forms/FormsMenuViewController.h; sourceTree = "<group>"; };
+		8C66ED5517E0F14800B2091F /* FormsMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FormsMenuViewController.m; path = ViewControllers/Forms/FormsMenuViewController.m; sourceTree = "<group>"; };
+		8C66ED5B17E2515100B2091F /* CustomNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomNavigationBar.h; path = UIComponents/CustomNavigationBar.h; sourceTree = "<group>"; };
+		8C66ED5C17E2515100B2091F /* CustomNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomNavigationBar.m; path = UIComponents/CustomNavigationBar.m; sourceTree = "<group>"; };
+		8C66ED6217E5100400B2091F /* navBar-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "navBar-bg.png"; path = "Supporting Files/Nav Bar Images/navBar-bg.png"; sourceTree = "<group>"; };
+		8C66ED6317E5100500B2091F /* navBar-bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "navBar-bg@2x.png"; path = "Supporting Files/Nav Bar Images/navBar-bg@2x.png"; sourceTree = "<group>"; };
+		8C66ED6617E516EF00B2091F /* bottom-cell-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "bottom-cell-bg.png"; path = "Supporting Files/Tableview images/bottom-cell-bg.png"; sourceTree = "<group>"; };
+		8C66ED6717E516EF00B2091F /* bottom-cell-bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "bottom-cell-bg@2x.png"; path = "Supporting Files/Tableview images/bottom-cell-bg@2x.png"; sourceTree = "<group>"; };
+		8C66ED7017E517FE00B2091F /* top-cell-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "top-cell-bg.png"; path = "Supporting Files/Tableview images/top-cell-bg.png"; sourceTree = "<group>"; };
+		8C66ED7117E5180000B2091F /* top-cell-bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "top-cell-bg@2x.png"; path = "Supporting Files/Tableview images/top-cell-bg@2x.png"; sourceTree = "<group>"; };
+		8C66ED7617E518BF00B2091F /* middle-cell-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "middle-cell-bg.png"; path = "Supporting Files/Tableview images/middle-cell-bg.png"; sourceTree = "<group>"; };
+		8C66ED7717E518C700B2091F /* middle-cell-bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "middle-cell-bg@2x.png"; path = "Supporting Files/Tableview images/middle-cell-bg@2x.png"; sourceTree = "<group>"; };
 		8C9C3ACC16CC60D000F95A6B /* WCE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WCE.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C9C3AD016CC60D000F95A6B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		8C9C3AD216CC60D000F95A6B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -181,43 +181,43 @@
 		8C9C3ADF16CC60D000F95A6B /* WCEAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WCEAppDelegate.h; sourceTree = "<group>"; };
 		8C9C3AE016CC60D000F95A6B /* WCEAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WCEAppDelegate.m; sourceTree = "<group>"; };
 		8C9C3AE916CC60D000F95A6B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		8CA9678717AB292C003C3B70 /* Wce.db */ = {isa = PBXFileReference; lastKnownFileType = file; name = Wce.db; path = ../Wce.db; sourceTree = "<group>"; };
-		8CA9678917AC4130003C3B70 /* DataAccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataAccess.h; sourceTree = "<group>"; };
-		8CA9678A17AC4130003C3B70 /* DataAccess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataAccess.m; sourceTree = "<group>"; };
-		8CB0441716DC47910000AD0F /* LocationMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationMapViewController.h; sourceTree = "<group>"; };
-		8CB0441816DC47910000AD0F /* LocationMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationMapViewController.m; sourceTree = "<group>"; };
-		8CCEF95517CE66C500DD52AA /* Evaluation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Evaluation.h; sourceTree = "<group>"; };
-		8CCEF95617CE66C500DD52AA /* Evaluation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Evaluation.m; sourceTree = "<group>"; };
-		8CCEF95817CEA57400DD52AA /* ImpQuestions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImpQuestions.h; sourceTree = "<group>"; };
-		8CCEF95917CEA57400DD52AA /* ImpQuestions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImpQuestions.m; sourceTree = "<group>"; };
-		8CCEF95B17CEBA9A00DD52AA /* Order.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Order.h; sourceTree = "<group>"; };
-		8CCEF95C17CEBA9A00DD52AA /* Order.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Order.m; sourceTree = "<group>"; };
-		8CD27FEC1720BC6B00973A04 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
-		8CD27FED1720BC6B00973A04 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
-		8CD27FF11728354400973A04 /* PartnerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PartnerViewController.h; sourceTree = "<group>"; };
-		8CD27FF21728354400973A04 /* PartnerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PartnerViewController.m; sourceTree = "<group>"; };
-		8CDF7C2818304141004D0C37 /* LoginViewControllerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewControllerDelegate.h; sourceTree = "<group>"; };
-		9E2476DC16E27D9C0049ED27 /* WCE Content V5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WCE Content V5.png"; sourceTree = "<group>"; };
-		9E4B58C016FBD95F007BE176 /* CoverSheetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoverSheetViewController.h; sourceTree = "<group>"; };
-		9E4B58C116FBD95F007BE176 /* CoverSheetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoverSheetViewController.m; sourceTree = "<group>"; };
-		9ED3259B16DD53FF00EA38E0 /* AddressAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressAnnotation.h; sourceTree = "<group>"; };
-		9ED3259C16DD53FF00EA38E0 /* AddressAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressAnnotation.m; sourceTree = "<group>"; };
+		8CA9678917AC4130003C3B70 /* DataAccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DataAccess.h; path = Fmdb/DataAccess.h; sourceTree = "<group>"; };
+		8CA9678A17AC4130003C3B70 /* DataAccess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DataAccess.m; path = Fmdb/DataAccess.m; sourceTree = "<group>"; };
+		8CB0441716DC47910000AD0F /* LocationMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LocationMapViewController.h; path = ViewControllers/LocationMap/LocationMapViewController.h; sourceTree = "<group>"; };
+		8CB0441816DC47910000AD0F /* LocationMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LocationMapViewController.m; path = ViewControllers/LocationMap/LocationMapViewController.m; sourceTree = "<group>"; };
+		8CCEF95517CE66C500DD52AA /* Evaluation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Evaluation.h; path = Objects/Forms/Evaluation.h; sourceTree = "<group>"; };
+		8CCEF95617CE66C500DD52AA /* Evaluation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Evaluation.m; path = Objects/Forms/Evaluation.m; sourceTree = "<group>"; };
+		8CCEF95817CEA57400DD52AA /* ImpQuestions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImpQuestions.h; path = Objects/Forms/ImpQuestions.h; sourceTree = "<group>"; };
+		8CCEF95917CEA57400DD52AA /* ImpQuestions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImpQuestions.m; path = Objects/Forms/ImpQuestions.m; sourceTree = "<group>"; };
+		8CCEF95B17CEBA9A00DD52AA /* Order.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Order.h; path = Objects/Forms/Order.h; sourceTree = "<group>"; };
+		8CCEF95C17CEBA9A00DD52AA /* Order.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Order.m; path = Objects/Forms/Order.m; sourceTree = "<group>"; };
+		8CD27FEC1720BC6B00973A04 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = "Objects/Data Objects/User.h"; sourceTree = "<group>"; };
+		8CD27FED1720BC6B00973A04 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = "Objects/Data Objects/User.m"; sourceTree = "<group>"; };
+		8CD27FF11728354400973A04 /* PartnerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PartnerViewController.h; path = ViewControllers/Partner/PartnerViewController.h; sourceTree = "<group>"; };
+		8CD27FF21728354400973A04 /* PartnerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PartnerViewController.m; path = ViewControllers/Partner/PartnerViewController.m; sourceTree = "<group>"; };
+		8CDF7C2818304141004D0C37 /* LoginViewControllerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LoginViewControllerDelegate.h; path = ViewControllers/Login/LoginViewControllerDelegate.h; sourceTree = "<group>"; };
+		8CDF7C2A183092F1004D0C37 /* Wce.db */ = {isa = PBXFileReference; lastKnownFileType = file; name = Wce.db; path = "Supporting Files/Wce.db"; sourceTree = "<group>"; };
+		9E2476DC16E27D9C0049ED27 /* WCE Content V5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "WCE Content V5.png"; path = "Supporting Files/Content images/WCE Content V5.png"; sourceTree = "<group>"; };
+		9E4B58C016FBD95F007BE176 /* CoverSheetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CoverSheetViewController.h; path = "ViewControllers/Forms/Cover Sheet/CoverSheetViewController.h"; sourceTree = "<group>"; };
+		9E4B58C116FBD95F007BE176 /* CoverSheetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CoverSheetViewController.m; path = "ViewControllers/Forms/Cover Sheet/CoverSheetViewController.m"; sourceTree = "<group>"; };
+		9ED3259B16DD53FF00EA38E0 /* AddressAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddressAnnotation.h; path = ViewControllers/LocationMap/AddressAnnotation.h; sourceTree = "<group>"; };
+		9ED3259C16DD53FF00EA38E0 /* AddressAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddressAnnotation.m; path = ViewControllers/LocationMap/AddressAnnotation.m; sourceTree = "<group>"; };
 		9ED3259E16DD5D4C00EA38E0 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		9ED695B216E28332005D1EDB /* WCE Content V5 copy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WCE Content V5 copy.png"; sourceTree = "<group>"; };
+		9ED695B216E28332005D1EDB /* WCE Content V5 copy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "WCE Content V5 copy.png"; path = "Supporting Files/Content images/WCE Content V5 copy.png"; sourceTree = "<group>"; };
 		D02C62F91723112B005D92AB /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		D058DCD916FBD2A300132041 /* AboutWCEViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutWCEViewController.h; sourceTree = "<group>"; };
-		D058DCDA16FBD2A300132041 /* AboutWCEViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutWCEViewController.m; sourceTree = "<group>"; };
-		D0F334B2172AC38E006BACED /* WCETabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCETabBarController.h; sourceTree = "<group>"; };
-		D0F334B3172AC38E006BACED /* WCETabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCETabBarController.m; sourceTree = "<group>"; };
-		D0F745F21730A59300C9EC5F /* WCEContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCEContentViewController.h; sourceTree = "<group>"; };
-		D0F745F31730A59300C9EC5F /* WCEContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCEContentViewController.m; sourceTree = "<group>"; };
-		D0F745F51730AB3B00C9EC5F /* ChangePassViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangePassViewController.h; sourceTree = "<group>"; };
-		D0F745F61730AB3B00C9EC5F /* ChangePassViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangePassViewController.m; sourceTree = "<group>"; };
-		FA44558016E284E900D08750 /* WCE Content V5 NEW.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WCE Content V5 NEW.png"; sourceTree = "<group>"; };
-		FA98E2921722F9EE005EC158 /* OrderFormViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderFormViewController.h; sourceTree = "<group>"; };
-		FA98E2931722F9EE005EC158 /* OrderFormViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderFormViewController.m; sourceTree = "<group>"; };
-		FA98E2951726062F005EC158 /* NewPartnerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewPartnerViewController.h; sourceTree = "<group>"; };
-		FA98E2961726062F005EC158 /* NewPartnerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewPartnerViewController.m; sourceTree = "<group>"; };
+		D058DCD916FBD2A300132041 /* AboutWCEViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AboutWCEViewController.h; path = ViewControllers/AboutWCE/AboutWCEViewController.h; sourceTree = "<group>"; };
+		D058DCDA16FBD2A300132041 /* AboutWCEViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AboutWCEViewController.m; path = ViewControllers/AboutWCE/AboutWCEViewController.m; sourceTree = "<group>"; };
+		D0F334B2172AC38E006BACED /* WCETabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WCETabBarController.h; path = "ViewControllers/Tab Bar/WCETabBarController.h"; sourceTree = "<group>"; };
+		D0F334B3172AC38E006BACED /* WCETabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WCETabBarController.m; path = "ViewControllers/Tab Bar/WCETabBarController.m"; sourceTree = "<group>"; };
+		D0F745F21730A59300C9EC5F /* WCEContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WCEContentViewController.h; path = ViewControllers/Content/WCEContentViewController.h; sourceTree = "<group>"; };
+		D0F745F31730A59300C9EC5F /* WCEContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WCEContentViewController.m; path = ViewControllers/Content/WCEContentViewController.m; sourceTree = "<group>"; };
+		D0F745F51730AB3B00C9EC5F /* ChangePassViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChangePassViewController.h; path = ViewControllers/Login/ChangePassViewController.h; sourceTree = "<group>"; };
+		D0F745F61730AB3B00C9EC5F /* ChangePassViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ChangePassViewController.m; path = ViewControllers/Login/ChangePassViewController.m; sourceTree = "<group>"; };
+		FA44558016E284E900D08750 /* WCE Content V5 NEW.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "WCE Content V5 NEW.png"; path = "Supporting Files/Content images/WCE Content V5 NEW.png"; sourceTree = "<group>"; };
+		FA98E2921722F9EE005EC158 /* OrderFormViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OrderFormViewController.h; path = "ViewControllers/Forms/Order Form/OrderFormViewController.h"; sourceTree = "<group>"; };
+		FA98E2931722F9EE005EC158 /* OrderFormViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OrderFormViewController.m; path = "ViewControllers/Forms/Order Form/OrderFormViewController.m"; sourceTree = "<group>"; };
+		FA98E2951726062F005EC158 /* NewPartnerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NewPartnerViewController.h; path = ViewControllers/AddPartner/NewPartnerViewController.h; sourceTree = "<group>"; };
+		FA98E2961726062F005EC158 /* NewPartnerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NewPartnerViewController.m; path = ViewControllers/AddPartner/NewPartnerViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -423,8 +423,6 @@
 		8C66ECC017D62E9200B2091F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				8C66ED6217E5100400B2091F /* navBar-bg.png */,
-				8C66ED6317E5100500B2091F /* navBar-bg@2x.png */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -513,7 +511,9 @@
 		8C9C3AD716CC60D000F95A6B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				8CA9678717AB292C003C3B70 /* Wce.db */,
+				8C66ED6217E5100400B2091F /* navBar-bg.png */,
+				8C66ED6317E5100500B2091F /* navBar-bg@2x.png */,
+				8CDF7C2A183092F1004D0C37 /* Wce.db */,
 				8C25888417ED3A950000EA7F /* Backgrounds */,
 				8C25888117ED3A070000EA7F /* Tableview images */,
 				8C4C7B821735AD8C00ED3E82 /* Buttons */,
@@ -703,7 +703,6 @@
 				8C4C7B801735AB8000ED3E82 /* MapIcon.png in Resources */,
 				8C385951173AF07C003A323B /* Icon@2x.png in Resources */,
 				8C385953173AF15C003A323B /* Icon.png in Resources */,
-				8CA9678817AB292C003C3B70 /* Wce.db in Resources */,
 				8C66ED4117DFACA200B2091F /* solo-cell-bg.png in Resources */,
 				8C66ED4217DFACA200B2091F /* solo-cell-bg@2x.png in Resources */,
 				8C66ED4A17DFC62C00B2091F /* Default.png in Resources */,
@@ -714,6 +713,7 @@
 				8C66ED6A17E516F000B2091F /* bottom-cell-bg.png in Resources */,
 				8C66ED6B17E516F000B2091F /* bottom-cell-bg@2x.png in Resources */,
 				8C66ED7417E5180300B2091F /* top-cell-bg.png in Resources */,
+				8CDF7C2B183092F1004D0C37 /* Wce.db in Resources */,
 				8C66ED7517E5180300B2091F /* top-cell-bg@2x.png in Resources */,
 				8C66ED7817E518D500B2091F /* middle-cell-bg.png in Resources */,
 				8C66ED7917E518D500B2091F /* middle-cell-bg@2x.png in Resources */,
