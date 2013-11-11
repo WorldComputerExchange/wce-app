@@ -110,7 +110,6 @@
 		8C25887217EB85AB0000EA7F /* disclosure-check-yellow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "disclosure-check-yellow@2x.png"; sourceTree = "<group>"; };
 		8C25887717EB99F50000EA7F /* edit-disclosure.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "edit-disclosure.png"; sourceTree = "<group>"; };
 		8C25887817EB99F60000EA7F /* edit-disclosure@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "edit-disclosure@2x.png"; sourceTree = "<group>"; };
-		8C25887B17ECA21E0000EA7F /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Reveal.framework; sourceTree = "<group>"; };
 		8C25887D17ECA2600000EA7F /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		8C25887F17ECA2710000EA7F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		8C25889717EE3D3D0000EA7F /* middle-cell-bg-selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "middle-cell-bg-selected@2x.png"; path = "../middle-cell-bg-selected@2x.png"; sourceTree = "<group>"; };
@@ -466,9 +465,6 @@
 		8C9C3AC116CC60D000F95A6B = {
 			isa = PBXGroup;
 			children = (
-				8C25887F17ECA2710000EA7F /* QuartzCore.framework */,
-				8C25887D17ECA2600000EA7F /* CFNetwork.framework */,
-				8C38594C173AC558003A323B /* libsqlite3.0.dylib */,
 				8C9C3AD616CC60D000F95A6B /* WCE */,
 				8C9C3ACF16CC60D000F95A6B /* Frameworks */,
 				8C9C3ACD16CC60D000F95A6B /* Products */,
@@ -486,7 +482,9 @@
 		8C9C3ACF16CC60D000F95A6B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				8C25887B17ECA21E0000EA7F /* Reveal.framework */,
+				8C38594C173AC558003A323B /* libsqlite3.0.dylib */,
+				8C25887D17ECA2600000EA7F /* CFNetwork.framework */,
+				8C25887F17ECA2710000EA7F /* QuartzCore.framework */,
 				D02C62F91723112B005D92AB /* CoreLocation.framework */,
 				9ED3259E16DD5D4C00EA38E0 /* MapKit.framework */,
 				8C9C3AD016CC60D000F95A6B /* UIKit.framework */,
