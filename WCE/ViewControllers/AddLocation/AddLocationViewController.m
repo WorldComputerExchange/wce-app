@@ -9,26 +9,21 @@
 #import "Location.h"
 #import "DataAccess.h"
 
-@implementation AddLocationViewController
-
-@synthesize locations, countries, languages, actionSheet, dataArray, sharedUser, selectedCountry, selectedLanguage;
-@synthesize location, contact, phone, address, city, zip;
-
+@implementation AddLocationViewController;
 
 - (IBAction)backgroundTouched:(id)sender {
-    [location resignFirstResponder];
-    [contact resignFirstResponder];
-    [phone resignFirstResponder];
-    [address resignFirstResponder];
-    [city resignFirstResponder];
-    [zip resignFirstResponder];
+    [self.location resignFirstResponder];
+    [self.contact resignFirstResponder];
+    [self.phone resignFirstResponder];
+    [self.address resignFirstResponder];
+    [self.city resignFirstResponder];
+    [self.zip resignFirstResponder];
 }
 
 - (IBAction)textfieldReturn:(id)sender{
     [sender resignFirstResponder];
     
 }
-
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -37,7 +32,6 @@
     }
     return self;
 }
-
 
 - (void)viewWillAppear:(BOOL)animated
 {
@@ -48,15 +42,13 @@
 {
     [super viewDidLoad];
     
-    dataArray = [[NSArray alloc] initWithObjects:@"Country", @"Language", nil];
+    self.dataArray = [[NSArray alloc] initWithObjects:@"Country", @"Language", nil];
     
-    countries = [[NSArray alloc] initWithObjects:
+    self.countries = [[NSArray alloc] initWithObjects:
                  @"Choose Country:", @"Afghanistan", @"Albania", @"Algeria", @"Andorra", @"Angola", @"Antigua and Barbuda", @"Argentina", @"Armenia", @"Aruba", @"Azerbaijan", @"Bahamas", @"Bahrain", @"Bangladesh", @"Barbados", @"Bassas da India", @"Belarus", @"Belize", @"Benin", @"Bermuda", @"Bhutan", @"Bolivia", @"Bosnia and Herzegovina", @"Botswana", @"Brasil", @"Brunei", @"Bulgaria", @"Burkina Faso", @"Burma", @"Burundi", @"Cambodia", @"Cameroon", @"Cape Verde", @"Cayman Islands", @"Central African Republic", @"Chad", @"Chile", @"China", @"Colombia", @"Comoros", @"Congo, Democratic Republic of the", @"Congo, Republic of the", @"Costa Rica", @"Cote d'Ivoire", @"Croatia", @"Cuba", @"Cyprus", @"Dhekelia", @"Dijibouti", @"Dominica", @"Dominican Republic", @"Ecuador", @"Egypt", @"El Salvador", @"Equatorial Guinea", @"Eritrea", @"Ethiopia", @"Fiji", @"French Guiana", @"French Polynesia", @"Gabon", @"The Gambia", @"Ghana", @"Georgia", @"Ghana", @"Guam", @"Guatemala", @"Guinea", @"Guinea Bissau", @"Guyana", @"Haiti", @"Honduras", @"India", @"Indonesia", @"Iran", @"Iraq", @"Jamaica", @"Jordan", @"Kazakhstan", @"Kenya", @"Kiribati", @"Kuwait", @"Kyrgyzstan", @"Laos", @"Lesotho", @"Liberia", @"Libya", @"Lithuania", @"Macau", @"Macedonia", @"Madagascar", @"Malawi", @"Malaysia", @"Mali", @"Marshall Islands", @"Martinique", @"Mauritania", @"Mauritius", @"Mayotte", @"Mexico", @"Micronesia", @"Mongolia", @"Moldova", @"Morocco", @"Mozambique", @"Namibia", @"Nepal", @"New Zealand", @"Nicaragua", @"Niger", @"Nigeria", @"Oman", @"Pakistan", @"Palau", @"Panama", @"Papua New Guinea", @"Paraguay", @"Peru", @"Philippines", @"Poland", @"Qatar", @"Romania", @"Russia", @"Rwanda", @"Saint Lucia", @"Samoa", @"Saudi Arabia", @"Senegal", @"Serbia and Montenegro", @"Sierra Leone", @"Singapore", @"Slovakia", @"Slovenia", @"Solomon Islands", @"Somalia", @"South Africa",  @"Sri Lanka",  @"Sudan",  @"Suriname",  @"Swaziland",  @"Syria",  @"Tajikistan",  @"Tanzania",  @"Thailand",  @"Timor-Leste",  @"Togo",  @"Tokelau",  @"Tonga",  @"Trinidad and Tobago",  @"Tunisia",  @"Turkey",  @"Turkmenistan",  @"Turks and Caicos Islands",  @"Tuvalu",  @"Uganda",  @"Ukraine",  @"United Arab Emirates",  @"United Kingdom",  @"United States", @"Uruguay",  @"Uzbekistan",  @"Vanuatu", @"Venezuala", @"Vietnam", @"Virgin Islands", @"Western Sahara", @"Yemen", @"Zambia", @"Zimbabwe", nil];
 
-    languages = [[NSArray alloc] initWithObjects:@"French", @"Arabic", @"English", @"Spanish", nil];
+    self.languages = [[NSArray alloc] initWithObjects:@"French", @"Arabic", @"English", @"Spanish", nil];
     
-    
-	
 	// Add a "Save" button to the navigation controller
 	UIBarButtonItem *saveButton = [[UIBarButtonItem alloc] initWithTitle:@"Save"
 																   style:UIBarButtonItemStyleDone
@@ -70,28 +62,26 @@
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillBeHidden:)
 												 name:UIKeyboardWillHideNotification object:nil];
     
-    sharedUser = [User sharedUser];
-    selectedCountry = @"None";
-    selectedLanguage = @"None";
+    self.sharedUser = [User sharedUser];
+    self.selectedCountry = @"None";
+    self.selectedLanguage = @"None";
     
-    if ([sharedUser isEditingLocation]){
-        Location *editingLocation = [sharedUser editingLocation];
-        location.text = editingLocation.name;
-        contact.text = editingLocation.contact;
-        phone.text = editingLocation.phone;
-        address.text = editingLocation.address;
-        city.text = editingLocation.city;
-        zip.text = editingLocation.zip;
-        selectedLanguage = editingLocation.language;
-        selectedCountry = editingLocation.country;
+    if ([self.sharedUser isEditingLocation]){
+        Location *editingLocation = [self.sharedUser editingLocation];
+        self.location.text = editingLocation.name;
+        self.contact.text = editingLocation.contact;
+        self.phone.text = editingLocation.phone;
+        self.address.text = editingLocation.address;
+        self.city.text = editingLocation.city;
+        self.zip.text = editingLocation.zip;
+        self.selectedLanguage = editingLocation.language;
+        self.selectedCountry = editingLocation.country;
     }
 }
 
-
 - (void)viewDidDisappear:(BOOL)animated{
-    [sharedUser setIsEditingLocation:false];
+    [self.sharedUser setIsEditingLocation:false];
 }
-
 
 /**
  PickerView Methods
@@ -104,36 +94,36 @@
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
 {
     if (pickerView.tag == countryPicker){
-        return [countries count];
+        return [self.countries count];
     }else if (pickerView.tag == languagePicker){
-        return [languages count];
+        return [self.languages count];
     }else {
-        return [languages count];
+        return [self.languages count];
     }
 }
 
 - (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
 {
     if (pickerView.tag == countryPicker){
-        return [countries objectAtIndex:row];
+        return [self.countries objectAtIndex:row];
     }else{
-        return [languages objectAtIndex:row];
+        return [self.languages objectAtIndex:row];
     }
 }
 
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
 {
     if (pickerView.tag == countryPicker){
-        selectedCountry = [countries objectAtIndex:row];
+        self.selectedCountry = [self.countries objectAtIndex:row];
     }else{
-        selectedLanguage = [languages objectAtIndex:row];
+        self.selectedLanguage = [self.languages objectAtIndex:row];
     }
 }
 
 - (void)pickerDoneClicked
 {
     [dropDownTableView reloadData];
-    [actionSheet dismissWithClickedButtonIndex:0 animated:YES];
+    [self.actionSheet dismissWithClickedButtonIndex:0 animated:YES];
 }
 
 /**TableView methods**/
@@ -142,7 +132,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [dataArray count];
+    return [self.dataArray count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -154,12 +144,12 @@
     }
     
     
-    cell.textLabel.text = [dataArray objectAtIndex:idx];
+    cell.textLabel.text = [self.dataArray objectAtIndex:idx];
     
     if (idx == 0){
-        cell.detailTextLabel.text = selectedCountry;
+        cell.detailTextLabel.text = self.selectedCountry;
     }else {
-        cell.detailTextLabel.text = selectedLanguage;
+        cell.detailTextLabel.text = self.selectedLanguage;
     }
     return cell;
 }
@@ -169,13 +159,13 @@
 {
     int idx = indexPath.row; //row 0 corresponds to country picker view, row 1 to language
     
-    actionSheet = [[UIActionSheet alloc] initWithTitle:nil
+    self.actionSheet = [[UIActionSheet alloc] initWithTitle:nil
                                               delegate:nil
                                      cancelButtonTitle:nil
                                 destructiveButtonTitle:nil
                                      otherButtonTitles:nil];
     
-    [actionSheet setActionSheetStyle:UIActionSheetStyleBlackTranslucent];
+    [self.actionSheet setActionSheetStyle:UIActionSheetStyleBlackTranslucent];
     
     CGRect pickerFrame = CGRectMake(0, 40, 0, 0);
     UIPickerView *pickerView = [[UIPickerView alloc] initWithFrame:pickerFrame];
@@ -196,13 +186,12 @@
     closeButton.tintColor = [UIColor colorWithRed:34.0/255.0 green:97.0/255.0 blue:221.0/255.0 alpha:1];
     [closeButton addTarget:self action:@selector(pickerDoneClicked) forControlEvents:UIControlEventValueChanged];
     
-    [actionSheet addSubview:pickerView];
-    [actionSheet addSubview:closeButton];
-    [actionSheet showInView:[[UIApplication sharedApplication] keyWindow]];
-    [actionSheet setBounds:CGRectMake(0, 0, 320, 485)];
+    [self.actionSheet addSubview:pickerView];
+    [self.actionSheet addSubview:closeButton];
+    [self.actionSheet showInView:[[UIApplication sharedApplication] keyWindow]];
+    [self.actionSheet setBounds:CGRectMake(0, 0, 320, 485)];
 
 }
-
 
 - (void)didReceiveMemoryWarning
 {
@@ -248,21 +237,21 @@
      Should check that these values are non-null!*/
     Location *curLocation = [[Location alloc] init];
     
-    if(location.text.length > 0){
-        [curLocation setName:location.text];
+    if(self.location.text.length > 0){
+        [curLocation setName:self.location.text];
     
-        [curLocation setContact:contact.text];
+        [curLocation setContact:self.contact.text];
     
-        [curLocation setPhone:phone.text];
+        [curLocation setPhone:self.phone.text];
     
-        [curLocation setAddress:address.text];
+        [curLocation setAddress:self.address.text];
     
-        [curLocation setCity:city.text];
-        NSLog(@"selectedCountry %@", selectedCountry);
-        NSLog(@"selectedLanguage %@", selectedLanguage);
-        [curLocation setCountry:selectedCountry];
+        [curLocation setCity:self.city.text];
+        NSLog(@"selectedCountry %@", self.selectedCountry);
+        NSLog(@"selectedLanguage %@", self.selectedLanguage);
+        [curLocation setCountry:self.selectedCountry];
     
-        [curLocation setLanguage:selectedLanguage];
+        [curLocation setLanguage:self.selectedLanguage];
     
         /**check if a location with this name exists already and replace it if it does**/
         int savedIdx;
@@ -270,11 +259,11 @@
         
         NSInteger savedLocationId; //if this location exists get its locationId for updating
     
-        NSMutableArray *savedLocations = [sharedUser savedLocations];
+        NSMutableArray *savedLocations = [self.sharedUser savedLocations];
         for (int idx = 0; idx < [savedLocations count]; idx++){
             Location *cur = [savedLocations objectAtIndex:idx];
             if ([cur.name isEqualToString:curLocation.name] ||
-                [cur.name isEqualToString: [[sharedUser editingLocation] name]]){
+                [cur.name isEqualToString: [[self.sharedUser editingLocation] name]]){
                 replaced = true;
                 savedIdx = idx;
                 savedLocationId = cur.locationId;
@@ -304,16 +293,16 @@
             }else{
                 NSLog(@"Adding location %@ failed", curLocation.name);
             }
-            [[sharedUser savedLocations] addObject:curLocation];
+            [[self.sharedUser savedLocations] addObject:curLocation];
             
             
         }else{ //location exists update the location
-            [[sharedUser savedLocations] replaceObjectAtIndex:savedIdx withObject:curLocation];
+            [[self.sharedUser savedLocations] replaceObjectAtIndex:savedIdx withObject:curLocation];
             
             curLocation.locationId = savedLocationId; //set the locationId to that of found location
             NSLog(@"Saved Location id: %i", savedLocationId);
             
-            BOOL success = [db updateLocation:curLocation withName:[[sharedUser editingLocation] name]]; //update the location
+            BOOL success = [db updateLocation:curLocation withName:[[self.sharedUser editingLocation] name]]; //update the location
             
             if(success){
                 NSLog(@"Location %@ successfully updated database.", curLocation.name);
@@ -323,12 +312,8 @@
             
         }
         
-        NSLog(@"Locations count %d", [[sharedUser savedLocations] count]);
-		
-		// save everything
-		//[sharedUser saveAllLocations];
+        NSLog(@"Locations count %d", [[self.sharedUser savedLocations] count]);
         
-		
         [self dismissViewControllerAnimated:YES completion:nil];
     }else{
         //Alert the user that a blank location name has been entered

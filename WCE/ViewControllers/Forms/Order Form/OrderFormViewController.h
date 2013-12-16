@@ -19,9 +19,6 @@
 }
 
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
-
-
-
 @property (weak, nonatomic) IBOutlet UISegmentedControl *q1;
 @property (weak, nonatomic) IBOutlet UITextField *q2_1;
 @property (weak, nonatomic) IBOutlet UITextField *q2_2;
@@ -51,8 +48,6 @@
 @property (nonatomic, retain) Order *savedOrder;
 @property (nonatomic, retain) Partner *sharedPartner;
 @property (nonatomic, assign) BOOL hasOrder;
-
-
 
 - (IBAction)backgroundTouched:(id)sender;
 - (IBAction)textfieldReturn:(id)sender;

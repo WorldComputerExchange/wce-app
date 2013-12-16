@@ -10,13 +10,6 @@
 #import "CoverSheet.h"
 
 @interface CoverSheetViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, UIPickerViewDelegate, UIPickerViewDataSource>
-{
-    NSArray *regionArray;
-    UIActionSheet *actionSheet;
-    NSArray *locations;
-
-    UIPickerView *pickerView;
-}
 
 @property (nonatomic, retain) User *sharedUser;
 @property (nonatomic, retain) NSArray *regionArray;
@@ -45,6 +38,7 @@
 @property (nonatomic, copy) UIActionSheet *actionSheet;
 @property (nonatomic, retain) NSString *selectedCountry;
 @property (nonatomic, retain) CoverSheet *savedCoverSheet;
+@property (nonatomic, retain) UIPickerView *pickerView;
 @property (nonatomic, assign) BOOL hasCoverSheet; 
 
 - (IBAction)saveChanges:(id)sender;

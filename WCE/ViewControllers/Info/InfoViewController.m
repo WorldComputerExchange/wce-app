@@ -28,7 +28,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-    [infoTableView registerClass:[CustomCell class]
+    [self.infoTableView registerClass:[CustomCell class]
               forCellReuseIdentifier:@"customCell"];
 
 }

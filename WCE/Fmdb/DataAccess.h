@@ -8,6 +8,8 @@
 /**
  Database access and update methods
  
+ !!!These should not all be varchars!
+ 
  LOCATION
  CREATE TABLE location(id INTEGER PRIMARY KEY, name varchar(30) UNIQUE, contact varchar(30), phone varchar(30), address varchar(80), city varchar(30), zip varchar(30), country varchar(30), language varchar(30))
  

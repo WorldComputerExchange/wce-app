@@ -12,8 +12,6 @@
 
 @implementation WCEWebViewController
 
-@synthesize spinner;
-
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -32,21 +30,21 @@
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.worldcomputerexchange.org/"]];
     [webView loadRequest:request];
     
-    spinner = [[UIActivityIndicatorView alloc] initWithFrame:CGRectMake(145, 190, 20,20)];
-    [spinner setActivityIndicatorViewStyle:UIActivityIndicatorViewStyleGray];
-    [spinner setHidesWhenStopped:YES];
+    self.spinner = [[UIActivityIndicatorView alloc] initWithFrame:CGRectMake(145, 190, 20,20)];
+    [self.spinner setActivityIndicatorViewStyle:UIActivityIndicatorViewStyleGray];
+    [self.spinner setHidesWhenStopped:YES];
     
-    [webView addSubview:spinner];
+    [webView addSubview:self.spinner];
 }
 
 -(void)webViewDidStartLoad:(UIWebView *)webView
 {
-    [spinner startAnimating];
+    [self.spinner startAnimating];
 }
 
 -(void)webViewDidFinishLoad:(UIWebView *)webView
 {
-    [spinner stopAnimating];
+    [self.spinner stopAnimating];
 }
 - (void)didReceiveMemoryWarning
 {

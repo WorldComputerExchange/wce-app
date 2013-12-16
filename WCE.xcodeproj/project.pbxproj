@@ -420,13 +420,6 @@
 			name = "Evaluation Form";
 			sourceTree = "<group>";
 		};
-		8C66ECC017D62E9200B2091F /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
 		8C66ED3017DE5DC400B2091F /* UIComponents */ = {
 			isa = PBXGroup;
 			children = (
@@ -502,7 +495,6 @@
 				8C9C3AE016CC60D000F95A6B /* WCEAppDelegate.m */,
 				8C9C3AE816CC60D000F95A6B /* MainStoryboard.storyboard */,
 				8CB0441E16DC4D420000AD0F /* ViewControllers */,
-				8C66ECC017D62E9200B2091F /* Resources */,
 				8C9C3AD716CC60D000F95A6B /* Supporting Files */,
 			);
 			path = WCE;

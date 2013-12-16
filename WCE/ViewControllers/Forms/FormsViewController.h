@@ -7,8 +7,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FormsViewController : UITableViewController <UITableViewDelegate, UITableViewDataSource>{
-    IBOutlet UITableView *formsTableView;
-}
+@interface FormsViewController : UITableViewController <UITableViewDelegate, UITableViewDataSource>
+
+@property IBOutlet UITableView *formsTableView;
 
 @end

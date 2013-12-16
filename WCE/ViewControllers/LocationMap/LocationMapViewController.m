@@ -18,14 +18,14 @@ static NSArray *_previouslyGeocodedLocations;
 
 
 @implementation LocationMapViewController
-@synthesize mapView;
 
 - (void)viewWillAppear:(BOOL)animated
 {
 	[[self navigationItem] setTitle:@"Map"];
 	
-	for(Location *loc in _previouslyGeocodedLocations)
-		[mapView removeAnnotation:[loc annotation]];
+	for(Location *loc in _previouslyGeocodedLocations) {
+		[self.mapView removeAnnotation:[loc annotation]];
+    }
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -53,7 +53,7 @@ static NSArray *_previouslyGeocodedLocations;
 {
 	MKPinAnnotationView *pinView = (MKPinAnnotationView *)[mV dequeueReusableAnnotationViewWithIdentifier:@"pinView"];
 	
-	if(annotation != mapView.userLocation) // prevent "Current Location" pin from automatically showing up
+	if(annotation != self.mapView.userLocation) // prevent "Current Location" pin from automatically showing up
 	{
 		if (!pinView)
 		{
@@ -69,7 +69,6 @@ static NSArray *_previouslyGeocodedLocations;
 		{
 			pinView.annotation = annotation;
 		}
-		
 		return pinView;
 	}
 	else
@@ -110,11 +109,8 @@ static NSArray *_previouslyGeocodedLocations;
 
 - (void)addAnnotationWithArray:(NSMutableArray *)array atIndex:(int)index
 {
-	//NSLog(@"geocoding location with address: %@", [(Location *)[array objectAtIndex:index] address]);
-	
 	Location *thisLocation = (Location *)[array objectAtIndex:index];
 
-    
     //if this locations address has not been specified go to the next location
     if (![thisLocation address] || [[thisLocation address] isEqualToString:@"NA"]){
         if(index < [array count] - 1)
@@ -161,7 +157,7 @@ static NSArray *_previouslyGeocodedLocations;
 				else
 					annot = [[AddressAnnotation alloc] initWithCoordinate:coord withSubtitle:[thisLocation country] withTitle:@"Untitled"];
 				
-				[mapView addAnnotation:annot];
+				[self.mapView addAnnotation:annot];
 				[[[[User sharedUser] savedLocations] objectAtIndex:index] setAnnotation:annot]; // save the annotation to be used later
 				
 				//// exit procedure
@@ -178,13 +174,14 @@ static NSArray *_previouslyGeocodedLocations;
 	}
 	else
 	{
-		[mapView addAnnotation:[thisLocation annotation]];
+		[self.mapView addAnnotation:[thisLocation annotation]];
 		
 		//// exit procedure
-		if(index < [array count] - 1)
+		if(index < [array count] - 1) {
 			[self addAnnotationWithArray:array atIndex:(index + 1)];
-		else
+		}else{
 			_previouslyGeocodedLocations = [array copy]; /// keep a record of which ones we've already geocoded
+        }
 	}
 }
 

@@ -16,9 +16,6 @@
 
 @implementation EvaluationViewController
 
-@synthesize q1, q2, q3, q4, q5, q6, q7, q8, q9, q10, q11, q12, q13, q14, q15, q16, q17, q18, q19, q20, q21, q22, q23, q24, q25, q26, q27, q28, savedEvalForm, sharedLocation, hasEvalForm;
-
-
 
 //FROM TUTORIAL Cocoa W/Love; need the following instance variables
 CGFloat animatedDistance;
@@ -68,79 +65,79 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
     
     
     //get the coversheet for the current partner from the database if it exists
-    sharedLocation = [Location sharedLocation];
+    self.sharedLocation = [Location sharedLocation];
     
     DataAccess *db = [[DataAccess alloc] init];
     
-    savedEvalForm = [[Evaluation alloc] init];
-    savedEvalForm = [db getEvalForLocation:sharedLocation];
+    self.savedEvalForm = [[Evaluation alloc] init];
+    self.savedEvalForm = [db getEvalForLocation:self.sharedLocation];
     
-    if (savedEvalForm.evalId < 0) { //no cover sheet found
-        hasEvalForm = false;
+    if (self.savedEvalForm.evalId < 0) { //no cover sheet found
+        self.hasEvalForm = false;
     }else {
-        hasEvalForm = true;
-        self.q1.text = savedEvalForm.q1;
-        self.q2.text = savedEvalForm.q2;
-        self.q3.text = savedEvalForm.q3;
-        self.q4.text = savedEvalForm.q4;
-        self.q5.text = savedEvalForm.q5;
-        self.q6.text = savedEvalForm.q6;
-        self.q7.text = savedEvalForm.q7;
-        self.q8.text = savedEvalForm.q8;
-        self.q9.selectedSegmentIndex = [self segmentIndexForString:savedEvalForm.q9];
-        self.q10.text = savedEvalForm.q10;
-        self.q11.text = savedEvalForm.q11;
-        self.q12.text = savedEvalForm.q12;
-        self.q13.text = savedEvalForm.q13;
-        self.q14.text = savedEvalForm.q14;
-        self.q15.selectedSegmentIndex = [self segmentIndexForString:savedEvalForm.q15];
-        self.q16.selectedSegmentIndex = [self segmentIndexForString:savedEvalForm.q16];
-        self.q17.selectedSegmentIndex = [self segmentIndexForString:savedEvalForm.q17];
-        self.q18.text = savedEvalForm.q18;
-        self.q19.text = savedEvalForm.q19;
-        self.q20.text = savedEvalForm.q20;
-        self.q21.text = savedEvalForm.q21;
-        self.q22.text = savedEvalForm.q22;
-        self.q23.text = savedEvalForm.q23;
-        self.q24.text = savedEvalForm.q24;
-        self.q25.text = savedEvalForm.q25;
-        self.q26.text = savedEvalForm.q26;
-        self.q27.text = savedEvalForm.q27;
-        self.q28.text = savedEvalForm.q28;
+        self.hasEvalForm = true;
+        self.q1.text = self.savedEvalForm.q1;
+        self.q2.text = self.savedEvalForm.q2;
+        self.q3.text = self.savedEvalForm.q3;
+        self.q4.text = self.savedEvalForm.q4;
+        self.q5.text = self.savedEvalForm.q5;
+        self.q6.text = self.savedEvalForm.q6;
+        self.q7.text = self.savedEvalForm.q7;
+        self.q8.text = self.savedEvalForm.q8;
+        self.q9.selectedSegmentIndex = [self segmentIndexForString:self.savedEvalForm.q9];
+        self.q10.text = self.savedEvalForm.q10;
+        self.q11.text = self.savedEvalForm.q11;
+        self.q12.text = self.savedEvalForm.q12;
+        self.q13.text = self.savedEvalForm.q13;
+        self.q14.text = self.savedEvalForm.q14;
+        self.q15.selectedSegmentIndex = [self segmentIndexForString:self.savedEvalForm.q15];
+        self.q16.selectedSegmentIndex = [self segmentIndexForString:self.savedEvalForm.q16];
+        self.q17.selectedSegmentIndex = [self segmentIndexForString:self.savedEvalForm.q17];
+        self.q18.text = self.savedEvalForm.q18;
+        self.q19.text = self.savedEvalForm.q19;
+        self.q20.text = self.savedEvalForm.q20;
+        self.q21.text = self.savedEvalForm.q21;
+        self.q22.text = self.savedEvalForm.q22;
+        self.q23.text = self.savedEvalForm.q23;
+        self.q24.text = self.savedEvalForm.q24;
+        self.q25.text = self.savedEvalForm.q25;
+        self.q26.text = self.savedEvalForm.q26;
+        self.q27.text = self.savedEvalForm.q27;
+        self.q28.text = self.savedEvalForm.q28;
     }
     
     
 }
 
 - (IBAction)backgroundTouched:(id)sender {
-    [q1 resignFirstResponder];
-    [q2 resignFirstResponder];
-    [q3 resignFirstResponder];
-    [q4 resignFirstResponder];
-    [q5 resignFirstResponder];
-    [q6 resignFirstResponder];
-    [q7 resignFirstResponder];
-    [q8 resignFirstResponder];
-    [q9 resignFirstResponder];
-    [q10 resignFirstResponder];
-    [q11 resignFirstResponder];
-    [q12 resignFirstResponder];
-    [q13 resignFirstResponder];
-    [q14 resignFirstResponder];
-    [q15 resignFirstResponder];
-    [q16 resignFirstResponder];
-    [q17 resignFirstResponder];
-    [q18 resignFirstResponder];
-    [q19 resignFirstResponder];
-    [q20 resignFirstResponder];
-    [q21 resignFirstResponder];
-    [q22 resignFirstResponder];
-    [q23 resignFirstResponder];
-    [q24 resignFirstResponder];
-    [q25 resignFirstResponder];
-    [q26 resignFirstResponder];
-    [q27 resignFirstResponder];
-    [q28 resignFirstResponder];
+    [self.q1 resignFirstResponder];
+    [self.q2 resignFirstResponder];
+    [self.q3 resignFirstResponder];
+    [self.q4 resignFirstResponder];
+    [self.q5 resignFirstResponder];
+    [self.q6 resignFirstResponder];
+    [self.q7 resignFirstResponder];
+    [self.q8 resignFirstResponder];
+    [self.q9 resignFirstResponder];
+    [self.q10 resignFirstResponder];
+    [self.q11 resignFirstResponder];
+    [self.q12 resignFirstResponder];
+    [self.q13 resignFirstResponder];
+    [self.q14 resignFirstResponder];
+    [self.q15 resignFirstResponder];
+    [self.q16 resignFirstResponder];
+    [self.q17 resignFirstResponder];
+    [self.q18 resignFirstResponder];
+    [self.q19 resignFirstResponder];
+    [self.q20 resignFirstResponder];
+    [self.q21 resignFirstResponder];
+    [self.q22 resignFirstResponder];
+    [self.q23 resignFirstResponder];
+    [self.q24 resignFirstResponder];
+    [self.q25 resignFirstResponder];
+    [self.q26 resignFirstResponder];
+    [self.q27 resignFirstResponder];
+    [self.q28 resignFirstResponder];
 }
 
 
@@ -149,7 +146,7 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
     
     Evaluation *curEvalForm =[[Evaluation alloc] init];
     
-    curEvalForm.locationId = [sharedLocation locationId];
+    curEvalForm.locationId = [self.sharedLocation locationId];
     
     curEvalForm.q1 = self.q1.text;
     curEvalForm.q2 = self.q2.text;
@@ -182,10 +179,10 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
     
     DataAccess *db = [[DataAccess alloc] init];
     
-    if (!hasEvalForm){
+    if (!self.hasEvalForm){
         [db insertEval:curEvalForm];
     }else{
-        curEvalForm.evalId = savedEvalForm.evalId;
+        curEvalForm.evalId = self.savedEvalForm.evalId;
         [db updateEval:curEvalForm];
     }
     

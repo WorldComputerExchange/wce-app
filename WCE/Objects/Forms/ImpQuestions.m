@@ -13,7 +13,7 @@
     self = [super init];
     if (self != nil) {
         // initialize stuff here
-        self.impId = -1; //-1 says impQuestions has not been assigned
+        self.impId = -1; //impQuestions has not been assigned
     }
     
     return self;

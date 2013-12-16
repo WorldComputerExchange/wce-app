@@ -9,7 +9,6 @@
 #import "DataAccess.h"
 
 @implementation User
-@synthesize savedLocations, savedPartners, loggedIn, isEditingLocation, editingLocation, sharedPartner;
 
 static User* _sharedUser = nil;
 
@@ -50,7 +49,7 @@ static User* _sharedUser = nil;
         //retrieve saved locations from database
         DataAccess *db = [[DataAccess alloc] init];
         
-        savedLocations = [db getLocations];
+        self.savedLocations = [db getLocations];
     }
     return self;
 }

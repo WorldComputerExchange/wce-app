@@ -3,7 +3,6 @@
 //  WCE
 //
 //
-/**Info, Forms, Phrases, Misc Menu**/
 
 #import "MainMenuViewController.h"
 #import "CustomCell.h"
@@ -13,8 +12,6 @@
 @end
 
 @implementation MainMenuViewController
-
-@synthesize sharedLocation;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -29,9 +26,9 @@
 {
     [super viewDidLoad];
 
-    sharedLocation = [Location sharedLocation];
+    self.sharedLocation = [Location sharedLocation];
     
-    [mainMenuTableView registerClass:[CustomCell class]
+    [self.mainMenuTableView registerClass:[CustomCell class]
               forCellReuseIdentifier:@"customCell"];
 }
 
@@ -122,12 +119,12 @@
     }else if(indexPath.row == 1){
         [self performSegueWithIdentifier:@"pushForms" sender:self];
     }else if(indexPath.row == 2){
-        NSLog(@"Current Language is : %@", sharedLocation.language);
-        if ([sharedLocation.language isEqualToString:@"Arabic"]){
+        NSLog(@"Current Language is : %@", self.sharedLocation.language);
+        if ([self.sharedLocation.language isEqualToString:@"Arabic"]){
             [self performSegueWithIdentifier:@"pushArabic" sender:self];
-        }else if ([sharedLocation.language isEqualToString:@"French"]){
+        }else if ([self.sharedLocation.language isEqualToString:@"French"]){
             [self performSegueWithIdentifier:@"pushFrench" sender:self];
-        }else if ([sharedLocation.language isEqualToString:@"Spanish"]){
+        }else if ([self.sharedLocation.language isEqualToString:@"Spanish"]){
             [self performSegueWithIdentifier:@"pushSpanish" sender:self];
         }else{
             [self performSegueWithIdentifier:@"pushSpanish" sender:self];

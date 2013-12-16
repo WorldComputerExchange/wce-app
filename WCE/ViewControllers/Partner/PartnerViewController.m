@@ -15,7 +15,6 @@
 @end
 
 @implementation PartnerViewController
-@synthesize partners, sharedUser;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -31,29 +30,28 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-    sharedUser = [User sharedUser];
+    self.sharedUser = [User sharedUser];
     
     DataAccess *db = [[DataAccess alloc] init];
     
     Location *curLocation = [Location sharedLocation];
     
-    partners = [[NSMutableArray alloc] init];
+    self.partners = [[NSMutableArray alloc] init];
     
-    partners = [db getPartnersForLocationName:[curLocation name]];
+    self.partners = [db getPartnersForLocationName:[curLocation name]];
     
     [partnerTableView registerClass:[CustomCell class]
              forCellReuseIdentifier:@"customCell"];
     
 }
 
-    
 -(void)viewWillAppear:(BOOL)animated{
     //update our array and tableView
     DataAccess *db = [[DataAccess alloc] init];
     
     Location *curLocation = [Location sharedLocation];
     
-    partners = [db getPartnersForLocationName:[curLocation name]];
+    self.partners = [db getPartnersForLocationName:[curLocation name]];
     
     [partnerTableView reloadData];
 }
@@ -67,23 +65,21 @@
 /**TableView Methods**/
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
-    
     /**set the region name to that chosen in the table**/
     int idx = indexPath.row;
     Partner *selectedPartner;
     
-    if (idx >= [partners count]){ //[[sharedUser savedPartners] count]){
+    if (idx >= [self.partners count]){ //[[sharedUser savedPartners] count]){
         [self performSegueWithIdentifier:@"pushAddPartner" sender:self];
     }else if  ([partnerTableView isEditing]){
-        selectedPartner = [partners objectAtIndex:idx];
-        [sharedUser setIsEditingPartner:YES];
-        [sharedUser setEditingPartner:selectedPartner];
+        selectedPartner = [self.partners objectAtIndex:idx];
+        [self.sharedUser setIsEditingPartner:YES];
+        [self.sharedUser setEditingPartner:selectedPartner];
         [self performSegueWithIdentifier:@"pushAddPartner" sender:self];
     }else{
-        selectedPartner = [partners objectAtIndex:idx];
+        selectedPartner = [self.partners objectAtIndex:idx];
         
-        [sharedUser setSharedPartner:selectedPartner];
+        [self.sharedUser setSharedPartner:selectedPartner];
         
         NSLog(@"%@", selectedPartner);
         
@@ -91,16 +87,14 @@
     }
 }
 
-
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 	return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)table numberOfRowsInSection:(NSInteger)section {
-    NSLog(@"#of saved partners: %d", [partners count]);
-	return [partners count] + 1;
+    NSLog(@"#of saved partners: %d", [self.partners count]);
+	return [self.partners count] + 1;
 }
-
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath{
     // cell background image view
@@ -150,23 +144,20 @@
     UIImage *edit= [UIImage imageNamed:@"edit-disclosure.png"];
     UIImageView* editView = [[UIImageView alloc] initWithImage:edit];
     
-    if (indexPath.row == [partners count]){
+    if (indexPath.row == [self.partners count]){
         name = @"Add New Partner";
         cell.editingAccessoryView = nil;
     }else {
-        Partner *curPartner = [partners objectAtIndex:indexPath.row]; 
+        Partner *curPartner = [self.partners objectAtIndex:indexPath.row];
         name =  curPartner.name;
         cell.editingAccessoryView = editView;
 	}
     
     cell.mainTextLabel.text = name;
-    
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
 	return cell;
 }
-
-
 
 /**Editing Methods**/
 
@@ -175,13 +166,12 @@
 }
 
 - (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.row >= [partners count]) {
+    if (indexPath.row >= [self.partners count]) {
         return UITableViewCellEditingStyleInsert;
     } else {
         return UITableViewCellEditingStyleDelete;
     }
 }
-
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     // If row is deleted, remove it from the list.
@@ -189,8 +179,8 @@
         
         DataAccess *db = [[DataAccess alloc] init];
         
-        [db deletePartner:[partners objectAtIndex:indexPath.row]];
-        [partners removeObjectAtIndex:indexPath.row];
+        [db deletePartner:[self.partners objectAtIndex:indexPath.row]];
+        [self.partners removeObjectAtIndex:indexPath.row];
          
         [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
         
@@ -201,7 +191,6 @@
         }
     }
 }
-
 
 -(IBAction)enterEditingMode:(id)sender{
     if([partnerTableView isEditing]){
@@ -216,11 +205,11 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if ([[segue identifier] isEqualToString:@"pushAddPartner"] && [sharedUser isEditingPartner]){
+    if ([[segue identifier] isEqualToString:@"pushAddPartner"] && [self.sharedUser isEditingPartner]){
         [[[segue destinationViewController] navigationItem] setTitle:@"Editing Partner"];
     }else{
-        [[[segue destinationViewController] navigationItem] setTitle:[[sharedUser sharedPartner] name]];
-        NSLog(@"shared  partner: %@", [sharedUser sharedPartner]);
+        [[[segue destinationViewController] navigationItem] setTitle:[[self.sharedUser sharedPartner] name]];
+        NSLog(@"shared  partner: %@", [self.sharedUser sharedPartner]);
     }
 }
 

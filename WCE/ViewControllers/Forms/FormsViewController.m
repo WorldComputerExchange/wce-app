@@ -30,7 +30,7 @@
     UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Back"
                                                                    style:UIBarButtonItemStylePlain target:nil action:nil];
     
-    [formsTableView registerClass:[CustomCell class]
+    [self.formsTableView registerClass:[CustomCell class]
                forCellReuseIdentifier:@"customCell"];
     
     self.navigationItem.backBarButtonItem = backButton;

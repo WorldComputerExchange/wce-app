@@ -13,12 +13,7 @@
 
 @interface AddLocationViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, UIActionSheetDelegate, UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate>
 {
-    NSArray *locations;
-    NSArray *dataArray;
-    UIActionSheet *actionSheet;
     IBOutlet UITableView *dropDownTableView;
-    User *sharedUser;
-    
 }
 
 @property (nonatomic, copy) NSArray *locations;

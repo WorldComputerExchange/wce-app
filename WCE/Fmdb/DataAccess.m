@@ -14,9 +14,6 @@
 
 @implementation DataAccess
 
-
-
-
 /**
  Get path of database in the app
  **/
@@ -27,7 +24,6 @@
     
     return dbPath;
 }
-
 
 //Location Access Methods
 //location names are enforced as unique so a name can be used as an id
@@ -202,6 +198,7 @@
     return success;
 }
 
+
 /**
  Delete a given location in the database
  **/
@@ -222,6 +219,7 @@
     
     return success;
 }
+
 
 //Partner access methods
 //partner names are not guaranteed to be unique so partnerId must be used as an id

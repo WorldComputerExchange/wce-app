@@ -10,18 +10,14 @@
 
 @interface NewPartnerViewController : UIViewController
 
-//@property IBOutlet UITextField *nameField;
 @property (weak, nonatomic)IBOutlet UITextField *nameField;
 @property IBOutlet UIBarButtonItem *saveButton;
 @property User *sharedUser;
-
-
 
 - (IBAction)saveChanges:(id)sender;
 - (IBAction)cancel:(id)sender;
 
 - (IBAction)backgroundTouched:(id)sender;
 - (IBAction)textfieldReturn:(id)sender;
-
 
 @end

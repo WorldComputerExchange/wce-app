@@ -17,20 +17,10 @@
 
 @implementation CoverSheetViewController
 
-@synthesize  q1, q2, q3, q4, q5, q6, q7, q8, q9, q10, q11, q12_1, q12_2, q13_1, q13_2, q14, q15, q16_1, q16_2, q17;
+//@synthesize regionArray, locations, actionSheet, selectedCountry, sharedUser, hasCoverSheet, savedCoverSheet;
 
-
-@synthesize regionArray, locations, actionSheet, selectedCountry, sharedUser, hasCoverSheet, savedCoverSheet;
-
-//removed
-
-
-
-
-
-//FROM TUTORIAL Cocoa W/Love; need the following instance variables
+//FROM TUTORIAL Cocoa W/Love; need the following instance variables/constants
 CGFloat animatedDistance;
-//FROM TUTORIAL Cocoa W/Love; need the following instance constants
 static const CGFloat KEYBOARD_ANIMATION_DURATION = 0.3;
 static const CGFloat MINIMUM_SCROLL_FRACTION = 0.2;
 static const CGFloat MAXIMUM_SCROLL_FRACTION = 0.8;
@@ -38,35 +28,27 @@ static const CGFloat PORTRAIT_KEYBOARD_HEIGHT = 216;
 static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
 
 - (IBAction)backgroundTouched:(id)sender {
-    [q1 resignFirstResponder];
-    [q2 resignFirstResponder];
-    [q3 resignFirstResponder];
-    [q4 resignFirstResponder];
-    [q5 resignFirstResponder];
-    [q6 resignFirstResponder];
-    [q7 resignFirstResponder];
-    [q8 resignFirstResponder];
-    [q9 resignFirstResponder];
-    [q10 resignFirstResponder];
-    [q11 resignFirstResponder];
-    [q12_1 resignFirstResponder];
-    [q12_2 resignFirstResponder];
-    [q13_1 resignFirstResponder];
-    [q13_2 resignFirstResponder];
-    [q14 resignFirstResponder];
-    [q15 resignFirstResponder];
-    [q16_1 resignFirstResponder];
-    [q16_2 resignFirstResponder];
-    [q17 resignFirstResponder];
+    [self.q1 resignFirstResponder];
+    [self.q2 resignFirstResponder];
+    [self.q3 resignFirstResponder];
+    [self.q4 resignFirstResponder];
+    [self.q5 resignFirstResponder];
+    [self.q6 resignFirstResponder];
+    [self.q7 resignFirstResponder];
+    [self.q8 resignFirstResponder];
+    [self.q9 resignFirstResponder];
+    [self.q10 resignFirstResponder];
+    [self.q11 resignFirstResponder];
+    [self.q12_1 resignFirstResponder];
+    [self.q12_2 resignFirstResponder];
+    [self.q13_1 resignFirstResponder];
+    [self.q13_2 resignFirstResponder];
+    [self.q14 resignFirstResponder];
+    [self.q15 resignFirstResponder];
+    [self.q16_1 resignFirstResponder];
+    [self.q16_2 resignFirstResponder];
+    [self.q17 resignFirstResponder];
 }
-
-
-
-
-
-
-
-
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -82,51 +64,47 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-    
     //get the coversheet for the current partner from the database if it exists
-    sharedUser = [User sharedUser];
+    self.sharedUser = [User sharedUser];
     
-    Partner *curPartner = [sharedUser sharedPartner];
+    Partner *curPartner = [self.sharedUser sharedPartner];
     
     DataAccess *db = [[DataAccess alloc] init];
     
-    savedCoverSheet = [[CoverSheet alloc] init];
-    savedCoverSheet = [db getCoverSheetForPartner:curPartner];
+    self.savedCoverSheet = [[CoverSheet alloc] init];
+    self.savedCoverSheet = [db getCoverSheetForPartner:curPartner];
     
-    
-    if (savedCoverSheet.coverSheetId < 0) { //no cover sheet found
-        hasCoverSheet = false;
-        selectedCountry = @"None";
+    if (self.savedCoverSheet.coverSheetId < 0) { //no cover sheet found
+        self.hasCoverSheet = false;
+        self.selectedCountry = @"None";
     }else {
-        hasCoverSheet = true;
-        self.q1.text = savedCoverSheet.q1;
-        self.q2.text = savedCoverSheet.q2;
-        self.q3.text = savedCoverSheet.q3;
-        self.q4.text = savedCoverSheet.q4;
-        self.q5.text = savedCoverSheet.q5;
-        self.q6.text = savedCoverSheet.q6;
-        self.q7.text = savedCoverSheet.q7;
-        self.q8.text = savedCoverSheet.q8;
-        self.q9.text = savedCoverSheet.q9;
-        self.q10.text = savedCoverSheet.q10;
-        self.q11.selectedSegmentIndex = [self segmentIndexForString:savedCoverSheet.q11];
-        self.q12_1.text = savedCoverSheet.q12_1;
-        self.q12_2.text = savedCoverSheet.q12_2;
-        self.q13_1.text = savedCoverSheet.q13_1;
-        self.q13_2.text = savedCoverSheet.q13_2;
-        self.q14.text = savedCoverSheet.q14;
-        self.q15.text = savedCoverSheet.q15;
-        self.q16_1.text = savedCoverSheet.q16_1;
-        self.q16_2.text = savedCoverSheet.q16_2;
-        self.q17.selectedSegmentIndex = [self segmentIndexForString:savedCoverSheet.q17];
-        
-        
-        
+        self.hasCoverSheet = true;
+        self.q1.text = self.savedCoverSheet.q1;
+        self.q2.text = self.savedCoverSheet.q2;
+        self.q3.text = self.savedCoverSheet.q3;
+        self.q4.text = self.savedCoverSheet.q4;
+        self.q5.text = self.savedCoverSheet.q5;
+        self.q6.text = self.savedCoverSheet.q6;
+        self.q7.text = self.savedCoverSheet.q7;
+        self.q8.text = self.savedCoverSheet.q8;
+        self.q9.text = self.savedCoverSheet.q9;
+        self.q10.text = self.savedCoverSheet.q10;
+        self.q11.selectedSegmentIndex = [self segmentIndexForString:self.savedCoverSheet.q11];
+        self.q12_1.text = self.savedCoverSheet.q12_1;
+        self.q12_2.text = self.savedCoverSheet.q12_2;
+        self.q13_1.text = self.savedCoverSheet.q13_1;
+        self.q13_2.text = self.savedCoverSheet.q13_2;
+        self.q14.text = self.savedCoverSheet.q14;
+        self.q15.text = self.savedCoverSheet.q15;
+        self.q16_1.text = self.savedCoverSheet.q16_1;
+        self.q16_2.text = self.savedCoverSheet.q16_2;
+        self.q17.selectedSegmentIndex = [self segmentIndexForString:self.savedCoverSheet.q17];
     }
-    regionArray = [[NSArray alloc] initWithObjects:@"Country", nil];
+    
+    self.regionArray = [[NSArray alloc] initWithObjects:@"Country", nil];
     
     
-    locations = [[NSArray alloc] initWithObjects:
+    self.locations = [[NSArray alloc] initWithObjects:
                  @"Afghanistan", @"Albania", @"Algeria", @"Andorra", @"Angola", @"Antigua and Barbuda", @"Argentina", @"Armenia", @"Aruba", @"Azerbaijan", @"Bahamas", @"Bahrain", @"Bangladesh", @"Barbados", @"Bassas da India", @"Belarus", @"Belize", @"Benin", @"Bermuda", @"Bhutan", @"Bolivia", @"Bosnia and Herzegovina", @"Botswana", @"Brasil", @"Brunei", @"Bulgaria", @"Burkina Faso", @"Burma", @"Burundi", @"Cambodia", @"Cameroon", @"Cape Verde", @"Cayman Islands", @"Central African Republic", @"Chad", @"Chile", @"China", @"Colombia", @"Comoros", @"Congo, Democratic Republic of the", @"Congo, Republic of the", @"Costa Rica", @"Cote d'Ivoire", @"Croatia", @"Cuba", @"Cyprus", @"Dhekelia", @"Dijibouti", @"Dominica", @"Dominican Republic", @"Ecuador", @"Egypt", @"El Salvador", @"Equatorial Guinea", @"Eritrea", @"Ethiopia", @"Fiji", @"French Guiana", @"French Polynesia", @"Gabon", @"The Gambia", @"Ghana", @"Georgia", @"Ghana", @"Guam", @"Guatemala", @"Guinea", @"Guinea Bissau", @"Guyana", @"Haiti", @"Honduras", @"India", @"Indonesia", @"Iran", @"Iraq", @"Jamaica", @"Jordan", @"Kazakhstan", @"Kenya", @"Kiribati", @"Kuwait", @"Kyrgyzstan", @"Laos", @"Lesotho", @"Liberia", @"Libya", @"Lithuania", @"Macau", @"Macedonia", @"Madagascar", @"Malawi", @"Malaysia", @"Mali", @"Marshall Islands", @"Martinique", @"Mauritania", @"Mauritius", @"Mayotte", @"Mexico", @"Micronesia", @"Mongolia", @"Moldova", @"Morocco", @"Mozambique", @"Namibia", @"Nepal", @"New Zealand", @"Nicaragua", @"Niger", @"Nigeria", @"Oman", @"Pakistan", @"Palau", @"Panama", @"Papua New Guinea", @"Paraguay", @"Peru", @"Philippines", @"Poland", @"Qatar", @"Romania", @"Russia", @"Rwanda", @"Saint Lucia", @"Samoa", @"Saudi Arabia", @"Senegal", @"Serbia and Montenegro", @"Sierra Leone", @"Singapore", @"Slovakia", @"Slovenia", @"Solomon Islands", @"Somalia", @"South Africa",  @"Sri Lanka",  @"Sudan",  @"Suriname",  @"Swaziland",  @"Syria",  @"Tajikistan",  @"Tanzania",  @"Thailand",  @"Timor-Leste",  @"Togo",  @"Tokelau",  @"Tonga",  @"Trinidad and Tobago",  @"Tunisia",  @"Turkey",  @"Turkmenistan",  @"Turks and Caicos Islands",  @"Tuvalu",  @"Uganda",  @"Ukraine",  @"United Arab Emirates",  @"United Kingdom",  @"United States", @"Uruguay",  @"Uzbekistan",  @"Vanuatu", @"Venezuala", @"Vietnam", @"Virgin Islands", @"Western Sahara", @"Yemen", @"Zambia", @"Zimbabwe", nil];
   
     
@@ -137,7 +115,7 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
     
     CoverSheet *curCoverSheet =[[CoverSheet alloc] init];
     
-    curCoverSheet.partnerId = [[sharedUser sharedPartner] partnerId];
+    curCoverSheet.partnerId = [[self.sharedUser sharedPartner] partnerId];
     
     curCoverSheet.q1 = self.q1.text;
     curCoverSheet.q2 = self.q2.text;
@@ -162,18 +140,15 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
     
     DataAccess *db = [[DataAccess alloc] init];
     
-    if (!hasCoverSheet){
+    if (!self.hasCoverSheet){
         [db insertCoverSheet:curCoverSheet];
     }else{
-        curCoverSheet.coverSheetId = savedCoverSheet.coverSheetId;
+        curCoverSheet.coverSheetId = self.savedCoverSheet.coverSheetId;
         [db updateCoverSheet:curCoverSheet];
     }
     
     [self.navigationController popViewControllerAnimated:YES];
 }
-
-
-
 
 //return the correct segment (YES or NO) for the given string
 -(NSInteger)segmentIndexForString:(NSString *)string{
@@ -193,8 +168,6 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
     }
 }
 
-
-
 //dismisses the keyboard when the return/done button is pressed for TextFields.
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
@@ -208,22 +181,16 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
     return YES;
 }
 
-
-
-
 /**Keyboard dismissed when background is clicked or when return is hit**/
-
 /**Does not work
     Maybe need a gesture recognizer for this functionality**/
-
-
 /**TableView methods**/
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 	return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)table numberOfRowsInSection:(NSInteger)section {
-	return [regionArray count];
+	return [self.regionArray count];
 }
 
 - (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -239,7 +206,7 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
 	
 	cell.textLabel.text = region;
 	cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-    cell.detailTextLabel.text = selectedCountry;
+    cell.detailTextLabel.text = self.selectedCountry;
 	
 	return cell;
 }
@@ -247,20 +214,20 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    actionSheet = [[UIActionSheet alloc] initWithTitle:nil
+    self.actionSheet = [[UIActionSheet alloc] initWithTitle:nil
                                               delegate:nil
                                      cancelButtonTitle:nil
                                 destructiveButtonTitle:nil
                                      otherButtonTitles:nil];
     
-    [actionSheet setActionSheetStyle:UIActionSheetStyleBlackTranslucent];
+    [self.actionSheet setActionSheetStyle:UIActionSheetStyleBlackTranslucent];
     
     CGRect pickerFrame = CGRectMake(0, 40, 0, 0);
-    pickerView = [[UIPickerView alloc] initWithFrame:pickerFrame];
+    self.pickerView = [[UIPickerView alloc] initWithFrame:pickerFrame];
     
-    pickerView.showsSelectionIndicator = YES;
-    pickerView.dataSource = self;
-    pickerView.delegate = self;
+    self.pickerView.showsSelectionIndicator = YES;
+    self.pickerView.dataSource = self;
+    self.pickerView.delegate = self;
     
     UISegmentedControl *closeButton = [[UISegmentedControl alloc] initWithItems:[NSArray arrayWithObject:@"Done"]];
     closeButton.momentary = YES;
@@ -269,12 +236,11 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
     closeButton.tintColor = [UIColor colorWithRed:34.0/255.0 green:97.0/255.0 blue:221.0/255.0 alpha:1];
     [closeButton addTarget:self action:@selector(pickerDoneClicked) forControlEvents:UIControlEventValueChanged];
     
-    [actionSheet addSubview:pickerView];
-    [actionSheet addSubview:closeButton];
-    [actionSheet showInView:[[UIApplication sharedApplication] keyWindow]];
-    [actionSheet setBounds:CGRectMake(0, 0, 320, 485)];
+    [self.actionSheet addSubview:self.pickerView];
+    [self.actionSheet addSubview:closeButton];
+    [self.actionSheet showInView:[[UIApplication sharedApplication] keyWindow]];
+    [self.actionSheet setBounds:CGRectMake(0, 0, 320, 485)];
 }
-
 
 // Tells the table view how tall its footer should be (the footer contains the Choose from Map button)
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
@@ -290,27 +256,18 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
 
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
 {
-    return [locations count];
+    return [self.locations count];
 }
 
 - (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
 {
-    return [locations objectAtIndex:row];
+    return [self.locations objectAtIndex:row];
 }
 
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
 {
-    selectedCountry = [locations objectAtIndex:row];
+    self.selectedCountry = [self.locations objectAtIndex:row];
 }
-
-//- (void)pickerDoneClicked
-//{
-  //  [locationTableView reloadData];
-    //[actionSheet dismissWithClickedButtonIndex:0 animated:YES];
-//}
-
-
-
 
 - (void)didReceiveMemoryWarning
 {
@@ -318,13 +275,7 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
     // Dispose of any resources that can be recreated.
 }
 
-
-
-
-
-
 /**Keyboard dismissed when background is clicked or when return is hit**/
-
 - (IBAction)textfieldReturn:(id)sender{
     [sender resignFirstResponder];
 }
@@ -456,8 +407,7 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
     {
         heightFraction = 1.0;
     }
-    
-    
+
     //Now take this fraction and convert it into an amount to scroll by multiplying by the keyboard height for the current screen orientation. Notice the calls to floor so that we only scroll by whole pixel amounts.
     UIInterfaceOrientation orientation =
     [[UIApplication sharedApplication] statusBarOrientation];

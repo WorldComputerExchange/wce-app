@@ -27,7 +27,7 @@
 {
     [super viewDidLoad];
     
-    [formsMenuTableView registerClass:[CustomCell class]
+    [self.formsMenuTableView registerClass:[CustomCell class]
               forCellReuseIdentifier:@"customCell"];
 }
 

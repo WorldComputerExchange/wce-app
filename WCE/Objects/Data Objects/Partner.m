@@ -8,8 +8,6 @@
 #import "Partner.h"
 
 @implementation Partner
-@synthesize name, partnerId, locationId;
-
 
 -(id)init {
     self = [super init];

@@ -20,34 +20,15 @@
     return self;
 }
 
-/*-(void)setupBackground{
-    UIImage *bg = [UIImage imageNamed:@"cell-bg.png"];
-    UIImageView *backgroundView = [[UIImageView alloc] initWithImage:bg];
-    self.backgroundView = backgroundView;
-    
-   // UIImage *highlight = [[UIImage imageNamed:"cell-bg-highlighted.png"]];
-    //UIImageView *highlightImageView = [[UIImageView alloc] initWithImage:highlight];
-    //self.selectedBackgroundView = highlightImageView;
-}*/
-
 -(void)addMainLabel{
     self.mainTextLabel = [[UILabel alloc] init];
     self.mainTextLabel.font = [UIFont boldSystemFontOfSize:16];
     self.mainTextLabel.textColor = [UIColor whiteColor];
     self.mainTextLabel.shadowColor = [UIColor colorWithWhite:0.30 alpha:1.0];
     self.mainTextLabel.backgroundColor = [UIColor clearColor];
-    //self.mainTextLabel.highlightedTextColor = [UIColor whiteColor];
     
     [self.contentView addSubview:self.mainTextLabel];
 }
-
-/*- (void)setHighlighted:(BOOL)highlighted animated:(BOOL)animated {
-    [super setHighlighted:highlighted animated:animated];
-    
-    CGSize shadowOffset = highlighted ? CGSizeZero : CGSizeMake(0, 1);
-    self.mainTextLabel.shadowOffset = shadowOffset;
-    self.subTextLabel.shadowOffset = shadowOffset;
-}*/
 
 - (void)layoutSubviews {
     [super layoutSubviews];

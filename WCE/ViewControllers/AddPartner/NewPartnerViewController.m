@@ -15,19 +15,13 @@
 
 @implementation NewPartnerViewController
 
-@synthesize nameField, sharedUser, saveButton;
-
-
 - (IBAction)backgroundTouched:(id)sender {
-    [nameField resignFirstResponder];
+    [self.nameField resignFirstResponder];
 }
 
 - (IBAction)textfieldReturn:(id)sender{
     [sender resignFirstResponder];
 }
-
-
-
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -43,10 +37,10 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-    sharedUser = [User sharedUser];
+    self.sharedUser = [User sharedUser];
     
-    if ([sharedUser isEditingPartner]){
-        [nameField setText:[[sharedUser editingPartner] name]];
+    if ([self.sharedUser isEditingPartner]){
+        [self.nameField setText:[[self.sharedUser editingPartner] name]];
     }
 }
 
@@ -56,9 +50,8 @@
 }
 
 - (void)viewDidDisappear:(BOOL)animated{
-    [sharedUser setIsEditingPartner:false];
+    [self.sharedUser setIsEditingPartner:false];
 }
-
 
 - (void)didReceiveMemoryWarning
 {
@@ -66,14 +59,13 @@
     // Dispose of any resources that can be recreated.
 }
 
-
 - (void)saveChanges:(id)sender  
 {
     /*save input fields to our user and database
      Should check that these values are non-null!*/
     
     Partner *curPartner = [[Partner alloc] init];
-    curPartner.name = nameField.text;
+    curPartner.name = self.nameField.text;
     
     if (curPartner.name.length > 0){
     
@@ -86,8 +78,8 @@
         
         BOOL success;
         
-        if ([sharedUser isEditingPartner]){
-            Partner *oldPartner = [sharedUser editingPartner];
+        if ([self.sharedUser isEditingPartner]){
+            Partner *oldPartner = [self.sharedUser editingPartner];
             [curPartner setPartnerId:[oldPartner partnerId]];
             success = [db updatePartner:curPartner];
         }else{

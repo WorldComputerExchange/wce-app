@@ -35,7 +35,6 @@
 	
     
     [[UINavigationBar appearance] setTintColor:[UIColor colorWithRed:135./255. green:0./255. blue:0./255. alpha:1.0]];
-	// Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning

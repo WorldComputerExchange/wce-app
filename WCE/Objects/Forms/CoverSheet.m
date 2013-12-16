@@ -13,7 +13,7 @@
     self = [super init];
     if (self != nil) {
         // initialize stuff here
-        self.coverSheetId = -1; //-1 says coverSheet has not been assigned
+        self.coverSheetId = -1; //Cover sheet has not been assigned
     }
     
     return self;

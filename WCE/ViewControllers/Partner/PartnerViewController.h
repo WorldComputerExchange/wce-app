@@ -12,8 +12,6 @@
 {
     IBOutlet UITableView *partnerTableView;
     IBOutlet UIBarButtonItem *editButton;
-    
-    User *sharedUser;
 }
 
 @property (nonatomic, retain) NSMutableArray *partners;

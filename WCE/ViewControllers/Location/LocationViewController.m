@@ -21,9 +21,6 @@
 
 @implementation LocationViewController
 
-@synthesize locationTableView, chooseFromMap, sharedLocation, sharedUser, editButton, logOffButton;
-
-
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -38,15 +35,16 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-    [locationTableView registerClass:[CustomCell class]
+    [self.locationTableView registerClass:[CustomCell class]
            forCellReuseIdentifier:@"customCell"];
     
     //get shared location instance
-    sharedLocation = [Location sharedLocation];
-    NSLog(@"sharedLocation %@", [sharedLocation name]);
+    self.sharedLocation = [Location sharedLocation];
+    
+    NSLog(@"sharedLocation %@", [self.sharedLocation name]);
     
     //get shared user instance
-    sharedUser = [User sharedUser];
+    self.sharedUser = [User sharedUser];
 }
 
 /**Push the Map View Screen
@@ -56,27 +54,28 @@
 	[self performSegueWithIdentifier:@"pushMapView" sender:self];
 }
 
-
 /**Enables/Disables editing of table rows, deleting and editing locations
  Called when edit button in nav bar is pushed**/
 -(IBAction)enterEditingMode:(id)sender{
     
-    if([locationTableView isEditing]){ //Exit editing mode
+    if([self.locationTableView isEditing]){ //Exit editing mode
+        
         NSLog(@"Exited editing mode");
-        [locationTableView setEditing:NO animated:YES];
+        [self.locationTableView setEditing:NO animated:YES];
         
         //Replace done button with edit button
-        [[self editButton] setStyle:UIBarButtonItemStylePlain];
-        [[self editButton] setTitle:@"Edit"];
+        [self.editButton setStyle:UIBarButtonItemStylePlain];
+        [self.editButton setTitle:@"Edit"];
         
-    }else { //Enter editing mode 
+    }else { //Enter editing mode
+        
          NSLog(@"Entered editing mode");
-        [locationTableView setEditing:YES animated:YES];
-        [locationTableView setAllowsSelectionDuringEditing:YES];
+        [self.locationTableView setEditing:YES animated:YES];
+        [self.locationTableView setAllowsSelectionDuringEditing:YES];
 		
         //replace edit button with done button
-        [[self editButton] setStyle:UIBarButtonItemStyleDone];
-        [[self editButton] setTitle:@"Done"];
+        [self.editButton setStyle:UIBarButtonItemStyleDone];
+        [self.editButton setTitle:@"Done"];
     }
 }
 
@@ -99,14 +98,13 @@
 		//show navigation bar programmatically
 		[self.navigationItem setTitle:@"Choose Location"];
 		
-		[locationTableView setBackgroundView:nil];
+		[self.locationTableView setBackgroundView:nil];
 		
-		[locationTableView reloadData];
+		[self.locationTableView reloadData];
 		
 		[[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault animated:YES];
 	}
 }
-
 
 - (void)didReceiveMemoryWarning
 {
@@ -117,32 +115,31 @@
 /**TableView Methods**/
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
     int idx = indexPath.row;
     Location *selectedLocation;
     
-    if (idx >= [[sharedUser savedLocations] count]){ //Add location row selected
+    if (idx >= [[self.sharedUser savedLocations] count]){ //Add location row selected
         [self performSegueWithIdentifier:@"pushAddLocation" sender:self];
-    }else if  ([locationTableView isEditing]){ //location selected in editing mode
-        selectedLocation = [[sharedUser savedLocations] objectAtIndex:idx];
-        [sharedUser setIsEditingLocation:YES];
-        [sharedUser setEditingLocation:selectedLocation];
+    }else if  ([self.locationTableView isEditing]){ //location selected in editing mode
+        selectedLocation = [[self.sharedUser savedLocations] objectAtIndex:idx];
+        [self.sharedUser setIsEditingLocation:YES];
+        [self.sharedUser setEditingLocation:selectedLocation];
         [self performSegueWithIdentifier:@"pushAddLocation" sender:self];
     }else{ //location selected NOT in editing mode
         
-        selectedLocation = [[sharedUser savedLocations] objectAtIndex:idx];
+        selectedLocation = [[self.sharedUser savedLocations] objectAtIndex:idx];
         NSString *selectedName =  [selectedLocation name];
 
         
-        [sharedLocation setName:selectedName];
-        [sharedLocation setContact:[selectedLocation contact]];
-        [sharedLocation setAddress: [selectedLocation address]];
-        [sharedLocation setPhone:[selectedLocation phone]];
-        [sharedLocation setCity: [selectedLocation city]];
-        [sharedLocation setCountry:[selectedLocation country]];
-        [sharedLocation setZip: [selectedLocation zip]];
-        [sharedLocation setLanguage: [selectedLocation language]];
-        [sharedLocation setLocationId:[selectedLocation locationId]];
+        [self.sharedLocation setName:selectedName];
+        [self.sharedLocation setContact:[selectedLocation contact]];
+        [self.sharedLocation setAddress: [selectedLocation address]];
+        [self.sharedLocation setPhone:[selectedLocation phone]];
+        [self.sharedLocation setCity: [selectedLocation city]];
+        [self.sharedLocation setCountry:[selectedLocation country]];
+        [self.sharedLocation setZip: [selectedLocation zip]];
+        [self.sharedLocation setLanguage: [selectedLocation language]];
+        [self.sharedLocation setLocationId:[selectedLocation locationId]];
         
         [self performSegueWithIdentifier:@"pushMainMenu" sender:self];
     }
@@ -154,7 +151,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)table numberOfRowsInSection:(NSInteger)section {
-	return [[sharedUser savedLocations] count] + 1;
+	return [[self.sharedUser savedLocations] count] + 1;
 }
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -185,7 +182,6 @@
                       [UIImage imageNamed:@"middle-cell-bg.png"]];
         selectedBackground = [[UIImageView alloc] initWithImage:
                               [UIImage imageNamed:@"middle-cell-bg-selected.png"]];
-        
     }
     background.alpha = 0.70; //make background semitransparent
     
@@ -207,11 +203,11 @@
     //set up edit accessory view
     UIImage *edit= [UIImage imageNamed:@"edit-disclosure.png"];
     UIImageView* editView = [[UIImageView alloc] initWithImage:edit];
-    if (indexPath.row == [[sharedUser savedLocations] count]){
+    if (indexPath.row == [[self.sharedUser savedLocations] count]){
         name = @"Add New Location";
         cell.editingAccessoryView = nil;
     }else {
-        Location *curLocation = [[sharedUser savedLocations] objectAtIndex:indexPath.row];
+        Location *curLocation = [[self.sharedUser savedLocations] objectAtIndex:indexPath.row];
         name =  [curLocation name];
         cell.editingAccessoryView = editView;
 	}
@@ -230,13 +226,12 @@
 }
 
 - (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.row >= [[sharedUser savedLocations] count]) {
+    if (indexPath.row >= [[self.sharedUser savedLocations] count]) {
         return UITableViewCellEditingStyleInsert;
     } else {
         return UITableViewCellEditingStyleDelete;
     }
 }
-
 
 /**
  Delete button hit
@@ -245,7 +240,7 @@
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     // If row is deleted, remove it from the list.
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        Location *curLocation = [[sharedUser savedLocations] objectAtIndex:indexPath.row];
+        Location *curLocation = [[self.sharedUser savedLocations] objectAtIndex:indexPath.row];
         
         DataAccess *db = [[DataAccess alloc] init];
         
@@ -257,7 +252,7 @@
             NSLog(@"Location %@ successfully deleted from the database", curLocation.name);
         }
         
-        [[sharedUser savedLocations] removeObjectAtIndex:indexPath.row]; //remove from User array
+        [[self.sharedUser savedLocations] removeObjectAtIndex:indexPath.row]; //remove from User array
         
         [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
         
@@ -270,10 +265,9 @@
     }
 }
 
-
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if ([[segue identifier] isEqualToString:@"pushAddLocation"] && [sharedUser isEditingLocation]){
+    if ([[segue identifier] isEqualToString:@"pushAddLocation"] && [self.sharedUser isEditingLocation]){
         [[[segue destinationViewController] navigationItem] setTitle:@"Editing Location"];
     }else{
         [[[segue destinationViewController] navigationItem] setTitle:[[Location sharedLocation] name]];

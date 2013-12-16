@@ -13,7 +13,7 @@
     self = [super init];
     if (self != nil) {
         // initialize stuff here
-        self.orderId = -1; //-1 says Order has not been assigned
+        self.orderId = -1; //order has not been assigned
     }
     
     return self;

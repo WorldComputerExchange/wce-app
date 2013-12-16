@@ -4,11 +4,6 @@
 //
 //  Created by Peter on 4/30/13.
 //
-/**Content Screen displaying WCE Content Graphic
- Choose Location
-    >Home
-        >Info
-            >Content     **/
 
 #import "WCEContentViewController.h"
 
@@ -40,11 +35,11 @@
 	// Do any additional setup after loading the view.
 	
 	UIImage *image = [UIImage imageNamed:@"WCE Content V5.png"];
-	_imageView = [[UIImageView alloc] initWithImage:image];
-	[_imageView setFrame:(CGRect){.origin=CGPointMake(0.0f, 0.0f), .size=image.size}];
-	[_scrollView addSubview:_imageView];
+    self.imageView = [[UIImageView alloc] initWithImage:image];
+	[self.imageView setFrame:(CGRect){.origin=CGPointMake(0.0f, 0.0f), .size=image.size}];
+	[self.scrollView addSubview:self.imageView];
 	
-	[_scrollView setContentSize:image.size];
+	[self.scrollView setContentSize:image.size];
 	NSLog(@"width: %f height: %f", [[self scrollView] frame].size.width, [[self scrollView] frame].size.height);
 	
 	UITapGestureRecognizer *twoFingerTapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self
@@ -57,29 +52,29 @@
 	doubleTapRecognizer.numberOfTapsRequired = 2;
 	doubleTapRecognizer.numberOfTouchesRequired = 1;
 	
-	[_scrollView addGestureRecognizer:twoFingerTapRecognizer];
-	[_scrollView addGestureRecognizer:doubleTapRecognizer];
+	[self.scrollView addGestureRecognizer:twoFingerTapRecognizer];
+	[self.scrollView addGestureRecognizer:doubleTapRecognizer];
 	
 	[[self view] setBackgroundColor:[UIColor blackColor]];
 	
-	CGRect scrollViewFrame = _scrollView.frame;
+	CGRect scrollViewFrame = self.scrollView.frame;
 	NSLog(@"%@", [self scrollView]);
 	
-	CGFloat scaleWidth = scrollViewFrame.size.width / _scrollView.contentSize.width;
-	CGFloat scaleHeight = scrollViewFrame.size.height / _scrollView.contentSize.height;
+	CGFloat scaleWidth = scrollViewFrame.size.width / self.scrollView.contentSize.width;
+	CGFloat scaleHeight = scrollViewFrame.size.height / self.scrollView.contentSize.height;
 	CGFloat minScale = MIN(scaleWidth, scaleHeight);
-	_scrollView.minimumZoomScale = minScale;
+	self.scrollView.minimumZoomScale = minScale;
 	
-	_scrollView.maximumZoomScale = 1.0f;
-	_scrollView.zoomScale = minScale;
+	self.scrollView.maximumZoomScale = 1.0f;
+	self.scrollView.zoomScale = minScale;
 	
 	[self centerScrollViewContents];
 }
 
 - (void)centerScrollViewContents
 {
-    CGSize boundsSize = _scrollView.bounds.size;
-    CGRect contentsFrame = _imageView.frame;
+    CGSize boundsSize = self.scrollView.bounds.size;
+    CGRect contentsFrame = self.imageView.frame;
 	
     if (contentsFrame.size.width < boundsSize.width) {
         contentsFrame.origin.x = (boundsSize.width - contentsFrame.size.width) / 2.0f;
@@ -93,19 +88,16 @@
         contentsFrame.origin.y = 0.0f;
     }
 	
-    _imageView.frame = contentsFrame;
+    self.imageView.frame = contentsFrame;
 }
 
 - (void)scrollViewDoubleTapped:(UITapGestureRecognizer*)recognizer
 {
-    // 1
     CGPoint pointInView = [recognizer locationInView:self.imageView];
 	
-    // 2
     CGFloat newZoomScale = self.scrollView.zoomScale * 1.5f;
     newZoomScale = MIN(newZoomScale, self.scrollView.maximumZoomScale);
 	
-    // 3
     CGSize scrollViewSize = self.scrollView.bounds.size;
 	
     CGFloat w = scrollViewSize.width / newZoomScale;
@@ -114,8 +106,7 @@
     CGFloat y = pointInView.y - (h / 2.0f);
 	
     CGRect rectToZoomTo = CGRectMake(x, y, w, h);
-	
-    // 4
+
     [self.scrollView zoomToRect:rectToZoomTo animated:YES];
 }
 
@@ -129,7 +120,7 @@
 
 - (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView
 {
-	return _imageView;
+	return self.imageView;
 }
 
 - (void)scrollViewDidZoom:(UIScrollView *)scrollView

@@ -32,7 +32,7 @@
 
 - (void)viewDidAppear:(BOOL)animated
 {
-	[_passwordOld becomeFirstResponder];
+	[self.passwordOld becomeFirstResponder];
 }
 
 - (void)didReceiveMemoryWarning
@@ -44,22 +44,22 @@
 - (IBAction)saveNewPassword:(id)sender
 {
     NSLog(@"Save new password");
-	if([[_passwordOld text] isEqualToString:_oldPasswordToCheck])
+	if([[self.passwordOld text] isEqualToString:self.oldPasswordToCheck])
 	{
-		if(![[_passwordNewOne text] isEqualToString:@""] && ![[_passwordNewTwo text] isEqualToString:@""])
+		if(![[self.passwordNewOne text] isEqualToString:@""] && ![[self.passwordNewTwo text] isEqualToString:@""])
 		{
-			if([[_passwordNewOne text] isEqualToString:[_passwordNewTwo text]])
+			if([[self.passwordNewOne text] isEqualToString:[self.passwordNewTwo text]])
 			{
-				[[NSUserDefaults standardUserDefaults] setValue:[_passwordNewTwo text] forKey:@"password"];
+				[[NSUserDefaults standardUserDefaults] setValue:[self.passwordNewTwo text] forKey:@"password"];
 				[[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithBool:TRUE] forKey:@"hasSetPassword"];
 				[[NSUserDefaults standardUserDefaults] synchronize];
 				
-				[_cancelButton setEnabled:NO];
-				[_saveButton setEnabled:NO];
+				[self.cancelButton setEnabled:NO];
+				[self.saveButton setEnabled:NO];
 				
-				[_passwordOld resignFirstResponder];
-				[_passwordNewOne resignFirstResponder];
-				[_passwordNewTwo resignFirstResponder];
+				[self.passwordOld resignFirstResponder];
+				[self.passwordNewOne resignFirstResponder];
+				[self.passwordNewTwo resignFirstResponder];
 				
 				[self setTitle:@"Password Changed!"];
 				
@@ -67,9 +67,9 @@
 			}
 			else
 			{
-				[_passwordNewOne setText:@""];
-				[_passwordNewTwo setText:@""];
-                [_passwordNewOne becomeFirstResponder];
+				[self.passwordNewOne setText:@""];
+				[self.passwordNewTwo setText:@""];
+                [self.passwordNewOne becomeFirstResponder];
 				
 				UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Passwords do not match" message:@"The passwords you have entered do not match. Please try again." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
 				[alert show];
@@ -91,9 +91,9 @@
 - (IBAction)cancelChangePassword:(id)sender
 {
     NSLog(@"Password change canceled");
-	[_passwordOld setText:@""];
-	[_passwordNewOne setText:@""];
-	[_passwordNewTwo setText:@""];
+	[self.passwordOld setText:@""];
+	[self.passwordNewOne setText:@""];
+	[self.passwordNewTwo setText:@""];
     
     NSString *newPass = [[NSUserDefaults standardUserDefaults] stringForKey:@"password"];
 	NSLog(@"New password is: %@", newPass);
@@ -103,7 +103,7 @@
 - (void)dismissSelf
 {
 	[self dismissViewControllerAnimated:YES completion:nil];
-	[_delegate didDismissViewController:self];
+	[self.delegate didDismissViewController:self];
 }
 
 @end

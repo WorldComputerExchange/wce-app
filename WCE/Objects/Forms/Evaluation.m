@@ -13,7 +13,7 @@
     self = [super init];
     if (self != nil) {
         // initialize stuff here
-        self.evalId = -1; //-1 says evalForm has not been assigned
+        self.evalId = -1; //evalForm has not been assigned
     }
     
     return self;

@@ -8,7 +8,6 @@
 #import "ChangePassViewController.h"
 #import "LoginViewControllerDelegate.h"
 
-
 @class LoginViewController;
 
 @interface LoginViewController : UIViewController <ChangePassViewControllerDelegate>
