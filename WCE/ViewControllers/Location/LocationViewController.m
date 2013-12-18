@@ -270,6 +270,7 @@
     if ([[segue identifier] isEqualToString:@"pushAddLocation"] && [self.sharedUser isEditingLocation]){
         [[[segue destinationViewController] navigationItem] setTitle:@"Editing Location"];
     }else{
+        [[segue destinationViewController] setHidesBottomBarWhenPushed:YES]; //need to hide tab on all contained views
         [[[segue destinationViewController] navigationItem] setTitle:[[Location sharedLocation] name]];
         NSLog(@"shared  location: %@", [[Location sharedLocation] name]);
     }

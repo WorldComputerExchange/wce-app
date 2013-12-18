@@ -30,6 +30,8 @@
     
     [self.mainMenuTableView registerClass:[CustomCell class]
               forCellReuseIdentifier:@"customCell"];
+    
+    [[self view] setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"Default.png"]]];
 }
 
 - (void)didReceiveMemoryWarning
