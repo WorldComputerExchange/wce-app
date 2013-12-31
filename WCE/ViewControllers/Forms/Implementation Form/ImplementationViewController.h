@@ -8,7 +8,7 @@
 #import "Partner.h"
 #import "ImpQuestions.h"
 
-@interface ImplementationViewController : UIViewController <UIActionSheetDelegate, UITextFieldDelegate, UITextViewDelegate>
+@interface ImplementationViewController : UITableViewController <UIActionSheetDelegate, UITextFieldDelegate, UITextViewDelegate>//, UITableViewDelegate, UITableViewDataSource>
 {
     UIActionSheet *actionSheet;
     

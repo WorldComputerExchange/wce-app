@@ -7,6 +7,7 @@
 #import "ImplementationViewController.h"
 #import "User.h" 
 #import "DataAccess.h" 
+#import "CustomCell.h"
 
 @interface ImplementationViewController ()
 
@@ -340,10 +341,25 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
 }
 
 
+#pragma mark - Tableview Methods
+/*- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+	return 1;
+}
 
+- (NSInteger)tableView:(UITableView *)table numberOfRowsInSection:(NSInteger)section {
+	return 26;
+}
 
+- (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell;
+    
+    NSLog(@"Cell is cellq%d", indexPath.row+1);
 
-
+    cell = [self.tableView dequeueReusableCellWithIdentifier:[NSString stringWithFormat:@"cellq%d", indexPath.row + 1]];
+    
+	return cell;
+}*/
 
 
 

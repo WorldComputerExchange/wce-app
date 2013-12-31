@@ -261,7 +261,6 @@
             NSIndexPath *modifiedCellIdx = [NSIndexPath indexPathForRow:0 inSection:0];
             [tableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:modifiedCellIdx] withRowAnimation:UITableViewRowAnimationAutomatic];
         }
-        
     }
 }
 
