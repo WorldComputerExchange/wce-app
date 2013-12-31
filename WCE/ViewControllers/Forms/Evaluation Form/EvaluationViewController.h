@@ -10,7 +10,7 @@
 #import "Location.h"
 
 
-@interface EvaluationViewController : UIViewController <UIActionSheetDelegate, UITextFieldDelegate, UITextViewDelegate>
+@interface EvaluationViewController : UITableViewController <UIActionSheetDelegate, UITextFieldDelegate, UITextViewDelegate>
 {
     UIActionSheet *actionSheet;    
 }
