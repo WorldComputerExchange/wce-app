@@ -9,10 +9,9 @@
 #import "User.h"
 #import "CoverSheet.h"
 
-@interface CoverSheetViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, UIPickerViewDelegate, UIPickerViewDataSource>
+@interface CoverSheetViewController : UITableViewController
 
 @property (nonatomic, retain) User *sharedUser;
-@property (nonatomic, retain) NSArray *regionArray;
 @property (nonatomic, retain) IBOutlet UITextField *q1;
 @property (nonatomic, retain) IBOutlet UITextField *q2;
 @property (nonatomic, retain) IBOutlet UITextField *q3;
@@ -34,11 +33,7 @@
 @property (nonatomic, retain) IBOutlet UITextField *q16_2;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *q17;
 
-@property (nonatomic, copy) NSArray *locations;
-@property (nonatomic, copy) UIActionSheet *actionSheet;
-@property (nonatomic, retain) NSString *selectedCountry;
 @property (nonatomic, retain) CoverSheet *savedCoverSheet;
-@property (nonatomic, retain) UIPickerView *pickerView;
 @property (nonatomic, assign) BOOL hasCoverSheet; 
 
 - (IBAction)saveChanges:(id)sender;

@@ -17,7 +17,7 @@
 }
 
 @property (nonatomic, copy) NSArray *locations;
-@property (nonatomic, copy) UIActionSheet *actionSheet;
+@property (nonatomic, retain) UIActionSheet *actionSheet;
 @property (nonatomic, retain) NSArray *dataArray;
 @property (nonatomic, retain) NSArray *countries;
 @property (nonatomic, retain) NSArray *languages;

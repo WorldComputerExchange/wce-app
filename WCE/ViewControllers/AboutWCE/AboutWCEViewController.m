@@ -36,9 +36,4 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-- (IBAction)goToWebsite:(id)sender
-{
-    [self performSegueWithIdentifier:@"pushWebView" sender:self];
-}
 @end
