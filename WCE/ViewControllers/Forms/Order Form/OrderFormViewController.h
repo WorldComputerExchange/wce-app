@@ -12,7 +12,7 @@
 
 
 
-@interface OrderFormViewController : UIViewController <UIActionSheetDelegate, UITextFieldDelegate, UITextViewDelegate>
+@interface OrderFormViewController : UITableViewController <UIActionSheetDelegate, UITextFieldDelegate, UITextViewDelegate>
 {
     UIActionSheet *actionSheet;
     
