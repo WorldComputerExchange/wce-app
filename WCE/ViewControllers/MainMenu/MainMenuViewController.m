@@ -105,10 +105,10 @@
                               [UIImage imageNamed:@"middle-cell-bg-selected.png"]];
     }
     background.alpha = 0.70; //make background semitransparent
-    // set background view
     
-    [cell setSelectedBackgroundView:selectedBackground];  
-    [cell setBackgroundView:background];   
+    // set background view
+    [cell setSelectedBackgroundView:selectedBackground];
+    [cell setBackgroundView:background];
 }
 
 

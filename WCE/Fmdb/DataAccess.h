@@ -23,7 +23,7 @@
  CREATE TABLE impQuestions(partnerid INTEGER references partner, id INTEGER PRIMARY KEY, q1 varchar(5), q2 varchar(30),  q3 varchar(500), q4 varchar(500), q5 varchar(500), q6 varchar(50),  q7 varchar(5), q8 varchar(200), q9 varchar(50), q10 varchar(500),  q11 varchar(500), q12 varchar(500), q13 varchar(500), q14 varchar(500),  q15 varchar(500), q16 varchar(500), q17 varchar(500), q18 varchar(500),  q19 varchar(500), q20 varchar(500), q21 varchar(500), q22 varchar(500),  q23 varchar(500), q24 varchar(5), q25 varchar(500))
 
  COVER SHEET
- CREATE TABLE coverSheet(partnerid INTEGER references partner, id INTEGER PRIMARY KEY, q1 varchar(30), q2 varchar(30), q3 varchar(30), q4 varchar(30), q5 varchar(30), q6 varchar(30))
+ CREATE TABLE coverSheet(partnerid INTEGER references partner, id INTEGER PRIMARY KEY, q1 varchar(30), q2 varchar(30), q3 varchar(30), q4 varchar(30), q5 varchar(200), q6 varchar(50), q7 varchar(50), q8 varchar(30), q9 varchar(30), q10 varchar(50), q11 varchar(5), q12_1 varchar(30), q12_2 varchar(30), q13_1 varchar(30), q13_2 varchar(30), q14 varchar(30), q15 varchar(30), q16_1 varchar(30), q16_2 varchar(30), q17 varchar(5))
  
  ORDER FORM
  CREATE TABLE orderForm(partnerid INTEGER references partner, id INTEGER PRIMARY KEY, q1 varchar(5), q2 varchar(5),  q2_1 varchar(5), q2_2 varchar(5), q2_3 varchar(5), q3 varchar(5),  q4_1 varchar(5), q4_2 varchar(5), q4_3 varchar(5), q5_1 varchar(5),  q5_2 varchar(5), q5_3 varchar(5), q6_1 varchar(5), q6_2 varchar(5),  q6_3 varchar(5), q6_4 varchar(5), q7_1 varchar(5), q7_2 varchar(5),  q8 varchar(30), q9 varchar(5), q10 varchar(5), q11 varchar(5),  q12 varchar(5), q13_1 varchar(5), q13_2 varchar(500), q14 varchar(5),  q15 varchar(5))
