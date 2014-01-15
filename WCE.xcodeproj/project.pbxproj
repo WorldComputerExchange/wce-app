@@ -90,6 +90,7 @@
 		D0F745F41730A59300C9EC5F /* WCEContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F745F31730A59300C9EC5F /* WCEContentViewController.m */; };
 		D0F745F71730AB3B00C9EC5F /* ChangePassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F745F61730AB3B00C9EC5F /* ChangePassViewController.m */; };
 		FA44558116E284E900D08750 /* WCE Content V5 NEW.png in Resources */ = {isa = PBXBuildFile; fileRef = FA44558016E284E900D08750 /* WCE Content V5 NEW.png */; };
+		FA507FC5187CF9AA008F52A2 /* CHCSVParser.m in Sources */ = {isa = PBXBuildFile; fileRef = FA507FC4187CF9AA008F52A2 /* CHCSVParser.m */; };
 		FA98E2941722F9EE005EC158 /* OrderFormViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA98E2931722F9EE005EC158 /* OrderFormViewController.m */; };
 		FA98E2971726062F005EC158 /* NewPartnerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA98E2961726062F005EC158 /* NewPartnerViewController.m */; };
 /* End PBXBuildFile section */
@@ -214,6 +215,8 @@
 		D0F745F51730AB3B00C9EC5F /* ChangePassViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChangePassViewController.h; path = ViewControllers/Login/ChangePassViewController.h; sourceTree = "<group>"; };
 		D0F745F61730AB3B00C9EC5F /* ChangePassViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ChangePassViewController.m; path = ViewControllers/Login/ChangePassViewController.m; sourceTree = "<group>"; };
 		FA44558016E284E900D08750 /* WCE Content V5 NEW.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "WCE Content V5 NEW.png"; path = "Supporting Files/Content images/WCE Content V5 NEW.png"; sourceTree = "<group>"; };
+		FA507FC3187CF9AA008F52A2 /* CHCSVParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CHCSVParser.h; path = Fmdb/CHCSVParser.h; sourceTree = "<group>"; };
+		FA507FC4187CF9AA008F52A2 /* CHCSVParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CHCSVParser.m; path = Fmdb/CHCSVParser.m; sourceTree = "<group>"; };
 		FA98E2921722F9EE005EC158 /* OrderFormViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OrderFormViewController.h; path = "ViewControllers/Forms/Order Form/OrderFormViewController.h"; sourceTree = "<group>"; };
 		FA98E2931722F9EE005EC158 /* OrderFormViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OrderFormViewController.m; path = "ViewControllers/Forms/Order Form/OrderFormViewController.m"; sourceTree = "<group>"; };
 		FA98E2951726062F005EC158 /* NewPartnerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NewPartnerViewController.h; path = ViewControllers/AddPartner/NewPartnerViewController.h; sourceTree = "<group>"; };
@@ -533,6 +536,8 @@
 				8C66ED1F17DE549A00B2091F /* FMResultSet.m */,
 				8C66ED1B17DE548400B2091F /* FMDatabase.h */,
 				8C66ED1C17DE548400B2091F /* FMDatabase.m */,
+				FA507FC3187CF9AA008F52A2 /* CHCSVParser.h */,
+				FA507FC4187CF9AA008F52A2 /* CHCSVParser.m */,
 			);
 			name = Fmdb;
 			sourceTree = "<group>";
@@ -771,6 +776,7 @@
 				8C66ED5317E0E28100B2091F /* InfoViewController.m in Sources */,
 				8C66ED5617E0F14900B2091F /* FormsMenuViewController.m in Sources */,
 				8C66ED5D17E2515100B2091F /* CustomNavigationBar.m in Sources */,
+				FA507FC5187CF9AA008F52A2 /* CHCSVParser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
