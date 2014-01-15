@@ -2804,7 +2804,7 @@ Et toi?/ Et vous? (polite)
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jRK-hD-7Lt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3610" y="39"/>
+            <point key="canvasLocation" x="3642" y="-399"/>
         </scene>
         <!--Order Form View Controller - Order Form-->
         <scene sceneID="Zzx-VT-9LK">
@@ -3733,7 +3733,7 @@ Et toi?/ Et vous? (polite)
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rp4-Ry-O3k" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3954" y="361"/>
+            <point key="canvasLocation" x="3634" y="281"/>
         </scene>
         <!--View Controller - Costs-->
         <scene sceneID="0UZ-UL-EG8">
@@ -4969,7 +4969,7 @@ WCE Fundraising: WCE raises the final 1/3 of our sourcing &amp; shipping costs f
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WBw-Zx-l9U" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3618" y="770"/>
+            <point key="canvasLocation" x="3634" y="962"/>
         </scene>
         <!--New Partner View Controller-->
         <scene sceneID="G4p-bJ-PmB">
