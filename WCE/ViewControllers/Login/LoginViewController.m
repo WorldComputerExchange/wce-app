@@ -24,10 +24,17 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    UIApplication *app = [UIApplication sharedApplication];
+    
+    [app setStatusBarHidden:YES withAnimation:nil];
+    
+    self.view.backgroundColor = [UIColor colorWithPatternImage:
+                                 [UIImage imageNamed:@"Default.png"]];
+    
 	// Do any additional setup after loading the view.
     UIImage *image = [UIImage imageNamed:@"WCE_LogoWhite.png"];
     [[[self navigationController] navigationBar] setBackgroundImage:image forBarMetrics:UIBarMetricsDefault];
-	[[self view] setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"Default.png"]]];
     
     //followed nathan barry's tutorial http://nathanbarry.com/designing-buttons-ios5/
     //to create these buttons
@@ -41,7 +48,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     //[self.navigationController setNavigationBarHidden:YES];
-	[[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleBlackTranslucent animated:YES];
+	[[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:YES];
 	
 	// retrieve the password
 	BOOL hasSetPassword = [[NSUserDefaults standardUserDefaults] boolForKey:@"hasSetPassword"];

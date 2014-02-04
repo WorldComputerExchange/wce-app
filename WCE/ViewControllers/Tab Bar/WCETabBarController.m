@@ -32,9 +32,8 @@
 	[self setDelegate:self];
 	
 	_buttonsInToolbar = [[NSMutableArray alloc] init];
-	
     
-    [[UINavigationBar appearance] setTintColor:[UIColor colorWithRed:135./255. green:0./255. blue:0./255. alpha:1.0]];
+    [[UITabBar appearance] setTintColor:[UIColor colorWithRed:135./255. green:0./255. blue:0./255. alpha:1.0]];
 }
 
 - (void)didReceiveMemoryWarning

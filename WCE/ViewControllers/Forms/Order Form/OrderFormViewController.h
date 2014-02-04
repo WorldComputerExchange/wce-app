@@ -19,6 +19,7 @@
 }
 
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (weak, nonatomic) IBOutlet UITableView *orderTableView;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *q1;
 @property (weak, nonatomic) IBOutlet UITextField *q2_1;
 @property (weak, nonatomic) IBOutlet UITextField *q2_2;

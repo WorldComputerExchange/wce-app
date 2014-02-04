@@ -55,6 +55,8 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    UIImageView *backgroundImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Default.png"]];
+    self.impTableView.backgroundView = backgroundImageView;
     
     //get the impQuestions for the current partner if it exists
     User *sharedUser = [User sharedUser];

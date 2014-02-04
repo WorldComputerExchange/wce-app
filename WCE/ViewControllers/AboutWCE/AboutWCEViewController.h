@@ -15,4 +15,5 @@
     IBOutlet UIButton *website;
 }
 
+@property IBOutlet UITableView *aboutWCETableView;
 @end

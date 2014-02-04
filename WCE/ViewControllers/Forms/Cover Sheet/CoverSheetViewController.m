@@ -61,6 +61,8 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    UIImageView *backgroundImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Default.png"]];
+    self.coverTableView.backgroundView = backgroundImageView;
     
     //get the coversheet for the current partner from the database if it exists
     self.sharedUser = [User sharedUser];

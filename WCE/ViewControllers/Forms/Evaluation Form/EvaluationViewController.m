@@ -53,7 +53,7 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
 
 - (void)viewWillAppear:(BOOL)animated
 {
-	[[self view] setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"background.gif"]]];
+	//[[self view] setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"background.gif"]]];
     
 }
 
@@ -63,6 +63,8 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
+    UIImageView *backgroundImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Default.png"]];
+    self.evalTableView.backgroundView = backgroundImageView;
     
     //get the coversheet for the current partner from the database if it exists
     self.sharedLocation = [Location sharedLocation];

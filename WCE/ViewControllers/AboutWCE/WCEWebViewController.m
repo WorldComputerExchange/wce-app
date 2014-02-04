@@ -25,6 +25,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
     webView.delegate = self;
     
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.worldcomputerexchange.org/"]];

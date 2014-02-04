@@ -26,7 +26,10 @@
     
     UIImage *navBackgroundImage = [UIImage imageNamed:@"navBar-bg.png"];
     [[UINavigationBar appearance] setBackgroundImage:navBackgroundImage forBarMetrics:UIBarMetricsDefault];
-    [[UINavigationBar appearance] setTintColor:[UIColor colorWithRed:135./255. green:0./255. blue:0./255. alpha:1.0]];
+    [[UIBarButtonItem appearance] setTintColor:[UIColor whiteColor]];
+    [[UITableViewCell appearance] setBackgroundColor:[UIColor clearColor]];
+    [[UITableView appearance] setSeparatorStyle:UITableViewCellSeparatorStyleNone];
+    [[UITabBar appearance] setBarTintColor:[UIColor blackColor]];
    
     return YES;
 }

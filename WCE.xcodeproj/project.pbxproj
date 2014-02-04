@@ -426,6 +426,7 @@
 		8C66ED3017DE5DC400B2091F /* UIComponents */ = {
 			isa = PBXGroup;
 			children = (
+				D0F334B1172AC374006BACED /* Tab Bar */,
 				8C66ECB517D54DD900B2091F /* CustomCell.h */,
 				8C66ECB617D54DD900B2091F /* CustomCell.m */,
 				8C66ED5B17E2515100B2091F /* CustomNavigationBar.h */,
@@ -559,7 +560,6 @@
 				8C66ED5017E0E22C00B2091F /* Info */,
 				8C38595717417FFD003A323B /* MainMenu */,
 				D0F745F11730A57C00C9EC5F /* Content */,
-				D0F334B1172AC374006BACED /* Tab Bar */,
 				8C1B2972172A11BE00D359D4 /* Forms */,
 				D058DCD816FBD28900132041 /* AboutWCE */,
 				8C27586F16CC829A00DEDAC8 /* Location */,
@@ -666,6 +666,11 @@
 				CLASSPREFIX = WCE;
 				LastUpgradeCheck = 0450;
 				ORGANIZATIONNAME = " Brian Beckerle";
+				TargetAttributes = {
+					8C9C3ACB16CC60D000F95A6B = {
+						DevelopmentTeam = 249883U63N;
+					};
+				};
 			};
 			buildConfigurationList = 8C9C3AC616CC60D000F95A6B /* Build configuration list for PBXProject "WCE" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -855,6 +860,8 @@
 		8C9C3AF116CC60D000F95A6B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)",
@@ -863,9 +870,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WCE/WCE-Prefix.pch";
 				INFOPLIST_FILE = "WCE/WCE-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -873,6 +881,8 @@
 		8C9C3AF216CC60D000F95A6B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)",
@@ -881,8 +891,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WCE/WCE-Prefix.pch";
 				INFOPLIST_FILE = "WCE/WCE-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

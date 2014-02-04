@@ -7,7 +7,7 @@
 #import <UIKit/UIKit.h>
 #import "Location.h"
 
-@interface MainMenuViewController : UITableViewController
+@interface MainMenuViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
 @property IBOutlet UITableView *mainMenuTableView;
 @property (nonatomic, retain) Location *sharedLocation;

@@ -27,6 +27,10 @@
 {
     [super viewDidLoad];
     
+    
+    self.view.backgroundColor = [UIColor colorWithPatternImage:
+                                 [UIImage imageNamed:@"Default.png"]];
+    
     UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Back"
                                                                    style:UIBarButtonItemStylePlain target:nil action:nil];
     

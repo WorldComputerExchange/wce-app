@@ -38,7 +38,7 @@
     
     CGFloat x = HorizontalMargin;
     CGFloat y = VerticalMargin;
-    CGSize textSize = [self.mainTextLabel.text sizeWithFont:self.mainTextLabel.font];
+    CGSize textSize = [self.mainTextLabel.text sizeWithAttributes:@{ NSFontAttributeName : [UIFont systemFontOfSize:17]}];
     CGFloat width = textSize.width;
     CGFloat height = self.contentView.frame.size.height - (2 * VerticalMargin);
     self.mainTextLabel.frame = CGRectMake(x, y, width, height);

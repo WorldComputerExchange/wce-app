@@ -35,6 +35,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    
+    self.view.backgroundColor = [UIColor colorWithPatternImage:
+                                 [UIImage imageNamed:@"Default.png"]];
 	// Do any additional setup after loading the view.
     
     self.sharedUser = [User sharedUser];

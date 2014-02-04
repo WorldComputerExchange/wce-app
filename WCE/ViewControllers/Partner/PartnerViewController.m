@@ -30,6 +30,9 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
+    self.view.backgroundColor = [UIColor colorWithPatternImage:
+                                 [UIImage imageNamed:@"Default.png"]];
+    
     self.sharedUser = [User sharedUser];
     
     DataAccess *db = [[DataAccess alloc] init];

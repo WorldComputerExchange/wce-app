@@ -27,6 +27,11 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
+    //self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"Default.png"]];
+    
+    UIImageView *backgroundImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Default.png"]];
+    self.aboutWCETableView.backgroundView = backgroundImageView;
+    
     UIImage *bg = [[UIImage imageNamed:@"button-bg.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(18, 18, 18, 18)];
     [website setBackgroundImage:bg forState:UIControlStateNormal];  
 }

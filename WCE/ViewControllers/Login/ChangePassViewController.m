@@ -27,7 +27,9 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
 	
-	[[self view] setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"Default.png"]]];
+    
+    self.view.backgroundColor = [UIColor colorWithPatternImage:
+                                 [UIImage imageNamed:@"Default.png"]];
 }
 
 - (void)viewDidAppear:(BOOL)animated

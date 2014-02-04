@@ -35,6 +35,9 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
+    UIImageView *backgroundImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Default.png"]];
+    self.locationTableView.backgroundView = backgroundImageView;
+    
     [self.locationTableView registerClass:[CustomCell class]
            forCellReuseIdentifier:@"customCell"];
     

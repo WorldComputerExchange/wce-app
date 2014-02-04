@@ -7,7 +7,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface InfoViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate>
+@interface InfoViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
 @property IBOutlet UITableView *infoTableView;
 

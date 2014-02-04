@@ -12,6 +12,7 @@
 @interface CoverSheetViewController : UITableViewController
 
 @property (nonatomic, retain) User *sharedUser;
+@property (weak, nonatomic) IBOutlet UITableView *coverTableView;
 @property (nonatomic, retain) IBOutlet UITextField *q1;
 @property (nonatomic, retain) IBOutlet UITextField *q2;
 @property (nonatomic, retain) IBOutlet UITextField *q3;

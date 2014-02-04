@@ -27,6 +27,9 @@
 {
     [super viewDidLoad];
     
+    self.view.backgroundColor = [UIColor colorWithPatternImage:
+                                 [UIImage imageNamed:@"Default.png"]];
+    
     [self.formsMenuTableView registerClass:[CustomCell class]
               forCellReuseIdentifier:@"customCell"];
 }
