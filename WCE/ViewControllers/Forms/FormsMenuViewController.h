@@ -7,7 +7,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FormsMenuViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate>
+@interface FormsMenuViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
 @property IBOutlet UITableView *formsMenuTableView;
 
