@@ -8,7 +8,7 @@
 #import <UIKit/UIKit.h>
 #import "User.h"
 
-@interface PartnerViewController : UITableViewController<UITableViewDelegate, UITableViewDataSource>
+@interface PartnerViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 {
     IBOutlet UITableView *partnerTableView;
     IBOutlet UIBarButtonItem *editButton;
