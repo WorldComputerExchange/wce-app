@@ -23,4 +23,5 @@
 
 + (Location *)sharedLocation;
 + (void) initialize;
+- (NSArray *)locationProperties;
 @end

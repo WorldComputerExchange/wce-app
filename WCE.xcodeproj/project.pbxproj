@@ -73,6 +73,7 @@
 		8C9C3AEA16CC60D000F95A6B /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C9C3AE816CC60D000F95A6B /* MainStoryboard.storyboard */; };
 		8CA9678B17AC4130003C3B70 /* DataAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CA9678A17AC4130003C3B70 /* DataAccess.m */; };
 		8CB0441916DC47910000AD0F /* LocationMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CB0441816DC47910000AD0F /* LocationMapViewController.m */; };
+		8CB54BBB18A801CE001F9CDB /* CHCSVParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CB54BB718A70988001F9CDB /* CHCSVParser.m */; };
 		8CCEF95717CE66C500DD52AA /* Evaluation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CCEF95617CE66C500DD52AA /* Evaluation.m */; };
 		8CCEF95A17CEA57400DD52AA /* ImpQuestions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CCEF95917CEA57400DD52AA /* ImpQuestions.m */; };
 		8CCEF95D17CEBA9A00DD52AA /* Order.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CCEF95C17CEBA9A00DD52AA /* Order.m */; };
@@ -90,7 +91,6 @@
 		D0F745F41730A59300C9EC5F /* WCEContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F745F31730A59300C9EC5F /* WCEContentViewController.m */; };
 		D0F745F71730AB3B00C9EC5F /* ChangePassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F745F61730AB3B00C9EC5F /* ChangePassViewController.m */; };
 		FA44558116E284E900D08750 /* WCE Content V5 NEW.png in Resources */ = {isa = PBXBuildFile; fileRef = FA44558016E284E900D08750 /* WCE Content V5 NEW.png */; };
-		FA507FC5187CF9AA008F52A2 /* CHCSVParser.m in Sources */ = {isa = PBXBuildFile; fileRef = FA507FC4187CF9AA008F52A2 /* CHCSVParser.m */; };
 		FA98E2941722F9EE005EC158 /* OrderFormViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA98E2931722F9EE005EC158 /* OrderFormViewController.m */; };
 		FA98E2971726062F005EC158 /* NewPartnerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA98E2961726062F005EC158 /* NewPartnerViewController.m */; };
 /* End PBXBuildFile section */
@@ -186,6 +186,8 @@
 		8CA9678A17AC4130003C3B70 /* DataAccess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DataAccess.m; path = Fmdb/DataAccess.m; sourceTree = "<group>"; };
 		8CB0441716DC47910000AD0F /* LocationMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LocationMapViewController.h; path = ViewControllers/LocationMap/LocationMapViewController.h; sourceTree = "<group>"; };
 		8CB0441816DC47910000AD0F /* LocationMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LocationMapViewController.m; path = ViewControllers/LocationMap/LocationMapViewController.m; sourceTree = "<group>"; };
+		8CB54BB618A70988001F9CDB /* CHCSVParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHCSVParser.h; sourceTree = "<group>"; };
+		8CB54BB718A70988001F9CDB /* CHCSVParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHCSVParser.m; sourceTree = "<group>"; };
 		8CCEF95517CE66C500DD52AA /* Evaluation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Evaluation.h; path = Objects/Forms/Evaluation.h; sourceTree = "<group>"; };
 		8CCEF95617CE66C500DD52AA /* Evaluation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Evaluation.m; path = Objects/Forms/Evaluation.m; sourceTree = "<group>"; };
 		8CCEF95817CEA57400DD52AA /* ImpQuestions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImpQuestions.h; path = Objects/Forms/ImpQuestions.h; sourceTree = "<group>"; };
@@ -215,8 +217,6 @@
 		D0F745F51730AB3B00C9EC5F /* ChangePassViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChangePassViewController.h; path = ViewControllers/Login/ChangePassViewController.h; sourceTree = "<group>"; };
 		D0F745F61730AB3B00C9EC5F /* ChangePassViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ChangePassViewController.m; path = ViewControllers/Login/ChangePassViewController.m; sourceTree = "<group>"; };
 		FA44558016E284E900D08750 /* WCE Content V5 NEW.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "WCE Content V5 NEW.png"; path = "Supporting Files/Content images/WCE Content V5 NEW.png"; sourceTree = "<group>"; };
-		FA507FC3187CF9AA008F52A2 /* CHCSVParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CHCSVParser.h; path = Fmdb/CHCSVParser.h; sourceTree = "<group>"; };
-		FA507FC4187CF9AA008F52A2 /* CHCSVParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CHCSVParser.m; path = Fmdb/CHCSVParser.m; sourceTree = "<group>"; };
 		FA98E2921722F9EE005EC158 /* OrderFormViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OrderFormViewController.h; path = "ViewControllers/Forms/Order Form/OrderFormViewController.h"; sourceTree = "<group>"; };
 		FA98E2931722F9EE005EC158 /* OrderFormViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OrderFormViewController.m; path = "ViewControllers/Forms/Order Form/OrderFormViewController.m"; sourceTree = "<group>"; };
 		FA98E2951726062F005EC158 /* NewPartnerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NewPartnerViewController.h; path = ViewControllers/AddPartner/NewPartnerViewController.h; sourceTree = "<group>"; };
@@ -494,6 +494,7 @@
 			children = (
 				8C66ED3017DE5DC400B2091F /* UIComponents */,
 				8CA9677E17A2FE61003C3B70 /* Fmdb */,
+				8CB54BB918A7099F001F9CDB /* CHCSV */,
 				8C32DF2C16E26B22005AFA89 /* Objects */,
 				8C9C3ADF16CC60D000F95A6B /* WCEAppDelegate.h */,
 				8C9C3AE016CC60D000F95A6B /* WCEAppDelegate.m */,
@@ -537,8 +538,6 @@
 				8C66ED1F17DE549A00B2091F /* FMResultSet.m */,
 				8C66ED1B17DE548400B2091F /* FMDatabase.h */,
 				8C66ED1C17DE548400B2091F /* FMDatabase.m */,
-				FA507FC3187CF9AA008F52A2 /* CHCSVParser.h */,
-				FA507FC4187CF9AA008F52A2 /* CHCSVParser.m */,
 			);
 			name = Fmdb;
 			sourceTree = "<group>";
@@ -570,6 +569,15 @@
 				8C27587016CC82A500DEDAC8 /* Login */,
 			);
 			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		8CB54BB918A7099F001F9CDB /* CHCSV */ = {
+			isa = PBXGroup;
+			children = (
+				8CB54BB618A70988001F9CDB /* CHCSVParser.h */,
+				8CB54BB718A70988001F9CDB /* CHCSVParser.m */,
+			);
+			name = CHCSV;
 			sourceTree = "<group>";
 		};
 		8CD27FF41728355100973A04 /* Partner */ = {
@@ -746,6 +754,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CB54BBB18A801CE001F9CDB /* CHCSVParser.m in Sources */,
 				8C9C3ADD16CC60D000F95A6B /* main.m in Sources */,
 				8C9C3AE116CC60D000F95A6B /* WCEAppDelegate.m in Sources */,
 				8C27586B16CC820E00DEDAC8 /* LoginViewController.m in Sources */,
@@ -781,7 +790,6 @@
 				8C66ED5317E0E28100B2091F /* InfoViewController.m in Sources */,
 				8C66ED5617E0F14900B2091F /* FormsMenuViewController.m in Sources */,
 				8C66ED5D17E2515100B2091F /* CustomNavigationBar.m in Sources */,
-				FA507FC5187CF9AA008F52A2 /* CHCSVParser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

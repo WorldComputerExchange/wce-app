@@ -13,18 +13,28 @@
 #import "WCEAppDelegate.h"
 
 
-@interface LocationViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+@interface LocationViewController : UIViewController <UIDocumentInteractionControllerDelegate, UITableViewDelegate, UITableViewDataSource>
 
 @property IBOutlet UIBarButtonItem *editButton;
 @property IBOutlet UIBarButtonItem *logOffButton;
+@property IBOutlet UIButton *previewCSVButton;
+@property IBOutlet UIButton *sendCSVButton;
 
 @property IBOutlet UITableView *locationTableView;
+
 @property (nonatomic, copy) NSArray *locations;
 
 @property (nonatomic, retain) UIButton *chooseFromMap;
 @property (nonatomic, retain) Location *sharedLocation;
 @property (nonatomic, retain) User *sharedUser;
 
+
 -(IBAction)enterEditingMode:(id)sender;
 -(IBAction)logoff:(id)sender;
+
+-(IBAction)sendCSVFile:(id)sender;
+-(IBAction)previewCSVFile:(id)sender;
+
+-(void)pushFormDatatoCSV;
+
 @end

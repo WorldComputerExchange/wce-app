@@ -14,8 +14,13 @@
 #import "WCETabBarController.h"
 #import "DataAccess.h"
 #import "CustomCell.h"
+#import "CHCSVParser.h"
+
 
 @interface LocationViewController ()
+
+@property UIDocumentInteractionController *documentInteractionController;
+@property NSURL *csvURL;
 
 @end
 
@@ -35,8 +40,9 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-   // UIImageView *backgroundImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Default.png"]];
-    //self.locationTableView.backgroundView = backgroundImageView;
+    UIImage *bg = [[UIImage imageNamed:@"button-bg.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(18, 18, 18, 18)];
+    [self.previewCSVButton setBackgroundImage:bg forState:UIControlStateNormal];
+    [self.sendCSVButton setBackgroundImage:bg forState:UIControlStateNormal];
     
     [self.locationTableView registerClass:[CustomCell class]
            forCellReuseIdentifier:@"customCell"];
@@ -80,6 +86,61 @@
         [self.editButton setStyle:UIBarButtonItemStyleDone];
         [self.editButton setTitle:@"Done"];
     }
+}
+
+
+
+#pragma mark - CSV methods
+-(void)pushFormDatatoCSV{
+    NSLog(@"Pushing form data to CSV");
+    
+    
+    NSString *documentsDirectory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    NSString *filename = @"Wce.csv";
+    NSURL *fileURL = [NSURL fileURLWithPathComponents:[NSArray arrayWithObjects:documentsDirectory, filename, nil]];
+    
+    self.csvURL = fileURL;
+    
+    CHCSVWriter *csvExporter = [[CHCSVWriter alloc] initForWritingToCSVFile:[fileURL path]];
+    
+    User *sharedUser = [User sharedUser];
+    
+    [csvExporter writeComment:@"Locations"];
+    [csvExporter writeLineOfFields:[NSArray arrayWithObjects:@"Name", @"Contact", @"Phone",
+                                    @"Address", @"Zipcode", @"City", @"Country", @"Language", nil]];
+    
+    for (Location *loc in sharedUser.savedLocations){
+        [csvExporter writeLineOfFields:loc.locationProperties];
+    }
+    
+    [csvExporter closeStream];
+}
+
+-(IBAction)previewCSVFile:(id)sender{
+    NSLog(@"Preview CSV file button pressed");
+    
+    [self pushFormDatatoCSV];
+    
+    NSLog(@"We almost made it");
+    
+        
+    if (self.csvURL) {
+        NSLog(@"We made it");
+        self.documentInteractionController = [UIDocumentInteractionController interactionControllerWithURL:self.csvURL];
+        
+        [self.documentInteractionController setDelegate:self];
+        
+        [self.documentInteractionController presentPreviewAnimated:YES];
+    }
+}
+
+-(IBAction)sendCSVFile:(id)sender{
+    NSLog(@"Send CSV file button pressed");
+}
+
+#pragma mark - DocumentInteractionControllerDelegate methods
+- (UIViewController *) documentInteractionControllerViewControllerForPreview: (UIDocumentInteractionController *) controller {
+    return self;
 }
 
 -(IBAction)logoff:(id)sender{

@@ -41,5 +41,9 @@ static Location* _sharedLocation = nil;
     return self;
 }
 
+- (NSArray *)locationProperties{
+    return [NSArray arrayWithObjects:self.name, self.contact, self.phone, self.address, self.zip, self.city, self.country, self.language, nil];
+}
+
 
 @end

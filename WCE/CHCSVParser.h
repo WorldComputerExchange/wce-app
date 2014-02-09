@@ -1,13 +1,5 @@
 //
 //  CHCSVParser.h
-//  WCE
-//
-//  Created by Alex on 1/7/14.
-//  Copyright (c) 2014  Brian Beckerle. All rights reserved.
-//
-
-//
-//  CHCSVParser.h
 //  CHCSVParser
 /**
  Copyright (c) 2012 Dave DeLong

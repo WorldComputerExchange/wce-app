@@ -1,13 +1,5 @@
 //
 //  CHCSVParser.m
-//  WCE
-//
-//  Created by Alex on 1/7/14.
-//  Copyright (c) 2014  Brian Beckerle. All rights reserved.
-//
-
-//
-//  CHCSVParser.m
 //  CHCSVParser
 /**
  Copyright (c) 2012 Dave DeLong
@@ -293,7 +285,7 @@ NSString *const CHCSVErrorDomain = @"com.davedelong.csv";
         if (![self _parseDelimiter]) {
             break;
         }
-    }
+    }    
     BOOL followedByNewline = [self _parseNewline];
     [self _endRecord];
     

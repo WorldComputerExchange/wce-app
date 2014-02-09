@@ -11,7 +11,8 @@
 @interface User : NSObject
 
 @property (nonatomic, retain) NSMutableArray * savedLocations; //should only hold Location objects!!!
-@property (nonatomic, retain) NSMutableArray * savedPartners; //should only hold Partner objects!!! unneccessary?
+@property (nonatomic, retain) NSMutableArray * savedPartners; //should only hold Partner objects!!!
+
 @property (nonatomic, assign) BOOL loggedIn;
 @property (nonatomic, assign) BOOL isEditingLocation;
 @property (nonatomic, retain) Location *editingLocation;
