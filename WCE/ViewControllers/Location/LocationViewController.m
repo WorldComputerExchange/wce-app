@@ -35,8 +35,8 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-    UIImageView *backgroundImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Default.png"]];
-    self.locationTableView.backgroundView = backgroundImageView;
+   // UIImageView *backgroundImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Default.png"]];
+    //self.locationTableView.backgroundView = backgroundImageView;
     
     [self.locationTableView registerClass:[CustomCell class]
            forCellReuseIdentifier:@"customCell"];
@@ -271,6 +271,8 @@
 {
     if ([[segue identifier] isEqualToString:@"pushAddLocation"] && [self.sharedUser isEditingLocation]){
         [[[segue destinationViewController] navigationItem] setTitle:@"Editing Location"];
+    }else if ([[segue identifier] isEqualToString:@"pushAddLocation"]) {
+        [[[segue destinationViewController] navigationItem] setTitle:@"Add Location"];
     }else{
         [[segue destinationViewController] setHidesBottomBarWhenPushed:YES]; //need to hide tab on all contained views
         [[[segue destinationViewController] navigationItem] setTitle:[[Location sharedLocation] name]];

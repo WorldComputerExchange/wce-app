@@ -8,6 +8,7 @@
 #import "User.h"
 #import "Location.h"
 #import "DataAccess.h"
+#import "CustomCell.h"
 
 @implementation AddLocationViewController;
 
@@ -35,13 +36,14 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
-	[[self view] setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"Default.png"]]];
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
+    [self.dropDownTableView registerClass:[CustomCell class]
+                    forCellReuseIdentifier:@"customCell"];
     
     self.view.backgroundColor = [UIColor colorWithPatternImage:
                                  [UIImage imageNamed:@"Default.png"]];
@@ -51,13 +53,6 @@
     self.countries = [[NSArray alloc] initWithObjects: @"Afghanistan", @"Albania", @"Algeria", @"Andorra", @"Angola", @"Antigua and Barbuda", @"Argentina", @"Armenia", @"Aruba", @"Azerbaijan", @"Bahamas", @"Bahrain", @"Bangladesh", @"Barbados", @"Bassas da India", @"Belarus", @"Belize", @"Benin", @"Bermuda", @"Bhutan", @"Bolivia", @"Bosnia and Herzegovina", @"Botswana", @"Brasil", @"Brunei", @"Bulgaria", @"Burkina Faso", @"Burma", @"Burundi", @"Cambodia", @"Cameroon", @"Cape Verde", @"Cayman Islands", @"Central African Republic", @"Chad", @"Chile", @"China", @"Colombia", @"Comoros", @"Congo, Democratic Republic of the", @"Congo, Republic of the", @"Costa Rica", @"Cote d'Ivoire", @"Croatia", @"Cuba", @"Cyprus", @"Dhekelia", @"Dijibouti", @"Dominica", @"Dominican Republic", @"Ecuador", @"Egypt", @"El Salvador", @"Equatorial Guinea", @"Eritrea", @"Ethiopia", @"Fiji", @"French Guiana", @"French Polynesia", @"Gabon", @"The Gambia", @"Ghana", @"Georgia", @"Ghana", @"Guam", @"Guatemala", @"Guinea", @"Guinea Bissau", @"Guyana", @"Haiti", @"Honduras", @"India", @"Indonesia", @"Iran", @"Iraq", @"Jamaica", @"Jordan", @"Kazakhstan", @"Kenya", @"Kiribati", @"Kuwait", @"Kyrgyzstan", @"Laos", @"Lesotho", @"Liberia", @"Libya", @"Lithuania", @"Macau", @"Macedonia", @"Madagascar", @"Malawi", @"Malaysia", @"Mali", @"Marshall Islands", @"Martinique", @"Mauritania", @"Mauritius", @"Mayotte", @"Mexico", @"Micronesia", @"Mongolia", @"Moldova", @"Morocco", @"Mozambique", @"Namibia", @"Nepal", @"New Zealand", @"Nicaragua", @"Niger", @"Nigeria", @"Oman", @"Pakistan", @"Palau", @"Panama", @"Papua New Guinea", @"Paraguay", @"Peru", @"Philippines", @"Poland", @"Qatar", @"Romania", @"Russia", @"Rwanda", @"Saint Lucia", @"Samoa", @"Saudi Arabia", @"Senegal", @"Serbia and Montenegro", @"Sierra Leone", @"Singapore", @"Slovakia", @"Slovenia", @"Solomon Islands", @"Somalia", @"South Africa",  @"Sri Lanka",  @"Sudan",  @"Suriname",  @"Swaziland",  @"Syria",  @"Tajikistan",  @"Tanzania",  @"Thailand",  @"Timor-Leste",  @"Togo",  @"Tokelau",  @"Tonga",  @"Trinidad and Tobago",  @"Tunisia",  @"Turkey",  @"Turkmenistan",  @"Turks and Caicos Islands",  @"Tuvalu",  @"Uganda",  @"Ukraine",  @"United Arab Emirates",  @"United Kingdom",  @"United States", @"Uruguay",  @"Uzbekistan",  @"Vanuatu", @"Venezuala", @"Vietnam", @"Virgin Islands", @"Western Sahara", @"Yemen", @"Zambia", @"Zimbabwe", nil];
 
     self.languages = [[NSArray alloc] initWithObjects:@"French", @"Arabic", @"English", @"Spanish", nil];
-    
-	// Add a "Save" button to the navigation controller
-	UIBarButtonItem *saveButton = [[UIBarButtonItem alloc] initWithTitle:@"Save"
-																   style:UIBarButtonItemStyleDone
-																  target:self
-																  action:@selector(saveChanges)];
-	[[self navigationItem] setRightBarButtonItem:saveButton];
 	
 	// Listen for keyboard notifications
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWasShown:)
@@ -125,7 +120,7 @@
 
 - (void)pickerDoneClicked
 {
-    [dropDownTableView reloadData];
+    [self.dropDownTableView reloadData];
     [self.actionSheet dismissWithClickedButtonIndex:0 animated:YES];
 }
 
@@ -140,21 +135,42 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     int idx = indexPath.row;
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"DataCellID"];
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"DataCell"];
-        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-    }
     
+    static NSString *CellIdentifier = @"customCell";
     
-    cell.textLabel.text = [self.dataArray objectAtIndex:idx];
+    CustomCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
-    if (idx == 0){
-        cell.detailTextLabel.text = self.selectedCountry;
+    if (idx == 0 && ![self.selectedCountry isEqualToString:@"None"]){
+        cell.mainTextLabel.text = self.selectedCountry;
+    }else if (idx == 1 && ![self.selectedLanguage isEqualToString:@"None"]){
+        cell.mainTextLabel.text = self.selectedLanguage;
     }else {
-        cell.detailTextLabel.text = self.selectedLanguage;
+        cell.mainTextLabel.text = [self.dataArray objectAtIndex:idx];
     }
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath{
+    // cell background image view
+    UIImageView *background;
+    UIImageView *selectedBackground;
+    // first cell check
+    if (indexPath.row == 0) {
+        background = [[UIImageView alloc] initWithImage:
+                      [UIImage imageNamed:@"top-cell-bg.png"]];
+        selectedBackground = [[UIImageView alloc] initWithImage:
+                              [UIImage imageNamed:@"top-cell-bg-selected.png"]];
+        // last cell check
+    } else  {
+        background = [[UIImageView alloc] initWithImage:
+                      [UIImage imageNamed:@"bottom-cell-bg.png"]];
+        selectedBackground = [[UIImageView alloc] initWithImage:
+                              [UIImage imageNamed:@"bottom-cell-bg-selected.png"]];
+    }
+    background.alpha = 0.70; //make background semitransparent
+    // set background view
+    [cell setSelectedBackgroundView:selectedBackground];
+    [cell setBackgroundView:background];
 }
 
 /**TableView Methods**/
@@ -218,14 +234,15 @@
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
 	if(buttonIndex == 1)
-		[self dismissViewControllerAnimated:YES completion:nil];
+        [self.navigationController popViewControllerAnimated:YES];
 }
 
 // Called when a button is clicked in the UIActionSheet
 - (void)actionSheet:(UIActionSheet *)actionSheet willDismissWithButtonIndex:(NSInteger)buttonIndex
 {
+    
     if(buttonIndex == 0)
-        [self dismissViewControllerAnimated:YES completion:nil];
+        [self.navigationController popViewControllerAnimated:YES];
 }
 
 //Call method to save new location
@@ -317,7 +334,7 @@
         
         NSLog(@"Locations count %d", [[self.sharedUser savedLocations] count]);
         
-        [self dismissViewControllerAnimated:YES completion:nil];
+        [self.navigationController popViewControllerAnimated:YES];
     }else{
         //Alert the user that a blank location name has been entered
         UIAlertView *blankNameMessage = [[UIAlertView alloc] initWithTitle:@"Blank Location Name" message:@"Please enter a location name." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];

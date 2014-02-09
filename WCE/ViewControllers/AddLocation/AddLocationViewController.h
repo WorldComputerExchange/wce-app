@@ -13,7 +13,6 @@
 
 @interface AddLocationViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, UIActionSheetDelegate, UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate>
 {
-    IBOutlet UITableView *dropDownTableView;
 }
 
 @property (nonatomic, copy) NSArray *locations;
@@ -26,6 +25,7 @@
 @property (nonatomic, retain) NSString *selectedCountry;
 @property (nonatomic, retain) NSString *selectedLanguage;
 
+@property  IBOutlet UITableView *dropDownTableView;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet UITextField *location;
 @property (weak, nonatomic) IBOutlet UITextField *contact;
