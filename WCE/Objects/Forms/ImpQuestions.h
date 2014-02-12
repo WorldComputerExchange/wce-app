@@ -37,4 +37,5 @@
 @property (nonatomic, assign) NSInteger impId;
 @property (nonatomic, assign) NSInteger partnerId;
 
+-(NSArray *)impProperties;
 @end

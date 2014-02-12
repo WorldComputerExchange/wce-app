@@ -12,9 +12,14 @@
 #import "Location.h"
 #import "User.h"
 #import "WCETabBarController.h"
-#import "DataAccess.h"
 #import "CustomCell.h"
 #import "CHCSVParser.h"
+#import "DataAccess.h"
+#import "CoverSheet.h"
+#import "Evaluation.h"
+#import "ImpQuestions.h"
+#import "Order.h"
+#import "Partner.h"
 
 
 @interface LocationViewController ()
@@ -105,27 +110,65 @@
     
     User *sharedUser = [User sharedUser];
     
-    [csvExporter writeComment:@"Locations"];
-    [csvExporter writeLineOfFields:[NSArray arrayWithObjects:@"Name", @"Contact", @"Phone",
-                                    @"Address", @"Zipcode", @"City", @"Country", @"Language", nil]];
+    DataAccess *db = [[DataAccess alloc] init];
+    
     
     for (Location *loc in sharedUser.savedLocations){
+        [csvExporter writeComment:@"Location"];
+        [csvExporter writeLineOfFields:[NSArray arrayWithObjects:@"Name", @"Contact", @"Phone",
+                                        @"Address", @"Zipcode", @"City", @"Country", @"Language", nil]];
         [csvExporter writeLineOfFields:loc.locationProperties];
+        
+        Evaluation *evalForm = [db getEvalForLocation:loc];
+        if (evalForm.evalId > 0) {
+            [csvExporter writeComment:@"Evaluation Form"];
+            [csvExporter writeLineOfFields:[NSArray arrayWithObjects:@"Location name", @"Questions", nil]];
+            [csvExporter writeLineOfFields:[[NSArray arrayWithObject:loc.name] arrayByAddingObjectsFromArray:evalForm.evaluationProperties]];
+        }
+        
+        NSMutableArray *partners = [db getPartnersForLocationName:loc.name];
+        if (partners.count > 0) {
+            [csvExporter writeComment:@"Partners"];
+            [csvExporter writeLineOfFields:[NSArray arrayWithObjects:@"Partner Name", @"Location Name", nil]];
+        }
+        for (Partner *par in partners){
+            NSArray *partnerFields = [NSArray arrayWithObjects:par.name, loc.name, nil];
+            [csvExporter writeLineOfFields:partnerFields];
+            CoverSheet *coverSheet = [db getCoverSheetForPartner:par];
+            if (coverSheet.coverSheetId > 0) {
+                [csvExporter writeComment:@"Cover Sheet"];
+                [csvExporter writeLineOfFields:[NSArray arrayWithObjects:@"Partner Name", @"Location Name", @"Questions", nil]];
+                [csvExporter writeLineOfFields:[partnerFields arrayByAddingObjectsFromArray:coverSheet.coverSheetproperties]];
+            }
+            Order *order = [db getOrderForPartner:par];
+            if (order.orderId > 0) {
+                [csvExporter writeComment:@"Order"];
+                [csvExporter writeLineOfFields:[NSArray arrayWithObjects:@"Partner Name", @"Location Name", @"Questions", nil]];
+                [csvExporter writeLineOfFields:[partnerFields arrayByAddingObjectsFromArray:order.orderProperties]];
+            }
+            ImpQuestions *impQuestions = [db getImpForPartner:par];
+            if (impQuestions.impId > 0) {
+                [csvExporter writeComment:@"Implementation Questions"];
+                [csvExporter writeLineOfFields:[NSArray arrayWithObjects:@"Partner Name", @"Location Name", @"Questions", nil]];
+                [csvExporter writeLineOfFields:[partnerFields arrayByAddingObjectsFromArray:impQuestions.impProperties]];
+            }
+            
+        }
+        [csvExporter writeField:@" "];
+        [csvExporter finishLine];
+        [csvExporter writeField:@" "];
+        [csvExporter finishLine];
     }
     
     [csvExporter closeStream];
 }
 
 -(IBAction)previewCSVFile:(id)sender{
-    NSLog(@"Preview CSV file button pressed");
     
     [self pushFormDatatoCSV];
-    
-    NSLog(@"We almost made it");
-    
         
     if (self.csvURL) {
-        NSLog(@"We made it");
+        
         self.documentInteractionController = [UIDocumentInteractionController interactionControllerWithURL:self.csvURL];
         
         [self.documentInteractionController setDelegate:self];

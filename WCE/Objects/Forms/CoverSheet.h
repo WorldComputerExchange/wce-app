@@ -32,4 +32,6 @@
 @property (nonatomic, assign) NSInteger coverSheetId;
 @property (nonatomic, assign) NSInteger partnerId;
 
+-(NSArray *)coverSheetproperties;
+
 @end

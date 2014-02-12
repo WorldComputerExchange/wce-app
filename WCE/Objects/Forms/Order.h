@@ -38,4 +38,6 @@
 @property (nonatomic, assign) NSInteger orderId;
 @property (nonatomic, assign) NSInteger partnerId;
 
+-(NSArray *)orderProperties;
+
 @end

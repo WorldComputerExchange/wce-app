@@ -40,4 +40,7 @@
 @property (nonatomic, assign) NSInteger evalId;
 @property (nonatomic, assign) NSInteger locationId;
 
+- (NSArray *)evaluationProperties;
+
+
 @end
