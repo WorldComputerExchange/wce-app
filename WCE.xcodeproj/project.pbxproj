@@ -79,6 +79,7 @@
 		8CCEF95D17CEBA9A00DD52AA /* Order.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CCEF95C17CEBA9A00DD52AA /* Order.m */; };
 		8CD27FEE1720BC6B00973A04 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CD27FED1720BC6B00973A04 /* User.m */; };
 		8CD27FF31728354500973A04 /* PartnerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CD27FF21728354400973A04 /* PartnerViewController.m */; };
+		8CDC642D18B7945A0070BF8B /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CDC642C18B7945A0070BF8B /* MessageUI.framework */; };
 		8CDF7C2B183092F1004D0C37 /* Wce.db in Resources */ = {isa = PBXBuildFile; fileRef = 8CDF7C2A183092F1004D0C37 /* Wce.db */; };
 		9E2476DD16E27D9C0049ED27 /* WCE Content V5.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E2476DC16E27D9C0049ED27 /* WCE Content V5.png */; };
 		9E4B58C216FBD95F007BE176 /* CoverSheetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E4B58C116FBD95F007BE176 /* CoverSheetViewController.m */; };
@@ -198,6 +199,7 @@
 		8CD27FED1720BC6B00973A04 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = "Objects/Data Objects/User.m"; sourceTree = "<group>"; };
 		8CD27FF11728354400973A04 /* PartnerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PartnerViewController.h; path = ViewControllers/Partner/PartnerViewController.h; sourceTree = "<group>"; };
 		8CD27FF21728354400973A04 /* PartnerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PartnerViewController.m; path = ViewControllers/Partner/PartnerViewController.m; sourceTree = "<group>"; };
+		8CDC642C18B7945A0070BF8B /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		8CDF7C2818304141004D0C37 /* LoginViewControllerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LoginViewControllerDelegate.h; path = ViewControllers/Login/LoginViewControllerDelegate.h; sourceTree = "<group>"; };
 		8CDF7C2A183092F1004D0C37 /* Wce.db */ = {isa = PBXFileReference; lastKnownFileType = file; name = Wce.db; path = "Supporting Files/Wce.db"; sourceTree = "<group>"; };
 		9E2476DC16E27D9C0049ED27 /* WCE Content V5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "WCE Content V5.png"; path = "Supporting Files/Content images/WCE Content V5.png"; sourceTree = "<group>"; };
@@ -228,6 +230,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CDC642D18B7945A0070BF8B /* MessageUI.framework in Frameworks */,
 				8C25888017ECA2720000EA7F /* QuartzCore.framework in Frameworks */,
 				8C25887E17ECA2600000EA7F /* CFNetwork.framework in Frameworks */,
 				8C38594D173AC558003A323B /* libsqlite3.0.dylib in Frameworks */,
@@ -477,6 +480,7 @@
 		8C9C3ACF16CC60D000F95A6B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8CDC642C18B7945A0070BF8B /* MessageUI.framework */,
 				8C38594C173AC558003A323B /* libsqlite3.0.dylib */,
 				8C25887D17ECA2600000EA7F /* CFNetwork.framework */,
 				8C25887F17ECA2710000EA7F /* QuartzCore.framework */,

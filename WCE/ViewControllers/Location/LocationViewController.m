@@ -179,6 +179,77 @@
 
 -(IBAction)sendCSVFile:(id)sender{
     NSLog(@"Send CSV file button pressed");
+    
+   
+    if ([MFMailComposeViewController canSendMail]){
+        NSLog(@"Email being sent");
+        
+        MFMailComposeViewController *mailView = [[MFMailComposeViewController alloc] init];
+        mailView.mailComposeDelegate = self;
+        
+        [mailView setSubject:@"WCE iPhone App: Volunteer Information"];
+        //recipient must be changed for actual app
+        
+        NSArray *toRecipients = [[NSArray alloc] initWithObjects:@"bribeck1@gmail.com", nil];
+        
+        [mailView setToRecipients:toRecipients];
+        
+        [mailView setMessageBody:@"The WCE form data is attached, if you would like to say anything about it or the trip please write your comments above." isHTML:NO];
+        
+        //create the CSV file
+        [self pushFormDatatoCSV];
+        
+        //attach the CSV file
+        NSData *csvData = [NSData dataWithContentsOfURL:self.csvURL];
+        
+        [mailView addAttachmentData:csvData mimeType:@"text/csv" fileName:@"Wce.csv"];
+        
+        [self presentViewController:mailView animated:YES completion:NULL];
+    }else {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Failure"
+                                                        message:@"Your device doesn't support in app email, please share the file from the preview CSV screen" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [alert show];
+    }
+}
+
+#pragma mark - MFMailViewControllerDelegate methods
+-(void)mailComposeController:(MFMailComposeViewController *)controller
+         didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error{
+    
+    UIAlertView *alert = [[UIAlertView alloc] init];
+    [alert setDelegate:nil];
+    [alert setCancelButtonIndex:[alert addButtonWithTitle:@"OK"]];
+    
+    switch (result) {
+            
+        case MFMailComposeResultCancelled:
+            NSLog(@"Message sending cancelled");
+            break;
+        case MFMailComposeResultFailed:
+            NSLog(@"Message sending failed");
+            [alert setTitle:@"Failed"];
+            [alert setMessage:@"Message failed to send, possibly due to an error"];
+            [alert show];
+            break;
+        case MFMailComposeResultSaved:
+            NSLog(@"Message saved");
+            break;
+        case MFMailComposeResultSent:
+            NSLog(@"Message sent successfully");
+            [alert setTitle:@"Message sent"];
+            [alert setMessage:@"Message sent successfully!"];
+            [alert show];
+            break;
+        default:
+            NSLog(@"Message not sent");
+            [alert setTitle:@"Message not sent"];
+            [alert setMessage:@"Message not sent"];
+            [alert show];
+            break;
+    }
+    
+    [self dismissViewControllerAnimated:YES completion:NULL];
+    
 }
 
 #pragma mark - DocumentInteractionControllerDelegate methods
@@ -370,6 +441,8 @@
         }
     }
 }
+
+
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {

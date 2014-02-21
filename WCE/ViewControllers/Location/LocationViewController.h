@@ -11,9 +11,10 @@
 #import "FMResultSet.h"
 #import "DataAccess.h"
 #import "WCEAppDelegate.h"
+#import <MessageUI/MessageUI.h>
 
 
-@interface LocationViewController : UIViewController <UIDocumentInteractionControllerDelegate, UITableViewDelegate, UITableViewDataSource>
+@interface LocationViewController : UIViewController <MFMailComposeViewControllerDelegate, UIDocumentInteractionControllerDelegate, UITableViewDelegate, UITableViewDataSource>
 
 @property IBOutlet UIBarButtonItem *editButton;
 @property IBOutlet UIBarButtonItem *logOffButton;
