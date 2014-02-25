@@ -57,6 +57,8 @@
     }else{
         [self performSegueWithIdentifier:@"pushCosts" sender:self];
     }
+    
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath{

@@ -194,7 +194,7 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
 //FROM TUTORIAL: www.cocoawithlove.com/2008/10/sliding-uitextfields-around-to-avoid.html
 //Animate upwards when the text field is selected
 //Get the rects of the text field being edited and the view that we're going to scroll. We convert everything to window coordinates, since they're not necessarily in the same coordinate space.
-- (void)textFieldDidBeginEditing:(UITextField *)textField
+/*- (void)textFieldDidBeginEditing:(UITextField *)textField
 {
     CGRect textFieldRect =
     [self.view.window convertRect:textField.bounds fromView:textField];
@@ -245,10 +245,10 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
     [self.view setFrame:viewFrame];
     
     [UIView commitAnimations];
-}
+}*/
 
 //ANIMATE BACK AGAIN:  The return animation is far simpler since we've saved the amount to animate.
-- (void)textFieldDidEndEditing:(UITextField *)textField
+/*- (void)textFieldDidEndEditing:(UITextField *)textField
 {
     CGRect viewFrame = self.view.frame;
     viewFrame.origin.y += animatedDistance;
@@ -260,7 +260,7 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
     [self.view setFrame:viewFrame];
     
     [UIView commitAnimations];
-}
+}*/
 
 //dismisses the keyboard when the return/done button is pressed for TextFields.
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
@@ -279,7 +279,7 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
 //FROM TUTORIAL: www.cocoawithlove.com/2008/10/sliding-uitextfields-around-to-avoid.html
 //Animate upwards when the text field is selected
 //Get the rects of the text field being edited and the view that we're going to scroll. We convert everything to window coordinates, since they're not necessarily in the same coordinate space.
-- (void)textViewDidBeginEditing:(UITextView *)textView
+/*- (void)textViewDidBeginEditing:(UITextView *)textView
 {
     CGRect textFieldRect =
     [self.view.window convertRect:textView.bounds fromView:textView];
@@ -330,10 +330,10 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
     [self.view setFrame:viewFrame];
     
     [UIView commitAnimations];
-}
+}*/
 
 //ANIMATE BACK AGAIN:  The return animation is far simpler since we've saved the amount to animate.
-- (void)textViewDidEndEditing:(UITextView *)textView
+/*- (void)textViewDidEndEditing:(UITextView *)textView
 {
     CGRect viewFrame = self.view.frame;
     viewFrame.origin.y += animatedDistance;
@@ -345,7 +345,7 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
     [self.view setFrame:viewFrame];
     
     [UIView commitAnimations];
-}
+}*/
 
 
 @end

@@ -104,6 +104,8 @@
     }else{
         [self performSegueWithIdentifier:@"pushNewPartners" sender:self];
     }
+    
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 @end

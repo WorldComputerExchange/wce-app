@@ -267,6 +267,9 @@
         [curLocation setAddress:self.address.text];
     
         [curLocation setCity:self.city.text];
+        
+        [curLocation setZip:self.zip.text];
+        
         NSLog(@"selectedCountry %@", self.selectedCountry);
         NSLog(@"selectedLanguage %@", self.selectedLanguage);
         [curLocation setCountry:self.selectedCountry];

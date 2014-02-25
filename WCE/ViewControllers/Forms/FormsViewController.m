@@ -38,7 +38,6 @@
                forCellReuseIdentifier:@"customCell"];
     
     self.navigationItem.backBarButtonItem = backButton;
-    //self.navigationItem.backBarButtonItem.title = @"Back";
     
 }
 
@@ -121,5 +120,7 @@
     }else {
         [self performSegueWithIdentifier:@"pushImpQues" sender:self];
     }
+    
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 @end
