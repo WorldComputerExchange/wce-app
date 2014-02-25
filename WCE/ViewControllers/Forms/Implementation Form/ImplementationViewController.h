@@ -8,7 +8,7 @@
 #import "Partner.h"
 #import "ImpQuestions.h"
 
-@interface ImplementationViewController : UITableViewController <UIActionSheetDelegate, UITextFieldDelegate, UITextViewDelegate>//, UITableViewDelegate, UITableViewDataSource>
+@interface ImplementationViewController : UITableViewController <UIActionSheetDelegate, UITextFieldDelegate, UITextViewDelegate>
 {
     UIActionSheet *actionSheet;
     
@@ -45,8 +45,6 @@
 @property (nonatomic, retain) Partner *sharedPartner;
 @property (nonatomic, assign) BOOL hasImpQues;
 
-
-- (IBAction)backgroundTouched:(id)sender;
 - (IBAction)textfieldReturn:(id)sender;
 
 - (IBAction)saveChanges:(id)sender;

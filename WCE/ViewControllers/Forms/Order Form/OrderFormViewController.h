@@ -50,7 +50,6 @@
 @property (nonatomic, retain) Partner *sharedPartner;
 @property (nonatomic, assign) BOOL hasOrder;
 
-- (IBAction)backgroundTouched:(id)sender;
 - (IBAction)textfieldReturn:(id)sender;
 
 - (IBAction)saveChanges:(id)sender;

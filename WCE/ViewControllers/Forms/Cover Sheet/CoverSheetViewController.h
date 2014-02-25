@@ -40,7 +40,6 @@
 - (IBAction)saveChanges:(id)sender;
 
 - (IBAction)textfieldReturn:(id)sender;
-- (IBAction)backgroundTouched:(id)sender;
 
 -(NSInteger)segmentIndexForString:(NSString *)string;
 -(NSString *)stringForSegmentIndex:(NSInteger)segIndex;
