@@ -235,7 +235,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
-                            <tableView opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="5oi-OA-jDk">
+                            <tableView opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="5oi-OA-jDk">
                                 <rect key="frame" x="0.0" y="66" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -329,6 +329,12 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="5oi-OA-jDk" firstAttribute="leading" secondItem="UCn-qM-5jz" secondAttribute="leading" id="0xB-cQ-gQz"/>
+                            <constraint firstItem="5oi-OA-jDk" firstAttribute="top" secondItem="Su5-7E-DK5" secondAttribute="bottom" constant="2" id="Big-R1-TtS"/>
+                            <constraint firstItem="KTV-zi-6eg" firstAttribute="top" secondItem="5oi-OA-jDk" secondAttribute="bottom" constant="-66" id="orQ-oY-uxx"/>
+                            <constraint firstAttribute="trailing" secondItem="5oi-OA-jDk" secondAttribute="trailing" id="xh9-F0-lel"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="JWg-f7-YN9">
                         <barButtonItem key="backBarButtonItem" title="Back" id="Mpl-aK-qZk">
@@ -1895,8 +1901,8 @@ Et toi?/ Et vous? (polite)
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <tableView opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="uEO-5o-Amg">
-                                <rect key="frame" x="0.0" y="68" width="320" height="500"/>
+                            <tableView opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="uEO-5o-Amg">
+                                <rect key="frame" x="0.0" y="61" width="320" height="507"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="sectionIndexTrackingBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -1981,6 +1987,12 @@ Et toi?/ Et vous? (polite)
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="uEO-5o-Amg" firstAttribute="top" secondItem="WDy-QV-wsM" secondAttribute="top" constant="61" id="8lU-Yr-LlR"/>
+                            <constraint firstItem="u73-s5-WDW" firstAttribute="top" secondItem="uEO-5o-Amg" secondAttribute="bottom" id="WRG-5B-zDx"/>
+                            <constraint firstItem="uEO-5o-Amg" firstAttribute="leading" secondItem="WDy-QV-wsM" secondAttribute="leading" id="bR1-I7-R8A"/>
+                            <constraint firstAttribute="trailing" secondItem="uEO-5o-Amg" secondAttribute="trailing" id="zGO-hZ-svW"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="WvZ-Ss-5IW"/>
                     <connections>
@@ -3111,7 +3123,7 @@ Et toi?/ Et vous? (polite)
                                                     </connections>
                                                 </textField>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="LCD 15-17” flat screen monitors" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ybk-yq-AKe">
-                                                    <rect key="frame" x="92" y="157" width="208" height="21"/>
+                                                    <rect key="frame" x="92" y="142" width="208" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="eaj-nb-DR5"/>
                                                     </constraints>
@@ -3137,6 +3149,12 @@ Et toi?/ Et vous? (polite)
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Ybk-yq-AKe" firstAttribute="leading" secondItem="pQS-qK-oAO" secondAttribute="trailing" constant="9" id="E5Q-XD-KeP"/>
+                                                <constraint firstItem="FJ6-2r-OgY" firstAttribute="leading" secondItem="hVL-aG-e0c" secondAttribute="trailing" constant="23" id="NUQ-4w-BdZ"/>
+                                                <constraint firstItem="pQS-qK-oAO" firstAttribute="leading" secondItem="4Ay-vu-VkK" secondAttribute="leading" constant="19" id="tEz-Xc-bWY"/>
+                                                <constraint firstItem="hVL-aG-e0c" firstAttribute="leading" secondItem="4Ay-vu-VkK" secondAttribute="leading" constant="19" id="yq7-aX-2dk"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -3155,7 +3173,7 @@ Et toi?/ Et vous? (polite)
                                             <constraint firstItem="N0J-4W-ZJ4" firstAttribute="leading" secondItem="pQS-qK-oAO" secondAttribute="leading" id="hyf-u6-Dmr"/>
                                             <constraint firstAttribute="trailing" secondItem="N0J-4W-ZJ4" secondAttribute="trailing" constant="20" id="loK-lz-GOc"/>
                                             <constraint firstItem="FJ6-2r-OgY" firstAttribute="leading" secondItem="ee4-Ek-B02" secondAttribute="leading" constant="106" id="mu3-1U-hs7"/>
-                                            <constraint firstAttribute="bottom" secondItem="Ybk-yq-AKe" secondAttribute="bottom" constant="75" id="zkt-l3-Nqm"/>
+                                            <constraint firstAttribute="bottom" secondItem="Ybk-yq-AKe" secondAttribute="bottom" constant="90" id="zkt-l3-Nqm"/>
                                         </constraints>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="295" id="GpN-mx-QaZ">
@@ -3186,7 +3204,6 @@ Et toi?/ Et vous? (polite)
                                                     <rect key="frame" x="93" y="83" width="208" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="hGP-6c-YIa"/>
-                                                        <constraint firstAttribute="width" constant="208" id="uYP-eL-Kh7"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -3244,12 +3261,18 @@ Et toi?/ Et vous? (polite)
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="cBv-30-qs6" firstAttribute="top" secondItem="nMq-bL-KjV" secondAttribute="top" constant="83" id="Kvj-7n-TwZ"/>
+                                                <constraint firstItem="UYD-30-mpp" firstAttribute="leading" secondItem="wUE-Qq-mVK" secondAttribute="trailing" constant="9" id="MIF-ST-Rhc"/>
+                                                <constraint firstItem="cBv-30-qs6" firstAttribute="leading" secondItem="RXL-S1-5Dr" secondAttribute="trailing" constant="9" id="Qhj-bX-Rgd"/>
+                                                <constraint firstItem="ABm-WU-TiU" firstAttribute="leading" secondItem="wPA-6l-dR8" secondAttribute="trailing" constant="9" id="Y85-Xa-brL"/>
+                                                <constraint firstItem="4vH-dD-L1G" firstAttribute="leading" secondItem="0RR-Hv-dIr" secondAttribute="trailing" constant="9" id="pgf-AW-XzM"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="wUE-Qq-mVK" firstAttribute="trailing" secondItem="wPA-6l-dR8" secondAttribute="trailing" id="38M-91-Hem"/>
                                             <constraint firstItem="wPA-6l-dR8" firstAttribute="leading" secondItem="wUE-Qq-mVK" secondAttribute="leading" id="4Td-1b-nnb"/>
-                                            <constraint firstItem="cBv-30-qs6" firstAttribute="top" secondItem="GpN-mx-QaZ" secondAttribute="top" constant="83" id="5JA-2A-OYh"/>
                                             <constraint firstItem="ABm-WU-TiU" firstAttribute="leading" secondItem="4vH-dD-L1G" secondAttribute="leading" id="64g-uY-chp"/>
                                             <constraint firstItem="UYD-30-mpp" firstAttribute="trailing" secondItem="cBv-30-qs6" secondAttribute="trailing" id="77b-Qq-TbG"/>
                                             <constraint firstItem="UYD-30-mpp" firstAttribute="leading" secondItem="ABm-WU-TiU" secondAttribute="leading" id="984-ag-rLn"/>
@@ -3854,7 +3877,7 @@ WCE Fundraising: WCE raises the final 1/3 of our sourcing &amp; shipping costs f
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <tableView opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="2hM-NI-gPV">
+                            <tableView opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="2hM-NI-gPV">
                                 <rect key="frame" x="0.0" y="77" width="320" height="491"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -3911,6 +3934,12 @@ WCE Fundraising: WCE raises the final 1/3 of our sourcing &amp; shipping costs f
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2hM-NI-gPV" firstAttribute="leading" secondItem="epE-dk-cVf" secondAttribute="leading" id="3SE-TJ-tlq"/>
+                            <constraint firstAttribute="trailing" secondItem="2hM-NI-gPV" secondAttribute="trailing" id="GFX-Y9-BG9"/>
+                            <constraint firstItem="2hM-NI-gPV" firstAttribute="top" secondItem="rxa-GJ-jf4" secondAttribute="bottom" constant="13" id="cMX-4x-lQ0"/>
+                            <constraint firstItem="8BM-ZT-X7Q" firstAttribute="top" secondItem="2hM-NI-gPV" secondAttribute="bottom" id="jpP-iG-Egi"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Forms" id="yBe-rA-eLy"/>
                     <nil key="simulatedBottomBarMetrics"/>
@@ -5098,7 +5127,7 @@ WCE Fundraising: WCE raises the final 1/3 of our sourcing &amp; shipping costs f
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Ini-Uj-z9p">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Ini-Uj-z9p">
                                 <rect key="frame" x="0.0" y="100" width="320" height="506"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -5201,6 +5230,12 @@ WCE Fundraising: WCE raises the final 1/3 of our sourcing &amp; shipping costs f
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Ini-Uj-z9p" secondAttribute="trailing" id="6Yn-re-AFL"/>
+                            <constraint firstItem="N5Q-IQ-vM5" firstAttribute="top" secondItem="Ini-Uj-z9p" secondAttribute="bottom" constant="-38" id="CjY-TE-Zmw"/>
+                            <constraint firstItem="Ini-Uj-z9p" firstAttribute="top" secondItem="0h0-GT-3B1" secondAttribute="bottom" constant="36" id="dDI-cx-dlz"/>
+                            <constraint firstItem="Ini-Uj-z9p" firstAttribute="leading" secondItem="S59-gU-Yqa" secondAttribute="leading" id="pmb-Ll-7Eb"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Info" id="c6s-Qo-c0J"/>
                     <nil key="simulatedBottomBarMetrics"/>
@@ -6547,6 +6582,8 @@ Cg
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="86g-hY-aZc" firstAttribute="top" secondItem="f82-BH-vT1" secondAttribute="bottom" constant="37" id="5Zh-z1-2UU"/>
+                            <constraint firstAttribute="trailing" secondItem="f82-BH-vT1" secondAttribute="trailing" constant="-4" id="Dte-Rm-Qbg"/>
                             <constraint firstItem="f82-BH-vT1" firstAttribute="leading" secondItem="Z1H-Q5-iPH" secondAttribute="leading" constant="4" id="X63-VH-y5r"/>
                             <constraint firstItem="f82-BH-vT1" firstAttribute="top" secondItem="Z1H-Q5-iPH" secondAttribute="top" constant="75" id="ehg-KE-Ada"/>
                         </constraints>
