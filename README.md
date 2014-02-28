@@ -1,7 +1,7 @@
 wce-app
 =======
 
-####World Computer Exchange iPhone App Bundle made for Apps for Humanity
+####World Computer Exchange iPhone App Bundle made for [Global App Initiative](http://globalappinitiative.org/about/)
 [World Computer Exchange] (http://www.worldcomputerexchange.org/about-us)
 is a nonprofit organization who's mission is: 
 
