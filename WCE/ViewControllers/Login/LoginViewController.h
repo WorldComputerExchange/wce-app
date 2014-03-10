@@ -10,7 +10,7 @@
 
 @class LoginViewController;
 
-@interface LoginViewController : UIViewController <ChangePassViewControllerDelegate>
+@interface LoginViewController : UIViewController <ChangePassViewControllerDelegate, UITextFieldDelegate>
 {
     IBOutlet UIButton *login;
     IBOutlet UIButton *changePass;

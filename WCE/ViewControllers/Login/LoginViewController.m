@@ -110,4 +110,11 @@
     }
     
 }
+
+#pragma mark - UITextFieldDelegate
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [self pushLocationView:textField];
+    return YES;
+}
+
 @end
