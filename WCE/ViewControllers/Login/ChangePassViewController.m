@@ -26,7 +26,6 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-	
     
     self.view.backgroundColor = [UIColor colorWithPatternImage:
                                  [UIImage imageNamed:@"Default.png"]];
@@ -97,8 +96,6 @@
 	[self.passwordNewOne setText:@""];
 	[self.passwordNewTwo setText:@""];
     
-    NSString *newPass = [[NSUserDefaults standardUserDefaults] stringForKey:@"password"];
-	NSLog(@"New password is: %@", newPass);
 	[self dismissSelf];
 }
 

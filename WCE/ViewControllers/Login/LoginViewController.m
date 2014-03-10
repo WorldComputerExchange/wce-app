@@ -52,10 +52,11 @@
 	
 	// retrieve the password
 	BOOL hasSetPassword = [[NSUserDefaults standardUserDefaults] boolForKey:@"hasSetPassword"];
-	if(!hasSetPassword)
+	if(!hasSetPassword){
 		_password = @"12345";
-	else
-	{
+        [[NSUserDefaults standardUserDefaults] setValue:_password
+                                                forKey:@"password"];
+    }else{
 		_password = [[NSUserDefaults standardUserDefaults] stringForKey:@"password"];
         NSLog(@"Password is: %@", _password);		//[[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithBool:TRUE] forKey:@"hasSetPassword"];
 	}
