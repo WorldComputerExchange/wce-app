@@ -11,11 +11,11 @@
 @interface PartnerViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 {
     IBOutlet UITableView *partnerTableView;
-    IBOutlet UIBarButtonItem *editButton;
 }
 
 @property (nonatomic, retain) NSMutableArray *partners;
 @property (nonatomic, retain) User *sharedUser;
+@property IBOutlet UIBarButtonItem *editButton;
 
 -(IBAction)enterEditingMode:(id)sender;
 

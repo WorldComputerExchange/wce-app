@@ -195,13 +195,22 @@
 }
 
 -(IBAction)enterEditingMode:(id)sender{
+    
     if([partnerTableView isEditing]){
         NSLog(@"Exited editing mode");
         [partnerTableView setEditing:NO animated:YES];
+       
+        //replace done button with edit button
+        [self.editButton setStyle:UIBarButtonItemStylePlain];
+        [self.editButton setTitle:@"Edit"];
     }else {
         NSLog(@"Entered editing mode");
         [partnerTableView setEditing:YES animated:YES];
         [partnerTableView setAllowsSelectionDuringEditing:YES];
+        
+        //replace edit button with done button
+        [self.editButton setStyle:UIBarButtonItemStyleDone];
+        [self.editButton setTitle:@"Done"];
     }
 }
 

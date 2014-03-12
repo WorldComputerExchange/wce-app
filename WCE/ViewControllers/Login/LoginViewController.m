@@ -58,7 +58,7 @@
                                                 forKey:@"password"];
     }else{
 		_password = [[NSUserDefaults standardUserDefaults] stringForKey:@"password"];
-        NSLog(@"Password is: %@", _password);		//[[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithBool:TRUE] forKey:@"hasSetPassword"];
+        NSLog(@"Password is: %@", _password);		
 	}
 }
 
