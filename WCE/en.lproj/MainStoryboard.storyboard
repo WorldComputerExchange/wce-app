@@ -368,12 +368,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Default.png" translatesAutoresizingMaskIntoConstraints="NO" id="eBg-xY-xEO">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Default.png" translatesAutoresizingMaskIntoConstraints="NO" id="eBg-xY-xEO">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <textView opaque="NO" clearsContextBeforeDrawing="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CnR-oj-jkp">
-                                <rect key="frame" x="0.0" y="77" width="320" height="800"/>
+                            <textView opaque="NO" clearsContextBeforeDrawing="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CnR-oj-jkp">
+                                <rect key="frame" x="0.0" y="65" width="320" height="812"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <string key="text">In 1999, Timothy Anderson found that an organization that supplied donated refurbished computers to other countries wasn’t established in the U.S. With a small group of volunteer members, Anderson developed the World Computer Exchange (WCE). [24] [25]
 
@@ -389,6 +389,16 @@ In February 2012, Boston chapter (also headquarter chapter) in Hull, Massachuset
                             </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="CnR-oj-jkp" firstAttribute="top" secondItem="0DN-nL-ynY" secondAttribute="bottom" constant="1" id="10N-px-kFO"/>
+                            <constraint firstItem="CnR-oj-jkp" firstAttribute="leading" secondItem="42g-Pf-UoS" secondAttribute="leading" id="75y-rm-Coc"/>
+                            <constraint firstItem="cGe-Mx-EK5" firstAttribute="top" secondItem="CnR-oj-jkp" secondAttribute="bottom" constant="-309" id="7lo-My-AB7"/>
+                            <constraint firstItem="eBg-xY-xEO" firstAttribute="top" secondItem="42g-Pf-UoS" secondAttribute="top" id="9vH-z5-Xu8"/>
+                            <constraint firstAttribute="trailing" secondItem="eBg-xY-xEO" secondAttribute="trailing" id="Adf-WJ-8xe"/>
+                            <constraint firstItem="eBg-xY-xEO" firstAttribute="leading" secondItem="42g-Pf-UoS" secondAttribute="leading" id="Bd4-1e-m8W"/>
+                            <constraint firstAttribute="bottom" secondItem="eBg-xY-xEO" secondAttribute="bottom" id="CVh-Sg-VXJ"/>
+                            <constraint firstAttribute="trailing" secondItem="CnR-oj-jkp" secondAttribute="trailing" id="XND-rr-Zin"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="HISTORY" id="cqi-FN-6ev">
                         <barButtonItem key="backBarButtonItem" title="Back" id="tOZ-3l-VIE"/>
@@ -2139,6 +2149,7 @@ Et toi?/ Et vous? (polite)
                                                     <rect key="frame" x="20" y="71" width="255" height="30"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="e89-Hc-0AW"/>
                                                         <constraint firstAttribute="width" constant="255" id="oDa-SN-WjM"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -2149,24 +2160,23 @@ Et toi?/ Et vous? (polite)
                                                     </connections>
                                                 </textField>
                                                 <label opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="left" text="Q3. Other organisation applying with you (optional):" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="251" translatesAutoresizingMaskIntoConstraints="NO" id="za8-cl-eBj">
-                                                    <rect key="frame" x="20" y="20" width="251" height="42"/>
+                                                    <rect key="frame" x="20" y="20" width="251" height="39"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="42" id="Eai-70-vE4"/>
-                                                        <constraint firstAttribute="width" constant="251" id="vvn-Bq-miv"/>
-                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="ghI-QA-CuV" firstAttribute="top" secondItem="za8-cl-eBj" secondAttribute="bottom" constant="12" id="5Fz-JZ-ehZ"/>
+                                                <constraint firstAttribute="trailing" secondItem="za8-cl-eBj" secondAttribute="trailing" constant="49" id="Wqe-Al-4Ls"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="za8-cl-eBj" firstAttribute="top" secondItem="awT-no-Nc8" secondAttribute="top" constant="20" id="0oz-HT-U0k"/>
                                             <constraint firstItem="za8-cl-eBj" firstAttribute="leading" secondItem="ghI-QA-CuV" secondAttribute="leading" id="3cO-35-GhF"/>
                                             <constraint firstItem="za8-cl-eBj" firstAttribute="leading" secondItem="awT-no-Nc8" secondAttribute="leading" constant="20" id="jlJ-SY-7Bj"/>
-                                            <constraint firstAttribute="bottom" secondItem="ghI-QA-CuV" secondAttribute="bottom" constant="20" id="z7x-Y1-iXK"/>
                                         </constraints>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="121" id="sNy-hd-A9V">
@@ -2190,22 +2200,21 @@ Et toi?/ Et vous? (polite)
                                                     </connections>
                                                 </textField>
                                                 <label opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="left" text="Q4. Name of Cosignee: (if different)" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="251" translatesAutoresizingMaskIntoConstraints="NO" id="Qib-Tr-PoY">
-                                                    <rect key="frame" x="20" y="20" width="251" height="42"/>
+                                                    <rect key="frame" x="20" y="20" width="251" height="39"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="42" id="By0-cX-Pp9"/>
-                                                        <constraint firstAttribute="width" constant="251" id="y79-Kc-psu"/>
-                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="Qib-Tr-PoY" secondAttribute="trailing" constant="49" id="DdN-jK-AUO"/>
+                                                <constraint firstItem="6Dw-If-MF7" firstAttribute="top" secondItem="Qib-Tr-PoY" secondAttribute="bottom" constant="12" id="Rbc-eP-anh"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="Qib-Tr-PoY" firstAttribute="leading" secondItem="sNy-hd-A9V" secondAttribute="leading" constant="20" id="8t4-ou-61k"/>
-                                            <constraint firstAttribute="bottom" secondItem="6Dw-If-MF7" secondAttribute="bottom" constant="20" id="Aec-dc-CNS"/>
                                             <constraint firstItem="Qib-Tr-PoY" firstAttribute="leading" secondItem="6Dw-If-MF7" secondAttribute="leading" id="GBp-42-LD2"/>
                                             <constraint firstItem="Qib-Tr-PoY" firstAttribute="top" secondItem="sNy-hd-A9V" secondAttribute="top" constant="20" id="f1v-gb-BvD"/>
                                         </constraints>
@@ -2448,25 +2457,21 @@ Et toi?/ Et vous? (polite)
                                             <constraint firstItem="CMj-eY-MJp" firstAttribute="top" secondItem="0eW-E8-flD" secondAttribute="top" constant="20" id="cqP-gR-vaQ"/>
                                         </constraints>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="139" id="18W-NF-7eq">
-                                        <rect key="frame" x="0.0" y="1223" width="320" height="139"/>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="119" id="18W-NF-7eq">
+                                        <rect key="frame" x="0.0" y="1223" width="320" height="119"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="18W-NF-7eq" id="qhn-Qf-r2B">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="139"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="119"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Q11. Are you a private for profit business?" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="255" translatesAutoresizingMaskIntoConstraints="NO" id="Nhg-DO-6N7">
-                                                    <rect key="frame" x="20" y="20" width="255" height="46"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="46" id="aHu-yT-VZy"/>
-                                                        <constraint firstAttribute="width" constant="255" id="tK9-a6-3Fp"/>
-                                                    </constraints>
+                                                    <rect key="frame" x="20" y="20" width="255" height="39"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="htl-aQ-JQ7">
-                                                    <rect key="frame" x="20" y="91" width="73" height="29"/>
+                                                    <rect key="frame" x="20" y="73" width="73" height="29"/>
                                                     <segments>
                                                         <segment title="Yes"/>
                                                         <segment title="No"/>
@@ -2476,26 +2481,30 @@ Et toi?/ Et vous? (polite)
                                                     </connections>
                                                 </segmentedControl>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="Nhg-DO-6N7" secondAttribute="trailing" constant="45" id="WXc-Iz-JJ6"/>
+                                                <constraint firstItem="htl-aQ-JQ7" firstAttribute="top" secondItem="Nhg-DO-6N7" secondAttribute="bottom" constant="14" id="aQJ-sU-tgb"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="Nhg-DO-6N7" firstAttribute="top" secondItem="18W-NF-7eq" secondAttribute="top" constant="20" id="1ch-fL-sWm"/>
-                                            <constraint firstAttribute="bottom" secondItem="htl-aQ-JQ7" secondAttribute="bottom" constant="20" id="FHY-0R-SPI"/>
                                             <constraint firstItem="Nhg-DO-6N7" firstAttribute="leading" secondItem="18W-NF-7eq" secondAttribute="leading" constant="20" id="VPc-j1-ow1"/>
                                             <constraint firstItem="htl-aQ-JQ7" firstAttribute="leading" secondItem="Nhg-DO-6N7" secondAttribute="leading" id="ltC-4J-KnY"/>
                                         </constraints>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="177" id="2fU-8H-6Sy">
-                                        <rect key="frame" x="0.0" y="1362" width="320" height="177"/>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="141" id="2fU-8H-6Sy">
+                                        <rect key="frame" x="0.0" y="1342" width="320" height="141"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2fU-8H-6Sy" id="H8n-YA-8hK">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="177"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="141"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dBM-HB-EQt">
-                                                    <rect key="frame" x="20" y="82" width="88" height="30"/>
+                                                    <rect key="frame" x="20" y="86" width="88" height="30"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="88" id="5Dq-cC-w3y"/>
+                                                        <constraint firstAttribute="height" constant="30" id="A8l-67-1aQ"/>
+                                                        <constraint firstAttribute="width" constant="88" id="NqA-Kn-hva"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
@@ -2505,38 +2514,33 @@ Et toi?/ Et vous? (polite)
                                                     </connections>
                                                 </textField>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Q12. Total % of computers you expect to connect to internet within:" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="255" translatesAutoresizingMaskIntoConstraints="NO" id="AM8-II-TgG">
-                                                    <rect key="frame" x="20" y="20" width="255" height="60"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="60" id="Bms-Oz-KRx"/>
-                                                        <constraint firstAttribute="width" constant="255" id="stF-IE-xTg"/>
-                                                    </constraints>
+                                                    <rect key="frame" x="20" y="20" width="255" height="58"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="dBM-HB-EQt" firstAttribute="leading" secondItem="AM8-II-TgG" secondAttribute="leading" id="EkX-3n-L6s"/>
+                                                <constraint firstAttribute="trailing" secondItem="AM8-II-TgG" secondAttribute="trailing" constant="45" id="Rfo-yV-SXJ"/>
+                                                <constraint firstItem="dBM-HB-EQt" firstAttribute="top" secondItem="AM8-II-TgG" secondAttribute="bottom" constant="8" id="yoL-Hf-ce4"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="AM8-II-TgG" firstAttribute="leading" secondItem="2fU-8H-6Sy" secondAttribute="leading" constant="20" id="03X-OW-KU6"/>
                                             <constraint firstItem="AM8-II-TgG" firstAttribute="top" secondItem="2fU-8H-6Sy" secondAttribute="top" constant="20" id="ETF-cs-ecy"/>
-                                            <constraint firstItem="dBM-HB-EQt" firstAttribute="leading" secondItem="AM8-II-TgG" secondAttribute="leading" id="e5x-Aw-Ha8"/>
-                                            <constraint firstItem="dBM-HB-EQt" firstAttribute="top" secondItem="2fU-8H-6Sy" secondAttribute="top" constant="82" id="xUY-Ft-ysc"/>
                                         </constraints>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="162" id="YnR-nX-AkM">
-                                        <rect key="frame" x="0.0" y="1539" width="320" height="162"/>
+                                        <rect key="frame" x="0.0" y="1483" width="320" height="162"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YnR-nX-AkM" id="UtV-LK-MtD">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="162"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Q13. Estimated total number of youth up to age 24 to be connected per year:" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="255" translatesAutoresizingMaskIntoConstraints="NO" id="t6U-Ib-AtX">
-                                                    <rect key="frame" x="20" y="20" width="255" height="70"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="255" id="gZB-ws-ufh"/>
-                                                        <constraint firstAttribute="height" constant="70" id="poY-Dk-QaW"/>
-                                                    </constraints>
+                                                    <rect key="frame" x="20" y="20" width="255" height="58"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -2554,28 +2558,27 @@ Et toi?/ Et vous? (polite)
                                                     </connections>
                                                 </textField>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="t6U-Ib-AtX" secondAttribute="trailing" constant="45" id="ANa-gL-elv"/>
+                                                <constraint firstItem="Mfr-1S-Hsq" firstAttribute="top" secondItem="t6U-Ib-AtX" secondAttribute="bottom" constant="20" id="Ah8-OW-zKo"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="Mfr-1S-Hsq" firstAttribute="leading" secondItem="t6U-Ib-AtX" secondAttribute="leading" id="2qt-bB-qQW"/>
-                                            <constraint firstAttribute="bottom" secondItem="Mfr-1S-Hsq" secondAttribute="bottom" constant="34" id="66j-Ra-VWp"/>
                                             <constraint firstItem="t6U-Ib-AtX" firstAttribute="leading" secondItem="YnR-nX-AkM" secondAttribute="leading" constant="20" id="Am6-tq-ujM"/>
                                             <constraint firstItem="t6U-Ib-AtX" firstAttribute="top" secondItem="YnR-nX-AkM" secondAttribute="top" constant="20" id="I2X-Fq-BEg"/>
                                         </constraints>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="184" id="rux-eO-r3u">
-                                        <rect key="frame" x="0.0" y="1701" width="320" height="184"/>
+                                        <rect key="frame" x="0.0" y="1645" width="320" height="184"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rux-eO-r3u" id="jdA-kk-a30">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="184"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="wordWrap" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="259" translatesAutoresizingMaskIntoConstraints="NO" id="NuA-u5-PRx">
-                                                    <rect key="frame" x="20" y="20" width="259" height="105"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="259" id="BIR-YC-Pc5"/>
-                                                        <constraint firstAttribute="height" constant="105" id="WN3-pb-NcT"/>
-                                                    </constraints>
+                                                    <rect key="frame" x="20" y="20" width="259" height="96"/>
                                                     <string key="text">Q14. Number of schools or sites where this equipment will be installed:  
 (Please send contact information for each site prior to shipping.)</string>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -2585,7 +2588,8 @@ Et toi?/ Et vous? (polite)
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6IH-A5-bCJ">
                                                     <rect key="frame" x="21" y="134" width="97" height="30"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="97" id="5WI-JJ-6b4"/>
+                                                        <constraint firstAttribute="height" constant="30" id="Xtd-fJ-8eC"/>
+                                                        <constraint firstAttribute="width" constant="97" id="mDV-6m-9aj"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
@@ -2595,17 +2599,20 @@ Et toi?/ Et vous? (polite)
                                                     </connections>
                                                 </textField>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="6IH-A5-bCJ" firstAttribute="top" secondItem="NuA-u5-PRx" secondAttribute="bottom" constant="18" id="ISx-2I-jew"/>
+                                                <constraint firstItem="6IH-A5-bCJ" firstAttribute="leading" secondItem="NuA-u5-PRx" secondAttribute="leading" constant="1" id="LLI-7q-2Nt"/>
+                                                <constraint firstAttribute="trailing" secondItem="NuA-u5-PRx" secondAttribute="trailing" constant="41" id="YUy-CU-Qjf"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="NuA-u5-PRx" firstAttribute="leading" secondItem="rux-eO-r3u" secondAttribute="leading" constant="20" id="JDm-VH-Cer"/>
                                             <constraint firstItem="NuA-u5-PRx" firstAttribute="top" secondItem="rux-eO-r3u" secondAttribute="top" constant="20" id="KO5-hD-kPG"/>
-                                            <constraint firstAttribute="bottom" secondItem="6IH-A5-bCJ" secondAttribute="bottom" constant="20" id="KYW-kU-y4r"/>
-                                            <constraint firstItem="6IH-A5-bCJ" firstAttribute="leading" secondItem="rux-eO-r3u" secondAttribute="leading" constant="21" id="LUf-vz-3m0"/>
                                         </constraints>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="196" id="ZJD-yJ-SIS">
-                                        <rect key="frame" x="0.0" y="1885" width="320" height="196"/>
+                                        <rect key="frame" x="0.0" y="1829" width="320" height="196"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZJD-yJ-SIS" id="LuE-sp-MWT">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="196"/>
@@ -2624,54 +2631,51 @@ Et toi?/ Et vous? (polite)
                                                     </connections>
                                                 </textField>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="wordWrap" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="256" translatesAutoresizingMaskIntoConstraints="NO" id="bZZ-hN-LFY">
-                                                    <rect key="frame" x="20" y="20" width="256" height="117"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="117" id="vVi-MF-tUO"/>
-                                                    </constraints>
+                                                    <rect key="frame" x="20" y="20" width="256" height="115"/>
                                                     <string key="text">Q15. We are curious to know prices in your area.  What is the current local price in US Dollars ($) for a used Pentium 4 with a 17” color CRT monitor with keyboard and mouse? </string>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="bZZ-hN-LFY" secondAttribute="trailing" constant="44" id="FjX-3e-7Re"/>
+                                                <constraint firstItem="ZQ8-ec-wEj" firstAttribute="top" secondItem="bZZ-hN-LFY" secondAttribute="bottom" constant="11" id="fDq-VI-voq"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="ZQ8-ec-wEj" firstAttribute="leading" secondItem="bZZ-hN-LFY" secondAttribute="leading" id="3R3-5B-Tt4"/>
                                             <constraint firstItem="bZZ-hN-LFY" firstAttribute="leading" secondItem="ZJD-yJ-SIS" secondAttribute="leading" constant="20" id="O0J-gQ-4k0"/>
                                             <constraint firstItem="bZZ-hN-LFY" firstAttribute="top" secondItem="ZJD-yJ-SIS" secondAttribute="top" constant="20" id="e47-xj-K1Y"/>
-                                            <constraint firstAttribute="bottom" secondItem="ZQ8-ec-wEj" secondAttribute="bottom" constant="20" id="lUQ-gp-no0"/>
                                         </constraints>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="189" id="eFJ-Ez-cNV">
-                                        <rect key="frame" x="0.0" y="2081" width="320" height="189"/>
+                                        <rect key="frame" x="0.0" y="2025" width="320" height="189"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eFJ-Ez-cNV" id="47o-hX-tKB">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="189"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RJY-3t-uOd">
-                                                    <rect key="frame" x="20" y="69" width="280" height="100"/>
+                                                    <rect key="frame" x="20" y="67" width="280" height="102"/>
                                                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 </textView>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Q16. How are you charged for internet access?" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="259" translatesAutoresizingMaskIntoConstraints="NO" id="F7x-FO-3Jo">
-                                                    <rect key="frame" x="20" y="20" width="259" height="41"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="259" id="7ka-PR-jdx"/>
-                                                        <constraint firstAttribute="height" constant="41" id="DAT-hi-5eM"/>
-                                                    </constraints>
+                                                    <rect key="frame" x="20" y="20" width="259" height="39"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="RJY-3t-uOd" firstAttribute="centerX" secondItem="47o-hX-tKB" secondAttribute="centerX" id="AA6-fb-dq2"/>
                                                 <constraint firstAttribute="bottom" secondItem="RJY-3t-uOd" secondAttribute="bottom" constant="20" symbolic="YES" id="Djl-sd-4Hm"/>
                                                 <constraint firstItem="RJY-3t-uOd" firstAttribute="top" secondItem="F7x-FO-3Jo" secondAttribute="bottom" constant="8" symbolic="YES" id="OHX-NH-zSi"/>
+                                                <constraint firstAttribute="trailing" secondItem="RJY-3t-uOd" secondAttribute="trailing" constant="20" id="leN-vZ-BfU"/>
                                                 <constraint firstItem="RJY-3t-uOd" firstAttribute="leading" secondItem="F7x-FO-3Jo" secondAttribute="leading" id="nbX-jl-679"/>
+                                                <constraint firstAttribute="trailing" secondItem="F7x-FO-3Jo" secondAttribute="trailing" constant="41" id="rsD-N1-Zfc"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -2681,24 +2685,24 @@ Et toi?/ Et vous? (polite)
                                         </constraints>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="174" id="FPA-YH-aqf">
-                                        <rect key="frame" x="0.0" y="2270" width="320" height="174"/>
+                                        <rect key="frame" x="0.0" y="2214" width="320" height="174"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FPA-YH-aqf" id="hFp-Gq-CzP">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="174"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Q17. Do you currently use local solar or water power to provide electricity (instead of from your country's power grid)?" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="251" translatesAutoresizingMaskIntoConstraints="NO" id="lR5-lt-O8K">
-                                                    <rect key="frame" x="20" y="20" width="251" height="81"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="251" id="h1H-f5-Gef"/>
-                                                        <constraint firstAttribute="height" constant="81" id="has-w3-URZ"/>
-                                                    </constraints>
+                                                    <rect key="frame" x="20" y="20" width="251" height="77"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Job-lu-qyT">
-                                                    <rect key="frame" x="20" y="126" width="73" height="29"/>
+                                                    <rect key="frame" x="20" y="122" width="73" height="29"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="73" id="Peo-hY-zZX"/>
+                                                        <constraint firstAttribute="height" constant="28" id="glJ-09-TSY"/>
+                                                    </constraints>
                                                     <segments>
                                                         <segment title="Yes"/>
                                                         <segment title="No"/>
@@ -2708,12 +2712,15 @@ Et toi?/ Et vous? (polite)
                                                     </connections>
                                                 </segmentedControl>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="lR5-lt-O8K" secondAttribute="trailing" constant="49" id="Jrv-NK-D8K"/>
+                                                <constraint firstItem="Job-lu-qyT" firstAttribute="top" secondItem="lR5-lt-O8K" secondAttribute="bottom" constant="25" id="giS-n8-bsV"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="lR5-lt-O8K" firstAttribute="top" secondItem="FPA-YH-aqf" secondAttribute="top" constant="20" id="92a-iN-iSN"/>
                                             <constraint firstItem="lR5-lt-O8K" firstAttribute="leading" secondItem="Job-lu-qyT" secondAttribute="leading" id="Pb7-x5-fOh"/>
-                                            <constraint firstAttribute="bottom" secondItem="Job-lu-qyT" secondAttribute="bottom" constant="20" id="ULE-ej-LFm"/>
                                             <constraint firstItem="lR5-lt-O8K" firstAttribute="leading" secondItem="FPA-YH-aqf" secondAttribute="leading" constant="20" id="cp3-Ej-8f1"/>
                                         </constraints>
                                     </tableViewCell>
@@ -3766,8 +3773,11 @@ WCE Fundraising: WCE raises the final 1/3 of our sourcing &amp; shipping costs f
                             <constraint firstItem="OHw-Jn-8TL" firstAttribute="leading" secondItem="jpk-D4-MJl" secondAttribute="leading" id="GJg-O6-TYp"/>
                             <constraint firstItem="OHw-Jn-8TL" firstAttribute="bottom" secondItem="jpk-D4-MJl" secondAttribute="bottom" id="HKO-nH-6rs"/>
                             <constraint firstItem="jpk-D4-MJl" firstAttribute="top" secondItem="wss-Tt-uNb" secondAttribute="bottom" id="Kcu-1S-Exa"/>
+                            <constraint firstAttribute="bottom" secondItem="OHw-Jn-8TL" secondAttribute="bottom" id="Tu2-RQ-3Qn"/>
                             <constraint firstItem="jpk-D4-MJl" firstAttribute="leading" secondItem="CcK-ph-TEw" secondAttribute="leading" id="Yvd-Z7-cec"/>
                             <constraint firstItem="OHw-Jn-8TL" firstAttribute="top" secondItem="CcK-ph-TEw" secondAttribute="top" constant="-8" id="g0k-bO-ZQZ"/>
+                            <constraint firstItem="OHw-Jn-8TL" firstAttribute="leading" secondItem="CcK-ph-TEw" secondAttribute="leading" id="jj5-uq-qLC"/>
+                            <constraint firstAttribute="trailing" secondItem="OHw-Jn-8TL" secondAttribute="trailing" id="pnQ-mk-mhg"/>
                             <constraint firstItem="OHw-Jn-8TL" firstAttribute="trailing" secondItem="jpk-D4-MJl" secondAttribute="trailing" id="u2y-Uy-d9K"/>
                         </constraints>
                     </view>
