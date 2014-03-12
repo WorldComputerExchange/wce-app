@@ -12,5 +12,5 @@ One of the ways they do this is by refurbishing donated computers, installing ed
 Currently volunteers collect this information on paper forms and return these WCE headquarters at the end of their trips. The information then needs to be manually added to WCE's computers. Our application aims to make this process more efficient by allowing volunteers to collect and save this information on their iPhones and send this information directly to World Computer Exchange. 
 
 We make use of open source libraries:
-[fmdb](https://github.com/ccgus/fmdb) a wrapper around SQLite for Objective-C
-[CHCSVParser](https://github.com/davedelong/CHCSVParser) helps parsing and writing to CSV files in Objective-C
+  * [fmdb](https://github.com/ccgus/fmdb) a wrapper around SQLite for Objective-C
+  * [CHCSVParser](https://github.com/davedelong/CHCSVParser) helps parsing and writing to CSV files in Objective-C
