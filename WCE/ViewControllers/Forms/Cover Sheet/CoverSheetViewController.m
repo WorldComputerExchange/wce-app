@@ -59,14 +59,11 @@
         self.q9.text = self.savedCoverSheet.q9;
         self.q10.text = self.savedCoverSheet.q10;
         self.q11.selectedSegmentIndex = [self segmentIndexForString:self.savedCoverSheet.q11];
-        self.q12_1.text = self.savedCoverSheet.q12_1;
-        self.q12_2.text = self.savedCoverSheet.q12_2;
-        self.q13_1.text = self.savedCoverSheet.q13_1;
-        self.q13_2.text = self.savedCoverSheet.q13_2;
+        self.q12.text = self.savedCoverSheet.q12;
+        self.q13.text = self.savedCoverSheet.q13;
         self.q14.text = self.savedCoverSheet.q14;
         self.q15.text = self.savedCoverSheet.q15;
-        self.q16_1.text = self.savedCoverSheet.q16_1;
-        self.q16_2.text = self.savedCoverSheet.q16_2;
+        self.q16.text = self.savedCoverSheet.q16;
         self.q17.selectedSegmentIndex = [self segmentIndexForString:self.savedCoverSheet.q17];
     }
     
@@ -95,14 +92,11 @@
     curCoverSheet.q9 = self.q9.text;
     curCoverSheet.q10 = self.q10.text;
     curCoverSheet.q11 = [self stringForSegmentIndex:self.q11.selectedSegmentIndex];
-    curCoverSheet.q12_1 = self.q12_1.text;
-    curCoverSheet.q12_2 = self.q12_2.text;
-    curCoverSheet.q13_1 = self.q13_1.text;
-    curCoverSheet.q13_2 = self.q13_2.text;
+    curCoverSheet.q12 = self.q12.text;
+    curCoverSheet.q13 = self.q13.text;
     curCoverSheet.q14 = self.q14.text;
     curCoverSheet.q15 = self.q15.text;
-    curCoverSheet.q16_1 = self.q16_1.text;
-    curCoverSheet.q16_2 = self.q16_2.text;
+    curCoverSheet.q16 = self.q16.text;
     curCoverSheet.q17 = [self stringForSegmentIndex:self.q17.selectedSegmentIndex];
     
     DataAccess *db = [[DataAccess alloc] init];

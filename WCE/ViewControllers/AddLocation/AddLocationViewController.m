@@ -134,7 +134,7 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    int idx = indexPath.row;
+    NSInteger idx = indexPath.row;
     
     static NSString *CellIdentifier = @"customCell";
     
@@ -176,7 +176,7 @@
 /**TableView Methods**/
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    int idx = indexPath.row; //row 0 corresponds to country picker view, row 1 to language
+    NSInteger idx = indexPath.row; //row 0 corresponds to country picker view, row 1 to language
     
     self.actionSheet = [[UIActionSheet alloc] initWithTitle:nil
                                               delegate:nil
@@ -310,8 +310,6 @@
                 //get the location id of the added location to add to the array
                 curLocationId = [db getLocationIdForName:curLocation.name]; //not working always returns 0
                 
-                NSLog(@"Current location id %i", curLocationId);
-                
                 [curLocation setLocationId:curLocationId];
             }else{
                 NSLog(@"Adding location %@ failed", curLocation.name);
@@ -323,7 +321,6 @@
             [[self.sharedUser savedLocations] replaceObjectAtIndex:savedIdx withObject:curLocation];
             
             curLocation.locationId = savedLocationId; //set the locationId to that of found location
-            NSLog(@"Saved Location id: %i", savedLocationId);
             
             BOOL success = [db updateLocation:curLocation withName:[[self.sharedUser editingLocation] name]]; //update the location
             
@@ -334,8 +331,6 @@
             }
             
         }
-        
-        NSLog(@"Locations count %d", [[self.sharedUser savedLocations] count]);
         
         [self.navigationController popViewControllerAnimated:YES];
     }else{

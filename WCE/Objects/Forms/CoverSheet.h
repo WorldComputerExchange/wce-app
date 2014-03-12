@@ -19,14 +19,11 @@
 @property (nonatomic, retain) NSString *q9;
 @property (nonatomic, retain) NSString *q10;
 @property (nonatomic, retain) NSString *q11;
-@property (nonatomic, retain) NSString *q12_1;
-@property (nonatomic, retain) NSString *q12_2;
-@property (nonatomic, retain) NSString *q13_1;
-@property (nonatomic, retain) NSString *q13_2;
+@property (nonatomic, retain) NSString *q12;
+@property (nonatomic, retain) NSString *q13;
 @property (nonatomic, retain) NSString *q14;
 @property (nonatomic, retain) NSString *q15;
-@property (nonatomic, retain) NSString *q16_1;
-@property (nonatomic, retain) NSString *q16_2;
+@property (nonatomic, retain) NSString *q16;
 @property (nonatomic, retain) NSString *q17;
 
 @property (nonatomic, assign) NSInteger coverSheetId;

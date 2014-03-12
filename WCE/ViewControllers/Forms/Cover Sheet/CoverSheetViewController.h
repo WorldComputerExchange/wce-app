@@ -24,14 +24,11 @@
 @property (nonatomic, retain) IBOutlet UITextField *q9;
 @property (nonatomic, retain) IBOutlet UITextField *q10;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *q11;
-@property (nonatomic, retain) IBOutlet UITextField *q12_1;
-@property (nonatomic, retain) IBOutlet UITextField *q12_2;
-@property (nonatomic, retain) IBOutlet UITextField *q13_1;
-@property (nonatomic, retain) IBOutlet UITextField *q13_2;
+@property (nonatomic, retain) IBOutlet UITextField *q12;
+@property (nonatomic, retain) IBOutlet UITextField *q13;
 @property (nonatomic, retain) IBOutlet UITextField *q14;
 @property (nonatomic, retain) IBOutlet UITextField *q15;
-@property (nonatomic, retain) IBOutlet UITextField *q16_1;
-@property (nonatomic, retain) IBOutlet UITextField *q16_2;
+@property (nonatomic, retain) IBOutlet UITextView *q16;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *q17;
 
 @property (nonatomic, retain) CoverSheet *savedCoverSheet;

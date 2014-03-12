@@ -55,8 +55,6 @@
         
         curLocation.name = [results stringForColumn:@"name"];
         
-         NSLog(@" Current Location id %i current location name: %@", nsi, curLocation.name);
-        
         curLocation.contact = [results stringForColumn:@"contact"];
         
         curLocation.phone = [results stringForColumn:@"phone"];
@@ -104,8 +102,6 @@
         
         curLocation.name = [results stringForColumn:@"name"];
         
-        NSLog(@" Current Location id %i name: %@", nsi, curLocation.name);
-        
         curLocation.contact = [results stringForColumn:@"contact"];
         
         curLocation.phone = [results stringForColumn:@"phone"];
@@ -131,8 +127,6 @@
  **/
 -(NSInteger)getLocationIdForName:(NSString *)name{
     Location *cur = [self getLocationForName:name];
-    
-    NSLog(@"Location id returned %i for name: %@", cur.locationId, cur.name);
     
     return cur.locationId;
 }
@@ -339,14 +333,11 @@ Get a cover sheet for a given partner
         curCoverSheet.q9 = [results stringForColumn:@"q9"];
         curCoverSheet.q10 = [results stringForColumn:@"q10"];
         curCoverSheet.q11 = [results stringForColumn:@"q11"];
-        curCoverSheet.q12_1 = [results stringForColumn:@"q12_1"];
-        curCoverSheet.q12_2 = [results stringForColumn:@"q12_2"];
-        curCoverSheet.q13_1 = [results stringForColumn:@"q13_1"];
-        curCoverSheet.q13_2 = [results stringForColumn:@"q13_2"];
+        curCoverSheet.q12 = [results stringForColumn:@"q12"];
+        curCoverSheet.q13 = [results stringForColumn:@"q13"];
         curCoverSheet.q14 = [results stringForColumn:@"q14"];
         curCoverSheet.q15 = [results stringForColumn:@"q15"];
-        curCoverSheet.q16_1 = [results stringForColumn:@"q16_1"];
-        curCoverSheet.q16_2 = [results stringForColumn:@"q16_2"];
+        curCoverSheet.q16 = [results stringForColumn:@"q16"];
         curCoverSheet.q17 = [results stringForColumn:@"q17"];
     }
     
@@ -383,12 +374,12 @@ Get a cover sheet for a given partner
     [db open];
     
     //@"INSERT INTO partner (name, locationId) VALUES (?, ?);"
-    BOOL success =  [db executeUpdate:@"INSERT INTO coverSheet (partnerid, q1, q2, q3, q4, q5, q6, q7, q8, q9, q10, q11, q12_1, q12_2, q13_1, q13_2, q14, q15, q16_1, q16_2, q17) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);",
+    BOOL success =  [db executeUpdate:@"INSERT INTO coverSheet (partnerid, q1, q2, q3, q4, q5, q6, q7, q8, q9, q10, q11, q12, q13, q14, q15, q16, q17) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);",
                      [NSNumber numberWithInteger:coverSheet.partnerId], coverSheet.q1,
-                     coverSheet.q2, coverSheet.q3, coverSheet.q4, coverSheet.q5, coverSheet.q6,
-                     coverSheet.q7, coverSheet.q8, coverSheet.q9, coverSheet.q10, coverSheet.q11,
-                     coverSheet.q12_1, coverSheet.q12_2, coverSheet.q13_1, coverSheet.q13_2, coverSheet.q14,
-                     coverSheet.q15, coverSheet.q16_1, coverSheet.q16_2, coverSheet.q17, nil];
+                     coverSheet.q2, coverSheet.q3, coverSheet.q4, coverSheet.q5,
+                     coverSheet.q6, coverSheet.q7, coverSheet.q8, coverSheet.q9,
+                     coverSheet.q10, coverSheet.q11, coverSheet.q12, coverSheet.q13,
+                     coverSheet.q14, coverSheet.q15, coverSheet.q16, coverSheet.q17, nil];
     
     if(!success){
         NSLog(@"%@", [db lastErrorMessage]);
@@ -408,12 +399,19 @@ Get a cover sheet for a given partner
     
     [db open];
     
-    BOOL success = [db executeUpdate:@"UPDATE coverSheet SET q1 = ?, q2 = ?, q3 = ?, q4 = ?, q5 = ?, q6 = ?, q7 = ?, q8 = ?, q9 = ?, q10 = ?, q11 = ?, q12_1 = ?, q12_2 = ?, q13_1 = ?, q13_2 = ?, q14 = ?, q15 = ?, q16_1 = ?, q16_2 = ?, q17 = ?, partnerid = ? WHERE id= ?;"
-                    , coverSheet.q1, coverSheet.q2, coverSheet.q3, coverSheet.q4, coverSheet.q5, coverSheet.q6, coverSheet.q7, coverSheet.q8, coverSheet.q9,
-                        coverSheet.q10, coverSheet.q11, coverSheet.q12_1, coverSheet.q12_2, coverSheet.q13_1,
-                    coverSheet.q13_2, coverSheet.q14, coverSheet.q15, coverSheet.q16_1, coverSheet.q16_2, coverSheet.q17,
-                    [NSNumber numberWithInteger:coverSheet.partnerId],
-                    [NSNumber numberWithInteger:coverSheet.coverSheetId]];
+    BOOL success = [db executeUpdate:@"UPDATE coverSheet SET q1 = ?, q2 = ?, q3 = ?, \
+                                        q4 = ?, q5 = ?, q6 = ?, q7 = ?, q8 = ?, q9 = ?, \
+                                        q10 = ?, q11 = ?, q12 = ?, q13 = ?, q14 = ?, \
+                                        q15 = ?, q16 = ?, q17 = ?, partnerid = ? \
+                                        WHERE id= ?;",
+                                        coverSheet.q1, coverSheet.q2, coverSheet.q3,
+                                        coverSheet.q4, coverSheet.q5, coverSheet.q6,
+                                        coverSheet.q7, coverSheet.q8, coverSheet.q9,
+                                        coverSheet.q10, coverSheet.q11, coverSheet.q12,
+                                        coverSheet.q13, coverSheet.q14, coverSheet.q15,
+                                        coverSheet.q16, coverSheet.q17,
+                                        [NSNumber numberWithInteger:coverSheet.partnerId],
+                                        [NSNumber numberWithInteger:coverSheet.coverSheetId]];
     
     if (!success){
         NSLog(@"%@", [db lastErrorMessage]);

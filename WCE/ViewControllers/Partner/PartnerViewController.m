@@ -69,7 +69,7 @@
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     /**set the region name to that chosen in the table**/
-    int idx = indexPath.row;
+    NSInteger idx = indexPath.row;
     Partner *selectedPartner;
     
     if (idx >= [self.partners count]){ //[[sharedUser savedPartners] count]){
@@ -95,7 +95,6 @@
 }
 
 - (NSInteger)tableView:(UITableView *)table numberOfRowsInSection:(NSInteger)section {
-    NSLog(@"#of saved partners: %d", [self.partners count]);
 	return [self.partners count] + 1;
 }
 

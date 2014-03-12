@@ -31,15 +31,6 @@
 
 @implementation LocationViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -51,6 +42,10 @@
     
     [self.locationTableView registerClass:[CustomCell class]
            forCellReuseIdentifier:@"customCell"];
+    
+    UIImageView *backgroundImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Default.png"]];
+    self.locationTableView.backgroundColor = [UIColor clearColor];
+    self.locationTableView.backgroundView = backgroundImage;
     
     //get shared location instance
     self.sharedLocation = [Location sharedLocation];
@@ -284,16 +279,11 @@
 	}
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 /**TableView Methods**/
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    int idx = indexPath.row;
+    NSInteger idx = indexPath.row;
     Location *selectedLocation;
     
     if (idx >= [[self.sharedUser savedLocations] count]){ //Add location row selected

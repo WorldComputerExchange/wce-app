@@ -86,20 +86,15 @@ static NSArray *_previouslyGeocodedLocations;
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
 	[[[segue destinationViewController] navigationItem] setTitle:[[Location sharedLocation] name]];
-//	NSLog(@"shared location is: %@", [[Location sharedLocation] name]);
 }
 
 - (void)geocodeNewLocations
 {
 	// Geocode the addresses
-	NSLog(@"--- geocoding start ---");
-	
 	if(![self geocoder])
 		[self setGeocoder:[[CLGeocoder alloc] init]]; // initialize the geocoder
 	
 	NSMutableArray *locs = [[User sharedUser] savedLocations];
-	NSLog(@"saved location array has %i objects", [locs count]);
-	NSLog(@"we've already geocoded %i objects", [_previouslyGeocodedLocations count]);
 	
 	if([locs count] > 0)
 	{
@@ -139,7 +134,6 @@ static NSArray *_previouslyGeocodedLocations;
 		[geocodingString appendString:[thisLocation country]];
 	}
 	
-	NSLog(@"index of thing: %i", [_previouslyGeocodedLocations indexOfObject:thisLocation]);
 	if([_previouslyGeocodedLocations indexOfObject:thisLocation] == NSNotFound || [_previouslyGeocodedLocations count] == 0)
 	{
 		NSLog(@"using geocoder");

@@ -53,7 +53,7 @@
 	// retrieve the password
 	BOOL hasSetPassword = [[NSUserDefaults standardUserDefaults] boolForKey:@"hasSetPassword"];
 	if(!hasSetPassword){
-		_password = @"12345";
+		_password = @"02045"; //WCE Zip
         [[NSUserDefaults standardUserDefaults] setValue:_password
                                                 forKey:@"password"];
     }else{
@@ -86,7 +86,7 @@
 - (IBAction)pushLocationView:(id)sender
 {
     
-    if ([self.passcodeField.text isEqualToString:_password]) // We compare it to the string "12345"
+    if ([self.passcodeField.text isEqualToString:_password])
     {
         self.passcodeField.text = @""; // Erase the passcode entered in the text field
 		
@@ -102,10 +102,8 @@
     {
         self.passcodeField.text = @""; // Erase the passcode entered in the text field
         
-        // Copied this right off a website, it just creates an alert box that tells you that the passcode you entered was wrong
         UIAlertView *incorrectCodeMessage = [[UIAlertView alloc] initWithTitle:@"Incorrect Passcode" message:@"Try entering your passcode again." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
         
-        // Actually shows the alert message
         [incorrectCodeMessage show];
     }
     
