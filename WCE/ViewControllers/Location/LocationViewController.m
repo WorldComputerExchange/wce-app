@@ -224,18 +224,18 @@
         MFMailComposeViewController *mailView = [[MFMailComposeViewController alloc] init];
         mailView.mailComposeDelegate = self;
         
-        toRecipients = [toRecipients arrayByAddingObject:@"bribeck1@gmail.com"];
-        
         if (currentButton.tag == EVAL_BUTTON_TAG){
-            //toRecipients = [toRecipients arrayByAddingObject:@"eCorps@WorldComputerExchange.org"];
+            toRecipients = [toRecipients arrayByAddingObject:@"eCorps@WorldComputerExchange.org"];
             subjectString = @"WCE iPhone App: Evaluation Forms";
             bodyString = @"The Evaluation form data is attached, if you would like to say anything about it or the trip please write your comments above.";
             fileString = @"WceEvaluation.csv";
+            curURL = self.evalCsvURL;
         }else{
-            //toRecipients = [toRecipients arrayByAddingObject:@"Partners@WorldComputerExchange.org"];
+            toRecipients = [toRecipients arrayByAddingObject:@"Partners@WorldComputerExchange.org"];
             subjectString = @"WCE iPhone App: New Partner forms";
             bodyString = @"The New Partner form data is attached, if you would like to say anything about it or the trip please write your comments above.";
             fileString = @"WceNewPartners.csv";
+            curURL = self.partnersCsvURL;
         }
         
         [mailView setSubject:subjectString];
