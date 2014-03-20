@@ -81,6 +81,7 @@
     [self.sharedUser setIsEditingLocation:false];
 }
 
+
 /**
  PickerView Methods
  **/
@@ -283,10 +284,11 @@
         NSInteger savedLocationId; //if this location exists get its locationId for updating
     
         NSMutableArray *savedLocations = [self.sharedUser savedLocations];
-        for (int idx = 0; idx < [savedLocations count]; idx++){
+        for (int idx = 0; idx < [savedLocations count] && !replaced; idx++){
             Location *cur = [savedLocations objectAtIndex:idx];
             if ([cur.name isEqualToString:curLocation.name] ||
-                [cur.name isEqualToString: [[self.sharedUser editingLocation] name]]){
+                ([self.sharedUser isEditingLocation] &&
+                 [cur.name isEqualToString: [[self.sharedUser editingLocation] name]])){
                 replaced = true;
                 savedIdx = idx;
                 savedLocationId = cur.locationId;
@@ -311,13 +313,14 @@
                 curLocationId = [db getLocationIdForName:curLocation.name]; //not working always returns 0
                 
                 [curLocation setLocationId:curLocationId];
+                [[self.sharedUser savedLocations] addObject:curLocation];
+                
+                [self.navigationController popViewControllerAnimated:YES];
             }else{
                 NSLog(@"Adding location %@ failed", curLocation.name);
+                
             }
-            [[self.sharedUser savedLocations] addObject:curLocation];
-            
-            
-        }else{ //location exists update the location
+        }else if ([self.sharedUser isEditingLocation]){ //location exists and the user is editing
             [[self.sharedUser savedLocations] replaceObjectAtIndex:savedIdx withObject:curLocation];
             
             curLocation.locationId = savedLocationId; //set the locationId to that of found location
@@ -329,10 +332,15 @@
             }else{
                 NSLog(@"Updating location %@ failed", curLocation.name);
             }
-            
-        }
+            [self.navigationController popViewControllerAnimated:YES];
         
-        [self.navigationController popViewControllerAnimated:YES];
+        }else { //location exists and the user isn't editing
+            //Alert the user that the same location name has been entered as a previous location
+            UIAlertView *sameNameMessage = [[UIAlertView alloc] initWithTitle:@"Same Location Name" message:@"Location names must be unique. Please enter a unique location name" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+            
+            // Actually shows the alert message
+            [sameNameMessage show];
+        }
     }else{
         //Alert the user that a blank location name has been entered
         UIAlertView *blankNameMessage = [[UIAlertView alloc] initWithTitle:@"Blank Location Name" message:@"Please enter a location name." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];

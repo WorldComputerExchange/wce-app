@@ -10,6 +10,7 @@
 
 #import "LocationViewController.h"
 #import "Location.h"
+#import "LoginViewController.h"
 #import "User.h"
 #import "WCETabBarController.h"
 #import "CustomCell.h"
@@ -25,20 +26,26 @@
 @interface LocationViewController ()
 
 @property UIDocumentInteractionController *documentInteractionController;
-@property NSURL *csvURL;
-
+@property NSURL *partnersCsvURL;
+@property NSURL *evalCsvURL;
 @end
+
+#define EVAL_BUTTON_TAG 0
+#define PARTNER_BUTTON_TAG 1
 
 @implementation LocationViewController
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
 	// Do any additional setup after loading the view.
     
     UIImage *bg = [[UIImage imageNamed:@"button-bg.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(18, 18, 18, 18)];
-    [self.previewCSVButton setBackgroundImage:bg forState:UIControlStateNormal];
-    [self.sendCSVButton setBackgroundImage:bg forState:UIControlStateNormal];
+    [self.previewEvalButton setBackgroundImage:bg forState:UIControlStateNormal];
+    [self.sendEvalButton setBackgroundImage:bg forState:UIControlStateNormal];
+    [self.previewPartnersButton setBackgroundImage:bg forState:UIControlStateNormal];
+    [self.sendPartnersButton setBackgroundImage:bg forState:UIControlStateNormal];
     
     [self.locationTableView registerClass:[CustomCell class]
            forCellReuseIdentifier:@"customCell"];
@@ -96,12 +103,20 @@
     
     
     NSString *documentsDirectory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
-    NSString *filename = @"Wce.csv";
-    NSURL *fileURL = [NSURL fileURLWithPathComponents:[NSArray arrayWithObjects:documentsDirectory, filename, nil]];
     
-    self.csvURL = fileURL;
+    //set up a csvExporter for evaluations
+    NSString *evalFileName = @"WceEvaluation.csv";
+    NSURL *evalFileURL = [NSURL fileURLWithPathComponents:[NSArray arrayWithObjects:documentsDirectory, evalFileName, nil]];
+    self.evalCsvURL = evalFileURL;
     
-    CHCSVWriter *csvExporter = [[CHCSVWriter alloc] initForWritingToCSVFile:[fileURL path]];
+    CHCSVWriter *evalCsvExporter = [[CHCSVWriter alloc] initForWritingToCSVFile:[evalFileURL path]];
+    
+    //set up a csvExporter for new partners
+    NSString *newPartnersFileName = @"WceNewPartners.csv";
+    NSURL *newPartnersFileURL = [NSURL fileURLWithPathComponents:[NSArray arrayWithObjects:documentsDirectory, newPartnersFileName, nil]];
+    self.partnersCsvURL = newPartnersFileURL;
+    
+    CHCSVWriter *newPartnersCsvExporter = [[CHCSVWriter alloc] initForWritingToCSVFile:[newPartnersFileURL path]];
     
     User *sharedUser = [User sharedUser];
     
@@ -109,63 +124,84 @@
     
     
     for (Location *loc in sharedUser.savedLocations){
-        [csvExporter writeComment:@"Location"];
-        [csvExporter writeLineOfFields:[NSArray arrayWithObjects:@"Name", @"Contact", @"Phone",
+        //write location info for both csv files
+        [evalCsvExporter writeComment:@"Location"];
+        [evalCsvExporter writeLineOfFields:[NSArray arrayWithObjects:@"Name", @"Contact", @"Phone",
                                         @"Address", @"Zipcode", @"City", @"Country", @"Language", nil]];
-        [csvExporter writeLineOfFields:loc.locationProperties];
+        [evalCsvExporter writeLineOfFields:loc.locationProperties];
         
+        [newPartnersCsvExporter writeComment:@"Location"];
+        [newPartnersCsvExporter writeLineOfFields:[NSArray arrayWithObjects:@"Name", @"Contact", @"Phone",
+                                            @"Address", @"Zipcode", @"City", @"Country", @"Language", nil]];
+        [newPartnersCsvExporter writeLineOfFields:loc.locationProperties];
+        
+        //write evaluation data to eval csv
         Evaluation *evalForm = [db getEvalForLocation:loc];
         if (evalForm.evalId > 0) {
-            [csvExporter writeComment:@"Evaluation Form"];
-            [csvExporter writeLineOfFields:[NSArray arrayWithObjects:@"Location name", @"Questions", nil]];
-            [csvExporter writeLineOfFields:[[NSArray arrayWithObject:loc.name] arrayByAddingObjectsFromArray:evalForm.evaluationProperties]];
+            [evalCsvExporter writeComment:@"Evaluation Form"];
+            [evalCsvExporter writeLineOfFields:[NSArray arrayWithObjects:@"Location name", @"Questions", nil]];
+            [evalCsvExporter writeLineOfFields:[[NSArray arrayWithObject:loc.name] arrayByAddingObjectsFromArray:evalForm.evaluationProperties]];
         }
         
+        //write partners data and associated forms to new partners csv
         NSMutableArray *partners = [db getPartnersForLocationName:loc.name];
         if (partners.count > 0) {
-            [csvExporter writeComment:@"Partners"];
-            [csvExporter writeLineOfFields:[NSArray arrayWithObjects:@"Partner Name", @"Location Name", nil]];
+            [newPartnersCsvExporter writeComment:@"Partners"];
+            [newPartnersCsvExporter writeLineOfFields:[NSArray arrayWithObjects:@"Partner Name", @"Location Name", nil]];
         }
         for (Partner *par in partners){
             NSArray *partnerFields = [NSArray arrayWithObjects:par.name, loc.name, nil];
-            [csvExporter writeLineOfFields:partnerFields];
+            [newPartnersCsvExporter writeLineOfFields:partnerFields];
             CoverSheet *coverSheet = [db getCoverSheetForPartner:par];
             if (coverSheet.coverSheetId > 0) {
-                [csvExporter writeComment:@"Cover Sheet"];
-                [csvExporter writeLineOfFields:[NSArray arrayWithObjects:@"Partner Name", @"Location Name", @"Questions", nil]];
-                [csvExporter writeLineOfFields:[partnerFields arrayByAddingObjectsFromArray:coverSheet.coverSheetproperties]];
+                [newPartnersCsvExporter writeComment:@"Cover Sheet"];
+                [newPartnersCsvExporter writeLineOfFields:[NSArray arrayWithObjects:@"Partner Name", @"Location Name", @"Questions", nil]];
+                [newPartnersCsvExporter writeLineOfFields:[partnerFields arrayByAddingObjectsFromArray:coverSheet.coverSheetproperties]];
             }
             Order *order = [db getOrderForPartner:par];
             if (order.orderId > 0) {
-                [csvExporter writeComment:@"Order"];
-                [csvExporter writeLineOfFields:[NSArray arrayWithObjects:@"Partner Name", @"Location Name", @"Questions", nil]];
-                [csvExporter writeLineOfFields:[partnerFields arrayByAddingObjectsFromArray:order.orderProperties]];
+                [newPartnersCsvExporter writeComment:@"Order"];
+                [newPartnersCsvExporter writeLineOfFields:[NSArray arrayWithObjects:@"Partner Name", @"Location Name", @"Questions", nil]];
+                [newPartnersCsvExporter writeLineOfFields:[partnerFields arrayByAddingObjectsFromArray:order.orderProperties]];
             }
             ImpQuestions *impQuestions = [db getImpForPartner:par];
             if (impQuestions.impId > 0) {
-                [csvExporter writeComment:@"Implementation Questions"];
-                [csvExporter writeLineOfFields:[NSArray arrayWithObjects:@"Partner Name", @"Location Name", @"Questions", nil]];
-                [csvExporter writeLineOfFields:[partnerFields arrayByAddingObjectsFromArray:impQuestions.impProperties]];
+                [newPartnersCsvExporter writeComment:@"Implementation Questions"];
+                [newPartnersCsvExporter writeLineOfFields:[NSArray arrayWithObjects:@"Partner Name", @"Location Name", @"Questions", nil]];
+                [newPartnersCsvExporter writeLineOfFields:[partnerFields arrayByAddingObjectsFromArray:impQuestions.impProperties]];
             }
             
         }
-        [csvExporter writeField:@" "];
-        [csvExporter finishLine];
-        [csvExporter writeField:@" "];
-        [csvExporter finishLine];
+        [evalCsvExporter writeField:@" "];
+        [evalCsvExporter finishLine];
+        [evalCsvExporter writeField:@" "];
+        [evalCsvExporter finishLine];
+        
+        [newPartnersCsvExporter writeField:@" "];
+        [newPartnersCsvExporter finishLine];
+        [newPartnersCsvExporter writeField:@" "];
+        [newPartnersCsvExporter finishLine];
     }
     
-    [csvExporter closeStream];
+    [evalCsvExporter closeStream];
+    [newPartnersCsvExporter closeStream];
 }
 
 -(IBAction)previewCSVFile:(id)sender{
+    UIButton *currentButton = (UIButton *)sender;
+    NSURL *curURL = [[NSURL alloc] init];
+    if (currentButton.tag == EVAL_BUTTON_TAG){
+        curURL = self.evalCsvURL;
+    }else{
+        curURL = self.partnersCsvURL;
+    }
     
     [self pushFormDatatoCSV];
         
-    if (self.csvURL) {
+    if (curURL) {
         
-        self.documentInteractionController = [UIDocumentInteractionController interactionControllerWithURL:self.csvURL];
-        
+        self.documentInteractionController = [UIDocumentInteractionController interactionControllerWithURL:curURL];
+    
         [self.documentInteractionController setDelegate:self];
         
         [self.documentInteractionController presentPreviewAnimated:YES];
@@ -177,27 +213,44 @@
     
    
     if ([MFMailComposeViewController canSendMail]){
-        NSLog(@"Email being sent");
+        
+        UIButton *currentButton = (UIButton *)sender;
+        NSArray *toRecipients = [[NSArray alloc] init];
+        NSString *subjectString = [[NSString alloc] init];
+        NSString *bodyString = [[NSString alloc] init];
+        NSURL *curURL = [[NSURL alloc] init];
+        NSString *fileString = [[NSString alloc] init];
         
         MFMailComposeViewController *mailView = [[MFMailComposeViewController alloc] init];
         mailView.mailComposeDelegate = self;
         
-        [mailView setSubject:@"WCE iPhone App: Volunteer Information"];
-        //recipient must be changed for actual app
+        toRecipients = [toRecipients arrayByAddingObject:@"bribeck1@gmail.com"];
         
-        NSArray *toRecipients = [[NSArray alloc] initWithObjects:@"bribeck1@gmail.com", nil];
+        if (currentButton.tag == EVAL_BUTTON_TAG){
+            //toRecipients = [toRecipients arrayByAddingObject:@"eCorps@WorldComputerExchange.org"];
+            subjectString = @"WCE iPhone App: Evaluation Forms";
+            bodyString = @"The Evaluation form data is attached, if you would like to say anything about it or the trip please write your comments above.";
+            fileString = @"WceEvaluation.csv";
+        }else{
+            //toRecipients = [toRecipients arrayByAddingObject:@"Partners@WorldComputerExchange.org"];
+            subjectString = @"WCE iPhone App: New Partner forms";
+            bodyString = @"The New Partner form data is attached, if you would like to say anything about it or the trip please write your comments above.";
+            fileString = @"WceNewPartners.csv";
+        }
+        
+        [mailView setSubject:subjectString];
         
         [mailView setToRecipients:toRecipients];
         
-        [mailView setMessageBody:@"The WCE form data is attached, if you would like to say anything about it or the trip please write your comments above." isHTML:NO];
+        [mailView setMessageBody:bodyString isHTML:NO];
         
         //create the CSV file
         [self pushFormDatatoCSV];
         
         //attach the CSV file
-        NSData *csvData = [NSData dataWithContentsOfURL:self.csvURL];
+        NSData *csvData = [NSData dataWithContentsOfURL:curURL];
         
-        [mailView addAttachmentData:csvData mimeType:@"text/csv" fileName:@"Wce.csv"];
+        [mailView addAttachmentData:csvData mimeType:@"text/csv" fileName:fileString];
         
         [self presentViewController:mailView animated:YES completion:NULL];
     }else {

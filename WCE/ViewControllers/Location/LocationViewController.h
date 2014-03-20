@@ -18,8 +18,10 @@
 
 @property IBOutlet UIBarButtonItem *editButton;
 @property IBOutlet UIBarButtonItem *logOffButton;
-@property IBOutlet UIButton *previewCSVButton;
-@property IBOutlet UIButton *sendCSVButton;
+@property IBOutlet UIButton *previewPartnersButton;
+@property IBOutlet UIButton *sendPartnersButton;
+@property IBOutlet UIButton *previewEvalButton;
+@property IBOutlet UIButton *sendEvalButton;
 
 @property IBOutlet UITableView *locationTableView;
 

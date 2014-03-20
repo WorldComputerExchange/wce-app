@@ -98,6 +98,9 @@
         return NO;
     }
     
+    //we always want foreign keys enabled for cascade delete
+    [self executeQuery:@"PRAGMA foreign_keys = ON"];
+    
     return YES;
 }
 

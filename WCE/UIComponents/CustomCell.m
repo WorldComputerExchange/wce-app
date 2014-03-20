@@ -6,6 +6,7 @@
 //
 
 #import "CustomCell.h"
+#import "BLMacros.h"
 
 @implementation CustomCell
 

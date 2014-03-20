@@ -5282,46 +5282,88 @@ WCE Fundraising: WCE raises the final 1/3 of our sourcing &amp; shipping costs f
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sZg-wG-EV2">
-                                            <rect key="frame" x="87" y="72" width="145" height="44"/>
+                                            <rect key="frame" x="20" y="72" width="110" height="44"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="145" id="Fy3-nq-Z3Y"/>
-                                                <constraint firstAttribute="height" constant="44" id="fAG-Fu-pDP"/>
+                                                <constraint firstAttribute="height" constant="44" id="5UA-Fl-Hgs"/>
+                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="110" id="ZkQ-LU-V3z"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                             <size key="titleShadowOffset" width="0.0" height="1"/>
-                                            <state key="normal" title="Preview CSV File">
+                                            <state key="normal" title="Preview Evals">
                                                 <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <color key="titleShadowColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
                                             <connections>
-                                                <action selector="previewCSVFile:" destination="jrG-UY-ddc" eventType="touchUpInside" id="MjW-LB-Hb5"/>
+                                                <action selector="previewCSVFile:" destination="jrG-UY-ddc" eventType="touchUpInside" id="3b1-Kr-1EH"/>
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J7h-ch-lLP">
-                                            <rect key="frame" x="88" y="20" width="145" height="44"/>
+                                            <rect key="frame" x="20" y="20" width="110" height="44"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="145" id="ea5-Tg-Im4"/>
-                                                <constraint firstAttribute="height" constant="44" id="fwI-JV-dGc"/>
+                                                <constraint firstAttribute="height" constant="44" id="Nvs-je-c0W"/>
+                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="110" id="d17-2I-6cS"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                             <size key="titleShadowOffset" width="0.0" height="1"/>
-                                            <state key="normal" title="Send CSV to WCE">
+                                            <state key="normal" title="Send Evals">
                                                 <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <color key="titleShadowColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
                                             <connections>
-                                                <action selector="sendCSVFile:" destination="jrG-UY-ddc" eventType="touchUpInside" id="wfV-tt-065"/>
+                                                <action selector="sendCSVFile:" destination="jrG-UY-ddc" eventType="touchUpInside" id="Rpg-FN-1Rj"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QpJ-1t-dBx">
+                                            <rect key="frame" x="190" y="20" width="110" height="44"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="110" id="EEp-fc-O6T"/>
+                                                <constraint firstAttribute="height" constant="44" id="KWb-zA-rK3"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                            <size key="titleShadowOffset" width="0.0" height="1"/>
+                                            <state key="normal" title="Send Partners">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <color key="titleShadowColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="sendCSVFile:" destination="jrG-UY-ddc" eventType="touchUpInside" id="psS-eY-iSE"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="arl-JI-DAt">
+                                            <rect key="frame" x="191" y="72" width="111" height="44"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="110" id="U0K-Ul-td2"/>
+                                                <constraint firstAttribute="height" constant="44" id="gaI-4d-CcT"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                            <size key="titleShadowOffset" width="0.0" height="1"/>
+                                            <state key="normal" title="Prev. Partners">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <color key="titleShadowColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="previewCSVFile:" destination="jrG-UY-ddc" eventType="touchUpInside" id="XeF-W6-RaM"/>
                                             </connections>
                                         </button>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     <constraints>
-                                        <constraint firstAttribute="centerX" secondItem="sZg-wG-EV2" secondAttribute="centerX" constant="0.5" id="1QW-iH-wQm"/>
-                                        <constraint firstAttribute="centerX" secondItem="J7h-ch-lLP" secondAttribute="centerX" constant="-0.5" id="hfQ-NW-dMk"/>
-                                        <constraint firstAttribute="centerY" secondItem="sZg-wG-EV2" secondAttribute="centerY" constant="-14" id="m0T-v7-gA6"/>
-                                        <constraint firstAttribute="centerY" secondItem="J7h-ch-lLP" secondAttribute="centerY" constant="38" id="nbR-Vg-ngs"/>
+                                        <constraint firstItem="QpJ-1t-dBx" firstAttribute="top" secondItem="N8w-Fr-uYQ" secondAttribute="top" constant="20" id="7oU-PX-TrS"/>
+                                        <constraint firstItem="J7h-ch-lLP" firstAttribute="width" secondItem="QpJ-1t-dBx" secondAttribute="width" id="Ty0-rQ-1zp"/>
+                                        <constraint firstItem="J7h-ch-lLP" firstAttribute="top" secondItem="N8w-Fr-uYQ" secondAttribute="top" constant="20" id="X1y-1g-5a3"/>
+                                        <constraint firstItem="arl-JI-DAt" firstAttribute="leading" secondItem="sZg-wG-EV2" secondAttribute="trailing" constant="61" id="Zsu-wD-2Z1"/>
+                                        <constraint firstAttribute="trailing" secondItem="arl-JI-DAt" secondAttribute="trailing" constant="18" id="fO3-Hj-Ftt"/>
+                                        <constraint firstItem="QpJ-1t-dBx" firstAttribute="leading" secondItem="J7h-ch-lLP" secondAttribute="trailing" constant="60" id="g9k-so-M5E"/>
+                                        <constraint firstItem="J7h-ch-lLP" firstAttribute="leading" secondItem="N8w-Fr-uYQ" secondAttribute="leading" constant="20" id="gI0-oz-DAK"/>
+                                        <constraint firstItem="sZg-wG-EV2" firstAttribute="width" secondItem="arl-JI-DAt" secondAttribute="width" constant="-1" id="iIf-wS-kOB"/>
+                                        <constraint firstAttribute="trailing" secondItem="QpJ-1t-dBx" secondAttribute="trailing" constant="20" id="j3O-r5-lW3"/>
+                                        <constraint firstItem="sZg-wG-EV2" firstAttribute="leading" secondItem="N8w-Fr-uYQ" secondAttribute="leading" constant="20" id="m8g-IX-D9p"/>
+                                        <constraint firstItem="arl-JI-DAt" firstAttribute="top" secondItem="QpJ-1t-dBx" secondAttribute="bottom" constant="8" id="mKx-GN-VIS"/>
+                                        <constraint firstItem="sZg-wG-EV2" firstAttribute="top" secondItem="J7h-ch-lLP" secondAttribute="bottom" constant="8" id="nf4-mc-bTH"/>
                                     </constraints>
                                 </view>
                                 <prototypes>
@@ -5398,8 +5440,10 @@ WCE Fundraising: WCE raises the final 1/3 of our sourcing &amp; shipping costs f
                         <outlet property="editButton" destination="pqk-T6-Ysh" id="0Gs-yA-gWd"/>
                         <outlet property="locationTableView" destination="vaI-j5-JsR" id="S2W-JA-Np2"/>
                         <outlet property="logOffButton" destination="gAM-8L-mrS" id="TEC-cQ-o2O"/>
-                        <outlet property="previewCSVButton" destination="sZg-wG-EV2" id="HR8-uw-eat"/>
-                        <outlet property="sendCSVButton" destination="J7h-ch-lLP" id="rUC-4J-pjW"/>
+                        <outlet property="previewEvalButton" destination="sZg-wG-EV2" id="pKh-id-iNE"/>
+                        <outlet property="previewPartnersButton" destination="arl-JI-DAt" id="E9S-DU-Ov7"/>
+                        <outlet property="sendEvalButton" destination="J7h-ch-lLP" id="Tam-SS-O4E"/>
+                        <outlet property="sendPartnersButton" destination="QpJ-1t-dBx" id="XPH-rL-QHT"/>
                         <segue destination="GLn-ux-2nA" kind="push" identifier="pushMainMenu" id="zrW-c1-mQd"/>
                         <segue destination="a24-Hj-6Z9" kind="push" identifier="pushAddLocation" id="2fK-l0-UlK"/>
                     </connections>

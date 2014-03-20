@@ -22,7 +22,6 @@
     [self createAndCheckDatabase];
     
     //set the background image and navigation bar color
-	//self.window.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"Default.png"]];
     
     UIImage *navBackgroundImage = [UIImage imageNamed:@"navBar-bg.png"];
     [[UINavigationBar appearance] setBackgroundImage:navBackgroundImage forBarMetrics:UIBarMetricsDefault];
@@ -66,15 +65,14 @@
 	
 	if(!isLoggedIn)
 	{
-		[[[self window] rootViewController] presentViewController:_loginController animated:YES completion:nil];
+		[_tabBarController presentViewController:_loginController animated:YES completion:nil];
 	}
 }
 
 - (void)presentLoginViewControllerAnimated:(BOOL)animated
 {
-	[[[self window] rootViewController] presentViewController:_loginController animated:animated completion:nil];
+	[_tabBarController presentViewController:_loginController animated:animated completion:nil];
 }
-
 
 
 - (void)applicationWillResignActive:(UIApplication *)application

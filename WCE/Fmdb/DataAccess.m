@@ -203,11 +203,14 @@
     //wrap in try catch blocks
     [db open];
     
+    
     BOOL success = [db executeUpdate:@"DELETE FROM location WHERE name=?;", location.name];
     
     if (!success){
         NSLog(@"%@", [db lastErrorMessage]);
     }
+    
+    
     [db close];
     
     
