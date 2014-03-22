@@ -227,13 +227,13 @@
         if (currentButton.tag == EVAL_BUTTON_TAG){
             toRecipients = [toRecipients arrayByAddingObject:@"eCorps@WorldComputerExchange.org"];
             subjectString = @"WCE iPhone App: Evaluation Forms";
-            bodyString = @"The Evaluation form data is attached, if you would like to say anything about it or the trip please write your comments above.";
+            bodyString = @"The Evaluation form data is attached, if you would like to say anything about it or the trip write your comments above.";
             fileString = @"WceEvaluation.csv";
             curURL = self.evalCsvURL;
         }else{
             toRecipients = [toRecipients arrayByAddingObject:@"Partners@WorldComputerExchange.org"];
             subjectString = @"WCE iPhone App: New Partner forms";
-            bodyString = @"The New Partner form data is attached, if you would like to say anything about it or the trip please write your comments above.";
+            bodyString = @"The New Partner form data is attached, if you would like to say anything about it or the trip write your comments above.";
             fileString = @"WceNewPartners.csv";
             curURL = self.partnersCsvURL;
         }
@@ -255,7 +255,7 @@
         [self presentViewController:mailView animated:YES completion:NULL];
     }else {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Failure"
-                                                        message:@"Your device doesn't support in app email, please share the file from the preview CSV screen" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+                                                        message:@"Your device doesn't support in app email, please share the file from the preview CSV screen to Partners@WorldComputerExchange.org and eCorps@WorldComputerExchange.org" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
         [alert show];
     }
 }

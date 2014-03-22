@@ -80,6 +80,7 @@
 		8CD27FF31728354500973A04 /* PartnerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CD27FF21728354400973A04 /* PartnerViewController.m */; };
 		8CDC642D18B7945A0070BF8B /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CDC642C18B7945A0070BF8B /* MessageUI.framework */; };
 		8CFBFB8E18DA5724001DDB43 /* Wce.db in Resources */ = {isa = PBXBuildFile; fileRef = 8CFBFB8D18DA5724001DDB43 /* Wce.db */; };
+		8CFBFB9018DCAF00001DDB43 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8CFBFB8F18DCAF00001DDB43 /* Images.xcassets */; };
 		9E2476DD16E27D9C0049ED27 /* WCE Content V5.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E2476DC16E27D9C0049ED27 /* WCE Content V5.png */; };
 		9E4B58C216FBD95F007BE176 /* CoverSheetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E4B58C116FBD95F007BE176 /* CoverSheetViewController.m */; };
 		9ED3259D16DD53FF00EA38E0 /* AddressAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ED3259C16DD53FF00EA38E0 /* AddressAnnotation.m */; };
@@ -201,6 +202,7 @@
 		8CDC642C18B7945A0070BF8B /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		8CDF7C2818304141004D0C37 /* LoginViewControllerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LoginViewControllerDelegate.h; path = ViewControllers/Login/LoginViewControllerDelegate.h; sourceTree = "<group>"; };
 		8CFBFB8D18DA5724001DDB43 /* Wce.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = Wce.db; sourceTree = "<group>"; };
+		8CFBFB8F18DCAF00001DDB43 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		9E2476DC16E27D9C0049ED27 /* WCE Content V5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "WCE Content V5.png"; path = "Supporting Files/Content images/WCE Content V5.png"; sourceTree = "<group>"; };
 		9E4B58C016FBD95F007BE176 /* CoverSheetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CoverSheetViewController.h; path = "ViewControllers/Forms/Cover Sheet/CoverSheetViewController.h"; sourceTree = "<group>"; };
 		9E4B58C116FBD95F007BE176 /* CoverSheetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CoverSheetViewController.m; path = "ViewControllers/Forms/Cover Sheet/CoverSheetViewController.m"; sourceTree = "<group>"; };
@@ -504,6 +506,7 @@
 				8C9C3AE016CC60D000F95A6B /* WCEAppDelegate.m */,
 				8C9C3AE816CC60D000F95A6B /* MainStoryboard.storyboard */,
 				8CB0441E16DC4D420000AD0F /* ViewControllers */,
+				8CFBFB8F18DCAF00001DDB43 /* Images.xcassets */,
 				8C9C3AD716CC60D000F95A6B /* Supporting Files */,
 			);
 			path = WCE;
@@ -714,6 +717,7 @@
 				8C4C7B741735A6CD00ED3E82 /* LocationListIcon.png in Resources */,
 				8C4C7B761735A6D400ED3E82 /* LocationListIcon@2x.png in Resources */,
 				8C4C7B7C1735A9B000ED3E82 /* MapIcon@2x.png in Resources */,
+				8CFBFB9018DCAF00001DDB43 /* Images.xcassets in Resources */,
 				8C4C7B801735AB8000ED3E82 /* MapIcon.png in Resources */,
 				8C385951173AF07C003A323B /* Icon@2x.png in Resources */,
 				8C385953173AF15C003A323B /* Icon.png in Resources */,
@@ -870,6 +874,8 @@
 		8C9C3AF116CC60D000F95A6B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -891,6 +897,8 @@
 		8C9C3AF216CC60D000F95A6B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
