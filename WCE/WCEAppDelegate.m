@@ -14,6 +14,8 @@
     //Set the database name and path to check for a database
     self.databaseName = @"Wce.db";
     
+    NSLog(@"TEESSSTTTT");
+    
     NSArray *documentPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentDir = [documentPaths objectAtIndex:0];
     self.databasePath = [documentDir stringByAppendingPathComponent:self.databaseName];
